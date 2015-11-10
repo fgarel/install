@@ -1,0 +1,90 @@
+#
+# Fichier de configuration pour zsh antigen
+#
+#
+# Ce fichier est inspiré de fichier original  :
+# https://github.com/fgarel/myDebianInstall01/blob/master/etc/zsh/zshrc_antigen
+#
+# La doc sur antigen est ici :
+# https://github.com/zsh-users/antigen
+
+# La liste des themes est ici
+# https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+
+# La liste des plugins est ici
+# https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
+
+# 
+# Le script zsh-newuser-install permet de creer un fichier zshrc minimal
+#
+
+#
+# Paramètres courants pour zsh
+#---------------------------------------
+bindkey -v
+autoload -Uz compinit
+compinit
+
+#
+# Chargement d'Antigen et initialisation
+#---------------------------------------
+source /usr/share/zsh-antigen/antigen.zsh
+
+# Load the oh-my-zsh's library
+antigen use oh-my-zsh
+antigen use prezto
+
+# Load the prezto library
+#antigen bundle sorin-ionescu/prezto
+
+#
+# Antigen Themes
+#---------------
+# La liste des themes est ici
+# https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+#
+#antigen theme obraun
+antigen theme agnoster
+#antigen theme bureau
+#antigen theme blinks
+
+#
+# Antigen Bundles
+#----------------
+# La liste des plugins est ici
+# https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
+#
+antigen bundle common-aliases
+# OS specific plugins
+antigen bundle debian
+antigen bundle docker
+antigen bundle fabric
+antigen bundle git-extras
+antigen bundle git-flow
+antigen bundle git-prompt
+antigen bundle git-remote-branch
+antigen bundle git
+antigen bundle history
+antigen bundle pip
+antigen bundle pyenv
+antigen bundle pylint
+antigen bundle python
+antigen bundle rsync
+# For SSH, starting ssh-agent is annoying
+#antigen bundle ssh-agent
+antigen bundle sudo
+antigen bundle tmux
+antigen bundle tmuxinator
+antigen bundle vi-mode
+antigen bundle virtualenv
+#antigen bundle virtualenvwrapper
+antigen bundle z
+
+# Autres dépots
+antigen bundle sharat87/autoenv
+antigen bundle rupa/z
+#antigen bundle jdavis/zsh-files
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Ajouté suite à l'installation de pew
+source $(pew shell_config)
