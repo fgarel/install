@@ -39,5 +39,7 @@ vim +BundleInstall! +BundleClean +q +q
 echo "#"
 echo "# Configuration de vim"
 echo "# https://github.com/fgarel/myDebianInstall01/blob/master/usr/sbin/bfaptitudeinstallvim01b.sh"
+echo "# https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/"
+echo "# http://tuppervim.org"
 echo "#"
 echo ""
