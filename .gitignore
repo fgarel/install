@@ -1,1 +1,4 @@
 build
+source/geogig/geogig/*
+source/geogig/geogig-cli-app.zip
+
