@@ -58,3 +58,18 @@ echo "###############################################"
 sudo ./installPython.sh
 echo ""
 
+# 7ème Partie : python mapproxy
+###############################################
+# python mapproxy
+echo "# 7ème Partie : python mapproxy"
+echo "###############################################"
+sudo ./installPythonMapproxy.sh
+echo ""
+
+# 7ème Partie : python ecriture_sphinx
+###############################################
+# python ecriture_sphinx
+echo "# 7ème Partie : python ecriture_sphinx"
+echo "###############################################"
+sudo ./installPythonEcritureSphinx.sh
+echo ""

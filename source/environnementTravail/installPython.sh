@@ -48,39 +48,13 @@ echo '#    Aller dans le dossier site-packages    cdsitepackages      cd $(pew s
 echo '#    Valeur par défaut pour $WORKON_HOME    ~/.virtualenvs      ~/local/share/virtualenvs'
 echo "#      (dossier qui contient tous les envs) ~/.virtualenvs      ~/local/share/virtualenvs"
 echo "#"
-echo ""
-
-# 6ème Partie - suite : Création d'un environnement python
-###############################################
-# Création d'un environnement python
-echo "# 6ème Partie - suite : Création d'un environnement python"
-echo "###############################################"
-echo "#"
-echo "# Pew peut maintenant être utilisé :"
-echo "#"
-echo "# Nous allons créer un environnement virtuel pour mapproxy"
-echo "# MapProxy is an open source proxy for geospatial data."
-echo "# It caches, accelerates and transforms data from existing "
-echo "# map services and serves any desktop or web GIS client."
-echo "# http://mapproxy.org/"
-echo "#"
-echo "# Pré-requis avant d'installer mapprproxy"
-echo "# L'installation de mapproxy ne se passe pas très bien si nous n'avons pas"
-echo "# au préalable, installé quelques paquets"
-echo "#"
-echo "# Ces paquets sont :"
-echo "#"
-echo "# sudo apt-get install libjpeg-dev"
-echo "#"
-sudo apt-get install libjpeg-dev
-echo "#"
 echo "# Voici quelques infos sur pew"
 echo "#"
 echo "# Pour info, rappel d'un problème résolu entre zsh et pew :"
 echo "# Quand on fabrique un environnement virtuel,"
 echo "# le système lance automatiqument un shell dans cet environnement"
 echo "# mais, le fichier ~.zshrc n'est pas lu"
-echo "# il faut donc penser à lire ce fichier ~/.zshrc"
+echo "# il fallait donc penser à lire ce fichier ~/.zshrc"
 echo "#"
 echo "# source ~/.zshrc"
 echo "#"
@@ -100,12 +74,10 @@ echo "#   pew list_pythons"
 echo "#   #pew list_pythons -a"
 echo "#   pew list_pythons -a | grep 2.7"
 echo "#   pew list_pythons -a | grep 3.4.3"
-pew list_pythons -a | grep 3.4.3
 echo "#   pew install 2.7.10"
 echo "#   pew install 3.4.3"
-pew install 3.4.3
 echo "#   #pew new mapproxy"
 echo '#   #pew new -p $(pythonz locate 2.7.10) mapproxy'
 echo '#   pew new -p $(pythonz locate 3.4.3) mapproxy'
-pew new -p $(pythonz locate 3.4.3) mapproxy
 echo ""
+
