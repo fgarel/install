@@ -141,10 +141,14 @@ slideshie:
 	@echo "slides finished. The HTML slides are in $(BUILDDIR)/slideshie."
 
 slideshov:
-	$(HOVERCRAFT) source/hovercraft.rst $(BUILDDIR)/slideshov
 	$(HOVERCRAFT) source/hovercraftPositions.rst $(BUILDDIR)/slideshov
+	cp $(BUILDDIR)/slideshov/index.html $(BUILDDIR)/slideshov/hovercraftPositions.html
 	$(HOVERCRAFT) source/hovercraftTutorial.rst $(BUILDDIR)/slideshov
+	cp $(BUILDDIR)/slideshov/index.html $(BUILDDIR)/slideshov/hovercraftTutorial.html
 	$(HOVERCRAFT) source/hovercraftHovercraft.rst $(BUILDDIR)/slideshov
+	cp $(BUILDDIR)/slideshov/index.html $(BUILDDIR)/slideshov/hovercraftHovercraft.html
+	$(HOVERCRAFT) source/hovercraft.rst $(BUILDDIR)/slideshov
+	cp $(BUILDDIR)/slideshov/index.html $(BUILDDIR)/slideshov/hovercraft.html
 	@echo "slides finished. The HTML slides are in $(BUILDDIR)/slideshov."
 
 text:
