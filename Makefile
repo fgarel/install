@@ -4,6 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
+HOVERCRAFT    = hovercraft
 PAPER         =
 BUILDDIR      = build
 
@@ -45,9 +46,11 @@ help:
 	@echo "  xml        to make Docutils-native XML files"
 	@echo "  pseudoxml  to make pseudoxml-XML files for display purposes"
 	@echo "  linkcheck  to check all external links for integrity"
-	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
-	@echo "  coverage   to run coverage check of the documentation (if enabled)"
-	@echo "  slides     to make slides (hieroglyph)"
+	@echo "  doctest    to run all doctests embedded in the documentationi, if enabled"
+	@echo "  coverage   to run coverage check of the documentation, if enabled"
+	@echo "  slideshie  to make slides, hieroglyph"
+	@echo "  slideshov  to make slides, hovercraft"
+
 
 clean:
 	rm -rf $(BUILDDIR)/*
@@ -133,9 +136,16 @@ latexpdfja:
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf-ja
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
 
-slides:
-	$(SPHINXBUILD) -b slides $(ALLSPHINXOPTS) $(BUILDDIR)/slides
-	@echo "slides finished. The HTML slides are in $(BUILDDIR)/slides."
+slideshie:
+	$(SPHINXBUILD) -b slides $(ALLSPHINXOPTS) $(BUILDDIR)/slideshie
+	@echo "slides finished. The HTML slides are in $(BUILDDIR)/slideshie."
+
+slideshov:
+	$(HOVERCRAFT) source/hovercraft.rst $(BUILDDIR)/slideshov
+	$(HOVERCRAFT) source/hovercraftPositions.rst $(BUILDDIR)/slideshov
+	$(HOVERCRAFT) source/hovercraftTutorial.rst $(BUILDDIR)/slideshov
+	$(HOVERCRAFT) source/hovercraftHovercraft.rst $(BUILDDIR)/slideshov
+	@echo "slides finished. The HTML slides are in $(BUILDDIR)/slideshov."
 
 text:
 	$(SPHINXBUILD) -b text $(ALLSPHINXOPTS) $(BUILDDIR)/text

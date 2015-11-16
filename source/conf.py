@@ -296,3 +296,29 @@ texinfo_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
+
+# -- Options for hieroglyph ----------------------------------------
+# vu ici : http://webcom.upmf-grenoble.fr/sciedu/pdessus/conf/MOOT/construction.html
+# http://docs.hieroglyph.io/en/latest/
+# https://github.com/nyergler/hieroglyph
+# Configuration pour l'extension hieroglyph
+extensions += ['hieroglyph', ]
+slide_theme = 'single-level'
+slide_levels = 3
+slide_numbers = True
+
+# -- Options for sphinxcontrib-plantuml ----------------------------------------
+# vu ici : https://pypi.python.org/pypi/sphinxcontrib-plantuml
+# Configuration pour l'extension sphinxcontrib-plantuml
+# Attention, cette extension necessite l'outil epstopdf qui est disponible
+# dans le paquet texlive-font-utils
+
+extensions += ['sphinxcontrib.plantuml', ]
+plantuml = 'plantuml'
+plantuml_output_format = 'svg'
+plantuml_latex_output_format = 'pdf'
+plantuml_epstopdf = 'epstopdf'
+
+# -- Options for aafig ---------------------------------------------------------
+aafig_format = dict(latex='pdf', html='svg', text=None)
+aafig_default_options = dict(scale=1.5, aspect=0.5, proportional=True)

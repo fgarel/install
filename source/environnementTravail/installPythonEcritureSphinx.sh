@@ -23,9 +23,24 @@ echo "# Pré-requis avant d'installer sphinx et ses extensions"
 echo "# L'installation de sphinx ne se passe pas très bien si nous n'avons pas"
 echo "# au préalable, installé quelques paquets"
 echo "#"
-echo "# Ces paquets sont :"
+echo "# L'outil pdflatex, nécessaire pour fabriquer un build pdf, est fourni par les paquets texlive-*"
+echo "# L'outil epstopdf, nécessaire pour fabriquer un build pdf, via l'extension sphinxcontrib-plantuml, est fourni par le paquet texlive-font-utils"
+echo "# l'outil xsltproc est utilisé par hovercraft"
 echo "#"
-echo "# sudo apt-get install libxslt1--dev"
+echo "# Ces paquets sont donc :"
+echo "#"
+echo "# sudo apt-get install texlive-latex-recommended"
+echo "# sudo apt-get install texlive-latex-extra"
+echo "# sudo apt-get install texlive-fonts-recommended"
+echo "# sudo apt-get install texlive-font-utils"
+echo "# sudo apt-get install texlive-lang-french"
+sudo apt-get install texlive-latex-recommended \
+                     texlive-latex-extra \
+                     texlive-fonts-recommended \
+                     texlive-font-utils \
+                     texlive-lang-french
+echo "#"
+echo "# sudo apt-get install libxslt1-dev"
 echo "#"
 sudo apt-get install libxslt1-dev
 echo "#"
