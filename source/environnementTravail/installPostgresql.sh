@@ -29,31 +29,58 @@ echo "#     createuser -S \\"
 echo "#                -d \\"
 echo "#                -r \\"
 echo "#                -P \\"
-echo "#                -e sig \\"
+echo "#                -e sig"
 echo "#     (Mie3Bhoutan)"
+echo "#"
+echo "#     sudo -u postgres createuser -S \\"
+echo "#                                 -d \\"
+echo "#                                 -r \\"
+echo "#                                 -P \\"
+echo "#                                 -e  sig"
+echo "#     (Mie3Bhoutan)"
+sudo -u postgres createuser -S \
+                            -d \
+                            -r \
+                            -P \
+                            -e  sig
 echo "#"
 echo "# Création de la base de données : cadlr"
 echo '#'
 echo "# sudo -u postgres createdb --encoding=UTF8 \\"
 echo "#                           --owner=sig \\"
 echo "#                           cadlr"
+sudo -u postgres createdb --encoding=UTF8 \
+                          --owner=sig \
+                          cadlr
 echo "#"
 echo "# 3. Activation d'adminpack et de postgis"
 echo "# sudo -u postgres psql --username=postgres \\"
 echo "#                       --dbname=cadlr \\"
 echo "#                       -c \"CREATE EXTENSION adminpack;\""
+sudo -u postgres psql --username=postgres \
+                      --dbname=cadlr \
+                      -c "CREATE EXTENSION adminpack;"
 echo "#"
 echo "# sudo -u postgres psql --username=postgres \\"
 echo "#                       --dbname=cadlr \\"
 echo "#                       -c \"CREATE EXTENSION postgis;\""
+sudo -u postgres psql --username=postgres \
+                      --dbname=cadlr \
+                      -c "CREATE EXTENSION postgis;"
 echo "#"
 echo "# sudo -u postgres psql --username=postgres \\"
 echo "#                       --dbname=cadlr \\"
 echo "#                       -c \"CREATE EXTENSION postgis_topology;\""
+sudo -u postgres psql --username=postgres \
+                      --dbname=cadlr \
+                      -c "CREATE EXTENSION postgis_topology;"
 echo "#"
 echo "# sudo -u postgres psql --username=postgres \\"
 echo "#                       --dbname=cadlr \\"
 echo "#                       -c \"CREATE EXTENSION fuzzystrmatch;\""
+sudo -u postgres psql --username=postgres \
+                      --dbname=cadlr \
+                      -c "CREATE EXTENSION fuzzystrmatch;"
 echo "#"
 echo ""
 
