@@ -1,6 +1,9 @@
 # Install
 
-## Installation du dépot dans le répertoire Documents de l'utilisateur courant
+## Installation de git
+sudo aptitude install git
+
+## Clonage du dépot dans le répertoire Documents de l'utilisateur courant
 
 cd ~/Documents
 
