@@ -12,3 +12,10 @@ git clone https://github.com/fgarel/install
 cd ~/Documents/install/source/environnementTravail
 ./installAll.sh
 
+### Install de VIM
+cd ~/Documents/install/source/environnementTravail
+./spf13-vim.sh
+
+### Install des fonts
+cd ~/Documents/install/source/environnementTravail
+./installFonts.sh
