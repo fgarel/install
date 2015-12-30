@@ -73,3 +73,11 @@ echo "# 7ème Partie : python ecriture_sphinx"
 echo "###############################################"
 sudo ./installPythonEcritureSphinx.sh
 echo ""
+
+# 8ème Partie : suite d'outils pour la manipulation des données OSM
+###############################################
+# suite d'outils pour la manipulation des données OSM
+echo "# 8ème Partie : suite d'outils pour la manipulation des données OSM"
+echo "###############################################"
+sudo ./installOSM.sh
+echo ""
