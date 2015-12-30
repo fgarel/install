@@ -2,10 +2,10 @@
 
 
 
-# 6ème Partie - suite : Création d'un environnement python
+# 7ème Partie - suite : Création d'un environnement python
 ###############################################
 # Création d'un environnement python
-echo "# 6ème Partie - suite : Création d'un environnement python"
+echo "# 7ème Partie - suite : Création d'un environnement python"
 echo "###############################################"
 echo "#"
 echo "# Pew peut maintenant être utilisé :"
