@@ -15,20 +15,22 @@ echo "# Modification du fichier configuration.txt"
 echo "# de façon a ce que osmosis ne telecharge que les mises à jour de"
 echo "# la region poitou-charentes"
 echo "#"
-echo "# sudo -u www-data sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt"
-sudo -u www-data sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt
+echo "# sudo -u www-data \\"
+echo "                   sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt"
+sudo -u www-data \
+                 sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt
 echo "#"
 echo "#"
 echo "# sudo -u www-data osmosis --read-replication-interval \\"
-echo "#                          workingDirectory /home/fred/Documents/osmosis \\"
+echo "#                          workingDirectory=/home/fred/Documents/osmosis \\"
 echo "#                          --simplify-change \\"
-echo "#                          --write-xml-changes \\"
-echo "#                          changes.osc.gz"
+echo "#                          --write-xml-change \\"
+echo "#                          change.osc.gz"
 sudo -u www-data osmosis --read-replication-interval \
-                         workingDirectory /home/fred/Documents/osmosis \
+                         workingDirectory=/home/fred/Documents/osmosis \
                          --simplify-change \
-                         --write-xml-changes \
-                         changes.osc.gz
+                         --write-xml-change \
+                         change.osc
 echo "#"
 echo "#"
 echo "#"
