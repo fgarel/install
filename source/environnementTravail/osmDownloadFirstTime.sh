@@ -17,7 +17,9 @@ echo "# la region poitou-charentes"
 echo "#"
 echo "# sudo -u www-data \\"
 echo "#                  sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt"
-sudo -u www-data \
+#sudo -u www-data \
+#                 sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt
+#sudo -u www-data \
                  sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt
 echo "#"
 echo "#"
@@ -25,7 +27,10 @@ echo "#"
 echo "# sudo -u www-data \\"
 echo "#                  wget -P /home/fred/Documents/osmosis/ \\"
 echo "#                  http://download.geofabrik.de/europe/france/poitou-charentes-latest.osm.pbf"
-sudo -u www-data \
+#sudo -u www-data \
+#                 wget -P /home/fred/Documents/osmosis/ \
+#                 http://download.geofabrik.de/europe/france/poitou-charentes-latest.osm.pbf
+#sudo -u www-data \
                  wget -P /home/fred/Documents/osmosis/ \
                  http://download.geofabrik.de/europe/france/poitou-charentes-latest.osm.pbf
 echo "#"
@@ -36,7 +41,9 @@ echo "# la region poitou-charentes"
 echo "#"
 echo "# sudo -u www-data \\"
 echo "#                  sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt"
-sudo -u www-data \
+#sudo -u www-data \
+#                 sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt
+#sudo -u www-data \
                  sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt
 echo "#"
 echo "#"
@@ -76,7 +83,10 @@ echo "# sudo -u www-data \\"
 echo "#                  wget -P /home/fred/Documents/osmosis/\\"
 echo "#                  http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/026.state.txt"
 echo "#"
-sudo -u www-data \
+#sudo -u www-data \
+#                 wget -P /home/fred/Documents/osmosis/ \
+#                 http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/026.state.txt
+#sudo -u www-data \
                  wget -P /home/fred/Documents/osmosis/ \
                  http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/026.state.txt
 echo "#"
@@ -84,7 +94,9 @@ echo "# Lorsqu'on a téléchargé le fichier xxx.state.txt, il est nécessaire d
 echo "#"
 echo "# sudo -u www-data \\"
 echo "#                  mv /home/fred/Documents/osmosis/xxx-state.txt /home/fred/Documents/osmosis/state.txt"
-sudo -u www-data \
+#sudo -u www-data \
+#                 mv /home/fred/Documents/osmosis/026.state.txt /home/fred/Documents/osmosis/state.txt
+#sudo -u www-data \
                  mv /home/fred/Documents/osmosis/026.state.txt /home/fred/Documents/osmosis/state.txt
 echo "#"
 
