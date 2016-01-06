@@ -17,7 +17,9 @@ echo "# la region poitou-charentes"
 echo "#"
 echo "# sudo -u www-data \\"
 echo "                   sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt"
-sudo -u www-data \
+#sudo -u www-data \
+#                 sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt
+#sudo -u www-data \
                  sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt
 echo "#"
 echo "#"
@@ -26,7 +28,13 @@ echo "#                          workingDirectory=/home/fred/Documents/osmosis \
 echo "#                          --simplify-change \\"
 echo "#                          --write-xml-change \\"
 echo "#                          change.osc.gz"
-sudo -u www-data osmosis --read-replication-interval \
+#sudo -u www-data osmosis --read-replication-interval \
+#                         workingDirectory=/home/fred/Documents/osmosis \
+#                         --simplify-change \
+#                         --write-xml-change \
+#                         change.osc
+#sudo -u www-data \
+                 osmosis --read-replication-interval \
                          workingDirectory=/home/fred/Documents/osmosis \
                          --simplify-change \
                          --write-xml-change \
