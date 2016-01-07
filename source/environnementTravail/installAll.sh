@@ -50,6 +50,22 @@ echo "###############################################"
 ./installVim.sh
 echo ""
 
+# 7ème Partie : plantuml
+###############################################
+# plantuml
+echo "# 7ème Partie : plantuml"
+echo "###############################################"
+sudo ./installPlantuml.sh
+echo ""
+
+# 7ème Partie : postgresql
+###############################################
+# postgresql
+echo "# 7ème Partie : postgresql"
+echo "###############################################"
+sudo ./installPostgresql.sh
+echo ""
+
 # 7ème Partie : python
 ###############################################
 # python
