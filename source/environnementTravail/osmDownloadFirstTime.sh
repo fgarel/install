@@ -11,56 +11,43 @@ echo "###############################################"
 echo "#"
 echo "# On va telecharger les données de la région poitou-charentes"
 echo "#"
-echo "# Modification du fichier configuration.txt"
-echo "# de façon a ce que osmosis ne telecharge que les mises à jour de"
-echo "# la region poitou-charentes"
-echo "#"
-echo "# sudo -u www-data \\"
-echo "#                  sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt"
-#sudo -u www-data \
-#                 sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt
-#sudo -u www-data \
-                 sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt
+#echo "# La modification du fichier configuration.txt"
+#echo "#   (de façon a ce que osmosis ne telecharge que les mises à jour de"
+#echo "#   la region poitou-charentes)"
+#echo "# cette modification a déjà été réalisée"
+#echo "#"
+#echo "sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt"
+#      sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt
 echo "#"
 echo "#"
-echo "#"
-echo "# sudo -u www-data \\"
-echo "#                  wget -P /home/fred/Documents/osmosis/ \\"
-echo "#                  http://download.geofabrik.de/europe/france/poitou-charentes-latest.osm.pbf"
-#sudo -u www-data \
-#                 wget -P /home/fred/Documents/osmosis/ \
-#                 http://download.geofabrik.de/europe/france/poitou-charentes-latest.osm.pbf
-#sudo -u www-data \
-                 wget -P /home/fred/Documents/osmosis/ \
-                 http://download.geofabrik.de/europe/france/poitou-charentes-latest.osm.pbf
+echo "wget -P /home/fred/Documents/osmosis/ \\"
+echo "     http://download.geofabrik.de/europe/france/poitou-charentes-latest.osm.pbf"
+      wget -P /home/fred/Documents/osmosis/ \
+           http://download.geofabrik.de/europe/france/poitou-charentes-latest.osm.pbf
 echo "#"
 echo "#"
-echo "# Modification du fichier configuration.txt"
-echo "# de façon a ce que osmosis ne telecharge que les mises à jour de"
-echo "# la region poitou-charentes"
-echo "#"
-echo "# sudo -u www-data \\"
-echo "#                  sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt"
-#sudo -u www-data \
-#                 sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt
-#sudo -u www-data \
-                 sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt
+#echo "# La modification du fichier configuration.txt"
+#echo "#   (de façon a ce que osmosis ne telecharge que les mises à jour de"
+#echo "#   la region poitou-charentes)"
+#echo "# cette modification a déjà été réalisée"
+#echo "#"
+#echo "sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt"
+#      sed -i -e 's|baseUrl=.*|baseUrl=http://download.geofabrik.de/europe/france/poitou-charentes-updates/|' ~/Documents/osmosis/configuration.txt
 echo "#"
 echo "#"
 echo "# Une fois que les données sont téléchargées pour la première fois,"
 echo "# il faut aussi télécharger un fichier state.txt"
 echo "#"
 echo "# Osmosis se repère temporellement grace à un fichier qui s'appelle state.txt"
-echo "# Par la suite, il va le gérer lui-même, mais il faut l'initialiser."
+echo "# Par la suite, osmosis va gérer ce fchier state.txt, mais il faut l'initialiser."
 echo "# On va donc sur la page que nous avons mis dans la variable baseUrl :"
-echo "# Il y a un dossier qui se nomme 000 et un fichier state.txt."
-echo "# On va dans le dossier 000 et on va à nouveau dans le fichier 000."
+echo "# On va dans le dossier 000 et on va à nouveau dans le dossier 000 ou 001"
 echo "# Dans notre cas, l'adresse à laquelle nous sommes est :"
 echo "#"
 echo "# http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/000/"
 echo "#"
 echo "# Dans cette page, il y a un ensemble de couples de fichiers"
-echo "# state.txt et d'osc.gz, chaque paire étant préfixée d'un nombre."
+echo "# state.txt et osc.gz, chaque paire étant préfixée d'un nombre."
 echo "# Il y a également la date d'édition des fichiers."
 echo "#"
 echo "# On va télécharger le fichier xxx.state.txt qui date de la veille"
@@ -78,26 +65,17 @@ echo "# et qui s'appelle"
 echo "#"
 echo "# 026.state.txt   :-> car il date du 5 janvier 2016"
 echo "#"
+echo "# cf aussi https://osm.mazdermind.de/replicate-sequences/"
 echo "#"
-echo "# sudo -u www-data \\"
-echo "#                  wget -P /home/fred/Documents/osmosis/\\"
-echo "#                  http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/026.state.txt"
-echo "#"
-#sudo -u www-data \
-#                 wget -P /home/fred/Documents/osmosis/ \
-#                 http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/026.state.txt
-#sudo -u www-data \
-                 wget -P /home/fred/Documents/osmosis/ \
-                 http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/026.state.txt
+echo "wget -P /home/fred/Documents/osmosis/\\"
+echo "     http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/026.state.txt"
+      wget -P /home/fred/Documents/osmosis/ \
+      http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/026.state.txt
 echo "#"
 echo "# Lorsqu'on a téléchargé le fichier xxx.state.txt, il est nécessaire de le renommer en state.txt"
 echo "#"
-echo "# sudo -u www-data \\"
-echo "#                  mv /home/fred/Documents/osmosis/xxx-state.txt /home/fred/Documents/osmosis/state.txt"
-#sudo -u www-data \
-#                 mv /home/fred/Documents/osmosis/026.state.txt /home/fred/Documents/osmosis/state.txt
-#sudo -u www-data \
-                 mv /home/fred/Documents/osmosis/026.state.txt /home/fred/Documents/osmosis/state.txt
+echo "mv /home/fred/Documents/osmosis/026-state.txt /home/fred/Documents/osmosis/state.txt"
+      mv /home/fred/Documents/osmosis/026.state.txt /home/fred/Documents/osmosis/state.txt
 echo "#"
 
 echo "#"
