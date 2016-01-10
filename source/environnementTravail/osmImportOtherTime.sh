@@ -14,13 +14,20 @@ echo "# Affichage de l'ancienne date"
 echo "cat /home/fred/Documents/osmosis/state.txt"
       cat /home/fred/Documents/osmosis/state.txt
 echo "#"
+#echo "# On interroge la base avant import"
+#echo "sudo -u www-data \\"
+#echo "     psql --username=www-data \\"
+#echo "          --dbname=osm \\"
+#echo "          -f analyse_base_osm.sql"
+#      sudo -u www-data \
+#           psql --username=www-data \
+#                --dbname=osm \
+#                -f analyse_base_osm.sql
+#echo "#"
+echo "# On va importer les mises a jour des données"
 echo "#"
-echo "# On va importer les mises a jour des données de la région poitou-charentes"
-echo "#"
-#echo "osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \\"
-#echo "        --write-pgsql host=\"localhost\" database=\"osm\" user=\"www-data\" password=\"www-data\""
-#osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \
-#        --write-pgsql host="localhost" database="osm" user="www-data" password="www-data"
+#echo "# La version avec l'outil osm2psql au lieu et a la place de osmosis est détaillée ici"
+#echo "# sudo -u www-data osm2pgsl -a changes.osc.gz -e11-17 -o expired-tiles.txt"
 # sudo -u www-data osm2pgsl -a changes.osc.gz -e11-17 -o expired-tiles.txt
 echo "#"
 echo "osmosis --read-xml-change \\"
@@ -29,11 +36,19 @@ echo "        /home/fred/Documents/osmosis/change.osc.gz \\"
 echo "        --write-pgsql-change host=\"localhost\" database=\"osm\" user=\"www-data\" password=\"www-data\""
       osmosis --read-xml-change \
               /home/fred/Documents/osmosis/change.osc.gz \
-              --write-pgsql-change host=\"localhost\" database=\"osm\" user=\"www-data\" password=\"www-data\"
+              --write-pgsql-change host="localhost" database="osm" user="www-data" password="www-data"
 echo "#"
 echo "# Affichage de la nouvelle date"
 echo "cat /home/fred/Documents/osmosis/state.txt"
       cat /home/fred/Documents/osmosis/state.txt
 echo "#"
-
+echo "# On interroge la base apres import"
+echo "sudo -u www-data \\"
+echo "     psql --username=www-data \\"
+echo "          --dbname=osm \\"
+echo "          -f analyse_base_osm.sql"
+      sudo -u www-data \
+           psql --username=www-data \
+                --dbname=osm \
+                -f analyse_base_osm.sql
 echo "#"
