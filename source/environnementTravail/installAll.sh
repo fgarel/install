@@ -64,6 +64,9 @@ echo ""
 echo "# 7ème Partie : postgresql"
 echo "###############################################"
 sudo ./installPostgresql.sh
+sudo ./installPostgresqlGeogigGTReseaux.sh
+sudo ./installPostgresqlGeogigVLR.sh
+sudo ./installPostgresqlAutresVLR.sh
 echo ""
 
 # 7ème Partie : python
