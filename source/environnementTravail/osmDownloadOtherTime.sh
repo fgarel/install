@@ -2,11 +2,7 @@
 
 
 
-# 8ème Partie - Téléchargement, les fois suivantes, des données de la région poitou-charentes
-###############################################
-# Téléchargement, les fois suivantes, des données de la région poitou-charentes
-# Creation d'un repertoire de travail pour OSM
-echo "# 8ème Partie - Téléchargemnt, les fois suivantes, des données de la région poitou-charentes"
+echo "# osmDownloadOtherTime.sh"
 echo "###############################################"
 echo "#"
 #echo "# On va telecharger les mises a jour des données de la région poitou-charentes"

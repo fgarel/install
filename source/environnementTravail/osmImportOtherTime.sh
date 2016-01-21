@@ -2,11 +2,7 @@
 
 
 
-# 8ème Partie - Import, les fois suivantes, des données de la région poitou-charentes de pbf vers postgis
-###############################################
-# Import, les fois suivantes, des données de la région poitou-charentes de pbf vers postgis
-# Creation d'un repertoire de travail pour OSM
-echo "# 8ème Partie - Import, les fois suivantes, des données de la région poitou-charentes de pbf vers postgis"
+echo "# OsmImportOtherTime.sh"
 echo "###############################################"
 echo "#"
 echo "#"
@@ -14,16 +10,6 @@ echo "# Affichage de l'ancienne date"
 echo "cat /home/fred/Documents/osmosis/state.txt"
       cat /home/fred/Documents/osmosis/state.txt
 echo "#"
-#echo "# On interroge la base avant import"
-#echo "sudo -u www-data \\"
-#echo "     psql --username=www-data \\"
-#echo "          --dbname=osm \\"
-#echo "          -f analyse_base_osm.sql"
-#      sudo -u www-data \
-#           psql --username=www-data \
-#                --dbname=osm \
-#                -f analyse_base_osm.sql
-#echo "#"
 echo "# On va importer les mises a jour des données"
 echo "#"
 #echo "# La version avec l'outil osm2psql au lieu et a la place de osmosis est détaillée ici"
@@ -42,17 +28,4 @@ echo "# Affichage de la nouvelle date"
 echo "cat /home/fred/Documents/osmosis/state.txt"
       cat /home/fred/Documents/osmosis/state.txt
 echo "#"
-echo "# On interroge la base apres import"
-echo 'psql \'
-echo '     --host=localhost \'
-echo '     --dbname=osm \'
-echo '     --username=Fred \'
-echo '     --no-password \'
-echo '     -f analyse_base_osm.sql'
-      psql \
-           --host=localhost \
-           --dbname=osm \
-           --username=Fred \
-           --no-password \
-           -f analyse_base_osm.sql
 echo "#"
