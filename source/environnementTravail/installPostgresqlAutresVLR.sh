@@ -16,6 +16,8 @@ echo "#  - Fred"
 echo '# ... nous allons attribuer les bases de données ...'
 echo '# - cadastre'
 echo '# - cadastre_complement'
+echo '# - graphe'
+echo '# - origine'
 echo '# - osm'
 echo '# - osm_complement'
 echo '# - voirie_filaire'
@@ -33,7 +35,8 @@ echo '# ========================='
 
 
 listuser='Fred'
-listdb='cadastre cadastre_complement osm osm_complement voirie_filaire voirie_filaire_complement' ;
+listdb='cadastre cadastre_complement graphe origine osm osm_complement voirie_filaire voirie_filaire_complement' ;
+listdb='cadastre cadastre_complement graphe origine osm_complement voirie_filaire voirie_filaire_complement' ;
 listext='adminpack plpgsql postgis postgis_topology fuzzystrmatch hstore' ;
 
 for postgresqluser in $listuser ;
