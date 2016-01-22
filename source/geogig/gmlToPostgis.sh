@@ -2,18 +2,18 @@
 
 echo "#"
 echo "# Transfert des données (fichiers gml)"
-echo "# stockés dans le repetoire ~/Documents/technic/source/geogit/pcrs/"
-echo "# vers la base postgis rtge_VLR"
+echo "# stockés dans le repetoire ~/Documents/technic/source/geogig/pcrs/"
+echo "# vers la base postgis origin"
 echo "#"
 
-list=$(ls -1 ~/Documents/technic/source/geogit/pcrs/*.gml)
+list=$(ls -1 ~/Documents/technic/source/geogig/pcrs/*.gml)
 for file in $list ;
 do
     echo $file ;
     ogr2ogr \
         -overwrite \
         -skipfailures \
-        -f PostgreSQL pg:'host=localhost dbname=rtge_VLR user=VLR password=VLR' \
+        -f PostgreSQL pg:'host=localhost dbname=origine user=Fred password=Fred' \
         $file ;
 done
 
