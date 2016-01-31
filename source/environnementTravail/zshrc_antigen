@@ -24,6 +24,7 @@
 bindkey -v
 autoload -Uz compinit
 compinit
+export TERM="xterm-256color"
 
 #
 # Chargement d'Antigen et initialisation
@@ -44,10 +45,14 @@ antigen use prezto
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #
 #antigen theme obraun
-antigen theme agnoster
+#antigen theme agnoster
+#antigen theme honukai
+antigen theme ys
 #antigen theme bureau
 #antigen theme blinks
-
+antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+#antigen theme bhilburn/powerlevel9k powerlevel9k
+#POWERLEVEL9K_MODE='awesome-fontconfig'
 #
 # Antigen Bundles
 #----------------
@@ -55,7 +60,7 @@ antigen theme agnoster
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
 #
 antigen bundle common-aliases
-# OS specific plugins
+antigen bundle command-not-found
 antigen bundle debian
 antigen bundle docker
 antigen bundle fabric
