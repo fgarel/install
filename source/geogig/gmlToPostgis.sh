@@ -3,7 +3,7 @@
 echo "#"
 echo "# Transfert des données (fichiers gml)"
 echo "# stockés dans le repetoire ~/Documents/technic/source/geogig/pcrs/"
-echo "# vers la base postgis origin"
+echo "# vers la base postgis origine"
 echo "#"
 
 list=$(ls -1 ~/Documents/technic/source/geogig/pcrs/*.gml)
