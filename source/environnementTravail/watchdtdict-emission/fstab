@@ -1,0 +1,26 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda5 during installation
+UUID=0ff115c0-7bed-4d8c-9542-931bfb458a0f /               ext4    errors=remount-ro 0       1
+# swap was on /dev/sda6 during installation
+UUID=c523d326-a053-41ea-b3ed-99fad5dc0942 none            swap    sw              0       0
+/dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
+//dsifichiers02/services2       /mnt/dsifichiers02/services2        cifs    uid=fred,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials,iocharset=utf8  0   0
+//san/ECHANGES                      /mnt/san/echanges                       cifs        uid=fred,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials,iocharset=utf8  0       0
+//cartes/SIG_VILLE                  /mnt/cartes/sig_ville                       cifs    uid=fred,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials,iocharset=utf8  0       0
+#//cartes/DISKE                 /mnt/cartes/diske                           cifs        uid=fred,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials,iocharset=utf8  0       0
+//dsifichiers02/services        /mnt/dsifichiers02/services             cifs    uid=fred,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials,iocharset=utf8  0       0
+//san/PROJETS_TRANSVERSAUX      /mnt/san/projets_transversaux           cifs    uid=fred,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials,iocharset=utf8  0       0
+//san/PROJETS_TRANSVERSAUX      /mnt/san/projets_transversaux_all       cifs    uid=fred,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials_Administrateur,iocharset=utf8   0       0
+//dsifichiers02/services        /mnt/dsifichiers02/services_all         cifs    uid=fred,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials_Administrateur,iocharset=utf8   0       0
+//dsifichiers02/services2       /mnt/dsifichiers02/services2_all        cifs    uid=fred,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials_Administrateur,iocharset=utf8   0       0
+//dsifichiers02/services3       /mnt/dsifichiers02/services3_all        cifs    uid=fred,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials_Administrateur,iocharset=utf8   0       0
+//VCENTER02/ISO             /mnt/vcenter02/iso                  cifs    uid=fred,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials_Administrateur,iocharset=utf8   0       0
+//DSIAPPLI41/Exploit        /mnt/dsiappli41/exploit             cifs    uid=fred,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials_Administrateur,iocharset=utf8   0       0
+//DSIAPPLI41/LogicielsMairie    /mnt/dsiappli41/logicielsMairie         cifs    uid=fred,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials_Administrateur,iocharset=utf8   0       0
+
