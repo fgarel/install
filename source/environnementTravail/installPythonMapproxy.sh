@@ -42,6 +42,17 @@ echo "#"
 echo "#   --------------------"
 echo "#   pip install mapproxy"
 echo "#   pip install pgcli"
+echo "#   pip install pgcli --upgrade"
+echo '#'
+echo '# Installation de mapnik'
+echo '# http://mapnik.org/pages/downloads.html'
+echo '#'
+echo '# git clone https://github.com/mapnik/mapnik.git'
+echo '# cd mapnik'
+echo '# git checkout v3.0.9'
+echo '# git submodule update --init'
+echo '# configure && make && make test'
+echo '#'
 echo "#   --------------------"
 echo "#"
 echo "#   Démarrage de l'environnement virtuel"
