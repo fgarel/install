@@ -23,9 +23,36 @@ echo "# au préalable, installé quelques paquets"
 echo "#"
 echo "# Ces paquets sont :"
 echo "#"
-echo "# sudo apt-get install libharfbuzz-dev"
-echo "#"
-sudo apt-get install libharfbuzz-dev
+echo "sudo apt-get install libharfbuzz-dev"
+      sudo apt-get install libharfbuzz-dev
+echo "sudo apt-get install libicu-dev"
+      sudo apt-get install libicu-dev
+echo "sudo apt-get install libpng-dev"
+      sudo apt-get install libpng-dev
+echo "sudo apt-get install libproj-dev"
+      sudo apt-get install libproj-dev
+echo "sudo apt-get install libtiff-dev"
+      sudo apt-get install libtiff-dev
+echo "sudo apt-get install libwebp-dev"
+      sudo apt-get install libwebp-dev
+echo "sudo apt-get install libgdal-dev"
+      sudo apt-get install libgdal-dev
+echo "sudo apt-get install libfreetype6-dev"
+      sudo apt-get install libfreetype6-dev
+echo "sudo apt-get install libcairo2-dev"
+      sudo apt-get install libcairo2-dev
+echo "sudo apt-get install libboost-regex-dev"
+      sudo apt-get install libboost-regex-dev
+echo "sudo apt-get install libboost-program-options-dev"
+      sudo apt-get install libboost-program-options-dev
+echo "sudo apt-get install libboost-system-dev"
+      sudo apt-get install libboost-system-dev
+echo "sudo apt-get install libboost-filesystem-dev"
+      sudo apt-get install libboost-filesystem-dev
+echo "sudo apt-get install libboost-thread-dev"
+      sudo apt-get install libboost-thread-dev
+#echo "sudo apt-get install libboost-python1.55.0"
+#      sudo apt-get install libboost-python1.55.0
 echo "#"
 echo "# Installation de l'environnement virtuel"
 echo "#"
@@ -39,6 +66,10 @@ echo "#   Nous allons démarrer l'environnement virtuel,"
 echo "#   Dans cet environnement, l'installation doit continuer avec"
 echo "#"
 echo "#   --------------------"
+echo '#'
+echo '#   Mise à jour de pip'
+echo '#'
+echo '#   pip install --upgrade pip'
 echo '#'
 echo '#   Installation de mapnik'
 echo '#   http://mapnik.org/pages/downloads.html'
