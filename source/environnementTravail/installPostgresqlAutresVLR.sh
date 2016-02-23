@@ -16,10 +16,12 @@ echo "#  - Fred"
 echo '# ... nous allons attribuer les bases de données ...'
 echo '# - cadastre'
 echo '# - cadastre_complement'
+echo '# - dgaeust'
 echo '# - graphe'
 echo '# - origine'
 echo '# - osm'
 echo '# - osm_complement'
+echo '# - sandbox (bac à sable)'
 echo '# - voirie_filaire'
 echo '# - voirie_filaire_complement'
 echo '# ... qui seront configurées avec les extensions ...'
@@ -35,8 +37,11 @@ echo '# ========================='
 
 
 listuser='Fred'
-listdb='cadastre cadastre_complement graphe origine osm osm_complement voirie_filaire voirie_filaire_complement' ;
-listdb='cadastre cadastre_complement graphe origine osm_complement voirie_filaire voirie_filaire_complement' ;
+listdb='cadastre cadastre_complement dgaeust graphe origine osm osm_complement sandbox voirie_filaire voirie_filaire_complement' ;
+listdb='cadastre cadastre_complement dgaeust graphe origine osm_complement sandbox voirie_filaire voirie_filaire_complement' ; # pas osm
+listdb='cadastre cadastre_complement dgaeust graphe osm_complement sandbox voirie_filaire voirie_filaire_complement' ; # ni origine ni osm
+listdb='cadastre cadastre_complement graphe osm_complement sandbox voirie_filaire voirie_filaire_complement' ; # ni dgaeust ni origine ni osm
+listdb='dgaeust sandbox' ; # uniquement dgaeust et sandbox
 listext='adminpack plpgsql postgis postgis_topology fuzzystrmatch hstore' ;
 
 for postgresqluser in $listuser ;
@@ -45,11 +50,11 @@ for postgresqluser in $listuser ;
         for database in $listdb ;
             do
                 echo "#" ;
-                echo '# Suppression de la base de données :' $database'_'$postgresqluser ;
+                echo '# Suppression de la base de données :' $database ;
                 echo 'sudo -u postgres \' ;
-                echo '     dropdb' $database'_'$postgresqluser ;
+                echo '     dropdb' $database ;
                 sudo -u postgres \
-                     dropdb $database'_'$postgresqluser ;
+                     dropdb $database ;
                 sudo -u postgres \
                      dropdb $database ;
             done
