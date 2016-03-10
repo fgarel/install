@@ -42,6 +42,7 @@ listdb='cadastre cadastre_complement dgaeust graphe origine osm_complement sandb
 listdb='cadastre cadastre_complement dgaeust graphe osm_complement sandbox voirie_filaire voirie_filaire_complement' ; # ni origine ni osm
 listdb='cadastre cadastre_complement graphe osm_complement sandbox voirie_filaire voirie_filaire_complement' ; # ni dgaeust ni origine ni osm
 listdb='dgaeust sandbox' ; # uniquement dgaeust et sandbox
+listdb='sandbox' ; # uniquement sandbox
 listext='adminpack plpgsql postgis postgis_topology fuzzystrmatch hstore' ;
 
 for postgresqluser in $listuser ;
@@ -74,9 +75,9 @@ for postgresqluser in $listuser ;
              createuser "$postgresqluser";
         echo '# Modification du mot de passe et des droits'
         echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" WITH PASSWORD '$postgresqluser';\"" ;
-        echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" NOSUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
+        echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" SUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
         sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" WITH PASSWORD '$postgresqluser';" ;
-        sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" NOSUPERUSER NOCREATEDB NOCREATEROLE;" ;
+        sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" SUPERUSER NOCREATEDB NOCREATEROLE;" ;
 
         echo '#' ;
         echo '# Creation des bases de cet utilisateur' ;
