@@ -34,7 +34,7 @@ ssh -f \
     -o ServerAliveInterval=240 \
     -N \
     -X \
-    -L 65900:localhost:55900 \
+    -L 64900:localhost:55900 \
     -L 60080:localhost:50080 \
     -L 60022:localhost:50022 \
     -L 55900:localhost:45900 \
@@ -47,7 +47,7 @@ ssh -f \
 #
 echo "# "
 echo "# Maintenant, il est possible de se connecter"
-echo "# DS214    => ssh -p 40022 root@localhost"
+echo "# mail.cdalr.fr => ssh -p 40022 root@localhost"
 echo "# VLR6180X => ssh -p 50022 fred@localhost"
 echo "# (si besoin, il faut réveiller VLR6180Y)"
 echo "# (et faire le 3ème tiers du tunnel)"
