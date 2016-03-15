@@ -472,3 +472,106 @@ eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
 2016030100908TVK;A4;severine.teyssot@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
 2016030100908TVK;A4;severine.teyssot@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
 2016030100908TVK;A4;severine.teyssot@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016030201001T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016030201001T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016030201001T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016030201001T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016030201001T;;17.numerique.dict@axionesi.net
+eau.service.technique@ville-larochelle.fr;17 NUMERIQUE
+2016030201001T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016030201001T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016030201001T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016030201001T;;dictsfr@ncnumericable.com
+eau.service.technique@ville-larochelle.fr;SFR
+2016030201001T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016030201001T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016030201001T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016030201016T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016030201016T;A3;eau.service.technique@ville-larochelle.fr;Port Atlantique La Rochelle
+2016030201016T;A3;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016030201016T;A3;eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016030201016T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016030201016T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016030201016T;A3;eau.service.technique@ville-larochelle.fr;SNCF
+2016030201016T;A3;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016030201016T;A3;eau.service.technique@ville-larochelle.fr;RTE GMR POITOU CHARENTES
+2016030201016T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016030201016T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016030201311T;A0;frederic.garel@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016030201311T;A0;frederic.garel@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016030201311T;A0;frederic.garel@ville-larochelle.fr;ORANGE DT DICT
+2016030201311T;A0;frederic.garel@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016030201311T;A0;frederic.garel@ville-larochelle.fr;17 NUMERIQUE
+2016030201311T;A0;frederic.garel@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016030201311T;A0;frederic.garel@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016030201311T;A0;frederic.garel@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016030201311T;A0;frederic.garel@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016030201311T;A0;frederic.garel@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016030900330T;A4;voirie.pluvial@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016030900330T;A4;voirie.pluvial@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016030900330T;A4;voirie.pluvial@ville-larochelle.fr;ORANGE DT DICT
+2016030900330T;A4;voirie.pluvial@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016030900330T;A4;voirie.pluvial@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016030900330T;A4;voirie.pluvial@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016030900330T;A4;voirie.pluvial@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016030900330T;A4;voirie.pluvial@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016030900330T;A4;voirie.pluvial@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016030901209T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016030901209T;A3;eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016030901209T;A3;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016030901209T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016030901209T;A3;eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016030901209T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016030901209T;A3;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016030901209T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016030901209T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016030901277TBN;A3;julien.combes@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016030901277TBN;A3;julien.combes@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016030901277TBN;A3;julien.combes@ville-larochelle.fr;ORANGE DT DICT
+2016030901277TBN;A3;julien.combes@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016030901277TBN;A3;julien.combes@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016030901277TBN;A3;julien.combes@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016030901277TBN;A3;julien.combes@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016030901277TBN;A3;julien.combes@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016030901277TBN;A3;julien.combes@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016030901277TBN;A3;julien.combes@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016031001735T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016031001735T;A3;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016031001735T;A3;eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016031001735T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016031001735T;A3;eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016031001735T;A3;eau.service.technique@ville-larochelle.fr;GRTGAZ RCA RPCL ZONE DE SURGERES
+2016031001735T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016031001735T;A3;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016031001735T;A3;eau.service.technique@ville-larochelle.fr;SFR
+2016031001735T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016031001735T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016031400271T;A3;voirie.travaux.dict@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016031400271T;A3;voirie.travaux.dict@ville-larochelle.fr;ORANGE DT DICT
+2016031400271T;A3;voirie.travaux.dict@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016031400271T;A3;voirie.travaux.dict@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016031400271T;A3;voirie.travaux.dict@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016031400271T;A3;voirie.travaux.dict@ville-larochelle.fr;GRTGAZ RCA RPCL ZONE DE SURGERES
+2016031400271T;A3;voirie.travaux.dict@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016031400271T;A3;voirie.travaux.dict@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016031400271T;A3;voirie.travaux.dict@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016031400271T;A3;voirie.travaux.dict@ville-larochelle.fr;SFR
+2016031400271T;A3;voirie.travaux.dict@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016031400271T;A3;voirie.travaux.dict@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016031400579T;A3;voirie.travaux.dict@ville-larochelle.fr;Port Atlantique La Rochelle
+2016031400579T;A3;voirie.travaux.dict@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016031400579T;A3;voirie.travaux.dict@ville-larochelle.fr;ORANGE DT DICT
+2016031400579T;A3;voirie.travaux.dict@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016031400579T;A3;voirie.travaux.dict@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016031400579T;A3;voirie.travaux.dict@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016031400579T;A3;voirie.travaux.dict@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016031400579T;A3;voirie.travaux.dict@ville-larochelle.fr;SNCF
+2016031400579T;A3;voirie.travaux.dict@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016031400579T;A3;voirie.travaux.dict@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016031400579T;A3;voirie.travaux.dict@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
