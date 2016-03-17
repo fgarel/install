@@ -1,13 +1,46 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-#import csv
-#with open('test.dxf', 'r') as inputfile:
-#with open("/home/fred/f/CARTOGRAPHIE/Plans/1_Topo_Existants/4_Plans_conformes_CC46/Ottawa-rochepierre-créches/100097_Rue d\'ottawa-Rue de Rochepierre_Topo 2016.dxf", 'r') as inputfile:
-#outputfile_01_HEADER = open('dataout_01_HEADER.txt', 'w')
+# script pour l'analyse d'un fichier DXF et sa transformation
+# en tables intégrables sous postgis
+#
+# la doc sur le dxf est ici :
+# http://www.autodesk.com/techpubs/autocad/acadr14/dxf/dxf_reference.htm
+# https://www.cs.cmu.edu/afs/cs/academic/class/15294-s15/lectures/dxf/dxf.pdf
+# https://fr.wikipedia.org/wiki/Drawing_eXchange_Format
+# https://fr.wikipedia.org/wiki/Open_Design_Alliance
+# 
+# 
+# une ou deux librairies python :
+#
+# ezdxf pour lire, écrire, manipuler le dxf
+# https://pypi.python.org/pypi/ezdxf
+# http://pythonhosted.org/ezdxf/ 
+# https://media.readthedocs.org/pdf/ezdxf/latest/ezdxf.pdf
+#
+# dxfgrabber pour lire le dxf
+# https://pypi.python.org/pypi/dxfgrabber
+# https://pythonhosted.org/dxfgrabber/
+# https://media.readthedocs.org/pdf/dxfgrabber/latest/dxfgrabber.pdf
+#
+# dxfwrite pour ecrire :
+# https://pypi.python.org/pypi/dxfwrite/
+# http://pythonhosted.org/dxfwrite/
+#
+#
+#
+# with open("/home/fred/f/CARTOGRAPHIE/Plans/1_Topo_Existants/4_Plans_conformes_CC46/Ottawa-rochepierre-créches/100097_Rue d\'ottawa-Rue de Rochepierre_Topo 2016.dxf", 'r') as inputfile:
+#
 
-#from dictionnaireOrdonne import DictionnaireOrdonne
-#from string import Template
+#
+# 1ère partie de ce script
+# ------------------------
+# les lignes du dxf sont regroupées deux par deux
+# en effet, une ligne impaire contient un code
+# la ligne suivante, une ligne paire donc, contient la valeur
+# on regroupe donc ces deux lignes pour obtenir un fichier
+# qui aura pour chacune de ces lignes
+# code, valeur
 
 
 with open("original.dxf", 'r') as inputfile:
@@ -44,6 +77,16 @@ with open("original.dxf", 'r') as inputfile:
 inputfile.close()
 
 
+
+
+#
+# 2ème partie de ce script
+# ------------------------
+# le fichier unique est ensuite decoupé en 6 parties
+# en effet, un fichier dxf est structuré en 6 sections
+# 
+
+
 list_sections={'dataout_01_HEADER.txt': 'HEADER', \
                'dataout_02_CLASSES.txt': 'CLASSES', \
                'dataout_03_TABLES.txt': 'TABLES', \
@@ -53,7 +96,7 @@ list_sections={'dataout_01_HEADER.txt': 'HEADER', \
 
 
 with open('dataout.txt', 'r') as inputfile:
-    # dans l'ordre des fichers a écrire,
+    # dans l'ordre des fichiers a écrire,
     # creation de deux listes
     cles_triees = sorted(list_sections.keys())
     valeurs_triees = []
@@ -71,42 +114,41 @@ with open('dataout.txt', 'r') as inputfile:
 
         if (ligne_sauvegardee == '' and valeur != 'EOF' and (code != '  0' or valeur != 'SECTION')):
             if numero_ligne>228800:
-                #print('{0} {1}'.format(code, valeur))
                 print(code, valeur)
             outputfile.write('{0}£{1}\n'.format(code, valeur))
 
         if (code == '  0' and valeur == 'SECTION'):
             outputfile.close()
-            #print('attention : changement de section')
             ligne_sauvegardee = '{0}£{1}\n'.format(code, valeur)
             continue
             
         if (ligne_sauvegardee != '' and code == '  2' and valeur in valeurs_triees):
-            #print('attention : changement de section 2 ')
             section_en_cours=valeur
             for cle in cles_triees:
                 if list_sections[cle] == valeur:
                     outputfile = open(cle, 'w')
-                    #print(ligne_sauvegardee)
                     outputfile.write(ligne_sauvegardee)
                     ligne_sauvegardee=''
-                    #print('{0} {1}'.format(code, valeur))
                     outputfile.write('{0}£{1}\n'.format(code, valeur))
                     break
                 
         if (code == '  0' and valeur == 'EOF'):
             outputfile.close()
-    inputfile.close()
-    #outputfile.close()
+inputfile.close()
 
 
-a = DictionnaireOrdonne(list_sections)
-#list_sections=DictionnaireOrdonne( \
-#               'HEADER'= 'dataout_01_HEADER.txt', \
-#               'CLASSES'= 'dataout_02_CLASSES.txt', \
-#               'TABLES'= 'dataout_03_TABLES.txt', \
-#               'BLOCKS'= 'dataout_04_BLOCKS.txt', \
-#               'ENTITIES'= 'dataout_05_ENTITIES.txt', \
-#               'OBJECTS'= 'dataout_06_OBJECTS.txt')
-#print(a)
-#print(a.sort)
+#
+# 3ème partie de ce script
+# ------------------------
+
+# utilisation des librairies
+import ezdxf
+
+dwg = ezdxf.readfile("original.dxf")
+
+modelspace = dwg.modelspace()
+for e in modelspace:
+    if e.dxftype() == 'LINE':
+        print("LINE on layer: %s\n" % e.dxf.layer)
+        #print("start point: %s\n" % e.dxf.start)
+        #print("end point: %s\n" % e.dxf.end)
