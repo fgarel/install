@@ -149,6 +149,7 @@ dwg = ezdxf.readfile("original.dxf")
 modelspace = dwg.modelspace()
 for e in modelspace:
     if e.dxftype() == 'LINE':
-        print("LINE on layer: %s\n" % e.dxf.layer)
+        #print("LINE on layer: %s\n" % e.dxf.layer)
+        pass
         #print("start point: %s\n" % e.dxf.start)
         #print("end point: %s\n" % e.dxf.end)

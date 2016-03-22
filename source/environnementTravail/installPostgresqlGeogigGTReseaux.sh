@@ -37,6 +37,7 @@ echo '# ========================='
 
 listuser='CDA Departement DGFiP erdf SDE SDEER Soluris VLR'
 listdb='pcrs rtge' ;
+listdb='origine sandbox' ; # uniquement origine et sandbox
 listext='adminpack plpgsql postgis postgis_topology fuzzystrmatch hstore' ;
 
 for postgresqluser in $listuser ;
@@ -45,11 +46,11 @@ for postgresqluser in $listuser ;
         for database in $listdb ;
             do
                 echo "#" ;
-                echo '# Suppression de la base de données :' $database'_'$postgresqluser ;
+                echo '# Suppression de la base de données :' $database ;
                 echo 'sudo -u postgres \' ;
-                echo '     dropdb' $database'_'$postgresqluser ;
+                echo '     dropdb' $database ;
                 sudo -u postgres \
-                     dropdb $database'_'$postgresqluser ;
+                     dropdb $database ;
             done
         echo '#' ;
         echo '# Suppression de l utilisateur :' $postgresqluser ;
@@ -68,8 +69,12 @@ for postgresqluser in $listuser ;
         echo '# Modification du mot de passe et des droits'
         echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" WITH PASSWORD '$postgresqluser';\"" ;
         echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" NOSUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
+        echo '# ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !'
+        echo '# Attention, ici on se met en superuser pour la creation des schemas '
+        echo '# ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !'
+        echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" SUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
         sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" WITH PASSWORD '$postgresqluser';" ;
-        sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" NOSUPERUSER NOCREATEDB NOCREATEROLE;" ;
+        sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" SUPERUSER NOCREATEDB NOCREATEROLE;" ;
 
         echo '#' ;
         echo '# Creation des bases de cet utilisateur' ;
@@ -78,15 +83,15 @@ for postgresqluser in $listuser ;
         for database in $listdb ;
             do
                 echo "#" ;
-                echo '# Création de la base de données :' $database'_'$postgresqluser ;
+                echo '# Création de la base de données :' $database ;
                 echo 'sudo -u postgres \' ;
                 echo '     createdb --encoding=UTF8 \' ;
                 echo '              --owner='$postgresqluser '\' ;
-                echo '             ' $database'_'$postgresqluser ;
+                echo '             ' $database ;
                 sudo -u postgres \
                      createdb --encoding=UTF8 \
                               --owner=$postgresqluser \
-                              $database'_'$postgresqluser ;
+                              $database ;
 
                 echo "#" ;
                 echo "# Installation des extensions pour ces bases" ;
@@ -99,11 +104,11 @@ for postgresqluser in $listuser ;
                         echo '# Installation de l extension :' $extension ;
                         echo 'sudo -u postgres \' ;
                         echo '     psql --username=postgres \' ;
-                        echo '          --dbname='$database'_'$postgresqluser '\' ;
+                        echo '          --dbname='$database '\' ;
                         echo "          -c \"CREATE EXTENSION $extension;\"" ;
                         sudo -u postgres \
                              psql --username=postgres \
-                                  --dbname=$database'_'$postgresqluser \
+                                  --dbname=$database \
                                   -c "CREATE EXTENSION $extension;"
                     done
             done
@@ -122,4 +127,3 @@ echo "# netstat -lataupen"
       # netstat -lataupen
 echo "#"
 echo ""
-
