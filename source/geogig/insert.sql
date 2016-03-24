@@ -1,0 +1,8 @@
+-- Insert
+INSERT INTO
+  "EmprisePublicationPCRS" (
+    "idEmprise",
+    geometry_asewkt)
+  VALUES (
+    'M11',
+    'SRID=3946;POLYGON((1379500 5226200,1379500 5226300,1379640 5226300,1379640 5226200,1379500 5226200))');
