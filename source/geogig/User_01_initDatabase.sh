@@ -37,7 +37,11 @@ for postgresqluser in $listuser ;
         #for schema in $listschema ;
         #    do
         #        echo "schema = "\"$postgresqluser$schema\"
+#                echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" SUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
+#                sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" SUPERUSER NOCREATEDB NOCREATEROLE;" ;
                 psql -h VLR6180Y -d sandbox -U $postgresqluser -c "ALTER ROLE \"$postgresqluser\" SET search_path TO \"$postgresqluser\", public;"
+#                echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" NOSUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
+#                sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" NOSUPERUSER NOCREATEDB NOCREATEROLE;" ;
                 #psql -h VLR6180Y -d sandbox -U $postgresqluser -c "show search_path;"
                 psql -h VLR6180Y -d sandbox -U $postgresqluser -f "create_table.sql"
         #    done
