@@ -480,7 +480,7 @@ CREATE SEQUENCE "HabillagePCRS_idHabillage_seq"
 CREATE TABLE "HabillagePCRS"
 (
   geometrie geometry(Geometry,3946) NOT NULL,
-  "idHabillage" integer UNIQUE NOT NULL DEFAULT nextval('"HabillagePCRS_idHabillage_seq"'::regclass),
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"HabillagePCRS_idHabillage_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "positionnement" character varying(2) REFERENCES "PlacementPCRS" (code),
@@ -519,12 +519,12 @@ CREATE SEQUENCE "SymboleHabillagePCRS_idHabillage_seq"
 CREATE TABLE "SymboleHabillagePCRS"
 (
   geometrie geometry(Point,3946) NOT NULL,
-  "idHabillage" integer UNIQUE NOT NULL DEFAULT nextval('"SymboleHabillagePCRS_idHabillage_seq"'::regclass),
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"SymboleHabillagePCRS_idHabillage_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "positionnement" character varying(2) REFERENCES "PlacementPCRS" (code),
   "reference" character varying NOT NULL,
-  "angleRotation" decimal NOT NULL CHECK ("angleRotation" > 0 AND "angleRotation" < 360),
+  "angleRotation" decimal NOT NULL CHECK ("angleRotation" >= 0 AND "angleRotation" < 360),
   longueur decimal NOT NULL,
   largeur decimal NOT NULL,
   CONSTRAINT "SymboleHabillagePCRS_pkey" PRIMARY KEY ("idHabillage")
@@ -561,12 +561,12 @@ CREATE SEQUENCE "TexteHabillagePCRS_idHabillage_seq"
 CREATE TABLE "TexteHabillagePCRS"
 (
   geometrie geometry(Point,3946) NOT NULL,
-  "idHabillage" integer UNIQUE NOT NULL DEFAULT nextval('"TexteHabillagePCRS_idHabillage_seq"'::regclass),
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"TexteHabillagePCRS_idHabillage_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "positionnement" character varying(2) REFERENCES "PlacementPCRS" (code),
   "libelle" character varying NOT NULL,
-  "angleRotation" decimal NOT NULL CHECK ("angleRotation" > 0 AND "angleRotation" < 360),
+  "angleRotation" decimal NOT NULL CHECK ("angleRotation" >= 0 AND "angleRotation" < 360),
   justification character varying(1) NOT NULL REFERENCES "TexteJustification" (code),
   taille decimal NOT NULL,
   CONSTRAINT "TexteHabillagePCRS_pkey" PRIMARY KEY ("idHabillage")
@@ -604,12 +604,12 @@ CREATE SEQUENCE "NomVoiriePCRS_idHabillage_seq"
 CREATE TABLE "NomVoiriePCRS"
 (
   geometrie geometry(Point,3946) NOT NULL,
-  "idHabillage" integer UNIQUE NOT NULL DEFAULT nextval('"NomVoiriePCRS_idHabillage_seq"'::regclass),
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"NomVoiriePCRS_idHabillage_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "positionnement" character varying(2) REFERENCES "PlacementPCRS" (code),
   "libelle" character varying NOT NULL,
-  "angleRotation" decimal NOT NULL CHECK ("angleRotation" > 0 AND "angleRotation" < 360),
+  "angleRotation" decimal NOT NULL CHECK ("angleRotation" >= 0 AND "angleRotation" < 360),
   justification character varying(1) NOT NULL REFERENCES "TexteJustification" (code),
   taille decimal NOT NULL,
   "idNomVoirie" character varying UNIQUE NOT NULL,
@@ -648,12 +648,12 @@ CREATE SEQUENCE "NumeroVoiriePCRS_idHabillage_seq"
 CREATE TABLE "NumeroVoiriePCRS"
 (
   geometrie geometry(Point,3946) NOT NULL,
-  "idHabillage" integer UNIQUE NOT NULL DEFAULT nextval('"NumeroVoiriePCRS_idHabillage_seq"'::regclass),
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"NumeroVoiriePCRS_idHabillage_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "positionnement" character varying(2) REFERENCES "PlacementPCRS" (code),
   "libelle" character varying NOT NULL,
-  "angleRotation" decimal NOT NULL CHECK ("angleRotation" > 0 AND "angleRotation" < 360),
+  "angleRotation" decimal NOT NULL CHECK ("angleRotation" >= 0 AND "angleRotation" < 360),
   justification character varying(1) NOT NULL REFERENCES "TexteJustification" (code),
   taille decimal NOT NULL,
   "idNumeroVoirie" character varying UNIQUE NOT NULL,
@@ -717,7 +717,7 @@ CREATE SEQUENCE "PointCanevasPCRS_idObjet_seq"
 --DROP TABLE if exists "PointCanevasPCRS";
 CREATE TABLE "PointCanevasPCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"PointCanevasPCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"PointCanevasPCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -765,7 +765,7 @@ CREATE SEQUENCE "ObjetGeneriquePCRS_idObjet_seq"
 --DROP TABLE if exists "ObjetGeneriquePCRS";
 CREATE TABLE "ObjetGeneriquePCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"ObjetGeneriquePCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"ObjetGeneriquePCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -808,7 +808,7 @@ CREATE SEQUENCE "BordurePCRS_idObjet_seq"
 --DROP TABLE if exists "BordurePCRS";
 CREATE TABLE "BordurePCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"BordurePCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"BordurePCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -851,7 +851,7 @@ CREATE SEQUENCE "ChangementRevetementPCRS_idObjet_seq"
 --DROP TABLE if exists "ChangementRevetementPCRS";
 CREATE TABLE "ChangementRevetementPCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"ChangementRevetementPCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"ChangementRevetementPCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -893,7 +893,7 @@ CREATE SEQUENCE "MarcheEscalierPCRS_idObjet_seq"
 --DROP TABLE if exists "MarcheEscalierPCRS";
 CREATE TABLE "MarcheEscalierPCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"MarcheEscalierPCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"MarcheEscalierPCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -935,7 +935,7 @@ CREATE SEQUENCE "FacadePCRS_idObjet_seq"
 --DROP TABLE if exists "FacadePCRS";
 CREATE TABLE "FacadePCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"FacadePCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"FacadePCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -977,7 +977,7 @@ CREATE SEQUENCE "ProeminenceBatiPCRS_idObjet_seq"
 --DROP TABLE if exists "ProeminenceBatiPCRS";
 CREATE TABLE "ProeminenceBatiPCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"ProeminenceBatiPCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"ProeminenceBatiPCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -1019,7 +1019,7 @@ CREATE SEQUENCE "SeuilPCRS_idObjet_seq"
 --DROP TABLE if exists "SeuilPCRS";
 CREATE TABLE "SeuilPCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"SeuilPCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"SeuilPCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -1061,7 +1061,7 @@ CREATE SEQUENCE "MurPCRS_idObjet_seq"
 --DROP TABLE if exists "MurPCRS";
 CREATE TABLE "MurPCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"MurPCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"MurPCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -1104,7 +1104,7 @@ CREATE SEQUENCE "PilierRegulierPCRS_idObjet_seq"
 --DROP TABLE if exists "PilierRegulierPCRS";
 CREATE TABLE "PilierRegulierPCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"PilierRegulierPCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"PilierRegulierPCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -1113,7 +1113,7 @@ CREATE TABLE "PilierRegulierPCRS"
   "utilisableCotation" character varying(2) NOT NULL REFERENCES "CotationPCRS" (code),
   section character varying(2) NOT NULL REFERENCES "TypePilierPCRS" (code),
   geometrie geometry(Point,3946) NOT NULL,
-  "angleRotation" decimal NOT NULL CHECK ("angleRotation" > 0 AND "angleRotation" < 360),
+  "angleRotation" decimal NOT NULL CHECK ("angleRotation" >= 0 AND "angleRotation" < 360),
   longueur decimal NOT NULL,
   largeur decimal NOT NULL,
   CONSTRAINT "PilierRegulierPCRS_pkey" PRIMARY KEY ("idObjet")
@@ -1151,7 +1151,7 @@ CREATE SEQUENCE "PilierParticulierPCRS_idObjet_seq"
 --DROP TABLE if exists "PilierParticulierPCRS";
 CREATE TABLE "PilierParticulierPCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"PilierParticulierPCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"PilierParticulierPCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -1193,7 +1193,7 @@ CREATE SEQUENCE "RailPCRS_idObjet_seq"
 --DROP TABLE if exists "RailPCRS";
 CREATE TABLE "RailPCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"RailPCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"RailPCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -1234,7 +1234,7 @@ CREATE SEQUENCE "HaieEspaceVertPCRS_idObjet_seq"
 --DROP TABLE if exists "HaieEspaceVertPCRS";
 CREATE TABLE "HaieEspaceVertPCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"HaieEspaceVertPCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"HaieEspaceVertPCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -1276,7 +1276,7 @@ CREATE SEQUENCE "ArbreAlignementPCRS_idObjet_seq"
 --DROP TABLE if exists "ArbreAlignementPCRS";
 CREATE TABLE "ArbreAlignementPCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"ArbreAlignementPCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"ArbreAlignementPCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -1284,6 +1284,7 @@ CREATE TABLE "ArbreAlignementPCRS"
   "precisionAltimetrique" character varying(3) NOT NULL REFERENCES "ClassePrecisionPCRS" (code),
   "utilisableCotation" character varying(2) NOT NULL REFERENCES "CotationPCRS" (code),
   geometrie geometry(Point,3946) NOT NULL,
+  "reference" character varying NOT NULL,
   CONSTRAINT "ArbreAlignementPCRS_pkey" PRIMARY KEY ("idObjet")
 )
 WITH (
@@ -1318,7 +1319,7 @@ CREATE SEQUENCE "PilePontPCRS_idObjet_seq"
 --DROP TABLE if exists "PilePontPCRS";
 CREATE TABLE "PilePontPCRS"
 (
-  "idObjet" integer NOT NULL DEFAULT nextval('"PilePontPCRS_idObjet_seq"'::regclass),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"PilePontPCRS_idObjet_seq"'::regclass),
   thematique character varying(2) NOT NULL,
   calque character varying NOT NULL,
   "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "QualiteCategorisation" (code),
@@ -1361,10 +1362,10 @@ CREATE SEQUENCE "AffleurantSymbolePCRS_idAffleurant_seq"
 --DROP TABLE if exists "AffleurantSymbolePCRS";
 CREATE TABLE "AffleurantSymbolePCRS"
 (
-  "idAffleurant" integer NOT NULL DEFAULT nextval('"AffleurantSymbolePCRS_idAffleurant_seq"'::regclass),
+  "idAffleurant" character varying UNIQUE NOT NULL DEFAULT nextval('"AffleurantSymbolePCRS_idAffleurant_seq"'::regclass),
   gestionnaire character varying REFERENCES "GestionnaireReseaux",
   nature character varying(2) NOT NULL REFERENCES "NatureAffleurant" (code),
-  "codeCouleur" character varying(2) NOT NULL REFERENCES "CodeCouleurAffleurant" (code),
+  "codeCouleur" character varying(6) NOT NULL REFERENCES "CodeCouleurAffleurant" (code),
   source character varying,
   "idSource" character varying,
   calque character varying NOT NULL,
@@ -1374,7 +1375,7 @@ CREATE TABLE "AffleurantSymbolePCRS"
   "utilisableCotation" character varying(2) NOT NULL REFERENCES "CotationPCRS" (code),
   geometrie geometry(Point,3946) NOT NULL,
   "reference" character varying NOT NULL,
-  "angleRotation" decimal NOT NULL CHECK ("angleRotation" > 0 AND "angleRotation" < 360),
+  "angleRotation" decimal NOT NULL CHECK ("angleRotation" >= 0 AND "angleRotation" < 360),
   longueur decimal NOT NULL,
   largeur decimal NOT NULL,
   CONSTRAINT "AffleurantSymbolePCRS_pkey" PRIMARY KEY ("idAffleurant")
@@ -1411,10 +1412,10 @@ CREATE SEQUENCE "AffleurantEnveloppePCRS_idAffleurant_seq"
 --DROP TABLE if exists "AffleurantEnveloppePCRS";
 CREATE TABLE "AffleurantEnveloppePCRS"
 (
-  "idAffleurant" integer NOT NULL DEFAULT nextval('"AffleurantEnveloppePCRS_idAffleurant_seq"'::regclass),
+  "idAffleurant" character varying UNIQUE NOT NULL DEFAULT nextval('"AffleurantEnveloppePCRS_idAffleurant_seq"'::regclass),
   gestionnaire character varying REFERENCES "GestionnaireReseaux",
   nature character varying(2) NOT NULL REFERENCES "NatureAffleurant" (code),
-  "codeCouleur" character varying(2) NOT NULL REFERENCES "CodeCouleurAffleurant" (code),
+  "codeCouleur" character varying(6) NOT NULL REFERENCES "CodeCouleurAffleurant" (code),
   source character varying,
   "idSource" character varying,
   calque character varying NOT NULL,
