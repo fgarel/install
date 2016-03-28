@@ -7,7 +7,26 @@
 #
 # ------------------------
 #
+acteurs=['CDA', 'Departement', 'DGFiP', 'erdf', 'SDE', 'SDEER', 'Soluris', 'VLR']
 
+etapes=['Etape_01', 'Etape_02', 'Etape_03', 'Etape_04', 'Etape_05']
+
+zones=['M11', 'M12', 'M13', 'M14', 'M15',
+       'M21', 'M22', 'M23', 'M24', 'M25',
+       'M31', 'M32', 'M33', 'M34', 'M35',
+       'M41', 'M42', 'M43', 'M44', 'M45',
+       'M51', 'M52', 'M53', 'M54', 'M55']
+
+objets=['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'PointCanevasPCRS', 'AffleurantSymbolePCRS', 'HaieEspaceVertPCRS', 'ArbreAlignementPCRS']
+
+objet_identifiant={'EmprisePublicationPCRS': 'idEmprise',
+                   'FacadePCRS': 'idObjet',
+                   'BordurePCRS': 'idObjet',
+                   'MurPCRS': 'idObjet',
+                   'PointCanevasPCRS': 'idObjet',
+                   'AffleurantSymbolePCRS': 'idAffleurant',
+                   'HaieEspaceVertPCRS': 'idObjet',
+                   'ArbreAlignementPCRS': 'idObjet'}
 
 zones_levees={'CDA__Etape_01': ['M11'], \
               'CDA__Etape_02': ['M12', 'M21'], \
@@ -91,9 +110,8 @@ objets_leves={'CDA__Etape_01': ['EmprisePublicationPCRS', 'FacadePCRS', 'Bordure
               'VLR__Etape_04': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'PointCanevasPCRS', 'AffleurantSymbolePCRS', 'HaieEspaceVertPCRS', 'ArbreAlignementPCRS'], \
               'VLR__Etape_05': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'PointCanevasPCRS', 'AffleurantSymbolePCRS', 'HaieEspaceVertPCRS', 'ArbreAlignementPCRS']}
 
-#with open('dataout.txt', 'r') as inputfile:
-    # dans l'ordre des fichiers a écrire,
-    # creation de deux listes
+# dans l'ordre des fichiers a écrire,
+# creation de deux listes
 cles_triees = sorted(zones_levees.keys())
 liste_triee_zones_levees = []
 for cle in cles_triees:
@@ -103,13 +121,40 @@ liste_triee_objets_leves = []
 for cle in cles_triees:
     liste_triee_objets_leves.append(objets_leves[cle])
 
-print(liste_triee_zones_levees)
-print(liste_triee_objets_leves)
+#print(liste_triee_zones_levees)
+#print(liste_triee_objets_leves)
+
+with open('after_insert_2.sql', 'w') as outputfile:
+    #outputfile = open(cles_triees[0], 'w')
+    #ligne_sauvegardee = ''
+    #numero_ligne=0
+    for acteur in acteurs:
+        for etape in etapes:
+            acteur_etape = '{0}__{1}'.format(acteur, etape)
+            zones_non_levees = []
+            for zone in zones:
+                if zone not in zones_levees[acteur_etape]:
+                    zones_non_levees.append(zone)
+            objets_non_leves = []
+            for objet in objets:
+                if objet not in objets_leves[acteur_etape]:
+                    objets_non_leves.append(objet)
+            print('acteur_etape = {0}'.format(acteur_etape))
+            # suppression des objets qui non pas été levés
+            for objet in objets_non_leves:
+                print('delete * from {0}.{1}'.format(acteur_etape, objet))
+            # et pour les objets leves, suppression des objets qui
+            # ne sont pas dans une zone levee
+            for objet in objets_leves[acteur_etape]:
+                for zone in zones_non_levees:
+                    print('delete * from {0}.{1} where {2} like {3}'.format(acteur_etape, objet, objet_identifiant[objet], zone))
+            #print('acteur_etape = {0}   => zones_non_levees = {1}'.format(acteur_etape, zones_non_levees))
+            #print('acteur_etape = {0}   => zones = {1}    => objets = {2}'.format(acteur_etape, zones_levees[acteur_etape], objets_leves[acteur_etape]))
+            #outputfile.write('acteur_etape = {0}   => zones = {1}    => objets = {2}'.format(acteur_etape, zones_levees[acteur_etape], objets_leves[acteur_etape]))
+
+outputfile.close()
+
 """
-    outputfile = open(cles_triees[0], 'w')
-    ligne_sauvegardee = ''
-    numero_ligne=0
-    for line in inputfile:
         numero_ligne+=1
         code, valeur = line.split('£')
         valeur = valeur[:-1]
