@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# script pour le nettoyage des insert
+# script pour le nettoyage des données :
+# il y a des insertions systématiques dans la base de données origine
+# le but de ce scrip est de générer
+# les suppressions d'objets en fonction
+# d'un scenario qui est entré sous la forme de
+# dictionnaire
 
+
+
+import sys
 
 #
 # ------------------------
@@ -112,6 +120,7 @@ objets_leves={'CDA__Etape_01': ['EmprisePublicationPCRS', 'FacadePCRS', 'Bordure
 
 # dans l'ordre des fichiers a écrire,
 # creation de deux listes
+"""
 cles_triees = sorted(zones_levees.keys())
 liste_triee_zones_levees = []
 for cle in cles_triees:
@@ -123,6 +132,11 @@ for cle in cles_triees:
 
 #print(liste_triee_zones_levees)
 #print(liste_triee_objets_leves)
+"""
+
+acteur_etape_courant=sys.argv[1]
+
+print('acteur_etape_courant = {0}'.format(sys.argv[1]))
 
 with open('after_insert_2.sql', 'w') as outputfile:
     #outputfile = open(cles_triees[0], 'w')
@@ -131,26 +145,31 @@ with open('after_insert_2.sql', 'w') as outputfile:
     for acteur in acteurs:
         for etape in etapes:
             acteur_etape = '{0}__{1}'.format(acteur, etape)
-            zones_non_levees = []
-            for zone in zones:
-                if zone not in zones_levees[acteur_etape]:
-                    zones_non_levees.append(zone)
-            objets_non_leves = []
-            for objet in objets:
-                if objet not in objets_leves[acteur_etape]:
-                    objets_non_leves.append(objet)
-            print('acteur_etape = {0}'.format(acteur_etape))
-            # suppression des objets qui non pas été levés
-            for objet in objets_non_leves:
-                print('delete * from {0}.{1}'.format(acteur_etape, objet))
-            # et pour les objets leves, suppression des objets qui
-            # ne sont pas dans une zone levee
-            for objet in objets_leves[acteur_etape]:
-                for zone in zones_non_levees:
-                    print('delete * from {0}.{1} where {2} like {3}'.format(acteur_etape, objet, objet_identifiant[objet], zone))
-            #print('acteur_etape = {0}   => zones_non_levees = {1}'.format(acteur_etape, zones_non_levees))
-            #print('acteur_etape = {0}   => zones = {1}    => objets = {2}'.format(acteur_etape, zones_levees[acteur_etape], objets_leves[acteur_etape]))
-            #outputfile.write('acteur_etape = {0}   => zones = {1}    => objets = {2}'.format(acteur_etape, zones_levees[acteur_etape], objets_leves[acteur_etape]))
+            if (acteur_etape == acteur_etape_courant):
+                # tableaux complementaires
+                zones_non_levees = []
+                for zone in zones:
+                    if zone not in zones_levees[acteur_etape]:
+                        zones_non_levees.append(zone)
+                objets_non_leves = []
+                for objet in objets:
+                    if objet not in objets_leves[acteur_etape]:
+                        objets_non_leves.append(objet)
+                print('-- acteur_etape = {0}'.format(acteur_etape))
+                outputfile.write('-- acteur_etape = {0}'.format(acteur_etape))
+                # suppression des objets qui non pas été levés
+                for objet in objets_non_leves:
+                    print('delete * from "{0}"."{1}"'.format(acteur_etape, objet))
+                    outputfile.write('delete * from "{0}"."{1}";'.format(acteur_etape, objet))
+                # et pour les objets leves, suppression des objets qui
+                # ne sont pas dans une zone levee
+                for objet in objets_leves[acteur_etape]:
+                    for zone in zones_non_levees:
+                        print('delete * from "{0}"."{1}" where "{2}" like \'{3}%\''.format(acteur_etape, objet, objet_identifiant[objet], zone))
+                        outputfile.write('delete * from "{0}"."{1}" where "{2}" like \'{3}%\''.format(acteur_etape, objet, objet_identifiant[objet], zone))
+                #print('acteur_etape = {0}   => zones_non_levees = {1}'.format(acteur_etape, zones_non_levees))
+                #print('acteur_etape = {0}   => zones = {1}    => objets = {2}'.format(acteur_etape, zones_levees[acteur_etape], objets_leves[acteur_etape]))
+                #outputfile.write('acteur_etape = {0}   => zones = {1}    => objets = {2}'.format(acteur_etape, zones_levees[acteur_etape], objets_leves[acteur_etape]))
 
 outputfile.close()
 

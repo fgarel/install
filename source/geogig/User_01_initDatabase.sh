@@ -14,6 +14,8 @@
 # par les utilisateurs de l'outil geogig
 
 
+DBHOST=VLR6180Y
+DBHOST=localhost
 
 echo "#"
 echo "# Création de la base sandbox"
@@ -25,7 +27,7 @@ echo "#"
 echo "# Création des schemas pour la base sandbox"
 echo "#"
 #psql -h VLR6180Y -d sandbox -U "VLR" -f "~/Documents/install/source/geogig/create_schema_sandbox.sql"
-psql -h VLR6180Y -d sandbox -U "VLR" -f "create_schema_sandbox.sql"
+psql -h $DBHOST -d sandbox -U "VLR" -f "create_schema_sandbox.sql"
 echo "#"
 echo "# Création des tables pour la base sandbox"
 echo "#"
@@ -39,10 +41,10 @@ for postgresqluser in $listuser ;
         #        echo "schema = "\"$postgresqluser$schema\"
 #                echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" SUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
 #                sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" SUPERUSER NOCREATEDB NOCREATEROLE;" ;
-                psql -h VLR6180Y -d sandbox -U $postgresqluser -c "ALTER ROLE \"$postgresqluser\" SET search_path TO \"$postgresqluser\", public;"
+                psql -h $DBHOST -d sandbox -U $postgresqluser -c "ALTER ROLE \"$postgresqluser\" SET search_path TO \"$postgresqluser\", public;"
 #                echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" NOSUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
 #                sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" NOSUPERUSER NOCREATEDB NOCREATEROLE;" ;
                 #psql -h VLR6180Y -d sandbox -U $postgresqluser -c "show search_path;"
-                psql -h VLR6180Y -d sandbox -U $postgresqluser -f "create_table.sql"
+                psql -h $DBHOST -d sandbox -U $postgresqluser -f "create_table.sql"
         #    done
     done
