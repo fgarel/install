@@ -15,6 +15,9 @@
 # et en lecture seule
 # par les utilisateurs de l'outil geogig
 
+DBHOST=VLR6180Y
+DBHOST=localhost
+
 echo "#"
 echo "# Création de la base origine"
 echo "#"
@@ -25,7 +28,7 @@ echo "#"
 echo "# Création des schemas pour la base origine"
 echo "#"
 #psql -h VLR6180Y -d origine -U "VLR" -f "~/Documents/install/source/geogig/create_schema_origine.sql"
-psql -h VLR6180Y -d origine -U "VLR" -f "create_schema_origine.sql"
+psql -h $DBHOST -d origine -U "VLR" -f "create_schema_origine.sql"
 echo "#"
 echo "# Création des tables pour la base origine"
 echo "#"
@@ -39,11 +42,11 @@ for postgresqluser in $listuser ;
 #                echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" SUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
 #                sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" SUPERUSER NOCREATEDB NOCREATEROLE;" ;
                 echo "schema = "\"$postgresqluser$schema\"
-                psql -h VLR6180Y -d origine -U $postgresqluser -c "ALTER ROLE \"$postgresqluser\" SET search_path TO \"$postgresqluser$schema\", public;"
+                psql -h $DBHOST -d origine -U $postgresqluser -c "ALTER ROLE \"$postgresqluser\" SET search_path TO \"$postgresqluser$schema\", public;"
 #                echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" NOSUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
 #                sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" NOSUPERUSER NOCREATEDB NOCREATEROLE;" ;
                 #psql -h VLR6180Y -d origine -U $postgresqluser -c "show search_path;"
-                psql -h VLR6180Y -d origine -U $postgresqluser -f "create_table.sql"
+                psql -h $DBHOST -d origine -U $postgresqluser -f "create_table.sql"
             done
     done
 
