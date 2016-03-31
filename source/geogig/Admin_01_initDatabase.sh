@@ -16,7 +16,7 @@
 # par les utilisateurs de l'outil geogig
 
 DBHOST=VLR6180Y
-DBHOST=localhost
+#DBHOST=localhost
 
 echo "#"
 echo "# Création de la base origine"
