@@ -1,100 +1,86 @@
 #!/bin/sh
 
+
+
+DBHOST=VLR6180Y
+DBNAME=origine
+
 echo "#"
 echo "# Recopie de la configuration générale"
 echo "#"
 echo "cp ./.geogigconfig ~/.geogigconfig"
       cp ./.geogigconfig ~/.geogigconfig
+
+listuser='CDA Departement DGFiP erdf SDE SDEER Soluris VLR';
+
 echo "#"
-echo "# Creation et initialisation de 5 dépots"
+echo "# Creation et initialisation de dépot par acteur"
 echo "#"
-echo "mkdir PCRS_17"
-echo "mkdir PCRS_Acteur_A"
-echo "mkdir PCRS_Acteur_B"
-echo "mkdir PCRS Acteur_C"
-echo "mkdir PCRS_Acteur_D"
-      mkdir PCRS_17
-      mkdir PCRS_Acteur_A
-      mkdir PCRS_Acteur_B
-      mkdir PCRS_Acteur_C
-      mkdir PCRS_Acteur_D
-echo ""
+for user in $listuser ;
+    do
+        echo "rm -rf $user"
+        rm -rf $user
+        echo "mkdir $user"
+        mkdir $user
+    done
+
 echo "#"
 echo "# Initialisation"
 echo "#"
-echo "cd PCRS_17 ; geogig init ; cd .."
-      cd PCRS_17 ; geogig init ; cd ..
-echo "cd PCRS_Acteur_A ; geogig init ; cd .."
-      cd PCRS_Acteur_A ; geogig init ; cd ..
-echo "cd PCRS_Acteur_B ; geogig init ; cd .."
-      cd PCRS_Acteur_B ; geogig init ; cd ..
-echo "cd PCRS_Acteur_C ; geogig init ; cd .."
-      cd PCRS_Acteur_C ; geogig init ; cd ..
-echo "cd PCRS_Acteur_D ; geogig init ; cd .."
-      cd PCRS_Acteur_D ; geogig init ; cd ..
+for user in $listuser ;
+    do
+        echo "cd $user ; geogig init ; cd .."
+        cd $user ; geogig init ; cd ..
+    done
 
-echo ""
 echo "#"
-echo "# Creation du premier commit dans chacun des 5 dépots"
+echo "# Creation du premier commit dans chacun des dépots"
 echo "#"
-echo 'cd PCRS_Acteur_A ; touch README.md ; geogig add README.md ; geogig commit -m "first commit" ; cd ..'
-      cd PCRS_Acteur_A
-      touch README.md
-      geogig add README.md
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table a_1_affleurant
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table a_1_batiment
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table a_1_bordure
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table a_1_case_00140_00100
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table a_1_cloture
-      geogig ls
-      geogig commit -m "first commit"
-      cd ..
-echo 'cd PCRS_Acteur_B ; touch README.md ; geogig add README.md ; geogig commit -m "first commit" ; cd ..'
-      cd PCRS_Acteur_B
-      touch README.md
-      geogig add README.md
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table b_1_affleurant
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table b_1_batiment
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table b_1_bordure
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table b_1_case_00140_00100
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table b_1_cloture
-      geogig ls
-      geogig commit -m "first commit"
-      cd ..
-echo 'cd PCRS_Acteur_C ; touch README.md ; geogig add README.md ; geogig commit -m "first commit" ; cd ..'
-      cd PCRS_Acteur_C
-      touch README.md
-      geogig add README.md
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table c_1_affleurant
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table c_1_batiment
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table c_1_bordure
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table c_1_case_00140_00100
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table c_1_cloture
-      geogig ls
-      geogig commit -m "first commit"
-      cd ..
-echo 'cd PCRS_Acteur_D ; touch README.md ; geogig add README.md ; geogig commit -m "first commit" ; cd ..'
-      cd PCRS_Acteur_D
-      touch README.md
-      geogig add README.md
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table d_1_affleurant
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table d_1_batiment
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table d_1_bordure
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table d_1_case_00140_00100
-geogig pg import --database gis --user fred --password Mie3Bhoutan --table d_1_cloture
-      geogig ls
-      geogig commit -m "first commit"
-      cd ..
+for user in $listuser ;
+    do
+        echo "cd $user ; touch README.md ; geogig add README.md ; geogig commit -m 'first commit' ; cd .."
+        cd $user
+        # ajout d'un chouette README
+        # https://dbader.org/blog/write-a-great-readme-for-your-github-project
+        # https://github.com/dbader/readme-template
+        wget https://raw.githubusercontent.com/dbader/readme-template/master/README.md
+        #touch README.md
+        #geogig add README.md
+        echo "Dans la branche master, import des données du schema" \"Soluris__Etape_01\"
+        geogig pg import --host $DBHOST --database origine --user $user --password $user --schema \"Soluris__Etape_01\" --all
+        geogig add
+        geogig commit -m "first commit"
+        cd ..
+    done
 
-echo ""
 echo "#"
-echo "# Creation des branches dans chacun des 5 dépots"
+echo "# Creation des branches dans chacun des dépots"
 echo "#"
-echo "# cd PCRS_17 ; geogig branch PlanTopoControle ; geogig branch Controle ; geogig branch PlanTopoNonControle ; geogig branch PlanExecution ; geogig branch PlanProjet ; cd .."
-      cd PCRS_Acteur_A ; 
-      geogig branch PlanTopoControle
-      geogig branch Controle
-      geogig branch PlanTopoNonControle
-      geogig branch PlanExecution
-      geogig branch PlanProjet
-      cd ..
+for user in $listuser ;
+    do
+        echo "# cd $user ; geogig branch PlanTopoControle ; geogig branch Controle ; geogig branch PlanTopoNonControle ; geogig branch PlanExecution ; geogig branch PlanProjet ; cd .."
+        cd $user ;
+        geogig branch PlanTopoControle
+        geogig branch Controle
+        geogig branch PlanTopoNonControle
+        geogig branch PlanExecution
+        geogig branch PlanProjet
+        cd ..
+    done
+
+echo "#"
+echo "# Premier vrai import dans chacun des dépots"
+echo "#"
+for user in $listuser ;
+    do
+        echo "cd $user ; geogig pg import ... ; geogig add ... ; geogig commit -m '...' ; cd .."
+        cd $user
+        echo "On se place dans la bonne branche"
+        geogig checkout PlanTopoNonControle
+        echo "Import des données du schema" \""$user"__Etape_01\"
+        geogig pg import --host $DBHOST --database origine --user $user --password $user --schema \""$user"__Etape_01\" --all
+        geogig add
+        geogig commit -m "Import des premieres données"
+        #geogig ls
+        cd ..
+    done

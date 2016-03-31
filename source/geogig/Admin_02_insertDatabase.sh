@@ -16,7 +16,7 @@
 # par les utilisateurs de l'outil geogig
 
 DBHOST=VLR6180Y
-DBHOST=localhost
+#DBHOST=localhost
 
 echo "#"
 echo "# Création de la base origine"
@@ -61,12 +61,18 @@ for postgresqluser in $acteurs ;
                 echo "#"
                 echo "# Après insertion"
                 echo "#"
+                # ce premier after_insert.sql, c'est pour 
+                # nettoyer au niveau de la structuration
+                # colonne géometrie, etc
                 psql -h $DBHOST -d origine -U $postgresqluser -f "after_insert.sql"
+                # le deuxieme after_insert_2.sql, c'est aussi
+                # pour nettoyer, mais c'est fois ci au niveau du contenu
+                # suppression des objets selon le scenario
+                # qui est paramétré dans after_insert.py
                 ./after_insert.py $schema
-                #psql -h $DBHOST -d origine -U $postgresqluser -f "after_insert_2.sql"
+                psql -h $DBHOST -d origine -U $postgresqluser -f "after_insert_2.sql"
             done
     done
-#./after_insert.py
 #psql -h $DBHOST -d origine -U $postgresqluser -f "after_insert_2.sql"
 
 
