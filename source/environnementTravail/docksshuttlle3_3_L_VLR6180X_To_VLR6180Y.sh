@@ -25,9 +25,11 @@ ssh -f \
     -N \
     -X \
     -L 15900:localhost:5900 \
+    -L 15432:localhost:5432 \
     -L 10080:localhost:80 \
     -L 10022:localhost:22 \
     -L 45900:localhost:5900 \
+    -L 45432:localhost:5432 \
     -L 40080:localhost:80 \
     -L 40022:localhost:22 \
     fred@VLR6180Y
