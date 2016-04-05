@@ -1,1 +1,4 @@
 La doc pour le développement de cet outil et son installation sont dans cloud.sagemath.com
+
+le fichier init.sh                   est a recopier dans ~/Bureau
+le fichier watchdtdict-emission-init est à recopier dans /etc/init.d/
