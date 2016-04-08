@@ -1,6 +1,7 @@
 build
 source/geogig/geogig/*
 source/geogig/geogig-cli-app.zip
+source/geogig/geogig/CDA
 source/geogig/geogig/CDA/*
 source/geogig/geogig/Departement/*
 source/geogig/geogig/DGFiP/*

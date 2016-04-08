@@ -34,7 +34,7 @@ echo "# ~/Documents/install/source/geogig/Admin_02_insertDatabase.sh"
 echo "#"
 echo "# Insertion des données la base origine"
 echo "#"
-acteurs='CDA Departement DGFiP erdf SDE SDEER Soluris VLR';
+acteurs='CDA Departement DGFiP ERDF SDE SDEER Soluris VLR';
 etapes='__Etape_01 __Etape_02 __Etape_03 __Etape_04 __Etape_05' ;
 
 for postgresqluser in $acteurs ;
@@ -53,7 +53,8 @@ for postgresqluser in $acteurs ;
                 echo "#"
                 echo "# Avant Insertion"
                 echo "#"
-                psql -h $DBHOST -d origine -U $postgresqluser -f "before_insert.sql"
+                #psql -h $DBHOST -d origine -U $postgresqluser -f "before_insert.sql"
+                psql -h $DBHOST -d origine -U $postgresqluser -f "before_insert_$postgresqluser.sql"
                 echo "#"
                 echo "# Insertion de données dans la base origine"
                 echo "#"
@@ -61,7 +62,7 @@ for postgresqluser in $acteurs ;
                 echo "#"
                 echo "# Après insertion"
                 echo "#"
-                # ce premier after_insert.sql, c'est pour 
+                # ce premier after_insert.sql, c'est pour
                 # nettoyer au niveau de la structuration
                 # colonne géometrie, etc
                 psql -h $DBHOST -d origine -U $postgresqluser -f "after_insert.sql"

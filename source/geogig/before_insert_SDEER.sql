@@ -1,14 +1,14 @@
 -- Before Insert
 
 DELETE FROM "GestionnaireReseaux"
-WHERE gestionnaire = 'Ville de La Rochelle';
+WHERE gestionnaire = 'Syndicat Départemental d Electrification et d Equipement Rural';
 
 INSERT INTO
   "GestionnaireReseaux" (
     gestionnaire
   )
   VALUES (
-    'Ville de La Rochelle');
+    'Syndicat Départemental d Electrification et d Equipement Rural');
 
 
 -- EmprisePublicationPCRS
@@ -22,7 +22,7 @@ ALTER TABLE "EmprisePublicationPCRS"
   ALTER COLUMN geometrie DROP NOT NULL;
 
 ALTER TABLE "EmprisePublicationPCRS"
-  ALTER COLUMN gestionnaire SET DEFAULT 'Ville de La Rochelle';
+  ALTER COLUMN gestionnaire SET DEFAULT 'Syndicat Départemental d Electrification et d Equipement Rural';
 
 ALTER TABLE "EmprisePublicationPCRS"
   ALTER COLUMN calendrier SET DEFAULT '01';
@@ -45,7 +45,7 @@ ALTER TABLE "AffleurantSymbolePCRS"
   ALTER COLUMN geometrie DROP NOT NULL;
 
 ALTER TABLE "AffleurantSymbolePCRS"
-  ALTER COLUMN gestionnaire SET DEFAULT 'Ville de La Rochelle';
+  ALTER COLUMN gestionnaire SET DEFAULT 'Syndicat Départemental d Electrification et d Equipement Rural';
 
 ALTER TABLE "AffleurantSymbolePCRS"
   ALTER COLUMN nature SET DEFAULT '00';
@@ -54,13 +54,13 @@ ALTER TABLE "AffleurantSymbolePCRS"
   ALTER COLUMN "codeCouleur" SET DEFAULT 'Blanc';
 
 ALTER TABLE "AffleurantSymbolePCRS"
-  ALTER COLUMN source SET DEFAULT 'Système Information Geographique Ville de La Rochelle';
+  ALTER COLUMN source SET DEFAULT 'Système Information Geographique Syndicat Départemental d Electrification et d Equipement Rural';
 
 ALTER TABLE "AffleurantSymbolePCRS"
   ALTER COLUMN "idSource" SET DEFAULT '';
 
 ALTER TABLE "AffleurantSymbolePCRS"
-  ALTER COLUMN "calque" SET DEFAULT 'PCRS_AFFLEURANT_VLR_3PREFIXE_SYMBOLE';
+  ALTER COLUMN "calque" SET DEFAULT 'PCRS_AFFLEURANT_SDEER_AFFLEURANTSYMBOLE';
 
 ALTER TABLE "AffleurantSymbolePCRS"
   ALTER COLUMN "qualiteCategorisation" SET DEFAULT '01';
@@ -75,7 +75,7 @@ ALTER TABLE "AffleurantSymbolePCRS"
   ALTER COLUMN "utilisableCotation" SET DEFAULT '03';
 
 ALTER TABLE "AffleurantSymbolePCRS"
-  ALTER COLUMN "reference" SET DEFAULT 'Symbole_XXX';
+  ALTER COLUMN "reference" SET DEFAULT 'Symbole_SDEER_X';
 
 ALTER TABLE "AffleurantSymbolePCRS"
   ALTER COLUMN "longueur" SET DEFAULT 1;
@@ -98,7 +98,7 @@ ALTER TABLE "ArbreAlignementPCRS"
   ALTER COLUMN "thematique" SET DEFAULT '06';
 
 ALTER TABLE "ArbreAlignementPCRS"
-  ALTER COLUMN "calque" SET DEFAULT 'PCRS_VEGETAL_VLR_3PREFIXE_ARBRE';
+  ALTER COLUMN "calque" SET DEFAULT 'PCRS_VEGETAL_SDEER_ARBREALIGNEMENT';
 
 ALTER TABLE "ArbreAlignementPCRS"
   ALTER COLUMN "qualiteCategorisation" SET DEFAULT '01';
@@ -127,7 +127,7 @@ ALTER TABLE "BordurePCRS"
   ALTER COLUMN "thematique" SET DEFAULT '03';
 
 ALTER TABLE "BordurePCRS"
-  ALTER COLUMN "calque" SET DEFAULT 'PCRS_VOIRIE_VLR_3PREFIXE_BORDURE';
+  ALTER COLUMN "calque" SET DEFAULT 'PCRS_VOIRIE_SDEER_BORDURE';
 
 ALTER TABLE "BordurePCRS"
   ALTER COLUMN "qualiteCategorisation" SET DEFAULT '01';
@@ -156,7 +156,7 @@ ALTER TABLE "ObjetGeneriquePCRS"
   ALTER COLUMN "thematique" SET DEFAULT '01';
 
 ALTER TABLE "ObjetGeneriquePCRS"
-  ALTER COLUMN "calque" SET DEFAULT 'PCRS_TOPOGRAPHIE_VLR_3PREFIXE_GENERIQUE';
+  ALTER COLUMN "calque" SET DEFAULT 'PCRS_TOPOGRAPHIE_SDEER_OBJETGENERIQUE';
 
 ALTER TABLE "ObjetGeneriquePCRS"
   ALTER COLUMN "qualiteCategorisation" SET DEFAULT '01';
@@ -185,7 +185,7 @@ ALTER TABLE "FacadePCRS"
   ALTER COLUMN "thematique" SET DEFAULT '02';
 
 ALTER TABLE "FacadePCRS"
-  ALTER COLUMN "calque" SET DEFAULT 'PCRS_BATI_VLR_3PREFIXE_FACADE';
+  ALTER COLUMN "calque" SET DEFAULT 'PCRS_BATI_SDEER_FACADE';
 
 ALTER TABLE "FacadePCRS"
   ALTER COLUMN "qualiteCategorisation" SET DEFAULT '01';
@@ -214,7 +214,7 @@ ALTER TABLE "HaieEspaceVertPCRS"
   ALTER COLUMN "thematique" SET DEFAULT '06';
 
 ALTER TABLE "HaieEspaceVertPCRS"
-  ALTER COLUMN "calque" SET DEFAULT 'PCRS_VEGETAL_VLR_3PREFIXE_HAIE';
+  ALTER COLUMN "calque" SET DEFAULT 'PCRS_VEGETAL_SDEER_HAIEESPACEVERT';
 
 ALTER TABLE "HaieEspaceVertPCRS"
   ALTER COLUMN "qualiteCategorisation" SET DEFAULT '01';

@@ -15,7 +15,7 @@ echo '# Pour chacun des utilisateurs ...'
 echo "#  - CDA"
 echo "#  - Departement"
 echo "#  - DGFiP"
-echo "#  - erdf"
+echo "#  - ERDF"
 echo "#  - SDE"
 echo "#  - SDEER"
 echo "#  - Soluris"
@@ -35,7 +35,7 @@ echo '# Creation des utilisateurs'
 echo '# ========================='
 
 
-listuser='CDA Departement DGFiP erdf SDE SDEER Soluris VLR'
+listuser='CDA Departement DGFiP ERDF SDE SDEER Soluris VLR'
 listdb='pcrs rtge' ;
 listdb='origine sandbox' ; # uniquement origine et sandbox
 listext='adminpack plpgsql postgis postgis_topology fuzzystrmatch hstore' ;
