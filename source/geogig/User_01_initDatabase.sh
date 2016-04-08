@@ -31,20 +31,20 @@ psql -h $DBHOST -d sandbox -U "VLR" -f "create_schema_sandbox.sql"
 echo "#"
 echo "# Création des tables pour la base sandbox"
 echo "#"
-listuser='CDA Departement DGFiP erdf SDE SDEER Soluris VLR';
-listschema=''
+listuser='CDA Departement DGFiP ERDF SDE SDEER Soluris VLR';
+listschema='__PlanProjet __PlanExecution __PlanTopoNonControle __Controle __PlanTopoControle'
 
 for postgresqluser in $listuser ;
     do
-        #for schema in $listschema ;
-        #    do
-        #        echo "schema = "\"$postgresqluser$schema\"
+        for schema in $listschema ;
+            do
+                echo "schema = "\"$postgresqluser$schema\"
 #                echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" SUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
 #                sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" SUPERUSER NOCREATEDB NOCREATEROLE;" ;
-                psql -h $DBHOST -d sandbox -U $postgresqluser -c "ALTER ROLE \"$postgresqluser\" SET search_path TO \"$postgresqluser\", public;"
+                psql -h $DBHOST -d sandbox -U $postgresqluser -c "ALTER ROLE \"$postgresqluser\" SET search_path TO \"$postgresqluser$schema\", public;"
 #                echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" NOSUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
 #                sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" NOSUPERUSER NOCREATEDB NOCREATEROLE;" ;
                 #psql -h VLR6180Y -d sandbox -U $postgresqluser -c "show search_path;"
-                psql -h $DBHOST -d sandbox -U $postgresqluser -f "create_table.sql"
-        #    done
+                psql -h $DBHOST -d sandbox -U $postgresqluser -f "create_table_sandbox.sql"
+            done
     done

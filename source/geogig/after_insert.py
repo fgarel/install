@@ -15,7 +15,7 @@ import sys
 #
 # ------------------------
 #
-acteurs=['CDA', 'Departement', 'DGFiP', 'erdf', 'SDE', 'SDEER', 'Soluris', 'VLR']
+acteurs=['CDA', 'Departement', 'DGFiP', 'ERDF', 'SDE', 'SDEER', 'Soluris', 'VLR']
 
 etapes=['Etape_01', 'Etape_02', 'Etape_03', 'Etape_04', 'Etape_05']
 
@@ -51,11 +51,11 @@ zones_levees={'CDA__Etape_01': ['M11'], \
               'DGFiP__Etape_03': ['M11', 'M12', 'M13', 'M14', 'M15', 'M21', 'M22', 'M23', 'M24', 'M25', 'M31', 'M32', 'M33', 'M34', 'M35', 'M41', 'M42', 'M43', 'M44', 'M45', 'M51', 'M52', 'M53', 'M54', 'M55'], \
               'DGFiP__Etape_04': ['M11', 'M12', 'M13', 'M14', 'M15', 'M21', 'M22', 'M23', 'M24', 'M25', 'M31', 'M32', 'M33', 'M34', 'M35', 'M41', 'M42', 'M43', 'M44', 'M45', 'M51', 'M52', 'M53', 'M54', 'M55'], \
               'DGFiP__Etape_05': ['M11', 'M12', 'M13', 'M14', 'M15', 'M21', 'M22', 'M23', 'M24', 'M25', 'M31', 'M32', 'M33', 'M34', 'M35', 'M41', 'M42', 'M43', 'M44', 'M45', 'M51', 'M52', 'M53', 'M54', 'M55'], \
-              'erdf__Etape_01': ['M15'], \
-              'erdf__Etape_02': ['M14', 'M25'], \
-              'erdf__Etape_03': ['M13', 'M24', 'M35'], \
-              'erdf__Etape_04': ['M12', 'M23', 'M34', 'M45'], \
-              'erdf__Etape_05': ['M11', 'M22', 'M33', 'M44', 'M55'], \
+              'ERDF__Etape_01': ['M15'], \
+              'ERDF__Etape_02': ['M14', 'M25'], \
+              'ERDF__Etape_03': ['M13', 'M24', 'M35'], \
+              'ERDF__Etape_04': ['M12', 'M23', 'M34', 'M45'], \
+              'ERDF__Etape_05': ['M11', 'M22', 'M33', 'M44', 'M55'], \
               'SDE__Etape_01': ['M51'], \
               'SDE__Etape_02': ['M41', 'M52'], \
               'SDE__Etape_03': ['M42', 'M53'], \
@@ -92,11 +92,11 @@ objets_leves={'CDA__Etape_01': ['EmprisePublicationPCRS', 'FacadePCRS', 'Bordure
               'DGFiP__Etape_03': ['EmprisePublicationPCRS', 'PointCanevasPCRS'], \
               'DGFiP__Etape_04': ['EmprisePublicationPCRS', 'PointCanevasPCRS'], \
               'DGFiP__Etape_05': ['EmprisePublicationPCRS', 'PointCanevasPCRS'], \
-              'erdf__Etape_01': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS'], \
-              'erdf__Etape_02': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS'], \
-              'erdf__Etape_03': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'HaieEspaceVertPCRS'], \
-              'erdf__Etape_04': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'PointCanevasPCRS', 'HaieEspaceVertPCRS'], \
-              'erdf__Etape_05': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'PointCanevasPCRS', 'HaieEspaceVertPCRS'], \
+              'ERDF__Etape_01': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS'], \
+              'ERDF__Etape_02': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS'], \
+              'ERDF__Etape_03': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'HaieEspaceVertPCRS'], \
+              'ERDF__Etape_04': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'PointCanevasPCRS', 'HaieEspaceVertPCRS'], \
+              'ERDF__Etape_05': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'PointCanevasPCRS', 'HaieEspaceVertPCRS'], \
               'SDE__Etape_01': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS'], \
               'SDE__Etape_02': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS'], \
               'SDE__Etape_03': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'PointCanevasPCRS'], \
@@ -107,11 +107,11 @@ objets_leves={'CDA__Etape_01': ['EmprisePublicationPCRS', 'FacadePCRS', 'Bordure
               'SDEER__Etape_03': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'PointCanevasPCRS', 'AffleurantSymbolePCRS', 'HaieEspaceVertPCRS', 'ArbreAlignementPCRS'], \
               'SDEER__Etape_04': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'PointCanevasPCRS', 'AffleurantSymbolePCRS', 'HaieEspaceVertPCRS', 'ArbreAlignementPCRS'], \
               'SDEER__Etape_05': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'PointCanevasPCRS', 'AffleurantSymbolePCRS', 'HaieEspaceVertPCRS', 'ArbreAlignementPCRS'], \
-              'Soluris__Etape_01': ['EmprisePublicationPCRS'], \
-              'Soluris__Etape_02': ['EmprisePublicationPCRS'], \
-              'Soluris__Etape_03': ['EmprisePublicationPCRS'], \
-              'Soluris__Etape_04': ['EmprisePublicationPCRS'], \
-              'Soluris__Etape_05': ['EmprisePublicationPCRS'], \
+              'Soluris__Etape_01': [], \
+              'Soluris__Etape_02': [], \
+              'Soluris__Etape_03': [], \
+              'Soluris__Etape_04': [], \
+              'Soluris__Etape_05': [], \
               'VLR__Etape_01': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'PointCanevasPCRS', 'AffleurantSymbolePCRS'], \
               'VLR__Etape_02': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'PointCanevasPCRS', 'AffleurantSymbolePCRS', 'ArbreAlignementPCRS'], \
               'VLR__Etape_03': ['EmprisePublicationPCRS', 'FacadePCRS', 'BordurePCRS', 'MurPCRS', 'PointCanevasPCRS', 'AffleurantSymbolePCRS', 'HaieEspaceVertPCRS', 'ArbreAlignementPCRS'], \
@@ -174,4 +174,3 @@ with open('after_insert_2.sql', 'w') as outputfile:
                         outputfile.write('delete from "{0}"."{1}" where "{2}" like \'{3}%\';\n'.format(acteur_etape, objet, objet_identifiant[objet], zone))
 
 outputfile.close()
-

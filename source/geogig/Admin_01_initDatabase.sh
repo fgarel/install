@@ -32,7 +32,7 @@ psql -h $DBHOST -d origine -U "VLR" -f "create_schema_origine.sql"
 echo "#"
 echo "# Création des tables pour la base origine"
 echo "#"
-listuser='CDA Departement DGFiP erdf SDE SDEER Soluris VLR';
+listuser='CDA Departement DGFiP ERDF SDE SDEER Soluris VLR';
 listschema='__Etape_01 __Etape_02 __Etape_03 __Etape_04 __Etape_05' ;
 
 for postgresqluser in $listuser ;
@@ -46,7 +46,7 @@ for postgresqluser in $listuser ;
 #                echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" NOSUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
 #                sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" NOSUPERUSER NOCREATEDB NOCREATEROLE;" ;
                 #psql -h VLR6180Y -d origine -U $postgresqluser -c "show search_path;"
-                psql -h $DBHOST -d origine -U $postgresqluser -f "create_table.sql"
+                psql -h $DBHOST -d origine -U $postgresqluser -f "create_table_origine.sql"
             done
     done
 
