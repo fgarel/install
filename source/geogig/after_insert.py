@@ -134,9 +134,14 @@ for cle in cles_triees:
 #print(liste_triee_objets_leves)
 """
 
-acteur_etape_courant=sys.argv[1]
+if (len(sys.argv) == 1):
+    acteur_etape_courant='VLR__Etape_01'
+else:
+    acteur_etape_courant=sys.argv[1]
 
-print('acteur_etape_courant = {0}'.format(sys.argv[1]))
+#print('len(sys.argv) = {0}'.format(len(sys.argv)))
+#print('sys.argv[1] = {0}'.format(sys.argv[1]))
+#print('acteur_etape_courant = {0}'.format(acteur_etape_courant))
 
 with open('after_insert_2.sql', 'w') as outputfile:
     #outputfile = open(cles_triees[0], 'w')
@@ -155,50 +160,18 @@ with open('after_insert_2.sql', 'w') as outputfile:
                 for objet in objets:
                     if objet not in objets_leves[acteur_etape]:
                         objets_non_leves.append(objet)
-                print('-- acteur_etape = {0}'.format(acteur_etape))
-                outputfile.write('-- acteur_etape = {0}'.format(acteur_etape))
+                #print('-- acteur_etape = {0}'.format(acteur_etape))
+                outputfile.write('-- acteur_etape = {0}\n'.format(acteur_etape))
                 # suppression des objets qui non pas été levés
                 for objet in objets_non_leves:
-                    print('delete * from "{0}"."{1}"'.format(acteur_etape, objet))
-                    outputfile.write('delete * from "{0}"."{1}";'.format(acteur_etape, objet))
+                    #print('delete from "{0}"."{1}";'.format(acteur_etape, objet))
+                    outputfile.write('delete from "{0}"."{1}";\n'.format(acteur_etape, objet))
                 # et pour les objets leves, suppression des objets qui
                 # ne sont pas dans une zone levee
                 for objet in objets_leves[acteur_etape]:
                     for zone in zones_non_levees:
-                        print('delete * from "{0}"."{1}" where "{2}" like \'{3}%\''.format(acteur_etape, objet, objet_identifiant[objet], zone))
-                        outputfile.write('delete * from "{0}"."{1}" where "{2}" like \'{3}%\''.format(acteur_etape, objet, objet_identifiant[objet], zone))
-                #print('acteur_etape = {0}   => zones_non_levees = {1}'.format(acteur_etape, zones_non_levees))
-                #print('acteur_etape = {0}   => zones = {1}    => objets = {2}'.format(acteur_etape, zones_levees[acteur_etape], objets_leves[acteur_etape]))
-                #outputfile.write('acteur_etape = {0}   => zones = {1}    => objets = {2}'.format(acteur_etape, zones_levees[acteur_etape], objets_leves[acteur_etape]))
+                        #print('delete * from "{0}"."{1}" where "{2}" like \'{3}%\';'.format(acteur_etape, objet, objet_identifiant[objet], zone))
+                        outputfile.write('delete from "{0}"."{1}" where "{2}" like \'{3}%\';\n'.format(acteur_etape, objet, objet_identifiant[objet], zone))
 
 outputfile.close()
 
-"""
-        numero_ligne+=1
-        code, valeur = line.split('£')
-        valeur = valeur[:-1]
-
-        if (ligne_sauvegardee == '' and valeur != 'EOF' and (code != '  0' or valeur != 'SECTION')):
-            if numero_ligne>228800:
-                print(code, valeur)
-            outputfile.write('{0}£{1}\n'.format(code, valeur))
-
-        if (code == '  0' and valeur == 'SECTION'):
-            outputfile.close()
-            ligne_sauvegardee = '{0}£{1}\n'.format(code, valeur)
-            continue
-
-        if (ligne_sauvegardee != '' and code == '  2' and valeur in valeurs_triees):
-            section_en_cours=valeur
-            for cle in cles_triees:
-                if list_sections[cle] == valeur:
-                    outputfile = open(cle, 'w')
-                    outputfile.write(ligne_sauvegardee)
-                    ligne_sauvegardee=''
-                    outputfile.write('{0}£{1}\n'.format(code, valeur))
-                    break
-
-        if (code == '  0' and valeur == 'EOF'):
-            outputfile.close()
-inputfile.close()
-"""
