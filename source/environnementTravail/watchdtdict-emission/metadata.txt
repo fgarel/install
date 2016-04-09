@@ -744,3 +744,670 @@ eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
 eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
 2016032200857T;;palefranc@office-agglo-larochelle.fr
 eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032300297T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032300297T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016032300297T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016032300297T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032300297T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016032300297T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032300297T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016032300297T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016032300297T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032300321T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032300321T;A3;eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016032300321T;A3;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016032300321T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032300321T;A3;eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016032300321T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032300321T;A3;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016032300321T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016032300321T;A3;eau.service.technique@ville-larochelle.fr;SAUR SUD OUEST
+2016032300321T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032300542T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032300542T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016032300542T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016032300542T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032300542T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016032300542T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032300542T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016032300542T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016032300542T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032300903T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032300903T;A3;eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016032300903T;A3;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016032300903T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032300903T;A3;eau.service.technique@ville-larochelle.fr;17 NUMERIQUE
+2016032300903T;A3;eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016032300903T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032300903T;A3;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016032300903T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016032300903T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032400437T;A4;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032400437T;A4;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016032400437T;A4;eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016032400437T;A4;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032400437T;A4;eau.service.technique@ville-larochelle.fr;17 NUMERIQUE
+2016032400437T;A4;eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016032400437T;A4;eau.service.technique@ville-larochelle.fr;GRTGAZ RCA RPCL ZONE DE SURGERES
+2016032400437T;A4;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032400437T;A4;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016032400437T;A4;eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016032400437T;A4;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032400574T;A4;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032400574T;A4;eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016032400574T;A4;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016032400574T;A4;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032400574T;A4;eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016032400574T;A4;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032400574T;A4;eau.service.technique@ville-larochelle.fr;SNCF
+2016032400574T;A4;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016032400574T;A4;eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016032400574T;A4;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032401370T;A4;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032401370T;A4;eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016032401370T;A4;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016032401370T;A4;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032401370T;A4;eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016032401370T;A4;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032401370T;A4;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016032401370T;A4;eau.service.technique@ville-larochelle.fr;SFR
+2016032401370T;A4;eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016032401370T;A4;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032901686T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032901686T;A3;eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016032901686T;A3;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016032901686T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016032901686T;A3;eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016032901686T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016032901686T;A3;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016032901686T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016033001370T;A3;eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016033001391T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016033001391T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016033001391T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016033001391T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016033001391T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016033001391T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016033001391T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016033001391T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016033100956T;A4;voirie.signalisation@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016033100956T;A4;voirie.signalisation@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016033100956T;A4;voirie.signalisation@ville-larochelle.fr;ORANGE DT DICT
+2016033100956T;A4;voirie.signalisation@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016033100956T;A4;voirie.signalisation@ville-larochelle.fr;17 NUMERIQUE
+2016033100956T;A4;voirie.signalisation@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016033100956T;A4;voirie.signalisation@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016033100956T;A4;voirie.signalisation@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016033100956T;A4;voirie.signalisation@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016033100967T;A4;voirie.signalisation@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016033100967T;A4;voirie.signalisation@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016033100967T;A4;voirie.signalisation@ville-larochelle.fr;ORANGE DT DICT
+2016033100967T;A4;voirie.signalisation@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016033100967T;A4;voirie.signalisation@ville-larochelle.fr;17 NUMERIQUE
+2016033100967T;A4;voirie.signalisation@ville-larochelle.fr;Dalkia France
+2016033100967T;A4;voirie.signalisation@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016033100967T;A4;voirie.signalisation@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016033100967T;A4;voirie.signalisation@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016033100967T;A4;voirie.signalisation@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016033101021T;A4;voirie.signalisation@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016033101021T;A4;voirie.signalisation@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016033101021T;A4;voirie.signalisation@ville-larochelle.fr;ORANGE DT DICT
+2016033101021T;A4;voirie.signalisation@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016033101021T;A4;voirie.signalisation@ville-larochelle.fr;Dalkia France
+2016033101021T;A4;voirie.signalisation@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016033101021T;A4;voirie.signalisation@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016033101021T;A4;voirie.signalisation@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016033101021T;A4;voirie.signalisation@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040400812T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040400812T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040400812T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040400812T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040400812T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040400812T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040400812T;;accueil-dt-dict-atl@sncf.fr
+eau.service.technique@ville-larochelle.fr;SNCF
+2016040400812T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040400812T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;0000000000405rwy.ERDFNAT@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016040401402T;;FT40P0.FTO@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de la ROCHELLE
+2016040401402T;;14600433C.GRDF@demat.protys.fr
+eau.service.technique@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016040401402T;;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016040401402T;;palefranc@office-agglo-larochelle.fr
+eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
