@@ -93,6 +93,7 @@ fi
 
 CLASSPATH=$CLASSPATH_PREFIX:"$BASEDIR"/etc:"$REPO"/*
 EXTRA_JVM_ARGUMENTS="-Xmx2G -XX:MaxPermSize=128m -Dorg.geotools.referencing.forceXY=true -XX:-HeapDumpOnOutOfMemoryError"
+EXTRA_JVM_ARGUMENTS="-Xmx2G -Dorg.geotools.referencing.forceXY=true -XX:-HeapDumpOnOutOfMemoryError"
 
 # For Cygwin, switch paths to Windows format before running java
 if $cygwin; then

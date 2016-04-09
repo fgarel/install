@@ -1,4 +1,14 @@
 build
 source/geogig/geogig/*
 source/geogig/geogig-cli-app.zip
+source/geogig/geogig/CDA
+source/geogig/geogig/CDA/*
+source/geogig/geogig/Departement/*
+source/geogig/geogig/DGFiP/*
+source/geogig/geogig/erdf/*
+source/geogig/geogig/SDE/*
+source/geogig/geogig/SDEER/*
+source/geogig/geogig/Soluris/*
+source/geogig/geogig/VLR/*
+
 
