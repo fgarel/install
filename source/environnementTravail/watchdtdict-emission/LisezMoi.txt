@@ -1,4 +1,22 @@
 La doc pour le développement de cet outil et son installation sont dans cloud.sagemath.com
+watchdtdict-emission.ipynb
 
 le fichier init.sh                   est a recopier dans ~/Bureau
 le fichier watchdtdict-emission-init est à recopier dans /etc/init.d/
+
+il faut aussi creer un job que l'on va ajouter dans le crontab de facon a executer mv2tmp.sh
+
+
+echo '#---------------------------------------'
+echo '# Ajout d une tache cron qui va declencher un evenement dans'
+echo '# le repertoire ~/h/cartographie/dt-dict'
+echo '# https://doc.ubuntu-fr.org/cron'
+echo '#'
+echo '# crontab -l'
+echo '#'
+echo '# crontab -e'
+echo '#'
+echo '# toutes les 5 minutes, tous les jours ouvrés, entre 7 heure et 19 heure'
+echo '# 0/5 7-19 * * mon,tue,wed,thu,fri /home/fred/Documents/install/source/environnementTravail/watchdtdict-emission/mv2tmp.sh'
+echo '#'
+echo '#---------------------------------------'

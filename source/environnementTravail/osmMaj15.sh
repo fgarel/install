@@ -14,18 +14,21 @@ do
     echo "#";
     echo "# Téléchargement des données diff";
     echo "./osmDownloadOtherTime.sh";
-          ./osmDownloadOtherTime.sh;
+    echo "~fred/Documents/install/source/environnementTravail/osmDownloadOtherTime.sh";
+          ~fred/Documents/install/source/environnementTravail/osmDownloadOtherTime.sh;
     echo "#";
     echo "#";
     echo "# Import de ces données";
     echo "./osmImportOtherTime.sh";
-          ./osmImportOtherTime.sh;
+    echo "~fred/Documents/install/source/environnementTravail/osmImportOtherTime.sh";
+          ~fred/Documents/install/source/environnementTravail/osmImportOtherTime.sh;
     echo "#";
     echo "#";
 done
 echo "# Test"
 echo "./osmTest.sh"
-      ./osmTest.sh
+echo "~fred/Documents/install/source/environnementTravail/osmTest.sh"
+      ~fred/Documents/install/source/environnementTravail/osmTest.sh
 echo "#"
 echo "# Affichage de la nouvelle date"
 echo "cat /home/fred/Documents/osmosis/state.txt"
