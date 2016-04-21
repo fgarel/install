@@ -1,0 +1,30 @@
+[bdbje]
+version = 0.2
+[file]
+version = 1.0
+[storage]
+graph = bdbje
+objects = bdbje
+refs = file
+staging = bdbje
+[remote\origin]
+url = /home/fred/Documents/install/source/geogig/Soluris/
+fetch = +refs/heads/*:refs/remotes/origin/*
+[branches\Controle]
+remote = origin
+merge = refs/heads/Controle
+[branches\PlanExecution]
+remote = origin
+merge = refs/heads/PlanExecution
+[branches\PlanProjet]
+remote = origin
+merge = refs/heads/PlanProjet
+[branches\PlanTopoControle]
+remote = origin
+merge = refs/heads/PlanTopoControle
+[branches\PlanTopoNonControle]
+remote = origin
+merge = refs/heads/PlanTopoNonControle
+[user]
+name = DGFiP
+email = DGFiP@DGFiP.fr
