@@ -5,48 +5,19 @@
 # 8ème Partie - Installation d'un environnement OSM
 ###############################################
 # Installation d'un environnement OSM
-echo "# 8ème Partie - Installation de mapnik et de tirex"
-echo "##################################################"
+echo "# 8ème Partie - Installation de mapnik, tirex, tileman"
+echo "######################################################"
 echo "#"
-echo "# Ce script présente en meme temps, l'installation de mapnik et de tirex"
-echo "# Cependant, il faut que mapnik soit installé en premier"
-echo "# redemarrer un nouveau shell, de facon a que que mapnik-config soit connu"
-echo "# puis installer tirex"
+echo "# Ce script présente l'installation de tirex et tileman"
 echo "#"
-echo "# Installation de mapnik à partir des sources"
+echo "# Attention, il faut d'abord installer mapnik !"
+echo "# installOSMMapnik.sh"
 echo "#"
-echo "# http://mapnik.org/pages/downloads.html"
-echo "#"
-echo "cd .."
-      cd ..
-echo "pwd"
-      pwd
-echo "rm -rf mapnik"
-      rm -rf mapnik
-echo "git clone https://github.com/mapnik/mapnik.git"
-      git clone https://github.com/mapnik/mapnik.git
-echo "cd mapnik"
-      cd mapnik
-echo "pwd"
-      pwd
-echo "git checkout v3.0.11"
-      git checkout v3.0.11
-echo "git submodule update --init"
-      git submodule update --init
-echo "./configure && make && make test"
-      ./configure && make && make test
-echo "#"
-echo "# Les tests sont visibles ici :"
-echo "#firefox /tmp/mapnik-visual-images/visual-test-results/index.html"
-      #firefox /tmp/mapnik-visual-images/visual-test-results/index.html
-echo "#"
-echo "sudo make install"
-      sudo make install
-echo "#"
-echo "cd ../environnementTravail"
-      cd ../environnementTravail
-echo "pwd"
-      pwd
+echo "# Avant d'installer tirex et tileman, il faut en effet que mapnik soit"
+echo "# installé en premier."
+echo "# Après installation de mapnik, il faut ensuite "
+echo "# redemarrer un nouveau shell, de facon a ce que mapnik-config soit connu"
+echo "# puis enfin installer tirex et tilman"
 echo "#"
 echo "# Installation de tirex "
 echo "#"
@@ -69,7 +40,7 @@ echo "make"
 echo "make clean"
       make clean
 echo "#"
-echo "# Pour ce qui est de l'installation,"
+echo "# Attention : Pour ce qui est de l'installation,"
 echo "# la commande "
 echo "# make install"
 echo "# semble fonctionner (si mapnik a été préalablement installé)"
@@ -82,7 +53,6 @@ echo "# non pas avec"
 echo "# make deb"
 echo "# mais avec"
 echo "# dpkg-buildpackage -us -uc"
-echo "#"
 echo "#"
 echo "# sudo make install"
       # sudo make install
@@ -106,8 +76,8 @@ echo "sudo dpkg -i ../tirex-backend-mapnik.deb"
       sudo dpkg -i ../tirex-backend-mapnik_0.4.1precise1_amd64.deb
 echo "sudo dpkg -i ../tirex-example-map.deb"
       sudo dpkg -i ../tirex-example-map_0.4.1precise1_amd64.deb
-echo "sudo dpkg -i ../tirex-syncd.deb"
-      sudo dpkg -i ../tirex-syncd_0.4.1precise1_amd64.deb
+echo "#sudo dpkg -i ../tirex-syncd.deb"
+      #sudo dpkg -i ../tirex-syncd_0.4.1precise1_amd64.deb
 echo "#"
 echo "#"
 echo "sudo aptitude install libtest-simple-perl"
@@ -121,5 +91,20 @@ echo "cd ../environnementTravail"
 echo "pwd"
       pwd
 echo "#"
+echo "#---------------------------------------------"
+echo "# Utilisation de tirex "
+echo "#"
+echo "# http://wiki.openstreetmap.org/wiki/Tirex/Quick_Start"
+echo "#"
+echo "# tirex-status --once --extended"
+echo "# vi /var/log/syslog"
+echo "# ls -al /var/lib/tirex/tiles/test"
+echo "# tirex-batch --prio=1 map=test z=0 x=0 y=0"
+echo "# ls -al /var/lib/tirex/tiles/test/0/0/0/0/0/0.meta"
+echo "#---------------------------------------------"
+echo "#"
+echo "# La suite ?"
+echo "# ./installOSMTileman.sh"
+
 
 echo "#"
