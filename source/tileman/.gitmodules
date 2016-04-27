@@ -1,0 +1,6 @@
+[submodule "lua-nginx-osm"]
+	path = lua-nginx-osm
+	url = https://github.com/miurahr/lua-nginx-osm.git
+[submodule "neturl"]
+	path = neturl
+	url = https://github.com/miurahr/neturl.git

@@ -1,0 +1,157 @@
+#!/bin/bash
+#
+# tileman-load
+#
+# Get osm planet and load into PostGIS database
+# osmosis configuration should be in $WORKDIR
+#
+# Licensed in GPLv3
+# Copyright 2013-2014, Hiroshi Miura <miurahr@osmf.jp>
+#
+# ----------------------------
+# ChnageLog
+#
+# 2014-05-26 Support -i option to specify config file
+# 2013-10-21 add error check for robustness
+# 2013-07-02 change command name to tileman-load
+# ----------------------------
+#
+NAME=tileman-load
+CONF=/etc/tileman.conf
+
+while getopts "cdhi:p" opts; do
+    case $opts in
+    c)
+    CLEAN_FLAG=yes
+    ;;
+    h)
+    #show help and exit
+    echo "$0: load osm pbf into postgis db"
+    echo " "
+    echo "It takes addtional options as follows: "
+    echo "'-c': clean downloaded pbf files"
+    echo "'-h': show this message"
+    echo "'-i': configuration file"
+    echo "'-p': use pre-downloaded data"
+    echo " "
+    echo "examples:"
+    echo " "
+    echo "$0 -i /etc/tileman-alternative.conf"
+    echo "Download pbf file and load data into PostgreSQL"
+    echo " "
+    echo "cd work/"
+    echo "wget planet-latest-osm.pdf"
+    echo "$0 -p"
+    exit 0
+    ;;
+    i)
+    CONF="$OPTARG"
+    ;;
+    p)
+    PREDOWN=yes
+    ;;
+    esac
+done
+shift $((OPTIND - 1))
+
+# Read configuration variable file
+if [ ! -r "${CONF}" ]; then
+    echo "Configuration file is not found: ${CONF}"
+    exit 1
+fi
+. "${CONF}"
+
+WORKDIR=${WORKDIR_OSM:=/var/lib/osmosis}
+DBUSER=${DBUSER:=osm}
+DBNAME=${DBNAME:=gis}
+OSMOSIS_BIN=${OSMOSIS_BIN:=/usr/bin/osmosis}
+OSM2PGSQL_BIN=${OSM2PGSQL_BIN:=/usr/bin/osm2pgsql}
+PSQL_BIN=${PSQL_BIN:=/usr/bin/psql}
+USESLIMDB=${USESLIMDB:=yes}
+#DBPASS=
+
+MEMSIZE=${MEMSIZE:=6096}
+PROCESS_NUM=${PROCESS_NUM:=6}
+
+STYLEFILE=${STYLEFILE:=/usr/share/osm2pgsql/default.style}
+
+ORIGIN=${ORIGIN:=geofabrik} # or planet
+REGION=${REGION:=asia}
+COUNTRY=${COUNTRY:=japan}
+
+OPTIONS="-c -d $DBNAME -U $DBUSER -m -C $MEMSIZE --hstore --number-processes $PROCESS_NUM -S $STYLEFILE "
+if [ ! "$DBPASS" = "" ] ; then
+OPTIONS+=" -p $DBPASS "
+fi
+
+if [ "$USESLIMDB" = "YES" -o "$USESLIMDB" = "yes" -o "$USESLIMDB" = "true" -o "$USESLIMDB" = "TRUE" ]; then
+OPTIONS+=" --slim "
+fi
+
+if [ "$SLIMDBDROP" = "YES" -o "$SLIMDBDROP" = "yes" -o "$SLIMDBDROP" = "true" -o "$SLIMDBDROP" = "TRUE" ]; then
+OPTIONS+=" --drop "
+fi
+
+
+function check_exec () {
+  if [ ! -x $OSMOSIS_BIN ] ; then
+     echo "Error: $OSMOSIS_BIN doesn't exist."
+     echo
+     exit 1
+  elif [ ! -x $OSM2PGSQL_BIN ] ; then
+     echo "Error: $OSM2PGSQL_BIN doesn't exist."
+     echo
+     exit 1
+  fi
+}
+
+check_exec
+
+if [ "${PREDOWN}" = "yes" ]; then
+  if [ "$ORIGIN" = "planet" ]; then
+      /usr/bin/osm2pgsql $OPTIONS planet-latest.osm.pbf
+      if [ $? = 0 ]; then
+        cp state.txt $WORKDIR/
+      fi
+  elif [ "$ORIGIN" = "geofabrik" ]; then
+      /usr/bin/osm2pgsql $OPTIONS $COUNTRY-latest.osm.pbf
+      if [ $? = 0 ]; then
+        cp state.txt $WORKDIR/
+      fi
+  else
+    echo "Error occured:" $ORIGIN
+  fi
+elif [ "$ORIGIN" = "planet" ]; then
+    wget -N http://planet.openstreetmap.org/redaction-period/minute-replicate/state.txt
+    if [ $? = 0 ]; then
+      wget -N http://planet.openstreetmap.org/pbf/planet-latest.osm.pbf
+      if [ $? = 0 ]; then
+      /usr/bin/osm2pgsql $OPTIONS planet-latest.osm.pbf
+      if [ $? = 0 ]; then
+        cp state.txt $WORKDIR/
+      fi
+    fi
+  fi
+
+elif [ "$ORIGIN" = "geofabrik" ]; then
+
+  wget -N http://download.geofabrik.de/$REGION/$COUNTRY-updates/state.txt
+  if [ $? = 0 ]; then
+    wget -N http://download.geofabrik.de/$REGION/$COUNTRY-latest.osm.pbf
+    if [ $? = 0 ]; then
+      /usr/bin/osm2pgsql $OPTIONS $COUNTRY-latest.osm.pbf
+      if [ $? = 0 ]; then
+        cp state.txt $WORKDIR/
+      fi
+    else
+      echo "download error occured:" $ORIGIN
+    fi
+  else
+    echo "download error occured:" $ORIGIN
+  fi
+
+else
+
+  echo Unknown origin $ORIGIN
+
+fi # $PREDOWN / $ORIGIN
