@@ -8,12 +8,20 @@
 echo "# 8ème Partie - Installation de mapnik, tirex, tileman"
 echo "######################################################"
 echo "#"
-echo "# Ce script présente l'installation de mapnik"
-echo "# Avant d'installer tirex et tileman, il faut en effet que mapnik soit"
-echo "# installé en premier."
-echo "# Après installation de mapnik, il faut ensuite "
-echo "# redemarrer un nouveau shell, de facon a ce que mapnik-config soit connu"
-echo "# puis enfin installer tirex et tilman"
+echo "# Ce script présente l'installation de mapnik dans l'environnement général"
+echo "#"
+echo "# Il existe des scripts pour installer "
+echo "# mapnik dans un environnement virtuel python"
+echo "#"
+echo "# ./installPythonMapnik.sh"
+echo "# ./installPythonMapnik2.sh"
+echo "#"
+echo "# Avant d'installer tirex et tileman, il faut que mapnik soit"
+echo "# présent dans l'environnement général (et non pas dans un"
+echo "# environnement virtuel)."
+echo "# Attention, après installation de mapnik, il faut ensuite "
+echo "# redémarrer un nouveau shell, de facon a ce que mapnik-config soit connu"
+echo "# pour enfin installer tirex et tilman"
 echo "#"
 echo "# Installation de mapnik à partir des sources"
 echo "#"
@@ -50,104 +58,6 @@ echo "cd ../environnementTravail"
 echo "pwd"
       pwd
 echo "#"
-echo "# Installation de tirex "
-echo "#"
-echo "# https://github.com/openstreetmap/tirex"
-echo "#"
-echo "cd .."
-      cd ..
-echo "pwd"
-      pwd
-echo "rm -rf tirex"
-      rm -rf tirex
-echo "git clone https://github.com/geofabrik/tirex.git"
-      git clone https://github.com/geofabrik/tirex.git
-echo "cd tirex"
-      cd tirex
-echo "sudo aptitude install libipc-sharelite-perl"
-      sudo aptitude install libipc-sharelite-perl
-echo "make"
-      make
-echo "make clean"
-      make clean
-echo "#"
-echo "# Attention : Pour ce qui est de l'installation,"
-echo "# la commande "
-echo "# make install"
-echo "# semble fonctionner (si mapnik a été préalablement installé)"
-echo "# cependant, nous avons eu ce type d'erreur"
-echo "# Cannot open master UNIX domain socket: No such file or directory"
-echo "# et d'après cette liste de discussion,"
-echo "# https://lists.openstreetmap.org/pipermail/dev/2011-June/023004.html"
-echo "# la solution est de passer par la fabrication de paquet debian"
-echo "# non pas avec"
-echo "# make deb"
-echo "# mais avec"
-echo "# dpkg-buildpackage -us -uc"
-echo "#"
-echo "# sudo make install"
-      # sudo make install
-echo "# sudo make install-example-map"
-      # sudo make install-example-map
-echo "sudo aptitude install devscripts"
-      sudo aptitude install devscripts
-echo "#make deb"
-      #make deb
-echo "#make deb-clean"
-      #make deb-clean
-echo "dpkg-buildpackage -us -uc"
-      dpkg-buildpackage -us -uc
-echo "#"
-echo "# Les paquets sont placés dans le repertoire parent"
-echo "# /home/fred/Documents/install/source"
-echo "#"
-echo "sudo dpkg -i ../tirex-core.deb"
-      sudo dpkg -i ../tirex-core_0.4.1precise1_amd64.deb
-echo "sudo dpkg -i ../tirex-backend-mapnik.deb"
-      sudo dpkg -i ../tirex-backend-mapnik_0.4.1precise1_amd64.deb
-echo "sudo dpkg -i ../tirex-example-map.deb"
-      sudo dpkg -i ../tirex-example-map_0.4.1precise1_amd64.deb
-echo "#sudo dpkg -i ../tirex-syncd.deb"
-      #sudo dpkg -i ../tirex-syncd_0.4.1precise1_amd64.deb
-echo "#"
-echo "#"
-echo "sudo aptitude install libtest-simple-perl"
-      sudo aptitude install libtest-simple-perl
-echo "sudo aptitude install libtest-harness-perl"
-      sudo aptitude install libtest-harness-perl
-echo "prove"
-      prove
-echo "cd ../environnementTravail"
-      cd ../environnementTravail
-echo "pwd"
-      pwd
-echo "#"
-echo "#---------------------------------------------"
-echo "# Utilisation de tirex "
-echo "#"
-echo "# http://wiki.openstreetmap.org/wiki/Tirex/Quick_Start"
-echo "#"
-echo "# tirex-status --once --extended"
-echo "# vi /var/log/syslog"
-echo "# ls -al /var/lib/tirex/tiles/test"
-echo "# tirex-batch --prio=1 map=test z=0 x=0 y=0"
-echo "# ls -al /var/lib/tirex/tiles/test/0/0/0/0/0/0.meta"
-echo "#---------------------------------------------"
-echo "#"
-echo "# Installation de tileman "
-echo "#"
-echo "# https://github.com/osmfj/tileman/blob/master/INSTALL.md"
-echo "#"
-echo "cd .."
-      cd ..
-echo "pwd"
-      pwd
-echo "rm -rf tileman"
-      rm -rf tileman
-echo "git clone https://github.com/osmfj/tileman.git"
-      git clone https://github.com/osmfj/tileman.git
-echo "cd tileman"
-      cd tileman
 echo "#"
 
 

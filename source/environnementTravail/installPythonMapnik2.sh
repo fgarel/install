@@ -8,14 +8,10 @@
 echo "# 7ème Partie - suite : Création d'un environnement python"
 echo "###############################################"
 echo "#"
-echo "# Pew peut maintenant être utilisé :"
+echo "# Suite de l'installation de Mapnik dans un environnement virtuel python"
 echo "#"
-echo "# Nous allons créer un environnement virtuel pour mapnik"
-echo "# "
-echo '# Mapnik combines pixel-perfect image output with '
-echo '# lightning-fast cartographic algorithms, and exposes'
-echo '# nterfaces in C++, Python, and Node.'
-echo "# http://mapnik.org/"
+echo "# La première partie consistait à installer les dépendances"
+echo "# pour la compilation et la création de l'environnement virtuel"
 echo "#"
 echo "# Nous somme dans l environnement, l'installation continue avec"
 echo "#"
@@ -48,4 +44,3 @@ echo "# --------------------"
 echo "#"
 echo "#"
 echo ""
-
