@@ -8,10 +8,15 @@
 echo "# 7ème Partie - suite : Création d'un environnement python"
 echo "###############################################"
 echo "#"
-echo "# Pew peut maintenant être utilisé :"
+echo "# Installation de mapnik dans un environnement virtuel python"
 echo "#"
-echo "# Nous allons créer un environnement virtuel pour mapnik"
-echo "# "
+echo "# En ce qui concerne l'installation de mapnik dans le système"
+echo "# général, cf les scripts"
+echo "# ./installOSMMapnik.sh"
+echo "# ./installOSMTirex.sh"
+echo "# ./installOSMTileman.sh"
+echo "#"
+echo "#"
 echo '# Mapnik combines pixel-perfect image output with '
 echo '# lightning-fast cartographic algorithms, and exposes'
 echo '# nterfaces in C++, Python, and Node.'
@@ -56,36 +61,40 @@ echo "sudo apt-get install libboost-thread-dev"
 echo "#"
 echo "# Installation de l'environnement virtuel"
 echo "#"
-echo "#   pew list_pythons -a | grep 2.7.10"
-pew list_pythons -a | grep 2.7.10
+echo "# Utilisation de l'utilitaire Pew"
+echo "pew list_pythons -a | grep 2.7.10"
+      pew list_pythons -a | grep 2.7.10
 echo "#"
-echo "#   pew install 2.7.10"
-pew install 2.7.10
+echo "pew install 2.7.10"
+      pew install 2.7.10
 echo "#"
-echo "#   Nous allons démarrer l'environnement virtuel,"
-echo "#   Dans cet environnement, l'installation doit continuer avec"
+echo "# Nous allons démarrer l'environnement virtuel,"
+echo "# Dans cet environnement, l'installation doit continuer avec"
 echo "#"
-echo "#   --------------------"
+echo "# --------------------"
 echo '#'
-echo '#   Mise à jour de pip'
+echo '# Mise à jour de pip'
 echo '#'
-echo '#   pip install --upgrade pip'
+echo '# pip install --upgrade pip'
 echo '#'
-echo '#   Installation de mapnik'
-echo '#   http://mapnik.org/pages/downloads.html'
+echo '# Installation de mapnik'
+echo '# http://mapnik.org/pages/downloads.html'
 echo '#'
-echo '#   git clone https://github.com/mapnik/mapnik.git'
-echo '#   cd mapnik'
-echo '#   git checkout v3.0.9'
-echo '#   git submodule update --init'
-echo '#   ./configure && make && make test'
+echo '# git clone https://github.com/mapnik/mapnik.git'
+echo '# cd mapnik'
+echo '# git checkout v3.0.9'
+echo '# git submodule update --init'
+echo '# ./configure && make && make test'
 echo '#'
-echo "#   --------------------"
+echo "# --------------------"
+echo '#'
+echo '# Les lignes précédentes ont été mises dans le scirpt'
+echo '# ./installPythonMapnik2.sh'
+echo "# --------------------"
 echo "#"
-echo "#   Démarrage de l'environnement virtuel"
+echo "# Démarrage de l'environnement virtuel"
 echo "#"
-echo '#   pew new -p $(pythonz locate 2.7.10) mapnik'
-pew new -p $(pythonz locate 2.7.10) mapnik
+echo 'pew new -p $(pythonz locate 2.7.10) mapnik'
+      pew new -p $(pythonz locate 2.7.10) mapnik
 echo "#"
 echo ""
-
