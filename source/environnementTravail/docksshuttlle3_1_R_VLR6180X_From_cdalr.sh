@@ -15,20 +15,6 @@
 # -X = Transfert X11 et TCP (X11 and TCP forwarding) http://www.delafond.org/traducmanfr/man/man1/ssh.1.html
 
 #
-# Fabrication du tiers central du tunnel "DS214" (entre la machine boulot et le DS214)
-#
-#ssh -f \
-#    -o ServerAliveInterval=240 \
-#    -N \
-#    -X \
-#    -R 25900:localhost:15900 \
-#    -R 20080:localhost:10080 \
-#    -R 20022:localhost:10022 \
-#    -R 15900:localhost:5900 \
-#    -R 10080:localhost:80 \
-#    -R 10022:localhost:22 \
-#    root@82.245.10.108
-#
 # Fabrication du tiers central du tunnel "mail.cdalr.fr" (entre la machine boulot et mail.cdalr.fr)
 #
 ssh -f \
@@ -37,10 +23,21 @@ ssh -f \
     -X \
     -R 55900:localhost:45900 \
     -R 55432:localhost:45432 \
+    -R 50443:localhost:40443 \
     -R 50080:localhost:40080 \
     -R 50022:localhost:40022 \
     -R 45900:localhost:5900 \
     -R 45432:localhost:5432 \
+    -R 40443:localhost:443 \
     -R 40080:localhost:80 \
     -R 40022:localhost:22 \
     fred@mail.cdalr.fr
+#
+echo "# "
+echo "# Maintenant, à partir de mail.cdalr.fr, il est possible de se connecter vers :"
+echo "# VLR6180X => ssh -p 40022 fred@localhost"
+echo "# (si besoin, il faut réveiller VLR6180Y)"
+echo "# (et faire le 3ème tiers du tunnel)"
+echo "# VLR6180Y => ssh -p 50022 fred@localhost"
+echo "# "
+#
