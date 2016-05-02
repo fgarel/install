@@ -17,8 +17,8 @@ Package-List:
  tirex-nagios-plugin deb web extra arch=any
  tirex-syncd deb web extra arch=any
 Checksums-Sha1:
- 30039a657484e3b2cc60518569dca835c2d2515a 634675 tirex_0.4.1precise1.tar.gz
+ 742d1c07867719a19dee95def1fc81e17a522398 633594 tirex_0.4.1precise1.tar.gz
 Checksums-Sha256:
- 6a07653817c92e52d6c1c9f15912588f77de9cb364250e6b6428a8b20a3da9d8 634675 tirex_0.4.1precise1.tar.gz
+ d8771d5d2daa981aa3cf1bf5eb644cd279992e62ed7a0c9210c8f5621a747567 633594 tirex_0.4.1precise1.tar.gz
 Files:
- 01e932037e937bf49d2d1935c95b34fb 634675 tirex_0.4.1precise1.tar.gz
+ 7e634ccbe00df3c245ba5766beda5f9e 633594 tirex_0.4.1precise1.tar.gz
