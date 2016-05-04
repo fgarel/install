@@ -30,7 +30,7 @@ if [[ -e /etc/debian_version ]]; then
 	#We get the version number, to verify we can get a recent version of OpenVPN
 	VERSION_ID=$(cat /etc/*-release | grep "VERSION_ID")
 	RCLOCAL='/etc/rc.local'
-	if [[ "$VERSION_ID" != 'VERSION_ID="7"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="8"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="12.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="14.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="15.10"' ]]; then
+	if [[ "$VERSION_ID" != 'VERSION_ID="7"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="8"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="12.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="14.04"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="15.10"' ]] && [[ "$VERSION_ID" != 'VERSION_ID="16.04"' ]]; then
 		echo "Your version of Debian/Ubuntu is not supported. Please look at the documentation."
 		exit 4
 	fi
@@ -185,7 +185,7 @@ else
 	
 	echo ""
 	echo "I need to know the IPv4 address of the network interface you want OpenVPN listening to."
-	echo "If you server is running behind a NAT, (e.g. LowEndSpirit, Scaleway) leave the IP adress as it is. (10.x.x.x)"
+	echo "If you server is running behind a NAT, (e.g. LowEndSpirit, Scaleway) leave the IP adress as it is. (local/private IP"
 	echo "Otherwise, it sould be your public IPv4 address."
 	read -p "IP address: " -e -i $IP IP
 	echo ""
@@ -279,8 +279,6 @@ set_var EASYRSA_DIGEST "sha384"" > vars
 	echo "port $PORT
 proto udp
 dev tun
-sndbuf 0
-rcvbuf 0
 ca ca.crt
 cert server.crt
 key server.key
@@ -330,7 +328,6 @@ tls-version-min 1.2" > /etc/openvpn/server.conf
 		;;
 	esac
 	echo "keepalive 10 120
-comp-lzo
 persist-key
 persist-tun
 crl-verify crl.pem" >> /etc/openvpn/server.conf
@@ -416,15 +413,12 @@ crl-verify crl.pem" >> /etc/openvpn/server.conf
 	echo "client
 dev tun
 proto udp
-sndbuf 0
-rcvbuf 0
 remote $IP $PORT
 resolv-retry infinite
 nobind
 persist-key
 persist-tun
 remote-cert-tls server
-comp-lzo
 cipher AES-256-CBC
 auth SHA512
 tls-version-min 1.2" > /etc/openvpn/client-common.txt
