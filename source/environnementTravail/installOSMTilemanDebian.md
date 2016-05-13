@@ -108,7 +108,11 @@ vi ~/.byobu/windows.tmux.split4
 ```
 
 ```
-BYOBU_WINDOWS=split4 byobu
+BYOBU_WINDOWS=osm byobu
+```
+
+```
+./launchOsmByobu.sh
 ```
 https://plus.google.com/+HannoBehrens/posts/CDUD1NJSHnr
 

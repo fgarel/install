@@ -8,16 +8,16 @@
 echo "# 8ème Partie - Installation de mapnik, tirex, tileman"
 echo "######################################################"
 echo "#"
-echo "# Ce script présente l'installation de tirex et tileman"
+echo "# Ce script présente l'installation de tirex"
 echo "#"
 echo "# Attention, il faut d'abord installer mapnik !"
 echo "# installOSMMapnik.sh"
 echo "#"
-echo "# Avant d'installer tirex et tileman, il faut en effet que mapnik soit"
-echo "# installé en premier."
-echo "# Après installation de mapnik, il faut ensuite "
+echo "#"
+echo "# Avant d'installer tirex et tileman, il faut en effet que mapnik soit présent."
+echo "# Après installation de mapnik, il faut "
 echo "# redemarrer un nouveau shell, de facon a ce que mapnik-config soit connu"
-echo "# puis enfin installer tirex et tilman"
+echo "# pour enfin installer tirex et tilman"
 echo "#"
 echo "# Installation de tirex "
 echo "#"
@@ -27,8 +27,8 @@ echo "cd .."
       cd ..
 echo "pwd"
       pwd
-echo "rm -rf tirex"
-      rm -rf tirex
+echo "rm -rf tirex*"
+      rm -rf tirex*
 echo "git clone https://github.com/geofabrik/tirex.git"
       git clone https://github.com/geofabrik/tirex.git
 echo "cd tirex"
