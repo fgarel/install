@@ -1,0 +1,43 @@
+new-session -s osm -n run -c /var/run ;
+send-keys sudo Space service Space nginx Space status C-m ;
+split-window -c /var/run ;
+send-keys sudo Space service Space tirex-master Space status C-m ;
+split-window -c /var/run ;
+send-keys sudo Space service Space tirex-backend-manager Space status C-m ;
+
+new-window -n log -c /var/log ;
+send-keys tail Space -f Space /var/log/nginx/access.log C-m ;
+split-window -h -c /var/log ;
+send-keys tirex-status Space --extended C-m ;
+split-window -c /var/log ;
+send-keys tail Space -f Space /var/log/syslog C-m ;
+split-window -c /var/log ;
+send-keys sudo Space tail Space -f Space /var/log/tirex/jobs.log C-m ;
+select-pane -t 0 ;
+split-window -c /var/log ;
+send-keys tail Space -f Space /var/log/nginx/error.log C-m ;
+split-window links2 http://tile ;
+select-pane -t 0 ;
+
+new-window -n etc1 -c /etc ;
+send-keys sudo Space su Space -c Space 'vi Space /etc/tileman.conf' C-m ;
+split-window -h -c /etc ;
+send-keys sudo Space su Space -c Space 'vi Space /etc/tirex/tirex.conf' C-m ;
+select-pane -t 0 ;
+
+new-window -n etc2 -c /etc/nginx ;
+send-keys sudo Space su Space -c Space 'vi Space /etc/nginx/sites-enabled/tileman-proxy' C-m ;
+split-window -h -c /etc/nginx ;
+send-keys sudo Space su Space -c Space 'vi Space /etc/nginx/sites-enabled/tileman-server' C-m ;
+split-window -c /etc/tirex ;
+send-keys sudo Space su Space -c Space 'vi Space /etc/tirex/renderer/mapnik.conf' C-m ;
+split-window vi /usr/share/tirex/example-map/example.xml ;
+select-pane -t 0 ;
+split-window -c /etc/tirex ;
+send-keys sudo Space su Space -c Space 'vi Space /etc/tirex/renderer/test.conf' C-m ;
+split-window ;
+select-pane -t 0 ;
+
+new-window -n tty ;
+
+select-window -t run ;
