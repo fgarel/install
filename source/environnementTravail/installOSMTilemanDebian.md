@@ -8,20 +8,76 @@ Ce document présente la configuration de tirex et tileman
 
 ## Installation d'un environnement OSM
 
-La doc original est ici :
+Nous allons créer un environnement
+*(Ici, il faut comprendre le mot environnement comme ensemble d'outils, et non pas comme une environnement virtuel python)*
+pour faciliter la manipulation de données OSM.
 
-https://github.com/osmfj/tileman/blob/master/INSTALL.md
+La documentation sur l'installation et l'utilisation de cet
+environnement est détaillé dans
+Linux Magazine N°188
 
-https://github.com/osmfj/tileman/blob/master/INSTALL.md
+L'environnemant OSM est un ensemble de composants
 
-L'installation a été réalisée grace aux scripts
+La liste des composants d'OSM est ici
 
-installOSMTirex.sh
-installOSMTilemanDebian.sh
+http://wiki.openstreetmap.org/wiki/FR:Component_overview
+
+L'installation de ces composants nécessite parfois des prérequis.
+
+Par exemple, des outils comme osmosis sont développés en Java.
+
+D'autre part, il faut aussi veillez  avoir postgresql qui tourne...
+
+Il faut donc au moins :
+
+  - une base de données postgresql, avec l'extension postgis, nécessaire pour stocker les données
+  - l'outil osmosis, nécessaire pour télécharger les données OpenStreetMap, est fourni par le paquet osmosis
+  - l'outil osm2pgsql, nécessaire pour importer les données dans postgresql, est fourni par le paquet osm2pgsql
+  - l'outil mapnik est installe manuellement
+  - l'outil tirex, equivalent de renderd, nécessaire pour fabriquer les tuiles, est installé manuellement
+  - des scripts lua couplés au serveur NGINX, (outil tileman) remplacent le module apache mod_tile. (Ces scripts sont nécessaires pour servir les tuiles. L'outil tileman est aussi installé manuellement)
+
+Mapnik est l'outil principal pour le rendu
+
+http://wiki.openstreetmap.org/wiki/FR:Rendu
+
+http://wiki.openstreetmap.org/wiki/FR:Mapnik
+
+Tirex
+
+http://wiki.openstreetmap.org/wiki/Tirex
+
+Tileman
+
+https://github.com/osmfj/tileman
+
+http://osmfj.github.io/tileman/
+
+http://miurahr.github.io/slides/2013-0908-tileman.html#/title
+
+L'installation de ces composants a été réalisée grace aux scripts :
+
+  - installOSM.sh
+  - installOSMMapnik.sh
+  - installOSMTirex.sh
+  - installOSMTilemanDebian.sh
+
+## Verification des installations
+
+### Mapnik
+
+mapnik-config -v
+
+
+
+### Tirex
+
+### Tileman
 
 ## Les premiers pas de la configuration (nginx et tileman)
 
 Les paquets suivants sont installés :
+
   - tileman
   - tileman-example
 
