@@ -1,0 +1,5 @@
+http://networkx.readthedocs.io/en/networkx-1.11/tutorial/tutorial.html
+https://networkx.github.io/documentation/development/reference/generators.htm://networkx.github.io/documentation/development/reference/generators.htmlhttp://networkx.readthedocs.io/en/networkx-1.11/reference/drawing.html://networkx.readthedocs.io/en/networkx-1.11/reference/drawing.html
+http://networkx.readthedocs.io/en/networkx-1.11/reference/drawing.html
+http://networkx.readthedocs.io/en/latest/examples/graph/atlas2.html
+
