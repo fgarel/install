@@ -58,6 +58,14 @@ echo "sudo apt-get install libboost-thread-dev"
       sudo apt-get install libboost-thread-dev
 #echo "sudo apt-get install libboost-python1.55.0"
 #      sudo apt-get install libboost-python1.55.0
+echo "sudo apt-get install python zlib1g-dev clang make pkg-config"
+      sudo apt-get install python zlib1g-dev clang make pkg-config
+echo "sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+      sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+echo "# Après installation des fonts, il faut les enregistrer"
+echo "# https://wiki.debian.org/Fonts"
+echo "fc-cache -fv # rebuilds cached list of fonts"
+      fc-cache -fv
 echo "#"
 echo "# Installation de l'environnement virtuel"
 echo "#"
