@@ -1451,3 +1451,15 @@ eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
 2016041500801T;A4;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
 2016041500801T;A4;eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
 2016041500801T;A4;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2016070500401T;A3;nicolas.cant@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016070500401T;A3;nicolas.cant@ville-larochelle.fr;ORANGE DT DICT
+2016070500401T;A3;nicolas.cant@ville-larochelle.fr;ERDF DR POITOU-CHARENTES
+2016070500401T;A3;nicolas.cant@ville-larochelle.fr;17 NUMERIQUE
+2016070500401T;A3;nicolas.cant@ville-larochelle.fr;GRDF UNITÉ RÉSEAU GAZ PDL PC
+2016070500401T;A3;nicolas.cant@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2016070500401T;A3;nicolas.cant@ville-larochelle.fr;SNCF
+2016070500401T;A3;nicolas.cant@ville-larochelle.fr;RTE GMR POITOU CHARENTES
+2016070500401T;A3;nicolas.cant@ville-larochelle.fr;SFR
+2016070500401T;A3;nicolas.cant@ville-larochelle.fr;MAIRIE
+2016070500401T;A3;nicolas.cant@ville-larochelle.fr;SISP
+2016070500401T;A3;nicolas.cant@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
