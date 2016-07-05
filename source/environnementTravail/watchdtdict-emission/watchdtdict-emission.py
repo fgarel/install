@@ -81,7 +81,7 @@ class MonHandler(FileSystemEventHandler):
 
         Lorque la classe est instanciée (pour créer un objet),
         c'est cette méthode qui est executée.
-        
+
         Deux dictionnaires sont initialisés,
         les répertoires sont définis ici.
         Les mails pour les exploitants ainsi que le mail de notification
@@ -92,25 +92,25 @@ class MonHandler(FileSystemEventHandler):
         self.dico_exploitant_nomPdf = {}
         self.dico_exploitant_courriel = {}
         self.numero_dtdict = ''
-        
+
         # sous-repertoire des données initiales
         self.initpath = 'dt-dict'
         # sous-repertoire ou sera stocké les dt-dict émises après traitement
         self.savpath = '/home/fred/f/CARTOGRAPHIE/DT DICT EMISES'
-        
+
         #self.zipfile_to_join = ''
         self.xmlfile_to_join = ''
         self.pdfemprise_to_join = ''
-        
+
         # mail de l'expediteur du message
         self.mail_sender = 'dt.dict@ville-larochelle.fr'
-        
+
         # mail de la personne qui recevra une copie des messages
         #self.mail_receivers = 'fred@VLR6180.mairie.fr'
         #self.mail_receivers = 'frederic.garel@gmail.com'
         #self.mail_receivers = 'cartographie@ville-larochelle.fr'
         self.mail_receivers = ''
-           
+
         # sujet du message
         self.mail_subject = \
             u"Déclaration préalable aux travaux, Numéro "
@@ -118,7 +118,7 @@ class MonHandler(FileSystemEventHandler):
         # preambule du message (?)
         self.mail_preamble = \
             u"Veuillez trouver ci joint la déclaration préalable aux travaux "
-     
+
         # corps du message
         self.mail_body_text1 = \
             u"Bonjour,\n\n" + \
@@ -226,12 +226,12 @@ class MonHandler(FileSystemEventHandler):
           - un second dictionnaire qui fait la relation entre :
             - le nom de l'exploitant
             - son courriel
-        
+
         La première étape consiste à déziper le fichier zip initial
         cette décompression doit se faire dans un répertoire parent
         (sinon les nouveaux fichiers formeraient à leur tour une cible
         potentiele pour notre observer....)
-        
+
         Un traitement est ensuite effectué en fonction du type
         de fichier.
 
@@ -288,11 +288,11 @@ class MonHandler(FileSystemEventHandler):
                         # le fichier est du type *_description.xml
                         self.xmlfile_to_join = ffilexml
                         rootNode = xmlReader.parse(ffilexml)
-                        
+
                         # récupération du mail du redacteur/emetteur
                         #   de la déclaration
-                        #   attention : le chemin xml dépend 
-                        #   du type de la déclaration                     
+                        #   attention : le chemin xml dépend
+                        #   du type de la déclaration
                         try:
                             self.mail_notif_receivers = rootNode.DT.representantDuResponsableDeProjet.courriel
                             ##print 'taille des plans = ' + rootNode.DT.souhaitsPourLeRecepisse.modeReceptionElectronique.tailleDesPlans
@@ -317,7 +317,18 @@ class MonHandler(FileSystemEventHandler):
                             # l'encodage "CP1250" (windows)
                             # ici, dans le xml, il faut utiliser
                             # l'encodage "utf-8"
-                            self.dico_exploitant_courriel[rootNode.listeDesOuvrages.ouvrage[i].contact.societe.encode("utf-8")] = rootNode.listeDesOuvrages.ouvrage[i].contact.courriel
+                            #
+                            # Attention, ici on traite le cas des demandes ou
+                            # le courriel de l'exploitant n'est pas connu !!!!
+                            #
+                            #print('courriel = {}'.format(rootNode.listeDesOuvrages.ouvrage[i].contact.courriel))
+                            if rootNode.listeDesOuvrages.ouvrage[i].contact.courriel is None:
+                                courriel = rootNode.listeDesOuvrages.ouvrage[i].contact.fax + "@fax.net"
+                            else:
+                                courriel = rootNode.listeDesOuvrages.ouvrage[i].contact.courriel
+                            #print('courriel = {}'.format(courriel))
+                            #self.dico_exploitant_courriel[rootNode.listeDesOuvrages.ouvrage[i].contact.societe.encode("utf-8")] = rootNode.listeDesOuvrages.ouvrage[i].contact.courriel
+                            self.dico_exploitant_courriel[rootNode.listeDesOuvrages.ouvrage[i].contact.societe.encode("utf-8")] = courriel
 
 
     def send_x_mails(self):
@@ -331,18 +342,18 @@ class MonHandler(FileSystemEventHandler):
         bref, on prépare les messages destinées aux exploitants.
 
         """
-        
+
         ##print '' * 2 + '-' * 50
         ##for key, value in self.dico_exploitant_nomPdf.iteritems():
 			##print  "societe, pdf = " + key, value
             ###print  "societe, pdf, courriel = " + key, value, self.dico_exploitant_courriel[key]
         ##print '' * 2 + '-' * 50
-        
+
         ##for key, value in self.dico_exploitant_courriel.iteritems():
             ##print "societe, courriel = " + key, value
             ###print "societe, courriel, pdf = " + key, value, self.dico_exploitant_nomPdf[key]
         ##print '' * 2 + '-' * 50
-        
+
         # réinitialisation des courriels pour les tests
         ##for key, value in self.dico_exploitant_nomPdf.iteritems():
             #if key == 'ERDF DR POITOU-CHARENTES':
@@ -350,7 +361,7 @@ class MonHandler(FileSystemEventHandler):
             #elif key == 'VILLE DE LA ROCHELLE':
             #    self.dico_exploitant_courriel[key] = 'francois.chagneau@ville-larochelle.fr'
             #elif key == 'ORANGE DT DICT':
-            #    self.dico_exploitant_courriel[key] = 'michel.ricchiuto@ville-larochelle.fr'			
+            #    self.dico_exploitant_courriel[key] = 'michel.ricchiuto@ville-larochelle.fr'
             #elif key == 'OPH de la CDA de LA ROCHELLE':
             #    self.dico_exploitant_courriel[key] = 'frederic.garel@ville-larochelle.fr'
             #else:
@@ -371,11 +382,11 @@ class MonHandler(FileSystemEventHandler):
 
         Utilisation de la librairie smtplib
         pour envoyer un message.
-        
+
         Attentino, to_person doit être une liste [crochet].
 
         """
-        
+
         # on ajoute un destinataire supplémentaire
         to_person.append(self.mail_receivers)
 
@@ -423,7 +434,7 @@ class MonHandler(FileSystemEventHandler):
         part1 = MIMEText(mail_body_text, 'plain', 'utf-8')
         # Attach parts into message container.
         msg.attach(part1)
-        
+
         try:
             #smtpObj = smtplib.SMTP('localhost')
             smtpObj = smtplib.SMTP('mail.ville-larochelle.fr')
@@ -440,16 +451,16 @@ class MonHandler(FileSystemEventHandler):
         Méthode pour nettoyer et ranger à la fin du traitement.
 
         Suppression ou sauveagarde des fichiers après traitement.
-        
+
         Les fichiers temporaires sont supprimés.
         (on parle ici des fichiers résultant de la décompression
         du fichier initial dans un sous-repertoire temporaire)
-        
+
         Le fichier zip initial est déplacé vers le repertoire
         self.savpath
-        
+
         Envoi d'un mail de notification à l'emetteur
-        
+
         Certaines variables sont réinitialisées.
 
         """
@@ -489,13 +500,13 @@ class MonHandler(FileSystemEventHandler):
             print "Successfully sent notification email to " + self.mail_notif_receivers
         except smtplib.SMTPException:
             print "Error: unable to send notification email to " + self.mail_notif_receivers
-            
+
         # remise à zero des deux dictionnaires
         self.dico_exploitant_nomPdf = {}
         self.dico_exploitant_courriel = {}
         # et remise à zéro du mail de l'auteur/émetteur de la demande
         self.mail_notif_receivers = ''
-        
+
 def main():
     u"""
     Fonction principale.
@@ -506,12 +517,12 @@ def main():
 
     """
     observer = Observer()
-    
-    # Surveille récursivement tous les événements du dossier 
+
+    # Surveille récursivement tous les événements du dossier
     # /home/fred/h/cartographie/dt-dict
     # et appele les méthodes de MonHandler quand quelque chose
     # se produit
-    
+
     observer.schedule(MonHandler(), path='/home/fred/h/cartographie/dt-dict', recursive=True)
 
     u"""
