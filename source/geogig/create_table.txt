@@ -1,0 +1,16 @@
+4 fichiers existent :
+
+le fichier create_table2.sql est la version ancienne qui contient des erreurs
+(par exemple, la classe d'objet "emprisePublicationPCRS" ne doit pas etre basée sur la classe d'objet "objetPCRS")
+
+le fichier create_table.sql respecte la structure stricte du PCRS
+
+le fichier create_table_origine.sql est une correction de create_table.sql
+ (=> modification de la table gestionnaireReseaux en gestionnaire)
+
+le fichier create_table_sandbox.sql est une amélioration de create_table_origine
+ (=> ajout des 4 champs sur les 2 axes :
+    1er axe : creationmodification et controle
+    2ème axe : nom de l'auteur et date)
+ 
+
