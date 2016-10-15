@@ -151,15 +151,15 @@ INSERT INTO "EmprisePCRSType" (code, libelle) VALUES ('05', 'Raster');
 
 
 -- ---------------------------------
--- Classe : GestionnaireReseaux
+-- Classe : Gestionnaire
 -- ---------------------------------
 
--- Table: GestionnaireReseaux
-DROP TABLE if exists "GestionnaireReseaux";
-CREATE TABLE "GestionnaireReseaux"
+-- Table: Gestionnaire
+DROP TABLE if exists "Gestionnaire";
+CREATE TABLE "Gestionnaire"
 (
   gestionnaire character varying unique,
-  CONSTRAINT "GestionnaireReseaux_pkey" PRIMARY KEY (gestionnaire)
+  CONSTRAINT "Gestionnaire_pkey" PRIMARY KEY (gestionnaire)
 )
 WITH (
   OIDS=FALSE
@@ -202,7 +202,7 @@ DROP TABLE if exists "PlacementPCRS";
 CREATE TABLE "PlacementPCRS"
 (
   code character varying(2) unique,
-  libelle character varying(23),
+  libelle character varying(40),
   CONSTRAINT "PlacementPCRS_pkey" PRIMARY KEY (code)
 )
 WITH (
@@ -210,11 +210,11 @@ WITH (
 );
 
 INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('00', 'Sans Repositionnement');
-INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('01', 'Gestionnaire de Réseaux');
-INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('02', 'Axe Voirie');
-INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('03', 'Limite Voirie');
-INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('04', 'Hors Voirie');
-INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('05', 'Parcelle');
+INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('01', 'Repositionnement Gestionnaire de Réseaux');
+INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('02', 'Positionnement Axe Voirie');
+INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('03', 'Positionnement Limite Voirie');
+INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('04', 'Positionnement Hors Voirie');
+INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('05', 'Positionnement Parcelle');
 
 
 -- ---------------------------------
@@ -400,7 +400,7 @@ CREATE TABLE "EmprisePublicationPCRS"
 (
   geometrie geometry(Polygon,3946) NOT NULL,
   "idEmprise" character varying UNIQUE NOT NULL DEFAULT nextval('"EmprisePublicationPCRS_idEmprise_seq"'::regclass),
-  gestionnaire character varying NOT NULL REFERENCES "GestionnaireReseaux",
+  gestionnaire character varying NOT NULL REFERENCES "Gestionnaire",
   calendrier character varying(2) REFERENCES "CalendrierPCRS" (code),
   "datePublication" date NOT NULL,
   "typeEmprise" character varying(2) NOT NULL REFERENCES "EmprisePCRSType" (code),
@@ -1363,7 +1363,7 @@ CREATE SEQUENCE "AffleurantSymbolePCRS_idAffleurant_seq"
 CREATE TABLE "AffleurantSymbolePCRS"
 (
   "idAffleurant" character varying UNIQUE NOT NULL DEFAULT nextval('"AffleurantSymbolePCRS_idAffleurant_seq"'::regclass),
-  gestionnaire character varying REFERENCES "GestionnaireReseaux",
+  gestionnaire character varying REFERENCES "Gestionnaire",
   nature character varying(2) NOT NULL REFERENCES "NatureAffleurant" (code),
   "codeCouleur" character varying(6) NOT NULL REFERENCES "CodeCouleurAffleurant" (code),
   source character varying,
@@ -1413,7 +1413,7 @@ CREATE SEQUENCE "AffleurantEnveloppePCRS_idAffleurant_seq"
 CREATE TABLE "AffleurantEnveloppePCRS"
 (
   "idAffleurant" character varying UNIQUE NOT NULL DEFAULT nextval('"AffleurantEnveloppePCRS_idAffleurant_seq"'::regclass),
-  gestionnaire character varying REFERENCES "GestionnaireReseaux",
+  gestionnaire character varying REFERENCES "Gestionnaire",
   nature character varying(2) NOT NULL REFERENCES "NatureAffleurant" (code),
   "codeCouleur" character varying(6) NOT NULL REFERENCES "CodeCouleurAffleurant" (code),
   source character varying,

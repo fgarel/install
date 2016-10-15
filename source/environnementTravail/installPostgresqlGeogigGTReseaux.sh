@@ -38,6 +38,7 @@ echo '# ========================='
 listuser='CDA Departement DGFiP ERDF SDE SDEER Soluris VLR'
 listdb='pcrs rtge' ;
 listdb='origine sandbox' ; # uniquement origine et sandbox
+listdb='origine sandbox cda' ; # uniquement origine et sandbox
 listext='adminpack plpgsql postgis postgis_topology fuzzystrmatch hstore' ;
 
 for postgresqluser in $listuser ;
