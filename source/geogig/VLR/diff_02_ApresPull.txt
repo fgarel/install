@@ -1,0 +1,3335 @@
+No differences found
+959927... 000000... e06571... 000000...   R  EmprisePublicationPCRS/M31
+259326... 000000... 87dfe0... 000000...   R  BordurePCRS/M31_Bordure08
+259326... 000000... 4f593e... 000000...   R  BordurePCRS/M31_Bordure09
+259326... 000000... ac7e39... 000000...   R  BordurePCRS/M31_Bordure06
+259326... 000000... 33f479... 000000...   R  BordurePCRS/M31_Bordure07
+259326... 000000... 8f5cdc... 000000...   R  BordurePCRS/M31_Bordure04
+259326... 000000... bf3a54... 000000...   R  BordurePCRS/M31_Bordure05
+259326... 000000... d5e56c... 000000...   R  BordurePCRS/M31_Bordure02
+259326... 000000... 36c6e4... 000000...   R  BordurePCRS/M31_Bordure03
+259326... 000000... 13e7ed... 000000...   R  BordurePCRS/M31_Bordure01
+c3736a... 000000... 3c42bb... 000000...   R  AffleurantSymbolePCRS/M31_AffleurantSymbole01
+c3736a... 000000... f15d3f... 000000...   R  AffleurantSymbolePCRS/M31_AffleurantSymbole02
+c3736a... 000000... ab58ea... 000000...   R  AffleurantSymbolePCRS/M31_AffleurantSymbole03
+c3736a... 000000... f7a7f4... 000000...   R  AffleurantSymbolePCRS/M31_AffleurantSymbole04
+c3736a... 000000... 83b71b... 000000...   R  AffleurantSymbolePCRS/M31_AffleurantSymbole05
+79f1ac... 000000... 243ddc... 000000...   R  MurPCRS/M31_Mur05
+79f1ac... 000000... 9b6c15... 000000...   R  MurPCRS/M31_Mur04
+79f1ac... 000000... da02ba... 000000...   R  MurPCRS/M31_Mur06
+79f1ac... 000000... 7c662b... 000000...   R  MurPCRS/M31_Mur01
+79f1ac... 000000... d02d44... 000000...   R  MurPCRS/M31_Mur03
+79f1ac... 000000... 2961b7... 000000...   R  MurPCRS/M31_Mur02
+60b5e0... 000000... 0aaf76... 000000...   R  GestionnaireReseaux/Ville de La Rochelle
+5c701f... 000000... 6d984f... 000000...   R  PointCanevasPCRS/M31_PointCanevas02
+5c701f... 000000... 9ea727... 000000...   R  PointCanevasPCRS/M31_PointCanevas03
+5c701f... 000000... 38702a... 000000...   R  PointCanevasPCRS/M31_PointCanevas01
+4298b9... 000000... 337fea... 000000...   R  FacadePCRS/M31_Facade08
+4298b9... 000000... 7c7598... 000000...   R  FacadePCRS/M31_Facade03
+4298b9... 000000... 1deff9... 000000...   R  FacadePCRS/M31_Facade02
+4298b9... 000000... 793363... 000000...   R  FacadePCRS/M31_Facade01
+4298b9... 000000... 21fdc3... 000000...   R  FacadePCRS/M31_Facade07
+4298b9... 000000... 6654a3... 000000...   R  FacadePCRS/M31_Facade06
+4298b9... 000000... 9b2d59... 000000...   R  FacadePCRS/M31_Facade05
+4298b9... 000000... 1b8db2... 000000...   R  FacadePCRS/M31_Facade04
+No differences found
+959927... 000000... 3d3c05... 000000...   R  EmprisePublicationPCRS/M21
+259326... 000000... 939dd0... 000000...   R  BordurePCRS/M21_Bordure07
+259326... 000000... e19336... 000000...   R  BordurePCRS/M21_Bordure06
+259326... 000000... b47cbc... 000000...   R  BordurePCRS/M21_Bordure05
+259326... 000000... 8b3733... 000000...   R  BordurePCRS/M21_Bordure04
+259326... 000000... 2950cf... 000000...   R  BordurePCRS/M21_Bordure03
+259326... 000000... 20d781... 000000...   R  BordurePCRS/M21_Bordure02
+259326... 000000... c81fbf... 000000...   R  BordurePCRS/M21_Bordure01
+259326... 000000... 0722ef... 000000...   R  BordurePCRS/M21_Bordure09
+259326... 000000... 1a2148... 000000...   R  BordurePCRS/M21_Bordure08
+a790d1... 000000... 566c52... 000000...   R  ArbreAlignementPCRS/M21_Arbre01
+a790d1... 000000... ca9e40... 000000...   R  ArbreAlignementPCRS/M21_Arbre02
+a790d1... 000000... cf8fe2... 000000...   R  ArbreAlignementPCRS/M21_Arbre03
+a790d1... 000000... 7f6c25... 000000...   R  ArbreAlignementPCRS/M21_Arbre04
+a790d1... 000000... 59cef5... 000000...   R  ArbreAlignementPCRS/M21_Arbre05
+a790d1... 000000... f68a9e... 000000...   R  ArbreAlignementPCRS/M21_Arbre06
+a790d1... 000000... ddcf73... 000000...   R  ArbreAlignementPCRS/M21_Arbre07
+a790d1... 000000... 5f074a... 000000...   R  ArbreAlignementPCRS/M21_Arbre08
+a790d1... 000000... c24f1e... 000000...   R  ArbreAlignementPCRS/M21_Arbre09
+a790d1... 000000... 3fbecc... 000000...   R  ArbreAlignementPCRS/M21_Arbre11
+a790d1... 000000... 427ea4... 000000...   R  ArbreAlignementPCRS/M21_Arbre10
+c3736a... 000000... 989fb3... 000000...   R  AffleurantSymbolePCRS/M21_AffleurantSymbole01
+c3736a... 000000... f68068... 000000...   R  AffleurantSymbolePCRS/M21_AffleurantSymbole03
+c3736a... 000000... 754b67... 000000...   R  AffleurantSymbolePCRS/M21_AffleurantSymbole02
+c3736a... 000000... d8e527... 000000...   R  AffleurantSymbolePCRS/M21_AffleurantSymbole05
+c3736a... 000000... b17aa9... 000000...   R  AffleurantSymbolePCRS/M21_AffleurantSymbole04
+79f1ac... 000000... 06a155... 000000...   R  MurPCRS/M21_Mur04
+79f1ac... 000000... 7b12e0... 000000...   R  MurPCRS/M21_Mur05
+79f1ac... 000000... 6d9218... 000000...   R  MurPCRS/M21_Mur06
+79f1ac... 000000... a03171... 000000...   R  MurPCRS/M21_Mur01
+79f1ac... 000000... 47bf59... 000000...   R  MurPCRS/M21_Mur02
+79f1ac... 000000... 076120... 000000...   R  MurPCRS/M21_Mur03
+5c701f... 000000... a2c2e4... 000000...   R  PointCanevasPCRS/M21_PointCanevas03
+5c701f... 000000... 06bf57... 000000...   R  PointCanevasPCRS/M21_PointCanevas02
+5c701f... 000000... 2d06ef... 000000...   R  PointCanevasPCRS/M21_PointCanevas01
+4298b9... 000000... e82367... 000000...   R  FacadePCRS/M21_Facade08
+4298b9... 000000... 8cb967... 000000...   R  FacadePCRS/M21_Facade02
+4298b9... 000000... 6e4462... 000000...   R  FacadePCRS/M21_Facade03
+4298b9... 000000... fd624c... 000000...   R  FacadePCRS/M21_Facade01
+4298b9... 000000... 99ce71... 000000...   R  FacadePCRS/M21_Facade06
+4298b9... 000000... f0532b... 000000...   R  FacadePCRS/M21_Facade07
+4298b9... 000000... 976673... 000000...   R  FacadePCRS/M21_Facade04
+4298b9... 000000... 3bd457... 000000...   R  FacadePCRS/M21_Facade05
+No differences found
+959927... 000000... b10702... 000000...   R  EmprisePublicationPCRS/M22
+959927... 959927... 700dfa... 7e1eed...   M  EmprisePublicationPCRS/M11
+gestionnaire: Ville de La Rochelle -> Communauté Agglomération La Rochelle
+
+48e56b... 000000... f49ac2... 000000...   R  HaieEspaceVertPCRS/M22_Haie01
+48e56b... 000000... d0dc3b... 000000...   R  HaieEspaceVertPCRS/M22_Haie02
+48e56b... 000000... 376b02... 000000...   R  HaieEspaceVertPCRS/M11_Haie01
+48e56b... 000000... 185cb5... 000000...   R  HaieEspaceVertPCRS/M11_Haie02
+259326... 259326... 395820... f89249...   M  BordurePCRS/M11_Bordure08
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... ce1e44... a78baf...   M  BordurePCRS/M11_Bordure09
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 4926fa... 12dfb7...   M  BordurePCRS/M11_Bordure04
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 47f7fd... 3e6c4f...   M  BordurePCRS/M11_Bordure05
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 0a534a... ba3123...   M  BordurePCRS/M11_Bordure06
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 8e9a82... d8787d...   M  BordurePCRS/M11_Bordure07
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... d41f9f... ac0355...   M  BordurePCRS/M11_Bordure01
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 2a46e7... 2dbf88...   M  BordurePCRS/M11_Bordure02
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 6e713e... 9ade3f...   M  BordurePCRS/M11_Bordure03
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 000000... 32f327... 000000...   R  BordurePCRS/M22_Bordure04
+259326... 000000... 7aa9e3... 000000...   R  BordurePCRS/M22_Bordure05
+259326... 000000... 85744a... 000000...   R  BordurePCRS/M22_Bordure06
+259326... 000000... 30cae1... 000000...   R  BordurePCRS/M22_Bordure07
+259326... 000000... 841a0d... 000000...   R  BordurePCRS/M22_Bordure01
+259326... 000000... 08ed00... 000000...   R  BordurePCRS/M22_Bordure02
+259326... 000000... 305aed... 000000...   R  BordurePCRS/M22_Bordure03
+259326... 000000... c8121b... 000000...   R  BordurePCRS/M22_Bordure08
+259326... 000000... 1e6b31... 000000...   R  BordurePCRS/M22_Bordure09
+a790d1... 000000... 7dd78f... 000000...   R  ArbreAlignementPCRS/M11_Arbre10
+a790d1... 000000... 535d3f... 000000...   R  ArbreAlignementPCRS/M11_Arbre11
+a790d1... 000000... 05ce01... 000000...   R  ArbreAlignementPCRS/M11_Arbre09
+a790d1... 000000... 41ec7b... 000000...   R  ArbreAlignementPCRS/M11_Arbre08
+a790d1... 000000... 8c5e46... 000000...   R  ArbreAlignementPCRS/M11_Arbre03
+a790d1... 000000... ab1d67... 000000...   R  ArbreAlignementPCRS/M11_Arbre02
+a790d1... 000000... 25cc08... 000000...   R  ArbreAlignementPCRS/M11_Arbre01
+a790d1... 000000... 7928af... 000000...   R  ArbreAlignementPCRS/M11_Arbre07
+a790d1... 000000... f26bed... 000000...   R  ArbreAlignementPCRS/M11_Arbre06
+a790d1... 000000... 616d48... 000000...   R  ArbreAlignementPCRS/M11_Arbre05
+a790d1... 000000... 828295... 000000...   R  ArbreAlignementPCRS/M11_Arbre04
+a790d1... 000000... 05cbf5... 000000...   R  ArbreAlignementPCRS/M22_Arbre10
+a790d1... 000000... 089d78... 000000...   R  ArbreAlignementPCRS/M22_Arbre11
+a790d1... 000000... 413a47... 000000...   R  ArbreAlignementPCRS/M22_Arbre03
+a790d1... 000000... 2c780d... 000000...   R  ArbreAlignementPCRS/M22_Arbre02
+a790d1... 000000... d88901... 000000...   R  ArbreAlignementPCRS/M22_Arbre01
+a790d1... 000000... 0a165d... 000000...   R  ArbreAlignementPCRS/M22_Arbre07
+a790d1... 000000... 9723f2... 000000...   R  ArbreAlignementPCRS/M22_Arbre06
+a790d1... 000000... be139c... 000000...   R  ArbreAlignementPCRS/M22_Arbre05
+a790d1... 000000... f385bf... 000000...   R  ArbreAlignementPCRS/M22_Arbre04
+a790d1... 000000... 76a52e... 000000...   R  ArbreAlignementPCRS/M22_Arbre09
+a790d1... 000000... 14db82... 000000...   R  ArbreAlignementPCRS/M22_Arbre08
+c3736a... 000000... 78de1a... 000000...   R  AffleurantSymbolePCRS/M22_AffleurantSymbole02
+c3736a... 000000... 34f3f0... 000000...   R  AffleurantSymbolePCRS/M22_AffleurantSymbole03
+c3736a... 000000... f74da4... 000000...   R  AffleurantSymbolePCRS/M22_AffleurantSymbole01
+c3736a... 000000... 713a71... 000000...   R  AffleurantSymbolePCRS/M22_AffleurantSymbole04
+c3736a... 000000... dfcdbc... 000000...   R  AffleurantSymbolePCRS/M22_AffleurantSymbole05
+c3736a... 000000... 9f6e54... 000000...   R  AffleurantSymbolePCRS/M11_AffleurantSymbole02
+c3736a... 000000... 07ceb6... 000000...   R  AffleurantSymbolePCRS/M11_AffleurantSymbole03
+c3736a... 000000... bc9ec7... 000000...   R  AffleurantSymbolePCRS/M11_AffleurantSymbole01
+c3736a... 000000... 1ae16f... 000000...   R  AffleurantSymbolePCRS/M11_AffleurantSymbole04
+c3736a... 000000... 88f4f9... 000000...   R  AffleurantSymbolePCRS/M11_AffleurantSymbole05
+79f1ac... 79f1ac... 4e5ae1... 385e67...   M  MurPCRS/M11_Mur06
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... c7a82e... 2cda07...   M  MurPCRS/M11_Mur05
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 738d39... 280ab0...   M  MurPCRS/M11_Mur04
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 68f40d... a5b6db...   M  MurPCRS/M11_Mur03
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... b801b1... 7e24f2...   M  MurPCRS/M11_Mur02
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 34de37... ef35f1...   M  MurPCRS/M11_Mur01
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 000000... 8d4561... 000000...   R  MurPCRS/M22_Mur06
+79f1ac... 000000... b321d6... 000000...   R  MurPCRS/M22_Mur05
+79f1ac... 000000... a764de... 000000...   R  MurPCRS/M22_Mur04
+79f1ac... 000000... d66f34... 000000...   R  MurPCRS/M22_Mur03
+79f1ac... 000000... ffd38a... 000000...   R  MurPCRS/M22_Mur02
+79f1ac... 000000... 4746cc... 000000...   R  MurPCRS/M22_Mur01
+5c701f... 000000... 0e76f3... 000000...   R  PointCanevasPCRS/M11_PointCanevas01
+5c701f... 000000... b05635... 000000...   R  PointCanevasPCRS/M11_PointCanevas02
+5c701f... 000000... 2eeec9... 000000...   R  PointCanevasPCRS/M11_PointCanevas03
+5c701f... 000000... 288317... 000000...   R  PointCanevasPCRS/M22_PointCanevas01
+5c701f... 000000... 313a2a... 000000...   R  PointCanevasPCRS/M22_PointCanevas02
+5c701f... 000000... 1887a6... 000000...   R  PointCanevasPCRS/M22_PointCanevas03
+4298b9... 4298b9... 47ee5a... 614288...   M  FacadePCRS/M11_Facade08
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 9ec94f... 1b551d...   M  FacadePCRS/M11_Facade01
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... dc1bdc... 9482c7...   M  FacadePCRS/M11_Facade03
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 93ca3a... 08fb38...   M  FacadePCRS/M11_Facade02
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... b53413... e26d9a...   M  FacadePCRS/M11_Facade05
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 1fa1e1... da9787...   M  FacadePCRS/M11_Facade04
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... a4d342... 2d216c...   M  FacadePCRS/M11_Facade07
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... f0b9b5... ea168b...   M  FacadePCRS/M11_Facade06
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 000000... 3189dd... 000000...   R  FacadePCRS/M22_Facade01
+4298b9... 000000... d11477... 000000...   R  FacadePCRS/M22_Facade03
+4298b9... 000000... 841c56... 000000...   R  FacadePCRS/M22_Facade02
+4298b9... 000000... 8aa7ba... 000000...   R  FacadePCRS/M22_Facade05
+4298b9... 000000... 7b604e... 000000...   R  FacadePCRS/M22_Facade04
+4298b9... 000000... 2577cf... 000000...   R  FacadePCRS/M22_Facade07
+4298b9... 000000... 5a0428... 000000...   R  FacadePCRS/M22_Facade06
+4298b9... 000000... 815172... 000000...   R  FacadePCRS/M22_Facade08
+No differences found
+959927... 000000... 980908... 000000...   R  EmprisePublicationPCRS/M12
+48e56b... 000000... abd66e... 000000...   R  HaieEspaceVertPCRS/M12_Haie02
+48e56b... 000000... 64459f... 000000...   R  HaieEspaceVertPCRS/M12_Haie01
+259326... 000000... 724aa3... 000000...   R  BordurePCRS/M12_Bordure09
+259326... 000000... 224128... 000000...   R  BordurePCRS/M12_Bordure08
+259326... 000000... e6cb87... 000000...   R  BordurePCRS/M12_Bordure07
+259326... 000000... 69ca6b... 000000...   R  BordurePCRS/M12_Bordure06
+259326... 000000... eb2b03... 000000...   R  BordurePCRS/M12_Bordure05
+259326... 000000... 8c8aff... 000000...   R  BordurePCRS/M12_Bordure04
+259326... 000000... 6f2003... 000000...   R  BordurePCRS/M12_Bordure03
+259326... 000000... 209293... 000000...   R  BordurePCRS/M12_Bordure02
+259326... 000000... a35540... 000000...   R  BordurePCRS/M12_Bordure01
+a790d1... 000000... 230890... 000000...   R  ArbreAlignementPCRS/M12_Arbre08
+a790d1... 000000... a751cc... 000000...   R  ArbreAlignementPCRS/M12_Arbre09
+a790d1... 000000... 4f5722... 000000...   R  ArbreAlignementPCRS/M12_Arbre01
+a790d1... 000000... 4ff16c... 000000...   R  ArbreAlignementPCRS/M12_Arbre02
+a790d1... 000000... cafe1f... 000000...   R  ArbreAlignementPCRS/M12_Arbre03
+a790d1... 000000... 6fae09... 000000...   R  ArbreAlignementPCRS/M12_Arbre04
+a790d1... 000000... c54aff... 000000...   R  ArbreAlignementPCRS/M12_Arbre05
+a790d1... 000000... 25a150... 000000...   R  ArbreAlignementPCRS/M12_Arbre06
+a790d1... 000000... e814a1... 000000...   R  ArbreAlignementPCRS/M12_Arbre07
+a790d1... 000000... 3f29d4... 000000...   R  ArbreAlignementPCRS/M12_Arbre11
+a790d1... 000000... 75dd43... 000000...   R  ArbreAlignementPCRS/M12_Arbre10
+c3736a... 000000... beb002... 000000...   R  AffleurantSymbolePCRS/M12_AffleurantSymbole01
+c3736a... 000000... a621af... 000000...   R  AffleurantSymbolePCRS/M12_AffleurantSymbole03
+c3736a... 000000... 6183d5... 000000...   R  AffleurantSymbolePCRS/M12_AffleurantSymbole02
+c3736a... 000000... 8aabd7... 000000...   R  AffleurantSymbolePCRS/M12_AffleurantSymbole05
+c3736a... 000000... 69119d... 000000...   R  AffleurantSymbolePCRS/M12_AffleurantSymbole04
+79f1ac... 000000... 487606... 000000...   R  MurPCRS/M12_Mur04
+79f1ac... 000000... 709ecd... 000000...   R  MurPCRS/M12_Mur05
+79f1ac... 000000... cb27df... 000000...   R  MurPCRS/M12_Mur06
+79f1ac... 000000... e2bed5... 000000...   R  MurPCRS/M12_Mur01
+79f1ac... 000000... c98e61... 000000...   R  MurPCRS/M12_Mur02
+79f1ac... 000000... fb0ced... 000000...   R  MurPCRS/M12_Mur03
+5c701f... 000000... 68a96e... 000000...   R  PointCanevasPCRS/M12_PointCanevas03
+5c701f... 000000... ef42f3... 000000...   R  PointCanevasPCRS/M12_PointCanevas02
+5c701f... 000000... 9b3a02... 000000...   R  PointCanevasPCRS/M12_PointCanevas01
+4298b9... 000000... e0f3db... 000000...   R  FacadePCRS/M12_Facade02
+4298b9... 000000... 68e950... 000000...   R  FacadePCRS/M12_Facade03
+4298b9... 000000... e8dc27... 000000...   R  FacadePCRS/M12_Facade01
+4298b9... 000000... 550d75... 000000...   R  FacadePCRS/M12_Facade06
+4298b9... 000000... eb043e... 000000...   R  FacadePCRS/M12_Facade07
+4298b9... 000000... ba992a... 000000...   R  FacadePCRS/M12_Facade04
+4298b9... 000000... ceb3ee... 000000...   R  FacadePCRS/M12_Facade05
+4298b9... 000000... 985dd9... 000000...   R  FacadePCRS/M12_Facade08
+No differences found
+959927... 959927... 3d3c05... b5905a...   M  EmprisePublicationPCRS/M21
+gestionnaire: Ville de La Rochelle -> Communauté Agglomération La Rochelle
+
+959927... 959927... b10702... fe9c54...   M  EmprisePublicationPCRS/M22
+gestionnaire: Ville de La Rochelle -> Communauté Agglomération La Rochelle
+
+000000... 959927... 000000... 7f87c4...   A  EmprisePublicationPCRS/M23
+geometrie    POLYGON ((1379780 5226100, 1379780 5226200, 1379920 5226200, 1379920 5226100, 1379780 5226100))
+gestionnaire    Communauté Agglomération La Rochelle
+calendrier    01
+datePublication    1460066400000
+typeEmprise    03
+complement    
+raster    
+gabaritPrecision    
+
+000000... 959927... 000000... e1c01a...   A  EmprisePublicationPCRS/M24
+geometrie    POLYGON ((1379920 5226100, 1379920 5226200, 1380060 5226200, 1380060 5226100, 1379920 5226100))
+gestionnaire    Communauté Agglomération La Rochelle
+calendrier    01
+datePublication    1460066400000
+typeEmprise    03
+complement    
+raster    
+gabaritPrecision    
+
+959927... 959927... e06571... 0fdc22...   M  EmprisePublicationPCRS/M31
+gestionnaire: Ville de La Rochelle -> Communauté Agglomération La Rochelle
+
+000000... 959927... 000000... f30c90...   A  EmprisePublicationPCRS/M33
+geometrie    POLYGON ((1379780 5226000, 1379920 5226000, 1379920 5226100, 1379780 5226100, 1379780 5226000))
+gestionnaire    Communauté Agglomération La Rochelle
+calendrier    01
+datePublication    1460066400000
+typeEmprise    03
+complement    
+raster    
+gabaritPrecision    
+
+000000... 959927... 000000... 2225c0...   A  EmprisePublicationPCRS/M32
+geometrie    POLYGON ((1379640 5226000, 1379640 5226100, 1379780 5226100, 1379780 5226000, 1379640 5226000))
+gestionnaire    Communauté Agglomération La Rochelle
+calendrier    01
+datePublication    1460066400000
+typeEmprise    03
+complement    
+raster    
+gabaritPrecision    
+
+959927... 959927... 36b240... 5d997b...   M  EmprisePublicationPCRS/M13
+gestionnaire: Ville de La Rochelle -> Communauté Agglomération La Rochelle
+
+959927... 959927... 980908... 67df89...   M  EmprisePublicationPCRS/M12
+gestionnaire: Ville de La Rochelle -> Communauté Agglomération La Rochelle
+
+959927... 959927... 60164c... 117f64...   M  EmprisePublicationPCRS/M15
+gestionnaire: Électricité Réseau Distribution France -> Communauté Agglomération La Rochelle
+
+959927... 959927... 43e5a8... ba6a9f...   M  EmprisePublicationPCRS/M14
+gestionnaire: Électricité Réseau Distribution France -> Communauté Agglomération La Rochelle
+
+000000... 959927... 000000... f4b22d...   A  EmprisePublicationPCRS/M42
+geometrie    POLYGON ((1379640 5225900, 1379780 5225900, 1379780 5226000, 1379640 5226000, 1379640 5225900))
+gestionnaire    Communauté Agglomération La Rochelle
+calendrier    01
+datePublication    1460066400000
+typeEmprise    03
+complement    
+raster    
+gabaritPrecision    
+
+959927... 959927... b9e0a0... 3aa5eb...   M  EmprisePublicationPCRS/M41
+gestionnaire: Syndicat des Eaux de la Charente Maritime -> Communauté Agglomération La Rochelle
+
+959927... 959927... 4637d8... c37621...   M  EmprisePublicationPCRS/M51
+gestionnaire: Syndicat des Eaux de la Charente Maritime -> Communauté Agglomération La Rochelle
+
+000000... 48e56b... 000000... 4f9807...   A  HaieEspaceVertPCRS/M24_Haie02
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1380000 5226130, 1379990 5226140, 1379970 5226140, 1379970 5226130)
+
+000000... 48e56b... 000000... 9874a1...   A  HaieEspaceVertPCRS/M24_Haie01
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1379930 5226140, 1379940 5226140, 1379940 5226160, 1379930 5226160)
+
+48e56b... 000000... e24049... 000000...   R  HaieEspaceVertPCRS/M13_Haie02
+48e56b... 000000... 0f9e31... 000000...   R  HaieEspaceVertPCRS/M13_Haie01
+000000... 48e56b... 000000... 510615...   A  HaieEspaceVertPCRS/M33_Haie01
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1379910 5226060, 1379900 5226060, 1379900 5226040, 1379910 5226040)
+
+000000... 48e56b... 000000... 82666d...   A  HaieEspaceVertPCRS/M33_Haie02
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1379870 5226030, 1379870 5226040, 1379850 5226040, 1379840 5226030)
+
+000000... 48e56b... 000000... 2ea17c...   A  HaieEspaceVertPCRS/M15_Haie01
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1380070 5226240, 1380080 5226240, 1380080 5226260, 1380070 5226260)
+
+000000... 48e56b... 000000... 7fff5a...   A  HaieEspaceVertPCRS/M15_Haie02
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1380140 5226230, 1380130 5226240, 1380110 5226240, 1380110 5226230)
+
+000000... 48e56b... 000000... e86bd4...   A  HaieEspaceVertPCRS/M42_Haie02
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1379690 5225970, 1379690 5225960, 1379710 5225960, 1379720 5225970)
+
+000000... 48e56b... 000000... 49a29c...   A  HaieEspaceVertPCRS/M42_Haie01
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1379650 5225940, 1379660 5225940, 1379660 5225960, 1379650 5225960)
+
+48e56b... 000000... 849fec... 000000...   R  HaieEspaceVertPCRS/M31_Haie02
+48e56b... 000000... bebd61... 000000...   R  HaieEspaceVertPCRS/M31_Haie01
+000000... 48e56b... 000000... 832200...   A  HaieEspaceVertPCRS/M23_Haie01
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1379910 5226160, 1379900 5226160, 1379900 5226140, 1379910 5226140)
+
+000000... 48e56b... 000000... 9c484c...   A  HaieEspaceVertPCRS/M23_Haie02
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1379840 5226170, 1379850 5226160, 1379870 5226160, 1379870 5226170)
+
+000000... 48e56b... 000000... c8a253...   A  HaieEspaceVertPCRS/M51_Haie01
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1379510 5225840, 1379520 5225840, 1379520 5225860, 1379510 5225860)
+
+000000... 48e56b... 000000... 4f065a...   A  HaieEspaceVertPCRS/M51_Haie02
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1379580 5225830, 1379570 5225840, 1379550 5225840, 1379550 5225830)
+
+000000... 48e56b... 000000... 726352...   A  HaieEspaceVertPCRS/M14_Haie01
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1380050 5226260, 1380040 5226260, 1380040 5226240, 1380050 5226240)
+
+000000... 48e56b... 000000... 021822...   A  HaieEspaceVertPCRS/M14_Haie02
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1379980 5226270, 1379990 5226260, 1380010 5226260, 1380010 5226270)
+
+000000... 48e56b... 000000... 598a37...   A  HaieEspaceVertPCRS/M41_Haie01
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1379630 5225960, 1379620 5225960, 1379620 5225940, 1379630 5225940)
+
+000000... 48e56b... 000000... d1f33e...   A  HaieEspaceVertPCRS/M41_Haie02
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1379590 5225930, 1379590 5225940, 1379570 5225940, 1379560 5225930)
+
+000000... 48e56b... 000000... 3404e4...   A  HaieEspaceVertPCRS/M32_Haie01
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1379650 5226040, 1379660 5226040, 1379660 5226060, 1379650 5226060)
+
+000000... 48e56b... 000000... 07f358...   A  HaieEspaceVertPCRS/M32_Haie02
+thematique    06
+calque    PCRS_VEGETAL_CDA_HAIEESPACEVERT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    LINESTRING (1379690 5226070, 1379690 5226060, 1379710 5226060, 1379720 5226070)
+
+000000... 259326... 000000... 078642...   A  BordurePCRS/M33_Bordure08
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379880 5226000, 1379880 5226040, 1379870 5226050, 1379850 5226050, 1379820 5226020, 1379820 5226000)
+nature    
+
+000000... 259326... 000000... 189d64...   A  BordurePCRS/M33_Bordure09
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379800 5226080, 1379800 5226070, 1379810 5226060, 1379810 5226050, 1379820 5226050, 1379830 5226060, 1379810 5226080, 1379800 5226080)
+nature    
+
+000000... 259326... 000000... 17a54d...   A  BordurePCRS/M33_Bordure04
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379820 5226100, 1379820 5226090, 1379840 5226070, 1379870 5226070, 1379880 5226080, 1379880 5226100)
+nature    
+
+000000... 259326... 000000... 00eeb7...   A  BordurePCRS/M33_Bordure05
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5226080, 1379790 5226090, 1379810 5226090, 1379810 5226100)
+nature    
+
+000000... 259326... 000000... 997d96...   A  BordurePCRS/M33_Bordure06
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379790 5226030, 1379800 5226040, 1379800 5226050, 1379790 5226060)
+nature    
+
+000000... 259326... 000000... 4bd2f4...   A  BordurePCRS/M33_Bordure07
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379810 5226000, 1379810 5226010, 1379800 5226020, 1379780 5226020)
+nature    
+
+000000... 259326... 000000... 9bf9d5...   A  BordurePCRS/M33_Bordure01
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379920 5226020, 1379900 5226020, 1379890 5226010, 1379890 5226000)
+nature    
+
+000000... 259326... 000000... 23e22c...   A  BordurePCRS/M33_Bordure02
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379910 5226080, 1379920 5226080)
+nature    
+
+000000... 259326... 000000... c1e607...   A  BordurePCRS/M33_Bordure03
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379890 5226100, 1379890 5226080, 1379900 5226080)
+nature    
+
+000000... 259326... 000000... 4047ac...   A  BordurePCRS/M23_Bordure05
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379810 5226100, 1379810 5226110, 1379790 5226110, 1379780 5226120)
+nature    
+
+000000... 259326... 000000... f67b1a...   A  BordurePCRS/M23_Bordure04
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379880 5226100, 1379880 5226120, 1379870 5226130, 1379840 5226130, 1379820 5226110, 1379820 5226100)
+nature    
+
+000000... 259326... 000000... 3fb9b0...   A  BordurePCRS/M23_Bordure07
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5226180, 1379800 5226180, 1379810 5226190, 1379810 5226200)
+nature    
+
+000000... 259326... 000000... a22880...   A  BordurePCRS/M23_Bordure06
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379790 5226140, 1379800 5226150, 1379800 5226160, 1379790 5226170)
+nature    
+
+000000... 259326... 000000... fc7f5e...   A  BordurePCRS/M23_Bordure01
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379890 5226200, 1379890 5226190, 1379900 5226180, 1379920 5226180)
+nature    
+
+000000... 259326... 000000... 2830ad...   A  BordurePCRS/M23_Bordure03
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379900 5226120, 1379890 5226120, 1379890 5226100)
+nature    
+
+000000... 259326... 000000... e1ba46...   A  BordurePCRS/M23_Bordure02
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379920 5226120, 1379910 5226120)
+nature    
+
+000000... 259326... 000000... b915a7...   A  BordurePCRS/M23_Bordure09
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379800 5226120, 1379810 5226120, 1379830 5226140, 1379820 5226150, 1379810 5226150, 1379810 5226140, 1379800 5226130, 1379800 5226120)
+nature    
+
+000000... 259326... 000000... 23fa73...   A  BordurePCRS/M23_Bordure08
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379820 5226200, 1379820 5226180, 1379850 5226150, 1379870 5226150, 1379880 5226160, 1379880 5226200)
+nature    
+
+259326... 259326... 708b35... c7d715...   M  BordurePCRS/M13_Bordure08
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 184af5... bd7628...   M  BordurePCRS/M13_Bordure09
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... ed9820... b1170e...   M  BordurePCRS/M13_Bordure06
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 860279... 3b62d0...   M  BordurePCRS/M13_Bordure07
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 3e7186... 812764...   M  BordurePCRS/M13_Bordure04
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 428d03... e76262...   M  BordurePCRS/M13_Bordure05
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... a17b24... aeca55...   M  BordurePCRS/M13_Bordure02
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 2d94ca... f9fa11...   M  BordurePCRS/M13_Bordure03
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 844de1... 7aed62...   M  BordurePCRS/M13_Bordure01
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... c24799... 3e9672...   M  BordurePCRS/M15_Bordure08
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 4c4169... 631f29...   M  BordurePCRS/M15_Bordure09
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... fc50dd... 14f029...   M  BordurePCRS/M15_Bordure01
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... bfb5f9... a6c205...   M  BordurePCRS/M15_Bordure02
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... dc53b4... 56ff4b...   M  BordurePCRS/M15_Bordure03
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 5cfa7e... 6fc5bd...   M  BordurePCRS/M15_Bordure04
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 6ee54a... abfe3e...   M  BordurePCRS/M15_Bordure05
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 24c6ae... 47b19d...   M  BordurePCRS/M15_Bordure06
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 955cb1... ea2779...   M  BordurePCRS/M15_Bordure07
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 724aa3... ad3e87...   M  BordurePCRS/M12_Bordure09
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 224128... 215218...   M  BordurePCRS/M12_Bordure08
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... e6cb87... 58005c...   M  BordurePCRS/M12_Bordure07
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 69ca6b... cbddab...   M  BordurePCRS/M12_Bordure06
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... eb2b03... db9901...   M  BordurePCRS/M12_Bordure05
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 8c8aff... 7d6bae...   M  BordurePCRS/M12_Bordure04
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 6f2003... 2486ec...   M  BordurePCRS/M12_Bordure03
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 209293... be1844...   M  BordurePCRS/M12_Bordure02
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... a35540... 50f0b6...   M  BordurePCRS/M12_Bordure01
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 244cfe... 64f07c...   M  BordurePCRS/M14_Bordure09
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 3ad73f... f84547...   M  BordurePCRS/M14_Bordure08
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... dde7c3... fb9c8f...   M  BordurePCRS/M14_Bordure01
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 31e40f... c07fb0...   M  BordurePCRS/M14_Bordure03
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 574aee... 432761...   M  BordurePCRS/M14_Bordure02
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 5d67b9... 43290c...   M  BordurePCRS/M14_Bordure05
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 315ae4... 7c20a3...   M  BordurePCRS/M14_Bordure04
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... c61a87... ef6c6d...   M  BordurePCRS/M14_Bordure07
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... acf6cd... 9f180b...   M  BordurePCRS/M14_Bordure06
+calque: PCRS_VOIRIE_ERDF_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 32f327... f6a3d2...   M  BordurePCRS/M22_Bordure04
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 7aa9e3... 184800...   M  BordurePCRS/M22_Bordure05
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 85744a... b1fd8b...   M  BordurePCRS/M22_Bordure06
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 30cae1... e51d99...   M  BordurePCRS/M22_Bordure07
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 841a0d... 76e3a2...   M  BordurePCRS/M22_Bordure01
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 08ed00... 169caa...   M  BordurePCRS/M22_Bordure02
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 305aed... aa3d1f...   M  BordurePCRS/M22_Bordure03
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... c8121b... 170479...   M  BordurePCRS/M22_Bordure08
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 1e6b31... 0ae6bc...   M  BordurePCRS/M22_Bordure09
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 939dd0... 54af07...   M  BordurePCRS/M21_Bordure07
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... e19336... a70a6b...   M  BordurePCRS/M21_Bordure06
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... b47cbc... c9a5bb...   M  BordurePCRS/M21_Bordure05
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 8b3733... ec36d5...   M  BordurePCRS/M21_Bordure04
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 2950cf... eb501a...   M  BordurePCRS/M21_Bordure03
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 20d781... 79f169...   M  BordurePCRS/M21_Bordure02
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... c81fbf... 257aa5...   M  BordurePCRS/M21_Bordure01
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 0722ef... 814482...   M  BordurePCRS/M21_Bordure09
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 1a2148... 0e5fa3...   M  BordurePCRS/M21_Bordure08
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+000000... 259326... 000000... 7d3fc3...   A  BordurePCRS/M24_Bordure02
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379920 5226180, 1379930 5226180)
+nature    
+
+000000... 259326... 000000... 262e4d...   A  BordurePCRS/M24_Bordure03
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379940 5226180, 1379950 5226180, 1379950 5226200)
+nature    
+
+000000... 259326... 000000... 10d18b...   A  BordurePCRS/M24_Bordure01
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379950 5226100, 1379950 5226110, 1379940 5226120, 1379920 5226120)
+nature    
+
+000000... 259326... 000000... 84721e...   A  BordurePCRS/M24_Bordure06
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1380050 5226160, 1380040 5226150, 1380040 5226140, 1380050 5226130)
+nature    
+
+000000... 259326... 000000... d561f0...   A  BordurePCRS/M24_Bordure07
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1380060 5226120, 1380040 5226120, 1380030 5226110, 1380030 5226100)
+nature    
+
+000000... 259326... 000000... 9d88f9...   A  BordurePCRS/M24_Bordure04
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379960 5226200, 1379960 5226180, 1379970 5226170, 1380000 5226170, 1380020 5226190, 1380020 5226200)
+nature    
+
+000000... 259326... 000000... 0c4396...   A  BordurePCRS/M24_Bordure05
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1380030 5226200, 1380030 5226190, 1380050 5226190, 1380060 5226180)
+nature    
+
+000000... 259326... 000000... f01749...   A  BordurePCRS/M24_Bordure08
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1380020 5226100, 1380020 5226120, 1379990 5226150, 1379970 5226150, 1379960 5226140, 1379960 5226100)
+nature    
+
+000000... 259326... 000000... 5a2f6f...   A  BordurePCRS/M24_Bordure09
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1380040 5226180, 1380030 5226180, 1380010 5226160, 1380020 5226150, 1380030 5226150, 1380030 5226160, 1380040 5226170, 1380040 5226180)
+nature    
+
+000000... 259326... 000000... 2b1e2b...   A  BordurePCRS/M42_Bordure02
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379650 5225920, 1379640 5225920)
+nature    
+
+000000... 259326... 000000... 1ab460...   A  BordurePCRS/M42_Bordure03
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379670 5225900, 1379670 5225920, 1379660 5225920)
+nature    
+
+000000... 259326... 000000... 3bfb3f...   A  BordurePCRS/M42_Bordure01
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379640 5225980, 1379660 5225980, 1379670 5225990, 1379670 5226000)
+nature    
+
+000000... 259326... 000000... 0eeea8...   A  BordurePCRS/M42_Bordure06
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379770 5225970, 1379760 5225960, 1379760 5225950, 1379770 5225940)
+nature    
+
+000000... 259326... 000000... 5f1d27...   A  BordurePCRS/M42_Bordure07
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379750 5226000, 1379750 5225990, 1379760 5225980, 1379780 5225980)
+nature    
+
+000000... 259326... 000000... 592601...   A  BordurePCRS/M42_Bordure04
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379740 5225900, 1379740 5225910, 1379720 5225930, 1379690 5225930, 1379680 5225920, 1379680 5225900)
+nature    
+
+000000... 259326... 000000... ec4263...   A  BordurePCRS/M42_Bordure05
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5225920, 1379770 5225910, 1379750 5225910, 1379750 5225900)
+nature    
+
+000000... 259326... 000000... cb3906...   A  BordurePCRS/M42_Bordure08
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379680 5226000, 1379680 5225960, 1379690 5225950, 1379710 5225950, 1379740 5225980, 1379740 5226000)
+nature    
+
+000000... 259326... 000000... bdada4...   A  BordurePCRS/M42_Bordure09
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379760 5225920, 1379760 5225930, 1379750 5225940, 1379750 5225950, 1379740 5225950, 1379730 5225940, 1379750 5225920, 1379760 5225920)
+nature    
+
+259326... 259326... 87dfe0... 403832...   M  BordurePCRS/M31_Bordure08
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 4f593e... 79bf0f...   M  BordurePCRS/M31_Bordure09
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... ac7e39... a5bd29...   M  BordurePCRS/M31_Bordure06
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 33f479... ef44e6...   M  BordurePCRS/M31_Bordure07
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 8f5cdc... 76eb10...   M  BordurePCRS/M31_Bordure04
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... bf3a54... ddd7f7...   M  BordurePCRS/M31_Bordure05
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... d5e56c... 45cea3...   M  BordurePCRS/M31_Bordure02
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 36c6e4... 572739...   M  BordurePCRS/M31_Bordure03
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 13e7ed... d01ce1...   M  BordurePCRS/M31_Bordure01
+calque: PCRS_VOIRIE_VLR_3PREFIXE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+000000... 259326... 000000... cd643d...   A  BordurePCRS/M32_Bordure09
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379760 5226020, 1379760 5226030, 1379750 5226040, 1379750 5226050, 1379740 5226050, 1379730 5226040, 1379750 5226020, 1379760 5226020)
+nature    
+
+000000... 259326... 000000... 8acba4...   A  BordurePCRS/M32_Bordure08
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379680 5226100, 1379680 5226060, 1379690 5226050, 1379710 5226050, 1379740 5226080, 1379740 5226100)
+nature    
+
+000000... 259326... 000000... 3842ce...   A  BordurePCRS/M32_Bordure05
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5226020, 1379770 5226010, 1379750 5226010, 1379750 5226000)
+nature    
+
+000000... 259326... 000000... 55d949...   A  BordurePCRS/M32_Bordure04
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379740 5226000, 1379740 5226010, 1379720 5226030, 1379690 5226030, 1379680 5226020, 1379680 5226000)
+nature    
+
+000000... 259326... 000000... d75321...   A  BordurePCRS/M32_Bordure07
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379750 5226100, 1379750 5226090, 1379760 5226080, 1379780 5226080)
+nature    
+
+000000... 259326... 000000... 3d2f14...   A  BordurePCRS/M32_Bordure06
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379770 5226070, 1379760 5226060, 1379760 5226050, 1379770 5226040)
+nature    
+
+000000... 259326... 000000... 202531...   A  BordurePCRS/M32_Bordure01
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379640 5226080, 1379660 5226080, 1379670 5226090, 1379670 5226100)
+nature    
+
+000000... 259326... 000000... ad143c...   A  BordurePCRS/M32_Bordure03
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379670 5226000, 1379670 5226020, 1379660 5226020)
+nature    
+
+000000... 259326... 000000... f09c8d...   A  BordurePCRS/M32_Bordure02
+thematique    03
+calque    PCRS_VOIRIE_CDA_BORDURE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379650 5226020, 1379640 5226020)
+nature    
+
+259326... 259326... 4c0d53... 56215c...   M  BordurePCRS/M51_Bordure08
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 0aecfc... 2208ce...   M  BordurePCRS/M51_Bordure09
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... efd7b5... 983c45...   M  BordurePCRS/M51_Bordure01
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... e86365... 00afdb...   M  BordurePCRS/M51_Bordure02
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 3cf7b1... 1ac86b...   M  BordurePCRS/M51_Bordure03
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... fba347... 4437ac...   M  BordurePCRS/M51_Bordure04
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... d22e00... b09a12...   M  BordurePCRS/M51_Bordure05
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... aa1512... 6f83fe...   M  BordurePCRS/M51_Bordure06
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 3fd949... b8e038...   M  BordurePCRS/M51_Bordure07
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... be79df... c39d08...   M  BordurePCRS/M41_Bordure01
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 31cedb... 7f15f4...   M  BordurePCRS/M41_Bordure03
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... e8a1af... 30eadd...   M  BordurePCRS/M41_Bordure02
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 3a9615... 06de12...   M  BordurePCRS/M41_Bordure05
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 6a6d39... eb42e6...   M  BordurePCRS/M41_Bordure04
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 218240... 3f632f...   M  BordurePCRS/M41_Bordure07
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... e65436... 16cc97...   M  BordurePCRS/M41_Bordure06
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 83b18c... 7c20a8...   M  BordurePCRS/M41_Bordure09
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+259326... 259326... 1d8c7e... 043c80...   M  BordurePCRS/M41_Bordure08
+calque: PCRS_VOIRIE_SDE_BORDURE -> PCRS_VOIRIE_CDA_BORDURE
+
+000000... a790d1... 000000... 56222d...   A  ArbreAlignementPCRS/M15_Arbre10
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380105 5226215)
+reference    Épicéa
+
+000000... a790d1... 000000... 15ee06...   A  ArbreAlignementPCRS/M15_Arbre11
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380105 5226225)
+reference    Eucalyptus
+
+000000... a790d1... 000000... eff8cc...   A  ArbreAlignementPCRS/M24_Arbre10
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379965 5226115)
+reference    Épicéa
+
+000000... a790d1... 000000... 2d6313...   A  ArbreAlignementPCRS/M24_Arbre11
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379965 5226125)
+reference    Eucalyptus
+
+000000... a790d1... 000000... e77057...   A  ArbreAlignementPCRS/M15_Arbre09
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380105 5226205)
+reference    Pommier
+
+000000... a790d1... 000000... b6f460...   A  ArbreAlignementPCRS/M15_Arbre08
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380155 5226215)
+reference    Érable
+
+000000... a790d1... 000000... 3e4464...   A  ArbreAlignementPCRS/M15_Arbre07
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380155 5226205)
+reference    Sorbier
+
+000000... a790d1... 000000... 07d9e2...   A  ArbreAlignementPCRS/M15_Arbre06
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380160 5226260)
+reference    Saule
+
+000000... a790d1... 000000... b6f264...   A  ArbreAlignementPCRS/M15_Arbre05
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380170 5226270)
+reference    Platane
+
+000000... a790d1... 000000... 6ce8dc...   A  ArbreAlignementPCRS/M15_Arbre04
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380155 5226295)
+reference    Ébène
+
+000000... a790d1... 000000... f76f1b...   A  ArbreAlignementPCRS/M15_Arbre03
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380110 5226280)
+reference    Cormier
+
+000000... a790d1... 000000... 840b62...   A  ArbreAlignementPCRS/M15_Arbre02
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380105 5226295)
+reference    Cèdre
+
+000000... a790d1... 000000... 189fe8...   A  ArbreAlignementPCRS/M15_Arbre01
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380070 5226215)
+reference    Bouleau
+
+000000... a790d1... 000000... 0199b6...   A  ArbreAlignementPCRS/M24_Arbre05
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380030 5226170)
+reference    Platane
+
+000000... a790d1... 000000... 0b56f9...   A  ArbreAlignementPCRS/M24_Arbre04
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380015 5226195)
+reference    Ébène
+
+000000... a790d1... 000000... 337edc...   A  ArbreAlignementPCRS/M24_Arbre07
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380015 5226105)
+reference    Sorbier
+
+000000... a790d1... 000000... 42d720...   A  ArbreAlignementPCRS/M24_Arbre06
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380020 5226160)
+reference    Saule
+
+000000... a790d1... 000000... b68b3d...   A  ArbreAlignementPCRS/M24_Arbre01
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379930 5226115)
+reference    Bouleau
+
+000000... a790d1... 000000... 87b010...   A  ArbreAlignementPCRS/M24_Arbre03
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379970 5226180)
+reference    Cormier
+
+000000... a790d1... 000000... f5fa63...   A  ArbreAlignementPCRS/M24_Arbre02
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379965 5226195)
+reference    Cèdre
+
+000000... a790d1... 000000... ce5045...   A  ArbreAlignementPCRS/M24_Arbre09
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379965 5226105)
+reference    Pommier
+
+000000... a790d1... 000000... 6d7dc1...   A  ArbreAlignementPCRS/M24_Arbre08
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380015 5226115)
+reference    Érable
+
+000000... a790d1... 000000... a4a18e...   A  ArbreAlignementPCRS/M42_Arbre10
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379685 5225985)
+reference    Noyer
+
+000000... a790d1... 000000... ea4dac...   A  ArbreAlignementPCRS/M42_Arbre11
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379685 5225975)
+reference    Robinier
+
+000000... a790d1... 000000... 05d80d...   A  ArbreAlignementPCRS/M23_Arbre02
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379875 5226105)
+reference    Mélèze
+
+000000... a790d1... 000000... 21a291...   A  ArbreAlignementPCRS/M23_Arbre03
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379870 5226120)
+reference    Pêcher
+
+000000... a790d1... 000000... dbd50e...   A  ArbreAlignementPCRS/M23_Arbre01
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379910 5226185)
+reference    Chêne
+
+000000... a790d1... 000000... 1c2ad8...   A  ArbreAlignementPCRS/M23_Arbre06
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379820 5226140)
+reference    Bambou
+
+000000... a790d1... 000000... b62df9...   A  ArbreAlignementPCRS/M23_Arbre07
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379825 5226195)
+reference    Noyer
+
+000000... a790d1... 000000... 187850...   A  ArbreAlignementPCRS/M23_Arbre04
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379825 5226105)
+reference    Teck
+
+000000... a790d1... 000000... e3c49e...   A  ArbreAlignementPCRS/M23_Arbre05
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379810 5226130)
+reference    Sequoia
+
+000000... a790d1... 000000... 2bf663...   A  ArbreAlignementPCRS/M23_Arbre08
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379825 5226185)
+reference    Palmier
+
+000000... a790d1... 000000... a69947...   A  ArbreAlignementPCRS/M23_Arbre09
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379875 5226195)
+reference    Poirier
+
+a790d1... a790d1... 4971bd... 0cf92e...   M  ArbreAlignementPCRS/M13_Arbre10
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 362559... ddab75...   M  ArbreAlignementPCRS/M13_Arbre11
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+000000... a790d1... 000000... 2e6bb7...   A  ArbreAlignementPCRS/M42_Arbre05
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379750 5225930)
+reference    Houx
+
+000000... a790d1... 000000... fef7b9...   A  ArbreAlignementPCRS/M42_Arbre04
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379735 5225905)
+reference    Balsa
+
+000000... a790d1... 000000... 2074c1...   A  ArbreAlignementPCRS/M42_Arbre07
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379735 5225995)
+reference    Merisier
+
+000000... a790d1... 000000... 17dfb4...   A  ArbreAlignementPCRS/M42_Arbre06
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379740 5225940)
+reference    Aulne
+
+000000... a790d1... 000000... 0dbfe5...   A  ArbreAlignementPCRS/M42_Arbre01
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379650 5225985)
+reference    Sapin
+
+000000... a790d1... 000000... 657496...   A  ArbreAlignementPCRS/M42_Arbre03
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379690 5225920)
+reference    Prunier
+
+000000... a790d1... 000000... f49106...   A  ArbreAlignementPCRS/M42_Arbre02
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379685 5225905)
+reference    Hêtre
+
+000000... a790d1... 000000... 246b0e...   A  ArbreAlignementPCRS/M42_Arbre09
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379685 5225995)
+reference    Marronnier
+
+000000... a790d1... 000000... 8c729f...   A  ArbreAlignementPCRS/M42_Arbre08
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379735 5225985)
+reference    Douglas
+
+000000... a790d1... 000000... db9bd7...   A  ArbreAlignementPCRS/M23_Arbre11
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379875 5226175)
+reference    If
+
+000000... a790d1... 000000... e44ebc...   A  ArbreAlignementPCRS/M23_Arbre10
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379875 5226185)
+reference    Peuplier
+
+a790d1... a790d1... 60e009... 00527b...   M  ArbreAlignementPCRS/M31_Arbre10
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 83c711... 3d51c5...   M  ArbreAlignementPCRS/M31_Arbre11
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 9df6cf... 36d177...   M  ArbreAlignementPCRS/M13_Arbre09
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... df4680... 437bb6...   M  ArbreAlignementPCRS/M13_Arbre08
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 583e4f... 653f29...   M  ArbreAlignementPCRS/M13_Arbre01
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 7ecf44... 62a3ae...   M  ArbreAlignementPCRS/M13_Arbre03
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... cb7ad0... d7852f...   M  ArbreAlignementPCRS/M13_Arbre02
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 8a60f5... 909add...   M  ArbreAlignementPCRS/M13_Arbre05
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 77e20f... 7ecfbd...   M  ArbreAlignementPCRS/M13_Arbre04
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... e0ac8b... a79ef1...   M  ArbreAlignementPCRS/M13_Arbre07
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... da5626... 029d77...   M  ArbreAlignementPCRS/M13_Arbre06
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... d7aa32... 4a0602...   M  ArbreAlignementPCRS/M31_Arbre09
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 13956f... 3ff9d1...   M  ArbreAlignementPCRS/M31_Arbre08
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 19d614... 9fa96d...   M  ArbreAlignementPCRS/M31_Arbre01
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 78357a... 713026...   M  ArbreAlignementPCRS/M31_Arbre03
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... d28728... 895cdf...   M  ArbreAlignementPCRS/M31_Arbre02
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 01109f... a1cae6...   M  ArbreAlignementPCRS/M31_Arbre05
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... c137fa... 408421...   M  ArbreAlignementPCRS/M31_Arbre04
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... f7eaf5... af0e0a...   M  ArbreAlignementPCRS/M31_Arbre07
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 5edce7... 279643...   M  ArbreAlignementPCRS/M31_Arbre06
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+000000... a790d1... 000000... 9fe327...   A  ArbreAlignementPCRS/M14_Arbre08
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379965 5226285)
+reference    Palmier
+
+000000... a790d1... 000000... c1bf82...   A  ArbreAlignementPCRS/M14_Arbre09
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380015 5226295)
+reference    Poirier
+
+000000... a790d1... 000000... 290586...   A  ArbreAlignementPCRS/M14_Arbre06
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379960 5226240)
+reference    Bambou
+
+000000... a790d1... 000000... de7664...   A  ArbreAlignementPCRS/M14_Arbre07
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379965 5226295)
+reference    Noyer
+
+000000... a790d1... 000000... d2c622...   A  ArbreAlignementPCRS/M14_Arbre04
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379965 5226205)
+reference    Teck
+
+000000... a790d1... 000000... fa2481...   A  ArbreAlignementPCRS/M14_Arbre05
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379950 5226230)
+reference    Sequoia
+
+000000... a790d1... 000000... dc7d6e...   A  ArbreAlignementPCRS/M14_Arbre02
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380015 5226205)
+reference    Mélèze
+
+000000... a790d1... 000000... 06d33b...   A  ArbreAlignementPCRS/M14_Arbre03
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380010 5226220)
+reference    Pêcher
+
+000000... a790d1... 000000... c43949...   A  ArbreAlignementPCRS/M14_Arbre01
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380050 5226285)
+reference    Chêne
+
+000000... a790d1... 000000... a8be74...   A  ArbreAlignementPCRS/M14_Arbre11
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380015 5226275)
+reference    If
+
+000000... a790d1... 000000... 23046e...   A  ArbreAlignementPCRS/M14_Arbre10
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1380015 5226285)
+reference    Peuplier
+
+000000... a790d1... 000000... 1af1e1...   A  ArbreAlignementPCRS/M41_Arbre06
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379540 5225960)
+reference    Tremble
+
+000000... a790d1... 000000... 028746...   A  ArbreAlignementPCRS/M41_Arbre07
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379545 5225905)
+reference    Charme
+
+000000... a790d1... 000000... d35d9e...   A  ArbreAlignementPCRS/M41_Arbre04
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379545 5225995)
+reference    Ipé
+
+000000... a790d1... 000000... 2d048e...   A  ArbreAlignementPCRS/M41_Arbre05
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379530 5225970)
+reference    Aubépine
+
+000000... a790d1... 000000... dfde67...   A  ArbreAlignementPCRS/M41_Arbre02
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379595 5225995)
+reference    Tilleul
+
+000000... a790d1... 000000... 81a48c...   A  ArbreAlignementPCRS/M41_Arbre03
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379590 5225980)
+reference    Néflier
+
+000000... a790d1... 000000... 0f43dc...   A  ArbreAlignementPCRS/M41_Arbre01
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379630 5225915)
+reference    Châtaignier
+
+000000... a790d1... 000000... df824b...   A  ArbreAlignementPCRS/M41_Arbre08
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379545 5225915)
+reference    Frêne
+
+000000... a790d1... 000000... d73687...   A  ArbreAlignementPCRS/M41_Arbre09
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379595 5225905)
+reference    Cerisier
+
+000000... a790d1... 000000... 8d7e0d...   A  ArbreAlignementPCRS/M33_Arbre10
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379875 5226015)
+reference    Orme
+
+000000... a790d1... 000000... 4c927a...   A  ArbreAlignementPCRS/M33_Arbre11
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379875 5226025)
+reference    Pin
+
+000000... a790d1... 000000... 51ad61...   A  ArbreAlignementPCRS/M41_Arbre11
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379595 5225925)
+reference    Pin
+
+000000... a790d1... 000000... f066c1...   A  ArbreAlignementPCRS/M41_Arbre10
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379595 5225915)
+reference    Orme
+
+000000... a790d1... 000000... 4c380e...   A  ArbreAlignementPCRS/M33_Arbre09
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379875 5226005)
+reference    Cerisier
+
+000000... a790d1... 000000... 8c57c0...   A  ArbreAlignementPCRS/M33_Arbre08
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379825 5226015)
+reference    Frêne
+
+000000... a790d1... 000000... d603fd...   A  ArbreAlignementPCRS/M33_Arbre03
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379870 5226080)
+reference    Néflier
+
+000000... a790d1... 000000... 383c4d...   A  ArbreAlignementPCRS/M33_Arbre02
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379875 5226095)
+reference    Tilleul
+
+000000... a790d1... 000000... 2fd08f...   A  ArbreAlignementPCRS/M33_Arbre01
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379910 5226015)
+reference    Châtaignier
+
+000000... a790d1... 000000... 2e1adc...   A  ArbreAlignementPCRS/M33_Arbre07
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379825 5226005)
+reference    Charme
+
+000000... a790d1... 000000... 669be7...   A  ArbreAlignementPCRS/M33_Arbre06
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379820 5226060)
+reference    Tremble
+
+000000... a790d1... 000000... d5fcf7...   A  ArbreAlignementPCRS/M33_Arbre05
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379810 5226070)
+reference    Aubépine
+
+000000... a790d1... 000000... 126286...   A  ArbreAlignementPCRS/M33_Arbre04
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379825 5226095)
+reference    Ipé
+
+a790d1... a790d1... 05cbf5... a3c391...   M  ArbreAlignementPCRS/M22_Arbre10
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 089d78... 1a3b11...   M  ArbreAlignementPCRS/M22_Arbre11
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+000000... a790d1... 000000... 2e0203...   A  ArbreAlignementPCRS/M51_Arbre10
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379545 5225815)
+reference    Épicéa
+
+000000... a790d1... 000000... d54829...   A  ArbreAlignementPCRS/M51_Arbre11
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379545 5225825)
+reference    Eucalyptus
+
+a790d1... a790d1... 413a47... 5cb3ad...   M  ArbreAlignementPCRS/M22_Arbre03
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 2c780d... 5153f2...   M  ArbreAlignementPCRS/M22_Arbre02
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... d88901... 5551f2...   M  ArbreAlignementPCRS/M22_Arbre01
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 0a165d... 85a302...   M  ArbreAlignementPCRS/M22_Arbre07
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 9723f2... 4e71d2...   M  ArbreAlignementPCRS/M22_Arbre06
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... be139c... b4e4d9...   M  ArbreAlignementPCRS/M22_Arbre05
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... f385bf... 22397a...   M  ArbreAlignementPCRS/M22_Arbre04
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 76a52e... 444a4c...   M  ArbreAlignementPCRS/M22_Arbre09
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+a790d1... a790d1... 14db82... 203c96...   M  ArbreAlignementPCRS/M22_Arbre08
+calque: PCRS_VEGETAL_VLR_3PREFIXE_ARBRE -> PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+
+000000... a790d1... 000000... 776fcd...   A  ArbreAlignementPCRS/M51_Arbre09
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379545 5225805)
+reference    Pommier
+
+000000... a790d1... 000000... 22dc4c...   A  ArbreAlignementPCRS/M51_Arbre08
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379595 5225815)
+reference    Érable
+
+000000... a790d1... 000000... f2b6c9...   A  ArbreAlignementPCRS/M51_Arbre07
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379595 5225805)
+reference    Sorbier
+
+000000... a790d1... 000000... 2d929b...   A  ArbreAlignementPCRS/M51_Arbre06
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379600 5225860)
+reference    Saule
+
+000000... a790d1... 000000... 88972a...   A  ArbreAlignementPCRS/M51_Arbre05
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379610 5225870)
+reference    Platane
+
+000000... a790d1... 000000... 4b63a2...   A  ArbreAlignementPCRS/M51_Arbre04
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379595 5225895)
+reference    Ébène
+
+000000... a790d1... 000000... 523f28...   A  ArbreAlignementPCRS/M51_Arbre03
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379550 5225880)
+reference    Cormier
+
+000000... a790d1... 000000... 9c51d8...   A  ArbreAlignementPCRS/M51_Arbre02
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379545 5225895)
+reference    Cèdre
+
+000000... a790d1... 000000... ceda31...   A  ArbreAlignementPCRS/M51_Arbre01
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379510 5225815)
+reference    Bouleau
+
+000000... a790d1... 000000... 2d66b8...   A  ArbreAlignementPCRS/M32_Arbre08
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379735 5226085)
+reference    Douglas
+
+000000... a790d1... 000000... 97bdee...   A  ArbreAlignementPCRS/M32_Arbre09
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379685 5226095)
+reference    Marronnier
+
+000000... a790d1... 000000... 7da685...   A  ArbreAlignementPCRS/M32_Arbre02
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379685 5226005)
+reference    Hêtre
+
+000000... a790d1... 000000... 79eff9...   A  ArbreAlignementPCRS/M32_Arbre03
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379690 5226020)
+reference    Prunier
+
+000000... a790d1... 000000... 77eae7...   A  ArbreAlignementPCRS/M32_Arbre01
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379650 5226085)
+reference    Sapin
+
+000000... a790d1... 000000... 118d0d...   A  ArbreAlignementPCRS/M32_Arbre06
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379740 5226040)
+reference    Aulne
+
+000000... a790d1... 000000... e57a6b...   A  ArbreAlignementPCRS/M32_Arbre07
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379735 5226095)
+reference    Merisier
+
+000000... a790d1... 000000... 5e8d8a...   A  ArbreAlignementPCRS/M32_Arbre04
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379735 5226005)
+reference    Balsa
+
+000000... a790d1... 000000... 2544a4...   A  ArbreAlignementPCRS/M32_Arbre05
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379750 5226030)
+reference    Houx
+
+000000... a790d1... 000000... b15672...   A  ArbreAlignementPCRS/M32_Arbre11
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379685 5226075)
+reference    Robinier
+
+000000... a790d1... 000000... 891661...   A  ArbreAlignementPCRS/M32_Arbre10
+thematique    06
+calque    PCRS_VEGETAL_CDA_ARBREALIGNEMENT
+qualiteCategorisation    01
+precisionPlanimetrique    040
+precisionAltimetrique    999
+utilisableCotation    01
+geometrie    POINT (1379685 5226085)
+reference    Noyer
+
+c3736a... 000000... 9f32a0... 000000...   R  AffleurantSymbolePCRS/M13_AffleurantSymbole01
+c3736a... 000000... 930991... 000000...   R  AffleurantSymbolePCRS/M13_AffleurantSymbole02
+c3736a... 000000... b724ef... 000000...   R  AffleurantSymbolePCRS/M13_AffleurantSymbole03
+c3736a... 000000... 24f3e5... 000000...   R  AffleurantSymbolePCRS/M13_AffleurantSymbole04
+c3736a... 000000... e26b19... 000000...   R  AffleurantSymbolePCRS/M13_AffleurantSymbole05
+000000... 79f1ac... 000000... 1ce2c0...   A  MurPCRS/M33_Mur06
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379870 5226020, 1379870 5226030, 1379840 5226030, 1379830 5226020)
+typeMur    
+
+000000... 79f1ac... 000000... f44daf...   A  MurPCRS/M33_Mur05
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5226030, 1379790 5226030, 1379790 5226040)
+typeMur    
+
+000000... 79f1ac... 000000... 21fd1a...   A  MurPCRS/M33_Mur04
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379790 5226060, 1379780 5226070)
+typeMur    
+
+000000... 79f1ac... 000000... ca60ab...   A  MurPCRS/M33_Mur03
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379830 5226090, 1379840 5226080, 1379860 5226080, 1379870 5226090)
+typeMur    
+
+000000... 79f1ac... 000000... d7e1fd...   A  MurPCRS/M33_Mur02
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379920 5226070, 1379910 5226060)
+typeMur    
+
+000000... 79f1ac... 000000... 706c4a...   A  MurPCRS/M33_Mur01
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379900 5226040, 1379910 5226030, 1379920 5226030)
+typeMur    
+
+79f1ac... 79f1ac... 1fa993... 228e93...   M  MurPCRS/M51_Mur03
+calque: PCRS_CLOTURE_SDE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 1dd5ab... c2eb75...   M  MurPCRS/M51_Mur02
+calque: PCRS_CLOTURE_SDE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... acb4d6... 0979a3...   M  MurPCRS/M51_Mur01
+calque: PCRS_CLOTURE_SDE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 92bc19... 99555a...   M  MurPCRS/M51_Mur06
+calque: PCRS_CLOTURE_SDE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... d4fa21... 88284b...   M  MurPCRS/M51_Mur05
+calque: PCRS_CLOTURE_SDE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 2f8902... daebbf...   M  MurPCRS/M51_Mur04
+calque: PCRS_CLOTURE_SDE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 06a155... 507902...   M  MurPCRS/M21_Mur04
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 7b12e0... 953195...   M  MurPCRS/M21_Mur05
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 6d9218... dc5f8d...   M  MurPCRS/M21_Mur06
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... a03171... e2b560...   M  MurPCRS/M21_Mur01
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 47bf59... 9f5657...   M  MurPCRS/M21_Mur02
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 076120... 893445...   M  MurPCRS/M21_Mur03
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 487606... b72e6e...   M  MurPCRS/M12_Mur04
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 709ecd... 1971dd...   M  MurPCRS/M12_Mur05
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... cb27df... 56a763...   M  MurPCRS/M12_Mur06
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... e2bed5... c3fdee...   M  MurPCRS/M12_Mur01
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... c98e61... 4e6be2...   M  MurPCRS/M12_Mur02
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... fb0ced... 9671da...   M  MurPCRS/M12_Mur03
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 2e08d6... a9cc94...   M  MurPCRS/M14_Mur02
+calque: PCRS_CLOTURE_ERDF_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... f10eed... 2ff6e7...   M  MurPCRS/M14_Mur03
+calque: PCRS_CLOTURE_ERDF_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 4351dd... 043150...   M  MurPCRS/M14_Mur01
+calque: PCRS_CLOTURE_ERDF_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... c5df7f... ccb4b1...   M  MurPCRS/M14_Mur06
+calque: PCRS_CLOTURE_ERDF_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 8693f4... 41e2d3...   M  MurPCRS/M14_Mur04
+calque: PCRS_CLOTURE_ERDF_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 86ca37... 5b8bbb...   M  MurPCRS/M14_Mur05
+calque: PCRS_CLOTURE_ERDF_MUR -> PCRS_CLOTURE_CDA_MUR
+
+000000... 79f1ac... 000000... 7a0b27...   A  MurPCRS/M23_Mur06
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379830 5226180, 1379840 5226170, 1379870 5226170, 1379870 5226180)
+typeMur    
+
+000000... 79f1ac... 000000... dcae8e...   A  MurPCRS/M23_Mur04
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5226130, 1379790 5226140)
+typeMur    
+
+000000... 79f1ac... 000000... 0c26ad...   A  MurPCRS/M23_Mur05
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379790 5226160, 1379790 5226170, 1379780 5226170)
+typeMur    
+
+000000... 79f1ac... 000000... 65085c...   A  MurPCRS/M23_Mur02
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379910 5226140, 1379920 5226130)
+typeMur    
+
+000000... 79f1ac... 000000... ec06d4...   A  MurPCRS/M23_Mur03
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379870 5226110, 1379860 5226120, 1379840 5226120, 1379830 5226110)
+typeMur    
+
+000000... 79f1ac... 000000... c3485e...   A  MurPCRS/M23_Mur01
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379920 5226170, 1379910 5226170, 1379900 5226160)
+typeMur    
+
+79f1ac... 79f1ac... 243ddc... 374a07...   M  MurPCRS/M31_Mur05
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 9b6c15... e43a5e...   M  MurPCRS/M31_Mur04
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... da02ba... 3f4fa1...   M  MurPCRS/M31_Mur06
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 7c662b... accf63...   M  MurPCRS/M31_Mur01
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... d02d44... 3d5cc7...   M  MurPCRS/M31_Mur03
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 2961b7... 9966cc...   M  MurPCRS/M31_Mur02
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+000000... 79f1ac... 000000... 45e4a0...   A  MurPCRS/M24_Mur01
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379920 5226130, 1379930 5226130, 1379940 5226140)
+typeMur    
+
+000000... 79f1ac... 000000... ab0cf3...   A  MurPCRS/M24_Mur03
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379970 5226190, 1379980 5226180, 1380000 5226180, 1380010 5226190)
+typeMur    
+
+000000... 79f1ac... 000000... 9ade3d...   A  MurPCRS/M24_Mur02
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379930 5226160, 1379920 5226170)
+typeMur    
+
+000000... 79f1ac... 000000... fd8eee...   A  MurPCRS/M24_Mur05
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1380050 5226140, 1380050 5226130, 1380060 5226130)
+typeMur    
+
+000000... 79f1ac... 000000... d53c58...   A  MurPCRS/M24_Mur04
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1380060 5226170, 1380050 5226160)
+typeMur    
+
+000000... 79f1ac... 000000... b4331b...   A  MurPCRS/M24_Mur06
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1380010 5226120, 1380000 5226130, 1379970 5226130, 1379970 5226120)
+typeMur    
+
+79f1ac... 79f1ac... c1da64... f49b36...   M  MurPCRS/M15_Mur03
+calque: PCRS_CLOTURE_ERDF_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 1f5ecc... 30253a...   M  MurPCRS/M15_Mur02
+calque: PCRS_CLOTURE_ERDF_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... f11bfd... 2954c7...   M  MurPCRS/M15_Mur01
+calque: PCRS_CLOTURE_ERDF_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... bdcdc0... 10f9de...   M  MurPCRS/M15_Mur06
+calque: PCRS_CLOTURE_ERDF_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 134df1... 7a8b08...   M  MurPCRS/M15_Mur05
+calque: PCRS_CLOTURE_ERDF_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 70b0c8... 660ada...   M  MurPCRS/M15_Mur04
+calque: PCRS_CLOTURE_ERDF_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 8d4561... 9c0899...   M  MurPCRS/M22_Mur06
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... b321d6... 33bd25...   M  MurPCRS/M22_Mur05
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... a764de... cfd939...   M  MurPCRS/M22_Mur04
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... d66f34... 4f45f4...   M  MurPCRS/M22_Mur03
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... ffd38a... e7af4b...   M  MurPCRS/M22_Mur02
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 4746cc... 56121b...   M  MurPCRS/M22_Mur01
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+000000... 79f1ac... 000000... 67327f...   A  MurPCRS/M42_Mur01
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379660 5225960, 1379650 5225970, 1379640 5225970)
+typeMur    
+
+000000... 79f1ac... 000000... 3e15e0...   A  MurPCRS/M42_Mur03
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379730 5225910, 1379720 5225920, 1379700 5225920, 1379690 5225910)
+typeMur    
+
+000000... 79f1ac... 000000... ee6b13...   A  MurPCRS/M42_Mur02
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379640 5225930, 1379650 5225940)
+typeMur    
+
+000000... 79f1ac... 000000... 71a953...   A  MurPCRS/M42_Mur05
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5225970, 1379770 5225970, 1379770 5225960)
+typeMur    
+
+000000... 79f1ac... 000000... 602168...   A  MurPCRS/M42_Mur04
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379770 5225940, 1379780 5225930)
+typeMur    
+
+000000... 79f1ac... 000000... e623e1...   A  MurPCRS/M42_Mur06
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379690 5225980, 1379690 5225970, 1379720 5225970, 1379730 5225980)
+typeMur    
+
+000000... 79f1ac... 000000... 3fc403...   A  MurPCRS/M32_Mur06
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379690 5226080, 1379690 5226070, 1379720 5226070, 1379730 5226080)
+typeMur    
+
+000000... 79f1ac... 000000... f4ddfc...   A  MurPCRS/M32_Mur04
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379770 5226040, 1379780 5226030)
+typeMur    
+
+000000... 79f1ac... 000000... 8fb1d4...   A  MurPCRS/M32_Mur05
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5226070, 1379770 5226070, 1379770 5226060)
+typeMur    
+
+000000... 79f1ac... 000000... cded39...   A  MurPCRS/M32_Mur02
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379640 5226030, 1379650 5226040)
+typeMur    
+
+000000... 79f1ac... 000000... 32cd64...   A  MurPCRS/M32_Mur03
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379730 5226010, 1379720 5226020, 1379700 5226020, 1379690 5226010)
+typeMur    
+
+000000... 79f1ac... 000000... d6270b...   A  MurPCRS/M32_Mur01
+thematique    05
+calque    PCRS_CLOTURE_CDA_MUR
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379660 5226060, 1379650 5226070, 1379640 5226070)
+typeMur    
+
+79f1ac... 79f1ac... 014df0... 583d3f...   M  MurPCRS/M13_Mur05
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... d9ec1e... f22acd...   M  MurPCRS/M13_Mur04
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 43b4d5... f02ee1...   M  MurPCRS/M13_Mur06
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 04494e... 7f53a0...   M  MurPCRS/M13_Mur01
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... a66016... 44c6e4...   M  MurPCRS/M13_Mur03
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 217fa7... 621973...   M  MurPCRS/M13_Mur02
+calque: PCRS_CLOTURE_VLR_3PREFIXE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... cadad6... b2b975...   M  MurPCRS/M41_Mur02
+calque: PCRS_CLOTURE_SDE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 055a2a... e5c4a6...   M  MurPCRS/M41_Mur03
+calque: PCRS_CLOTURE_SDE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... c30811... e979ba...   M  MurPCRS/M41_Mur01
+calque: PCRS_CLOTURE_SDE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 00c65d... e25c88...   M  MurPCRS/M41_Mur06
+calque: PCRS_CLOTURE_SDE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... 7675a0... bae29e...   M  MurPCRS/M41_Mur04
+calque: PCRS_CLOTURE_SDE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+79f1ac... 79f1ac... c7f5af... c788a7...   M  MurPCRS/M41_Mur05
+calque: PCRS_CLOTURE_SDE_MUR -> PCRS_CLOTURE_CDA_MUR
+
+5c701f... 000000... 442550... 000000...   R  PointCanevasPCRS/M13_PointCanevas02
+5c701f... 000000... 91042e... 000000...   R  PointCanevasPCRS/M13_PointCanevas03
+5c701f... 000000... 317f60... 000000...   R  PointCanevasPCRS/M13_PointCanevas01
+000000... 4298b9... 000000... f45222...   A  FacadePCRS/M33_Facade08
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379870 5226000, 1379870 5226020, 1379830 5226020, 1379830 5226000)
+
+000000... 4298b9... 000000... 98122d...   A  FacadePCRS/M33_Facade01
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379920 5226010, 1379900 5226010, 1379900 5226000)
+
+000000... 4298b9... 000000... 3aa786...   A  FacadePCRS/M33_Facade03
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379900 5226100, 1379900 5226080, 1379910 5226080, 1379920 5226090)
+
+000000... 4298b9... 000000... b8ec67...   A  FacadePCRS/M33_Facade02
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379920 5226060, 1379910 5226060, 1379910 5226040, 1379920 5226040)
+
+000000... 4298b9... 000000... 941a63...   A  FacadePCRS/M33_Facade05
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5226090, 1379790 5226090, 1379800 5226100)
+
+000000... 4298b9... 000000... 55920a...   A  FacadePCRS/M33_Facade04
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379830 5226100, 1379830 5226090, 1379870 5226090, 1379870 5226100)
+
+000000... 4298b9... 000000... a799bc...   A  FacadePCRS/M33_Facade07
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379800 5226000, 1379800 5226020, 1379790 5226010, 1379780 5226010)
+
+000000... 4298b9... 000000... d47202...   A  FacadePCRS/M33_Facade06
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5226040, 1379790 5226040, 1379790 5226060, 1379780 5226060)
+
+4298b9... 4298b9... e82367... 7d4604...   M  FacadePCRS/M21_Facade08
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 8cb967... b061cd...   M  FacadePCRS/M21_Facade02
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 6e4462... f43198...   M  FacadePCRS/M21_Facade03
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... fd624c... c546ca...   M  FacadePCRS/M21_Facade01
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 99ce71... 4d754f...   M  FacadePCRS/M21_Facade06
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... f0532b... 398148...   M  FacadePCRS/M21_Facade07
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 976673... cc72b7...   M  FacadePCRS/M21_Facade04
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 3bd457... 9c293b...   M  FacadePCRS/M21_Facade05
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 53468e... 17ed92...   M  FacadePCRS/M15_Facade08
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 3dfc03... 1f506f...   M  FacadePCRS/M15_Facade05
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 14d281... 8cdcff...   M  FacadePCRS/M15_Facade04
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 997811... e8f395...   M  FacadePCRS/M15_Facade07
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 289b00... a0634f...   M  FacadePCRS/M15_Facade06
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 4df4ca... 68cf8d...   M  FacadePCRS/M15_Facade01
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 048220... 869948...   M  FacadePCRS/M15_Facade03
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 8171cf... 02f339...   M  FacadePCRS/M15_Facade02
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... e0f3db... fb161a...   M  FacadePCRS/M12_Facade02
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 68e950... e20152...   M  FacadePCRS/M12_Facade03
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... e8dc27... ef50e0...   M  FacadePCRS/M12_Facade01
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 550d75... 026d4c...   M  FacadePCRS/M12_Facade06
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... eb043e... 27e81c...   M  FacadePCRS/M12_Facade07
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... ba992a... 5c9c0a...   M  FacadePCRS/M12_Facade04
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... ceb3ee... 6e96dd...   M  FacadePCRS/M12_Facade05
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 985dd9... 1ac7c6...   M  FacadePCRS/M12_Facade08
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+000000... 4298b9... 000000... 8cda73...   A  FacadePCRS/M32_Facade01
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379640 5226090, 1379660 5226090, 1379660 5226100)
+
+000000... 4298b9... 000000... 68ad9c...   A  FacadePCRS/M32_Facade02
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379640 5226040, 1379650 5226040, 1379650 5226060, 1379640 5226060)
+
+000000... 4298b9... 000000... ec139a...   A  FacadePCRS/M32_Facade03
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379660 5226000, 1379660 5226020, 1379650 5226020, 1379640 5226010)
+
+000000... 4298b9... 000000... af9a8a...   A  FacadePCRS/M32_Facade04
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379730 5226000, 1379730 5226010, 1379690 5226010, 1379690 5226000)
+
+000000... 4298b9... 000000... 1e4517...   A  FacadePCRS/M32_Facade05
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5226010, 1379770 5226010, 1379760 5226000)
+
+000000... 4298b9... 000000... 34f1ca...   A  FacadePCRS/M32_Facade06
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5226060, 1379770 5226060, 1379770 5226040, 1379780 5226040)
+
+000000... 4298b9... 000000... db03a2...   A  FacadePCRS/M32_Facade07
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379760 5226100, 1379760 5226080, 1379770 5226090, 1379780 5226090)
+
+000000... 4298b9... 000000... 3eec04...   A  FacadePCRS/M32_Facade08
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379690 5226100, 1379690 5226080, 1379730 5226080, 1379730 5226100)
+
+000000... 4298b9... 000000... 5d4b05...   A  FacadePCRS/M24_Facade07
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1380060 5226110, 1380050 5226110, 1380040 5226120, 1380040 5226100)
+
+000000... 4298b9... 000000... 1863e1...   A  FacadePCRS/M24_Facade06
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1380060 5226160, 1380050 5226160, 1380050 5226140, 1380060 5226140)
+
+000000... 4298b9... 000000... 8c14c5...   A  FacadePCRS/M24_Facade05
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1380040 5226200, 1380050 5226190, 1380060 5226190)
+
+000000... 4298b9... 000000... d5282d...   A  FacadePCRS/M24_Facade04
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379970 5226200, 1379970 5226190, 1380010 5226190, 1380010 5226200)
+
+000000... 4298b9... 000000... d8e20d...   A  FacadePCRS/M24_Facade03
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379920 5226190, 1379930 5226180, 1379940 5226180, 1379940 5226200)
+
+000000... 4298b9... 000000... d3da17...   A  FacadePCRS/M24_Facade02
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379920 5226140, 1379930 5226140, 1379930 5226160, 1379920 5226160)
+
+000000... 4298b9... 000000... eef7a3...   A  FacadePCRS/M24_Facade01
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379940 5226100, 1379940 5226110, 1379920 5226110)
+
+000000... 4298b9... 000000... a6e10b...   A  FacadePCRS/M24_Facade08
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1380010 5226100, 1380010 5226120, 1379970 5226120, 1379970 5226100)
+
+000000... 4298b9... 000000... d30dfe...   A  FacadePCRS/M23_Facade08
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379830 5226200, 1379830 5226180, 1379870 5226180, 1379870 5226200)
+
+000000... 4298b9... 000000... b4eff7...   A  FacadePCRS/M23_Facade01
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379900 5226200, 1379900 5226190, 1379920 5226190)
+
+000000... 4298b9... 000000... d8bb3a...   A  FacadePCRS/M23_Facade02
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379920 5226160, 1379910 5226160, 1379910 5226140, 1379920 5226140)
+
+000000... 4298b9... 000000... 8accfe...   A  FacadePCRS/M23_Facade03
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379920 5226110, 1379910 5226120, 1379900 5226120, 1379900 5226100)
+
+000000... 4298b9... 000000... e86d31...   A  FacadePCRS/M23_Facade04
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379870 5226100, 1379870 5226110, 1379830 5226110, 1379830 5226100)
+
+000000... 4298b9... 000000... 2b3366...   A  FacadePCRS/M23_Facade05
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379800 5226100, 1379790 5226110, 1379780 5226110)
+
+000000... 4298b9... 000000... 71483e...   A  FacadePCRS/M23_Facade06
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5226140, 1379790 5226140, 1379790 5226160, 1379780 5226160)
+
+000000... 4298b9... 000000... 27f576...   A  FacadePCRS/M23_Facade07
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5226190, 1379790 5226190, 1379800 5226180, 1379800 5226200)
+
+4298b9... 4298b9... da850f... 17ba34...   M  FacadePCRS/M51_Facade08
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 6d2b01... c92407...   M  FacadePCRS/M51_Facade05
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 916a11... 0cd19f...   M  FacadePCRS/M51_Facade04
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... d746e6... 326737...   M  FacadePCRS/M51_Facade07
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 6b64f6... 3a80f7...   M  FacadePCRS/M51_Facade06
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 61fead... e7bbd8...   M  FacadePCRS/M51_Facade01
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 81ab5f... 9aa670...   M  FacadePCRS/M51_Facade03
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... d3cf8b... f02032...   M  FacadePCRS/M51_Facade02
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+000000... 4298b9... 000000... 01bd57...   A  FacadePCRS/M42_Facade07
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379760 5226000, 1379760 5225980, 1379770 5225990, 1379780 5225990)
+
+000000... 4298b9... 000000... 79787d...   A  FacadePCRS/M42_Facade06
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5225960, 1379770 5225960, 1379770 5225940, 1379780 5225940)
+
+000000... 4298b9... 000000... 8eb7cd...   A  FacadePCRS/M42_Facade05
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379780 5225910, 1379770 5225910, 1379760 5225900)
+
+000000... 4298b9... 000000... 22660f...   A  FacadePCRS/M42_Facade04
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379730 5225900, 1379730 5225910, 1379690 5225910, 1379690 5225900)
+
+000000... 4298b9... 000000... 0e3c38...   A  FacadePCRS/M42_Facade03
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379660 5225900, 1379660 5225920, 1379650 5225920, 1379640 5225910)
+
+000000... 4298b9... 000000... 9f2721...   A  FacadePCRS/M42_Facade02
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379640 5225940, 1379650 5225940, 1379650 5225960, 1379640 5225960)
+
+000000... 4298b9... 000000... 5b1cca...   A  FacadePCRS/M42_Facade01
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379640 5225990, 1379660 5225990, 1379660 5226000)
+
+000000... 4298b9... 000000... 8773d4...   A  FacadePCRS/M42_Facade08
+thematique    02
+calque    PCRS_BATI_CDA_FACADE
+qualiteCategorisation    01
+precisionPlanimetrique    010
+precisionAltimetrique    010
+utilisableCotation    02
+geometrie    LINESTRING (1379690 5226000, 1379690 5225980, 1379730 5225980, 1379730 5226000)
+
+4298b9... 4298b9... 218256... 50a779...   M  FacadePCRS/M14_Facade04
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 0cbbbb... 4530cc...   M  FacadePCRS/M14_Facade05
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... fb220c... b0fc7b...   M  FacadePCRS/M14_Facade06
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... b49ac1... 23ab2d...   M  FacadePCRS/M14_Facade07
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... f68a95... 3dba87...   M  FacadePCRS/M14_Facade01
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 9fb898... 4bfb85...   M  FacadePCRS/M14_Facade02
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... c4c7fd... bdabdd...   M  FacadePCRS/M14_Facade03
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 5358f2... b077b4...   M  FacadePCRS/M14_Facade08
+calque: PCRS_BATI_ERDF_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 76f8e3... d6318b...   M  FacadePCRS/M41_Facade08
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 02260e... f2e5a3...   M  FacadePCRS/M41_Facade04
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 1bb412... 573373...   M  FacadePCRS/M41_Facade05
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... d2e011... 269a0a...   M  FacadePCRS/M41_Facade06
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... fc7a15... 9dcbba...   M  FacadePCRS/M41_Facade07
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 3f4d6c... 7894a2...   M  FacadePCRS/M41_Facade01
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 45923c... c11b36...   M  FacadePCRS/M41_Facade02
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 721f59... 2112eb...   M  FacadePCRS/M41_Facade03
+calque: PCRS_BATI_SDE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 337fea... 1ef296...   M  FacadePCRS/M31_Facade08
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 7c7598... b52c9d...   M  FacadePCRS/M31_Facade03
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 1deff9... c14758...   M  FacadePCRS/M31_Facade02
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 793363... 65b465...   M  FacadePCRS/M31_Facade01
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 21fdc3... 036f5a...   M  FacadePCRS/M31_Facade07
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 6654a3... db4062...   M  FacadePCRS/M31_Facade06
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 9b2d59... a7186a...   M  FacadePCRS/M31_Facade05
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 1b8db2... ae8fbd...   M  FacadePCRS/M31_Facade04
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 408678... 27c020...   M  FacadePCRS/M13_Facade08
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 743647... aac6d6...   M  FacadePCRS/M13_Facade03
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... c72821... 840707...   M  FacadePCRS/M13_Facade02
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 97fc52... 83b3e0...   M  FacadePCRS/M13_Facade01
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... d02ee7... 1e22bf...   M  FacadePCRS/M13_Facade07
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... d1a578... 6ef329...   M  FacadePCRS/M13_Facade06
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 94a97c... a27e7a...   M  FacadePCRS/M13_Facade05
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... a3763b... aad272...   M  FacadePCRS/M13_Facade04
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 3189dd... 5ff201...   M  FacadePCRS/M22_Facade01
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... d11477... 075133...   M  FacadePCRS/M22_Facade03
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 841c56... 3a2269...   M  FacadePCRS/M22_Facade02
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 8aa7ba... a4ada1...   M  FacadePCRS/M22_Facade05
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 7b604e... 2264e1...   M  FacadePCRS/M22_Facade04
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 2577cf... a8b4b4...   M  FacadePCRS/M22_Facade07
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 5a0428... 10b3bd...   M  FacadePCRS/M22_Facade06
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
+4298b9... 4298b9... 815172... 681288...   M  FacadePCRS/M22_Facade08
+calque: PCRS_BATI_VLR_3PREFIXE_FACADE -> PCRS_BATI_CDA_FACADE
+
