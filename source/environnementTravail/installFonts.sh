@@ -44,18 +44,27 @@ echo ""
 echo "#-----------------------------------------------"
 echo "# Téléchargement des fichiers de fonts"
 echo "#"
-echo "apt-get install git"
+echo "# apt-get install git"
+echo "sudo aptitude install git"
+      sudo aptitude install git
 echo "git clone https://github.com/powerline/fonts"
+      git clone https://github.com/powerline/fonts
 echo "cd fonts"
+      cd fonts
 echo "./install.sh"
+      ./install.sh
+echo "cd .."
+      cd ..
 echo "#"
 echo "# Enregistrement de ces nouvelles fontes / polices"
 echo "#"
 echo "fc-cache -vf ~/.fonts/"
+      fc-cache -vf ~/.fonts/
 echo "#"
 echo "# Test d'une fonte/police dans un terminal"
 echo "#"
 echo 'echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"'
+      echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
 echo "#"
 echo "# Installation supplementaire 1"
 echo "#"

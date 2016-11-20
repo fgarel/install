@@ -9,9 +9,11 @@
 echo "# 4ème Partie : zsh et antigen"
 echo "###############################################"
 echo "# Affichage du shell courant"
-echo $SHELL
+echo "echo $SHELL"
+      echo $SHELL
 echo "# Installation de zsh-antigen"
-sudo apt-get install zsh-antigen
+echo "sudo aptitude install zsh-antigen"
+      sudo aptitude install zsh-antigen
 
 # Liste des shells disponibles
 #-----------------------------------------------
@@ -22,8 +24,10 @@ sudo apt-get install zsh-antigen
 # https://wiki.archlinux.org/index.php/Zsh
 #echo "/usr/bin/zsh" | chsh
 echo "# Changement du shell courant"
-sudo chsh -s /bin/zsh root
-sudo chsh -s /bin/zsh fred
+echo "sudo chsh -s /bin/zsh root"
+      sudo chsh -s /bin/zsh root
+echo "sudo chsh -s /bin/zsh fred"
+      sudo chsh -s /bin/zsh fred
 
 # Création d'un fichier .zshrc
 #-----------------------------------------------
@@ -38,15 +42,19 @@ echo ""
 echo "# Utilisation d'un fichier zshrc existant"
 echo "# Recopie du fichier zshrc_antigen"
 echo "#"
-sudo rm /root/.zshrc
+echo "sudo rm /root/.zshrc"
+      sudo rm /root/.zshrc
 #cp /home/$USER/Documents/install/environnementTravail/zshrc_antigen /root/.zshrc
-sudo cp /home/fred/Documents/install/source/environnementTravail/zshrc_antigen /root/.zshrc
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/zshrc_antigen /root/.zshrc"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/zshrc_antigen /root/.zshrc
 echo ""
 echo "# Copie du fichier .zshrc vers le repertoire /home/fred de l'utilisateur fred"
 echo "#"
 #mkdir /home/fred
-sudo cp /root/.zshrc /home/fred/.zshrc
-sudo chown fred:fred /home/fred/.zshrc
+echo "sudo cp /root/.zshrc /home/fred/.zshrc"
+      sudo cp /root/.zshrc /home/fred/.zshrc
+echo "sudo chown fred:fred /home/fred/.zshrc"
+      sudo chown fred:fred /home/fred/.zshrc
 echo ""
 echo "# Copie du fichier .zshrc vers le repertoire /home/fred/.antigen/repos de l'utilisateur fred"
 echo "#"
@@ -55,14 +63,17 @@ echo "# Donc, pour eviter d'avoir à sourcer manuellement ~/.zshrc, autant place
 echo "# .zshrc au bon endroit dès le début."
 echo "# Sans ce fichier, alors le script zsh-newuser-install est executé."
 echo "#"
-sudo cp /root/.zshrc /home/fred/.antigen/repos/.zshrc
-sudo chown fred:fred /home/fred/.antigen/repos/.zshrc
+echo "sudo cp /root/.zshrc /home/fred/.antigen/repos/.zshrc"
+      sudo cp /root/.zshrc /home/fred/.antigen/repos/.zshrc
+echo "sudo chown fred:fred /home/fred/.antigen/repos/.zshrc"
+      sudo chown fred:fred /home/fred/.antigen/repos/.zshrc
 echo ""
 echo "# Changement du shell par defaut pour les futurs utilisateurs"
 echo "# Pour changer le shell des futurs utilisateurs"
 echo "# http://askubuntu.com/questions/28969/how-do-you-change-the-default-shell-for-all-users-to-bash"
 echo "#"
-sudo sed -i -e 's/DSHELL=\/bin\/bash/DSHELL=\/bin\/zsh/g' /etc/adduser.conf
+echo "sudo sed -i -e 's/DSHELL=\/bin\/bash/DSHELL=\/bin\/zsh/g' /etc/adduser.conf"
+      sudo sed -i -e 's/DSHELL=\/bin\/bash/DSHELL=\/bin\/zsh/g' /etc/adduser.conf
 echo ""
 
 
