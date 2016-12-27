@@ -14,9 +14,9 @@ echo "# http://nvie.com/posts/a-successful-git-branching-model/"
 echo "# http://danielkummer.github.io/git-flow-cheatsheet/"
 echo "# http://danielkummer.github.io/git-flow-cheatsheet/index.fr_FR.html"
 echo "#"
-echo "# sudo apt-get install git git-flow"
-sudo apt-get install git git-flow
-
+echo "sudo aptitude install git git-flow"
+      sudo aptitude install git git-flow
+echo "#"
 echo "# Création d'un fichier .gitconfig"
 echo '# git config --global user.email "frederic.garel@gmail.com"'
 echo '# git config --global user.name "Frédéric Garel"'
@@ -24,14 +24,14 @@ echo "#"
 echo "#"
 echo "# Utilisation d'un fichier .gitconfig existant"
 echo "# Recopie du fichier .gitconfig"
-echo "#"
-cp /home/fred/Documents/install/source/environnementTravail/.gitconfig /home/fred/
+echo "cp /home/fred/Documents/install/source/environnementTravail/.gitconfig /home/fred/"
+      cp /home/fred/Documents/install/source/environnementTravail/.gitconfig /home/fred/
 echo "#"
 echo "# Quelques rappels sur git"
 echo "#"
 echo "# "
 echo "#--------------------------------------------------"
-echo "# Cette documentation n'aborde donc pas le cas du clonage."
+echo "# Cette documentation n'aborde pas le cas du clonage."
 echo "# Si on clone un dépot, le dépot distant est automatiquement"
 echo "# ajouté sous le nom origin."
 echo "#"

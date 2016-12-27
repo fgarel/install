@@ -8,7 +8,7 @@
 echo "# 1ère Partie : ajout de l'utilisateur fred au groupe sudo"
 echo "###############################################"
 echo "#"
-echo "# sudo adduser fred sudo"
+echo "sudo adduser fred sudo"
+      sudo adduser fred sudo
 echo "#"
-sudo adduser fred sudo
 echo ""
