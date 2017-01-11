@@ -69,20 +69,36 @@ echo "#"
 echo "# Installation supplementaire 1"
 echo "#"
 echo "git clone https://github.com/gabrielelana/awesome-terminal-fonts"
+      git clone https://github.com/gabrielelana/awesome-terminal-fonts
 echo "./awesome-terminal-fonts/install.sh"
+      ./awesome-terminal-fonts/install.sh
 echo "#"
 echo "# Installation supplementaire 2"
 echo "#"
-echo "aptitude install ttf-mscorefonts-installer"
+echo "sudo aptitude install ttf-mscorefonts-installer"
+      sudo aptitude install ttf-mscorefonts-installer
 echo "#"
 echo "# Si le telechargement est problématique, on peut utiliser une procedure parallèle :"
 echo "# 1. Telechargement des fichiers de polices .exe dans un sous-repertoire msfonts"
-echo '#    mkdir msfonts ; cd msfonts'
+echo '#    mkdir msfonts'
+           mkdir msfonts
+echo '#    cd msfonts'
+           cd msfonts
 echo "#    cat /usr/share/package-data-downloads/ttf-mscorefonts-installer | grep Url | sed 's|Url:|wget|'"
+           cat /usr/share/package-data-downloads/ttf-mscorefonts-installer | grep Url | sed 's|Url:|wget|'
+echo "#    cat /usr/share/package-data-downloads/ttf-mscorefonts-installer | grep Url | sed 's|Url:||' | xargs wget -N -c"
+           cat /usr/share/package-data-downloads/ttf-mscorefonts-installer | grep Url | sed 's|Url:||' | xargs wget -N -c
 echo "# 2. Extraction"
 echo "#    cabextract *"
+           cabextract *
+echo '#    cd ..'
+           cd ..
 echo "# 3. Installation avec lecture du repertoire de départ"
-echo "#    dpkg-reconfigure ttf-mscorefonts-installer"
+echo "#    Information a recopier dans la reponse a la question ci dessous"
+echo "#    Répertoire contenant les polices MS (si elles ont déjà été téléchargées)"
+echo "#    /home/fred/Documents/install/source/environnementTravail/msfonts"
+echo "#    sudo dpkg-reconfigure ttf-mscorefonts-installer"
+           sudo dpkg-reconfigure ttf-mscorefonts-installer
 echo "#    Répertoire contenant les polices MS (si elles ont déjà été téléchargées)"
 echo "#    /home/fred/Documents/install/source/environnementTravail/msfonts"
 echo "#-----------------------------------------------"

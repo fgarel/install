@@ -10,9 +10,10 @@ echo "###############################################"
 echo "#"
 echo "# On installe à la fois python et pip"
 echo "#"
-echo "# sudo apt-get install python-pip"
-#sudo apt-get install python3-pip
-sudo apt-get install python-pip
+echo "# sudo apt-get install python3-pip"
+      # sudo apt-get install python3-pip
+echo "sudo apt-get install python-pip"
+      sudo apt-get install python-pip
 echo "#"
 echo "# Pré-requis avant d'installer pew : pythonz"
 echo "# Pew utilise pythonz pour installer différentes versions de python."
@@ -24,18 +25,26 @@ echo "# Ces paquets sont :"
 echo "#"
 echo "# sudo apt-get install build-essential zlib1g-dev libbz2-dev libssl-dev libreadline-dev libncurses5-dev libsqlite3-dev libgdbm-dev libdb-dev libexpat-dev libpcap-dev liblzma-dev libpcre3-dev"
 echo "#"
-sudo apt-get install build-essential \
-                     zlib1g-dev libbz2-dev \
-                     libssl-dev libreadline-dev \
-                     libncurses5-dev libsqlite3-dev \
-                     libgdbm-dev libdb-dev libexpat-dev \
-                     libpcap-dev liblzma-dev libpcre3-dev
+echo "sudo apt-get install build-essential \\"
+echo "                     zlib1g-dev libbz2-dev \\"
+echo "                     libssl-dev libreadline-dev \\"
+echo "                     libncurses5-dev libsqlite3-dev \\"
+echo "                     libgdbm-dev libdb-dev libexpat-dev \\"
+echo "                     libpcap-dev liblzma-dev libpcre3-dev"
+      sudo apt-get install build-essential \
+                           zlib1g-dev libbz2-dev \
+                           libssl-dev libreadline-dev \
+                           libncurses5-dev libsqlite3-dev \
+                           libgdbm-dev libdb-dev libexpat-dev \
+                           libpcap-dev liblzma-dev libpcre3-dev
 echo "#"
 echo "# Installation de pew"
 echo "# https://github.com/berdario/pew"
 echo "#"
-#sudo pip3 install pew
-sudo pip install pew
+echo "# sudo -H pip3 install pew"
+      # sudo -H pip3 install pew
+echo "sudo -H pip install pew"
+      sudo -H pip install pew
 echo "# http://sametmax.com/mieux-que-python-virtualenvwrapper-pew/"
 echo "#"
 echo "#"
