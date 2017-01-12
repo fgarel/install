@@ -10,10 +10,10 @@ echo "###############################################"
 echo "#"
 echo "# On installe à la fois python et pip"
 echo "#"
-echo "# sudo apt-get install python3-pip"
-      # sudo apt-get install python3-pip
-echo "sudo apt-get install python-pip"
-      sudo apt-get install python-pip
+echo "sudo apt-get install python3-pip"
+      sudo apt-get install python3-pip
+echo "# sudo apt-get install python-pip"
+      # sudo apt-get install python-pip
 echo "#"
 echo "# Pré-requis avant d'installer pew : pythonz"
 echo "# Pew utilise pythonz pour installer différentes versions de python."
@@ -41,10 +41,10 @@ echo "#"
 echo "# Installation de pew"
 echo "# https://github.com/berdario/pew"
 echo "#"
-echo "# sudo -H pip3 install pew"
-      # sudo -H pip3 install pew
-echo "sudo -H pip install pew"
-      sudo -H pip install pew
+echo "sudo -H pip3 install pew"
+      sudo -H pip3 install pew
+echo "# sudo -H pip install pew"
+      # sudo -H pip install pew
 echo "# http://sametmax.com/mieux-que-python-virtualenvwrapper-pew/"
 echo "#"
 echo "#"

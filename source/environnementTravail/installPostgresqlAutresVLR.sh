@@ -36,7 +36,7 @@ echo '# Creation des utilisateurs'
 echo '# ========================='
 
 
-listuser='Fred'
+listuser='fred'
 listdb='cadastre cadastre_complement dgaeust graphe origine osm osm_complement sandbox voirie_filaire voirie_filaire_complement' ;
 listdb='cadastre cadastre_complement dgaeust graphe origine osm_complement sandbox voirie_filaire voirie_filaire_complement' ; # pas osm
 listdb='cadastre cadastre_complement dgaeust graphe osm_complement sandbox voirie_filaire voirie_filaire_complement' ; # ni origine ni osm

@@ -45,38 +45,44 @@ echo "#"
 echo "# 2. Installation des paquets postgresql et postgis"
 echo "# -------------------------------------------------"
 echo "# ---"
-echo "sudo aptitude -y install postgresql-9.4-postgis-2.1"
-echo "# ---"
-      sudo aptitude -y install postgresql-9.4-postgis-2.1
+#echo "sudo aptitude -y install postgresql-9.4-postgis-2.1"
+#      sudo aptitude -y install postgresql-9.4-postgis-2.1
+echo "sudo aptitude -y install postgresql-9.6-postgis-2.3"
+      sudo aptitude -y install postgresql-9.6-postgis-2.3
+echo "sudo aptitude -y install postgresql-9.6-postgis-2.3-scripts"
+      sudo aptitude -y install postgresql-9.6-postgis-2.3-scripts
 echo "#"
 echo "# Installation des paquets nécessaires pour l'installation de pgcli"
-echo "# ---"
 echo "sudo apt-get install libpq-dev"
-echo "# ---"
       sudo aptitude -y install libpq-dev
+echo ""
+echo "# Installation du paquet contrib (extensions)"
+echo "sudo aptitude -y install postgresql-contrib-9.6"
+      sudo aptitude -y install postgresql-contrib-9.6
 echo "#"
-echo "# Modification de /etc/postgresql/9.4/main/postgresql.conf"
+#echo "# Modification de /etc/postgresql/9.4/main/postgresql.conf"
+echo "# Modification de /etc/postgresql/9.6/main/postgresql.conf"
 echo "#"
 echo "# ---"
 echo "sudo \\"
 echo '     sed -i -e "s|#listen_adresses = 'localhost'|listen_adresses = '*'|" \'
-echo "     /etc/postgresql/9.4/main/postgresql.conf"
+echo "     /etc/postgresql/9.6/main/postgresql.conf"
 echo "# ---"
       sudo \
            sed -i -e "s|#listen_addresses = 'localhost'|listen_addresses = '*'|" \
-           /etc/postgresql/9.4/main/postgresql.conf
+           /etc/postgresql/9.6/main/postgresql.conf
 echo "#"
 echo "#"
-echo "# Modification de /etc/postgresql/9.4/main/pg_hba.conf"
+echo "# Modification de /etc/postgresql/9.6/main/pg_hba.conf"
 echo "#"
 echo "# ---"
 echo "sudo \\"
 echo "     sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1\/32[ ]+md5/a host    all             all             10.2.10.0/24            md5' \\"
-echo "     /etc/postgresql/9.4/main/pg_hba.conf"
+echo "     /etc/postgresql/9.6/main/pg_hba.conf"
 echo "# ---"
       sudo \
            sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1\/32[ ]+md5/a host    all             all             10.2.10.0/24            md5' \
-           /etc/postgresql/9.4/main/pg_hba.conf
+           /etc/postgresql/9.6/main/pg_hba.conf
 echo "#"
 echo "#"
 echo "#"
