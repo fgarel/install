@@ -69,6 +69,14 @@ echo "mkdir ~/.vimrc.local.d 2> /dev/null"
 echo ""
 echo '" Apparence / Theme'
 echo '" Apparence / Theme' > ~/.vimrc.local.d/theme.vim
+echo '" La gestion des couleurs dans un terminal'
+echo '" La gestion des couleurs dans un terminal' >> ~/.vimrc.local.d/theme.vim
+echo '" https://github.com/neovim/neovim/wiki/FAQ#where-should-i-put-my-config-vimrc'
+echo '" https://github.com/neovim/neovim/wiki/FAQ#where-should-i-put-my-config-vimrc' >> ~/.vimrc.local.d/theme.vim
+echo '" https://gist.github.com/XVilka/8346728'
+echo '" https://gist.github.com/XVilka/8346728' >> ~/.vimrc.local.d/theme.vim
+echo '" '
+echo '" ' >> ~/.vimrc.local.d/theme.vim
 echo '" Chargment du theme molokai'
 echo '" Chargment du theme molokai' >> ~/.vimrc.local.d/theme.vim
 echo 'colorscheme molokai'
@@ -80,6 +88,10 @@ echo 'colorscheme solarized' >> ~/.vimrc.local.d/theme.vim
 echo '" Chargment du theme seoul256' >> ~/.vimrc.local.d/theme.vim
 echo 'colorscheme seoul256'
 echo 'colorscheme seoul256' >> ~/.vimrc.local.d/theme.vim
+echo 'colorscheme heroku-terminal'
+echo 'colorscheme heroku-terminal' >> ~/.vimrc.local.d/theme.vim
+echo 'colorscheme gruvbox'
+echo 'colorscheme gruvbox' >> ~/.vimrc.local.d/theme.vim
 echo ""
 echo '" Fonctions et mappages'
 echo '" Fonctions et mappages' > ~/.vimrc.local.d/functions.vim
@@ -88,11 +100,11 @@ echo '" Chargement des fonctions' >> ~/.vimrc.local.d/functions.vim
 echo '" mappage pour plantuml (?)'
 echo '" mappage pour plantuml (?)' >> ~/.vimrc.local.d/functions.vim
 echo 'nnoremap <F5> :w<CR>:make<CR>'
-echo 'nnoremap <F5> :w<CR>:make<CR>' >> ~/.vimrc.local.d/funtions.vim
+echo 'nnoremap <F5> :w<CR>:make<CR>' >> ~/.vimrc.local.d/functions.vim
 echo 'inoremap <F5> <Esc>:w<CR>:make<CR>'
-echo 'inoremap <F5> <Esc>:w<CR>:make<CR>' >> ~/.vimrc.local.d/funtions.vim
+echo 'inoremap <F5> <Esc>:w<CR>:make<CR>' >> ~/.vimrc.local.d/functions.vim
 echo 'vnoremap <F5> :<C-u>:w<CR>:make<CR>'
-echo 'vnoremap <F5> :<C-u>:w<CR>:make<CR>' >> ~/.vimrc.local.d/funtions.vim
+echo 'vnoremap <F5> :<C-u>:w<CR>:make<CR>' >> ~/.vimrc.local.d/functions.vim
 echo ""
 echo "# Fabrication du fichier ~/.vimrc.before.local"
 echo "##############################################"
@@ -123,10 +135,12 @@ echo "\"Bundle 'scrooloose/nerdcommenter'"
 echo "\"Bundle 'scrooloose/nerdcommenter'" >> ~/.vimrc.bundles.local
 echo "Bundle 'vimpager'"
 echo "Bundle 'vimpager'" >> ~/.vimrc.bundles.local
-echo "Bundle 'aklt/plantuml-syntax'"
-echo "Bundle 'aklt/plantuml-syntax'" >> ~/.vimrc.bundles.local
+echo "Bundle 'morhetz/gruvbox'"
+echo "Bundle 'morhetz/gruvbox'" >> ~/.vimrc.bundles.local
 echo "Bundle 'noahfrederick/vim-neovim-defaults'"
 echo "Bundle 'noahfrederick/vim-neovim-defaults'" >> ~/.vimrc.bundles.local
+echo "Bundle 'aklt/plantuml-syntax'"
+echo "Bundle 'aklt/plantuml-syntax'" >> ~/.vimrc.bundles.local
 echo ""
 echo ""
 echo "# Installation ou mise à jour de spf13 ?"

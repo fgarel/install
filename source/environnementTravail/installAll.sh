@@ -61,8 +61,8 @@ echo ""
 # plantuml
 echo "# 7ème Partie : plantuml"
 echo "###############################################"
-echo "sudo ./installPlantuml.sh"
-      sudo ./installPlantuml.sh
+echo "./installPlantuml.sh"
+      ./installPlantuml.sh
 echo ""
 
 # 7ème Partie : postgresql
@@ -70,14 +70,14 @@ echo ""
 # postgresql
 echo "# 7ème Partie : postgresql"
 echo "###############################################"
-echo "sudo ./installPostgresql.sh"
-      sudo ./installPostgresql.sh
-echo "sudo ./installPostgresqlGeogigGTReseaux.sh"
-      sudo ./installPostgresqlGeogigGTReseaux.sh
-echo "sudo ./installPostgresqlGeogigVLR.sh"
-      sudo ./installPostgresqlGeogigVLR.sh
-echo "sudo ./installPostgresqlAutresVLR.sh"
-      sudo ./installPostgresqlAutresVLR.sh
+echo "./installPostgresql.sh"
+      ./installPostgresql.sh
+echo "./installPostgresqlGeogigGTReseaux.sh"
+      ./installPostgresqlGeogigGTReseaux.sh
+echo "./installPostgresqlGeogigVLR.sh"
+      ./installPostgresqlGeogigVLR.sh
+echo "./installPostgresqlAutresVLR.sh"
+      ./installPostgresqlAutresVLR.sh
 echo ""
 
 # 7ème Partie : python
@@ -85,8 +85,8 @@ echo ""
 # python
 echo "# 7ème Partie : python"
 echo "###############################################"
-echo "sudo ./installPython.sh"
-      sudo ./installPython.sh
+echo "./installPython.sh"
+      ./installPython.sh
 echo ""
 
 # 7ème Partie : python mapproxy
@@ -94,8 +94,8 @@ echo ""
 # python mapproxy
 echo "# 7ème Partie : python mapproxy"
 echo "###############################################"
-echo "sudo ./installPythonMapproxy.sh"
-      sudo ./installPythonMapproxy.sh
+echo "./installPythonMapproxy.sh"
+      ./installPythonMapproxy.sh
 echo ""
 
 # 7ème Partie : python ecriture_sphinx

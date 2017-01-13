@@ -24,25 +24,32 @@ echo "# au préalable, installé quelques paquets"
 echo "#"
 echo "# Ces paquets sont :"
 echo "#"
-echo "# sudo apt-get install libjpeg-dev"
+echo "sudo apt-get install libjpeg-dev"
 echo "#"
-sudo apt-get install libjpeg-dev
+      sudo apt-get install libjpeg-dev
 echo "#"
 echo "# Installation de l'environnement virtuel"
 echo "#"
-echo "#   pew list_pythons -a | grep 3.4.3"
-pew list_pythons -a | grep 3.4.3
+echo "pew list_pythons -a | grep 3.5"
+      pew list_pythons -a | grep 3.5
 echo "#"
-echo "#   pew install 3.4.3"
-pew install 3.4.3
+echo "pew install 3.5.0"
+      pew install 3.5.0
 echo "#"
-echo "#   Nous allons démarrer l'environnement virtuel,"
-echo "#   Dans cet environnement, l'installation doit continuer avec"
+echo "# Nous allons démarrer l'environnement virtuel,"
+echo "# Dans cet environnement, l'installation doit continuer avec"
 echo "#"
-echo "#   --------------------"
-echo "#   pip install mapproxy"
-echo "#   pip install pgcli"
-echo "#   pip install pgcli --upgrade"
+echo "# --------------------"
+echo "#"
+echo '# Mise à jour de pip'
+echo 'pip install --upgrade pip'
+echo '#'
+echo '# Installation de mapproxy'
+echo "pip install mapproxy"
+echo '#'
+echo '# Installation de pgcli'
+echo "pip install pgcli"
+echo "pip install pgcli --upgrade"
 echo '#'
 echo '# Installation de mapnik'
 echo '# http://mapnik.org/pages/downloads.html'
@@ -53,12 +60,12 @@ echo '# git checkout v3.0.9'
 echo '# git submodule update --init'
 echo '# configure && make && make test'
 echo '#'
-echo "#   --------------------"
+echo "# --------------------"
 echo "#"
-echo "#   Démarrage de l'environnement virtuel"
+echo "# Démarrage de l'environnement virtuel"
 echo "#"
-echo '#   pew new -p $(pythonz locate 3.4.3) mapproxy'
-pew new -p $(pythonz locate 3.4.3) mapproxy
+echo 'pew new -p $(pythonz locate 3.5.0) mapproxy'
+      pew new -p $(pythonz locate 3.5.0) mapproxy
 echo "#"
 echo ""
 

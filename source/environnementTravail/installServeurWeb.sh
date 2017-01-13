@@ -2,9 +2,9 @@
 
 
 
-# 3ème Partie : ServeurMail
+# 3ème Partie : ServeurWeb
 ###############################################
-# Installation de ServeurMail
+# Installation de ServeurWeb
 #-----------------------------------------------
 echo "# 3ème Partie : ServeurWeb"
 echo "###############################################"

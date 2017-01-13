@@ -14,7 +14,7 @@ echo "#"
 echo "#"
 echo "# Installation de l'environnement virtuel"
 echo "#"
-echo "# Utilisation de l'utilitaire Pew"
+echo "# Utilisation de l'utilitaire pew"
 echo "pew list_pythons -a | grep 3.6"
       pew list_pythons -a | grep 3.6
 echo "pew list_pythons -a | grep 3.5"

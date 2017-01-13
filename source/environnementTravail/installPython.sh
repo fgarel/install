@@ -41,12 +41,12 @@ echo "#"
 echo "# Installation de pew"
 echo "# https://github.com/berdario/pew"
 echo "#"
+echo "sudo -H pip3 install --upgrade pip"
+      sudo -H pip3 install --upgrade pip
 echo "sudo -H pip3 install pew"
       sudo -H pip3 install pew
-echo "# sudo -H pip install pew"
-      # sudo -H pip install pew
-echo "# http://sametmax.com/mieux-que-python-virtualenvwrapper-pew/"
 echo "#"
+echo "# http://sametmax.com/mieux-que-python-virtualenvwrapper-pew/"
 echo "#"
 echo "#                                           virtualenvwrapper   pew"
 echo "#    Lister les env existant                workon              pew ls"
