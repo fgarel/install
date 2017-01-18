@@ -31,27 +31,31 @@ echo '#'
 echo '# Mise à jour de pip'
 echo 'pip install --upgrade pip'
 echo '#'
-echo '# Installation de Flask'
-echo 'pip install Flask'
+echo '# Installation de networkx'
+echo 'pip install networkx'
 echo '#'
-echo '# Installation de gunicorn'
-echo 'pip install gunicorn'
-echo "#"
+echo '# Installation de pygraphml'
+echo 'pip install pygraphml'
+echo '#'
+echo '# Installation de pygraphviz'
+echo 'pip install pygraphviz'
+echo '#'
+echo '# Installation de PyYAML'
+echo 'pip install PyYAML'
+echo '#'
+echo '# Installation de decorator'
+echo 'pip install decorator'
+echo '#'
 echo "# --------------------"
 echo '#'
 echo "# --------------------"
-echo '# Apres, avoir installé un serveur web, nginx'
-echo '# apres, avoir installé un environnemnent virtuel Flask'
-echo "# on peut maintenant lancé l'environnement virtuel en question"
-echo "# se mettre dans le bon repertoire"
-echo 'cd nginxFlask'
-echo "# lancer unicorn"
-echo 'gunicorn hello:app'
+echo '# Un exemple de projet graphe est ici'
+echo "# ~/Document/technic/source/graphe"
 echo "# --------------------"
 echo "#"
 echo "# Démarrage de l'environnement virtuel"
 echo "#"
-echo 'pew new -p $(pythonz locate 3.5.1) flask'
-      pew new -p $(pythonz locate 3.5.1) flask
+echo 'pew new -p $(pythonz locate 3.5.1) graphe'
+      pew new -p $(pythonz locate 3.5.1) graphe
 echo "#"
 echo ""
