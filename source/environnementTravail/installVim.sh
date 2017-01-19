@@ -137,8 +137,8 @@ echo "Bundle 'vimpager'"
 echo "Bundle 'vimpager'" >> ~/.vimrc.bundles.local
 echo "Bundle 'morhetz/gruvbox'"
 echo "Bundle 'morhetz/gruvbox'" >> ~/.vimrc.bundles.local
-echo "Bundle 'noahfrederick/vim-neovim-defaults'"
-echo "Bundle 'noahfrederick/vim-neovim-defaults'" >> ~/.vimrc.bundles.local
+echo "\"Bundle 'noahfrederick/vim-neovim-defaults'"
+echo "\"Bundle 'noahfrederick/vim-neovim-defaults'" >> ~/.vimrc.bundles.local
 echo "Bundle 'aklt/plantuml-syntax'"
 echo "Bundle 'aklt/plantuml-syntax'" >> ~/.vimrc.bundles.local
 echo ""

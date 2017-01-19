@@ -1,6 +1,12 @@
 #!/bin/sh
 
+# ubuntu
+export VERSION_POSTGRESQL="9.6"
+export VERSION_POSTGIS="2.3"
 
+# debian
+export VERSION_POSTGRESQL="9.4"
+export VERSION_POSTGIS="2.1"
 
 # 7ème Partie : Installation de postgresql et postgis
 #####################################################
@@ -47,42 +53,49 @@ echo "# -------------------------------------------------"
 echo "# ---"
 #echo "sudo aptitude -y install postgresql-9.4-postgis-2.1"
 #      sudo aptitude -y install postgresql-9.4-postgis-2.1
-echo "sudo aptitude -y install postgresql-9.6-postgis-2.3"
-      sudo aptitude -y install postgresql-9.6-postgis-2.3
-echo "sudo aptitude -y install postgresql-9.6-postgis-2.3-scripts"
-      sudo aptitude -y install postgresql-9.6-postgis-2.3-scripts
+#echo "sudo aptitude -y install postgresql-9.6-postgis-2.3"
+#      sudo aptitude -y install postgresql-9.6-postgis-2.3
+#echo "sudo aptitude -y install postgresql-9.6-postgis-2.3-scripts"
+#      sudo aptitude -y install postgresql-9.6-postgis-2.3-scripts
+echo "sudo aptitude -y install postgresql-$VERSION_POSTGRESQL-postgis-$VERSION_POSTGIS"
+      sudo aptitude -y install postgresql-$VERSION_POSTGRESQL-postgis-$VERSION_POSTGIS
+echo "sudo aptitude -y install postgresql-$VERSION_POSTGRESQL-postgis-$VERSION_POSTGIS-scripts"
+      sudo aptitude -y install postgresql-$VERSION_POSTGRESQL-postgis-$VERSION_POSTGIS-scripts
 echo "#"
 echo "# Installation des paquets nécessaires pour l'installation de pgcli"
 echo "sudo apt-get install libpq-dev"
       sudo aptitude -y install libpq-dev
 echo ""
 echo "# Installation du paquet contrib (extensions)"
-echo "sudo aptitude -y install postgresql-contrib-9.6"
-      sudo aptitude -y install postgresql-contrib-9.6
+#echo "sudo aptitude -y install postgresql-contrib-9.6"
+#      sudo aptitude -y install postgresql-contrib-9.6
+echo "sudo aptitude -y install postgresql-contrib-$VERSION_POSTGRESQL"
+      sudo aptitude -y install postgresql-contrib-$VERSION_POSTGRESQL
 echo "#"
 #echo "# Modification de /etc/postgresql/9.4/main/postgresql.conf"
-echo "# Modification de /etc/postgresql/9.6/main/postgresql.conf"
+#echo "# Modification de /etc/postgresql/9.6/main/postgresql.conf"
+echo "# Modification de /etc/postgresql/$VERSION_POSTGRESQL/main/postgresql.conf"
 echo "#"
 echo "# ---"
 echo "sudo \\"
 echo '     sed -i -e "s|#listen_adresses = 'localhost'|listen_adresses = '*'|" \'
-echo "     /etc/postgresql/9.6/main/postgresql.conf"
+echo "     /etc/postgresql/$VERSION_POSTGRESQL/main/postgresql.conf"
 echo "# ---"
       sudo \
            sed -i -e "s|#listen_addresses = 'localhost'|listen_addresses = '*'|" \
-           /etc/postgresql/9.6/main/postgresql.conf
+           /etc/postgresql/$VERSION_POSTGRESQL/main/postgresql.conf
 echo "#"
 echo "#"
-echo "# Modification de /etc/postgresql/9.6/main/pg_hba.conf"
+echo "# Modification de /etc/postgresql/$VERSION_POSTGRESQL/main/pg_hba.conf"
 echo "#"
 echo "# ---"
 echo "sudo \\"
 echo "     sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1\/32[ ]+md5/a host    all             all             10.2.10.0/24            md5' \\"
-echo "     /etc/postgresql/9.6/main/pg_hba.conf"
+echo "     /etc/postgresql/$VERSION_POSTGRESQL/main/pg_hba.conf"
 echo "# ---"
       sudo \
            sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1\/32[ ]+md5/a host    all             all             10.2.10.0/24            md5' \
-           /etc/postgresql/9.6/main/pg_hba.conf
+           /etc/postgresql/$VERSION_POSTGRESQL/main/pg_hba.conf
 echo "#"
 echo "#"
 echo "#"

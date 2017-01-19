@@ -23,15 +23,15 @@ echo "# "
 echo "# Cherchons à connaitre la version de python qui"
 echo "# correspond au paquet python3-dev"
 echo "#"
-echo "# aptitude show python3-dev | grep Version"
-        aptitude show python3-dev | grep Version
+echo "aptitude show python3-dev | grep Version"
+      aptitude show python3-dev | grep Version
 echo "#"
 echo "# Recherche et installation de la version de python utilisée par pew"
-echo "#   pew list_pythons -a | grep 3.5.0"
+echo "pew list_pythons -a | grep 3.5.0"
+      pew list_pythons -a | grep 3.5.0
 echo "#"
-          pew list_pythons -a | grep 3.5.0
-echo "#   pew install 3.5.0"
-          pew install 3.5.0
+echo "pew install 3.5.0"
+      pew install 3.5.0
 echo "#"
 echo "#"
 echo "# Téléchargement du paquet pgadmin4"
@@ -39,8 +39,8 @@ echo "#"
 echo "# https://www.pgadmin.org/download/pip4.php?lang=fr_FR"
 echo "#"
 echo "#"
-echo "# wget https://ftp.postgresql.org/pub/pgadmin3/pgadmin4/v1.1/pip/pgadmin4-1.1-py3-none-any.whl"
-        wget https://ftp.postgresql.org/pub/pgadmin3/pgadmin4/v1.1/pip/pgadmin4-1.1-py3-none-any.whl
+echo "wget https://ftp.postgresql.org/pub/pgadmin3/pgadmin4/v1.1/pip/pgadmin4-1.1-py3-none-any.whl"
+      wget https://ftp.postgresql.org/pub/pgadmin3/pgadmin4/v1.1/pip/pgadmin4-1.1-py3-none-any.whl
 
 echo "#"
 echo "# Puis, on suit la doc qui est ici :"
@@ -52,10 +52,16 @@ echo "#   Nous allons démarrer l'environnement virtuel,"
 echo "#   Dans cet environnement, l'installation doit continuer avec"
 echo "#"
 echo "#   --------------------"
-echo "    sudo -H pip3 install pgadmin4-1.1-py3-none-any.whl"
-echo "    cp /home/fred/.local/share/virtualenvs/pgadmin/lib/python3.5/site-packages/pgadmin4/config.py \ "
-echo "       /home/fred/.local/share/virtualenvs/pgadmin/lib/python3.5/site-packages/pgadmin4/config-local.py"
-echo "    python /home/fred/.local/share/virtualenvs/pgadmin/lib/python3.5/site-packages/pgadmin4/pgAdmin4.py"
+echo "pip install --upgrade pip"
+echo "pip install pgadmin4-1.1-py3-none-any.whl"
+echo "cp /home/fred/.local/share/virtualenvs/pgadmin/lib/python3.5/site-packages/pgadmin4/config.py \ "
+echo "   /home/fred/.local/share/virtualenvs/pgadmin/lib/python3.5/site-packages/pgadmin4/config-local.py"
+echo "# Modification du default_server dans le fichie de configuration"
+echo "vi /home/fred/.local/share/virtualenvs/pgadmin/lib/python3.5/site-packages/pgadmin4/config.py"
+echo "DEFAULT_SERVER = 'localhost'"
+echo "DEFAULT_SERVER = 'mail.cdalr.fr'"
+echo "# Démarrage du serveur"
+echo "python /home/fred/.local/share/virtualenvs/pgadmin/lib/python3.5/site-packages/pgadmin4/pgAdmin4.py"
 echo "#   "
 echo "#   Il faut ensuite aller sur :"
 echo "#   localhost:5050"
@@ -63,7 +69,7 @@ echo "#   --------------------"
 echo "#"
 echo "#   Démarrage de l'environnement virtuel"
 echo "#"
-echo '#   pew new -p $(pythonz locate 3.5.0) pgadmin'
-          pew new -p $(pythonz locate 3.5.0) pgadmin
+echo 'pew new -p $(pythonz locate 3.5.0) pgadmin'
+      pew new -p $(pythonz locate 3.5.0) pgadmin
 echo "#"
 echo ""
