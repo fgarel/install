@@ -1,0 +1,17 @@
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name garel.eu www.garel.eu;
+
+    access_log  /var/log/nginx/access.log;
+    error_log  /var/log/nginx/error.log;
+
+    index index.html;
+
+    root /var/www/garel.eu/html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}

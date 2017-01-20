@@ -13,10 +13,12 @@ echo "#"
 echo "#"
 echo "sudo aptitude install nginx-common"
       sudo aptitude install nginx-common
-echo "sudo aptitude install nginx-core"
-      sudo aptitude install nginx-core
-echo "sudo aptitude install nginx-light"
-      sudo aptitude install nginx-light
+#echo "sudo aptitude install nginx-core"
+#      sudo aptitude install nginx-core
+#echo "sudo aptitude install nginx-light"
+#      sudo aptitude install nginx-light
+echo "sudo aptitude install nginx-full"
+      sudo aptitude install nginx-full
 echo "# sudo service nginx status"
       # sudo service nginx status
 echo "sudo service nginx stop"
@@ -52,22 +54,53 @@ echo "sudo rm /etc/nginx/sites-enabled/default"
       sudo rm /etc/nginx/sites-enabled/default
 echo "#"
 echo "# Recopie du fichier de configuration de nginx, special flask"
-echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/flask_settings /etc/nginx/sites-available/flask_settings"
-      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/flask_settings /etc/nginx/sites-available/flask_settings
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/flask_garel_eu /etc/nginx/sites-available/flask_garel_eu"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/flask_garel_eu /etc/nginx/sites-available/flask_garel_eu
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/flask_cdalr_fr /etc/nginx/sites-available/flask_cdalr_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/flask_cdalr_fr /etc/nginx/sites-available/flask_cdalr_fr
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/flask_mairie_fr /etc/nginx/sites-available/flask_mairie_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/flask_mairie_fr /etc/nginx/sites-available/flask_mairie_fr
 echo "#"
 echo "# Prise en compte de ces paramètres"
-echo "sudo ln -s /etc/nginx/sites-available/flask_settings /etc/nginx/sites-enabled/flask_settings"
-      sudo ln -s /etc/nginx/sites-available/flask_settings /etc/nginx/sites-enabled/flask_settings
+echo "sudo ln -s /etc/nginx/sites-available/flask_garel_eu /etc/nginx/sites-enabled/flask_garel_eu"
+      sudo ln -s /etc/nginx/sites-available/flask_garel_eu /etc/nginx/sites-enabled/flask_garel_eu
+echo "sudo ln -s /etc/nginx/sites-available/flask_cdalr_fr /etc/nginx/sites-enabled/flask_cdalr_fr"
+      sudo ln -s /etc/nginx/sites-available/flask_cdalr_fr /etc/nginx/sites-enabled/flask_cdalr_fr
+echo "sudo ln -s /etc/nginx/sites-available/flask_mairie_fr /etc/nginx/sites-enabled/flask_mairie_fr"
+      sudo ln -s /etc/nginx/sites-available/flask_mairie_fr /etc/nginx/sites-enabled/flask_mairie_fr
 echo ""
-echo "# Prise en compte de ces paramètres"
 echo "# Recopie du fichier de configuration de nginx, special pgadmin4"
-echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/pgadmin_settings /etc/nginx/sites-available/pgadmin_settings"
-      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/pgadmin_settings /etc/nginx/sites-available/pgadmin_settings
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/pgadmin_garel_eu /etc/nginx/sites-available/pgadmin_garel_eu"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/pgadmin_garel_eu /etc/nginx/sites-available/pgadmin_garel_eu
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/pgadmin_cdalr_fr /etc/nginx/sites-available/pgadmin_cdalr_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/pgadmin_cdalr_fr /etc/nginx/sites-available/pgadmin_cdalr_fr
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/pgadmin_mairie_fr /etc/nginx/sites-available/pgadmin_mairie_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/pgadmin_mairie_fr /etc/nginx/sites-available/pgadmin_mairie_fr
 echo "#"
 echo "# Prise en compte de ces paramètres"
-echo "sudo ln -s /etc/nginx/sites-available/pgadmin_settings /etc/nginx/sites-enabled/pgadmin_settings"
-      sudo ln -s /etc/nginx/sites-available/pgadmin_settings /etc/nginx/sites-enabled/pgadmin_settings
-echo ""
+echo "sudo ln -s /etc/nginx/sites-available/pgadmin_garel_eu /etc/nginx/sites-enabled/pgadmin_garel_eu"
+      sudo ln -s /etc/nginx/sites-available/pgadmin_garel_eu /etc/nginx/sites-enabled/pgadmin_garel_eu
+echo "sudo ln -s /etc/nginx/sites-available/pgadmin_cdalr_fr /etc/nginx/sites-enabled/pgadmin_cdalr_fr"
+      sudo ln -s /etc/nginx/sites-available/pgadmin_cdalr_fr /etc/nginx/sites-enabled/pgadmin_cdalr_fr
+echo "sudo ln -s /etc/nginx/sites-available/pgadmin_mairie_fr /etc/nginx/sites-enabled/pgadmin_mairie_fr"
+      sudo ln -s /etc/nginx/sites-available/pgadmin_mairie_fr /etc/nginx/sites-enabled/pgadmin_mairie_fr
+echo "#"
+echo "# Recopie du fichier de configuration de nginx, special www"
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/www_garel_eu /etc/nginx/sites-available/www_garel_eu"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/www_garel_eu /etc/nginx/sites-available/www_garel_eu
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/www_cdalr_fr /etc/nginx/sites-available/www_cdalr_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/www_cdalr_fr /etc/nginx/sites-available/www_cdalr_fr
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/www_mairie_fr /etc/nginx/sites-available/www_mairie_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/www_mairie_fr /etc/nginx/sites-available/www_mairie_fr
+echo "#"
+echo "# Prise en compte de ces paramètres"
+echo "sudo ln -s /etc/nginx/sites-available/www_garel_eu /etc/nginx/sites-enabled/www_garel_eu"
+      sudo ln -s /etc/nginx/sites-available/www_garel_eu /etc/nginx/sites-enabled/www_garel_eu
+echo "sudo ln -s /etc/nginx/sites-available/www_cdalr_fr /etc/nginx/sites-enabled/www_cdalr_fr"
+      sudo ln -s /etc/nginx/sites-available/www_cdalr_fr /etc/nginx/sites-enabled/www_cdalr_fr
+echo "sudo ln -s /etc/nginx/sites-available/www_mairie_fr /etc/nginx/sites-enabled/www_mairie_fr"
+      sudo ln -s /etc/nginx/sites-available/www_mairie_fr /etc/nginx/sites-enabled/www_mairie_fr
+echo "#"
 echo "# redemarrage de nginx"
 echo ""
 echo "sudo nginx -t"
