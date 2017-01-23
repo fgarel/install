@@ -28,8 +28,8 @@ echo "rm -rf geogig"
 echo "#"
 echo "# Decompression du fichier"
 echo "#"
-echo "unzip geogig-1.0.zip -d geogig"
-      unzip geogig-1.0.zip -d geogig
+echo "unzip geogig-1.0.zip -d ."
+      unzip geogig-1.0.zip -d .
 echo "#"
 echo "# Nettoyage"
 echo "#"
