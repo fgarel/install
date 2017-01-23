@@ -1,6 +1,11 @@
 #!/bin/sh
 
 echo "#"
+echo "# Installation de unzip"
+echo "#"
+echo "sudo apt-get install unzip"
+      sudo apt-get install unzip
+echo "#"
 echo "# Installation de spatialite-gui sqlitebrowser et sqlite3"
 echo "#"
 echo "sudo apt-get install spatialite-gui sqlitebrowser sqlite3"
@@ -11,12 +16,10 @@ echo "#"
 echo "# Attention : il faut peut-etre contourner le proxy..."
 echo "# environnementTravail/docksshuttle1.sh"
 echo "#"
-echo 'wget http://sourceforge.net/projects/geogig/files/latest/download \'
-echo '     -O geogig-cli-app.zip'
-      wget https://sourceforge.net/projects/geogig/files/geogig-1.0-beta1/geogig-cli-app-1.0-beta1.zip/download \
-           -O geogig-cli-app.zip
-      #wget http://sourceforge.net/projects/geogig/files/latest/download \
-      #     -O geogig-cli-app.zip
+echo "wget http://download.locationtech.org/geogig/geogig-1.0.zip \ "
+echo "     -O geogig-1.0.zip"
+      wget http://download.locationtech.org/geogig/geogig-1.0.zip \
+          -O geogig-1.0.zip
 echo "#"
 echo "# Si celui ci existe dejà, Suppression du sous-repertoire geogig"
 echo "#"
@@ -25,8 +28,13 @@ echo "rm -rf geogig"
 echo "#"
 echo "# Decompression du fichier"
 echo "#"
-echo "unzip geogig-cli-app.zip"
-      unzip geogig-cli-app.zip
+echo "unzip geogig-1.0.zip -d geogig"
+      unzip geogig-1.0.zip -d geogig
+echo "#"
+echo "# Nettoyage"
+echo "#"
+echo "rm -f geogig-1.0.zip"
+      rm -f geogig-1.0.zip
 echo "#"
 echo "# Ajout de geogig/bin dans le PATH"
 echo "#"

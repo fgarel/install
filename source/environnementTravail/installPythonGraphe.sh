@@ -20,8 +20,8 @@ echo "pew list_pythons -a | grep 3.6"
 echo "pew list_pythons -a | grep 3.5"
       pew list_pythons -a | grep 3.5
 echo "#"
-echo "pew install 3.5.1"
-      pew install 3.5.1
+echo "pew install 3.5.0"
+      pew install 3.5.0
 echo "#"
 echo "# Nous allons démarrer l'environnement virtuel,"
 echo "# Dans cet environnement, l'installation doit continuer avec"
@@ -55,7 +55,7 @@ echo "# --------------------"
 echo "#"
 echo "# Démarrage de l'environnement virtuel"
 echo "#"
-echo 'pew new -p $(pythonz locate 3.5.1) graphe'
-      pew new -p $(pythonz locate 3.5.1) graphe
+echo 'pew new -p $(pythonz locate 3.5.0) graphe'
+      pew new -p $(pythonz locate 3.5.0) graphe
 echo "#"
 echo ""
