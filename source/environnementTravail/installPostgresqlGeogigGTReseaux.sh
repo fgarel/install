@@ -36,9 +36,14 @@ echo '# ========================='
 
 
 listuser='CDA Departement DGFiP ERDF SDE SDEER Soluris VLR'
+listuser='VLR' ; # uniquement VLR
+listuser='fred carto VLR seb dsti CDA 17' ;
+listuser='fred' ; # uniquement fred
 listdb='pcrs rtge' ;
-listdb='origine sandbox' ; # uniquement origine et sandbox
-listdb='origine sandbox cda' ; # uniquement origine et sandbox
+listdb='origine sandbox' ; # origine et sandbox
+listdb='origine sandbox cda' ; # origine, sandbox et cda
+listdb='origine sandbox pcrs rtge' ; # origine, sandbox, pcrs et rtge
+listdb='pcrs' ; # pcrs
 listext='adminpack plpgsql postgis postgis_topology fuzzystrmatch hstore' ;
 
 for postgresqluser in $listuser ;

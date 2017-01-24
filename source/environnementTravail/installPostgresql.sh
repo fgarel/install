@@ -96,6 +96,9 @@ echo "# ---"
       sudo \
            sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1\/32[ ]+md5/a host    all             all             10.2.10.0/24            md5' \
            /etc/postgresql/$VERSION_POSTGRESQL/main/pg_hba.conf
+      sudo \
+           sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1\/32[ ]+md5/a host    pcrs            fred            217.112.51.3/32         md5' \
+           /etc/postgresql/$VERSION_POSTGRESQL/main/pg_hba.conf
 echo "#"
 echo "#"
 echo "#"
@@ -117,6 +120,13 @@ echo "#"
 echo "# netstat -lataupen"
       # netstat -lataupen
 echo "#"
+echo "# vi ~/.pgpass"
+echo "#"
+echo "#"
+echo "localhost:5432:*:fred:fred"
+echo "pg.cdalr.fr:5432:*:fred:fred"
+echo "#"
+echo "# chmod 600 ~/.pgpass"
 echo ""
 
 # 8ème Partie : Installation de mapnik

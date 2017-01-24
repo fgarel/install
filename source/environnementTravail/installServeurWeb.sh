@@ -101,6 +101,21 @@ echo "sudo ln -s /etc/nginx/sites-available/www_cdalr_fr /etc/nginx/sites-enable
 echo "# sudo ln -s /etc/nginx/sites-available/www_mairie_fr /etc/nginx/sites-enabled/www_mairie_fr"
       # sudo ln -s /etc/nginx/sites-available/www_mairie_fr /etc/nginx/sites-enabled/www_mairie_fr
 echo "#"
+echo "# Recopie du fichier de configuration de nginx, special geoserver"
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/geoserver_garel_eu /etc/nginx/sites-available/geoserver_garel_eu"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/geoserver_garel_eu /etc/nginx/sites-available/geoserver_garel_eu
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/geoserver_cdalr_fr /etc/nginx/sites-available/geoserver_cdalr_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/geoserver_cdalr_fr /etc/nginx/sites-available/geoserver_cdalr_fr
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/geoserver_mairie_fr /etc/nginx/sites-available/geoserver_mairie_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/geoserver_mairie_fr /etc/nginx/sites-available/geoserver_mairie_fr
+echo "#"
+echo "# Prise en compte de ces paramètres"
+echo "sudo ln -s /etc/nginx/sites-available/geoserver_garel_eu /etc/nginx/sites-enabled/geoserver_garel_eu"
+      sudo ln -s /etc/nginx/sites-available/geoserver_garel_eu /etc/nginx/sites-enabled/geoserver_garel_eu
+echo "sudo ln -s /etc/nginx/sites-available/geoserver_cdalr_fr /etc/nginx/sites-enabled/geoserver_cdalr_fr"
+      sudo ln -s /etc/nginx/sites-available/geoserver_cdalr_fr /etc/nginx/sites-enabled/geoserver_cdalr_fr
+echo "# sudo ln -s /etc/nginx/sites-available/geoserver_mairie_fr /etc/nginx/sites-enabled/geoserver_mairie_fr"
+      # sudo ln -s /etc/nginx/sites-available/geoserver_mairie_fr /etc/nginx/sites-enabled/geoserver_mairie_fr
 echo "# redemarrage de nginx"
 echo ""
 echo "sudo nginx -t"
@@ -138,4 +153,7 @@ echo "# mail.garel.eu.  A       xxx.xxx.xxx.xxx"
 echo "# *.garel.eu.     CNAME   garel.eu."
 echo "# -----------------------------------------------"
 echo "#"
+echo "# La configuration de geoserver peut-etre amelioré en suivant"
+echo "# les instructions de cette page"
+echo "# http://stackoverflow.com/questions/19866203/nginx-configuration-to-pass-site-directly-to-tomcat-webapp-with-context"
 echo "#"
