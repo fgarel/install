@@ -1,10 +1,10 @@
 -- Before Insert
 
-DELETE FROM "GestionnaireReseaux"
+DELETE FROM "Gestionnaire"
 WHERE gestionnaire = 'Communauté Agglomération La Rochelle';
 
 INSERT INTO
-  "GestionnaireReseaux" (
+  "Gestionnaire" (
     gestionnaire
   )
   VALUES (

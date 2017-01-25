@@ -10,20 +10,27 @@ echo '#####################################################'
 echo '#'
 echo '# Creation des utilisateurs et des bases pour tester geogig'
 echo '#'
-echo '#'
-echo '# Pour chacun des utilisateurs ...'
+echo '# Creation des utilisaterus :'
+#echo '#'
+#echo '# Pour chacun des utilisateurs ...'
 echo "#  - CDA"
-echo "#  - Departement"
-echo "#  - DGFiP"
-echo "#  - ERDF"
-echo "#  - SDE"
-echo "#  - SDEER"
-echo "#  - Soluris"
+#echo "#  - Departement"
+#echo "#  - DGFiP"
+#echo "#  - ERDF"
+#echo "#  - SDE"
+#echo "#  - SDEER"
+#echo "#  - Soluris"
 echo "#  - VLR"
-echo '# ... nous allons attribuer deux bases de données ...'
-echo '# - rtge'
-echo '# - pcrs'
-echo '# ... qui seront configurées avec les extensions ...'
+echo '#'
+echo '# Creation des bases :'
+echo '# - origine qui contiendra les données exemples'
+#echo '# ... nous allons attribuer deux bases de données ...'
+echo '# - geogig qui contiendra les depots geogig'
+#echo '# - rtge'
+#echo '# - pcrs'
+#echo '# ... qui seront configurées avec les extensions ...'
+echo '#'
+echo '# Ces bases seront configurées avec les extensions suivantes :'
 echo '# - adminpack'
 echo '# - postgis'
 echo '# - postgis_topology'
@@ -31,24 +38,47 @@ echo '# - fuzzystrmatch'
 echo '# - hstore'
 
 echo '#'
-echo '# Creation des utilisateurs'
-echo '# ========================='
+echo '# Creation des utilisateurs et des bases de données'
+echo '# ================================================='
 
+
+listusertodrop='fred vlr cda soluris' ;
+listdbtodrop='origine geogig' ;
 
 listuser='CDA Departement DGFiP ERDF SDE SDEER Soluris VLR'
 listuser='VLR' ; # uniquement VLR
 listuser='fred carto VLR seb dsti CDA 17' ;
 listuser='fred' ; # uniquement fred
+listuser='fred vlr cda soluris' ;
+listuser='vlr cda' ;
 listdb='pcrs rtge' ;
 listdb='origine sandbox' ; # origine et sandbox
 listdb='origine sandbox cda' ; # origine, sandbox et cda
 listdb='origine sandbox pcrs rtge' ; # origine, sandbox, pcrs et rtge
 listdb='pcrs' ; # pcrs
+listdb='origine sandbox geogig' ;
+listdb='origine geogig' ;
 listext='adminpack plpgsql postgis postgis_topology fuzzystrmatch hstore' ;
+
+for postgresqluser in $listusertodrop ;
+    do
+        for database in $listdbtodrop ;
+            do
+                echo "#" ;
+                echo '# Suppression de la base de données :' $database ;
+                sudo -u postgres \
+                     dropdb $database ;
+            done
+        echo '#' ;
+        echo '# Suppression de l utilisateur :' $postgresqluser ;
+        sudo -u postgres \
+             dropuser "$postgresqluser";
+    done
+
+
 
 for postgresqluser in $listuser ;
     do
-
         for database in $listdb ;
             do
                 echo "#" ;

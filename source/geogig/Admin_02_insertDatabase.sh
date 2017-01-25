@@ -19,44 +19,52 @@
 DBHOST=localhost
 
 echo "#"
-echo "# Création de la base origine"
-echo "#"
-echo "# la base est créée à l'aide du script qui se trouve ici :"
-echo "# ~/Documents/install/source/environnementTravail/installPostgresqlGeogigGTReseaux.sh"
-echo "#"
-echo "#"
-echo "# Création des schemas"
-echo "#       et des tables"
-echo "#                      pour la base origine"
-echo "#"
-echo "# les schémas et les tables sont créés à l'aide du script qui se trouve ici :"
-echo "# ~/Documents/install/source/geogig/Admin_02_insertDatabase.sh"
+echo "# La base origine, ses schemas et ces tables ont été créés à l'étape précédente"
 echo "#"
 echo "# Insertion des données la base origine"
 echo "#"
+
 acteurs='CDA Departement DGFiP ERDF SDE SDEER Soluris VLR';
 etapes='__Etape_01 __Etape_02 __Etape_03 __Etape_04 __Etape_05' ;
 listuser='fred carto VLR seb dsti CDA 17';
 listuser='fred' ; # uniquement fred
+listuser='fred vlr cda soluris'
+listuser='vlr cda'
 listdb='origine sandbox pcrs rtge' ; # origine, sandbox, pcrs et rtge
 listdb='pcrs rtge' ; # pcrs et rtge
 listdb='pcrs' ; # pcrs
-listschema='__Etape_01 __Etape_02 __Etape_03 __Etape_04 __Etape_05' ;
-listschema='__PlanTopoControle __Controle __PlanTopoNonControle __PlanExecution __PlanProjet' ;
-listschema='__PlanTopoNonControle' ;
+listdb='origine sandbox geogig' ;
+listdb='origine' ; # uniquement origine
+#listschema='__etape_01 __etape_02 __etape_03 __etape_04 __etape_05' ;
+#listschema='__topononcontrolee __topodecontrole __topocontrolee __planexecution __planprojet' ;
 
 for postgresqluser in $listuser ;
     do
         for database in $listdb ;
             do
+                if [ $database = 'origine' ] ; then
+                    # Base Origine : des schemas qui representent des étapes dans le temps
+                    listschema='__etape_01 __etape_02 __etape_03 __etape_04 __etape_05' ;
+                    #listschema='etape_01 etape_02 etape_03 etape_04 etape_05' ;
+                elif [ $database = 'sandbox' ] ; then
+                    # Base sandbox : des schemas qui representent des branches
+                    listschema='__topononcontrolee __topodecontrole __topocontrolee __planexecution __planprojet' ;
+                elif [ $database = 'geogig' ] ; then
+                    # Base geogig : des schemas qui representent ?
+                    listschema='__pcrs' ;
+                fi
                 for schema in $listschema ;
                     do
 #                        echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" SUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
 #                        sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" SUPERUSER NOCREATEDB NOCREATEROLE;" ;
-                        #echo "schema = "\"$postgresqluser$etape\"
-                        #schema="$postgresqluser$etape"
-                        #echo "schema = "$schema
-                        psql -h $DBHOST -d $database -U $postgresqluser -c "ALTER ROLE \"$postgresqluser\" SET search_path TO \"$postgresqluser$schema\", public;"
+                        if [ $database = 'origine' ] ; then
+                            echo "schema = "\"$postgresqluser$schema\"
+                            psql -h $DBHOST -d $database -U $postgresqluser -c "ALTER ROLE \"$postgresqluser\" SET search_path TO \"$postgresqluser$schema\", public;"
+                        else
+                            echo "schema = "\"$schema\"
+                            psql -h $DBHOST -d $database -U $postgresqluser -c "ALTER ROLE \"$postgresqluser\" SET search_path TO \"$schema\", public;"
+                            #
+                        fi
 #                        echo "sudo -u postgres psql -c \"ALTER ROLE \\\"$postgresqluser\\\" NOSUPERUSER NOCREATEDB NOCREATEROLE;\"" ;
 #                        sudo -u postgres psql -c "ALTER ROLE \"$postgresqluser\" NOSUPERUSER NOCREATEDB NOCREATEROLE;" ;
                         #psql -h VLR6180Y -d origine -U $postgresqluser -c "show search_path;"
@@ -80,8 +88,8 @@ for postgresqluser in $listuser ;
                         # pour nettoyer, mais c'est fois ci au niveau du contenu
                         # suppression des objets selon le scenario
                         # qui est paramétré dans after_insert.py
-                    #    ./after_insert.py $postgresqluser$schema
-                    #    psql -h $DBHOST -d $database -U $postgresqluser -f "after_insert_2.sql"
+                        ./after_insert.py $postgresqluser$schema
+                        psql -h $DBHOST -d $database -U $postgresqluser -f "after_insert_2.sql"
                     done
             done
     done
