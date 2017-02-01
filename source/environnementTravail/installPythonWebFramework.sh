@@ -18,13 +18,15 @@ echo "#"
 echo "# Installation de l'environnement virtuel"
 echo "#"
 echo "# Utilisation de l'utilitaire pew"
-echo "pew list_pythons -a | grep 3.6"
-      pew list_pythons -a | grep 3.6
 echo "pew list_pythons -a | grep 3.5"
       pew list_pythons -a | grep 3.5
+echo "pew list_pythons -a | grep 2.7"
+      pew list_pythons -a | grep 2.7
 echo "#"
 echo "pew install 3.5.0"
       pew install 3.5.0
+echo "pew install 2.7.11"
+      pew install 2.7.11
 echo "#"
 echo "# Nous allons démarrer l'environnement virtuel,"
 echo "# Dans cet environnement, l'installation doit continuer avec"
@@ -51,7 +53,9 @@ echo "# --------------------"
 echo "#"
 echo "# Démarrage de l'environnement virtuel"
 echo "#"
-echo 'pew new -p $(pythonz locate 3.5.0) webframework'
-      pew new -p $(pythonz locate 3.5.0) webframework
+#echo 'pew new -p $(pythonz locate 3.5.0) webframework'
+#      pew new -p $(pythonz locate 3.5.0) webframework
+echo 'pew new -p $(pythonz locate 2.7.11) webframework'
+      pew new -p $(pythonz locate 2.7.11) webframework
 echo "#"
 echo ""

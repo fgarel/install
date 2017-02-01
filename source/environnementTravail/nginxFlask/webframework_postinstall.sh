@@ -30,3 +30,43 @@ echo ""
 echo "# Démarrage du serveur"
 echo "git clone https://github.com/ryansb/wut4lunch_demos"
       git clone https://github.com/ryansb/wut4lunch_demos
+
+echo "# Essai avec flask"
+echo "cd wut4lunch_demos/flask_wut4lunch/"
+      cd wut4lunch_demos/flask_wut4lunch/
+echo "pip install -r requirements.txt"
+      pip install -r requirements.txt
+echo "python wut4lunch.py &"
+      python wut4lunch.py &
+echo "cd ../.."
+      cd ../..
+
+echo "# Essai avec pyramid"
+echo "cd wut4lunch_demos/pyramid_wut4lunch/"
+      cd wut4lunch_demos/pyramid_wut4lunch/
+echo "python setup.py develop"
+      python setup.py develop
+echo "python pyramid_wut4lunch/scripts/initializedb.py development.ini"
+      python pyramid_wut4lunch/scripts/initializedb.py development.ini
+echo "pserve development.ini &"
+      pserve development.ini &
+echo "cd ../.."
+      cd ../..
+
+echo "# Essai avec django"
+echo "cd wut4lunch_demos/hello_django/"
+      cd wut4lunch_demos/hello_django/
+echo "pip install Django==1.7"
+      pip install Django==1.7
+echo "pip install -r requirements.txt"
+      pip install -r requirements.txt
+echo "python manage.py migrate"
+      python manage.py migrate
+echo "python manage.py runserver &"
+      python manage.py runserver &
+echo "cd ../.."
+      cd ../..
+
+echo "# Flask   : http://127.0.0.1:5000/"
+echo "# Pyramid : http://127.0.0.1:6543/"
+echo "# Django  : http://127.0.0.1:8000/"

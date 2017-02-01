@@ -13,10 +13,10 @@ echo "#"
 echo "#"
 echo "sudo aptitude install nginx-common"
       sudo aptitude install nginx-common
-#echo "sudo aptitude install nginx-core"
-#      sudo aptitude install nginx-core
-#echo "sudo aptitude install nginx-light"
-#      sudo aptitude install nginx-light
+echo "# sudo aptitude install nginx-core"
+      # sudo aptitude install nginx-core
+echo "# sudo aptitude install nginx-light"
+      # sudo aptitude install nginx-light
 echo "sudo aptitude install nginx-full"
       sudo aptitude install nginx-full
 echo "# sudo service nginx status"
