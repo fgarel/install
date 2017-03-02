@@ -8,6 +8,10 @@
 #-----------------------------------------------
 echo "# 4ème Partie : zsh et antigen"
 echo "###############################################"
+echo "# Installation de nodejs-legacy"
+echo "# pour le prompt"
+echo "sudo aptitude install nodejs-legacy"
+      sudo aptitude install nodejs-legacy
 echo "# Affichage du shell courant"
 echo "echo $SHELL"
       echo $SHELL
