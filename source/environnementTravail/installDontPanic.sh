@@ -26,8 +26,17 @@ echo "# decompression"
 echo "tar xvzf dontpanic-latest.tgz"
       tar xvzf dontpanic-latest.tgz
 echo "# Enjoy :"
-echo "cd dontpanic"
-      cd dontpanic
+echo "#cd dontpanic"
+      #cd dontpanic
 echo "#./dontpanic"
       #./dontpanic
 echo "#"
+echo "# Alternative :"
+echo "# https://touchandgo.readthedocs.io/en/master/"
+echo "# https://github.com/touchandgo-devs/touchandgo/"
+echo "#"
+echo "sudo aptitude install python-libtorrent libxml2-dev libxslt1-dev python-lxml"
+      sudo aptitude install python-libtorrent libxml2-dev libxslt1-dev python-lxml
+echo "#"
+echo "sudo -H pip2 install touchandgo"
+      sudo -H pip2 install touchandgo
