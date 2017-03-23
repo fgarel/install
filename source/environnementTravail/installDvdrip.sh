@@ -6,4 +6,16 @@ sudo aptitude install handbrake-cli
 
 Utilisation 
 
-sudo ./dvdrip.py -i /media/fred/UTOPIA_S1_DVD1 -o Utopia_s1_dvd1
+./dvdrip.py --scan \
+            -i /dev/sr0 \
+            -o /home/fred/Videos/HonourableWoman
+
+rm -rf ~/Videso/HonourableWoman ; \
+./dvdrip.py -v \
+            -i /dev/sr0 \
+            -o ~/Videos/HonourableWoman
+
+# methode 1 handbrake-gui
+# methode 2 : dvdrip2
+# methode 3 : vlc / lecture conversion
+# methode 4 : dvdrip
