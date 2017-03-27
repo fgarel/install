@@ -32,29 +32,45 @@ ssh -f \
     -L 60838:localhost:40838 \
     -L 62238:localhost:42238 \
     -L 60032:localhost:40032 \
-    -L 43232:localhost:43232 \
-    -L 44332:localhost:44332 \
-    -L 40832:localhost:40832 \
-    -L 42232:localhost:42232 \
+    -L 63232:localhost:43232 \
+    -L 64332:localhost:44332 \
+    -L 60832:localhost:40832 \
+    -L 62232:localhost:42232 \
     -L 60031:localhost:40031 \
-    -L 43231:localhost:43231 \
-    -L 44331:localhost:44331 \
-    -L 40831:localhost:40831 \
-    -L 42231:localhost:42231 \
+    -L 63231:localhost:43231 \
+    -L 64331:localhost:44331 \
+    -L 60831:localhost:40831 \
+    -L 62231:localhost:42231 \
     fred@mail.cdalr.fr
 #
 echo "# "
-echo "# Maintenant, à partir de tux0, il est possible de se connecter vers :"
-echo "# ssh.cdalr.fr => ssh -p 40022 root@localhost"
+echo "# Maintenant, à partir de votre machine, il est possible de se connecter vers :"
+echo "# tux0     => ssh -p 62231 localhost"
+echo "# zenbook  => ssh -p 62232 localhost"
+echo "# VLR6180X => ssh -p 42238 localhost"
+echo "# VLR6180Y => ssh -p 62239 localhost"
+echo "#"
+echo "# ssh.cdalr.fr => ssh -p 22 fred@localhost"
 echo "# "
-echo "# Sur la machine VLR6180Y, on peut lancer le serveur vnc"
+echo "# 6.... : connexion indirecte"
+echo "# .22.. : protocole ssh"
+echo "#         00 = 5900 = vnc"
+echo "#         32 = 5432 = postgresql"
+echo "#         43 = 443  = https"
+echo "#         80 = 80   = http"
+echo "# ...3. : via ssh.cdalr.fr"
+echo "#"
+echo "# ....1 : destinataire 1 = tux0"
+echo "#         ...."
+echo "# "
+echo "# Sur la machine dstante, on peut lancer le serveur vnc"
 echo "#   x11vnc -display :0 -ncache 10"
-echo "# Sur la machine tux0, on peut lancer le viewer vnc"
+echo "# Sur la machine locale, on peut lancer le viewer vnc"
 echo "#   en mode console"
-echo "#     vncviewer -compresslevel 5 -via fred@localhost localhost:64900"
+echo "#     vncviewer -compresslevel 5 -via fred@localhost localhost:60039"
 echo "#   en mode graphique"
 echo "#     Internet / Visionneur de bureaux distants"
 echo "#     Se connecter"
-echo "#     Hote                               : localhost:64900"
+echo "#     Hote                               : localhost:60039"
 echo "#     Utiliser l'hote (comme tunnel ssh) : fred@localhost"
 #
