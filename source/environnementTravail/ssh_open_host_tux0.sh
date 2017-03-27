@@ -15,7 +15,7 @@
 # -X = Transfert X11 et TCP (X11 and TCP forwarding) http://www.delafond.org/traducmanfr/man/man1/ssh.1.html
 
 #
-# Fabrication du tiers central du tunnel "mail.cdalr.fr" (entre la machine boulot et mail.cdalr.fr)
+# Fabrication du tiers central du tunnel "ssh.cdalr.fr" (entre la machine boulot et ssh.cdalr.fr)
 #
 ssh -f \
     -o ServerAliveInterval=240 \
@@ -28,6 +28,36 @@ ssh -f \
     -R 42231:localhost:22 \
     fred@ssh.cdalr.fr
 #
+#
+# Fabrication d'un autre tiers central du tunnel "freeshell.de" (entre la machine boulot et freeshell.de)
+#
+ssh -f \
+    -o ServerAliveInterval=240 \
+    -N \
+    -X \
+    -R 40041:localhost:5900 \
+    -R 43241:localhost:5432 \
+    -R 44341:localhost:443 \
+    -R 40841:localhost:80 \
+    -R 42241:localhost:22 \
+    fgarel@freeshell.de
+#
+#
+# Fabrication d'un autre tiers central du tunnel "fgarel.synology.me" (entre la machine boulot et fgarel.synology.me)
+#
+ssh -f \
+    -o ServerAliveInterval=240 \
+    -N \
+    -X \
+    -R 40051:localhost:5900 \
+    -R 43251:localhost:5432 \
+    -R 44351:localhost:443 \
+    -R 40851:localhost:80 \
+    -R 42251:localhost:22 \
+    fred@fgarel.synology.me
+#
+echo "# "
+echo "# "
 echo "# "
 echo "# Maintenant, à partir de ssh.cdalr.fr, il est possible de se connecter vers :"
 echo "# tux0 => ssh -p 42231 fred@localhost"
