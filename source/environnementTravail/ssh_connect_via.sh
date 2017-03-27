@@ -15,7 +15,7 @@
 # -X = Transfert X11 et TCP (X11 and TCP forwarding) http://www.delafond.org/traducmanfr/man/man1/ssh.1.html
 
 #
-# Fabrication du premier tiers du tunnel "mail.cdalr.fr" (entre la machine perso et mail.cdalr.fr)
+# Fabrication du premier tiers du tunnel "ssh.cdalr.fr" (entre la machine perso et ssh.cdalr.fr)
 #
 ssh -f \
     -o ServerAliveInterval=240 \
@@ -41,8 +41,68 @@ ssh -f \
     -L 64331:localhost:44331 \
     -L 60831:localhost:40831 \
     -L 62231:localhost:42231 \
-    fred@mail.cdalr.fr
+    fred@ssh.cdalr.fr
 #
+#
+# Fabrication d'un autre premier tiers du tunnel "freeshell.de" (entre la machine perso et freeshell.de)
+#
+ssh -f \
+    -o ServerAliveInterval=240 \
+    -N \
+    -X \
+    -L 60049:localhost:40049 \
+    -L 63249:localhost:43249 \
+    -L 64349:localhost:44349 \
+    -L 60849:localhost:40849 \
+    -L 62249:localhost:42249 \
+    -L 60048:localhost:40048 \
+    -L 63248:localhost:43248 \
+    -L 64348:localhost:44348 \
+    -L 60848:localhost:40848 \
+    -L 62248:localhost:42248 \
+    -L 60042:localhost:40042 \
+    -L 63242:localhost:43242 \
+    -L 64342:localhost:44342 \
+    -L 60842:localhost:40842 \
+    -L 62242:localhost:42242 \
+    -L 60041:localhost:40041 \
+    -L 63241:localhost:43241 \
+    -L 64341:localhost:44341 \
+    -L 60841:localhost:40841 \
+    -L 62241:localhost:42241 \
+    fgarel@freeshell.de
+#
+#
+# Fabrication d'un autre premier tiers du tunnel "fgarel.synology.me" (entre la machine perso et ssh.synology.me)
+#
+ssh -f \
+    -o ServerAliveInterval=240 \
+    -N \
+    -X \
+    -L 60059:localhost:40059 \
+    -L 63259:localhost:43259 \
+    -L 64359:localhost:44359 \
+    -L 60859:localhost:40859 \
+    -L 62259:localhost:42259 \
+    -L 60058:localhost:40058 \
+    -L 63258:localhost:43258 \
+    -L 64358:localhost:44358 \
+    -L 60858:localhost:40858 \
+    -L 62258:localhost:42258 \
+    -L 60052:localhost:40052 \
+    -L 63252:localhost:43252 \
+    -L 64352:localhost:44352 \
+    -L 60852:localhost:40852 \
+    -L 62252:localhost:42252 \
+    -L 60051:localhost:40051 \
+    -L 63251:localhost:43251 \
+    -L 64351:localhost:44351 \
+    -L 60851:localhost:40851 \
+    -L 62251:localhost:42251 \
+    fred@fgarel.synology.me
+#
+echo "# "
+echo "# "
 echo "# "
 echo "# Maintenant, à partir de votre machine, il est possible de se connecter vers :"
 echo "# tux0     => ssh -p 62231 localhost"
@@ -59,7 +119,8 @@ echo "#         32 = 5432 = postgresql"
 echo "#         43 = 443  = https"
 echo "#         80 = 80   = http"
 echo "# ...3. : via ssh.cdalr.fr"
-echo "#"
+echo "#         4 = freeshell.de"
+echo "#         5 = ds214"
 echo "# ....1 : destinataire 1 = tux0"
 echo "#         ...."
 echo "# "
