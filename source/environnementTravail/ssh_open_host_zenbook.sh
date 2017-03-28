@@ -41,7 +41,7 @@ ssh -f \
     -R 40842:localhost:80 \
     -R 42242:localhost:22 \
     fgarel@ssh.freeshell.de \
-    -P 443
+    -p 443
 #
 #
 # Fabrication d'un autre tiers central du tunnel "fgarel.synology.me" (entre la machine boulot et fgarel.synology.me)
