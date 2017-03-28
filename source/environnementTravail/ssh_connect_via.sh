@@ -41,7 +41,7 @@ ssh -f \
     -L 64331:localhost:44331 \
     -L 60831:localhost:40831 \
     -L 62231:localhost:42231 \
-    fred@ssh.cdalr.fr
+    fred@cdalr.fr
 #
 #
 # Fabrication d'un autre premier tiers du tunnel "freeshell.de" (entre la machine perso et freeshell.de)
@@ -70,7 +70,8 @@ ssh -f \
     -L 64341:localhost:44341 \
     -L 60841:localhost:40841 \
     -L 62241:localhost:42241 \
-    fgarel@freeshell.de
+    fgarel@ssh.freeshell.de \
+    -P 443
 #
 #
 # Fabrication d'un autre premier tiers du tunnel "fgarel.synology.me" (entre la machine perso et ssh.synology.me)

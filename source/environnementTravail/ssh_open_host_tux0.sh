@@ -26,7 +26,7 @@ ssh -f \
     -R 44331:localhost:443 \
     -R 40831:localhost:80 \
     -R 42231:localhost:22 \
-    fred@ssh.cdalr.fr
+    fred@cdalr.fr
 #
 #
 # Fabrication d'un autre tiers central du tunnel "freeshell.de" (entre la machine boulot et freeshell.de)
@@ -40,7 +40,8 @@ ssh -f \
     -R 44341:localhost:443 \
     -R 40841:localhost:80 \
     -R 42241:localhost:22 \
-    fgarel@freeshell.de
+    fgarel@ssh.freeshell.de \
+    -P 443
 #
 #
 # Fabrication d'un autre tiers central du tunnel "fgarel.synology.me" (entre la machine boulot et fgarel.synology.me)
