@@ -46,16 +46,16 @@ ssh -f \
 #
 # Fabrication d'un autre tiers central du tunnel "fgarel.synology.me" (entre la machine boulot et fgarel.synology.me)
 #
-ssh -f \
-    -o ServerAliveInterval=240 \
-    -N \
-    -X \
-    -R 40058:localhost:5900 \
-    -R 43258:localhost:5432 \
-    -R 44358:localhost:443 \
-    -R 40858:localhost:80 \
-    -R 42258:localhost:22 \
-    fred@fgarel.synology.me
+#ssh -f \
+#    -o ServerAliveInterval=240 \
+#    -N \
+#    -X \
+#    -R 40058:localhost:5900 \
+#    -R 43258:localhost:5432 \
+#    -R 44358:localhost:443 \
+#    -R 40858:localhost:80 \
+#    -R 42258:localhost:22 \
+#    fred@fgarel.synology.me
 #
 echo "# "
 echo "# "
@@ -63,4 +63,22 @@ echo "# "
 echo "# Maintenant, à partir de ssh.cdalr.fr, il est possible de se connecter vers :"
 echo "# VLR6180X => ssh -p 42238 fred@localhost"
 echo "# "
+
+#
+# Fabrication du troisième tiers du tunnel (entre la machine VLR6180X et la machine DSIBDD09)
+# (ports ...0000 et +)
+#
+ssh -f \
+    -o ServerAliveInterval=240 \
+    -N \
+    -X \
+    -L 63280:dsibdd09.mairie.fr:5432 \
+    fred@vlr6180x
+#
+echo "# "
+echo "# Maintenant, à partir de VLR6180Y, il est possible de se connecter vers"
+echo "# une base du serveur dsibdd09 via vlr6180x"
+echo "# psql -h vlr6180x -p 63290 -d cadlr -U sig"
+echo "# "
+echo "# Mie3B"
 #
