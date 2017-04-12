@@ -17,8 +17,9 @@ class ParametresConnection(object):
     def __init__(self):
         u""" Fonction lancée au moment de l'instanciation. """
         self.hostname = 'localhost'
-        self.username = 'fred'
-        self.password = 'fred'
+        self.port = '63230'
+        self.username = 'cda'
+        self.password = 'cda'
 
 
 def main():
@@ -26,6 +27,7 @@ def main():
     paramconnexion = ParametresConnection()
 
     print('hostname = {}'.format(paramconnexion.hostname))
+    print('port     = {}'.format(paramconnexion.port))
     print('username = {}'.format(paramconnexion.username))
     print('password = {}'.format(paramconnexion.password))
     #print(connection)

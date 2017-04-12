@@ -17,6 +17,7 @@ class Database(object):
     def __init__(self, paramconnexion):
         u""" Fonction lancée au moment de l'instanciation. """
         self.hostname = paramconnexion.hostname
+        self.port = paramconnexion.port
         self.username = paramconnexion.username
         self.password = paramconnexion.password
         self.dbname = ''
@@ -28,6 +29,7 @@ class Database(object):
         self.dbname = dbname
         #print("dbname = {}".format(self.dbname))
         self.conn = psycopg2.connect(host=self.hostname,
+                                     port=self.port,
                                      dbname=self.dbname,
                                      user=self.username,
                                      password=self.password)
@@ -42,7 +44,7 @@ class Database(object):
 
         self.conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT) # <-- ADD THIS LINE
         self.cur = self.conn.cursor()
-        self.cur.execute("DROP DATABASE if exists %s  ;" % self.dbname)
+        self.cur.execute("DROP DATABASE if exists %s ;" % self.dbname)
         self.cur.execute("CREATE DATABASE %s  ;" % self.dbname)
         self.cur.close()
         self.conn.close()
@@ -53,7 +55,7 @@ class Database(object):
         #print('extension = {}'.format(self.extension))
         self.conn = self.conn_database(self.dbname)
         self.cur = self.conn.cursor()
-        self.cur.execute("CREATE EXTENSION if not exists %s CASCADE ;" % self.extension)
+        self.cur.execute("CREATE EXTENSION if not exists %s ;" % self.extension)
         self.cur.close()
         self.conn.close()
 
@@ -63,7 +65,7 @@ class Database(object):
         #print('schema = {}'.format(self.schema))
         self.conn = self.conn_database(self.dbname)
         self.cur = self.conn.cursor()
-        self.cur.execute("CREATE SCHEMA if not exists %s  ;" % self.schema)
+        self.cur.execute("CREATE SCHEMA if not exists %s ;" % self.schema)
         self.cur.close()
         self.conn.close()
 
@@ -77,6 +79,7 @@ def main():
     #print('password = {}'.format(paramconnexion.password))
     myconnection = Database(mesparametres)
     print('hostname = {}'.format(myconnection.hostname))
+    print('port     = {}'.format(myconnection.port))
     print('username = {}'.format(myconnection.username))
     print('password = {}'.format(myconnection.password))
 
