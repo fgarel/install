@@ -18,6 +18,7 @@ class ParametresConnection(object):
         u""" Fonction lancée au moment de l'instanciation. """
         self.hostname = 'localhost'
         self.port = '63230'
+        self.port = '5432'
         self.username = 'cda'
         self.password = 'cda'
 

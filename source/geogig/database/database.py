@@ -56,6 +56,7 @@ class Database(object):
         self.conn = self.conn_database(self.dbname)
         self.cur = self.conn.cursor()
         self.cur.execute("CREATE EXTENSION if not exists %s ;" % self.extension)
+        #self.cur.execute("CREATE EXTENSION %s ;" % self.extension)
         self.cur.close()
         self.conn.close()
 
@@ -88,7 +89,8 @@ def main():
 
     # Creation des extensions
     listext = ['adminpack', 'plpgsql', 'postgis', 'postgis_topology', 'fuzzystrmatch', 'hstore']
-    listext = ['adminpack', 'postgis', 'postgis_topology', 'fuzzystrmatch', 'hstore']
+    #listext = ['adminpack', 'postgis', 'postgis_topology', 'fuzzystrmatch', 'hstore']
+    #listext = ['adminpack', 'fuzzystrmatch', 'hstore']
     for extension in listext:
         #print('extension = {}'.format(extension))
         myconnection.create_extension('geogig', extension)
