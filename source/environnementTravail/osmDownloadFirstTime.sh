@@ -68,14 +68,14 @@ echo "#"
 echo "# cf aussi https://osm.mazdermind.de/replicate-sequences/"
 echo "#"
 echo "wget -P /home/fred/Documents/osmosis/\\"
-echo "     http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/026.state.txt"
+echo "     http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/488.state.txt"
       wget -P /home/fred/Documents/osmosis/ \
-      http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/026.state.txt
+      http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/488.state.txt
 echo "#"
 echo "# Lorsqu'on a téléchargé le fichier xxx.state.txt, il est nécessaire de le renommer en state.txt"
 echo "#"
-echo "mv /home/fred/Documents/osmosis/026-state.txt /home/fred/Documents/osmosis/state.txt"
-      mv /home/fred/Documents/osmosis/026.state.txt /home/fred/Documents/osmosis/state.txt
+echo "mv /home/fred/Documents/osmosis/488-state.txt /home/fred/Documents/osmosis/state.txt"
+      mv /home/fred/Documents/osmosis/488.state.txt /home/fred/Documents/osmosis/state.txt
 echo "#"
 
 echo "#"

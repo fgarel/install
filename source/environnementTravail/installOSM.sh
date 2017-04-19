@@ -72,8 +72,8 @@ echo "# The name of the database is by default debian-osm-carto."
 echo "# Name of the postgresql database :"
 echo "#"
 echo "#"
-echo "sudo apt-get install gis-osm"
-      sudo apt-get install gis-osm
+echo "sudo apt-get install gis-osm nik4 viking"
+      sudo apt-get install gis-osm nik4 viking
 echo "#"
 echo "#----------------------"
 echo "# Reste a faire :"

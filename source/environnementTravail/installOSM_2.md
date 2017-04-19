@@ -1,16 +1,23 @@
 
 
+# OSM 2ème partie : Diffuser les données
 
+Dans cette seconde partie, nous abordons l'installation et l'utilisation des outils qui sont plus liés à la diffusion de la données OSM.
 
-# Configuration de Tileman, Tirex, nginx, mapnik
+Ces outils sont, pour ne citer que les principaux, :
+ - tileman
+ - Tirex
+ - nginx
+ - mapnik
 
-Ce document présente la configuration de tirex et tileman
+## Sous-ensemble d'un environnement plus large
 
-## Installation d'un environnement OSM
+Pour rappel, dans la partie 1, nous avons aborder l'installation de postgresql et des utilitaires osmosis, osm2pgsql, mais ces installations peuvent aussi être vues dans environnement plus complet.
 
-Nous allons créer un environnement
+L'environnement complet a pour but
+de faciliter la manipulation de données OSM.
+
 *(Ici, il faut comprendre le mot environnement comme ensemble d'outils, et non pas comme une environnement virtuel python)*
-pour faciliter la manipulation de données OSM.
 
 La documentation sur l'installation et l'utilisation de cet
 environnement est détaillé dans
@@ -55,20 +62,21 @@ http://osmfj.github.io/tileman/
 
 http://miurahr.github.io/slides/2013-0908-tileman.html#/title
 
-L'installation de ces composants a été réalisée grace aux scripts :
+L'installation de ces composants a été réalisée grâce aux scripts :
 
   - installOSM.sh
   - installOSMMapnik.sh
   - installOSMTirex.sh
   - installOSMTilemanDebian.sh
+  - ou installOSMTilemanUbuntu.sh
+
+Après ces installations, il faut configurer ces outils pour qu'ils fonctionnent ensemble.
 
 ## Verification des installations
 
 ### Mapnik
 
 mapnik-config -v
-
-
 
 ### Tirex
 
@@ -158,7 +166,9 @@ firefox http://tileserver/
 
 ## Un environnement pour orchestrer l'ensemble des outils
 
-creation d'un environnement avec byobu
+Nous avons donc installer et configurer les différents outils, maintenant nous allons mettre en place un environnement pour utiliser ces différents outils.
+
+Création d'un environnement avec byobu
 ```
 vi ~/.byobu/windows.tmux.split4
 ```
@@ -178,7 +188,9 @@ https://github.com/iasj/IniTmux
 
 http://www.leehodgkinson.com/blog/quickly-setup-multiple-pane-and-multiple-window-sessions-in-your-terminal/
 
-### Window *run* : Exécution des programmes serveurs ou daemons
+Byobu emploie le terme de "fenêtre" pour que l'utilisateur interagissent avec les différents outils.
+
+### Window "*run*" : Exécution des programmes serveurs ou daemons
 #### Serveur http nginx
 ##### configuration du nom de la machine
 ```
@@ -199,7 +211,7 @@ sudo service tirex-master status
 sudo service tirex-backend-manager status
 ```
 
-### Window *log* : Visualisation des logs
+### Window "*log*" : Visualisation des logs
 #### Colonne 1 : logs de nginx"
 ```
 tail -f /var/log/nginx/access.log
@@ -215,7 +227,7 @@ tail -f /var/log/syslog
 tail -f /var/log/tirex/jobs.log
 ```
 
-### Window *etc1* Visualisation des premiers paramètres
+### Window "*etc1*" Visualisation des premiers paramètres
 #### Colonne 1 : tileman
 ```
 vi /etc/tileman.conf
@@ -229,7 +241,7 @@ tirex-tiledir-check example
 vi /etc/tirex/tirex.conf
 ```
 
-### Window *etc2* Visualisation des seconds paramètres
+### Window "*etc2*" Visualisation des seconds paramètres
 #### Rangée 1 : nginx/site-enabled
 ##### Colonne 1 : site test
 ```
