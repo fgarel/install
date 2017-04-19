@@ -70,13 +70,77 @@ L'installation de ces composants a été réalisée grâce aux scripts :
   - installOSMTilemanDebian.sh
   - ou installOSMTilemanUbuntu.sh
 
-Après ces installations, il faut configurer ces outils pour qu'ils fonctionnent ensemble.
+Après ces installations, il faudra configurer ces outils pour qu'ils fonctionnent ensemble.
 
 ## Verification des installations
 
 ### Mapnik
 
-mapnik-config -v
+On installe Mapnik depuis les sources....
+```
+./installOSMMapnik.sh
+```
+
+Puis on lance un nouveau shell
+
+```
+
+```
+
+On ajoute des variables d'environnement"
+```
+source ../mapnik/mapnik-settings.env
+env | grep PROJ
+```
+
+Test de l'installation de mapnik
+
+Test 1 : test interne : make test
+
+https://github.com/mapnik/mapnik/wiki/UbuntuInstallation
+
+```
+cd ../mapnik ; export JOBS=1 ; make test ; cd ../environnementTravail
+cd ../mapnik ; export JOBS=16 ; make test ; cd ../environnementTravail
+```
+
+Test 2 : test interne : registration ?
+
+```
+cd ../mapnik ; \
+./test/standalone/datasource_registration_test-bin ; \
+cd ../environnementTravail
+
+../mapnik/test/standalone/datasource_registration_test-bin
+```
+
+Test 3 : mapnik-config
+
+(mapnik-config est normalement dans le paquet libmapnik-dev)
+La doc est ici
+
+https://github.com/mapnik/mapnik/wiki/GettingStartedInPython
+
+```
+mapnik-config -v # should return a version number
+mapnik-config --input-plugins
+ls -al $(mapnik-config --input-plugins)
+```
+
+Test 4 : mapnik-render
+
+Attention, il faut etre dans le repertoire mapnik !!!!
+
+(mapnik-render est normalement dans le paquet mapnik-utils)
+
+```
+cd ../mapnik ; \
+mapnik-render \
+             ../environnementTravail/testMapnik.xml \
+             ../environnementTravail/testMapnik.png ;\
+cd ../environnementTravail ; \
+display testMapnik.png
+```
 
 ### Tirex
 

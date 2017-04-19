@@ -130,5 +130,5 @@ crontab -e
 ```
 ```
 # tous les jours à 7h du matin, téléchargement et import des données osm
-0 7 * * * /home/fred/Documents/install/source/environnementTravail/osmMaj.sh'
+0 7 * * * /home/fred/Documents/install/source/environnementTravail/osmMaj.sh
 ```
