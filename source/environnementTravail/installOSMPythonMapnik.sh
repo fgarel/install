@@ -46,6 +46,8 @@ echo "git clone https://github.com/mapnik/python-mapnik"
       git clone https://github.com/mapnik/python-mapnik
 echo "cd python-mapnik"
       cd python-mapnik
+echo "git submodule update --init"
+      git submodule update --init
 echo "pwd"
       pwd
 echo "export MASON_BUILD=true"

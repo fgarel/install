@@ -38,21 +38,11 @@ echo "#"
 #echo "sudo aptitude install libmapnik3.0"
 #      sudo aptitude install libmapnik3.0
 echo ""
-echo "# Installation d'un compilateur récent clang"
-echo "# cela permet d'avoir C++14 "
 echo "#"
-echo "# Pour pouvoir installer une version récente de clang"
-echo "# il faut ajouter un depot jessie-backports "
+echo "# Nous utiliserons clang à la place de gcc"
 echo "#"
-echo "# sudo vi /etc/apt/sources.list.d/jessie-backports.list"
-echo "# deb http://ftp.debian.org/debian jessie-backports main"
-#echo "sudo aptitude install clang"
-#      sudo aptitude install clang
-#echo "sudo aptitude install -t jessie-backports clang-3.8"
-#      sudo aptitude install -t jessie-backports clang-3.8
-echo "#"
-#echo 'export CXX="clang++-3.8" && export CC="clang-3.8"'
-#      export CXX="clang++-3.8" && export CC="clang-3.8"
+echo 'export CXX="clang++-3.8" && export CC="clang-3.8"'
+      export CXX="clang++-3.8" && export CC="clang-3.8"
 echo "#"
 echo "sudo aptitude remove mapnik-doc"
       sudo aptitude remove mapnik-doc
@@ -104,8 +94,8 @@ echo "pwd"
 #      git checkout v3.0.9
 echo "git submodule update --init"
       git submodule update --init
-echo "git submodule update --init deps/mapbox/variant"
-      git submodule update --init deps/mapbox/variant
+#echo "git submodule update --init deps/mapbox/variant"
+#      git submodule update --init deps/mapbox/variant
 echo "./bootstrap.sh"
       ./bootstrap.sh
 #echo '# En fonction des developpements, il se peut que la compilation'
@@ -129,52 +119,63 @@ echo "./bootstrap.sh"
 #      git checkout v3.0.11
 #echo "./configure"
 #      ./configure
-echo "./configure CXX=g++ CC=gcc"
-      ./configure CXX=g++ CC=gcc
+#echo "./configure CXX=g++ CC=gcc"
+#      ./configure CXX=g++ CC=gcc
 #echo './configure CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"'
 #      ./configure CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"
 #echo './configure CXX=${CXX} CC=${CC}'
 #      ./configure CXX=${CXX} CC=${CC}
-echo "#"
-echo "# Nous avons un problème de chargement de plugins :"
-echo "# https://github.com/mapnik/mapnik/wiki/PluginArchitecture"
-echo "# To compile the plugins statically with mapnik library"
-echo "# (https://github.com/mapnik/mapnik/tree/static-plugins)"
+echo 'python scons/scons.py configure CXX=${CXX} CC=${CC} CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=1"'
+      python scons/scons.py configure CXX=${CXX} CC=${CC} CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"
 echo "#"
 echo "# Utilisation de scons à la place de make"
 echo "# https://github.com/mapnik/mapnik/wiki/UsingScons"
-echo "# python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'"
-      # python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'
 echo "#"
-echo "make"
-      make
+echo "# Astuce en cas de probleme de plugin"
+echo "#   Nous avons un problème de chargement de plugins :"
+echo "#   https://github.com/mapnik/mapnik/wiki/PluginArchitecture"
+echo "#   To compile the plugins statically with mapnik library"
+echo "#   (https://github.com/mapnik/mapnik/tree/static-plugins)"
 echo "#"
-echo "make test"
-      make test
+echo "#   sudo python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'"
+      #   sudo python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'
+echo "#"
+echo "# Install Mapnik (running configure and compiling first if not done yet)"
+echo "#"
+echo "python scons/scons.py"
+##      python scons/scons.py
+echo "#"
+echo "sudo python scons/scons.py install"
+##      sudo python scons/scons.py install
+echo "#"
+#echo "make"
+#      make
+#echo "#"
+#echo "# sudo make install"
+#      # sudo make install
+echo "#"
+echo "sudo python scons/scons.py test"
+##      sudo python scons/scons.py test
+echo "#"
+#echo "make test"
+#      make test
 echo "#"
 echo "# Les tests sont visibles ici :"
 echo "#firefox /tmp/mapnik-visual-images/visual-test-results/index.html"
       #firefox /tmp/mapnik-visual-images/visual-test-results/index.html
-echo "#"
-echo "# Utilisation de scons à la place de make"
-echo "# https://github.com/mapnik/mapnik/wiki/UsingScons"
-echo "#"
-echo "sudo python scons/scons.py install # will install Mapnik (running configure and compiling first if not done yet)"
-      sudo python scons/scons.py install # will install Mapnik (running configure and compiling first if not done yet)
-echo "#"
-echo "# sudo make install"
-      # sudo make install
 echo "#"
 echo "cd ../environnementTravail"
       cd ../environnementTravail
 echo "pwd"
       pwd
 echo "#"
-echo "# Attention, il faut ajouter des variables d'environnement"
+echo "# Attention, avant tout utilisation, il faut ajouter des variables d'environnement"
+echo "#"
 echo "../mapnik/mapnik-settings.env"
       ../mapnik/mapnik-settings.env
 echo "source ../mapnik/mapnik-settings.env"
       source ../mapnik/mapnik-settings.env
+echo "#"
 echo "# Vérification de ces variables d'environnement"
 echo "env | grep PROJ"
       env | grep PROJ
