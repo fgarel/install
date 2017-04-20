@@ -37,6 +37,23 @@ echo "#"
 #      sudo aptitude install libmapnik-dev
 #echo "sudo aptitude install libmapnik3.0"
 #      sudo aptitude install libmapnik3.0
+echo ""
+echo "# Installation d'un compilateur récent clang"
+echo "# cela permet d'avoir C++14 "
+echo "#"
+echo "# Pour pouvoir installer une version récente de clang"
+echo "# il faut ajouter un depot jessie-backports "
+echo "#"
+echo "# sudo vi /etc/apt/sources.list.d/jessie-backports.list"
+echo "# deb http://ftp.debian.org/debian jessie-backports main"
+#echo "sudo aptitude install clang"
+#      sudo aptitude install clang
+#echo "sudo aptitude install -t jessie-backports clang-3.8"
+#      sudo aptitude install -t jessie-backports clang-3.8
+echo "#"
+#echo 'export CXX="clang++-3.8" && export CC="clang-3.8"'
+#      export CXX="clang++-3.8" && export CC="clang-3.8"
+echo "#"
 echo "sudo aptitude remove mapnik-doc"
       sudo aptitude remove mapnik-doc
 echo "sudo aptitude remove python-mapnik"
@@ -77,8 +94,8 @@ echo '# Installation de mapnik'
 echo '#   http://mapnik.org/pages/downloads.html'
 echo "#   https://github.com/mapnik/mapnik/wiki/UbuntuInstallation"
 echo '#'
-echo "git clone https://github.com/mapnik/mapnik.git"
-      git clone https://github.com/mapnik/mapnik.git
+echo "git clone https://github.com/mapnik/mapnik.git --depth=10"
+      git clone https://github.com/mapnik/mapnik.git --depth=10
 echo "cd mapnik"
       cd mapnik
 echo "pwd"
@@ -87,6 +104,8 @@ echo "pwd"
 #      git checkout v3.0.9
 echo "git submodule update --init"
       git submodule update --init
+echo "git submodule update --init deps/mapbox/variant"
+      git submodule update --init deps/mapbox/variant
 echo "./bootstrap.sh"
       ./bootstrap.sh
 #echo '# En fonction des developpements, il se peut que la compilation'
@@ -108,10 +127,14 @@ echo "./bootstrap.sh"
 #echo '# Autre solution : changer de branche'
 #echo "git checkout v3.0.11"
 #      git checkout v3.0.11
-echo "# ./configure"
-      # ./configure
-echo './configure CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"'
-      ./configure CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"
+#echo "./configure"
+#      ./configure
+echo "./configure CXX=g++ CC=gcc"
+      ./configure CXX=g++ CC=gcc
+#echo './configure CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"'
+#      ./configure CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"
+#echo './configure CXX=${CXX} CC=${CC}'
+#      ./configure CXX=${CXX} CC=${CC}
 echo "#"
 echo "# Nous avons un problème de chargement de plugins :"
 echo "# https://github.com/mapnik/mapnik/wiki/PluginArchitecture"
@@ -193,6 +216,7 @@ echo "#"
 echo "#----------------------"
 echo "# Reste a faire :"
 echo "#----------------------"
+#echo "# ./installOSMBoost.sh"
 #echo "# ./installOSMMapnik.sh"
 echo "# ./installOSMPythonMapnik"
 echo "# ./installOSMCartoCSS.sh"

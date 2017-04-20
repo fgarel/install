@@ -116,5 +116,15 @@ echo "cd ../environnementTravail"
 echo "pwd"
       pwd
 
+#echo "#----------------------"
+#echo "# Reste a faire :"
+#echo "#----------------------"
+#echo "# ./installOSMBoost.sh"
+#echo "# ./installOSMMapnik.sh"
+#echo "# ./installOSMPythonMapnik"
+#echo "# ./installOSMCartoCSS.sh"
+#echo "# ./installOSMTirex.sh"
+#echo "# ./installOSMTilemanUbuntu.sh"
+#echo "#----------------------"
 
 echo "#"
