@@ -1463,3 +1463,58 @@ eau.service.technique@ville-larochelle.fr;OPH de la CDA de LA ROCHELLE
 2016070500401T;A3;nicolas.cant@ville-larochelle.fr;MAIRIE
 2016070500401T;A3;nicolas.cant@ville-larochelle.fr;SISP
 2016070500401T;A3;nicolas.cant@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2017040300352T;A4;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040300352T;A4;eau.service.technique@ville-larochelle.fr;Port Atlantique La Rochelle
+2017040300352T;A4;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040300352T;A4;eau.service.technique@ville-larochelle.fr;SNCF
+2017040300352T;A4;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2017040300352T;A4;eau.service.technique@ville-larochelle.fr;ENEDIS-DRPCH-POITOU-CHARENTES
+2017040300765T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040300765T;A3;eau.service.technique@ville-larochelle.fr;GRDF - Direction Réseaux Ouest
+2017040300765T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040300765T;A3;eau.service.technique@ville-larochelle.fr;MAIRIE
+2017040300765T;A3;eau.service.technique@ville-larochelle.fr;SAUR SUD OUEST
+2017040300765T;A3;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2017040300765T;A3;eau.service.technique@ville-larochelle.fr;ENEDIS-DRPCH-POITOU-CHARENTES
+2017040300997T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040300997T;A3;eau.service.technique@ville-larochelle.fr;GRDF - Direction Réseaux Ouest
+2017040300997T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040300997T;A3;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2017040300997T;A3;eau.service.technique@ville-larochelle.fr;ENEDIS-DRPCH-POITOU-CHARENTES
+2017040300997T;A3;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2017040401710T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040401710T;A3;eau.service.technique@ville-larochelle.fr;GRDF - Direction Réseaux Ouest
+2017040401710T;A3;eau.service.technique@ville-larochelle.fr;17 NUMERIQUE
+2017040401710T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040401710T;A3;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2017040401710T;A3;eau.service.technique@ville-larochelle.fr;ENEDIS-DRPCH-POITOU-CHARENTES
+2017040401710T;A3;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2017040401829T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040401829T;A3;eau.service.technique@ville-larochelle.fr;GRDF - Direction Réseaux Ouest
+2017040401829T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040401829T;A3;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2017040401829T;A3;eau.service.technique@ville-larochelle.fr;ENEDIS-DRPCH-POITOU-CHARENTES
+2017040401829T;A3;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2017040401913T;A4;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040401913T;A4;eau.service.technique@ville-larochelle.fr;GRDF - Direction Réseaux Ouest
+2017040401913T;A4;eau.service.technique@ville-larochelle.fr;17 NUMERIQUE
+2017040401913T;A4;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040401913T;A4;eau.service.technique@ville-larochelle.fr;SNCF
+2017040401913T;A4;eau.service.technique@ville-larochelle.fr;GRTGAZ PECA RPCL ZONE DE SURGERES
+2017040401913T;A4;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2017040401913T;A4;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2017040401913T;A4;eau.service.technique@ville-larochelle.fr;ENEDIS-DRPCH-POITOU-CHARENTES
+2017040401913T;A4;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2017040401992T;A4;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040401992T;A4;eau.service.technique@ville-larochelle.fr;GRDF - Direction Réseaux Ouest
+2017040401992T;A4;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040401992T;A4;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2017040401992T;A4;eau.service.technique@ville-larochelle.fr;ENEDIS-DRPCH-POITOU-CHARENTES
+2017040401992T;A4;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
+2017040500913T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040500913T;A3;eau.service.technique@ville-larochelle.fr;GRDF - Direction Réseaux Ouest
+2017040500913T;A3;eau.service.technique@ville-larochelle.fr;17 NUMERIQUE
+2017040500913T;A3;eau.service.technique@ville-larochelle.fr;VILLE DE LA ROCHELLE
+2017040500913T;A3;eau.service.technique@ville-larochelle.fr;ORANGE DT DICT
+2017040500913T;A3;eau.service.technique@ville-larochelle.fr;ENEDIS-DRPCH-POITOU-CHARENTES
+2017040500913T;A3;eau.service.technique@ville-larochelle.fr;Communauté d’Agglomération de La Rochelle
