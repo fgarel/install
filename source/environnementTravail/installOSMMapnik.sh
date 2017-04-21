@@ -98,6 +98,18 @@ echo "git submodule update --init"
 #      git submodule update --init deps/mapbox/variant
 echo "./bootstrap.sh"
       ./bootstrap.sh
+echo "#"
+echo "# Dans le fichier installOSMBoost, nous avons installé"
+echo "# boost avec icu,"
+echo "# Nous allons maintenant faire le lien entre"
+echo "# mapnik et libboost-regex avec icu"
+echo "#"
+echo "# ce lien se fait grace à une recopie de lalibraire"
+echo "# à l'encroit adequat"
+echo "#"
+echo "ln -s /usr/local/lib/libboost_regex.a mason_packages/.link/lib/libboost_regex.a"
+      ln -s /usr/local/lib/libboost_regex.a mason_packages/.link/lib/libboost_regex.a
+echo "#"
 #echo '# En fonction des developpements, il se peut que la compilation'
 #echo '# ne fonctionne pas très bien...'
 #echo '# Entre autre, si il y a des erreurs '
@@ -125,6 +137,14 @@ echo "./bootstrap.sh"
 #      ./configure CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"
 #echo './configure CXX=${CXX} CC=${CC}'
 #      ./configure CXX=${CXX} CC=${CC}
+echo "# Autre facon de faire le lien"
+echo "# mettre les options BOOST_INCLUDES et BOOST_LIBS"
+echo "#"
+echo "# cette astuce a été vue ici"
+echo "# https://github.com/mapnik/mapnik/issues/2124"
+echo "#"
+echo "python scons/scons.py configure CXX=${CXX} CC=${CC} BOOST_INCLUDES=/usr/local/include/ BOOST_LIBS=/usr/local/lib/"
+echo "#"
 echo 'python scons/scons.py configure CXX=${CXX} CC=${CC} CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=1"'
       python scons/scons.py configure CXX=${CXX} CC=${CC} CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"
 echo "#"
