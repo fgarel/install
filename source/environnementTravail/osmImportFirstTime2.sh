@@ -13,97 +13,201 @@ echo "# La doc est ici"
 echo "# http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.44#PostGIS_Tasks_.28Snapshot_Schema.29"
 echo "# http://wiki.openstreetmap.org/wiki/Osmosis/PostGIS_Setup"
 echo "#"
-echo "# On installe d'abord l'extension hstore sur la base osm"
-echo "#"
-echo "sudo -u postgres \\"
-echo "     psql --username=postgres \\"
-echo "          --dbname=osm \\"
-echo "          -c \"CREATE EXTENSION hstore;\""
-      sudo -u postgres \
-           psql --username=postgres \
-                --dbname=osm \
-                -c "CREATE EXTENSION hstore;"
-echo "#"
-echo "#"
-echo "# Puis on execute quelques scripts pour créer des tables dans la base"
-echo "#"
-echo "# Il est d'abord necessaire de se connecter à la base avant de pouvoir"
-echo "# executer des scripts"
-echo "#"
-echo "# Astuce :"
+
+datahost='localhost'
+database='osm'
+datauser='osmuser'
+datapass='osmuser'
+
+echo "# Astuce préalable :"
 echo "#"
 echo "# Pour éviter d'avoir à taper sans arret le mot de passe"
 echo "# il est possible d'editer le fichier ~/.pgpass"
 echo "# --------------------------- #"
 echo "vi ~/.pgpass"
 echo "# --------------------------- #"
-echo "localhost:5432:*:Fred:Fred"
+echo "$datahost:5432:*:$datauser:$datauser"
 echo "# --------------------------- #"
 echo "chmod 600 ~/.pgpass"
 echo "# --------------------------- #"
 echo "#"
+
+
+echo "# On installe d'abord l'extension hstore sur la base $database"
+echo "#"
+echo "sudo -u postgres \\"
+echo "     psql --username=postgres \\"
+echo '          --dbname=$database \'
+echo "          -c \"CREATE EXTENSION hstore;\""
+      sudo -u postgres \
+           psql --username=postgres \
+                --dbname=$database \
+                -c "CREATE EXTENSION hstore;"
+echo "#"
+
+echo "# Dans la base $database, on peut avoir plusieurs schemas"
+echo "#"
+echo '# Faire en sorte de travailler dans le schema apidb'
+echo "#"
+echo 'psql \'
+echo '     --host=$datahost \'
+echo '     --dbname=$database \'
+echo '     --username=$datauser \'
+echo '     -c "ALTER DATABASE $database SET search_path TO apidb, public;"'
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER DATABASE $database SET search_path TO apidb, public;"
+
+echo "#"
+echo "# Puis on execute quelques scripts pour créer des tables dans la base"
+echo "#"
+echo '# Préparation du schema : ajout de tables'
+echo "# Des scripts sont prévus pour ça"
 echo "sudo gunzip /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6.sql.gz"
       sudo gunzip /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6.sql.gz
 echo "#"
+echo "#"
 echo 'psql \'
-echo '     --host=localhost \'
-echo '     --dbname=osm \'
-echo '     --username=Fred \'
-echo '     --no-password \'
+echo '     --host=$datahost \'
+echo '     --dbname=$database \'
+echo '     --username=$datauser \'
 echo '     -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6.sql'
-#      sudo -u Fred \
       psql \
-           --host=localhost \
-           --dbname=osm \
-           --username=Fred \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
            -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6.sql
 echo "#"
 echo 'psql \'
-echo '     --host=localhost \'
-echo '     --dbname=osm \'
-echo '     --username=Fred \'
-echo '     --no-password \'
+echo '     --host=$datahost \'
+echo '     --dbname=$database \'
+echo '     --username=$datauser \'
 echo '     -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_action.sql'
       psql \
-           --host=localhost \
-           --dbname=osm \
-           --username=Fred \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
            -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_action.sql
 echo "#"
 echo 'psql \'
-echo '     --host=localhost \'
-echo '     --dbname=osm \'
-echo '     --username=Fred \'
-echo '     --no-password \'
-echo '          -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_bbox.sql'
-      psql \
-           --host=localhost \
-           --dbname=osm \
-           --username=Fred \
+echo '     --host=$datahost \'
+echo '     --dbname=$database \'
+echo '     --username=$datauser \'
+echo '     -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_bbox.sql'
+      psql  \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
            -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_bbox.sql
 echo "#"
 echo 'psql \'
-echo '     --host=localhost \'
-echo '     --dbname=osm \'
-echo '     --username=Fred \'
-echo '     --no-password \'
+echo '     --host=$datahost \'
+echo '     --dbname=$database \'
+echo '     --username=$datauser \'
 echo '     -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_linestring.sql'
-      psql \
-           --host=localhost \
-           --dbname=osm \
-           --username=Fred \
+      psql  \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
            -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_linestring.sql
 echo "#"
-echo "#"
-echo "#"
-echo "#"
+
+
+echo "# ----------------------------------------------------------"
 echo "# On va importer les données (de la région poitou-charentes)"
 echo "# grace à osmosis"
+echo "# http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.45"
+echo "# ----------------------------------------------------------"
+
+echo '# Faire en sorte de travailler dans le schema apidb'
 echo "#"
+echo 'psql \'
+echo '     --host=$datahost \'
+echo '     --dbname=$database \'
+echo '     --username=$datauser \'
+echo '     -c "ALTER DATABASE $database SET search_path TO apidb, public;"'
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER DATABASE $database SET search_path TO apidb, public;"
+
+#echo "osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \\"
+#echo '        --write-pgsql host="localhost" database="osm" postgresSchema="apidb" user="osmuser" password="osmuser"'
+#osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \
+#        --write-pgsql host="localhost" database="osm" postgresSchema="apidb" user="osmuser" password="osmuser"
 echo "osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \\"
-echo '        --write-pgsql host=\"localhost\" database=\"osm\" user=\"www-data\" password=\"www-data\"'
+echo '        --write-pgsql host="$datahost" database="$database" user="$datauser" password="$datapass"'
       osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \
-              --write-pgsql host="localhost" database="osm" user="Fred" password="Fred"
+              --write-pgsql host="$datahost" database="$database" user="$datauser" password="$datapass"
+
+
+echo "# ----------------------------------------------------------"
+echo "# On va importer les données (de la région poitou-charentes)"
+echo "# grace à osm2pgsql"
+echo "# http://wiki.openstreetmap.org/wiki/Osm2pgsql"
+echo "# ----------------------------------------------------------"
+
+echo '# Faire en sorte de travailler dans le schema osm2pgsql'
 echo "#"
+echo 'psql \'
+echo '     --host=$datahost \'
+echo '     --dbname=$database \'
+echo '     --username=$datauser \'
+echo '     -c "ALTER DATABASE $database SET search_path TO osm2pgsql, public;"'
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER DATABASE $database SET search_path TO osm2pgsql, public;"
+echo "#"
+echo 'osm2pgsql \'
+echo '          --slim \'
+echo '          -C 512 \'
+echo '          --number-processes 2 \'
+echo '          -d osm \'
+echo '          /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf'
+      osm2pgsql \
+                --slim \
+                -C 512 \
+                --number-processes 2 \
+                -d osm \
+                /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf
+
+#echo "# ----------------------------------------------------------"
+#echo "# On va importer les données (de la région poitou-charentes)"
+#echo "# grace à osm2postgresql"
+#echo "# http://wiki.openstreetmap.org/wiki/Osm2postgresql"
+#echo "# ----------------------------------------------------------"
+
+#echo '# Faire en sorte de travailler dans le schema osm2pgsql'
+#echo "#"
+#echo 'psql \'
+#echo '     --host=$datahost \'
+#echo '     --dbname=$database \'
+#echo '     --username=$datauser \'
+#echo '     -c "ALTER DATABASE $database SET search_path TO osm2postgresql, public;"'
+#      psql \
+#           --host=$datahost \
+#           --dbname=$database \
+#           --username=$datauser \
+#           -c "ALTER DATABASE $database SET search_path TO osm2postgresql, public;"
+#echo "#"
+#echo './osm2postgresql_05rc4.sh \'
+#echo '                          --host=$datahost \'
+#echo '                          --dbname=$database \'
+#echo '                          --username=$datauser \'
+#echo '                          --pbf \'
+#echo '                          -f /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf'
+#      ./osm2postgresql_05rc4.sh \
+#                                --host=$datahost \
+#                                --dbname=$database \
+#                                --username=$datauser \
+#                                --pbf \
+#                                -f /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf
+
+
 echo ""
 echo ""

@@ -65,6 +65,7 @@ http://miurahr.github.io/slides/2013-0908-tileman.html#/title
 L'installation de ces composants a été réalisée grâce aux scripts :
 
   - installOSM.sh
+  - installOSMBoost.sh
   - installOSMMapnik.sh
   - installOSMTirex.sh
   - installOSMTilemanDebian.sh

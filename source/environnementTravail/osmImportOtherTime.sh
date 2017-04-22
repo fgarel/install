@@ -9,23 +9,121 @@ echo "###############################################"
 #echo "# Affichage de l'ancienne date"
 #echo "cat /home/fred/Documents/osmosis/state.txt"
 #      cat /home/fred/Documents/osmosis/state.txt
+
+echo "# ----------------------------------------------------------"
+echo '# Import du fichier diff "quotidien" dans la base'
+echo "# grace à osmosis"
+echo "# http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.45"
+echo "# ----------------------------------------------------------"
 echo "#"
-echo "# Import du fichier diff \"quotidien\" dans la base"
-#echo "#"
-#echo "# La version avec l'outil osm2psql au lieu et a la place de osmosis est détaillée ici"
-#echo "# sudo -u www-data osm2pgsl -a changes.osc.gz -e11-17 -o expired-tiles.txt"
-# sudo -u www-data osm2pgsl -a changes.osc.gz -e11-17 -o expired-tiles.txt
+
+datahost='localhost'
+database='osm'
+datauser='osmuser'
+datapass='osmuser'
+
+
+echo "# ----------------------------------------------------------"
+echo "# On va importer les données (de la région poitou-charentes)"
+echo "# grace à osmosis"
+echo "# http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.45"
+echo "# ----------------------------------------------------------"
+
+echo '# Faire en sorte de travailler dans le schema apidb'
+echo "#"
+echo 'psql \'
+echo '     --host=$datahost \'
+echo '     --dbname=$database \'
+echo '     --username=$datauser \'
+echo '     -c "ALTER DATABASE $database SET search_path TO apidb, public;"'
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER DATABASE $database SET search_path TO apidb, public;"
+
 echo "#"
 echo "osmosis --read-xml-change \\"
 echo "        /home/fred/Documents/osmosis/change.osc.gz \\"
-#echo "        --simplify-change \\"
-echo "        --write-pgsql-change host=\"localhost\" database=\"osm\" user=\"Fred\" password=\"Fred\""
+echo '        --write-pgsql-change host="$datahost" database="$database" user="$datauser" password="$datapass"'
       osmosis --read-xml-change \
               /home/fred/Documents/osmosis/change.osc.gz \
-              --write-pgsql-change host="localhost" database="osm" user="Fred" password="Fred"
+              --write-pgsql-change host="$datahost" database="$database" user="$datauser" password="$datapass"
 echo "#"
-echo "# Affichage de la nouvelle date"
+#echo "# Affichage de la nouvelle date"
 echo "cat /home/fred/Documents/osmosis/state.txt"
       cat /home/fred/Documents/osmosis/state.txt
 echo "#"
+
+echo "# ----------------------------------------------------------"
+echo '# Import du fichier diff "quotidien" dans la base'
+echo "# grace à osm2pgsql"
+echo "# http://wiki.openstreetmap.org/wiki/Osm2pgsql"
+echo "# ----------------------------------------------------------"
+
+echo '# Faire en sorte de travailler dans le schema osm2pgsql'
+echo "#"
+echo 'psql \'
+echo '     --host=$datahost \'
+echo '     --dbname=$database \'
+echo '     --username=$datauser \'
+echo '     -c "ALTER DATABASE $database SET search_path TO osm2pgsql, public;"'
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER DATABASE $database SET search_path TO osm2pgsql, public;"
+echo "#"
+echo 'osm2pgsql \'
+echo '          -a \'
+echo '          --slim \'
+echo '          -C 512 \'
+echo '          --number-processes 2 \'
+echo '          -d osm \'
+echo '          /home/fred/Documents/osmosis/change.osc.gz \'
+echo '          -e11-17 \'
+echo '          -o /home/fred/Documents/osmosis/expired-tiles.txt'
+      osm2pgsql \
+                -a \
+                --slim \
+                -C 512 \
+                --number-processes 2 \
+                -d osm \
+                /home/fred/Documents/osmosis/change.osc.gz \
+                -e11-17 \
+                -o /home/fred/Documents/osmosis/expired-tiles.txt
+echo "#"
+
+#echo "# ----------------------------------------------------------"
+#echo '# Import du fichier diff "quotidien" dans la base'
+#echo "# grace à osm2postgresql"
+#echo "# http://wiki.openstreetmap.org/wiki/Osm2postgresql"
+#echo "# ----------------------------------------------------------"
+
+
+#echo '# Faire en sorte de travailler dans le schema osm2pgsql'
 #echo "#"
+#echo 'psql \'
+#echo '     --host=$datahost \'
+#echo '     --dbname=$database \'
+#echo '     --username=$datauser \'
+#echo '     -c "ALTER DATABASE $database SET search_path TO osm2postgresql, public;"'
+#      psql \
+#           --host=$datahost \
+#           --dbname=$database \
+#           --username=$datauser \
+#           -c "ALTER DATABASE $database SET search_path TO osm2postgresql, public;"
+#echo "#"
+#echo './osm2postgresql_05rc4.sh \'
+#echo '                          --host=$datahost \'
+#echo '                          --dbname=$database \'
+#echo '                          --username=$datauser \'
+#echo '                          --pbf \'
+#echo '                          -f /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf'
+#      ./osm2postgresql_05rc4.sh \
+#                                --host=$datahost \
+#                                --dbname=$database \
+#                                --username=$datauser \
+#                                --pbf \
+#                                -f /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf
+echo "#"
