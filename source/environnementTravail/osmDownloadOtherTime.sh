@@ -19,25 +19,32 @@ echo "###############################################"
 #echo "cat /home/fred/Documents/osmosis/state.txt"
 #      cat /home/fred/Documents/osmosis/state.txt
 echo "#"
+
+echo "cd ~/Documents/osmosis"
+      cd ~/Documents/osmosis
+echo "#"
 echo "# Téléchargement d'un fichier diff \"quotidien\""
-#echo "# # sudo -u www-data \\"
+echo "sudo -u www-data \\"
 echo "osmosis --read-replication-interval \\"
-echo "        workingDirectory=/home/fred/Documents/osmosis \\"
+echo "        workingDirectory=. \\"
 echo "        --simplify-change \\"
 echo "        --write-xml-change \\"
-echo "        /home/fred/Documents/osmosis/change.osc.gz"
+echo "        change.osc.gz"
+      sudo -u www-data \
       osmosis --read-replication-interval \
-              workingDirectory=/home/fred/Documents/osmosis \
+              workingDirectory=. \
               --simplify-change \
               --write-xml-change \
-              /home/fred/Documents/osmosis/change.osc.gz
+              change.osc.gz
 echo "#"
 echo "# Affichage de le nouvelle date"
 echo "cat /home/fred/Documents/osmosis/state.txt"
       cat /home/fred/Documents/osmosis/state.txt
 echo "#"
+echo "cd ~/Documents/install/source/environnementTravail/"
+      cd ~/Documents/install/source/environnementTravail/
+echo "#"
 #echo "# Affichage des changements"
 #echo "#zcat /home/fred/Documents/osmosis/change.osc.gz"
 #      #zcat /home/fred/Documents/osmosis/change.osc.gz
 #echo "#"
-

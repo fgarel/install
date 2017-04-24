@@ -73,25 +73,37 @@ echo '     -c "ALTER DATABASE $database SET search_path TO osm2pgsql, public;"'
            --dbname=$database \
            --username=$datauser \
            -c "ALTER DATABASE $database SET search_path TO osm2pgsql, public;"
+
 echo "#"
+echo "# Attention il faut se mettre dans le repertoire osmosis pour lancer la commande ...."
+echo "#"
+echo "cd ~/Documents/osmosis"
+      cd ~/Documents/osmosis
+echo "#"
+echo 'sudo -u www-data \'
 echo 'osm2pgsql \'
 echo '          -a \'
 echo '          --slim \'
 echo '          -C 512 \'
 echo '          --number-processes 2 \'
-echo '          -d osm \'
-echo '          /home/fred/Documents/osmosis/change.osc.gz \'
+echo '          -d $database \'
+#echo '          --username $datauser \'
+echo '          change.osc.gz \'
 echo '          -e11-17 \'
-echo '          -o /home/fred/Documents/osmosis/expired-tiles.txt'
+echo '          -o expired-tiles.txt'
+      sudo -u www-data \
       osm2pgsql \
                 -a \
                 --slim \
                 -C 512 \
                 --number-processes 2 \
-                -d osm \
-                /home/fred/Documents/osmosis/change.osc.gz \
+                -d $database \
+                change.osc.gz \
                 -e11-17 \
-                -o /home/fred/Documents/osmosis/expired-tiles.txt
+                -o expired-tiles.txt
+echo "#"
+echo "cd ~/Documents/install/source/environnementTravail"
+      cd ~/Documents/install/source/environnementTravail
 echo "#"
 
 #echo "# ----------------------------------------------------------"

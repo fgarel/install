@@ -4,7 +4,7 @@
 
 Dans cette partie, nous allons nous concentrer sur la mise en oeuvre d'un espace de stockage (une base postgresql), l'installation d'outil permettant d'importer de la données du serveur public vers notre instance privée
 
-## les outils
+## Les outils
 
 L'installation des composants OSM nécessite parfois des prérequis.
 
@@ -104,7 +104,13 @@ cd ~/Documents/install/source/environnementTravail/
 ./installPostgresqlOsm.sh
 ```
 
-## Les scripts pour l'import des données
+## Les scripts et utilitaires pour l'import des données
+
+Nous allons tester plusieurs utilitaires pour l'import des données.
+
+L'utilisation de ces utilitaires va etre automatisée avec des scripts.
+
+### Les scripts
 
 les différents scripts osm sont ici:
  - osmCreateRepository.sh
@@ -117,17 +123,47 @@ les différents scripts osm sont ici:
  - osmTest.sh
 
 
-Prérequis :
+### Les utilitaires
+
+Les utilitaires pour manipuler et importer les données osm sont :
+ - osmosis
+ - osm2pgsql
+ - osm2postgresql_05rc4
+ - imposm
+
+ ....
+
+ - osmctools ? https://switch2osm.org/loading-osm-data/
+   osmconvert, osmupdate, osmfilter....
+
+
+#### osmosis
+
 Pour que ces scripts fonctionnent, il faut que l'utilitaire *osmosis* soit installé sur le poste.
 
 ```
 ./installOSM.sh
 ```
 
+#### osm2pgsql
+
+C'est la version de la distribution qui est utilisé
+
+
+#### osm2postgrsql
+
+**TODO** : Réussir à le faire fonctionner ....
+
 Il faut aussi que le script *osm2postgresql_05rc4.sh* soit lui aussi sur le poste.
 Cet outil est disponible ici (installation à faire à la mian)
 
 http://wiki.openstreetmap.org/wiki/Osm2postgresql
+
+#### imposm
+
+Cet utilitaire est décrit ici :
+
+https://imposm.org/
 
 ### Première utilisation
 
@@ -182,8 +218,28 @@ On peut lancer l'execution de l'import
 ```
 
 L'import est réalisé dans différenst schémas.
-On ne gardera peut-etre pas tous ces schemas : on fera le choix en fonction de l'usage.
 
+L'utiilitaire osmosis va nous permettre de stocker les données dans le schéma apidb.
+
+L'utilitaire osm2pgsql va nous permettre de stocker les données dans le schema osm2pgsql.
+
+Avec cet utilitaire, il est possible de paramétrer l'import selon un "style".
+
+La doc sur le "style", c'est à dire sur la facon de paramétrer l'import des données dans postgresql à l'aide de l'outil osm2pgsql est ici :
+
+https://wiki.openstreetmap.org/wiki/Osm2pgsql#Import_style
+
+Le style par defaut est ici
+
+https://github.com/openstreetmap/osm2pgsql/blob/master/default.style
+
+et ici
+
+```
+/usr/share/osm2pgsql/default.syle
+```
+
+On modifiera peut-être le style par defaut et on ne gardera peut-être pas tous ces schemas : on fera le choix en fonction de l'usage.
 
 Donc, l'enchainement de tous les scripts pour le premier chargement des données est :
 

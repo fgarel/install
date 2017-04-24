@@ -163,19 +163,31 @@ echo '     -c "ALTER DATABASE $database SET search_path TO osm2pgsql, public;"'
            --username=$datauser \
            -c "ALTER DATABASE $database SET search_path TO osm2pgsql, public;"
 echo "#"
+
+echo "#"
+echo "# Attention il faut se mettre dans le repertoire osmosis pour lancer la commande ...."
+echo "#"
+echo "cd ~/Documents/osmosis"
+      cd ~/Documents/osmosis
+echo "#"
+echo 'sudo -u www-data \'
 echo 'osm2pgsql \'
 echo '          --slim \'
 echo '          -C 512 \'
 echo '          --number-processes 2 \'
-echo '          -d osm \'
-echo '          /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf'
+echo '          -d $database \'
+echo '          poitou-charentes-latest.osm.pbf'
+      sudo -u www-data \
       osm2pgsql \
                 --slim \
                 -C 512 \
                 --number-processes 2 \
-                -d osm \
-                /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf
-
+                -d $database \
+                poitou-charentes-latest.osm.pbf
+echo "#"
+echo "cd ~/Documents/install/source/environnementTravail"
+      cd ~/Documents/install/source/environnementTravail
+echo "#"
 #echo "# ----------------------------------------------------------"
 #echo "# On va importer les données (de la région poitou-charentes)"
 #echo "# grace à osm2postgresql"

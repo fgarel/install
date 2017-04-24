@@ -32,15 +32,15 @@ echo '# ================================================='
 
 #listdbtodrop='osm osm_complement voieadresse voieadresse_complement sdis sdis_complement espu espu_complement voirie_filaire voirie_filaire_complement cadastre cadastre_complement sandbox graphe template_postgis mapnik-tmp-postgis-test-db' ;
 listdbtodrop='osm osm_complement voieadresse voieadresse_complement sdis sdis_complement espu espu_complement graphe template_postgis mapnik-tmp-postgis-test-db' ;
-listusertodrop='Fred www-data osmuser mapnikuser' ;
-listuser='osmuser mapnikuser'
+listusertodrop='Fred fred osmuser mapnikuser www-data' ;
+listuser='osmuser mapnikuser www-data'
 listuserowner='osmuser'  # le propriétaire des bases
 listdb='osm osm_complement voieadresse voieadresse_complement sdis sdis_complement espu espu_complement graphe template_postgis mapnik-tmp-postgis-test-db' ;
 listext='adminpack plpgsql postgis postgis_topology fuzzystrmatch hstore' ;
 # liste des schemas pour la base osm
 # les schemas pour les bases osm sont décrits ici
 # http://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs#Database_Schemas
-listschema='apidb osm2pgsql osm2postgresql'
+#listschema='apidb osm2pgsql osm2postgresql'
 listschema='apidb osm2pgsql'
 
 for database in $listdbtodrop ;
@@ -134,10 +134,12 @@ for postgresqluserowner in $listuserowner ;
     done
 
 # pour la base osm, creation de deux schemas
+# ajout des droits sur ces deux schemas et sur le shema public
+# pour l'utilisateur osmuser
 #
+database='osm'
 for schema in $listschema ;
     do
-        database='osm'
         echo "#" ;
         echo '# Pour la base, ' $database ', installation du schema :' $schema ;
         echo "# ------------------------------------------" ;
@@ -157,22 +159,33 @@ for schema in $listschema ;
              psql --username=postgres \
                   --dbname=$database \
                   -c "GRANT ALL ON SCHEMA $schema TO $listuserowner;"
+        #echo 'sudo -u postgres \' ;
+        #echo '     psql --username=postgres \' ;
+        #echo '          --dbname='$database '\' ;
+        #echo "          -c \"GRANT ALL ON SCHEMA public TO $listuserowner;\"" ;
+        #sudo -u postgres \
+        #     psql --username=postgres \
+        #          --dbname=$database \
+        #          -c "GRANT ALL ON SCHEMA public TO $listuserowner;"
     done
 
 # pour la base osm, pour le schema osm2pgsql, ajout des droits
-# pour l'utilisateur mapnikuser
+# pour les utilisateurs mapnikuser et www-data
 database='osm'
 schema='osm2pgsql'
-user='mapnikuser'
-
-echo 'sudo -u postgres \' ;
-echo '     psql --username=postgres \' ;
-echo '          --dbname='$database '\' ;
-echo "          -c \"GRANT ALL ON SCHEMA $schema TO $user;\"" ;
-sudo -u postgres \
-     psql --username=postgres \
-          --dbname=$database \
-          -c "GRANT ALL ON SCHEMA $schema TO $user;"
+listuser='mapnikuser www-data'
+database='osm'
+for postgresqluser in $listuser ;
+    do
+        echo 'sudo -u postgres \' ;
+        echo '     psql --username=postgres \' ;
+        echo '          --dbname='$database '\' ;
+        echo "          -c \"GRANT ALL ON SCHEMA $schema TO $postgresqluser;\"" ;
+        sudo -u postgres \
+             psql --username=postgres \
+                  --dbname=$database \
+                  -c "GRANT ALL ON SCHEMA $schema TO $postgresqluser;"
+    done
 
 
 #    for postgresqluser in $listuser ;
