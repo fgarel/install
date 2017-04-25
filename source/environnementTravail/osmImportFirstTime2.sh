@@ -175,6 +175,7 @@ echo 'osm2pgsql \'
 echo '          --slim \'
 echo '          -C 512 \'
 echo '          --number-processes 2 \'
+echo '          --cache-strategy sparse \'
 echo '          -d $database \'
 echo '          poitou-charentes-latest.osm.pbf'
       sudo -u www-data \
@@ -182,6 +183,7 @@ echo '          poitou-charentes-latest.osm.pbf'
                 --slim \
                 -C 512 \
                 --number-processes 2 \
+                --cache-strategy sparse \
                 -d $database \
                 poitou-charentes-latest.osm.pbf
 echo "#"

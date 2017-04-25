@@ -86,6 +86,7 @@ echo '          -a \'
 echo '          --slim \'
 echo '          -C 512 \'
 echo '          --number-processes 2 \'
+echo '          --cache-strategy sparse \'
 echo '          -d $database \'
 #echo '          --username $datauser \'
 echo '          change.osc.gz \'
@@ -97,6 +98,7 @@ echo '          -o expired-tiles.txt'
                 --slim \
                 -C 512 \
                 --number-processes 2 \
+                --cache-strategy sparse \
                 -d $database \
                 change.osc.gz \
                 -e11-17 \
