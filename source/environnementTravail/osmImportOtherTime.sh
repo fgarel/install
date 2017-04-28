@@ -88,6 +88,7 @@ echo '          -C 512 \'
 echo '          --number-processes 2 \'
 echo '          --cache-strategy sparse \'
 echo '          -d $database \'
+echo '          --style ~/Documents/install/source/openstreetmap-carto/openstreetmap-carto.style \'
 #echo '          --username $datauser \'
 echo '          change.osc.gz \'
 echo '          -e11-17 \'
@@ -100,6 +101,7 @@ echo '          -o expired-tiles.txt'
                 --number-processes 2 \
                 --cache-strategy sparse \
                 -d $database \
+                --style ~/Documents/install/source/openstreetmap-carto/openstreetmap-carto.style \
                 change.osc.gz \
                 -e11-17 \
                 -o expired-tiles.txt

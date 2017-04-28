@@ -49,11 +49,36 @@ echo "cd ../environnementTravail"
 echo "pwd"
       pwd
 echo "#"
+echo "# Installation d'openstreetmap-carto-vector-tiles"
+echo "cd .."
+      cd ..
+echo "pwd"
+      pwd
+echo "rm -rf openstreetmap-carto-vector-tiles"
+      rm -rf openstreetmap-carto-vector-tiles
+echo "git clone https://github.com/geofabrik/openstreetmap-carto-vector-tiles"
+      git clone https://github.com/geofabrik/openstreetmap-carto-vector-tiles
+echo "cd openstreetmap-carto-vector-tiles"
+      cd openstreetmap-carto-vector-tiles
+echo "pwd"
+      pwd
+echo "#"
+echo "#"
+#echo "sudo make install"
+#      sudo make install
+echo "#"
+echo "cd ../environnementTravail"
+      cd ../environnementTravail
+echo "pwd"
+      pwd
+echo "#"
 echo "#----------------------"
-echo "# Test de l'installation d'openstreetmap-carto :"
+echo "# Test de l'installation d'openstreetmap-carto"
+echo "# et de openstreetmap-carto-vector-tiles :"
 echo "#----------------------"
 echo "# La doc est ici"
 echo "# https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md"
+echo "# https://github.com/geofabrik/openstreetmap-carto-vector-tiles/blob/master/INSTALL.md"
 echo "#"
 echo "# Test 1 : Test de mapnik avec les données osm (et configuration cartocss)"
 echo "#   https://github.com/gravitystorm/openstreetmap-carto/blob/master/CONTRIBUTING.md"

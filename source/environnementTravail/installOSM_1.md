@@ -183,6 +183,14 @@ localhost:5432:*:mapnikuser:mapnikuser
 chmod 600 ~/.pgpass
 ```
 
+On verra ci dessous que l'import des données dans la base osm peut être paramétré à l'aide de "style".
+
+Nous allons donc recupérer les styles grace au script ./installOSMCartoCSS.sh
+
+```
+./installOSMCartoCSS.sh
+```
+
 On commence par créer un répertoire, dans le système de fichier, qui va nous permettre de stocker les données au format planet.
 
 ```
@@ -241,10 +249,13 @@ et ici
 
 On modifiera peut-être le style par defaut et on ne gardera peut-être pas tous ces schemas : on fera le choix en fonction de l'usage.
 
+Le script ./installOSMCartoCSS.sh est chargé de la recuperation des styles spécifiques.
+
 Donc, l'enchainement de tous les scripts pour le premier chargement des données est :
 
 ```
 ./installPostgresqlOsm.sh \
+./installOSMCartoCSS.sh \
 ./osmCreateRepository.sh \
 ./osmDownloadFirstTime.sh \
 ./osmImportFirstTime2.sh
