@@ -142,7 +142,25 @@ echo "osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.os
 echo '        --write-pgsql host="$datahost" database="$database" user="$datauser" password="$datapass"'
       osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \
               --write-pgsql host="$datahost" database="$database" user="$datauser" password="$datapass"
-
+echo "#"
+echo "# Nota :"
+echo "#"
+echo "# En cas de problème d'import (pb de memoire, d'espace disque trop faible, ....)"
+echo "# une piste possible, c'est d'augmenter l'espace disque..."
+echo "# https://help.openstreetmap.org/questions/26900/import-error-could-not-extend-file"
+echo "# Il faut au moins 7 Go, et meme 8 Go d'espace libre...."
+echo "#"
+echo "# recherche de fichier volumineux"
+echo "# find . -size +100000"
+echo "# rm ~/.pgadmin/pgadmin3.log"
+echo "#"
+echo "# tablespace et postgresql"
+echo "# https://www.postgresql.org/docs/current/static/manage-ag-tablespaces.html"
+echo "#"
+echo "# http://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server"
+echo "#"
+echo "# Correction d'erreur de type relation 1663/18421/31582"
+echo "# http://blog.endpoint.com/2012/02/postgres-block-error-xyz.html"
 
 echo "# ----------------------------------------------------------"
 echo "# On va importer les données (de la région poitou-charentes)"
