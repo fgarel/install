@@ -23,6 +23,7 @@ source/icu/*
 source/boost_1_63_0/*
 source/mapnik/*
 source/openstreetmap-carto/*
+source/openstreetmap-carto-vector-tiles/*
 source/python-mapnik/*
 source/tirex/*
 source/tileman/*

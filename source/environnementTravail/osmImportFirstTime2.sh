@@ -195,7 +195,7 @@ echo '          -C 512 \'
 echo '          --number-processes 2 \'
 echo '          --cache-strategy sparse \'
 echo '          -d $database \'
-echo '          --style ~/Documents/install/source/openstreetmap-carto/openstreetmap-carto.style \'
+echo '          --style ~/Documents/install/source/openstreetmap-carto-vector-tiles/openstreetmap-carto.style \'
 echo '          poitou-charentes-latest.osm.pbf'
       sudo -u www-data \
       osm2pgsql \
@@ -204,7 +204,7 @@ echo '          poitou-charentes-latest.osm.pbf'
                 --number-processes 2 \
                 --cache-strategy sparse \
                 -d $database \
-                --style ~/Documents/install/source/openstreetmap-carto/openstreetmap-carto.style \
+                --style ~/Documents/install/source/openstreetmap-carto-vector-tiles/openstreetmap-carto.style \
                 poitou-charentes-latest.osm.pbf
 echo "#"
 echo "cd ~/Documents/install/source/environnementTravail"
