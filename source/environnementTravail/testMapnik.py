@@ -1,21 +1,21 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import mapnik
 
 # mapnik avec xml
 # ===============
-print "1. lecture d'un fichier xml"
+print("1. lecture d'un fichier xml")
 m = mapnik.Map(256,256)
 mapnik.load_map(m, "testMapnik.xml")
 m.zoom_all()
 mapnik.render_to_file(m, "testMapnik.png")
-print "rendered image to 'testMapnik.png'"
+print("rendered image to 'testMapnik.png'")
 
 # mapnik avec style dans python
 # =============================
 # https://github.com/mapnik/mapnik/wiki/GettingStartedInPython
 #
-print "2. instructions en python"
+print("2. instructions en python")
 # Create a Map
 m = mapnik.Map(600,300) # create a map with a given width and height in pixels
 # note: m.srs will default to '+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs'
@@ -58,6 +58,6 @@ m.zoom_all()
 
 # Write the data to a png image called world.png in the current directory
 mapnik.render_to_file(m,'testMapnik2.png', 'png')
-print "rendered image to 'testMapnik2.png'"
-print ""
-print "display testMapnik.png && display testMapnik2.png &"
+print("rendered image to 'testMapnik2.png'")
+print("")
+print("display testMapnik.png && display testMapnik2.png &")

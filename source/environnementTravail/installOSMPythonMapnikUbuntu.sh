@@ -36,38 +36,14 @@ echo "#"
 #      sudo aptitude install python-mapnik
 #echo "sudo aptitude remove python-mapnik"
 #      sudo aptitude remove python-mapnik
-echo "cd .."
-      cd ..
-echo "pwd"
-      pwd
-echo "sudo rm -rf python-mapnik"
-      sudo rm -rf python-mapnik
-echo "git clone https://github.com/mapnik/python-mapnik"
-      git clone https://github.com/mapnik/python-mapnik
-echo "cd python-mapnik"
-      cd python-mapnik
-echo "git submodule update --init"
-      git submodule update --init
-echo "pwd"
-      pwd
-echo "export MASON_BUILD=true"
-      export MASON_BUILD=true
-echo "./bootstrap.sh"
-      ./bootstrap.sh
-#echo "sudo python setup.py develop"
-#      sudo python setup.py develop
-#echo "sudo python setup.py install"
-#      sudo python setup.py install
-echo "#"
-echo "cd ../environnementTravail"
-      cd ../environnementTravail
-echo "pwd"
-      pwd
+echo "sudo aptitude install python3-mapnik"
+      sudo aptitude install python3-mapnik
+
 
 echo "#"
 echo "# Installation de nik2img et nik4"
-echo "sudo -H pip install nik4 ; sudo -H pip install nik2img"
-      sudo -H pip install nik4 ; sudo -H pip install nik2img
+echo "sudo -H pip3 install nik4 ; sudo -H pip3 install nik2img"
+      sudo -H pip3 install nik4 ; sudo -H pip3 install nik2img
 
 echo "#"
 echo "#----------------------"
@@ -122,12 +98,12 @@ echo "#"
 echo "#----------------------"
 echo "# Reste a faire :"
 echo "#----------------------"
+#echo "# ./installOSMCartoCSS.sh"
 #echo "# ./installOSMBoost.sh"
-#echo "# ./installOSMMapnik.sh"
-#echo "# ./installOSMPythonMapnik"
-echo "# ./installOSMCartoCSS.sh"
+#echo "# ./installOSMMapnikUbuntu.sh"
+#echo "# ./installOSMPythonMapnikUbuntu"
 echo "# ./installOSMTirex.sh"
-echo "# ./installOSMTilemanDebian.sh"
+echo "# ./installOSMTilemanDebianUbuntu.sh"
 echo "#----------------------"
 echo "#"
 

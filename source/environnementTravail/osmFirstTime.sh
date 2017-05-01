@@ -25,11 +25,15 @@ echo './osmDownloadFirstTime.sh'
       ./osmDownloadFirstTime.sh
 echo './osmImportFirstTime2.sh'
       ./osmImportFirstTime2.sh
+echo './osmPrepareQgis.sh'
+      ./osmPrepareQgis.sh
 echo './osmTest.sh'
       ./osmTest.sh
-echo './osmMaj15.sh'
-      ./osmMaj15.sh
-echo './osmMaj15.sh'
-      ./osmMaj15.sh
+echo './osmMaj.sh'
+      ./osmMaj.sh
+echo './osmMaj.sh'
+      ./osmMaj.sh
+echo './osmMaj.sh'
+      ./osmMaj.sh
 echo './osmTest.sh'
       ./osmTest.sh

@@ -48,6 +48,14 @@ echo "#"
 echo "sudo -u www-data osmosis --rrii workingDirectory=."
       sudo -u www-data osmosis --rrii workingDirectory=.
 echo "#"
+echo "# Recopie du fichier parametres d'import (style) openstreetmap-carto-vector-tiles"
+echo "# avec les bon droits"
+echo "sudo cp ~/Documents/install/source/openstreetmap-carto-vector-tiles/openstreetmap-carto.style ~/Documents/osmosis/"
+      sudo cp ~/Documents/install/source/openstreetmap-carto-vector-tiles/openstreetmap-carto.style ~/Documents/osmosis/
+echo "#"
+echo "sudo chown www-data:www-data ~/Documents/osmosis/openstreetmap-carto.style"
+      sudo chown www-data:www-data ~/Documents/osmosis/openstreetmap-carto.style
+echo "#"
 echo "cd ~/Documents/install/source/environnementTravail"
       cd ~/Documents/install/source/environnementTravail
 #echo "osmosis --rrii workingDirectory=/home/fred/Documents/osmosis"

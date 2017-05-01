@@ -121,7 +121,15 @@ les différents scripts osm sont ici:
  - osmMaj.sh
  - osmMaj15.sh
  - osmTest.sh
+ - osmPrepareQgis.sh
 
+Le dernier script, **osmPrepareQgis.sh**, ne fait que créer des vues afin d'alléger
+l'usage des données avec Qgis.
+
+Le fihier qgis est ici
+```
+~/Documents/technic/source/voirie/localhost_osm.qgs
+```
 
 ### Les utilitaires
 
@@ -258,7 +266,8 @@ Donc, l'enchainement de tous les scripts pour le premier chargement des données
 ./installOSMCartoCSS.sh \
 ./osmCreateRepository.sh \
 ./osmDownloadFirstTime.sh \
-./osmImportFirstTime2.sh
+./osmImportFirstTime2.sh \
+./osmPrepareQgis.sh
 ```
 
 
