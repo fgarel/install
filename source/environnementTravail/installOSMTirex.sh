@@ -100,14 +100,24 @@ echo "# Les paquets sont placés dans le repertoire parent"
 echo "# /home/fred/Documents/install/source"
 echo "#"
 echo "sudo dpkg -i ../tirex-core.deb"
-      sudo dpkg -i ../tirex-core_0.4.1precise1_amd64.deb
+      #sudo dpkg -i ../tirex-core_0.4.1precise1_amd64.deb
+      sudo dpkg -i ../tirex-core_0.5.2_amd64.deb
+echo "sudo dpkg -i ../tirex-backend-wms.deb"
+      sudo dpkg -i ../tirex-backend-wms_0.5.2_amd64.deb
+echo "sudo dpkg -i ../tirex-backend-mapserver.deb"
+      sudo dpkg -i ../tirex-backend-mapserver_0.5.2_amd64.deb
 echo "sudo dpkg -i ../tirex-backend-mapnik.deb"
-      sudo dpkg -i ../tirex-backend-mapnik_0.4.1precise1_amd64.deb
+      #sudo dpkg -i ../tirex-backend-mapnik_0.4.1precise1_amd64.deb
+      sudo dpkg -i ../tirex-backend-mapnik_0.5.2_amd64.deb
 echo "sudo dpkg -i ../tirex-example-map.deb"
-      sudo dpkg -i ../tirex-example-map_0.4.1precise1_amd64.deb
+      #sudo dpkg -i ../tirex-example-map_0.4.1precise1_amd64.deb
+      sudo dpkg -i ../tirex-example-map_0.5.2_amd64.deb
 echo "#sudo dpkg -i ../tirex-syncd.deb"
       #sudo dpkg -i ../tirex-syncd_0.4.1precise1_amd64.deb
+      sudo dpkg -i ../tirex-syncd_0.5.2_amd64.deb
 echo "#"
+echo "sudo aptitude install perl-mapscript libmapscript-perl"
+      sudo aptitude install perl-mapscript libmapscript-perl
 echo "#"
 echo "sudo aptitude install libtest-simple-perl"
       sudo aptitude install libtest-simple-perl
@@ -119,6 +129,12 @@ echo "cd ../environnementTravail"
       cd ../environnementTravail
 echo "pwd"
       pwd
+echo "#"
+echo "#------------------------"
+echo "# Test du fihcier example"
+echo "#------------------------"
+echo "# mapnik-render testMapnik.xml testMapnik.png"
+echo "# mapnik-render /usr/share/tirex/example-map/example.xml testMapnikTirex.png"
 echo "#"
 echo "#----------------------"
 echo "# Utilisation de tirex "
@@ -157,12 +173,16 @@ echo "#"
 echo "#----------------------"
 echo "# Reste a faire :"
 echo "#----------------------"
+#echo "# ./installOSM.sh"
 #echo "# ./installOSMCartoCSS.sh"
-#echo "# ./installOSMBoostDebian.sh"
-#echo "# ./installOSMMapnikDebian.sh"
-#echo "# ./installOSMPythonMapnikDebian"
+####echo "# ./installOSMBoostDebian.sh"
+####echo "# ./installOSMMapnikDebian.sh"
+#echo "# ./installOSMMapnikUbuntu.sh"
+####echo "# ./installOSMPythonMapnikDebian"
+#echo "# ./installOSMPythonMapnikUbuntu"
 #echo "# ./installOSMTirex.sh"
-echo "# ./installOSMTilemanDebian.sh"
+####echo "# ./installOSMTilemanDebian.sh"
+echo "# ./installOSMTilemanUbuntu.sh"
 echo "#----------------------"
 
 

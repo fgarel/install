@@ -8,7 +8,8 @@
 echo "# 8ème Partie - Installation de mapnik, libmapnik et libmapnik-dev"
 echo "######################################################"
 echo "#"
-echo "# Ce script présente l'installation de mapnik dans l'environnement 'général'"
+echo "# Ce script présente l'installation de mapnik, à partir des source,"
+echo "# dans l'environnement 'général'"
 echo "#"
 echo "# Il existe d'autres scripts pour installer mapnik, mais, pour ces"
 echo "# scripts précédents, dans un environnement virtuel python"
@@ -104,8 +105,8 @@ echo "# boost avec icu,"
 echo "# Nous allons maintenant faire le lien entre"
 echo "# mapnik et libboost-regex avec icu"
 echo "#"
-echo "# ce lien se fait grace à une recopie de lalibraire"
-echo "# à l'encroit adequat"
+echo "# ce lien se fait grace à une recopie de la librairie"
+echo "# à l'endroit adequat"
 echo "#"
 echo "ln -s /usr/local/lib/libboost_regex.a mason_packages/.link/lib/libboost_regex.a"
       ln -s /usr/local/lib/libboost_regex.a mason_packages/.link/lib/libboost_regex.a
@@ -163,10 +164,10 @@ echo "#"
 echo "# Install Mapnik (running configure and compiling first if not done yet)"
 echo "#"
 echo "python scons/scons.py"
-##      python scons/scons.py
+      python scons/scons.py
 echo "#"
 echo "sudo python scons/scons.py install"
-##      sudo python scons/scons.py install
+      sudo python scons/scons.py install
 echo "#"
 #echo "make"
 #      make
@@ -175,14 +176,14 @@ echo "#"
 #      # sudo make install
 echo "#"
 echo "sudo python scons/scons.py test"
-##      sudo python scons/scons.py test
+      sudo python scons/scons.py test
 echo "#"
 #echo "make test"
 #      make test
 echo "#"
 echo "# Les tests sont visibles ici :"
-echo "#firefox /tmp/mapnik-visual-images/visual-test-results/index.html"
-      #firefox /tmp/mapnik-visual-images/visual-test-results/index.html
+echo "firefox file:///tmp/mapnik-visual-images/visual-test-results/index.html &"
+      #firefox file:///tmp/mapnik-visual-images/visual-test-results/index.html
 echo "#"
 echo "cd ../environnementTravail"
       cd ../environnementTravail
@@ -237,12 +238,16 @@ echo "#"
 echo "#----------------------"
 echo "# Reste a faire :"
 echo "#----------------------"
+#echo "# ./installOSM.sh"
 #echo "# ./installOSMCartoCSS.sh"
 #echo "# ./installOSMBoostDebian.sh"
-#echo "# ./installOSMMapnikDebian.sh"
-echo "# ./installOSMPythonMapnikDebian"
+#echo "# ./installOSMMapnikUbuntuSource.sh"
+##echo "# ./installOSMMapnikUbuntuPaquet.sh"
+#echo "# ./installOSMPythonMapnikDebian"
+echo "# ./installOSMPythonMapnikUbuntu"
 echo "# ./installOSMTirex.sh"
-echo "# ./installOSMTilemanDebian.sh"
+####echo "# ./installOSMTilemanDebian.sh"
+echo "# ./installOSMTilemanUbuntu.sh"
 echo "#----------------------"
 
 
