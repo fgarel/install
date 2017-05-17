@@ -4,6 +4,8 @@
 
 Quand on parle d'OSM, il faut déjà distinguer les types de données et les usages qui peuvent en être fait.
 
+Pour faire un résumé très rapide, il y a les données de type "vecteur" et les données de type "tms" (tuiles dejà toutes faites)
+
 Une bonne introduction à OSM est sur cloud.sagemath.com
 
 https://cloud.sagemath.com/projects/c9022f4a-0154-4034-bb05-bf3e56d3e3cd/files/osm/OpenStreetMap.md

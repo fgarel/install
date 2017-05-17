@@ -36,3 +36,12 @@ echo '# tous les jours à 7 heure'
 echo '# 0 7 * * * /home/fred/Documents/install/source/environnementTravail/osmMaj.sh'
 echo '#'
 echo '#---------------------------------------'
+# attention, il faudra peut-etre distinguer l'execution de osmosis et de osm2pgsql
+# en effet, une commande peut-etre utilisée par l'utiliateur normal,
+# tandis que l'autre outil doit etre untilisé par www-data
+# pour ajouter un job à la crontab de www-data, la commande est :
+
+# sudo crontab -u www-data -e
+
+# vu ici : https://askubuntu.com/questions/189189/how-to-run-crontab-as-userwww-data
+# https://askubuntu.com/questions/879530/why-cron-tasks-created-by-www-data-are-not-running/879779#879779
