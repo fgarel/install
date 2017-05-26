@@ -73,6 +73,8 @@ echo "#    /home/fred/Documents/install/source/environnementTravail/msfonts"
 echo "#"
 echo "# Enregistrement de ces nouvelles fontes / polices"
 echo "#"
+echo "fc-cache -vf msfonts/"
+      fc-cache -vf msfonts/
 echo "fc-cache -vf ~/msfonts/"
       fc-cache -vf ~/msfonts/
 echo "#"
@@ -91,6 +93,8 @@ echo "sudo aptitude install git"
       sudo aptitude install git
 echo "git clone https://github.com/powerline/fonts"
       git clone https://github.com/powerline/fonts
+echo "git fetch https://github.com/powerline/fonts"
+      git fetch https://github.com/powerline/fonts
 echo "cd fonts"
       cd fonts
 echo "./install.sh"
@@ -100,8 +104,12 @@ echo "cd .."
 echo "#"
 echo "# Enregistrement de ces nouvelles fontes / polices"
 echo "#"
+echo "fc-cache -vf ~/.local/share/fonts/"
+      fc-cache -vf ~/.local/share/fonts/
 echo "fc-cache -vf ~/.fonts/"
       fc-cache -vf ~/.fonts/
+echo "fc-cache -vf fonts/"
+      fc-cache -vf fonts/
 echo "#"
 echo "# Test d'une fonte/police dans un terminal"
 echo "#"
