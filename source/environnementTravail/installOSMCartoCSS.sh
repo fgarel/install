@@ -81,6 +81,12 @@ echo "# Il est nécessaire d'installer des polices supplémentaires pour utilise
 echo "#"
 echo "sudo aptitude install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
       sudo aptitude install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
+echo "sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+      sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+echo "# Après installation des fonts, il faut les enregistrer"
+echo "# https://wiki.debian.org/Fonts"
+echo "fc-cache -fv # rebuilds cached list of fonts"
+      fc-cache -fv
 echo "#"
 echo "#----------------------"
 echo "# Test de l'installation d'openstreetmap-carto"

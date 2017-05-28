@@ -47,10 +47,10 @@ echo "# http://miurahr.github.io/slides/2013-0908-tileman.html#/title"
 echo "#"
 echo "# Ces paquets sont donc :"
 echo "#"
-echo "sudo aptitude install osmosis"
-      sudo aptitude install osmosis
-echo "sudo aptitude install osm2pgsql"
-      sudo aptitude install osm2pgsql
+echo "sudo aptitude install -y osmosis"
+      sudo aptitude install -y osmosis
+echo "sudo aptitude install -y osm2pgsql"
+      sudo aptitude install -y osm2pgsql
 echo "# pour memoire..."
 echo "# sudo apt-get install libapache2-mod-tile"
       #sudo apt-get install libapache2-mod-tile
@@ -72,8 +72,14 @@ echo "# The name of the database is by default debian-osm-carto."
 echo "# Name of the postgresql database :"
 echo "#"
 echo "#"
-echo "sudo apt-get install gis-osm nik4 viking"
-      sudo apt-get install gis-osm nik4 viking
+#echo "sudo aptitude install -y gis-osm nik4 viking"
+#      sudo aptitude install -y gis-osm nik4 viking
+#echo "sudo aptitude install -y gis-osm"
+#      sudo aptitude install -y gis-osm
+#echo "sudo aptitude install -y nik4"
+#      sudo aptitude install -y nik4
+#echo "sudo aptitude install -y viking"
+#      sudo aptitude install -y viking
 echo "#"
 echo "#----------------------"
 echo "# Reste a faire :"

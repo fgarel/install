@@ -45,22 +45,29 @@ echo "#"
 echo 'export CXX="clang++-3.8" && export CC="clang-3.8"'
       export CXX="clang++-3.8" && export CC="clang-3.8"
 echo "#"
+echo "sudo aptitude remove python3-mapnik"
+      sudo aptitude remove python3-mapnik
+echo "sudo aptitude remove mapnik-utils libmapnik3.0"
+      sudo aptitude remove mapnik-utils libmapnik3.0
 echo "sudo aptitude remove mapnik-doc"
       sudo aptitude remove mapnik-doc
 echo "sudo aptitude remove python-mapnik"
       sudo aptitude remove python-mapnik
 echo "sudo aptitude remove libmapnik-dev"
       sudo aptitude remove libmapnik-dev
-echo "sudo aptitude remove libmapnik3.0"
-      sudo aptitude remove libmapnik3.0
-echo "sudo aptitude remove mapnik-utils"
-      sudo aptitude remove mapnik-utils
-echo "sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
-      sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+
+##echo "sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+##      sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
 echo "# Après installation des fonts, il faut les enregistrer"
 echo "# https://wiki.debian.org/Fonts"
-echo "fc-cache -fv # rebuilds cached list of fonts"
-      fc-cache -fv
+##echo "fc-cache -fv # rebuilds cached list of fonts"
+##      fc-cache -fv
+echo "#"
+echo "sudo aptitude purge libmapnik* mapnik-* python-mapnik"
+      sudo aptitude purge libmapnik* mapnik-* python-mapnik
+echo "#"
+echo "sudo aptitude install libtiff5-dev libharfbuzz-dev libcairo2-dev libproj-dev"
+      sudo aptitude install libtiff5-dev libharfbuzz-dev libcairo2-dev libproj-dev
 echo "#"
 echo "cd .."
       cd ..
@@ -79,20 +86,22 @@ echo "sudo -H rm -rf /usr/local/bin/mapnik*"
       sudo -H rm -rf /usr/local/bin/mapnik*
 echo "sudo ldconfig"
       sudo ldconfig
-echo "rm -rf mapnik"
-      rm -rf mapnik
+##echo "rm -rf mapnik"
+##      rm -rf mapnik
 echo '# Installation de mapnik'
 echo '#   http://mapnik.org/pages/downloads.html'
 echo "#   https://github.com/mapnik/mapnik/wiki/UbuntuInstallation"
 echo '#'
-echo "git clone https://github.com/mapnik/mapnik.git --depth=10"
-      git clone https://github.com/mapnik/mapnik.git --depth=10
+##echo "git clone https://github.com/mapnik/mapnik.git --depth=10"
+##      git clone https://github.com/mapnik/mapnik.git --depth=10
 echo "cd mapnik"
       cd mapnik
 echo "pwd"
       pwd
 #echo 'git checkout v3.0.9'
 #      git checkout v3.0.9
+echo "git fetch origin master"
+      git fetch origin master
 echo "git submodule update --init"
       git submodule update --init
 #echo "git submodule update --init deps/mapbox/variant"
@@ -100,7 +109,15 @@ echo "git submodule update --init"
 echo "./bootstrap.sh"
       ./bootstrap.sh
 echo "#"
-echo "# Dans le fichier installOSMBoost, nous avons installé"
+echo "#"
+echo "# Normalement pour faire une instalation à partir des sources"
+echo "# on fait habituellement les instructions"
+echo "# configure, make, make install"
+echo "# Ici, on va utiliser scons"
+echo "# Utilisation de scons à la place de make"
+echo "# https://github.com/mapnik/mapnik/wiki/UsingScons"
+echo "#"
+echo "# Dans le script installOSMBoostDebian.sh, nous avons installé"
 echo "# boost avec icu,"
 echo "# Nous allons maintenant faire le lien entre"
 echo "# mapnik et libboost-regex avec icu"
@@ -127,9 +144,9 @@ echo "#"
 #echo '# ou ici'
 #echo '# https://github.com/mapnik/mapnik/blob/master/INSTALL.md'
 #echo '# ./configure CUSTOM_CXXFLAGS="-g -I/usr/include" CUSTOM_LDFLAGS="-L/usr/lib"'
-#echo '# Autre solution : changer de branche'
-#echo "git checkout v3.0.11"
-#      git checkout v3.0.11
+echo '# Autre solution : changer de branche'
+echo "git checkout v3.0.9"
+      git checkout v3.0.9
 #echo "./configure"
 #      ./configure
 #echo "./configure CXX=g++ CC=gcc"
@@ -138,6 +155,7 @@ echo "#"
 #      ./configure CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"
 #echo './configure CXX=${CXX} CC=${CC}'
 #      ./configure CXX=${CXX} CC=${CC}
+echo "#"
 echo "# Autre facon de faire le lien"
 echo "# mettre les options BOOST_INCLUDES et BOOST_LIBS"
 echo "#"
@@ -149,37 +167,36 @@ echo "#"
 echo 'python scons/scons.py configure CXX=${CXX} CC=${CC} CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=1"'
       python scons/scons.py configure CXX=${CXX} CC=${CC} CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"
 echo "#"
-echo "# Utilisation de scons à la place de make"
-echo "# https://github.com/mapnik/mapnik/wiki/UsingScons"
-echo "#"
-echo "# Astuce en cas de probleme de plugin"
-echo "#   Nous avons un problème de chargement de plugins :"
-echo "#   https://github.com/mapnik/mapnik/wiki/PluginArchitecture"
-echo "#   To compile the plugins statically with mapnik library"
-echo "#   (https://github.com/mapnik/mapnik/tree/static-plugins)"
-echo "#"
-echo "#   sudo python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'"
-      #   sudo python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'
 echo "#"
 echo "# Install Mapnik (running configure and compiling first if not done yet)"
 echo "#"
-echo "python scons/scons.py"
-      python scons/scons.py
+echo "# Astuce, car nous avons un problème de chargement de plugins :"
+echo "# https://github.com/mapnik/mapnik/wiki/PluginArchitecture"
+echo "# To compile the plugins statically with mapnik library"
+echo "# (ttps://github.com/mapnik/mapnik/tree/static-plugins"
 echo "#"
+echo "# Au lieu de faire un scons sans paramètre :"
+echo "# python scons/scons.py"
+      # python scons/scons.py
+#echo "make"
+#      make
+echo "# On ajoute les paramètres adéquats :"
+echo "#sudo python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'"
+      #sudo python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'
+echo "python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'"
+      python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'
+echo "#"
+echo "# Puis on fait l'install"
+#echo "# sudo make install"
+#      # sudo make install
 echo "sudo python scons/scons.py install"
       sudo python scons/scons.py install
 echo "#"
-#echo "make"
-#      make
-#echo "#"
-#echo "# sudo make install"
-#      # sudo make install
-echo "#"
-echo "sudo python scons/scons.py test"
-      sudo python scons/scons.py test
-echo "#"
+echo "# et enfin, on execute les tests"
 #echo "make test"
 #      make test
+echo "sudo python scons/scons.py test"
+      sudo python scons/scons.py test
 echo "#"
 echo "# Les tests sont visibles ici :"
 echo "firefox file:///tmp/mapnik-visual-images/visual-test-results/index.html &"
