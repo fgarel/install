@@ -28,6 +28,17 @@ ssh -f \
     -L 43290:dsibdd09.mairie.fr:5432 \
     fred@vlr6180y
 #
+# Fabrication du troisième tiers du tunnel (entre la machine VLR6180Y et la machine brulhois)
+# (ports ...0000 et +)
+#
+echo "# Mot de passe pour vlr6180y"
+ssh -f \
+    -o ServerAliveInterval=240 \
+    -N \
+    -X \
+    -L 43291:172.17.150.6:5432 \
+    fred@vlr6180y
+#
 
 echo "# "
 echo "# Maintenant, à partir de VLR6180Y, il est possible de se connecter vers"
@@ -35,6 +46,13 @@ echo "# une base du serveur dsibdd09 via vlr6180y"
 echo "# psql -h localhost -p 43290 -d cadlr -U sig"
 echo "# "
 echo "# Mie3B.."
+echo "# "
+echo "# Maintenant, à partir de VLR6180Y, il est possible de se connecter vers"
+echo "# une base du serveur brulhois via vlr6180y"
+echo "# psql -h localhost -p 43291 -d sig -U prenom.nom"
+echo "# "
+echo "# Mie7.."
+#
 #
 
 
@@ -54,6 +72,7 @@ ssh -f \
     -R 50839:localhost:80 \
     -R 52239:localhost:22 \
     -R 52390:localhost:43290 \
+    -R 52391:localhost:43291 \
     fred@cdalr.fr
 #
 #
@@ -70,6 +89,7 @@ ssh -f \
     -R 50849:localhost:80 \
     -R 52249:localhost:22 \
     -R 52490:localhost:43290 \
+    -R 52491:localhost:43291 \
     fgarel@ssh.freeshell.de \
     -p 443
 #

@@ -44,6 +44,8 @@ ssh -f \
     -L 62231:localhost:52231 \
     -L 62390:localhost:52390 \
     -L 62380:localhost:52380 \
+    -L 62391:localhost:52391 \
+    -L 62381:localhost:52381 \
     -L 63230:localhost:43230 \
     fred@cdalr.fr
 #
@@ -77,6 +79,8 @@ ssh -f \
     -L 62241:localhost:52241 \
     -L 62490:localhost:52490 \
     -L 62480:localhost:52480 \
+    -L 62491:localhost:52491 \
+    -L 62481:localhost:52481 \
     fgarel@ssh.freeshell.de \
     -p 443
 #
@@ -110,6 +114,8 @@ ssh -f \
 #    -L 62251:localhost:52251 \
 #    -L 62590:localhost:52590 \
 #    -L 62580:localhost:52580 \
+#    -L 62591:localhost:52591 \
+#    -L 62581:localhost:52581 \
 #    fred@fgarel.synology.me
 #
 echo "# "
@@ -118,7 +124,7 @@ echo "# ---------------------------------------------"
 echo "# Maintenant, à partir de votre machine, il est possible de se connecter vers :"
 echo "# tux0         => ssh -p 62231 localhost"
 echo "# zenbook      => ssh -p 62232 localhost"
-echo "# VLR6180X     => ssh -p 42238 localhost"
+echo "# VLR6180X     => ssh -p 62238 localhost"
 echo "# VLR6180Y     => ssh -p 62239 localhost"
 echo "# ssh.cdalr.fr => ssh -p 22 fred@localhost"
 echo "#"
@@ -145,8 +151,8 @@ echo "# 6.... : connexion indirecte"
 echo "# .32.. : protocole postgresql"
 echo "# ...3. : via cdalr"
 echo "# ....0 : distante après le tunnel = cadlr"
-echo "# ....9 : local après le tunnel = VLR6180Y"
 echo "# ....8 : local après le tunnel = VLR6180X"
+echo "# ....9 : local après le tunnel = VLR6180Y"
 echo "# "
 echo "# 63230 : cdalr_sandbox_cda_via_tunnel_cdalr"
 echo "# 63239 : vlr6180y_origine_Fred_via_tunnel_cdalr"
@@ -157,11 +163,17 @@ echo "# .2... : protocole postgresql"
 echo "# ..3.. : via ssh.cdalr.fr"
 echo "# ...9. : via VLR6180Y"
 echo "# ....0 : distante après le troisième tiers = dsibdd09"
+echo "# ....1 : distante après le troisième tiers = brulhois"
 echo "# "
 echo "# 62380 : dsibdd09_postgres_sig_via_tunnel_cdalr_vlr6180x"
 echo "# 62390 : dsibdd09_postgres_sig_via_tunnel_cdalr_vlr6180y"
 echo "# 62480 : dsibdd09_postgres_sig_via_tunnel_freeshell_vlr6180x"
-echo "# 62480 : dsibdd09_postgres_sig_via_tunnel_freeshell_vlr6180y"
+echo "# 62490 : dsibdd09_postgres_sig_via_tunnel_freeshell_vlr6180y"
+echo "# "
+echo "# 62381 : brulhois_sig_prenomnom_via_tunnel_cdalr_vlr6180x"
+echo "# 62391 : brulhois_sig_prenomnom_via_tunnel_cdalr_vlr6180y"
+echo "# 62481 : brulhois_sig_prenomnom_via_tunnel_freeshell_vlr6180x"
+echo "# 62491 : brulhois_sig_prenomnom_via_tunnel_freeshell_vlr6180y"
 echo "# "
 echo "# "
 echo "# ---------------------------------------------"
