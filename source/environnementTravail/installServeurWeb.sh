@@ -38,7 +38,7 @@ echo "sudo aptitude install -y gunicorn3"
       sudo aptitude install -y gunicorn3
 
 
-echo 
+echo
 echo ""
 echo "# Utilisation d'un fichier de configuration nginx existant"
 
@@ -69,6 +69,72 @@ echo "sudo ln -s /etc/nginx/sites-available/flask_cdalr_fr /etc/nginx/sites-enab
 echo "# sudo ln -s /etc/nginx/sites-available/flask_mairie_fr /etc/nginx/sites-enabled/flask_mairie_fr"
       # sudo ln -s /etc/nginx/sites-available/flask_mairie_fr /etc/nginx/sites-enabled/flask_mairie_fr
 echo ""
+echo "# Recopie du fichier de configuration de nginx, special djangopcrs"
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangopcrs_garel_eu /etc/nginx/sites-available/djangopcrs_garel_eu"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangopcrs_garel_eu /etc/nginx/sites-available/djangopcrs_garel_eu
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangopcrs_cdalr_fr /etc/nginx/sites-available/djangopcrs_cdalr_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangopcrs_cdalr_fr /etc/nginx/sites-available/djangopcrs_cdalr_fr
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangopcrs_mairie_fr /etc/nginx/sites-available/djangopcrs_mairie_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangopcrs_mairie_fr /etc/nginx/sites-available/djangopcrs_mairie_fr
+echo "#"
+echo "# Prise en compte de ces paramètres"
+echo "sudo ln -s /etc/nginx/sites-available/flask_garel_eu /etc/nginx/sites-enabled/djangopcrs_garel_eu"
+      sudo ln -s /etc/nginx/sites-available/flask_garel_eu /etc/nginx/sites-enabled/djangopcrs_garel_eu
+echo "sudo ln -s /etc/nginx/sites-available/flask_cdalr_fr /etc/nginx/sites-enabled/djangopcrs_cdalr_fr"
+      sudo ln -s /etc/nginx/sites-available/flask_cdalr_fr /etc/nginx/sites-enabled/djangopcrs_cdalr_fr
+echo "# sudo ln -s /etc/nginx/sites-available/flask_mairie_fr /etc/nginx/sites-enabled/djangopcrs_mairie_fr"
+      # sudo ln -s /etc/nginx/sites-available/flask_mairie_fr /etc/nginx/sites-enabled/djangopcrs_mairie_fr
+echo "#"
+echo ""
+echo "# Recopie du fichier de configuration de nginx, special djangoqgis"
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangoqgis_garel_eu /etc/nginx/sites-available/djangoqgis_garel_eu"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangoqgis_garel_eu /etc/nginx/sites-available/djangoqgis_garel_eu
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangoqgis_cdalr_fr /etc/nginx/sites-available/djangoqgis_cdalr_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangoqgis_cdalr_fr /etc/nginx/sites-available/djangoqgis_cdalr_fr
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangoqgis_mairie_fr /etc/nginx/sites-available/djangoqgis_mairie_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangoqgis_mairie_fr /etc/nginx/sites-available/djangoqgis_mairie_fr
+echo "#"
+echo "# Prise en compte de ces paramètres"
+echo "sudo ln -s /etc/nginx/sites-available/flask_garel_eu /etc/nginx/sites-enabled/djangoqgis_garel_eu"
+      sudo ln -s /etc/nginx/sites-available/flask_garel_eu /etc/nginx/sites-enabled/djangoqgis_garel_eu
+echo "sudo ln -s /etc/nginx/sites-available/flask_cdalr_fr /etc/nginx/sites-enabled/djangoqgis_cdalr_fr"
+      sudo ln -s /etc/nginx/sites-available/flask_cdalr_fr /etc/nginx/sites-enabled/djangoqgis_cdalr_fr
+echo "# sudo ln -s /etc/nginx/sites-available/flask_mairie_fr /etc/nginx/sites-enabled/djangoqgis_mairie_fr"
+      # sudo ln -s /etc/nginx/sites-available/flask_mairie_fr /etc/nginx/sites-enabled/djangoqgis_mairie_fr
+echo "#"
+echo ""
+echo "# Recopie du fichier de configuration de nginx, special djangotaiga"
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangotaiga_garel_eu /etc/nginx/sites-available/djangotaiga_garel_eu"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangotaiga_garel_eu /etc/nginx/sites-available/djangotaiga_garel_eu
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangotaiga_cdalr_fr /etc/nginx/sites-available/djangotaiga_cdalr_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangotaiga_cdalr_fr /etc/nginx/sites-available/djangotaiga_cdalr_fr
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangotaiga_mairie_fr /etc/nginx/sites-available/djangotaiga_mairie_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangotaiga_mairie_fr /etc/nginx/sites-available/djangotaiga_mairie_fr
+echo "#"
+echo "# Prise en compte de ces paramètres"
+echo "sudo ln -s /etc/nginx/sites-available/flask_garel_eu /etc/nginx/sites-enabled/djangotaiga_garel_eu"
+      sudo ln -s /etc/nginx/sites-available/flask_garel_eu /etc/nginx/sites-enabled/djangotaiga_garel_eu
+echo "sudo ln -s /etc/nginx/sites-available/flask_cdalr_fr /etc/nginx/sites-enabled/djangotaiga_cdalr_fr"
+      sudo ln -s /etc/nginx/sites-available/flask_cdalr_fr /etc/nginx/sites-enabled/djangotaiga_cdalr_fr
+echo "# sudo ln -s /etc/nginx/sites-available/flask_mairie_fr /etc/nginx/sites-enabled/djangotaiga_mairie_fr"
+      # sudo ln -s /etc/nginx/sites-available/flask_mairie_fr /etc/nginx/sites-enabled/djangotaiga_mairie_fr
+echo "#"
+echo "# Recopie du fichier de configuration de nginx, special djangotemplate"
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangotemplate_garel_eu /etc/nginx/sites-available/djangotemplate_garel_eu"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangotemplate_garel_eu /etc/nginx/sites-available/djangotemplate_garel_eu
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangotemplate_cdalr_fr /etc/nginx/sites-available/djangotemplate_cdalr_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangotemplate_cdalr_fr /etc/nginx/sites-available/djangotemplate_cdalr_fr
+echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangotemplate_mairie_fr /etc/nginx/sites-available/djangotemplate_mairie_fr"
+      sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/djangotemplate_mairie_fr /etc/nginx/sites-available/djangotemplate_mairie_fr
+echo "#"
+echo "# Prise en compte de ces paramètres"
+echo "sudo ln -s /etc/nginx/sites-available/flask_garel_eu /etc/nginx/sites-enabled/djangotemplate_garel_eu"
+      sudo ln -s /etc/nginx/sites-available/flask_garel_eu /etc/nginx/sites-enabled/djangotemplate_garel_eu
+echo "sudo ln -s /etc/nginx/sites-available/flask_cdalr_fr /etc/nginx/sites-enabled/djangotemplate_cdalr_fr"
+      sudo ln -s /etc/nginx/sites-available/flask_cdalr_fr /etc/nginx/sites-enabled/djangotemplate_cdalr_fr
+echo "# sudo ln -s /etc/nginx/sites-available/flask_mairie_fr /etc/nginx/sites-enabled/djangotemplate_mairie_fr"
+      # sudo ln -s /etc/nginx/sites-available/flask_mairie_fr /etc/nginx/sites-enabled/djangotemplate_mairie_fr
+echo "#"
 echo "# Recopie du fichier de configuration de nginx, special pgadmin4"
 echo "sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/pgadmin_garel_eu /etc/nginx/sites-available/pgadmin_garel_eu"
       sudo cp /home/fred/Documents/install/source/environnementTravail/nginxFlask/pgadmin_garel_eu /etc/nginx/sites-available/pgadmin_garel_eu
