@@ -1,4 +1,4 @@
-"""qgis/blog URL Configuration
+"""qgis/qgis URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.8/topics/http/urls/
@@ -14,14 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import url
-from blog import views
+from qgis import views
 
 
 urlpatterns = [
-    url(r'^accueil/$', views.home),
-    url(r'^article/(?P<id_article>\d+)/$', views.show_article),
-    url(r'^articles/(?P<year>\d{4})/(?P<month>\d{2})/$', views.list_articles),
-    url(r'^redirection/$', views.redirection),
-    url(r'^$', views.current_date),
-    url(r'^addition/(?P<nombre1>\d+)/(?P<nombre2>\d+)/$', views.addition),
+    url(r'^$', views.home),
+    url(r'^getMap$', views.getMap),
 ]

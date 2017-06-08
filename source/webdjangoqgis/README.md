@@ -2,7 +2,7 @@
 le projet web django qgis va contenir plusieurs applications
 
 ## Crepes bretonnes
-La première application est issu du livre 
+La première application est issu du livre
 "Développez votre site web avec le framework DJANGO"
 Création d'une application dans un projet, page 20
 ```
@@ -19,6 +19,12 @@ Modification du fichier djangoqgis/urls.py
 et du fichier blog/urls.py
 
 
-## qgis sans les mains
+## Qgis en coulisse (Qgis sans les mains)
+Creation de l'application
+```
+python manage.py startapp qgis
+```
+
+
 
 ## symbologie

@@ -1,0 +1,36 @@
+server {
+    listen 80;
+
+    server_name __;
+
+    root /var/www/;
+
+    location / {
+        index index.html;
+		    # First attempt to serve request as file, then
+		    # as directory, then fall back to displaying a 404.
+		    try_files $uri $uri/ =404;
+    }
+
+
+    location ~ \.py$ {
+        # try_files $uri =404;
+        include uwsgi_params;
+        uwsgi_pass unix:/home/fred/Documents/report/source/QGisEnCoulisse/pythonServer/myProject.sock;
+ 	  }
+
+    location /python {
+        index index.html index.htm index.py;
+        autoindex on;
+
+        #include /etc/nginx/uwsgi_params;
+
+        include uwsgi_params;
+        uwsgi_pass unix:/home/fred/Documents/report/source/QGisEnCoulisse/pythonServer/myProject.sock;
+
+        #uwsgi_param Host $host;
+        #uwsgi_param X-Real-IP $remote_addr;
+        #uwsgi_param X-Forwarded-For $proxy_add_x_forwarded_for;
+        #uwsgi_param X-Forwarded-Proto $http_x_forwarded_proto;
+    }
+}
