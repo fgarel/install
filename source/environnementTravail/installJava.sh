@@ -109,9 +109,12 @@ echo "# vi /var/lib/tomcat8/conf/tomcat-users.xml"
 echo "#"
 echo "<tomcat-users>"
 echo '  <role rolename="admin-gui"/>'
+echo '  <role rolename="admin-script"/>'
 echo '  <role rolename="manager-gui"/>'
+echo '  <role rolename="manager-script"/>'
 echo '  <role rolename="profil-01"/>'
 echo '  <user username="fred" password="secret" roles="admin-gui,manager-gui"/>'
+echo '  <user username="admin" password="secret" roles="admin-script,manager-script"/>'
 echo '  <user username="geoserver" password="geoserver" roles="profil-01"/>'
 echo "</tomcat-users>"
 echo "#"

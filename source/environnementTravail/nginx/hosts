@@ -40,6 +40,7 @@
 127.0.0.1	djangotaiga.mairie.fr
 127.0.0.1	djangotemplate.mairie.fr
 
+149.202.43.81	vps192940.ovh.net	vps192940
 
 # The following lines are desirable for IPv6 capable hosts
 ::1     ip6-localhost ip6-loopback
