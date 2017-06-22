@@ -17,10 +17,12 @@ class ParametresConnection(object):
     def __init__(self):
         u""" Fonction lancée au moment de l'instanciation. """
         self.hostname = 'localhost'
-        self.port = '63230'
-        #self.port = '5432'
-        self.username = 'cda'
-        self.password = 'cda'
+        #self.port = '63230'
+        self.port = '5432'
+        #self.username = 'cda'
+        #self.password = 'cda'
+        self.username = 'fred'
+        self.password = 'fred'
 
 
 def main():

@@ -1,31 +1,31 @@
 127.0.0.1	localhost
 # 127.0.1.1	Asus-Zenbook-UX303UB
 
-127.0.0.1	www.cdalr.fr
-127.0.0.1	static.cdalr.fr
-127.0.0.1	git.cdalr.fr
-127.0.0.1	tile.cdalr.fr
-127.0.0.1	pgadmin.cdalr.fr
-127.0.0.1	geoserver.cdalr.fr
-127.0.0.1	flask.cdalr.fr
-127.0.0.1	djangopcrs.cdalr.fr
-127.0.0.1	djangoqgis.cdalr.fr
-127.0.0.1	djangorest.cdalr.fr
-127.0.0.1	djangotaiga.cdalr.fr
-127.0.0.1	djangotemplate.cdalr.fr
+149.202.43.81	www.cdalr.fr
+149.202.43.81	static.cdalr.fr
+149.202.43.81	git.cdalr.fr
+149.202.43.81	tile.cdalr.fr
+149.202.43.81	pgadmin.cdalr.fr
+149.202.43.81   geoserver.cdalr.fr
+149.202.43.81	flask.cdalr.fr
+149.202.43.81   djangopcrs.cdalr.fr
+149.202.43.81	djangoqgis.cdalr.fr
+149.202.43.81	djangorest.cdalr.fr
+149.202.43.81	djangotaiga.cdalr.fr
+149.202.43.81	djangotemplate.cdalr.fr
 
-127.0.0.1	www.garel.eu
-127.0.0.1	static.garel.eu
-127.0.0.1	git.garel.eu
-127.0.0.1	tile.garel.eu
-127.0.0.1	pgadmin.garel.eu
-127.0.0.1	geoserver.garel.eu
-127.0.0.1	flask.garel.eu
-127.0.0.1	djangopcrs.garel.eu
-127.0.0.1	djangoqgis.garel.eu
-127.0.0.1	djangorest.garel.eu
-127.0.0.1	djangotaiga.garel.eu
-127.0.0.1	djangotemplate.garel.eu
+149.202.43.81	www.garel.eu
+149.202.43.81	static.garel.eu
+149.202.43.81	git.garel.eu
+149.202.43.81	tile.garel.eu
+149.202.43.81	pgadmin.garel.eu
+149.202.43.81	geoserver.garel.eu
+149.202.43.81	flask.garel.eu
+149.202.43.81	djangopcrs.garel.eu
+149.202.43.81	djangoqgis.garel.eu
+149.202.43.81	djangorest.garel.eu
+149.202.43.81	djangotaiga.garel.eu
+149.202.43.81	djangotemplate.garel.eu
 
 127.0.0.1	www.mairie.fr
 127.0.0.1	static.mairie.fr
