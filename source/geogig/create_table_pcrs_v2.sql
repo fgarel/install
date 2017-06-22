@@ -32,6 +32,61 @@ DROP TABLE if exists "AffleurantEnveloppePCRS" cascade;
 -- Creation des tables "liste de valeurs / énumérations"
 -- ---------------------------------
 
+
+-- ---------------------------------
+-- Classe : RolePCRSType
+-- ---------------------------------
+
+-- Table: RolePCRSType
+-- DROP TABLE if exists "RolePCRSType";
+-- CREATE TABLE "RolePCRSType"
+-- (
+--   code character varying(2) unique,
+--   valeur character varying(38),
+--   CONSTRAINT "RolePCRSType_pkey" PRIMARY KEY (code)
+-- )
+-- WITH (
+--   OIDS=FALSE
+-- );
+--
+-- INSERT INTO "RolePCRSType" (code, valeur) VALUES ('01', 'Echelon national du PCRS');
+-- INSERT INTO "RolePCRSType" (code, valeur) VALUES ('02', 'Gestionnaire du PCRS');
+-- INSERT INTO "RolePCRSType" (code, valeur) VALUES ('03', 'Producteur du PCRS');
+-- INSERT INTO "RolePCRSType" (code, valeur) VALUES ('04', 'Utilisateur du PCRS');
+--
+-- COMMENT ON TABLE "RolePCRSType" IS
+-- 'Code permettant de décrire le role de l acteur.';
+
+
+-- ---------------------------------
+-- Classe : ActeurPCRSType
+-- ---------------------------------
+
+-- Table: ActeurPCRSType
+-- DROP TABLE if exists "RolePCRSType";
+-- CREATE TABLE "ActeurPCRSType"
+-- (
+--   code character varying(2) unique,
+--   valeur character varying(38),
+--   CONSTRAINT "ActeurPCRSType_pkey" PRIMARY KEY (code)
+-- )
+-- WITH (
+--   OIDS=FALSE
+-- );
+--
+-- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('01', 'Echelon national du PCRS');
+-- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('02', 'Gestionnaire du PCRS');
+-- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('03', 'Gestionnaire Référentiel Voirie');
+-- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('04', 'Gestionnaire Foncier');
+-- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('05', 'Gestionnaire Voirie');
+-- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('06', 'Exploitant de réseaux');
+-- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('07', 'Autre Gestionnaire');
+-- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('08', 'Producteur d orthophotos');
+--
+-- COMMENT ON TABLE "ActeurPCRSType" IS
+-- 'Code permettant de décrire l acteur.';
+
+
 -- ---------------------------------
 -- Classe : CategorieThematiquePCRSType
 -- ---------------------------------
@@ -41,25 +96,29 @@ DROP TABLE if exists "CategorieThematiquePCRSType";
 CREATE TABLE "CategorieThematiquePCRSType"
 (
   code character varying(2) unique,
-  libelle character varying(13),
+  valeur character varying(13),
+  definition character varying(255),
   CONSTRAINT "CategorieThematiquePCRSType_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO "CategorieThematiquePCRSType" (code, libelle) VALUES ('00', 'A déterminer');
-INSERT INTO "CategorieThematiquePCRSType" (code, libelle) VALUES ('01', 'Topographie');
-INSERT INTO "CategorieThematiquePCRSType" (code, libelle) VALUES ('02', 'Bâti');
-INSERT INTO "CategorieThematiquePCRSType" (code, libelle) VALUES ('03', 'Voirie');
-INSERT INTO "CategorieThematiquePCRSType" (code, libelle) VALUES ('04', 'Ferroviaire');
-INSERT INTO "CategorieThematiquePCRSType" (code, libelle) VALUES ('05', 'Clôture');
-INSERT INTO "CategorieThematiquePCRSType" (code, libelle) VALUES ('06', 'Végétal');
-INSERT INTO "CategorieThematiquePCRSType" (code, libelle) VALUES ('07', 'Ouvrage d Art');
-INSERT INTO "CategorieThematiquePCRSType" (code, libelle) VALUES ('08', 'Hydrographie');
-INSERT INTO "CategorieThematiquePCRSType" (code, libelle) VALUES ('09', 'Orographie');
-INSERT INTO "CategorieThematiquePCRSType" (code, libelle) VALUES ('10', 'Réseau');
-INSERT INTO "CategorieThematiquePCRSType" (code, libelle) VALUES ('99', 'Non définie');
+INSERT INTO "CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('00', 'A déterminer', 'Concerne essentiellement les objets génériques dont la thématique, liée en général à la classe d objet, ne peut être déterminée à partir de la nomenclature lors de l initialisation du PCRS.');
+INSERT INTO "CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('01', 'Topographie', 'Concerne les objets spécifiques à la topographie, et notamment les points de caneva et les points de levés topographiques');
+INSERT INTO "CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('02', 'Bâti', 'Concerne les objets liés au bâti sur le domaine public ou en limite de celui-ci, et en particulier les seuils de bâtiments, les façades, les amorces de bâti, les proéminences de bâti, et les escaliers.');
+INSERT INTO "CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('03', 'Voirie', 'Concerne les objets de types voies de circulation terrestre non ferroviaire du domaine public, et comprenant les limites apparentes de type bordures et bordurettes, changements de revêtements et escaliers');
+INSERT INTO "CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('04', 'Ferroviaire', 'Concerne aussi bien les rails de SNCF Réseau que ceux liés à un transport public de type tramway ou tram-train et situés sur le domaine public');
+INSERT INTO "CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('05', 'Clôture', 'Concerne les objets destinés à la clôture d un espace et ayant une limite apparente avec le domaine public, dont les murs de tous types et parapets, surmontés ou non d une clôture, les socles de clôtures, et les piliers.');
+INSERT INTO "CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('06', 'Végétal', 'Concerne les objets végétaux de type haies et espaces verts, ainsi que les arbres d alignement');
+INSERT INTO "CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('07', 'Ouvrage d Art', 'Concerne les ouvrages d art du domaine public (ex : piles de ponts)');
+INSERT INTO "CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('08', 'Hydrographie', 'Concerne l hydrographie');
+INSERT INTO "CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('09', 'Orographie', 'Concerne l orographie');
+INSERT INTO "CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('10', 'Réseau', 'Concerne les objets spécifiques aux réseaux');
+INSERT INTO "CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('99', 'Non définie', 'La thématique n est pas définie dans les données sources du gestionnaire du PCRS');
+
+COMMENT ON TABLE "CategorieThematiquePCRSType" IS
+'Code permettant de décrire la thématique rattachée à un objet donné du PCRS';
 
 
 -- ---------------------------------
@@ -71,21 +130,24 @@ DROP TABLE if exists "CategoriePrecisionPCRSType";
 CREATE TABLE "CategoriePrecisionPCRSType"
 (
   code character varying(3) unique,
-  libelle character varying(17),
+  valeur character varying(17),
   CONSTRAINT "CategoriePrecisionPCRSType_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO "CategoriePrecisionPCRSType" (code, libelle) VALUES ('002', 'moins de 2 cm');
-INSERT INTO "CategoriePrecisionPCRSType" (code, libelle) VALUES ('005', 'de 2 à 5 cm');
-INSERT INTO "CategoriePrecisionPCRSType" (code, libelle) VALUES ('010', 'de 5 à 10 cm');
-INSERT INTO "CategoriePrecisionPCRSType" (code, libelle) VALUES ('040', 'de 10 à 40 cm');
---INSERT INTO "CategoriePrecisionPCRSType" (code, libelle) VALUES ('100', 'de 40 à 100 cm');
---INSERT INTO "CategoriePrecisionPCRSType" (code, libelle) VALUES ('150', 'de 100 à 150 cm');
-INSERT INTO "CategoriePrecisionPCRSType" (code, libelle) VALUES ('150', 'de 40 à 150 cm');
-INSERT INTO "CategoriePrecisionPCRSType" (code, libelle) VALUES ('999', 'au delà de 150 cm');
+INSERT INTO "CategoriePrecisionPCRSType" (code, valeur) VALUES ('002', 'moins de 2 cm');
+INSERT INTO "CategoriePrecisionPCRSType" (code, valeur) VALUES ('005', 'de 2 à 5 cm');
+INSERT INTO "CategoriePrecisionPCRSType" (code, valeur) VALUES ('010', 'de 5 à 10 cm');
+INSERT INTO "CategoriePrecisionPCRSType" (code, valeur) VALUES ('040', 'de 10 à 40 cm');
+--INSERT INTO "CategoriePrecisionPCRSType" (code, valeur) VALUES ('100', 'de 40 à 100 cm');
+--INSERT INTO "CategoriePrecisionPCRSType" (code, valeur) VALUES ('150', 'de 100 à 150 cm');
+INSERT INTO "CategoriePrecisionPCRSType" (code, valeur) VALUES ('150', 'de 40 à 150 cm');
+INSERT INTO "CategoriePrecisionPCRSType" (code, valeur) VALUES ('999', 'au delà de 150 cm');
+
+COMMENT ON TABLE "CategoriePrecisionPCRSType" IS
+'Code permettant de décrire un intervalle de précision exprimée en cm associée au levé d un objet ou d un affleurant du PCRS';
 
 
 -- ---------------------------------
@@ -97,20 +159,22 @@ DROP TABLE if exists "NatureEmprisePCRSType";
 CREATE TABLE "NatureEmprisePCRSType"
 (
   code character varying(2) unique,
-  libelle character varying(21),
+  valeur character varying(21),
   CONSTRAINT "NatureEmprisePCRSType_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO "NatureEmprisePCRSType" (code, libelle) VALUES ('01', 'Couloir');
-INSERT INTO "NatureEmprisePCRSType" (code, libelle) VALUES ('02', 'Opération');
-INSERT INTO "NatureEmprisePCRSType" (code, libelle) VALUES ('03', 'Carreau');
-INSERT INTO "NatureEmprisePCRSType" (code, libelle) VALUES ('04', 'Limite Administrative');
-INSERT INTO "NatureEmprisePCRSType" (code, libelle) VALUES ('05', 'Raster');
-INSERT INTO "NatureEmprisePCRSType" (code, libelle) VALUES ('06', 'Masque');
+INSERT INTO "NatureEmprisePCRSType" (code, valeur) VALUES ('01', 'Couloir');
+INSERT INTO "NatureEmprisePCRSType" (code, valeur) VALUES ('02', 'Opération');
+INSERT INTO "NatureEmprisePCRSType" (code, valeur) VALUES ('03', 'Carreau');
+INSERT INTO "NatureEmprisePCRSType" (code, valeur) VALUES ('04', 'Limite Administrative');
+INSERT INTO "NatureEmprisePCRSType" (code, valeur) VALUES ('05', 'Raster');
+INSERT INTO "NatureEmprisePCRSType" (code, valeur) VALUES ('06', 'Masque');
 
+COMMENT ON TABLE "NatureEmprisePCRSType" IS
+'Code permettant de décrire la nature de l emprise d echange du PCRS.';
 
 -- ---------------------------------
 -- Classe : ProprieteEspacePCRSType
@@ -121,16 +185,20 @@ DROP TABLE if exists "ProprieteEspacePCRSType";
 CREATE TABLE "ProprieteEspacePCRSType"
 (
   code character varying(2) unique,
-  libelle character varying(13),
+  valeur character varying(13),
+  definition character varying(255),
   CONSTRAINT "ProprieteEspacePCRSType_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO "ProprieteEspacePCRSType" (code, libelle) VALUES ('01', 'Espace Public');
-INSERT INTO "ProprieteEspacePCRSType" (code, libelle) VALUES ('02', 'Espace Privé');
---INSERT INTO "ProprieteEspacePCRSType" (code, libelle) VALUES ('03', 'Indéfini');
+INSERT INTO "ProprieteEspacePCRSType" (code, valeur, definition) VALUES ('01', 'Espace Public', 'L espace considéré fait partie du domaine public');
+INSERT INTO "ProprieteEspacePCRSType" (code, valeur, definition) VALUES ('02', 'Espace Privé', 'L espace considéré fait partie du domaine privé');
+--INSERT INTO "ProprieteEspacePCRSType" (code, libelle, definition) VALUES ('03', 'Indéfini', '');
+
+COMMENT ON TABLE "ProprieteEspacePCRSType" IS
+'Code permettant de décrire la nature de l espace au sens distinction de l espce public / espace privé.';
 
 
 -- ---------------------------------
@@ -142,19 +210,23 @@ DROP TABLE if exists "QualiteCategorisationPCRSType";
 CREATE TABLE "QualiteCategorisationPCRSType"
 (
   code character varying(2) unique,
-  libelle character varying(27),
+  valeur character varying(27),
+  definition character varying(255),
   CONSTRAINT "QualiteCategorisationPCRSType_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
---INSERT INTO "QualiteCategorisationPCRSType" (code, libelle) VALUES ('01', 'Conforme PCRS');
-INSERT INTO "QualiteCategorisationPCRSType" (code, libelle) VALUES ('01', 'Très fiable / Conforme PCRS');
---INSERT INTO "QualiteCategorisationPCRSType" (code, libelle) VALUES ('02', 'Import ERDF');
-INSERT INTO "QualiteCategorisationPCRSType" (code, libelle) VALUES ('02', 'Moyennement Fiable ');
---INSERT INTO "QualiteCategorisationPCRSType" (code, libelle) VALUES ('03', 'Selon CCTP avant 2015 PVRC v1');
-INSERT INTO "QualiteCategorisationPCRSType" (code, libelle) VALUES ('02', 'Peu fiable');
+--INSERT INTO "QualiteCategorisationPCRSType" (code, valeur, definition) VALUES ('01', 'Conforme PCRS', '');
+INSERT INTO "QualiteCategorisationPCRSType" (code, valeur, definition) VALUES ('01', 'Très fiable / Conforme PCRS', 'La catégorisation de l objet du PCRS est conforme aux spécifications');
+--INSERT INTO "QualiteCategorisationPCRSType" (code, valeur, definition) VALUES ('02', 'Import ERDF', '');
+INSERT INTO "QualiteCategorisationPCRSType" (code, valeur, definition) VALUES ('02', 'Moyennement Fiable ', 'La catégorisation de l objet du PCRS est moyennement fiable');
+--INSERT INTO "QualiteCategorisationPCRSType" (code, valeur, definition) VALUES ('03', 'Selon CCTP avant 2015 PVRC v1', '');
+INSERT INTO "QualiteCategorisationPCRSType" (code, valeur, definition) VALUES ('03', 'Peu fiable', 'La catégorisation de l objet du PCRS est peu fiable');
+
+COMMENT ON TABLE "QualiteCategorisationPCRSType" IS
+'Code permettant de décrire de façon extensible la qualité de catégorisation des objets du PCRS.';
 
 
 -- ---------------------------------
@@ -166,15 +238,19 @@ DROP TABLE if exists "CategorieBordurePCRSType";
 CREATE TABLE "CategorieBordurePCRSType"
 (
   code character varying(2) unique,
-  libelle character varying(7),
+  valeur character varying(7),
+  definition character varying(255),
   CONSTRAINT "CategorieBordurePCRSType_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO "CategorieBordurePCRSType" (code, libelle) VALUES ('01', 'Bordure');
-INSERT INTO "CategorieBordurePCRSType" (code, libelle) VALUES ('02', 'Quai');
+INSERT INTO "CategorieBordurePCRSType" (code, valeur, definition) VALUES ('01', 'Bordure', 'Bordure, bordurette');
+INSERT INTO "CategorieBordurePCRSType" (code, valeur, definition) VALUES ('02', 'Quai', 'Quai');
+
+COMMENT ON TABLE "CategorieBordurePCRSType" IS
+'Code permettant de décrire le type de bordure utilisée en voirie.';
 
 
 -- ---------------------------------
@@ -186,18 +262,22 @@ DROP TABLE if exists "SectionPilierPCRSType";
 CREATE TABLE "SectionPilierPCRSType"
 (
   code character varying(2) unique,
-  libelle character varying(31),
+  valeur character varying(20),
+  definition character varying(255),
   CONSTRAINT "SectionPilierPCRSType_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO "SectionPilierPCRSType" (code, libelle) VALUES ('01', 'Pilier carré');
-INSERT INTO "SectionPilierPCRSType" (code, libelle) VALUES ('02', 'Pilier rectangulaire');
-INSERT INTO "SectionPilierPCRSType" (code, libelle) VALUES ('03', 'Pilier circulaire');
---INSERT INTO "SectionPilierPCRSType" (code, libelle) VALUES ('04', 'Pilier à autre forme de section');
-INSERT INTO "SectionPilierPCRSType" (code, libelle) VALUES ('99', 'Pilier à autre forme de section');
+INSERT INTO "SectionPilierPCRSType" (code, valeur, definition) VALUES ('01', 'Pilier carré', 'Pilier à section carrée');
+INSERT INTO "SectionPilierPCRSType" (code, valeur, definition) VALUES ('02', 'Pilier rectangulaire', 'Pilier à section rectangulaire');
+INSERT INTO "SectionPilierPCRSType" (code, valeur, definition) VALUES ('03', 'Pilier circulaire', 'Pilier à section circulaire');
+--INSERT INTO "SectionPilierPCRSType" (code, valeur, definition) VALUES ('04', 'Pilier à autre forme de section', '');
+INSERT INTO "SectionPilierPCRSType" (code, valeur, definition) VALUES ('99', 'Pilier autre', 'Autre type de pilier');
+
+COMMENT ON TABLE "SectionPilierPCRSType" IS
+'Code permettant de décrire le type de pilier.';
 
 
 -- ---------------------------------
@@ -209,20 +289,23 @@ DROP TABLE if exists "CategorieMurPCRSType";
 CREATE TABLE "CategorieMurPCRSType"
 (
   code character varying(2) unique,
-  libelle character varying(22),
+  valeur character varying(22),
   CONSTRAINT "CategorieMurPCRSType_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO "CategorieMurPCRSType" (code, libelle) VALUES ('00', 'Non défini');
-INSERT INTO "CategorieMurPCRSType" (code, libelle) VALUES ('01', 'Mur');
-INSERT INTO "CategorieMurPCRSType" (code, libelle) VALUES ('02', 'Mur de soutènement');
-INSERT INTO "CategorieMurPCRSType" (code, libelle) VALUES ('03', 'Mur bahut');
-INSERT INTO "CategorieMurPCRSType" (code, libelle) VALUES ('04', 'Mur bahut avec clôture');
-INSERT INTO "CategorieMurPCRSType" (code, libelle) VALUES ('05', 'Parapet');
-INSERT INTO "CategorieMurPCRSType" (code, libelle) VALUES ('06', 'Clôture sur socle');
+INSERT INTO "CategorieMurPCRSType" (code, valeur) VALUES ('00', 'Non défini');
+INSERT INTO "CategorieMurPCRSType" (code, valeur) VALUES ('01', 'Mur');
+INSERT INTO "CategorieMurPCRSType" (code, valeur) VALUES ('02', 'Mur de soutènement');
+INSERT INTO "CategorieMurPCRSType" (code, valeur) VALUES ('03', 'Mur bahut');
+INSERT INTO "CategorieMurPCRSType" (code, valeur) VALUES ('04', 'Mur bahut avec clôture');
+INSERT INTO "CategorieMurPCRSType" (code, valeur) VALUES ('05', 'Parapet');
+INSERT INTO "CategorieMurPCRSType" (code, valeur) VALUES ('06', 'Clôture sur socle');
+
+COMMENT ON TABLE "CategorieMurPCRSType" IS
+'Code permettant de décrire les différents types de mur.';
 
 
 -- ---------------------------------
@@ -234,16 +317,19 @@ DROP TABLE if exists "CategorieArbrePCRSType";
 CREATE TABLE "CategorieArbrePCRSType"
 (
   code character varying(2) unique,
-  libelle character varying(10),
+  valeur character varying(10),
   CONSTRAINT "CategorieArbrePCRSType_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO "CategorieArbrePCRSType" (code, libelle) VALUES ('00', 'Non défini');
-INSERT INTO "CategorieArbrePCRSType" (code, libelle) VALUES ('01', 'Alignement');
-INSERT INTO "CategorieArbrePCRSType" (code, libelle) VALUES ('02', 'Ornement');
+INSERT INTO "CategorieArbrePCRSType" (code, valeur) VALUES ('00', 'Non défini');
+INSERT INTO "CategorieArbrePCRSType" (code, valeur) VALUES ('01', 'Alignement');
+INSERT INTO "CategorieArbrePCRSType" (code, valeur) VALUES ('02', 'Ornement');
+
+COMMENT ON TABLE "CategorieArbrePCRSType" IS
+'Code permettant de décrire les différents types d arbres.';
 
 
 -- ---------------------------------
@@ -255,227 +341,195 @@ DROP TABLE if exists "NatureReseauPCRSType";
 CREATE TABLE "NatureReseauPCRSType"
 (
   code character varying(2) unique,
-  libelle character varying(23),
+  valeur character varying(23),
   CONSTRAINT "NatureReseauPCRSType_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('00', 'Non défini');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('ELEC', 'Avaloir');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('ELECECL', 'Boîte, Coffret, Armoire');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('ELECTRIC', 'Tampon');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('GAZ', 'Bouche à clé');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('MULT', 'Bouche, Poteau incendie');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('CHIM', 'Poteau');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('COM', 'Borne d éclairage');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('AEP', 'Poteau');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('ASSA', 'Borne d éclairage');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('ASSAEP', 'Poteau');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('ASSAEU', 'Borne d éclairage');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('ASSARU', 'Poteau');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('DECH', 'Borne d éclairage');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('CHAU', 'Borne d éclairage');
-INSERT INTO "NatureReseauPCRSType" (code, libelle) VALUES ('INCE', 'Borne d éclairage');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('00', 'Non défini');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('ELEC', 'Electricité');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('ELECECL', 'Eclairage public');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('ELECTRIC', 'Signalisation lumineuse tricolore');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('GAZ', 'Gaz');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('MULT', 'Multi réseaux');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('CHIM', 'Produits chimiques');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('COM', 'Télécom');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('AEP', 'Eau Potable');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('ASSA', 'Assainissement et pluvial');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('ASSAEP', 'Eaux pluviales');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('ASSAEU', 'Eaux usées');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('ASSARU', 'Réseau unitaire');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('DECH', 'Déchets');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('CHAU', 'Chauffage et climatisation');
+INSERT INTO "NatureReseauPCRSType" (code, valeur) VALUES ('INCE', 'Incendie');
+
+COMMENT ON TABLE "NatureReseauPCRSType" IS
+'Code permettant de décrire de façon extensible la nature d un réseau.';
 
 
 -- ---------------------------------
--- Classe : CodeCouleurAffleurant
+-- Classe : CodeCouleurReseauPCRSType
 -- ---------------------------------
 
--- Table: CodeCouleurAffleurant
-DROP TABLE if exists "CodeCouleurAffleurant";
-CREATE TABLE "CodeCouleurAffleurant"
-(
-  code character varying(6) unique,
-  libelle character varying(80),
-  CONSTRAINT "CodeCouleurAffleurant_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO "CodeCouleurAffleurant" (code, libelle) VALUES ('Rouge', 'Electricité BT, HTA ou HTB, éclairage, signalisation routière et feux tricolores');
-INSERT INTO "CodeCouleurAffleurant" (code, libelle) VALUES ('Jaune', 'Gaz combustible (transport ou distribution) et Hydrocarbures');
-INSERT INTO "CodeCouleurAffleurant" (code, libelle) VALUES ('Orange', 'Produits chimiques');
-INSERT INTO "CodeCouleurAffleurant" (code, libelle) VALUES ('Bleu', 'Eau potable');
-INSERT INTO "CodeCouleurAffleurant" (code, libelle) VALUES ('Marron', 'Assainissement et Pluvial');
-INSERT INTO "CodeCouleurAffleurant" (code, libelle) VALUES ('Violet', 'Chauffage et Climatisation');
-INSERT INTO "CodeCouleurAffleurant" (code, libelle) VALUES ('Vert', 'Communications électroniques et électricité TBT');
-INSERT INTO "CodeCouleurAffleurant" (code, libelle) VALUES ('Rose', 'Emprise multi-réseaux');
-INSERT INTO "CodeCouleurAffleurant" (code, libelle) VALUES ('Blanc', 'Non-défini');
+-- Table: CodeCouleurReseauPCRSType
+-- DROP TABLE if exists "CodeCouleurReseauPCRSType";
+-- CREATE TABLE "CodeCouleurReseauPCRSType"
+-- (
+--   code character varying(6) unique,
+--   valeur character varying(80),
+--   definition character varying(80),
+--   CONSTRAINT "CodeCouleurReseauPCRSType_pkey" PRIMARY KEY (code)
+-- )
+-- WITH (
+--   OIDS=FALSE
+-- );
+--
+-- INSERT INTO "CodeCouleurReseauPCRSType" (code, valeur) VALUES ('Rouge', '255,0,0', 'Electricité BT, HTA ou HTB, éclairage, signalisation routière et feux tricolores');
+-- INSERT INTO "CodeCouleurReseauPCRSType" (code, valeur) VALUES ('Jaune', '255,255,255', 'Gaz combustible (transport ou distribution) et Hydrocarbures');
+-- INSERT INTO "CodeCouleurReseauPCRSType" (code, valeur) VALUES ('Orange', '255,255,255', 'Produits chimiques');
+-- INSERT INTO "CodeCouleurReseauPCRSType" (code, valeur) VALUES ('Bleu', '0,0,255', 'Eau potable');
+-- INSERT INTO "CodeCouleurReseauPCRSType" (code, valeur) VALUES ('Marron', '255,255,255', 'Assainissement et Pluvial');
+-- INSERT INTO "CodeCouleurReseauPCRSType" (code, valeur) VALUES ('Violet', '255,255,255', 'Chauffage et Climatisation');
+-- INSERT INTO "CodeCouleurReseauPCRSType" (code, valeur) VALUES ('Vert', '0,255,0', 'Communications électroniques et électricité TBT');
+-- INSERT INTO "CodeCouleurReseauPCRSType" (code, valeur) VALUES ('Rose', '255,255,255', 'Emprise multi-réseaux');
+-- INSERT INTO "CodeCouleurReseauPCRSType" (code, valeur) VALUES ('Blanc', '255,255,255', 'Non-défini');
+--
+-- COMMENT ON TABLE "CodeCouleurReseauPCRSType" IS
+-- 'Code permettant de décrire la couleur associée à une nature de réseau.';
 
 
 -- ---------------------------------
--- Classe : NatureAffleurant
+-- Classe : NatureAffleurantPCRSType
 -- ---------------------------------
 
--- Table: NatureAffleurant
-DROP TABLE if exists "NatureAffleurant";
-CREATE TABLE "NatureAffleurant"
+-- Table: NatureAffleurantPCRSType
+DROP TABLE if exists "NatureAffleurantPCRSType";
+CREATE TABLE "NatureAffleurantPCRSType"
 (
   code character varying(2) unique,
-  libelle character varying(23),
+  valeur character varying(23),
+  definition character varying(255),
   CONSTRAINT "NatureAffleurant_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('00', 'Non défini');
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('01', 'Avaloir');
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('02', 'Boîte, Coffret, Armoire');
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('03', 'Tampon');
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('04', 'Bouche à clé');
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('05', 'Bouche, Poteau incendie');
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('06', 'Poteau');
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('07', 'Borne d éclairage');
+INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('00', 'Non défini', 'Les informations collectées ne permettent pas d identifier sans ambiguité la nature de l affleurant');
+INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('01', 'Avaloir', 'Dispositif à garde d eau destiné principalement à recueillir les eaux de ruisselement ou de nettoyage des sols');
+INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('02', 'Boîte, Coffret, Armoire', 'Boîte, coffret ou armoire technique qui centralise des éléments de réseaux');
+INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('03', 'Tampon', 'Couvercle d un regard d assainissement ou d une chambre souterraine de génie civil pour le passage des réseaux et présent notamment sur les chaussées');
+INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('04', 'Bouche à clé', 'Accessoire de robinetterie permettant de manoeuvrer depuis la chaussée, une vanne ou un robinet de branchement enterré');
+INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('05', 'Bouche, Poteau incendie', 'Permet aux services de lutte contre l incendie (pompiers) de puiser l eau du réeau');
+INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('06', 'Poteau', 'Poteau supportant le passage aérien d un ou plusieurs réseaux');
+INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('07', 'Borne d éclairage', 'Borne lumineuse pour la mise en valeur / l éclairage de l espace public');
+
+COMMENT ON TABLE "NatureAffleurantPCRSType" IS
+'Code permettant de décrire de façon extensible la nature d un affleurant de réseaux.';
 
 
 -- ---------------------------------
--- Classe : CalendrierPCRS
+-- Classe : CalendrierPCRSType
 -- ---------------------------------
 
--- Table: CalendrierPCRS
-DROP TABLE if exists "CalendrierPCRS";
-CREATE TABLE "CalendrierPCRS"
+-- Table: CalendrierPCRSType
+-- DROP TABLE if exists "CalendrierPCRSType";
+-- CREATE TABLE "CalendrierPCRSType"
+-- (
+--   code character varying(2) unique,
+--   valeur character varying(24),
+--   CONSTRAINT "CalendrierPCRSType_pkey" PRIMARY KEY (code)
+-- )
+-- WITH (
+--   OIDS=FALSE
+-- );
+--
+-- INSERT INTO "CalendrierPCRSType" (code, valeur) VALUES ('01', 'Livré, Mis A Disposition');
+-- INSERT INTO "CalendrierPCRSType" (code, valeur) VALUES ('02', 'Actualisation En Cours');
+-- INSERT INTO "CalendrierPCRSType" (code, valeur) VALUES ('03', 'En Projet, Planifié');
+-- INSERT INTO "CalendrierPCRSType" (code, valeur) VALUES ('04', 'Non Planifié');
+--
+-- COMMENT ON TABLE "CalendrierPCRSType" IS
+-- 'Code permettant de décrire la date de disponibilité du PCRS.';
+
+
+-- ---------------------------------
+-- Classe : CotationPCRSType
+-- ---------------------------------
+
+-- Table: CotationPCRSType
+-- DROP TABLE if exists "CotationPCRSType";
+-- CREATE TABLE "CotationPCRSType"
+-- (
+--   code character varying(2) unique,
+--   valeur character varying(38),
+--   CONSTRAINT "CotationPCRSType_pkey" PRIMARY KEY (code)
+-- )
+-- WITH (
+--   OIDS=FALSE
+-- );
+--
+-- INSERT INTO "CotationPCRSType" (code, valeur) VALUES ('01', 'Non Utilisable Pour Coter');
+-- INSERT INTO "CotationPCRSType" (code, valeur) VALUES ('02', 'Cotation Planimetrique Uniquement');
+-- INSERT INTO "CotationPCRSType" (code, valeur) VALUES ('03', 'Cotation Planimetrique Et Altimetrique');
+--
+-- COMMENT ON TABLE "CotationPCRSType" IS
+-- 'Code permettant de décrire si l objet peut etre utilisable pour coter.';
+
+
+-- ---------------------------------
+-- Classe : CategoriePlacementPCRSType
+-- ---------------------------------
+
+-- Table: CategoriePlacementPCRSType
+DROP TABLE if exists "CategoriePlacementPCRSType";
+CREATE TABLE "CategoriePlacementPCRSType"
 (
   code character varying(2) unique,
-  libelle character varying(24),
-  CONSTRAINT "CalendrierPCRS_pkey" PRIMARY KEY (code)
+  valeur character varying(21),
+  definition character varying(255),
+  CONSTRAINT "CategoriePlacementPCRSType_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO "CalendrierPCRS" (code, libelle) VALUES ('01', 'Livré, Mis A Disposition');
-INSERT INTO "CalendrierPCRS" (code, libelle) VALUES ('02', 'Actualisation En Cours');
-INSERT INTO "CalendrierPCRS" (code, libelle) VALUES ('03', 'En Projet, Planifié');
-INSERT INTO "CalendrierPCRS" (code, libelle) VALUES ('04', 'Non Planifié');
+INSERT INTO "CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('01', 'Sans Repositionnement', 'L élément d habillage n a pas été repositionné par rapport à la source de données dont il est issu.');
+--INSERT INTO "CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('01', 'Repositionnement Gestionnaire de Réseaux', 'L élément d habillage est positionné sur ou très proche de l axe de voirie');
+INSERT INTO "CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('02', 'Axe Voirie', 'L élément d habillage est positionné sur ou très proche de l axe de voirie ');
+INSERT INTO "CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('03', 'Limite Voirie', 'L élément d habillage est positionné en limite de voirie');
+INSERT INTO "CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('04', 'Hors Voirie', 'L élément d habillage est positionné en dehors des limites de voirie');
+INSERT INTO "CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('05', 'Parcelle', 'L élément d habillage est positionné à l intérieur d une parcelle et proche des limites de voirie');
 
-
-
-
-
--- ---------------------------------
--- Classe : CotationPCRS
--- ---------------------------------
-
--- Table: CotationPCRS
-DROP TABLE if exists "CotationPCRS";
-CREATE TABLE "CotationPCRS"
-(
-  code character varying(2) unique,
-  libelle character varying(38),
-  CONSTRAINT "CotationPCRS_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO "CotationPCRS" (code, libelle) VALUES ('01', 'Non Utilisable Pour Coter');
-INSERT INTO "CotationPCRS" (code, libelle) VALUES ('02', 'Cotation Planimetrique Uniquement');
-INSERT INTO "CotationPCRS" (code, libelle) VALUES ('03', 'Cotation Planimetrique Et Altimetrique');
-
-
+COMMENT ON TABLE "CategoriePlacementPCRSType" IS
+'Code permettant de décrire le type de positionnement des éléments d habillage.';
 
 
 -- ---------------------------------
--- Classe : Gestionnaire
+-- Classe : TexteJustificationPCRSType
 -- ---------------------------------
 
--- Table: Gestionnaire
-DROP TABLE if exists "Gestionnaire";
-CREATE TABLE "Gestionnaire"
-(
-  gestionnaire character varying unique,
-  CONSTRAINT "Gestionnaire_pkey" PRIMARY KEY (gestionnaire)
-)
-WITH (
-  OIDS=FALSE
-);
-
-
--- ---------------------------------
--- Classe : NatureAffleurant
--- ---------------------------------
-
--- Table: NatureAffleurant
-DROP TABLE if exists "NatureAffleurant";
-CREATE TABLE "NatureAffleurant"
-(
-  code character varying(2) unique,
-  libelle character varying(23),
-  CONSTRAINT "NatureAffleurant_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('00', 'Non défini');
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('01', 'Avaloir');
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('02', 'Boîte, Coffret, Armoire');
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('03', 'Tampon');
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('04', 'Bouche à clé');
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('05', 'Bouche, Poteau incendie');
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('06', 'Poteau');
-INSERT INTO "NatureAffleurant" (code, libelle) VALUES ('07', 'Borne d éclairage');
-
-
-
--- ---------------------------------
--- Classe : PlacementPCRS
--- ---------------------------------
-
--- Table: PlacementPCRS
-DROP TABLE if exists "PlacementPCRS";
-CREATE TABLE "PlacementPCRS"
-(
-  code character varying(2) unique,
-  libelle character varying(40),
-  CONSTRAINT "PlacementPCRS_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('00', 'Sans Repositionnement');
-INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('01', 'Repositionnement Gestionnaire de Réseaux');
-INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('02', 'Positionnement Axe Voirie');
-INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('03', 'Positionnement Limite Voirie');
-INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('04', 'Positionnement Hors Voirie');
-INSERT INTO "PlacementPCRS" (code, libelle) VALUES ('05', 'Positionnement Parcelle');
-
-
-
-
--- ---------------------------------
--- Classe : TexteJustification
--- ---------------------------------
-
--- Table: TexteJustification
-DROP TABLE if exists "TexteJustification";
-CREATE TABLE "TexteJustification"
+-- Table: TexteJustificationPCRSType
+DROP TABLE if exists "TexteJustificationPCRSType";
+CREATE TABLE "TexteJustificationPCRSType"
 (
   code character varying(1) unique,
-  libelle character varying(6),
-  CONSTRAINT "TexteJustification_pkey" PRIMARY KEY (code)
+  valeur character varying(6),
+  definition character varying(255),
+  CONSTRAINT "TexteJustificationPCRSType_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO "TexteJustification" (code, libelle) VALUES ('G', 'Gauche');
-INSERT INTO "TexteJustification" (code, libelle) VALUES ('C', 'Centre');
-INSERT INTO "TexteJustification" (code, libelle) VALUES ('D', 'Droite');
+INSERT INTO "TexteJustificationPCRSType" (code, valeur, definition) VALUES ('G', 'Gauche', 'Le texte est justifé à gauche');
+INSERT INTO "TexteJustificationPCRSType" (code, valeur, definition) VALUES ('C', 'Centré', 'Le texte est centré');
+INSERT INTO "TexteJustificationPCRSType" (code, valeur, definition) VALUES ('D', 'Droite', 'Le texte est justifé à droite');
 
-
-
-
-
-
-
+COMMENT ON TABLE "TexteJustificationPCRSType" IS
+'Code permettant de justifier un texte d habillage.';
 
 
 -- ---------------------------------
@@ -524,6 +578,12 @@ CREATE INDEX "EmprisePublicationPCRS_geometrie_geomidx"
   USING gist
   (geometrie);
 
+
+COMMENT ON TABLE "CategorieThematiquePCRSType" IS
+'Code permettant de décrire la thématique rattachée à un objet donné du PCRS';
+
+COMMENT ON COLUMN "CategorieThematiquePCRSType"."CategorieThematiquePCRSType" IS
+'Le code representation .....';
 
 -- ---------------------------------
 -- Classe : TronconVoiriePCRS
