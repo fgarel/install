@@ -1,9 +1,33 @@
 ﻿-- ---------------------------------
 -- DROP
 -- ---------------------------------
-DROP TABLE if exists "EmprisePublicationPCRS" cascade;
-DROP TABLE if exists "TronconVoiriePCRS" cascade;
+DROP TABLE if exists "RoleNiveau1PCRSType" CASCADE;
+DROP TABLE if exists "RoleNiveau2PCRSType" CASCADE;
+DROP TABLE if exists "ActeurPCRSType" CASCADE;
+
+DROP TABLE if exists "RoleActeurPCRSRelation" CASCADE;
+DROP TABLE if exists "EmpriseCommunePCRSRelation" CASCADE;
+DROP TABLE if exists "EmpriseActeurPCRSRelation" CASCADE;
+
+
+
+DROP TABLE if exists "EmprisePCRS" cascade;
+DROP TABLE if exists "InitiativePCRS" cascade;
+DROP TABLE if exists "EmpriseDisponibilitePCRS" cascade;
+DROP TABLE if exists "EmpriseEchangePCRS" cascade;
+
+
+DROP TABLE if exists "Commune" cascade;
+DROP TABLE if exists "TronconVoirie" cascade;
+
 DROP TABLE if exists "HabillagePCRS" cascade;
+DROP TABLE if exists "HabillagePointPCRS" cascade;
+DROP TABLE if exists "HabillageSymbolePCRS" cascade;
+
+
+
+DROP TABLE if exists "TronconVoiriePCRS" cascade;
+
 DROP TABLE if exists "SymboleHabillagePCRS" cascade;
 DROP TABLE if exists "TexteHabillagePCRS" cascade;
 DROP TABLE if exists "NomVoiriePCRS" cascade;
@@ -31,60 +55,6 @@ DROP TABLE if exists "AffleurantEnveloppePCRS" cascade;
 -- ---------------------------------
 -- Creation des tables "liste de valeurs / énumérations"
 -- ---------------------------------
-
-
--- ---------------------------------
--- Classe : RolePCRSType
--- ---------------------------------
-
--- Table: RolePCRSType
--- DROP TABLE if exists "RolePCRSType";
--- CREATE TABLE "RolePCRSType"
--- (
---   code character varying(2) unique,
---   valeur character varying(38),
---   CONSTRAINT "RolePCRSType_pkey" PRIMARY KEY (code)
--- )
--- WITH (
---   OIDS=FALSE
--- );
---
--- INSERT INTO "RolePCRSType" (code, valeur) VALUES ('01', 'Echelon national du PCRS');
--- INSERT INTO "RolePCRSType" (code, valeur) VALUES ('02', 'Gestionnaire du PCRS');
--- INSERT INTO "RolePCRSType" (code, valeur) VALUES ('03', 'Producteur du PCRS');
--- INSERT INTO "RolePCRSType" (code, valeur) VALUES ('04', 'Utilisateur du PCRS');
---
--- COMMENT ON TABLE "RolePCRSType" IS
--- 'Code permettant de décrire le role de l acteur.';
-
-
--- ---------------------------------
--- Classe : ActeurPCRSType
--- ---------------------------------
-
--- Table: ActeurPCRSType
--- DROP TABLE if exists "RolePCRSType";
--- CREATE TABLE "ActeurPCRSType"
--- (
---   code character varying(2) unique,
---   valeur character varying(38),
---   CONSTRAINT "ActeurPCRSType_pkey" PRIMARY KEY (code)
--- )
--- WITH (
---   OIDS=FALSE
--- );
---
--- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('01', 'Echelon national du PCRS');
--- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('02', 'Gestionnaire du PCRS');
--- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('03', 'Gestionnaire Référentiel Voirie');
--- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('04', 'Gestionnaire Foncier');
--- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('05', 'Gestionnaire Voirie');
--- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('06', 'Exploitant de réseaux');
--- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('07', 'Autre Gestionnaire');
--- INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('08', 'Producteur d orthophotos');
---
--- COMMENT ON TABLE "ActeurPCRSType" IS
--- 'Code permettant de décrire l acteur.';
 
 
 -- ---------------------------------
@@ -340,8 +310,8 @@ COMMENT ON TABLE "CategorieArbrePCRSType" IS
 DROP TABLE if exists "NatureReseauPCRSType";
 CREATE TABLE "NatureReseauPCRSType"
 (
-  code character varying(2) unique,
-  valeur character varying(23),
+  code character varying(8) unique,
+  valeur character varying(33),
   CONSTRAINT "NatureReseauPCRSType_pkey" PRIMARY KEY (code)
 )
 WITH (
@@ -417,14 +387,14 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('00', 'Non défini', 'Les informations collectées ne permettent pas d identifier sans ambiguité la nature de l affleurant');
-INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('01', 'Avaloir', 'Dispositif à garde d eau destiné principalement à recueillir les eaux de ruisselement ou de nettoyage des sols');
-INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('02', 'Boîte, Coffret, Armoire', 'Boîte, coffret ou armoire technique qui centralise des éléments de réseaux');
-INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('03', 'Tampon', 'Couvercle d un regard d assainissement ou d une chambre souterraine de génie civil pour le passage des réseaux et présent notamment sur les chaussées');
-INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('04', 'Bouche à clé', 'Accessoire de robinetterie permettant de manoeuvrer depuis la chaussée, une vanne ou un robinet de branchement enterré');
-INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('05', 'Bouche, Poteau incendie', 'Permet aux services de lutte contre l incendie (pompiers) de puiser l eau du réeau');
-INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('06', 'Poteau', 'Poteau supportant le passage aérien d un ou plusieurs réseaux');
-INSERT INTO "NatureAffleurant" (code, valeur, definition) VALUES ('07', 'Borne d éclairage', 'Borne lumineuse pour la mise en valeur / l éclairage de l espace public');
+INSERT INTO "NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('00', 'Non défini', 'Les informations collectées ne permettent pas d identifier sans ambiguité la nature de l affleurant');
+INSERT INTO "NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('01', 'Avaloir', 'Dispositif à garde d eau destiné principalement à recueillir les eaux de ruisselement ou de nettoyage des sols');
+INSERT INTO "NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('02', 'Boîte, Coffret, Armoire', 'Boîte, coffret ou armoire technique qui centralise des éléments de réseaux');
+INSERT INTO "NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('03', 'Tampon', 'Couvercle d un regard d assainissement ou d une chambre souterraine de génie civil pour le passage des réseaux et présent notamment sur les chaussées');
+INSERT INTO "NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('04', 'Bouche à clé', 'Accessoire de robinetterie permettant de manoeuvrer depuis la chaussée, une vanne ou un robinet de branchement enterré');
+INSERT INTO "NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('05', 'Bouche, Poteau incendie', 'Permet aux services de lutte contre l incendie (pompiers) de puiser l eau du réeau');
+INSERT INTO "NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('06', 'Poteau', 'Poteau supportant le passage aérien d un ou plusieurs réseaux');
+INSERT INTO "NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('07', 'Borne d éclairage', 'Borne lumineuse pour la mise en valeur / l éclairage de l espace public');
 
 COMMENT ON TABLE "NatureAffleurantPCRSType" IS
 'Code permettant de décrire de façon extensible la nature d un affleurant de réseaux.';
@@ -536,91 +506,506 @@ COMMENT ON TABLE "TexteJustificationPCRSType" IS
 -- Creation des tables "objets géographiques du PCRS"
 -- ---------------------------------
 
+
 -- ---------------------------------
--- Classe : EmprisePublicationPCRS
+-- Classe : EmprisePCRS
 -- ---------------------------------
 
--- Sequence: EmprisePublicationPCRS_idEmprise_seq
---DROP INDEX if exists "EmprisePublicationPCRS_geometrie_geomidx";
---DROP TABLE if exists "EmprisePublicationPCRS";
-DROP SEQUENCE if exists "EmprisePublicationPCRS_idEmprise_seq";
+-- Sequence: EmprisePCRS_idEmprise_seq
+--DROP INDEX if exists "EmprisePCRS_geometrie_geomidx";
+--DROP TABLE if exists "EmprisePCRS";
+DROP SEQUENCE if exists "EmprisePCRS_idEmprise_seq";
 
-CREATE SEQUENCE "EmprisePublicationPCRS_idEmprise_seq"
+CREATE SEQUENCE "EmprisePCRS_idEmprise_seq"
   INCREMENT 1
   MINVALUE 1
   MAXVALUE 9223372036854775807
   START 1586
   CACHE 1;
 
--- Table: EmprisePublicationPCRS
---DROP TABLE if exists "EmprisePublicationPCRS";
-CREATE TABLE "EmprisePublicationPCRS"
+-- Table: EmprisePCRS
+--DROP TABLE if exists "EmprisePCRS";
+CREATE TABLE "EmprisePCRS"
 (
-  geometrie geometry(Polygon,3946) NOT NULL,
-  "idEmprise" character varying UNIQUE NOT NULL DEFAULT nextval('"EmprisePublicationPCRS_idEmprise_seq"'::regclass),
-  gestionnaire character varying NOT NULL REFERENCES "Gestionnaire",
-  calendrier character varying(2) REFERENCES "CalendrierPCRS" (code),
+  --"commune" character varying REFERENCES "Commune" ("codeINSEE"),
+  "geometrie" geometry(MultiPolygon,3946) NOT NULL,
+  --"habillage" character varying,
+  "idEmprise" character varying UNIQUE NOT NULL DEFAULT nextval('"EmprisePCRS_idEmprise_seq"'::regclass),
+  --"objet" character varying,
+  --"raster" character varying,
+  --"tronçon" character varying REFERENCES "TronconVoirie" ("reference"),
+  CONSTRAINT "EmprisePCRS_pkey" PRIMARY KEY ("idEmprise")
+)
+WITH (
+  OIDS=FALSE
+);
+
+-- Index: EmprisePCRS_geometrie_geomidx
+--DROP INDEX if exists "EmprisePCRS_geometrie_geomidx";
+CREATE INDEX "EmprisePCRS_geometrie_geomidx"
+  ON "EmprisePCRS"
+  USING gist
+  (geometrie);
+
+
+COMMENT ON TABLE "EmprisePCRS" IS
+'Nom de la classe :
+EmprisePCRS
+
+Titre :
+Emprise du PCRS
+
+Définition :
+Une emprise du PCRS constitue un élément surfacique de délimitation de l''espace qui
+présente des caractéristiques communes.
+Une emprise du PCRS permet d''accéder à l''ensemble des éléments constituant le
+PCRS, et sert en particulier à repérer les objets du PCRS, en général associés à une
+thématique et porteurs de précision, ainsi que les affleurants de réseaux de tous types.
+
+Modélisation :
+Surface
+La collectivité gestionnaire du PCRS a toute latitude quant à la définition géométrique
+des emprises du PCRS.
+
+Regroupement :
+Les emprises du PCRS incluent notamment, sous forme de classes spécialisées
+- les emprises d''échange du PCRS, décrites par la classe spécialisée
+EmpriseEchangePCRS,
+- les emprises de disponibilité du PCRS, décrites par la classe EmpriseDisponibilitéPCRS,
+- les initiatives PCRS, décrites par la classe InitiativesPCRS.
+
+Contraintes :
+Classe abstraite, implémentée via les classes spécialisées EmpriseEchangePCRS,
+EmpriseDisponibilitePCRS et InitiativePCRS';
+COMMENT ON COLUMN "EmprisePCRS"."geometrie" IS
+'Géométrie représentée par un ensemble de surfaces.';
+COMMENT ON COLUMN "EmprisePCRS"."idEmprise" IS
+'Identifiant unique dans le jeu de données des emprises du PCRS.
+L unicité doit être assurée par le gestionnaire et viser une unicité nationale.
+Elle peut être atteinte en préfixant l identifiant par le code SIREN du producteur.';
+
+
+-- ---------------------------------
+-- Classe : InitiativePCRS
+-- ---------------------------------
+
+-- Sequence: InitiativePCRS_idEmprise_seq
+--DROP INDEX if exists "InitiativePCRS_geometrie_geomidx";
+--DROP TABLE if exists "InitiativePCRS";
+--DROP SEQUENCE if exists "InitiativePCRS_idEmprise_seq";
+
+--CREATE SEQUENCE "InitiativePCRS_idEmprise_seq"
+--  INCREMENT 1
+--  MINVALUE 1
+--  MAXVALUE 9223372036854775807
+--  START 1586
+--  CACHE 1;
+
+-- Table: InitiativePCRS
+--DROP TABLE if exists "InitiativePCRS";
+CREATE TABLE "InitiativePCRS"
+(
+  --"commune" character varying,
+  "geometrie" geometry(MultiPolygon,3946) NOT NULL,
+  --"habillage" character varying,
+  "idEmprise" character varying UNIQUE NOT NULL DEFAULT nextval('"EmprisePCRS_idEmprise_seq"'::regclass),
+  --"objet" character varying,
+  --"raster" character varying,
+  --"tronçon" character varying,
+  "description" character varying,
+  "gestionnaire" character varying NOT NULL,
+  --"partenaires" character varying,
+  CONSTRAINT "InitiativePCRS_pkey" PRIMARY KEY ("idEmprise")
+)
+INHERITS ("EmprisePCRS")
+WITH (
+  OIDS=FALSE
+);
+
+-- Index: InitiativePCRS_geometrie_geomidx
+--DROP INDEX if exists "InitiativePCRS_geometrie_geomidx";
+CREATE INDEX "InitiativePCRS_geometrie_geomidx"
+  ON "InitiativePCRS"
+  USING gist
+  (geometrie);
+
+
+COMMENT ON TABLE "InitiativePCRS" IS
+'Nom de la classe :
+InitiativePCRS
+
+Sous-classe de :
+EmprisePCRS
+
+Titre :
+Initiative du PCRS
+
+Définition :
+Une initiative du PCRS constitue une zone dans laquelle différents acteurs se sont
+coordonnés pour initier un PCRS. Cette classse pourra permettre d''alimenter
+l''observatoire du PCRS (http://cnig.gouv.fr/pcrs/obs_pcrs/?q=carto).
+
+Modélisation :
+Surface.
+
+Regroupement :
+La zone décrite ne présume pas que les données soient disponibles.
+
+Contraintes :
+Classe métadonnée du PCRS, accompagnant les métadonnées de publication du PCRS';
+
+COMMENT ON COLUMN "InitiativePCRS"."geometrie" IS
+'Géométrie représentée par un ensemble de surfaces.';
+COMMENT ON COLUMN "InitiativePCRS"."idEmprise" IS
+'Identifiant unique dans le jeu de données des emprises du PCRS.
+L unicité doit être assurée par le gestionnaire et viser une unicité nationale.
+Elle peut être atteinte en préfixant l identifiant par le code SIREN du producteur.';
+COMMENT ON COLUMN "InitiativePCRS"."description" IS
+'Information complémentaire liée à l initiative';
+COMMENT ON COLUMN "InitiativePCRS"."gestionnaire" IS
+'Nom de la collectivité gestionnaire du PCRS';
+--COMMENT ON COLUMN "InitiativePCRS"."partenaires" IS
+--'Nom des partenaires dans l intiative';
+
+
+-- ---------------------------------
+-- Classe : EmpriseDisponibilitePCRS
+-- ---------------------------------
+
+-- Sequence: EmpriseDisponibilitePCRS_idEmprise_seq
+--DROP INDEX if exists "EmpriseDisponibilitePCRS_geometrie_geomidx";
+--DROP TABLE if exists "EmpriseDisponibilitePCRS";
+DROP SEQUENCE if exists "EmpriseDisponibilitePCRS_idEmprise_seq";
+
+CREATE SEQUENCE "EmpriseDisponibilitePCRS_idEmprise_seq"
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1586
+  CACHE 1;
+
+-- Table: EmpriseDisponibilitePCRS
+--DROP TABLE if exists "EmpriseDisponibilitePCRS";
+CREATE TABLE "EmpriseDisponibilitePCRS"
+(
+  "commune" character varying,
+  "geometrie" geometry(MultiPolygon,3946) NOT NULL,
+  "habillage" character varying,
+  "idEmprise" character varying UNIQUE NOT NULL DEFAULT nextval('"EmpriseDisponibilitePCRS_idEmprise_seq"'::regclass),
+  "objet" character varying,
+  "raster" character varying,
+  "tronçon" character varying,
+  "dateActualite" date NOT NULL,
+  "initiative" character varying REFERENCES "InitiativePCRS" ("idEmprise"),
+  CONSTRAINT "EmpriseDisponibilitePCRS_pkey" PRIMARY KEY ("idEmprise")
+)
+INHERITS ("EmprisePCRS")
+WITH (
+  OIDS=FALSE
+);
+
+-- Index: EmpriseDisponibilitePCRS_geometrie_geomidx
+--DROP INDEX if exists "EmpriseDisponibilitePCRS_geometrie_geomidx";
+CREATE INDEX "EmpriseDisponibilitePCRS_geometrie_geomidx"
+  ON "EmpriseDisponibilitePCRS"
+  USING gist
+  (geometrie);
+
+
+COMMENT ON TABLE "EmpriseDisponibilitePCRS" IS
+'Nom de la classe :
+EmpriseDisponibilitePCRS
+
+Sous-classe de :
+EmprisePCRS
+
+Titre :
+Emprise de disponibilité du PCRS
+
+Définition :
+Une emprise de disponibilité du PCRS constitue un élément surfacique d''indication des
+zones disponibles à une date donnée. Cette information permet de savoir si un plan
+PCRS est disponible sur une zone donnée. Elle vient compléter la classe InitiativePCRS.
+
+Modélisation :
+Surface.
+
+Regroupement :
+Les emprises de disponibilité du PCRS peuvent correspondre à un ensemble de tronçons
+de voirie ou à un ensemble de commune.
+
+Contraintes :
+Classe métadonnée du PCRS, accompagnant les métadonnées de publication du PCRS';
+
+COMMENT ON COLUMN "EmpriseDisponibilitePCRS"."geometrie" IS
+'Géométrie représentée par un ensemble de surfaces.';
+COMMENT ON COLUMN "EmpriseDisponibilitePCRS"."idEmprise" IS
+'Identifiant unique dans le jeu de données des emprises du PCRS.
+L unicité doit être assurée par le gestionnaire et viser une unicité nationale.
+Elle peut être atteinte en préfixant l identifiant par le code SIREN du producteur.';
+COMMENT ON COLUMN "EmpriseDisponibilitePCRS"."dateActualite" IS
+'Date à laquelle la disponibilité est valide';
+
+-- ---------------------------------
+-- Classe : EmpriseEchangePCRS
+-- ---------------------------------
+
+-- Sequence: EmpriseEchangePCRS_idEmprise_seq
+--DROP INDEX if exists "EmpriseEchangePCRS_geometrie_geomidx";
+--DROP TABLE if exists "EmpriseEchangePCRS";
+DROP SEQUENCE if exists "EmpriseEchangePCRS_idEmprise_seq";
+
+CREATE SEQUENCE "EmpriseEchangePCRS_idEmprise_seq"
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1586
+  CACHE 1;
+
+-- Table: EmpriseEchangePCRS
+--DROP TABLE if exists "EmpriseEchangePCRS";
+CREATE TABLE "EmpriseEchangePCRS"
+(
+  "commune" character varying,
+  "geometrie" geometry(MultiPolygon,3946) NOT NULL,
+  "habillage" character varying,
+  "idEmprise" character varying UNIQUE NOT NULL DEFAULT nextval('"EmpriseEchangePCRS_idEmprise_seq"'::regclass),
+  "objet" character varying,
+  "raster" character varying,
+  "tronçon" character varying,
+  "complement" character varying,
   "datePublication" date NOT NULL,
-  "typeEmprise" character varying(2) NOT NULL REFERENCES "EmprisePCRSType" (code),
-  complement character varying,
-  raster character varying,
-  "gabaritPrecision" character varying(2),
-  CONSTRAINT "EmprisePublicationPCRS_pkey" PRIMARY KEY ("idEmprise")
+  --"calendrier" character varying(2) REFERENCES "CalendrierPCRSType" (code),
+  "gestionnaire" character varying NOT NULL,
+  --"gestionnaire" character varying NOT NULL REFERENCES "Gestionnaire",
+  --"type" character varying,
+  "type" character varying(2) REFERENCES "NatureEmprisePCRSType" (code),
+  CONSTRAINT "EmpriseEchangePCRS_idEmprise_seq_pkey" PRIMARY KEY ("idEmprise")
+)
+INHERITS ("EmprisePCRS")
+WITH (
+  OIDS=FALSE
+);
+
+-- Index: EmpriseEchangePCRS_geometrie_geomidx
+--DROP INDEX if exists "EmpriseEchangePCRS_geometrie_geomidx";
+CREATE INDEX "EmpriseEchangePCRS_geometrie_geomidx"
+  ON "EmpriseEchangePCRS"
+  USING gist
+  (geometrie);
+
+
+COMMENT ON TABLE "EmpriseEchangePCRS" IS
+'Nom de la classe :
+EmpriseEchangePCRS
+
+Sous-classe de :
+EmprisePCRS
+
+Titre :
+Emprise d''échange du PCRS
+
+Définition :
+Une emprise d''échange du PCRS constitue un élément surfacique de délimitation de
+l''espace public, et lorsque disponible de l''espace privé. Elle est localisée sur une
+commune, et peut être qualifiée par les tronçons de voirie concernés.
+Une emprise d''échange du PCRS permet d''accéder à l''ensemble des éléments
+constituant le PCRS, et sert en particulier à repérer les objets du PCRS, en général
+associés à une thématique et porteurs de précision, ainsi que les affleurants de réseaux
+de tous types.
+Parmi les éléments d''habillage d''une emprise d''échange du PCRS, on distinguera en
+particulier les noms ainsi que les numéros de voirie devant obligatoirement figurer dans
+un PCRS.
+Une emprise d''échange du PCRS contient également des éléments de calendrier
+précisant la date de publication des données concernées.
+Même si la faisabilité de l''utilisation de l''image pour répondre aux obligations DT/DICT
+reste à démontrer, le modèle de données en prévoit la gestion : ainsi, l''emprise
+d''échange du PCRS peut également être décrite par une ou plusieurs images haute ou
+très haute résolution éventuellement complétées d''objets vecteurs.
+
+Modélisation :
+Surface
+La collectivité gestionnaire du PCRS a toute latitude quant à la définition géométrique
+des emprises de publication du PCRS. Il est toutefois conseillé de publier le PCRS à au
+moins deux niveaux complémentaires d''emprises, à savoir un niveau continu (ou régulier,
+fixe) et associé à un découpage régulier du territoire (comme un carroyage) et un niveau
+discontinu (ou irrégulier, variable) correspondant à des découpages à base d’entités
+(tronçons, voire communes...).
+
+Regroupement :
+Les emprises d''échanges du PCRS peuvent suivre des logiques différentes :
+- les emprises de type couloir, c''est à dire associées à un axe de voirie et définies d''une
+part par les limites apparentes des propriétés privées étendues perpendiculairement à
+l''axe de voirie d''environ 15 mètres (à adapter localement), et d''autre part en incluant les
+surfaces tampon associées aux amorces de voies aux intersections et sur une longueur
+d''environ 10 mètres (à adapter localement).
+- par extension des emprises de type couloir, il est également possible d''inclure dans
+cette définition géométrique toute surface de l''espace public ou privé bornée par des
+limites apparentes de propriétés privées et n''incluant pas d''axe de voirie.
+- les emprises de type opération, c''est à dire associées à une opération particulière
+impactant le PCRS, par exemple la pose de rails de tramway. Ce type d''emprise ne
+contient aucune information de gestion quant à l''opération concernée, mais permet par
+exemple de regrouper des emprises élémentaires de type couloir disposant de
+caractéristiques communes
+- les emprises de type casé, liées à un carroyage particulier
+- les emprises de type limite administrative, permettant d''accéder à l''intégralité d''un
+PCRS sur une limite administrative donnée, et en particulier par commune
+- les emprises de type raster, éventuellement liées à un carroyage particulier, et
+permettant de référencer une image à haute ou très haute résolution.
+Contraintes :
+Classe essentielle du PCRS, accompagnant les métadonnées de publication du PCRS';
+
+COMMENT ON COLUMN "EmpriseEchangePCRS"."geometrie" IS
+'Géométrie représentée par un ensemble de surfaces.';
+COMMENT ON COLUMN "EmpriseEchangePCRS"."idEmprise" IS
+'Identifiant unique dans le jeu de données des emprises du PCRS.
+L unicité doit être assurée par le gestionnaire et viser une unicité nationale.
+Elle peut être atteinte en préfixant l identifiant par le code SIREN du producteur.';
+COMMENT ON COLUMN "EmpriseEchangePCRS"."complement" IS
+'Information complémentaire liée au type d emprise de publication du PCRS,
+gérée par le gestionnaire du PCRS et potentiellement utile à tout utilisateur du PCRS';
+COMMENT ON COLUMN "EmpriseEchangePCRS"."datePublication" IS
+'Date de mise à disposition de l emprise du PCRS';
+COMMENT ON COLUMN "EmpriseEchangePCRS"."gestionnaire" IS
+'Nom de la collectivité gestionnaire du PCRS';
+COMMENT ON COLUMN "EmpriseEchangePCRS"."type" IS
+'Type d emprise du PCRS';
+
+
+
+
+
+-- ---------------------------------
+-- Classe : Commune
+-- ---------------------------------
+
+--DROP INDEX if exists "Commune_geometrie_geomidx";
+--DROP TABLE if exists "Commune";
+
+-- Table: Commune
+--DROP TABLE if exists "Commune";
+CREATE TABLE "Commune"
+(
+  "codeINSEE" character varying UNIQUE NOT NULL,
+  "geometrie" geometry(MultiPolygon,3946) NOT NULL,
+  "nom" character varying,
+  "reference" character varying NOT NULL,
+  CONSTRAINT "Commune_pkey" PRIMARY KEY ("codeINSEE")
 )
 WITH (
   OIDS=FALSE
 );
 
--- Index: EmprisePublicationPCRS_geometrie_geomidx
---DROP INDEX if exists "EmprisePublicationPCRS_geometrie_geomidx";
-CREATE INDEX "EmprisePublicationPCRS_geometrie_geomidx"
-  ON "EmprisePublicationPCRS"
+-- Index: Commune_geometrie_geomidx
+--DROP INDEX if exists "Commune_geometrie_geomidx";
+CREATE INDEX "Commune_geometrie_geomidx"
+  ON "Commune"
   USING gist
   (geometrie);
 
 
-COMMENT ON TABLE "CategorieThematiquePCRSType" IS
-'Code permettant de décrire la thématique rattachée à un objet donné du PCRS';
+COMMENT ON TABLE "Commune" IS
+'Nom de la classe :
+Commune
 
-COMMENT ON COLUMN "CategorieThematiquePCRSType"."CategorieThematiquePCRSType" IS
-'Le code representation .....';
+Titre :
+Lien vers un objet commune
+
+Définition :
+Cette classe permet de référencer une commune présente dans un référentiel externe.
+
+Modélisation :
+Multi Polygone (GM_MultiPolygon)
+Les communes sont modélisées par un ensemble de polygones. La géométrie est
+indicative et la précision géométrique accordée importe peu.
+
+Critères de sélection :
+Seuls sont considérés les objets commune d''un jeu de données de référence, défini par
+le gestionnaire du PCRS.';
+
+COMMENT ON COLUMN "Commune"."codeINSEE" IS
+'Code INSEE de la commune.';
+COMMENT ON COLUMN "Commune"."geometrie" IS
+'Géométrie représentée par un ensemble de surfaces.';
+COMMENT ON COLUMN "Commune"."nom" IS
+'Nom de la commune.';
+COMMENT ON COLUMN "Commune"."reference" IS
+'Référence vers une base de données des communes.';
+
 
 -- ---------------------------------
--- Classe : TronconVoiriePCRS
+-- Classe : TronconVoirie
 -- ---------------------------------
 
--- Sequence: TronconVoiriePCRS_reference_seq
---DROP INDEX if exists "TronconVoiriePCRS_geometrie_geomidx";
---DROP TABLE if exists "TronconVoiriePCRS";
-DROP SEQUENCE if exists "TronconVoiriePCRS_reference_seq";
+-- Sequence: TronconVoirie_reference_seq
+--DROP INDEX if exists "TronconVoirie_geometrie_geomidx";
+--DROP TABLE if exists "TronconVoirie";
+DROP SEQUENCE if exists "TronconVoirie_reference_seq";
 
-CREATE SEQUENCE "TronconVoiriePCRS_reference_seq"
+CREATE SEQUENCE "TronconVoirie_reference_seq"
   INCREMENT 1
   MINVALUE 1
   MAXVALUE 9223372036854775807
   START 1586
   CACHE 1;
 
--- Table: TronconVoiriePCRS
---DROP TABLE if exists "TronconVoiriePCRS";
-CREATE TABLE "TronconVoiriePCRS"
+-- Table: TronconVoirie
+--DROP TABLE if exists "TronconVoirie";
+CREATE TABLE "TronconVoirie"
 (
-  geometrie geometry(LineString,3946) NOT NULL,
-  source character varying NOT NULL,
+  "geometrie" geometry(LineString,3946) NOT NULL,
+  "propriete" character varying(2) REFERENCES "ProprieteEspacePCRSType" (code),
   "reference" character varying UNIQUE NOT NULL DEFAULT nextval('"TronconVoiriePCRS_reference_seq"'::regclass),
-  propriete character varying(2) REFERENCES "ProprieteEspace" (code),
-  CONSTRAINT "TronconVoiriePCRS_pkey" PRIMARY KEY ("reference")
+  "source" character varying NOT NULL,
+  CONSTRAINT "TronconVoirie_pkey" PRIMARY KEY ("reference")
 )
 WITH (
   OIDS=FALSE
 );
 
--- Index: TronconVoiriePCRS_geometrie_geomidx
---DROP INDEX if exists "TronconVoiriePCRS_geometrie_geomidx";
-CREATE INDEX "TronconVoiriePCRS_geometrie_geomidx"
-  ON "TronconVoiriePCRS"
+-- Index: TronconVoirie_geometrie_geomidx
+--DROP INDEX if exists "TronconVoirie_geometrie_geomidx";
+CREATE INDEX "TronconVoirie_geometrie_geomidx"
+  ON "TronconVoirie"
   USING gist
   (geometrie);
+
+COMMENT ON TABLE "TronconVoirie" IS
+'Nom de la classe :
+TronconVoirie
+
+Titre :
+Tronçon de Voie
+
+Définition :
+Le tronçon de voirie du PCRS est un segment d''axe de voie entre deux intersections (qui
+ne sont pas modélisées dans le PCRS par ailleurs).
+Il sert essentiellement à identifier en premier lieu les emprises de publication du PCRS
+qui le concernent.
+Les noms de voirie, qui nécessitent un positionnement spécifique en dehors de l''espace
+où figurent les réseaux, et en particulier en zone urbaine dense, sont modélisés par
+ailleurs en tant que NomVoiriePCRS et ne sont donc pas gérés comme des données
+attributaires des tronçons de voirie du PCRS.
+De même, les numéros d''adresse, modélisés par ailleurs en tant que NumeroVoiriePCRS
+ne sont pas non plus liés aux tronçons de voirie du PCRS
+
+Modélisation :
+Polyligne
+Le tronçon de voirie s''appuie sur les tronçons du filaire des voies entretenu par la
+collectivité gestionnaire du PCRS, et pouvant s''appuyer sur des référentiels comme la
+BDUni ou la BD TOPO
+
+Contraintes :
+Classe accompagnant les métadonnées de publication du PCRS';
+
+COMMENT ON COLUMN "TronconVoirie"."geometrie" IS
+'Géométrie de type courbe.';
+COMMENT ON COLUMN "TronconVoirie"."propriete" IS
+'Distinction d''appartenance d''un troncon de voirie à l''espace public ou à l''espace privé.';
+COMMENT ON COLUMN "TronconVoirie"."reference" IS
+'Référence vers une base de données des communes.';
+COMMENT ON COLUMN "TronconVoirie"."source" IS
+'Acronyme du référentiel utilisé.';
 
 
 -- ---------------------------------
@@ -643,11 +1028,9 @@ CREATE SEQUENCE "HabillagePCRS_idHabillage_seq"
 --DROP TABLE if exists "HabillagePCRS";
 CREATE TABLE "HabillagePCRS"
 (
-  geometrie geometry(Geometry,3946) NOT NULL,
+  --geometrie geometry(Geometry,3946) NOT NULL,
   "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"HabillagePCRS_idHabillage_seq"'::regclass),
-  thematique character varying(2) NOT NULL,
-  calque character varying NOT NULL,
-  "positionnement" character varying(2) REFERENCES "PlacementPCRS" (code),
+  "thematique" character varying(2) NOT NULL REFERENCES "CategorieThematiquePCRSType" ("code"),
   CONSTRAINT "HabillagePCRS_pkey" PRIMARY KEY ("idHabillage")
 )
 WITH (
@@ -656,31 +1039,127 @@ WITH (
 
 -- Index: HabillagePCRS_geometrie_geomidx
 --DROP INDEX if exists "HabillagePCRS_geometrie_geomidx";
-CREATE INDEX "HabillagePCRS_geometrie_geomidx"
-  ON "HabillagePCRS"
+--CREATE INDEX "HabillagePCRS_geometrie_geomidx"
+--  ON "HabillagePCRS"
+--  USING gist
+--  (geometrie);
+
+COMMENT ON TABLE "HabillagePCRS" IS
+'Nom de la classe :
+HabillagePCRS
+
+Titre :
+Eléments d''habillage du PCRS
+
+Définition :
+Classe permettant de décrire tous les éléments d''habillage utiles à la compréhension du
+PCRS
+
+Modélisation :
+Point, Polyligne, Surface
+Élément d''habillage (de type point, ligne ou surface ou support de texte) sans précision
+de géoréférencement associée
+
+Regroupement :
+- les symboles
+- les toponymes,
+- les coordonnées planimétriques,
+- les altimétries,
+- les fossés, talus,
+- les surfaces hydrographiques,
+...
+
+Contraintes :
+Contraintes de positionnement en dehors de la voirie, en particulier en zone dense ou
+très dense';
+
+COMMENT ON COLUMN "HabillagePCRS"."idHabillage" IS
+'Identifiant unique de l''habillage.';
+COMMENT ON COLUMN "HabillagePCRS"."thematique" IS
+'La thématique à laquelle est associé l''élément d''habillage du PCRS';
+
+
+-- ---------------------------------
+-- Classe : HabillagePointsPCRS
+-- ---------------------------------
+
+-- Sequence: HabillagePointsPCRS_idHabillage_seq
+--DROP INDEX if exists "HabillagePointsPCRS_geometrie_geomidx";
+--DROP TABLE if exists "HabillagePointsPCRS";
+--DROP SEQUENCE if exists "HabillagePointsPCRS_idHabillage_seq";
+
+--CREATE SEQUENCE "HabillagePointsPCRS_idHabillage_seq"
+--  INCREMENT 1
+--  MINVALUE 1
+--  MAXVALUE 9223372036854775807
+--  START 1586
+--  CACHE 1;
+
+-- Table: HabillagePointsPCRS
+--DROP TABLE if exists "HabillagePointsPCRS";
+CREATE TABLE "HabillagePointsPCRS"
+(
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"HabillagePCRS_idHabillage_seq"'::regclass),
+  "thematique" character varying(2) NOT NULL REFERENCES "CategorieThematiquePCRSType" ("code"),
+  geometrie geometry(MultiPoint,3946) NOT NULL,
+  CONSTRAINT "HabillagePointsPCRS_pkey" PRIMARY KEY ("idHabillage")
+)
+INHERITS ("HabillagePCRS")
+WITH (
+  OIDS=FALSE
+);
+
+-- Index: HabillagePointsPCRS_geometrie_geomidx
+--DROP INDEX if exists "HabillagePointsPCRS_geometrie_geomidx";
+CREATE INDEX "HabillagePointsPCRS_geometrie_geomidx"
+  ON "SymboleHabillagePCRS"
   USING gist
   (geometrie);
 
+COMMENT ON TABLE "HabillagePointsPCRS" IS
+'Nom de la classe :
+HabillagePointsPCRS
+
+Sous-classe de :
+HabillagePCRS
+
+Titre :
+Points d''habillage du PCRS
+
+Définition :
+Classe spécialisée de la classe abstraite <HabillagePCRS> permettant de décrire tous
+les éléments d''habillage de type points (éventuellement multiples) utiles à la
+compréhension du PCRS
+
+Modélisation :
+Multipoints';
+
+COMMENT ON COLUMN "HabillagePointsPCRS"."idHabillage" IS
+'Identifiant unique de l''habillage.';
+COMMENT ON COLUMN "HabillagePointsPCRS"."thematique" IS
+'La thématique à laquelle est associé l''élément d''habillage du PCRS';
+COMMENT ON COLUMN "HabillagePCRS"."geometrie" IS
+'Géométrie de type point';
 
 -- ---------------------------------
--- Classe : SymboleHabillagePCRS
+-- Classe : HabillageSymbolePCRS
 -- ---------------------------------
 
--- Sequence: SymboleHabillagePCRS_idHabillage_seq
---DROP INDEX if exists "SymboleHabillagePCRS_geometrie_geomidx";
---DROP TABLE if exists "SymboleHabillagePCRS";
-DROP SEQUENCE if exists "SymboleHabillagePCRS_idHabillage_seq";
+-- Sequence: HabillageSymbolePCRS_idHabillage_seq
+--DROP INDEX if exists "HabillageSymbolePCRS_geometrie_geomidx";
+--DROP TABLE if exists "HabillageSymbolePCRS";
+--DROP SEQUENCE if exists "HabillageSymbolePCRS_idHabillage_seq";
 
-CREATE SEQUENCE "SymboleHabillagePCRS_idHabillage_seq"
-  INCREMENT 1
-  MINVALUE 1
-  MAXVALUE 9223372036854775807
-  START 1586
-  CACHE 1;
+--CREATE SEQUENCE "HabillageSymbolePCRS_idHabillage_seq"
+--  INCREMENT 1
+--  MINVALUE 1
+--  MAXVALUE 9223372036854775807
+--  START 1586
+--  CACHE 1;
 
--- Table: SymboleHabillagePCRS
---DROP TABLE if exists "SymboleHabillagePCRS";
-CREATE TABLE "SymboleHabillagePCRS"
+-- Table: HabillageSymbolePCRS
+--DROP TABLE if exists "HabillageSymbolePCRS";
+CREATE TABLE "HabillageSymbolePCRS"
 (
   geometrie geometry(Point,3946) NOT NULL,
   "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"SymboleHabillagePCRS_idHabillage_seq"'::regclass),
@@ -833,6 +1312,7 @@ CREATE INDEX "NumeroVoiriePCRS_geometrie_geomidx"
   ON "NumeroVoiriePCRS"
   USING gist
   (geometrie);
+
 
 
 -- ---------------------------------
@@ -1600,3 +2080,190 @@ CREATE INDEX "AffleurantEnveloppePCRS_geometrie_geomidx"
   ON "AffleurantEnveloppePCRS"
   USING gist
   (geometrie);
+
+
+
+
+
+
+-- ---------------------------------
+-- Creation des tables "partenaires"
+-- ---------------------------------
+
+
+
+-- ---------------------------------
+-- Classe : RoleNiveau1PCRSType
+-- ---------------------------------
+
+-- Table: RoleNiveau1PCRSType
+DROP TABLE if exists "RoleNiveau1PCRSType" CASCADE;
+CREATE TABLE "RoleNiveau1PCRSType"
+(
+  code character varying(2) unique,
+  valeur character varying(38),
+  CONSTRAINT "RoleNiveau1PCRSType_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO "RoleNiveau1PCRSType" (code, valeur) VALUES ('01', 'Echelon national du PCRS');
+INSERT INTO "RoleNiveau1PCRSType" (code, valeur) VALUES ('02', 'Gestionnaire du PCRS');
+INSERT INTO "RoleNiveau1PCRSType" (code, valeur) VALUES ('03', 'Producteur du PCRS');
+INSERT INTO "RoleNiveau1PCRSType" (code, valeur) VALUES ('04', 'Utilisateur du PCRS');
+
+COMMENT ON TABLE "RoleNiveau1PCRSType" IS
+'Code permettant de décrire le role de l''acteur.';
+
+
+
+-- ---------------------------------
+-- Classe : RoleNiveau2PCRSType
+-- ---------------------------------
+
+-- Table: RoleNiveau2PCRSType
+DROP TABLE if exists "RoleNiveau2PCRSType";
+CREATE TABLE "RoleNiveau2PCRSType"
+(
+  "roleNiveau1" character varying(2) NOT NULL REFERENCES "RoleNiveau1PCRSType" ("code"),
+  code character varying(2) unique,
+  valeur character varying(38),
+  CONSTRAINT "RoleNiveau2PCRSType_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO "RoleNiveau2PCRSType" ("roleNiveau1", code, valeur) VALUES ('01', '01', 'Echelon national du PCRS');
+INSERT INTO "RoleNiveau2PCRSType" ("roleNiveau1", code, valeur) VALUES ('02', '02', 'Gestionnaire du PCRS');
+INSERT INTO "RoleNiveau2PCRSType" ("roleNiveau1", code, valeur) VALUES ('03', '03', 'Gestionnaire Référentiel Voirie');
+INSERT INTO "RoleNiveau2PCRSType" ("roleNiveau1", code, valeur) VALUES ('03', '04', 'Gestionnaire Foncier');
+INSERT INTO "RoleNiveau2PCRSType" ("roleNiveau1", code, valeur) VALUES ('03', '05', 'Gestionnaire Voirie');
+INSERT INTO "RoleNiveau2PCRSType" ("roleNiveau1", code, valeur) VALUES ('03', '06', 'Exploitant de réseaux');
+INSERT INTO "RoleNiveau2PCRSType" ("roleNiveau1", code, valeur) VALUES ('03', '07', 'Autre Gestionnaire');
+INSERT INTO "RoleNiveau2PCRSType" ("roleNiveau1", code, valeur) VALUES ('03', '08', 'Producteur d orthophotos');
+
+COMMENT ON TABLE "RoleNiveau2PCRSType" IS
+'Code permettant de décrire le role de l''acteur.';
+
+-- ---------------------------------
+-- Classe : ActeurPCRSType
+-- ---------------------------------
+
+-- Table: ActeurPCRSType
+DROP TABLE if exists "ActeurPCRSType";
+CREATE TABLE "ActeurPCRSType"
+(
+  code character varying(2) unique,
+  valeur character varying(38),
+  CONSTRAINT "ActeurPCRSType_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('01', 'Soluris 17');
+INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('02', 'Enedis');
+INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('03', 'SDE');
+INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('04', 'SDEER');
+INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('05', 'CDA');
+INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('06', 'VLR');
+INSERT INTO "ActeurPCRSType" (code, valeur) VALUES ('07', 'DGFiP');
+
+
+COMMENT ON TABLE "ActeurPCRSType" IS
+'Code permettant de décrire l acteur.';
+
+
+
+-- ---------------------------------
+-- Creation des tables "relations n-m"
+-- ---------------------------------
+
+
+-- ---------------------------------
+-- Classe : RoleActeurPCRSRelation
+-- ---------------------------------
+DROP TABLE if exists "RoleActeurPCRSRelation";
+CREATE TABLE "RoleActeurPCRSRelation"
+(
+  --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"EmpriseCommunePCRSRelation_idRelation_seq"'::regclass),
+  "acteur" character varying NOT NULL REFERENCES "ActeurPCRSType" ("code"),
+  "role" character varying NOT NULL REFERENCES "RoleNiveau2PCRSType" ("code")
+  --CONSTRAINT "EmpriseCommunePCRSRelation_pkey" PRIMARY KEY ("idRelation")
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO "RoleActeurPCRSRelation" ("acteur", "role") VALUES ('01', '02');
+INSERT INTO "RoleActeurPCRSRelation" ("acteur", "role") VALUES ('02', '06');
+INSERT INTO "RoleActeurPCRSRelation" ("acteur", "role") VALUES ('03', '06');
+INSERT INTO "RoleActeurPCRSRelation" ("acteur", "role") VALUES ('04', '06');
+INSERT INTO "RoleActeurPCRSRelation" ("acteur", "role") VALUES ('05', '02');
+INSERT INTO "RoleActeurPCRSRelation" ("acteur", "role") VALUES ('05', '03');
+INSERT INTO "RoleActeurPCRSRelation" ("acteur", "role") VALUES ('05', '06');
+INSERT INTO "RoleActeurPCRSRelation" ("acteur", "role") VALUES ('06', '05');
+INSERT INTO "RoleActeurPCRSRelation" ("acteur", "role") VALUES ('06', '06');
+INSERT INTO "RoleActeurPCRSRelation" ("acteur", "role") VALUES ('07', '04');
+
+-- ---------------------------------
+-- Classe : EmpriseCommunePCRSRelation
+-- ---------------------------------
+
+-- Sequence: EmpriseCommunePCRSRelation_idRelation_seq
+--DROP INDEX if exists "EmpriseCommunePCRSRelation_geometrie_geomidx";
+--DROP TABLE if exists "EmpriseCommunePCRSRelation";
+--DROP SEQUENCE if exists "EmpriseCommunePCRSRelation_idRelation_seq";
+
+--CREATE SEQUENCE "EmpriseCommunePCRSRelation_idRelation_seq"
+--  INCREMENT 1
+--  MINVALUE 1
+--  MAXVALUE 9223372036854775807
+--  START 1586
+--  CACHE 1;
+
+-- Table: EmpriseCommunePCRSRelation
+DROP TABLE if exists "EmpriseCommunePCRSRelation";
+CREATE TABLE "EmpriseCommunePCRSRelation"
+(
+  --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"EmpriseCommunePCRSRelation_idRelation_seq"'::regclass),
+  "commune" character varying NOT NULL REFERENCES "Commune" ("codeINSEE"),
+  "emprise" character varying NOT NULL REFERENCES "EmprisePCRS" ("idEmprise")
+  --CONSTRAINT "EmpriseCommunePCRSRelation_pkey" PRIMARY KEY ("idRelation")
+)
+WITH (
+  OIDS=FALSE
+);
+
+-- Index: EmpriseCommunePCRSRelation_geometrie_geomidx
+--DROP INDEX if exists "EmpriseCommunePCRSRelation_geometrie_geomidx";
+--CREATE INDEX "EmpriseCommunePCRSRelation_geometrie_geomidx"
+--  ON "EmpriseCommunePCRSRelation"
+--  USING gist
+--  (geometrie);
+
+COMMENT ON TABLE "EmpriseCommunePCRSRelation" IS
+'';
+
+COMMENT ON COLUMN "EmpriseCommunePCRSRelation"."commune" IS
+'';
+COMMENT ON COLUMN "EmpriseCommunePCRSRelation"."emprise" IS
+'';
+
+
+-- ---------------------------------
+-- Classe : EmpriseActeurPCRSRelation
+-- ---------------------------------
+DROP TABLE if exists "EmpriseActeurPCRSRelation";
+CREATE TABLE "EmpriseActeurPCRSRelation"
+(
+  --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"EmpriseCommunePCRSRelation_idRelation_seq"'::regclass),
+  "emprise" character varying NOT NULL REFERENCES "InitiativePCRS" ("idEmprise"),
+  "acteur" character varying NOT NULL REFERENCES "ActeurPCRSType" ("code")
+  --CONSTRAINT "EmpriseCommunePCRSRelation_pkey" PRIMARY KEY ("idRelation")
+)
+WITH (
+  OIDS=FALSE
+);
