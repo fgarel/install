@@ -550,7 +550,7 @@ Les autres aspects de la modélisation géométrique sont propres à ceux décri
 modélisation des objets linéaires de la classe abstraite ObjetVecteurPCRS.
 
 Regroupement :
-Thématique Voirie :(Photographies © Ville de Rennes)
+Thématique Voirie :
 * Bordures :
 * Bordurettes :
 * Quais
@@ -879,6 +879,7 @@ rendre différenciable (aux limites de précision planimétrique) du socle ou du
 
 Nom de la classe :
 PilierParticulierPCRS
+
 Sous-classe de :
 PilierPCRS
 
