@@ -61,23 +61,8 @@ echo ""
 # plantuml
 echo "# 7ème Partie : plantuml"
 echo "###############################################"
-echo "./installPlantuml.sh"
-      ./installPlantuml.sh
-echo ""
-
-# 7ème Partie : postgresql
-###############################################
-# postgresql
-echo "# 7ème Partie : postgresql"
-echo "###############################################"
-echo "./installPostgresql.sh"
-      ./installPostgresql.sh
-echo "./installPostgresqlGeogigGTReseaux.sh"
-      ./installPostgresqlGeogigGTReseaux.sh
-echo "./installPostgresqlGeogigVLR.sh"
-      ./installPostgresqlGeogigVLR.sh
-echo "./installPostgresqlAutresVLR.sh"
-      ./installPostgresqlAutresVLR.sh
+#echo "./installPlantuml.sh"
+#      ./installPlantuml.sh
 echo ""
 
 # 7ème Partie : python
@@ -103,15 +88,31 @@ echo ""
 # python ecriture_sphinx
 echo "# 7ème Partie : python ecriture_sphinx"
 echo "###############################################"
-echo "sudo ./installPythonEcritureSphinx.sh"
-      sudo ./installPythonEcritureSphinx.sh
+#echo "sudo ./installPythonEcritureSphinx.sh"
+#      sudo ./installPythonEcritureSphinx.sh
 echo ""
+
+
+# 7ème Partie : postgresql
+###############################################
+# postgresql
+echo "# 7ème Partie : postgresql"
+echo "###############################################"
+echo "./installPostgresql.sh"
+      ./installPostgresql.sh
+#echo "./installPostgresqlGeogigGTReseaux.sh"
+#      ./installPostgresqlGeogigGTReseaux.sh
+#echo "./installPostgresqlGeogigVLR.sh"
+#      ./installPostgresqlGeogigVLR.sh
+#echo "./installPostgresqlAutresVLR.sh"
+#      ./installPostgresqlAutresVLR.sh
+#echo ""
 
 # 8ème Partie : suite d'outils pour la manipulation des données OSM
 ###############################################
 # suite d'outils pour la manipulation des données OSM
 echo "# 8ème Partie : suite d'outils pour la manipulation des données OSM"
 echo "###############################################"
-echo "sudo ./installOSM.sh"
-      sudo ./installOSM.sh
+#echo "sudo ./installOSM.sh"
+#      sudo ./installOSM.sh
 echo ""

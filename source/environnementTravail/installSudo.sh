@@ -11,7 +11,7 @@ echo "#"
 echo "sudo adduser fred sudo"
       sudo adduser fred sudo
 echo "#"
-echo "# Installation de aptitude"
-echo "sudo apt-get install aptitude"
-      sudo apt-get install aptitude
+#echo "# Installation de aptitude"
+#echo "sudo apt-get install aptitude"
+#      sudo apt-get install aptitude
 echo ""

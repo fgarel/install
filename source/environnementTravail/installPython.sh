@@ -10,8 +10,8 @@ echo "###############################################"
 echo "#"
 echo "# On installe à la fois python et pip"
 echo "#"
-echo "sudo apt-get install python3-pip"
-      sudo apt-get install python3-pip
+echo "sudo apt-get install -y python3-pip"
+      sudo apt-get install -y python3-pip
 echo "# sudo apt-get install python-pip"
       # sudo apt-get install python-pip
 echo "#"
@@ -25,13 +25,15 @@ echo "# Ces paquets sont :"
 echo "#"
 echo "# sudo apt-get install build-essential zlib1g-dev libbz2-dev libssl-dev libreadline-dev libncurses5-dev libsqlite3-dev libgdbm-dev libdb-dev libexpat-dev libpcap-dev liblzma-dev libpcre3-dev"
 echo "#"
-echo "sudo apt-get install build-essential \\"
+echo "sudo apt-get install -y \\"
+echo "                     build-essential \\"
 echo "                     zlib1g-dev libbz2-dev \\"
 echo "                     libssl-dev libreadline-dev \\"
 echo "                     libncurses5-dev libsqlite3-dev \\"
 echo "                     libgdbm-dev libdb-dev libexpat-dev \\"
 echo "                     libpcap-dev liblzma-dev libpcre3-dev"
-      sudo apt-get install build-essential \
+      sudo apt-get install -y \
+                           build-essential \
                            zlib1g-dev libbz2-dev \
                            libssl-dev libreadline-dev \
                            libncurses5-dev libsqlite3-dev \

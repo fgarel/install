@@ -28,23 +28,23 @@ echo "# https://github.com/neovim/neovim/wiki/Installing-Neovim"
 echo "#"
 echo "# Debian"
 echo "########"
-echo "#sudo apt-get install neovim"
-      #sudo apt-get install neovim
-echo "#sudo apt-get install python3-neovim"
-      #sudo apt-get install python3-neovim
+echo "sudo apt-get install -y neovim"
+      sudo apt-get install -y neovim
+echo "sudo apt-get install -y python3-neovim"
+      sudo apt-get install -y python3-neovim
 echo "#"
 echo "# Ubuntu"
 echo "########"
-echo "sudo apt-get install software-properties-common"
-      sudo apt-get install software-properties-common
-echo "sudo add-apt-repository ppa:neovim-ppa/unstable"
-      sudo add-apt-repository ppa:neovim-ppa/unstable
-echo "sudo apt-get update"
-      sudo apt-get update
-echo "sudo apt-get install neovim"
-      sudo apt-get install neovim
-echo "sudo apt-get install python-dev python-pip python3-dev python3-pip"
-      sudo apt-get install python-dev python-pip python3-dev python3-pip
+echo "#sudo apt-get install software-properties-common"
+      #sudo apt-get install software-properties-common
+echo "#sudo add-apt-repository ppa:neovim-ppa/unstable"
+      #sudo add-apt-repository ppa:neovim-ppa/unstable
+echo "#sudo apt-get update"
+      #sudo apt-get update
+echo "#sudo apt-get install neovim"
+      #sudo apt-get install neovim
+echo "#sudo apt-get install python-dev python-pip python3-dev python3-pip"
+      #sudo apt-get install python-dev python-pip python3-dev python3-pip
 
 
 echo "# On fabrique en premier nos fichiers .local"
@@ -154,6 +154,8 @@ echo "#"
 echo "#-----------------------------------------------"
 echo "# Installation de spf13-vim3"
 echo "#"
+echo "sudo apt-get install -y curl"
+      sudo apt-get install -y curl
 echo "curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh"
       curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 echo "#"

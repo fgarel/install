@@ -8,8 +8,8 @@
 echo "# 5ème Partie : Installation de byobu et tmux"
 echo "###############################################"
 echo "#"
-echo "sudo apt-get install byobu"
-      sudo apt-get install byobu
+echo "sudo apt-get install -y byobu"
+      sudo apt-get install -y byobu
 echo ""
 echo "# Choix du theme byobu"
 echo "# http://superuser.com/questions/387256/how-do-i-reset-the-status-bar-colors-in-byobu"

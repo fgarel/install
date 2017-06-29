@@ -24,17 +24,16 @@ echo "# au préalable, installé quelques paquets"
 echo "#"
 echo "# Ces paquets sont :"
 echo "#"
-echo "sudo apt-get install libjpeg-dev"
-echo "#"
-      sudo apt-get install libjpeg-dev
+echo "sudo apt-get install -y libjpeg-dev"
+      sudo apt-get install -y libjpeg-dev
 echo "#"
 echo "# Installation de l'environnement virtuel"
 echo "#"
 echo "pew list_pythons -a | grep 3.5"
       pew list_pythons -a | grep 3.5
 echo "#"
-echo "pew install 3.5.0"
-      pew install 3.5.0
+echo "pew install 3.5.1"
+      pew install 3.5.1
 echo "#"
 echo "# Nous allons démarrer l'environnement virtuel,"
 echo "# Dans cet environnement, l'installation doit continuer avec"
@@ -64,8 +63,8 @@ echo "# --------------------"
 echo "#"
 echo "# Démarrage de l'environnement virtuel"
 echo "#"
-echo 'pew new -p $(pythonz locate 3.5.0) mapproxy'
-      pew new -p $(pythonz locate 3.5.0) mapproxy
+echo 'pew new -p $(pythonz locate 3.5.1) mapproxy'
+      pew new -p $(pythonz locate 3.5.1) mapproxy
 echo "#"
 echo ""
 

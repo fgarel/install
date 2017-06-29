@@ -5,8 +5,8 @@ export VERSION_POSTGRESQL="9.6"
 export VERSION_POSTGIS="2.3"
 
 # debian
-export VERSION_POSTGRESQL="9.4"
-export VERSION_POSTGIS="2.1"
+export VERSION_POSTGRESQL="9.6"
+export VERSION_POSTGIS="2.3"
 
 # 7ème Partie : Installation de postgresql et postgis
 #####################################################
@@ -61,10 +61,14 @@ echo "sudo aptitude -y install postgresql-$VERSION_POSTGRESQL-postgis-$VERSION_P
       sudo aptitude -y install postgresql-$VERSION_POSTGRESQL-postgis-$VERSION_POSTGIS
 echo "sudo aptitude -y install postgresql-$VERSION_POSTGRESQL-postgis-$VERSION_POSTGIS-scripts"
       sudo aptitude -y install postgresql-$VERSION_POSTGRESQL-postgis-$VERSION_POSTGIS-scripts
+echo "sudo apt-get install -y postgresql-$VERSION_POSTGRESQL-postgis-$VERSION_POSTGIS"
+      sudo apt-get install -y postgresql-$VERSION_POSTGRESQL-postgis-$VERSION_POSTGIS
+echo "sudo apt-get install -y postgresql-$VERSION_POSTGRESQL-postgis-$VERSION_POSTGIS-scripts"
+      sudo apt-get install -y postgresql-$VERSION_POSTGRESQL-postgis-$VERSION_POSTGIS-scripts
 echo "#"
 echo "# Installation des paquets nécessaires pour l'installation de pgcli"
 echo "sudo apt-get install libpq-dev"
-      sudo aptitude -y install libpq-dev
+      sudo apt-get -y install libpq-dev
 echo ""
 echo "# Installation du paquet contrib (extensions)"
 #echo "sudo aptitude -y install postgresql-contrib-9.6"
