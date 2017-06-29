@@ -3666,7 +3666,7 @@ CREATE TABLE "AffleurantPCRS"
   "gestionnaire" character varying,
   "idSource" character varying,
   "nature" character varying(2) NOT NULL REFERENCES "NatureAffleurantPCRSType" (code),
-  "reseau" character varying(2) NOT NULL REFERENCES "NatureReseauPCRSType" (code),
+  "reseau" character varying(8) NOT NULL REFERENCES "NatureReseauPCRSType" (code),
   "source" character varying,
   CONSTRAINT "AffleurantPCRS_pkey" PRIMARY KEY ("idObjet")
 )
@@ -3775,7 +3775,7 @@ CREATE TABLE "AffleurantEnveloppePCRS"
   "gestionnaire" character varying,
   "idSource" character varying,
   "nature" character varying(2) NOT NULL REFERENCES "NatureAffleurantPCRSType" (code),
-  "reseau" character varying(2) NOT NULL REFERENCES "NatureReseauPCRSType" (code),
+  "reseau" character varying(8) NOT NULL REFERENCES "NatureReseauPCRSType" (code),
   "source" character varying,
   "geometrie" geometry(Polygon,3946) NOT NULL,
   CONSTRAINT "AffleurantEnveloppePCRS_pkey" PRIMARY KEY ("idObjet")
@@ -3881,7 +3881,7 @@ CREATE TABLE "AffleurantLignePCRS"
   "gestionnaire" character varying,
   "idSource" character varying,
   "nature" character varying(2) NOT NULL REFERENCES "NatureAffleurantPCRSType" (code),
-  "reseau" character varying(2) NOT NULL REFERENCES "NatureReseauPCRSType" (code),
+  "reseau" character varying(8) NOT NULL REFERENCES "NatureReseauPCRSType" (code),
   "source" character varying,
   "geometrie" geometry(MultiLinestring,3946) NOT NULL,
   CONSTRAINT "AffleurantLignePCRS_pkey" PRIMARY KEY ("idObjet")
@@ -3986,7 +3986,7 @@ CREATE TABLE "AffleurantPointPCRS"
   "gestionnaire" character varying,
   "idSource" character varying,
   "nature" character varying(2) NOT NULL REFERENCES "NatureAffleurantPCRSType" (code),
-  "reseau" character varying(2) NOT NULL REFERENCES "NatureReseauPCRSType" (code),
+  "reseau" character varying(8) NOT NULL REFERENCES "NatureReseauPCRSType" (code),
   "source" character varying,
   "geometrie" geometry(Point,3946) NOT NULL,
   CONSTRAINT "AffleurantPointPCRS_pkey" PRIMARY KEY ("idObjet")
@@ -4093,7 +4093,7 @@ CREATE TABLE "AffleurantSymbolePCRS"
   "gestionnaire" character varying,
   "idSource" character varying,
   "nature" character varying(2) NOT NULL REFERENCES "NatureAffleurantPCRSType" (code),
-  "reseau" character varying(2) NOT NULL REFERENCES "NatureReseauPCRSType" (code),
+  "reseau" character varying(8) NOT NULL REFERENCES "NatureReseauPCRSType" (code),
   "source" character varying,
   "angleRotation" decimal NOT NULL CHECK ("angleRotation" >= 0 AND "angleRotation" < 360),
   "geometrie" geometry(Point,3946) NOT NULL,
