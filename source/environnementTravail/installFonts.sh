@@ -115,7 +115,9 @@ echo 'mkdir ~/.local/share/fonts/monoisome'
 echo 'cd ~/.local/share/fonts/monoisome'
       cd ~/.local/share/fonts/monoisome
 echo 'wget https://github.com/larsenwork/monoid/blob/master/Monoisome/Monoisome-Regular.ttf?raw=true'
+echo '     -O Monoisome-Regular.ttf'
       wget https://github.com/larsenwork/monoid/blob/master/Monoisome/Monoisome-Regular.ttf?raw=true
+           -O Monoisome-Regular.ttf
 echo 'cd $OLDPWD'
       cd $OLDPWD
 echo ""
@@ -237,8 +239,8 @@ echo "fc-cache -vf ~/.local/share/fonts/"
       fc-cache -vf ~/.local/share/fonts/
 #echo "fc-cache -vf ~/.fonts/"
 #      fc-cache -vf ~/.fonts/
-#echo "fc-cache -vf ~/.local/share/fonts/"
-#      fc-cache -vf ~/.local/share/fonts/
+echo "fc-cache -vf /usr/share/fonts/"
+      fc-cache -vf /usr/share/fonts/
 #echo "fc-cache -vf ~/.fonts/"
 #      fc-cache -vf ~/.fonts/
 #echo "fc-cache -vf fonts/"
