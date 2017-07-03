@@ -128,8 +128,12 @@ echo "git clone https://github.com/gabrielelana/awesome-terminal-fonts"
       git clone https://github.com/gabrielelana/awesome-terminal-fonts
 echo "git fetch https://github.com/gabrielelana/awesome-terminal-fonts"
       git fetch https://github.com/gabrielelana/awesome-terminal-fonts
-echo "./awesome-terminal-fonts/install.sh"
-      ./awesome-terminal-fonts/install.sh
+#echo "./awesome-terminal-fonts/install.sh"
+#      ./awesome-terminal-fonts/install.sh
+echo "sudo cp ./awesome-terminal-fonts/build/*.ttf ~/.local/share/fonts/"
+      sudo cp ./awesome-terminal-fonts/build/*.ttf ~/.local/share/fonts/
+echo "sudo cp ./awesome-terminal-fonts/build/*.sh ~/.local/share/fonts/"
+      sudo cp ./awesome-terminal-fonts/build/*.sh ~/.local/share/fonts/
 echo "sudo cp ./awesome-terminal-fonts/config/10-symbols.conf /etc/fonts/conf.avail/"
       sudo cp ./awesome-terminal-fonts/config/10-symbols.conf /etc/fonts/conf.avail/
 echo "sudo ln -s ../conf.avail/10-symbols.conf /etc/fonts/conf.d/10-symbols.conf"
@@ -186,7 +190,7 @@ echo "#   https://powerline.readthedocs.org/en/latest/installation/linux.html#fo
 echo "# La doc sur le test est ici : "
 echo "#   https://gist.github.com/agnoster/3712874"
 echo "#"
-echo "suod apt-get install -y fonts-powerline"
+echo "sudo apt-get install -y fonts-powerline"
       sudo apt-get install -y fonts-powerline
 echo "git clone https://github.com/powerline/fonts fonts-powerline"
       git clone https://github.com/powerline/fonts fonts-powerline
