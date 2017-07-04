@@ -31,13 +31,13 @@ echo '# ================================================='
 
 
 #listdbtodrop='osm osm_complement voieadresse voieadresse_complement sdis sdis_complement espu espu_complement voirie_filaire voirie_filaire_complement cadastre cadastre_complement sandbox graphe template_postgis mapnik-tmp-postgis-test-db' ;
-listdbtodrop='osm osm_complement voieadresse voieadresse_complement sdis sdis_complement espu espu_complement graphe template_postgis mapnik-tmp-postgis-test-db' ;
-listusertodrop='Fred fred osmuser mapnikuser www-data' ;
+listdbtodrop='osm template_postgis mapnik-tmp-postgis-test-db' ;
+listusertodrop='osmuser mapnikuser www-data' ;
 listuser='osmuser mapnikuser www-data'
 #listuserowner='osmuser'  # le propriétaire des bases
 postgresqluserowner='osmuser'  # le propriétaire des bases
-listdb='osm osm_complement voieadresse voieadresse_complement sdis sdis_complement espu espu_complement graphe template_postgis mapnik-tmp-postgis-test-db' ;
-listext='adminpack plpgsql postgis postgis_topology fuzzystrmatch hstore' ;
+listdb='osm template_postgis mapnik-tmp-postgis-test-db' ;
+listext='adminpack plpgsql postgis postgis_topology fuzzystrmatch hstore dblink' ;
 # liste des schemas pour la base osm
 # les schemas pour les bases osm sont décrits ici
 # http://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs#Database_Schemas

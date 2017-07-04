@@ -75,6 +75,8 @@ echo "# Installation du paquet contrib (extensions)"
 #      sudo aptitude -y install postgresql-contrib-9.6
 echo "sudo aptitude -y install postgresql-contrib-$VERSION_POSTGRESQL"
       sudo aptitude -y install postgresql-contrib-$VERSION_POSTGRESQL
+echo "sudo apt-get -y install postgresql-contrib-$VERSION_POSTGRESQL"
+      sudo apt-get -y install postgresql-contrib-$VERSION_POSTGRESQL
 echo "#"
 #echo "# Modification de /etc/postgresql/9.4/main/postgresql.conf"
 #echo "# Modification de /etc/postgresql/9.6/main/postgresql.conf"
