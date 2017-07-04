@@ -38,15 +38,6 @@ echo "./installPython.sh"
       ./installPython.sh
 echo ""
 
-# 7ème Partie : python mapproxy
-###############################################
-# python mapproxy
-echo "# 7ème Partie : python mapproxy"
-echo "###############################################"
-echo "./installPythonMapproxy.sh"
-      ./installPythonMapproxy.sh
-echo ""
-
 
 # 5ème Partie : byobu
 ###############################################
@@ -85,6 +76,14 @@ echo "###############################################"
 #      ./installPlantuml.sh
 echo ""
 
+# 7ème Partie : python mapproxy
+###############################################
+# python mapproxy
+echo "# 7ème Partie : python mapproxy"
+echo "###############################################"
+#echo "./installPythonMapproxy.sh"
+#      ./installPythonMapproxy.sh
+echo ""
 
 
 # 7ème Partie : python ecriture_sphinx
@@ -110,6 +109,8 @@ echo "./installPostgresql.sh"
 #      ./installPostgresqlGeogigVLR.sh
 #echo "./installPostgresqlAutresVLR.sh"
 #      ./installPostgresqlAutresVLR.sh
+echo "./installPostgresqlOsm.sh"
+      ./installPostgresqlOsm.sh
 #echo ""
 
 # 8ème Partie : suite d'outils pour la manipulation des données OSM
