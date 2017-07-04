@@ -14,7 +14,7 @@
 # La liste des plugins est ici
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
 
-# 
+#
 # Le script zsh-newuser-install permet de creer un fichier zshrc minimal
 #
 
@@ -43,6 +43,7 @@ antigen use prezto
 #---------------
 # La liste des themes est ici
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# https://github.com/unixorn/awesome-zsh-plugins#themes
 #
 #antigen theme obraun
 #antigen theme agnoster
@@ -53,11 +54,13 @@ antigen theme ys
 antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 #antigen theme bhilburn/powerlevel9k powerlevel9k
 #POWERLEVEL9K_MODE='awesome-fontconfig'
+antigen theme prikhi/molokai-powerline-zsh molokai-powerline-zsh
 #
 # Antigen Bundles
 #----------------
 # La liste des plugins est ici
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
+# https://github.com/unixorn/awesome-zsh-plugins#plugins
 #
 antigen bundle common-aliases
 antigen bundle command-not-found
@@ -86,10 +89,18 @@ antigen bundle virtualenv
 antigen bundle z
 
 # Autres dépots
+antigen bundle chrissicool/zsh-256color
 antigen bundle sharat87/autoenv
+#antigen bundle chrissicool/zsh-bash
+antigen bundle supercrabtree/k
 antigen bundle rupa/z
 #antigen bundle jdavis/zsh-files
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+antigen apply
+
 # Ajouté suite à l'installation de pew
 source $(pew shell_config)
+
+# Ajouté suite à l'installation des fontes
+source ~/.local/share/fonts/*.sh

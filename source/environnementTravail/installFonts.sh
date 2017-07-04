@@ -259,9 +259,11 @@ echo "# Test d'une fonte/police dans un terminal"
 echo "#"
 echo 'echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"'
       echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
+echo 'echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699 \uF302 \uf170 \ue77d \ue73c \ue712 \u63c \U1f40d"'
+      echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699 \uF302 \uf170 \ue77d \ue73c \ue712 \u63c \U1f40d"
 echo "#"
 echo "# BULLETTRAIN_VIRTUALENV_PREFIX"
-echo "# table des caractères / ubuntu derivative powerline / commun / U1f40 / snake, sixth of the signs of the asian zodiac"
+echo "# table des caractères / ubuntu derivative powerline / commun / U1f40d / snake, sixth of the signs of the asian zodiac"
 echo "#"
 echo "#"
 echo "#-----------------------------------------------"
