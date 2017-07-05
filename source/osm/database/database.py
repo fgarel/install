@@ -15,7 +15,7 @@ from psycopg2.extensions import ISOLATION_LEVEL_READ_COMMITTED # <-- ADD THIS LI
 
 class Database(object):
 
-    u""" Cette classe correspont à une connexion via psycopg2. """
+    u""" Cette classe correspond à une base de donnée connectée via psycopg2. """
 
     def __init__(self, paramconnexion):
         u""" Fonction lancée au moment de l'instanciation. """
@@ -214,16 +214,7 @@ def main():
         for schema, listtables in dict_schema_listtables.items():
             for table in listtables:
                 maconnexion.create_table(dbname, schema, table)
-    #
-    # listschematable = {'pcrs': ['17_vlr', '17_cda', '17_enedis'],
-    #                    'rtge': ['17_vlr', '17_cda'],
-    #                    'cada': ['17_vlr', '17_dgfip'] ,
-    #                    'rese': ['17_vlr'],
-    #                    'espu': ['17_vlr'],
-    #                    'bati': ['17_vlr']}
-    # for schema, listtable in listschematable.items():
-    #     for table in listtable:
-    #         myconnection.create_table('geogig', schema, table)
+
 
 if __name__ == '__main__':
     main()
