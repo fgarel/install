@@ -108,21 +108,45 @@ echo "#"
 echo "# -----------------------------------------------------"
 echo "# Installation 3 : la fonte monoid / monoisome"
 echo "#"
-echo "#https://github.com/larsenwork/monoid"
+echo "# https://github.com/larsenwork/monoid"
 echo "#"
 echo 'mkdir ~/.local/share/fonts/monoisome'
       mkdir ~/.local/share/fonts/monoisome
 echo 'cd ~/.local/share/fonts/monoisome'
       cd ~/.local/share/fonts/monoisome
-echo 'wget https://github.com/larsenwork/monoid/blob/master/Monoisome/Monoisome-Regular.ttf?raw=true'
-echo '     -O Monoisome-Regular.ttf'
-      wget https://github.com/larsenwork/monoid/blob/master/Monoisome/Monoisome-Regular.ttf?raw=true
-           -O Monoisome-Regular.ttf
+echo 'wget \\'
+echo '     -nc \\'
+echo '     -O Monoisome-Regular.ttf \\'
+echo '     https://github.com/larsenwork/monoid/blob/master/Monoisome/Monoisome-Regular.ttf?raw=true'
+      wget \
+           -nc \
+           -O Monoisome-Regular.ttf \
+           https://github.com/larsenwork/monoid/blob/master/Monoisome/Monoisome-Regular.ttf?raw=true
 echo 'cd $OLDPWD'
       cd $OLDPWD
 echo ""
 echo "# -----------------------------------------------------"
-echo "# Installation 4 : une autre fonte de symbole awesome-terminal-fonts"
+echo "# Installation 4 : la fonte ricomoon"
+echo "#"
+echo "# https://github.com/syui/ricomoon/"
+echo "#"
+echo 'mkdir ~/.local/share/fonts/ricomoon'
+      mkdir ~/.local/share/fonts/ricomoon
+echo 'cd ~/.local/share/fonts/ricomoon'
+      cd ~/.local/share/fonts/ricomoon
+echo 'wget \\'
+echo '     -nc \\'
+echo '     -O Ricomoon.ttf \\'
+echo '     https://github.com/syui/ricomoon/blob/master/fonts/Ricomoon.ttf?raw=true'
+      wget \
+           -nc \
+           -O Ricomoon.ttf \
+           https://github.com/syui/ricomoon/blob/master/fonts/Ricomoon.ttf?raw=true
+echo 'cd $OLDPWD'
+      cd $OLDPWD
+echo ""
+echo "# -----------------------------------------------------"
+echo "# Installation 5 : une autre fonte de symbole awesome-terminal-fonts"
 echo "#"
 echo "git clone https://github.com/gabrielelana/awesome-terminal-fonts"
       git clone https://github.com/gabrielelana/awesome-terminal-fonts
@@ -140,7 +164,7 @@ echo "sudo ln -s ../conf.avail/10-symbols.conf /etc/fonts/conf.d/10-symbols.conf
       sudo ln -s ../conf.avail/10-symbols.conf /etc/fonts/conf.d/10-symbols.conf
 echo "#"
 echo "# -----------------------------------------------------"
-echo "# Installation 5 : la fonte fantasque-sans-mono"
+echo "# Installation 6 : la fonte fantasque-sans-mono"
 echo "#"
 echo "# Vu sur cette page"
 echo "# https://github.com/unixorn/awesome-zsh-plugins#fonts"
@@ -152,17 +176,21 @@ echo "mkdir ~/.local/share/fonts/FantasqueSansMono"
       mkdir ~/.local/share/fonts/FantasqueSansMono
 echo "cd ~/.local/share/fonts/FantasqueSansMono"
       cd ~/.local/share/fonts/FantasqueSansMono
-echo "wget https://github.com/belluzj/fantasque-sans/releases/download/v1.7.1/FantasqueSansMono.tar.gz \\"
-echo "     -O FantasqueSansMono.tar.gz"
-      wget https://github.com/belluzj/fantasque-sans/releases/download/v1.7.1/FantasqueSansMono.tar.gz \
-           -O FantasqueSansMono.tar.gz
+echo 'wget \\'
+echo '     -nc \\'
+echo '     -O FantasqueSansMono.tar.gz \\'
+echo '     https://github.com/belluzj/fantasque-sans/releases/download/v1.7.1/FantasqueSansMono.tar.gz'
+      wget \
+           -nc \
+           -O FantasqueSansMono.tar.gz \
+           https://github.com/belluzj/fantasque-sans/releases/download/v1.7.1/FantasqueSansMono.tar.gz
 echo "tar -xzvf FantasqueSansMono.tar.gz"
       tar -xzvf FantasqueSansMono.tar.gz
 echo 'cd $OLDPWD'
       cd $OLDPWD
 echo "#"
 echo "# -----------------------------------------------------"
-echo "# Installation 6 : la fonte fantasque_awesome_powerline"
+echo "# Installation 7 : la fonte fantasque_awesome_powerline"
 echo "#"
 echo "# Ajout de fantasque_awesome_powerline"
 echo "#"
@@ -181,7 +209,7 @@ echo "cp fantasque_awesome_powerline/*.ttf ~/.local/share/fonts/FantasqueSansMon
 
 
 echo "# -----------------------------------------------------"
-echo "# Installation 7 : les fontes powerline (hack, source code, ...)"
+echo "# Installation 8 : les fontes powerline (hack, source code, ...)"
 echo "#"
 echo "# https://github.com/powerline/fonts"
 echo "#"
@@ -205,22 +233,26 @@ echo 'cd $OLDPWD'
 echo ""
 
 echo "# -----------------------------------------------------"
-echo "# Installation 8 : powerline extra "
+echo "# Installation 9 : powerline extra "
 echo "#"
 echo "# https://github.com/ryanoasis/powerline-extra-symbols"
 echo "mkdir ~/.local/share/fonts/powerline-extra-symbols"
       mkdir ~/.local/share/fonts/powerline-extra-symbols
 echo "cd ~/.local/share/fonts/powerline-extra-symbols"
       cd ~/.local/share/fonts/powerline-extra-symbols
-echo "wget https://github.com/ryanoasis/powerline-extra-symbols/blob/master/PowerlineExtraSymbols.otf?raw=true \\"
-echo "     -O PowerlineExtraSymbols.otf"
-      wget https://github.com/ryanoasis/powerline-extra-symbols/blob/master/PowerlineExtraSymbols.otf?raw=true \
-           -O PowerlineExtraSymbols.otf
+echo 'wget \\'
+echo '     -nc \\'
+echo '     -O PowerlineExtraSymbols.otf \\'
+echo '     https://github.com/ryanoasis/powerline-extra-symbols/blob/master/PowerlineExtraSymbols.otf?raw=true'
+      wget \
+           -nc \
+           -O PowerlineExtraSymbols.otf \
+           https://github.com/ryanoasis/powerline-extra-symbols/blob/master/PowerlineExtraSymbols.otf?raw=true
 echo 'cd $OLDPWD'
       cd $OLDPWD
 echo ""
 echo "# -----------------------------------------------------"
-echo "# Installation 9 : nerd fonts"
+echo "# Installation 10 : nerd fonts"
 echo "#"
 echo "# https://github.com/ryanoasis/nerd-fonts"
 echo "#"

@@ -51,10 +51,17 @@ antigen use prezto
 antigen theme ys
 #antigen theme bureau
 #antigen theme blinks
-antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+#antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 #antigen theme bhilburn/powerlevel9k powerlevel9k
 #POWERLEVEL9K_MODE='awesome-fontconfig'
-antigen theme prikhi/molokai-powerline-zsh molokai-powerline-zsh
+#antigen theme prikhi/molokai-powerline-zsh molokai-powerline-zsh
+#antigen theme https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme
+#antigen theme https://github.com/maverick9000/zsh2000
+#antigen theme https://github.com/banga/powerline-shell
+#antigen theme https://github.com/syui/powerline.zsh
+antigen theme https://github.com/caiogondim/bullet-train.zsh
+
+
 #
 # Antigen Bundles
 #----------------
@@ -96,6 +103,8 @@ antigen bundle supercrabtree/k
 antigen bundle rupa/z
 #antigen bundle jdavis/zsh-files
 antigen bundle zsh-users/zsh-syntax-highlighting
+
+
 
 antigen apply
 
