@@ -59,7 +59,8 @@ antigen theme ys
 #antigen theme https://github.com/maverick9000/zsh2000
 #antigen theme https://github.com/banga/powerline-shell
 #antigen theme https://github.com/syui/powerline.zsh
-antigen theme https://github.com/caiogondim/bullet-train.zsh
+antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+#antigen theme https://github.com/caiogondim/bullet-train.zsh
 
 
 #

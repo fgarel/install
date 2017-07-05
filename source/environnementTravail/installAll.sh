@@ -109,8 +109,8 @@ echo "./installPostgresql.sh"
 #      ./installPostgresqlGeogigVLR.sh
 #echo "./installPostgresqlAutresVLR.sh"
 #      ./installPostgresqlAutresVLR.sh
-echo "./installPostgresqlOsm.sh"
-      ./installPostgresqlOsm.sh
+#echo "./installPostgresqlOsm.sh"
+#      ./installPostgresqlOsm.sh
 #echo ""
 
 # 8ème Partie : suite d'outils pour la manipulation des données OSM

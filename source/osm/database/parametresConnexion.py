@@ -1,0 +1,87 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+u""" Definition des paramètres de connexion.
+
+Paramètres de connexion à une base de données.
+
+"""
+
+#import psycopg2
+#from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT # <-- ADD THIS LINE
+
+class ParametresConnexion(object):
+
+    u""" Cette classe correspont aux paramètres de connexion. """
+
+    def __init__(self):
+        u""" Fonction lancée au moment de l'instanciation. """
+        # les parametres pour la creation
+        # Attention : la creation se fait sur la machine localhost
+        self.dict_dbuser_dbpass = {'fred': 'fred',
+                                   'osmuser': 'osmpass',
+                                   'mapnikuser': 'mapnikpass',
+                                   'www-data': 'www-data'}
+        self.dict_dbuser_listdroits = {'fred':       ['SUPERUSER', 'NOCREATEDB',
+                                                      'NOCREATEROLE', 'NOREPLICATION'],
+                                       'osmuser':    ['NOSUPERUSER', 'NOCREATEDB',
+                                                      'NOCREATEROLE', 'NOREPLICATION'],
+                                       'mapnikuser': ['NOSUPERUSER', 'NOCREATEDB',
+                                                      'NOCREATEROLE', 'NOREPLICATION'],
+                                       'www-data':   ['NOSUPERUSER', 'NOCREATEDB',
+                                                      'NOCREATEROLE', 'NOREPLICATION']}
+        #self.dbname = 'osm'
+        #self.dbowner = 'osmuser'
+        #self.listextension = ['adminpack', 'postgis', 'postgis_topology', 'fuzzystrmatch', 'hstore', 'dblink']
+        #self.listschema = ['apidb', 'osm2pgsql']
+        self.listdbname = ['osm']
+        self.dict_dbname_dbowner = {'osm': 'osmuser'}
+
+        self.dict_dbname_dict_dbuser_listdroits = \
+            {'osm': {'osmuser':    ['CONNECT', 'TEMPORARY', 'ALL'],
+                     'mapnikuser': ['CONNECT', 'TEMPORARY', 'ALL'],
+                     'www-data':   ['CONNECT', 'TEMPORARY', 'ALL']}}
+
+
+        self.dict_dbname_listextensions = {'osm': ['adminpack',
+                                                   'postgis',
+                                                   'postgis_topology',
+                                                   'fuzzystrmatch',
+                                                   'hstore',
+                                                   'dblink']}
+        self.dict_dbname_listschemas = {'osm': ['apidb',
+                                                'osm2pgsql']}
+        self.dict_dbname_dict_schema_listtables = \
+            {'osm': {'apidb':     ['nodes',
+                                   'ways'],
+                     'osm2pgsql': ['planet_osm_point',
+                                   'planet_osm_line',
+                                   'planet_osm_roads',
+                                   'planet_osm_polygon']}}
+
+        # les paramètres pour la connexion
+        self.hostname = 'localhost'
+        self.port = '5432'
+        self.username = 'fred'
+        self.password = 'fred'
+
+
+def main():
+    u""" Fonction appelée par défaut. """
+    paramconnexion = ParametresConnexion()
+
+    print('dict_dbuser_dbpass = {}'.format(paramconnexion.dict_dbuser_dbpass))
+    print('dict_dbuser_droits = {}'.format(paramconnexion.dict_dbuser_droits))
+    print('dbname             = {}'.format(paramconnexion.dbname))
+    print('dbowner            = {}'.format(paramconnexion.dbowner))
+    print('listextension      = {}'.format(paramconnexion.listextension))
+    print('listschema         = {}'.format(paramconnexion.listschema))
+
+    print('hostname           = {}'.format(paramconnexion.hostname))
+    print('port               = {}'.format(paramconnexion.port))
+    print('username           = {}'.format(paramconnexion.username))
+    print('password           = {}'.format(paramconnexion.password))
+    #print(connection)
+
+if __name__ == '__main__':
+    main()
