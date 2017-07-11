@@ -15,6 +15,13 @@ echo "sudo apt-get install -y python3-pip"
 echo "# sudo apt-get install python-pip"
       # sudo apt-get install python-pip
 echo "#"
+echo "# Installation du paquet python3-psycopg2"
+#echo "sudo aptitude -y install python3-psycopg2"
+#      sudo aptitude -y install python3-psycopg2
+echo "sudo apt-get -y install python3-psycopg2"
+      sudo apt-get -y install python3-psycopg2
+echo "#"
+echo "#"
 echo "# Pré-requis avant d'installer pew : pythonz"
 echo "# Pew utilise pythonz pour installer différentes versions de python."
 echo "# Or, d'après le site suivant :"

@@ -1,135 +1,152 @@
-total 2416
-drwxr-xr-x 13 fred fred  24576 mai   20 11:20 .
-drwxr-xr-x 14 fred fred   4096 mai   20 11:07 ..
--rw-r--r--  1 fred fred 161330 nov.  16  2016 110m-admin-0-countries.zip
--rw-r--r--  1 fred fred   5650 nov.  16  2016 alicebob.png
--rw-r--r--  1 fred fred    200 nov.  16  2016 alicebob.uml
-drwxr-xr-x  7 fred fred   4096 nov.  18 21:19 awesome-terminal-fonts
--rw-r--r--  1 fred fred   7890 nov.  16  2016 byobu.ods
--rw-r--r--  1 fred fred    105 nov.  16  2016 change.osc
--rwxr-xr-x  1 fred fred    133 nov.  16  2016 docksshuttlle1.sh
--rwxr-xr-x  1 fred fred    225 nov.  16  2016 docksshuttlle2.sh
--rwxr-xr-x  1 fred fred   1469 nov.  16  2016 docksshuttlle3_1_R_VLR6180X_From_cdalr.sh
--rwxr-xr-x  1 fred fred   1448 nov.  16  2016 docksshuttlle3_1_R_VLR6180X_From_DS214.sh
--rwxr-xr-x  1 fred fred   2176 nov.  16  2016 docksshuttlle3_2_L_Tux0_To_cdalr.sh
--rwxr-xr-x  1 fred fred   1649 nov.  16  2016 docksshuttlle3_2_L_Tux0_To_DS214.sh
--rwxr-xr-x  1 fred fred   1758 nov.  16  2016 docksshuttlle3_3_L_VLR6180X_To_VLR6180Y.sh
--rwxr-xr-x  1 fred fred   2763 nov.  16  2016 docksshuttlle3.sh
-drwxr-xr-x  4 fred fred   4096 févr. 28 08:44 dontpanic
--rwxr-xr-x  1 fred fred   2923 nov.  16  2016 firewall-auth-init
--rwxr-xr-x  1 fred fred   2836 nov.  16  2016 firewall-auth.sh
-drwxr-xr-x 26 fred fred   4096 déc.   1 21:41 fonts
-drwxr-xr-x  3 fred fred   4096 nov.  16  2016 Free-OpenVPN-Connect-for-Linux
--rw-r--r--  1 fred fred     66 nov.  16  2016 .gitconfig
--rw-r--r--  1 fred fred   9065 mai   20 11:22 grep
--rw-r--r--  1 fred fred   1505 nov.  16  2016 index.html
--rwxr-xr-x  1 fred fred   3648 janv. 18 21:03 installAll.sh
--rwxr-xr-x  1 fred fred   1090 nov.  20 09:51 installByobu.sh
--rwxr-xr-x  1 fred fred   1590 mars  24 20:37 installDontPanic.sh
--rw-r--r--  1 fred fred    935 mars  24 20:37 installDvdrip.sh
--rwxr-xr-x  1 fred fred   2499 nov.  16  2016 installFirewallAuth.sh
--rwxr-xr-x  1 fred fred   5432 janv. 19 19:51 installFonts.sh
--rwxr-xr-x  1 fred fred   4295 nov.  18 23:18 installGit.sh
--rwxr-xr-x  1 fred fred   5135 févr.  1 21:10 installJava.sh
--rwxr-xr-x  1 fred fred    602 nov.  16  2016 installOpenVPN.sh
--rw-r--r--  1 fred fred   2451 mai   17 23:01 installOSM_0.md
--rw-r--r--  1 fred fred  12702 mai    1 15:18 installOSM_1.md
--rw-r--r--  1 fred fred   9065 mai   20 11:22 installOSM_2.md
--rwxr-xr-x  1 fred fred   9847 mai   17 23:01 installOSMBoostDebianSource.sh
--rwxr-xr-x  1 fred fred   3078 mai   20 10:42 installOSMBoostUbuntuPaquet.sh
--rwxr-xr-x  1 fred fred   7720 mai   20 11:00 installOSMBoostUbuntuSource.sh
--rwxr-xr-x  1 fred fred   4459 mai   20 09:17 installOSMCartoCSS.sh
--rwxr-xr-x  1 fred fred   9065 mai   20 11:22 installOSMMapnikUbuntuPaquet.sh
--rwxr-xr-x  1 fred fred   9065 mai   20 11:22 installOSMMapnikUbuntuSource.sh
--rwxr-xr-x  1 fred fred   9065 mai   20 11:22 installOSMPythonMapnikDebian.sh
--rwxr-xr-x  1 fred fred   9065 mai   20 11:22 installOSMPythonMapnikUbuntu.sh
--rwxr-xr-x  1 fred fred   4331 mai   17 23:01 installOSM.sh
--rwxr-xr-x  1 fred fred   9209 mai   17 23:01 installOSMTilemanDebian.sh
--rwxr-xr-x  1 fred fred   4875 mai   17 23:01 installOSMTilemanUbuntu.sh
--rwxr-xr-x  1 fred fred   9065 mai   20 11:22 installOSMTirex.sh
--rwxr-xr-x  1 fred fred   1090 déc.   1 22:37 installPlantuml.sh
--rwxr-xr-x  1 fred fred   5060 janv. 12 22:21 installPostgresqlAutresVLR.sh
--rwxr-xr-x  1 fred fred   6605 févr.  1 21:10 installPostgresqlGeogigGTReseaux.sh
--rwxr-xr-x  1 fred fred   4408 nov.  16  2016 installPostgresqlGeogigVLR.sh
--rwxr-xr-x  1 fred fred   4323 nov.  16  2016 installPostgresqlMapnik.sh
--rwxr-xr-x  1 fred fred   9008 mai    1 08:11 installPostgresqlOsm.sh
--rwxr-xr-x  1 fred fred   5575 févr.  1 21:10 installPostgresql.sh
--rwxr-xr-x  1 fred fred   2716 nov.  16  2016 installPrivate.sh
--rwxr-xr-x  1 fred fred   3031 nov.  16  2016 installPythonEcritureSphinx.sh
--rwxr-xr-x  1 fred fred   1849 févr.  1 21:10 installPythonFlask.sh
--rwxr-xr-x  1 fred fred   1662 févr.  1 21:10 installPythonGraphe.sh
--rwxr-xr-x  1 fred fred   3528 nov.  16  2016 installPythonMapnik2.sh
--rwxr-xr-x  1 fred fred   3963 nov.  16  2016 installPythonMapnik.sh
--rwxr-xr-x  1 fred fred   2159 janv. 18 21:03 installPythonMapproxy.sh
--rwxr-xr-x  1 fred fred   3050 févr.  1 21:10 installPythonPgadmin4.sh
--rwxr-xr-x  1 fred fred   3975 janv. 18 21:03 installPython.sh
--rwxr-xr-x  1 fred fred   1916 févr.  1 22:41 installPythonWebFramework.sh
--rwxr-xr-x  1 fred fred   1926 févr.  1 21:10 installPythonWebGeogig.sh
--rwxr-xr-x  1 fred fred    538 nov.  16  2016 installServeurMail.sh
--rwxr-xr-x  1 fred fred   9288 févr.  1 21:19 installServeurWeb.sh
--rwxr-xr-x  1 fred fred   2290 avril 13 21:53 installSshScan.sh
--rwxr-xr-x  1 fred fred    480 févr.  1 21:10 installSudo.sh
--rwxr-xr-x  1 fred fred   1205 nov.  16  2016 installTnote.sh
--rwxr-xr-x  1 fred fred   8106 févr.  1 21:10 installVim.sh
--rwxr-xr-x  1 fred fred    918 févr. 25 08:06 installVpnGateWithProxy.sh
--rwxr-xr-x  1 fred fred   1578 nov.  16  2016 installWatchdtdictEmission.sh
--rwxr-xr-x  1 fred fred   1453 nov.  16  2016 installX2GoServer.sh
--rwxr-xr-x  1 fred fred   3258 mars   2 17:54 installZsh.sh
--rwxr-xr-x  1 fred fred    138 nov.  16  2016 launchOsmByobu.sh
-drwxr-xr-x  2 fred fred  12288 déc.   1 22:47 msfonts
--rw-r--r--  1 fred fred  84860 nov.  16  2016 ne_110m_admin_0_countries.dbf
--rw-r--r--  1 fred fred    145 nov.  16  2016 ne_110m_admin_0_countries.prj
--rw-r--r--  1 fred fred 179876 nov.  16  2016 ne_110m_admin_0_countries.shp
--rw-r--r--  1 fred fred   1516 nov.  16  2016 ne_110m_admin_0_countries.shx
-drwxr-xr-x  4 fred fred   4096 févr.  1 23:17 nginxFlask
--rwxr-xr-x  1 fred fred  18565 mai    7 22:07 openvpn-install.sh
--rwxr-xr-x  1 fred fred  82413 avril 22 09:13 osm2postgresql_05rc4.sh
--rwxr-xr-x  1 fred fred   3617 mai    1 08:26 osmCreateRepository.sh
--rwxr-xr-x  1 fred fred   4055 mai    1 07:13 osmDownloadFirstTime.sh
--rwxr-xr-x  1 fred fred   1853 avril 24 20:38 osmDownloadOtherTime.sh
--rwxr-xr-x  1 fred fred    837 mai    1 15:14 osmFirstTime.sh
--rwxr-xr-x  1 fred fred   9643 mai    1 09:53 osmImportFirstTime2.sh
--rwxr-xr-x  1 fred fred   5382 mai    1 09:53 osmImportOtherTime.sh
--rwxr-xr-x  1 fred fred   1133 nov.  16  2016 osmMaj15.sh
--rwxr-xr-x  1 fred fred   1705 mai   17 23:01 osmMaj.sh
--rwxr-xr-x  1 fred fred   1519 mai    1 15:04 osmPrepareQgis.sh
--rwxr-xr-x  1 fred fred   2608 mai    1 07:26 osmTest.sh
--rw-r--r--  1 fred fred  18033 mai   15 09:14 pinning.ods
-drwxr-xr-x  2 fred fred   4096 nov.  16  2016 PROFILES
--rwxr-xr-x  1 fred fred  43882 janv.  7 09:14 speedtest-cli
--rw-r--r--  1 fred fred   5230 janv. 12 20:53 spf13-vim.sh
-drwxr-xr-x  2 fred fred   4096 mai    1 15:03 sql
--rwxr-xr-x  1 fred fred   6149 avril  2 10:45 ssh_connect_via.sh
--rw-r--r--  1 fred fred  17034 avril  2 20:21 ssh.ods
--rwxr-xr-x  1 fred fred   1323 avril  2 10:45 ssh_open_host_cdalr.sh
--rwxr-xr-x  1 fred fred   2922 avril  2 10:45 ssh_open_host_tux0.sh
--rwxr-xr-x  1 fred fred   2882 avril  2 10:45 ssh_open_host_vlr6180x.sh
--rwxr-xr-x  1 fred fred   2881 avril  2 10:45 ssh_open_host_vlr6180y.sh
--rwxr-xr-x  1 fred fred   2945 avril  2 10:45 ssh_open_host_zenbook.sh
--rwxr-xr-x  1 fred fred   4677 avril 15 07:56 ssh_scanAll.sh
--rwxr-xr-x  1 fred fred   1461 mars  29 20:44 ssh_wake_tux0.sh
--rwxr-xr-x  1 fred fred   1635 mai    7 21:42 ssh_wake_vlr6180x.sh
--rwxr-xr-x  1 fred fred   1635 mai    7 21:42 ssh_wake_vlr6180y.sh
--rw-r--r--  1 fred fred   9065 mai   20 11:22 testMapnik
--rw-r--r--  1 fred fred  58615 mai   19 08:04 testMapnik2.png
--rw-r--r--  1 fred fred  18239 mai   19 08:04 testMapnik.png
--rwxr-xr-x  1 fred fred   9065 mai   20 11:22 testMapnik.py
--rw-r--r--  1 fred fred    560 mai    1 20:39 testMapnik.xml
--rw-r--r--  1 fred fred    857 nov.  16  2016 tileman_lua-nginx-osm_Makefile
--rw-r--r--  1 fred fred   1444 nov.  16  2016 tileman_lua-nginx-osm_osm_data_Makefile
--rw-r--r--  1 fred fred    482 nov.  16  2016 tileman_lua-nginx-osm_osm_data_north-america_Makefile
--rw-r--r--  1 fred fred   2626 nov.  16  2016 tileman_Makefile
-drwxr-xr-x  2 fred fred   4096 nov.  16  2016 tnote
--rwxr-xr-x  1 fred fred   1576 janv. 12 20:52 updateVim.sh
--rw-r--r--  1 fred fred   4029 nov.  26  2014 vpnbook-euro1-tcp443.ovpn
--rw-r--r--  1 fred fred   4027 nov.  26  2014 vpnbook-euro1-tcp80.ovpn
--rw-r--r--  1 fred fred   4033 nov.  26  2014 vpnbook-euro1-udp25000.ovpn
--rw-r--r--  1 fred fred   4027 nov.  26  2014 vpnbook-euro1-udp53.ovpn
--rw-r--r--  1 fred fred   9593 mai    7 22:25 vpngate_vpn705910792.opengw.net_tcp_1585.ovpn
--rw-r--r--  1 fred fred   9593 mai    7 22:24 vpngate_vpn705910792.opengw.net_udp_1726.ovpn
--rw-r--r--  1 fred fred   9593 mai    7 22:09 vpngate_vpn710475937.opengw.net_udp_1818.ovpn
-drwxr-xr-x  6 fred fred   4096 mai    7 21:48 vpngate-with-proxy
-drwxr-xr-x  2 fred fred   4096 avril 21 19:51 watchdtdict-emission
--rwxr-xr-x  1 fred fred   3057 nov.  16  2016 watchdtdict-emission-init
--rw-r--r--  1 fred fred   1680 nov.  16  2016 windows.tmux.osm
--rw-r--r--  1 fred fred   2332 nov.  16  2016 zshrc_antigen
+#!/bin/sh
+
+
+
+# 8ème Partie - Installation d'un environnement OSM
+###############################################
+# Installation d'un environnement OSM
+echo "# 8ème Partie - Installation de python-mapnik"
+echo "######################################################"
+echo "#"
+echo "# Ce script présente l'installation de python-mapnik"
+echo "#"
+echo "# Il semble que le lien entre python et mapnik"
+echo "# n'est pas automatique. "
+echo "#"
+echo "# En effet, après avoir installé mapnik, il n'est pas "
+echo "# possible de faire un import python : le module n'est pas connu"
+echo "#"
+echo "# Il s'agit donc d'installer python-mapnik en plus de mapnik"
+echo "#"
+echo "# En effet, d'après la page"
+echo "# https://github.com/mapnik/mapnik/blob/master/INSTALL.md"
+echo "#"
+echo "#   'Python bindings are not included by default.''"
+echo "#   'You'll need to add those separately.'"
+echo "#   'Build from source: https://github.com/mapnik/python-mapnik'"
+echo "#"
+echo "#"
+echo "# Installation de python3-mapnik à partir du paquet debian"
+echo "#"
+echo "# plus d'infos sur https://github.com/mapnik/python-mapnik"
+echo "#"
+echo "# Installation de python3-mapnik"
+echo "sudo apt-get -y install python3-mapnik"
+      sudo apt-get -y install python3-mapnik
+echo "#"
+echo "# Installation de python-mapnik"
+echo "#"
+echo "# Attention : Installation de python-mapnik ..... : c'est necessaire pour mapnik-render"
+#echo "sudo aptitude install python-mapnik"
+#      sudo aptitude install python-mapnik
+#echo "sudo aptitude remove python-mapnik"
+#      sudo aptitude remove python-mapnik
+echo "sudo apt-get -y install python-mapnik"
+      sudo apt-get -y install python-mapnik
+
+echo "#"
+echo "# Installation de nik2img (python2) et nik4 (python3)"
+echo "sudo -H pip3 install nik4"
+      sudo -H pip3 install nik4
+echo "sudo -H pip install nik2img"
+      sudo -H pip install nik2img
+
+echo "#"
+echo "#----------------------"
+echo "# test de l'installation de python-mapnik :"
+echo "#----------------------"
+echo "# La doc est ici"
+echo "# https://github.com/mapnik/mapnik/wiki/GettingStartedInPython"
+echo "#"
+echo "# Test 1 : python"
+echo '    python -c "import sys; print('\'\\\\n\''.join(sys.path))"'
+echo "# Test 2 : test interne : registration ?"
+echo "    ../mapnik/test/standalone/font_registration_test-bin"
+echo "    ../mapnik/test/standalone/datasource_registration_test-bin"
+echo "# Test 3 : mapnik-config"
+echo '    mapnik-config -v # should return a version number'
+echo '    mapnik-config --input-plugins'
+echo '    ls -al $(mapnik-config --input-plugins)'
+echo "# Test 4 : python import mapnik"
+echo '    python -c "import mapnik;print(mapnik.__file__)" # should return the path to the python bindings and no errors'
+echo '    python -c "from mapnik import DatasourceCache as c; print('"'shape'"' in c.plugin_names())"'
+echo '    python -c "from mapnik import DatasourceCache as c; print('\'\\\\n\''.join(c.plugin_names()))"'
+echo '# Test 5 : rendu avec outil mapnik-render'
+echo "#   https://github.com/mapnik/mapnik/wiki/GettingStartedInXML"
+echo "#   !!! Attention, il faut etre dans le repertoire mapnik !!!!"
+echo "    cd ../mapnik ; \\"
+echo "    mapnik-render \\"
+echo "    ../environnementTravail/testMapnik.xml \\"
+echo "    ../environnementTravail/testMapnik.png ;\\"
+echo "    cd ../environnementTravail ; \\"
+echo "    display testMapnik.png"
+echo '# Test 6 : rendu avec des outils python (nik2img et nik4)'
+echo "#   nik2img et nik4 : sont deux utilitaires qui utilisent mapnik,"
+echo "#   en passant par python :  il faut donc installer python-mapnik"
+echo "#   avant de pouvoir utiliser ces deux outils"
+echo "#   https://github.com/springmeyer/nik2img/blob/master/INSTALL.txt"
+echo "#   https://github.com/Zverik/Nik4"
+echo "    sudo -H pip3 install nik4"
+echo "    sudo -H pip install nik2img"
+echo "#   Après installation, nous pouvons utiliser un autre test interne de mapnik"
+echo "    cd ../mapnik ; \\"
+echo "    make rendu ;\\"
+echo "    cd ../environnementTravail ; \\"
+echo "    display ...."
+echo '# Test 7 : Test de mapnik avec les données osm (et configuration xml)'
+echo "#   http://wiki.openstreetmap.org/wiki/User:Stanton/Mapnik_Test_Server"
+echo "#   Un outil permet de generer un fichier xml"
+echo "#   (fichier qui contient les paramètres pour que mapnik genère une carte)"
+echo "#   à partir informations sources (base postgresql qui contient les données osm)"
+echo "#   http://wiki.openstreetmap.org/wiki/User:Stanton/Mapnik_Test_Server#Mapnik_Initialization"
+echo '#   '
+echo "#----------------------"
+echo "#----------------------"
+echo "# Test de l'installation d'openstreetmap-carto"
+echo "# et de openstreetmap-carto-vector-tiles :"
+echo "#----------------------"
+echo "#"
+echo "# Nous avons précedemment installé cartocss"
+echo "#"
+echo "# nous allons testé son utilisation dans son deuxième mode,"
+echo "# c'est à dire, l'utilisation des fichier (.mss) en tant que parammètres pour mapnik"
+echo "#"
+echo "# La doc est ici"
+echo "# https://github.com/geofabrik/openstreetmap-carto-vector-tiles/blob/master/INSTALL.md"
+echo "#"
+echo "# Test 1 : Test de mapnik avec les données osm (et configuration cartocss)"
+echo "#   https://github.com/gravitystorm/openstreetmap-carto/blob/master/CONTRIBUTING.md"
+echo "#   Jusqu'à présent, pour configurer le rendu,"
+echo "#   - nous avions utilisé un fichier xml,"
+echo "#   - nous allons maintenant utiliser un fichier css"
+echo "#"
+echo "#   Jusqu'à présent donc, avec mapnik, il fallait avoir un fichier xml pour decrire le rendu"
+echo "#   Pour les données d'OpenStreetMap, il fallait donc :"
+echo "#     1. generer un fichier xml avec la commande generate-xml.py"
+echo "#     2. lancer le rendu avec la commande mapnik-render"
+echo "# "
+echo "#   Dorénavant, avec cartocss, il faut avoir un fichier de type css"
+echo "#   la syntaxe est plus souple et plus lisible"
+echo "#   L'edition peut-etre faite à la main ou avec des outils (mapbox ?)"
+echo "#   Pour rendre les données d'OpenStreetMap, il faut dorénavant:"
+echo "#     1. adapter le fichier css"
+echo "#     2. lancer le rendu"
+echo "#----------------------"
+echo "#"
+echo "#----------------------"
+echo "# Reste a faire :"
+echo "#----------------------"
+#echo "# ./installOSM.sh"
+#echo "# ./installOSMCartoCSS.sh"
+####echo "# ./installOSMBoostDebian.sh"
+####echo "# ./installOSMMapnikDebian.sh"
+#echo "# ./installOSMMapnikUbuntu.sh"
+####echo "# ./installOSMPythonMapnikDebian"
+#echo "# ./installOSMPythonMapnikUbuntu"
+echo "# ./installOSMTirex.sh"
+####echo "# ./installOSMTilemanDebian.sh"
+echo "# ./installOSMTilemanUbuntu.sh"
+echo "#----------------------"
+echo "#"
+
+echo "#"

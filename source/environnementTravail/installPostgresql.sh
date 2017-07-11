@@ -78,6 +78,12 @@ echo "sudo aptitude -y install postgresql-contrib-$VERSION_POSTGRESQL"
 echo "sudo apt-get -y install postgresql-contrib-$VERSION_POSTGRESQL"
       sudo apt-get -y install postgresql-contrib-$VERSION_POSTGRESQL
 echo "#"
+echo "# Installation du paquet python3-psycopg2"
+#echo "sudo aptitude -y install python3-psycopg2"
+#      sudo aptitude -y install python3-psycopg2
+echo "sudo apt-get -y install python3-psycopg2"
+      sudo apt-get -y install python3-psycopg2
+echo "#"
 #echo "# Modification de /etc/postgresql/9.4/main/postgresql.conf"
 #echo "# Modification de /etc/postgresql/9.6/main/postgresql.conf"
 echo "# Modification de /etc/postgresql/$VERSION_POSTGRESQL/main/postgresql.conf"

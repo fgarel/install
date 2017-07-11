@@ -27,6 +27,10 @@ echo "#"
 
 
 echo "#"
+echo "set OLDPWDFG=$(pwd)"
+      set OLDPWDFG=$(pwd)
+      echo $OLDPWDFG
+echo "#"
 echo "# Installation d'openstreetmap-carto"
 echo "cd .."
       cd ..
@@ -45,8 +49,8 @@ echo "#"
 #echo "sudo make install"
 #      sudo make install
 echo "#"
-echo "cd ../environnementTravail"
-      cd ../environnementTravail
+echo "cd $OLDPWDFG"
+      cd $OLDPWDFG
 echo "pwd"
       pwd
 echo "#"
@@ -68,8 +72,8 @@ echo "#"
 #echo "sudo make install"
 #      sudo make install
 echo "#"
-echo "cd ../environnementTravail"
-      cd ../environnementTravail
+echo "cd $OLDPWDFG"
+      cd $OLDPWDFG
 echo "pwd"
       pwd
 echo "#"
@@ -83,6 +87,11 @@ echo "sudo aptitude install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted
       sudo aptitude install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
 echo "sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
       sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+echo "sudo apt-get -y install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
+      sudo apt-get -y install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
+echo "sudo apt-get -y install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+      sudo apt-get -y install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+echo "#"
 echo "# Après installation des fonts, il faut les enregistrer"
 echo "# https://wiki.debian.org/Fonts"
 echo "fc-cache -fv # rebuilds cached list of fonts"

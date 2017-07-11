@@ -49,8 +49,13 @@ echo "# Ces paquets sont donc :"
 echo "#"
 echo "sudo aptitude install -y osmosis"
       sudo aptitude install -y osmosis
+echo "sudo apt-get install -y osmosis"
+      sudo apt-get install -y osmosis
 echo "sudo aptitude install -y osm2pgsql"
       sudo aptitude install -y osm2pgsql
+echo "sudo apt-get install -y osm2pgsql"
+      sudo apt-get install -y osm2pgsql
+echo "#"
 echo "# pour memoire..."
 echo "# sudo apt-get install libapache2-mod-tile"
       #sudo apt-get install libapache2-mod-tile
