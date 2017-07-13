@@ -24,6 +24,9 @@ echo "# Installation de tileman "
 echo "#"
 echo "# https://github.com/osmfj/tileman/blob/master/INSTALL.md"
 echo "#"
+echo "set OLDPWDFG=$(pwd)"
+      set OLDPWDFG=$(pwd)
+      echo $OLDPWDFG
 echo "cd .."
       cd ..
 echo "pwd"
@@ -33,21 +36,21 @@ echo "rm -rf tileman*"
 echo "git clone https://github.com/osmfj/tileman.git"
       git clone https://github.com/osmfj/tileman.git
 echo "#"
-echo "# Attention, on remplace le Makefile ...."
-echo "cp environnementTravail/tileman_Makefile tileman/Makefile"
-      cp environnementTravail/tileman_Makefile tileman/Makefile
 echo "cd tileman"
       cd tileman
+echo "# Attention, on remplace le Makefile ...."
+echo "cp ../osm/tileman_Makefile tileman/Makefile"
+      cp ../osm/tileman_Makefile tileman/Makefile
 echo "git submodule init"
       git submodule init
 echo "git submodule update"
       git submodule update
-echo "cp ../environnementTravail/tileman_lua-nginx-osm_Makefile lua-nginx-osm/Makefile"
-      cp ../environnementTravail/tileman_lua-nginx-osm_Makefile lua-nginx-osm/Makefile
-echo "cp ../environnementTravail/tileman_lua-nginx-osm_osm_data_Makefile lua-nginx-osm/osm/data/Makefile"
-      cp ../environnementTravail/tileman_lua-nginx-osm_osm_data_Makefile lua-nginx-osm/osm/data/Makefile
-echo "cp ../environnementTravail/tileman_lua-nginx-osm_osm_data_north-america_Makefile lua-nginx-osm/osm/data/north-america/Makefile"
-      cp ../environnementTravail/tileman_lua-nginx-osm_osm_data_north-america_Makefile lua-nginx-osm/osm/data/north-america/Makefile
+echo "cp ../osm/tileman_lua-nginx-osm_Makefile lua-nginx-osm/Makefile"
+      cp ../osm/tileman_lua-nginx-osm_Makefile lua-nginx-osm/Makefile
+echo "cp ../osm/tileman_lua-nginx-osm_osm_data_Makefile lua-nginx-osm/osm/data/Makefile"
+      cp ../osm/tileman_lua-nginx-osm_osm_data_Makefile lua-nginx-osm/osm/data/Makefile
+echo "cp ../osm/tileman_lua-nginx-osm_osm_data_north-america_Makefile lua-nginx-osm/osm/data/north-america/Makefile"
+      cp ../osm/tileman_lua-nginx-osm_osm_data_north-america_Makefile lua-nginx-osm/osm/data/north-america/Makefile
 # echo "#"
 # echo "#---------------------------------------------"
 # echo "# Ensuite, pour installer tileman"
@@ -98,23 +101,36 @@ echo "cp ../environnementTravail/tileman_lua-nginx-osm_osm_data_north-america_Ma
 # echo "#"
 # echo "sudo aptitude update"
 #       sudo aptitude update
-echo "sudo aptitude install nginx-extras"
-      sudo aptitude install nginx-extras
+echo "sudo apt-get -y install nginx-extras"
+      sudo apt-get -y install nginx-extras
 echo "#"
-echo "sudo aptitude install geoip-database"
-      sudo aptitude install geoip-database
-echo "sudo aptitude install lua-bitop"
-      sudo aptitude install lua-bitop
-echo "sudo aptitude install lua5.1"
-      sudo aptitude install lua5.1
+echo "sudo apt-get -y install geoip-database"
+      sudo apt-get -y install geoip-database
 echo "#"
-echo "sudo apt-get install devscripts build-essential"
-      sudo apt-get install devscripts build-essential
-echo "sudo apt-get install dh-lua libcgal-dev cmake"
-      sudo apt-get install dh-lua libcgal-dev cmake
-echo "sudo apt-get install libcgal-qt5-11"
-      sudo apt-get install libcgal-qt5-11
-
+echo "sudo apt-get -y install lua-bitop"
+      sudo apt-get -y install lua-bitop
+echo "#"
+echo "sudo apt-get -y install lua5.1"
+      sudo apt-get -y install lua5.1
+echo "#"
+echo "sudo apt-get -y install dh-lua"
+      sudo apt-get -y install dh-lua
+echo "#"
+echo "sudo apt-get -y install libcgal-dev"
+      sudo apt-get -y install libcgal-dev
+echo "#"
+echo "sudo apt-get -y install libcgal-qt5-11"
+      sudo apt-get -y install libcgal-qt5-11
+echo "#"
+echo "sudo apt-get -y install cmake"
+      sudo apt-get -y install cmake
+echo "#"
+echo "sudo apt-get -y install devscripts"
+      sudo apt-get -y install devscripts
+echo "#"
+echo "sudo apt-get -y install build-essential"
+      sudo apt-get -y install build-essential
+echo "#"
 echo "#"
 echo "# lua-nginx-osm"
 echo "#"
@@ -145,12 +161,12 @@ echo "sudo dpkg -i lua-nginx-osm.deb"
 # echo "### sudo dpkg -i tirex-core_0.4.2tileman2_amd64.deb"
 #       ### sudo dpkg -i tirex-core_0.4.2tileman2_amd64.deb
 # echo "#"
-echo "sudo aptitude install libipc-sharelite-perl"
-      sudo aptitude install libipc-sharelite-perl
-echo "sudo aptitude install libmapnik-dev"
-      sudo aptitude install libmapnik-dev
-echo "sudo aptitude install libsigc++-2.0-dev"
-      sudo aptitude install libsigc++-2.0-dev
+echo "sudo apt-get -y install libipc-sharelite-perl"
+      sudo apt-get -y install libipc-sharelite-perl
+echo "sudo apt-get -y install libmapnik-dev"
+      sudo apt-get -y install libmapnik-dev
+echo "sudo apt-get -y install libsigc++-2.0-dev"
+      sudo apt-get -y install libsigc++-2.0-dev
 
 echo "#"
 echo "# tileman"
@@ -173,8 +189,11 @@ echo "# sudo dpkg -i tileman_1.4.1_all.deb"
 echo "# et yes, ca fonctionne !"
 echo "#"
 echo "#"
-echo "sed -i -e 's|postgresql-9.1-postgis|postgresql-9.4-postgis-2.1|' debian/control"
-      sed -i -e 's|postgresql-9.1-postgis|postgresql-9.4-postgis-2.1|' debian/control
+#echo "sed -i -e 's|postgresql-9.1-postgis|postgresql-9.4-postgis-2.1|' debian/control"
+#      sed -i -e 's|postgresql-9.1-postgis|postgresql-9.4-postgis-2.1|' debian/control
+echo "sed -i -e 's|postgresql-9.1-postgis|postgresql-9.6-postgis-2.3|' debian/control"
+      sed -i -e 's|postgresql-9.1-postgis|postgresql-9.6-postgis-2.3|' debian/control
+
 # echo "sudo apt-get source --build tileman"
 # echo "sudo dpkg -i tileman_1.4.1_all.deb"
 # echo "#"
@@ -202,8 +221,8 @@ echo "sudo dpkg -i ../tileman_1.4.1_all.deb"
 # echo "# sudo service nginx start"
 # echo "#"
 
-echo "cd ../environnementTravail"
-      cd ../environnementTravail
+echo "cd $OLDPWDFG"
+      cd $OLDPWDFG
 echo "pwd"
       pwd
 
@@ -230,11 +249,12 @@ echo "#"
 #echo "#----------------------"
 #echo "# ./installOSM.sh"
 #echo "# ./installOSMCartoCSS.sh"
-#echo "# ./installOSMBoostDebian.sh"
-#echo "# ./installOSMMapnikDebian.sh"
-##echo "# ./installOSMMapnikUbuntu.sh"
-#echo "# ./installOSMPythonMapnikDebian"
-##echo "# ./installOSMPythonMapnikUbuntu"
+####echo "# ./installOSMBoostDebian.sh"
+#echo "# ./installOSMMapnikDebianPaquet.sh"
+####echo "# ./installOSMMapnikUbuntuSource.sh"
+##echo "# ./installOSMMapnikUbuntuPaquet.sh"
+#echo "# ./installOSMPythonMapnikDebian.sh"
+##echo "# ./installOSMPythonMapnikUbuntu.sh"
 #echo "# ./installOSMTirex.sh"
 #echo "# ./installOSMTilemanDebian.sh"
 ##echo "# ./installOSMTilemanUbuntu.sh"

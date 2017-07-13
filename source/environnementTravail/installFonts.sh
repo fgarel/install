@@ -268,19 +268,38 @@ echo 'cd $OLDPWD'
       cd $OLDPWD
 echo ""
 echo "# -----------------------------------------------------"
+echo "# Installation 11 : les fonts pour les cartes (OSM et mapnik)"
+echo "#"
+echo "# Des fonts spécifiques existent pour les cartes"
+echo "# Ces fonts sont utilisées par exemple pour le rendu"
+echo "# des cartes avec le style openstreetmap-carto-vector-tiles"
+echo "# par l'utilitaire mapnik"
+echo "#"
+echo "# D'après la page suivante,"
+echo "# https://github.com/geofabrik/openstreetmap-carto-vector-tiles/blob/master/INSTALL.md"
+echo "# Il est nécessaire d'installer des polices supplémentaires pour utiliser ce système de rendu"
+echo "#"
+echo "# Cette installation est dupliquée dans ../osm/installOSMCartoCSS.sh"
+echo "#"
+echo "sudo aptitude install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
+      sudo aptitude install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
+echo "sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+      sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+echo "sudo apt-get -y install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
+      sudo apt-get -y install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
+echo "sudo apt-get -y install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+      sudo apt-get -y install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+echo ""
+echo "# -----------------------------------------------------"
 echo "#"
 echo "# Enregistrement de ces nouvelles fontes / polices"
 echo "#"
 echo "fc-cache -vf ~/.local/share/fonts/"
       fc-cache -vf ~/.local/share/fonts/
-#echo "fc-cache -vf ~/.fonts/"
-#      fc-cache -vf ~/.fonts/
 echo "fc-cache -vf /usr/share/fonts/"
       fc-cache -vf /usr/share/fonts/
-#echo "fc-cache -vf ~/.fonts/"
-#      fc-cache -vf ~/.fonts/
-#echo "fc-cache -vf fonts/"
-#      fc-cache -vf fonts/
+echo "fc-cache -vf"
+      fc-cache -vf
 echo "#"
 echo "# -----------------------------------------------------"
 echo "#"
