@@ -20,8 +20,8 @@ echo "#"
 echo "#----------------------"
 echo "# Avec une distribution Debian"
 echo "#----------------------"
-echo "# ./installOSM.sh"
-      ./installOSM.sh
+echo "# ./installOSMTools.sh"
+      ./installOSMTools.sh
 echo "# ./installOSMCartoCSS.sh"
       ./installOSMCartoCSS.sh
 ####echo "# ./installOSMBoostDebian.sh"
@@ -38,8 +38,8 @@ echo "#"
 #echo "#----------------------"
 #echo "# Avec une distribution Ubuntu"
 #echo "#----------------------"
-#echo "# ./installOSM.sh"
-#      ./installOSM.sh
+#echo "# ./installOSMTools.sh"
+#      ./installOSMTools.sh
 #echo "# ./installOSMCartoCSS.sh"
 #      ./installOSMCartoCSS.sh
 #echo "# ./installOSMMapnikUbuntuSource.sh"

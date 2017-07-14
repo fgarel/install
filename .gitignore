@@ -29,4 +29,6 @@ source/openstreetmap-carto/*
 source/openstreetmap-carto-vector-tiles/*
 source/python-mapnik/*
 source/tirex/*
+source/tirex*
 source/tileman/*
+source/tileman*
