@@ -27,8 +27,8 @@ echo "#"
 
 
 echo "#"
-echo "set OLDPWDFG=$(pwd)"
-      set OLDPWDFG=$(pwd)
+echo "export OLDPWDFG=$(pwd)"
+      export OLDPWDFG=$(pwd)
       echo $OLDPWDFG
 echo "#"
 echo "# Installation d'openstreetmap-carto"

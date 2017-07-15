@@ -25,14 +25,15 @@ echo "# ./installOSMTools.sh"
 echo "# ./installOSMCartoCSS.sh"
       ./installOSMCartoCSS.sh
 ####echo "# ./installOSMBoostDebian.sh"
-echo "# ./installOSMMapnikDebianPaquet.sh"
-      ./installOSMMapnikDebianPaquet.sh
+####echo "# ./installOSMMapnikDebianPaquet.sh"
+echo "# ./installOSMMapnikDebianSource.sh"
+      ./installOSMMapnikDebianSource.sh
 echo "# ./installOSMPythonMapnikDebian.sh"
-      ./installOSMPythonMapnikDebian.sh
+#      ./installOSMPythonMapnikDebian.sh
 echo "# ./installOSMTirex.sh"
-      ./installOSMTirex.sh
+#      ./installOSMTirex.sh
 echo "# ./installOSMTilemanDebian.sh"
-      ./installOSMTilemanDebian.sh
+#      ./installOSMTilemanDebian.sh
 echo "#----------------------"
 echo "#"
 #echo "#----------------------"

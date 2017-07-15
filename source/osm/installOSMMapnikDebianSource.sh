@@ -39,14 +39,10 @@ echo "#"
 #echo "sudo aptitude install libmapnik3.0"
 #      sudo aptitude install libmapnik3.0
 echo ""
+echo "# Suppression des installations faites avec les paquets de la distribution"
 echo "#"
-echo "# Nous utiliserons clang à la place de gcc"
-echo "#"
-echo 'export CXX="clang++-3.8" && export CC="clang-3.8"'
-      export CXX="clang++-3.8" && export CC="clang-3.8"
-echo "#"
-echo "sudo apt-get remove python3-mapnik"
-      sudo apt-get remove python3-mapnik
+echo "sudo apt-get -y remove python3-mapnik"
+      sudo apt-get -y remove python3-mapnik
 echo "sudo apt-get -y remove mapnik-utils libmapnik3.0"
       sudo apt-get -y remove mapnik-utils libmapnik3.0
 echo "sudo apt-get -y remove mapnik-doc"
@@ -56,8 +52,8 @@ echo "sudo apt-get -y remove python-mapnik"
 echo "sudo apt-get -y remove libmapnik-dev"
       sudo apt-get -y remove libmapnik-dev
 
-echo "sudo apt autoremove"
-      sudo apt autoremove
+echo "sudo apt -y autoremove"
+      sudo apt -y autoremove
 ##echo "sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
 ##      sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
 echo "# Après installation des fonts, il faut les enregistrer"
@@ -67,6 +63,59 @@ echo "# https://wiki.debian.org/Fonts"
 echo "#"
 #echo "sudo apt-get purge libmapnik* mapnik-* python-mapnik"
 #      sudo apt-get purge libmapnik* mapnik-* python-mapnik
+echo "#"
+echo "# Compilateur : gcc ou clang ?"
+echo "#"
+echo "# Pour savoir comment compiler (quel compilateur, quelles options, etc,...)"
+echo "# il faut aller sur le depot de mapnik"
+echo "# https://github.com/mapnik/mapnik"
+echo "#"
+echo "# Puis, en cliquant sur l'onglet qui montre les branches"
+echo "# on peut voir les résultats des différents services d'integration continue"
+echo "# https://github.com/mapnik/mapnik/branches"
+echo "#"
+echo "# Pour le service Travis CI, la page est ici :"
+echo "# https://travis-ci.org/mapnik/mapnik/pull_requests"
+echo "#"
+echo "# En fouillant, on peux lire les options de compilation"
+echo '#'
+echo 'export CCACHE_TEMPDIR=/tmp/.ccache-temp'
+      export CCACHE_TEMPDIR=/tmp/.ccache-temp
+echo '#'
+echo 'export CCACHE_COMPRESS=1'
+      export CCACHE_COMPRESS=1
+echo '#'
+echo 'export HEAVY_JOBS="2"'
+      export HEAVY_JOBS="2"
+echo '#'
+echo 'export PREFIX=/tmp/mapnik'
+      export PREFIX=/tmp/mapnik
+echo '#'
+echo 'export JOBS=4'
+      export JOBS=4
+echo '#'
+echo 'export CXX="ccache g++-6"'
+      export CXX="ccache g++-6"
+echo 'export CXX="g++-6"'
+      export CXX="g++-6"
+echo '#'
+echo 'export CC="gcc-6"'
+      export CC="gcc-6"
+echo '#'
+echo '#'
+#echo "# Nous utiliserons clang à la place de gcc"
+echo "#"
+#echo "sudo apt-get install clang-3.8"
+#      sudo apt-get install clang-3.8
+#echo "sudo apt-get install clang-3.9"
+#      sudo apt-get install clang-3.9
+echo "#"
+#echo 'export CXX="clang++-3.8" && export CC="clang-3.8"'
+#      export CXX="clang++-3.8" && export CC="clang-3.8"
+#echo 'export CXX="clang++-3.9" && export CC="clang-3.9"'
+#      export CXX="clang++-3.9" && export CC="clang-3.9"
+#echo 'export CXX="g++" && export CC="gcc"'
+#      export CXX="g++" && export CC="gcc"
 echo "#"
 echo "sudo apt-get -y install libtiff5-dev libharfbuzz-dev libcairo2-dev libproj-dev"
       sudo apt-get -y install libtiff5-dev libharfbuzz-dev libcairo2-dev libproj-dev
@@ -99,6 +148,8 @@ echo "#   https://github.com/mapnik/mapnik/wiki/UbuntuInstallation"
 echo '#'
 echo "git clone https://github.com/mapnik/mapnik.git --depth=10"
       git clone https://github.com/mapnik/mapnik.git --depth=10
+#echo "git clone https://github.com/mapnik/mapnik.git"
+#      git clone https://github.com/mapnik/mapnik.git
 echo "cd mapnik"
       cd mapnik
 echo "pwd"
@@ -130,8 +181,8 @@ echo "#"
 echo "# ce lien se fait grace à une recopie de la librairie"
 echo "# à l'endroit adequat"
 echo "#"
-echo "ln -s /usr/local/lib/libboost_regex.a mason_packages/.link/lib/libboost_regex.a"
-      ln -s /usr/local/lib/libboost_regex.a mason_packages/.link/lib/libboost_regex.a
+##echo "ln -s /usr/local/lib/libboost_regex.a mason_packages/.link/lib/libboost_regex.a"
+##      ln -s /usr/local/lib/libboost_regex.a mason_packages/.link/lib/libboost_regex.a
 echo "#"
 #echo '# En fonction des developpements, il se peut que la compilation'
 #echo '# ne fonctionne pas très bien...'
@@ -149,9 +200,9 @@ echo "#"
 #echo '# ou ici'
 #echo '# https://github.com/mapnik/mapnik/blob/master/INSTALL.md'
 #echo '# ./configure CUSTOM_CXXFLAGS="-g -I/usr/include" CUSTOM_LDFLAGS="-L/usr/lib"'
-echo '# Autre solution : changer de branche'
-echo "git checkout v3.0.9"
-      git checkout v3.0.9
+##echo '# Autre solution : changer de branche'
+##echo "git checkout v3.0.9"
+##      git checkout v3.0.9
 #echo "./configure"
 #      ./configure
 #echo "./configure CXX=g++ CC=gcc"
@@ -169,27 +220,58 @@ echo "# https://github.com/mapnik/mapnik/issues/2124"
 echo "#"
 echo "python scons/scons.py configure CXX=${CXX} CC=${CC} BOOST_INCLUDES=/usr/local/include/ BOOST_LIBS=/usr/local/lib/"
 echo "#"
-echo 'python scons/scons.py configure CXX=${CXX} CC=${CC} CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=1"'
-      python scons/scons.py configure CXX=${CXX} CC=${CC} CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"
+#echo 'python scons/scons.py configure CXX=${CXX} CC=${CC} CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=1"'
+#      python scons/scons.py configure CXX=${CXX} CC=${CC} CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"
+echo 'python scons/scons.py configure CXX=${CXX} CC=${CC}'
+      python scons/scons.py configure CXX=${CXX} CC=${CC}
 echo "#"
 echo "#"
 echo "# Install Mapnik (running configure and compiling first if not done yet)"
 echo "#"
-echo "# Astuce, car nous avons un problème de chargement de plugins :"
+echo "# Au moment de l'installation de tirex, nous allons avoir un problème"
+echo "# qui semble venir de la compilation ''dynamique''"
+echo "#"
+echo "# Astuce pour contourner ce problème de librairie, il faut compiler en statique :"
 echo "# https://github.com/mapnik/mapnik/wiki/PluginArchitecture"
 echo "# To compile the plugins statically with mapnik library"
-echo "# (ttps://github.com/mapnik/mapnik/tree/static-plugins"
+echo "# https://github.com/mapnik/mapnik/tree/static-plugins"
 echo "#"
 echo "# Au lieu de faire un scons sans paramètre :"
 echo "# python scons/scons.py"
       # python scons/scons.py
 #echo "make"
 #      make
+#echo "python scons/scons.py INPUT_PLUGINS='all'"
+#      python scons/scons.py INPUT_PLUGINS='all'
+echo "#"
 echo "# On ajoute les paramètres adéquats :"
-echo "#sudo python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'"
-      #sudo python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'
-echo "python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'"
-      python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'
+echo "# - la liste des plugins"
+echo "# - le fait de faire du static"
+echo "#"
+echo "# Le problème est déplacé : il faut maintenant trouver les bonnes options"
+echo "# et les bon compilateur pour que la compilation en 'static' fonctionne"
+echo "#"
+echo "# En fait, quand on choisit de compiler avec l'option PLUGIN_LINKING='static',"
+echo "# et avec tous les plugins,"
+echo "# alors, quelque soit le compilateur, ca ne fonctionne pas"
+#echo "#sudo python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'"
+#      #sudo python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'
+#echo "python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'"
+#      python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'
+echo "#"
+echo "#"
+echo "# On fait donc la compilation, mais sans mettre tous les plugins"
+echo "# Nota, la liste des plugins est ici"
+echo "# https://github.com/mapnik/mapnik/wiki/PluginArchitecture"
+echo "# https://github.com/mapnik/mapnik/tree/master/plugins/input/"
+#echo "python scons/scons.py INPUT_PLUGINS='postgis,raster,shape,gdal,ogr,sqlite,geojson,csv,pgraster,topojson' PLUGIN_LINKING='static'"
+#      python scons/scons.py INPUT_PLUGINS='postgis,raster,shape,gdal,ogr,sqlite,geojson,csv,pgraster,topojson' PLUGIN_LINKING='static'
+echo "python scons/scons.py INPUT_PLUGINS='postgis,raster,shape,gdal,sqlite,pgraster' PLUGIN_LINKING='static'"
+      #python scons/scons.py INPUT_PLUGINS='postgis,raster,shape,gdal,sqlite,pgraster' PLUGIN_LINKING='static'
+      python scons/scons.py INPUT_PLUGINS='postgis,raster,shape,gdal,sqlite,pgrasrer' PLUGIN_LINKING='static'
+echo "#"
+echo "#"
+echo "#"
 echo "#"
 echo "# Puis on fait l'install"
 #echo "# sudo make install"
@@ -207,8 +289,8 @@ echo "# Les tests sont visibles ici :"
 echo "firefox file:///tmp/mapnik-visual-images/visual-test-results/index.html &"
       #firefox file:///tmp/mapnik-visual-images/visual-test-results/index.html
 echo "#"
-echo "cd ../environnementTravail"
-      cd ../environnementTravail
+echo "cd $OLDPWDFG"
+      cd $OLDPWDFG
 echo "pwd"
       pwd
 echo "#"
@@ -260,16 +342,18 @@ echo "#"
 echo "#----------------------"
 echo "# Reste a faire :"
 echo "#----------------------"
-#echo "# ./installOSM.sh"
+#echo "# ./installOSMTools.sh"
 #echo "# ./installOSMCartoCSS.sh"
-#echo "# ./installOSMBoostDebian.sh"
-#echo "# ./installOSMMapnikUbuntuSource.sh"
+####echo "# ./installOSMBoostDebian.sh"
+####echo "# ./installOSMMapnikDebianPaquet.sh"
+#echo "# ./installOSMMapnikDebianSource.sh"
+##echo "# ./installOSMMapnikUbuntuSource.sh"
 ##echo "# ./installOSMMapnikUbuntuPaquet.sh"
-#echo "# ./installOSMPythonMapnikDebian"
-echo "# ./installOSMPythonMapnikUbuntu"
+echo "# ./installOSMPythonMapnikDebian.sh"
+##echo "# ./installOSMPythonMapnikUbuntu.sh"
 echo "# ./installOSMTirex.sh"
-####echo "# ./installOSMTilemanDebian.sh"
-echo "# ./installOSMTilemanUbuntu.sh"
+echo "# ./installOSMTilemanDebian.sh"
+##echo "# ./installOSMTilemanUbuntu.sh"
 echo "#----------------------"
 
 

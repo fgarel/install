@@ -24,8 +24,8 @@ echo "# Installation de tirex "
 echo "#"
 echo "# https://github.com/openstreetmap/tirex"
 echo "#"
-echo "set OLDPWDFG=$(pwd)"
-      set OLDPWDFG=$(pwd)
+echo "export OLDPWDFG=$(pwd)"
+      export OLDPWDFG=$(pwd)
       echo $OLDPWDFG
 echo "cd .."
       cd ..
@@ -45,6 +45,10 @@ echo "sudo aptitude install libjson-perl"
       sudo aptitude install libjson-perl
 echo "sudo apt-get install libjson-perl"
       sudo apt-get install libjson-perl
+echo "sudo aptitude -y install libmapnik-dev"
+      sudo aptitude -y install libmapnik-dev
+echo "sudo apt-get -y install libmapnik-dev"
+      sudo apt-get -y install libmapnik-dev
 echo "make"
       make
 echo "make clean"

@@ -34,21 +34,29 @@ class ParametresConnexion(object):
         #self.dbowner = 'osmuser'
         #self.listextension = ['adminpack', 'postgis', 'postgis_topology', 'fuzzystrmatch', 'hstore', 'dblink']
         #self.listschema = ['apidb', 'osm2pgsql']
-        self.listdbname = ['osm']
-        self.dict_dbname_dbowner = {'osm': 'osmuser'}
+        self.listdbname = ['osm', 'template_postgis']
+        self.dict_dbname_dbowner = {'osm':              'osmuser',
+                                    'template_postgis': 'fred'}
 
         self.dict_dbname_dict_dbuser_listdroits = \
-            {'osm': {'osmuser':    ['CONNECT', 'TEMPORARY', 'ALL'],
-                     'mapnikuser': ['CONNECT', 'TEMPORARY', 'ALL'],
-                     'www-data':   ['CONNECT', 'TEMPORARY', 'ALL']}}
+            {'osm':              {'osmuser':    ['CONNECT', 'TEMPORARY', 'ALL'],
+                                  'mapnikuser': ['CONNECT', 'TEMPORARY', 'ALL'],
+                                  'www-data':   ['CONNECT', 'TEMPORARY', 'ALL']},
+             'template_postgis': {'fred':       ['CONNECT', 'TEMPORARY', 'ALL']}}
 
 
-        self.dict_dbname_listextensions = {'osm': ['adminpack',
-                                                   'postgis',
-                                                   'postgis_topology',
-                                                   'fuzzystrmatch',
-                                                   'hstore',
-                                                   'dblink']}
+        self.dict_dbname_listextensions = {'osm':              ['adminpack',
+                                                                'postgis',
+                                                                'postgis_topology',
+                                                                'fuzzystrmatch',
+                                                                'hstore',
+                                                                'dblink'],
+                                           'template_postgis': ['adminpack',
+                                                                'postgis',
+                                                                'postgis_topology',
+                                                                'fuzzystrmatch',
+                                                                'hstore',
+                                                                'dblink']}
         self.dict_dbname_listschemas = {'osm': ['apidb',
                                                 'osm2pgsql']}
         self.dict_dbname_dict_schema_listtables = \
