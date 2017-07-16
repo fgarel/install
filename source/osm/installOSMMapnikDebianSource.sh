@@ -94,13 +94,17 @@ echo '#'
 echo 'export JOBS=4'
       export JOBS=4
 echo '#'
-echo 'export CXX="ccache g++-6"'
-      export CXX="ccache g++-6"
+#echo 'export CXX="ccache g++-6"'
+#      export CXX="ccache g++-6"
 echo 'export CXX="g++-6"'
       export CXX="g++-6"
+#echo 'export CXX="clang++-3.9"'
+#      export CXX="clang++-3.9"
 echo '#'
 echo 'export CC="gcc-6"'
       export CC="gcc-6"
+#echo 'export CC="clang-3.9"'
+#      export CC="clang-3.9"
 echo '#'
 echo '#'
 #echo "# Nous utiliserons clang à la place de gcc"
@@ -120,8 +124,8 @@ echo "#"
 echo "sudo apt-get -y install libtiff5-dev libharfbuzz-dev libcairo2-dev libproj-dev"
       sudo apt-get -y install libtiff5-dev libharfbuzz-dev libcairo2-dev libproj-dev
 echo "#"
-echo "set OLDPWDFG=$(pwd)"
-      set OLDPWDFG=$(pwd)
+echo "export OLDPWDFG=$(pwd)"
+      export OLDPWDFG=$(pwd)
       echo $OLDPWDFG
 echo "cd .."
       cd ..
@@ -154,14 +158,16 @@ echo "cd mapnik"
       cd mapnik
 echo "pwd"
       pwd
-#echo 'git checkout v3.0.9'
-#      git checkout v3.0.9
 echo "git fetch origin master"
       git fetch origin master
+#echo 'git checkout v3.0.x'
+#      git checkout v3.0.x
+#echo "git fetch origin v3.0.x"
+#      git fetch origin v3.0.x
 echo "git submodule update --init"
       git submodule update --init
-#echo "git submodule update --init deps/mapbox/variant"
-#      git submodule update --init deps/mapbox/variant
+echo "git submodule update --init deps/mapbox/variant"
+      git submodule update --init deps/mapbox/variant
 echo "./bootstrap.sh"
       ./bootstrap.sh
 echo "#"
@@ -268,27 +274,45 @@ echo "# https://github.com/mapnik/mapnik/tree/master/plugins/input/"
 #      python scons/scons.py INPUT_PLUGINS='postgis,raster,shape,gdal,ogr,sqlite,geojson,csv,pgraster,topojson' PLUGIN_LINKING='static'
 echo "python scons/scons.py INPUT_PLUGINS='postgis,raster,shape,gdal,sqlite,pgraster' PLUGIN_LINKING='static'"
       #python scons/scons.py INPUT_PLUGINS='postgis,raster,shape,gdal,sqlite,pgraster' PLUGIN_LINKING='static'
-      python scons/scons.py INPUT_PLUGINS='postgis,raster,shape,gdal,sqlite,pgrasrer' PLUGIN_LINKING='static'
+      python scons/scons.py INPUT_PLUGINS='postgis,raster,shape,gdal,sqlite,pgraster' PLUGIN_LINKING='static'
+echo "#######################################################################################################"
+      python scons/scons.py INPUT_PLUGINS='csv' PLUGIN_LINKING='static'
+echo "#######################################################################################################"
+      #python scons/scons.py INPUT_PLUGINS='all' PLUGIN_LINKING='static'
+echo "#######################################################################################################"
+      #python scons/scons.py PLUGIN_LINKING='static'
+echo "#######################################################################################################"
+      #python scons/scons.py
+echo "#######################################################################################################"
+      #python scons/scons.py INPUT_PLUGINS='postgis,raster,shape,gdal,sqlite,pgraster' PLUGIN_LINKING='static'
+echo "#######################################################################################################"
 echo "#"
 echo "#"
+echo "# On execute les tests"
 echo "#"
-echo "#"
-echo "# Puis on fait l'install"
-#echo "# sudo make install"
-#      # sudo make install
-echo "sudo python scons/scons.py install"
-      sudo python scons/scons.py install
-echo "#"
-echo "# et enfin, on execute les tests"
 #echo "make test"
 #      make test
-echo "sudo python scons/scons.py test"
-      sudo python scons/scons.py test
+#echo "sudo python scons/scons.py test"
+#      sudo python scons/scons.py test
+#echo "python scons/scons.py test"
+#      python scons/scons.py test
 echo "#"
 echo "# Les tests sont visibles ici :"
 echo "firefox file:///tmp/mapnik-visual-images/visual-test-results/index.html &"
       #firefox file:///tmp/mapnik-visual-images/visual-test-results/index.html
 echo "#"
+echo "#"
+echo "# Puis on fait l'install"
+#echo "# sudo make install"
+#      # sudo make install
+#echo "python scons/scons.py install"
+#      python scons/scons.py install
+echo "sudo python scons/scons.py install"
+      sudo python scons/scons.py install
+echo "#"
+echo "#"
+echo "echo $OLDPWDFG"
+      echo $OLDPWDFG
 echo "cd $OLDPWDFG"
       cd $OLDPWDFG
 echo "pwd"
@@ -296,10 +320,10 @@ echo "pwd"
 echo "#"
 echo "# Attention, avant tout utilisation, il faut ajouter des variables d'environnement"
 echo "#"
-echo "../mapnik/mapnik-settings.env"
-      ../mapnik/mapnik-settings.env
-echo "source ../mapnik/mapnik-settings.env"
-      source ../mapnik/mapnik-settings.env
+#echo "source ../mapnik/mapnik-settings.env"
+#      source ../mapnik/mapnik-settings.env
+echo ". ../mapnik/mapnik-settings.env"
+      . ../mapnik/mapnik-settings.env
 echo "#"
 echo "# Vérification de ces variables d'environnement"
 echo "env | grep PROJ"
@@ -309,16 +333,16 @@ echo "# Test de l'installation de mapnik :"
 echo "#----------------------"
 echo "# Test 1 : test interne : make test"
 echo "#   https://github.com/mapnik/mapnik/wiki/UbuntuInstallation"
-echo "    cd ../mapnik ; export JOBS=1 ; make test ; cd ../environnementTravail"
-echo "    cd ../mapnik ; export JOBS=16 ; make test ; cd ../environnementTravail"
+echo "    cd ../mapnik ; export JOBS=1 ; make test ; cd ../osm"
+echo "    cd ../mapnik ; export JOBS=16 ; make test ; cd ../osm"
 echo "# Test 2 : test interne : registration ?"
 echo "    cd ../mapnik ; \\"
 echo "    ./test/standalone/font_registration_test-bin ; \\"
-echo "    cd ../environnementTravail"
+echo "    cd ../osm"
 echo "    ../mapnik/test/standalone/font_registration_test-bin"
 echo "    cd ../mapnik ; \\"
 echo "    ./test/standalone/datasource_registration_test-bin ; \\"
-echo "    cd ../environnementTravail"
+echo "    cd ../osm"
 echo "    ../mapnik/test/standalone/datasource_registration_test-bin"
 echo "# Test 3 : mapnik-config"
 echo "#   (mapnik-config est normalement dans le paquet libmapnik-dev)"
@@ -332,9 +356,9 @@ echo "#   Attention, il faut etre dans le repertoire mapnik !!!!"
 echo "#   (mapnik-render est normalement dans le paquet mapnik-utils)"
 echo "    cd ../mapnik ; \\"
 echo "    mapnik-render \\"
-echo "    ../environnementTravail/testMapnik.xml \\"
-echo "    ../environnementTravail/testMapnik.png ;\\"
-echo "    cd ../environnementTravail ; \\"
+echo "    ../osm/testMapnik.xml \\"
+echo "    ../osm/testMapnik.png ;\\"
+echo "    cd ../osm ; \\"
 echo "    display testMapnik.png"
 echo "#"
 echo "#----------------------"
