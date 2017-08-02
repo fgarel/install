@@ -19,7 +19,10 @@ echo "###############################################"
 #echo "cat /home/fred/Documents/osmosis/state.txt"
 #      cat /home/fred/Documents/osmosis/state.txt
 echo "#"
-
+echo "export OLDPWDFG=$(pwd)"
+      export OLDPWDFG=$(pwd)
+      echo $OLDPWDFG
+echo "#"
 echo "cd ~/Documents/osmosis"
       cd ~/Documents/osmosis
 echo "#"
@@ -41,8 +44,13 @@ echo "# Affichage de le nouvelle date"
 echo "cat /home/fred/Documents/osmosis/state.txt"
       cat /home/fred/Documents/osmosis/state.txt
 echo "#"
-echo "cd ~/Documents/install/source/environnementTravail/"
-      cd ~/Documents/install/source/environnementTravail/
+echo "#"
+#echo "cd ~/Documents/install/source/osm"
+#      cd ~/Documents/install/source/osm
+echo "cd $OLDPWDFG"
+      cd $OLDPWDFG
+echo "pwd"
+      pwd
 echo "#"
 #echo "# Affichage des changements"
 #echo "#zcat /home/fred/Documents/osmosis/change.osc.gz"

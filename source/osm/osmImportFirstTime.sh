@@ -16,8 +16,9 @@ echo "#"
 
 datahost='localhost'
 database='osm'
+dataschema='apidb'
 datauser='osmuser'
-datapass='osmuser'
+datapass='osmpass'
 
 echo "# Astuce préalable :"
 echo "#"
@@ -26,7 +27,7 @@ echo "# il est possible d'editer le fichier ~/.pgpass"
 echo "# --------------------------- #"
 echo "vi ~/.pgpass"
 echo "# --------------------------- #"
-echo "$datahost:5432:*:$datauser:$datauser"
+echo "$datahost:5432:*:$datauser:$datapass"
 echo "# --------------------------- #"
 echo "chmod 600 ~/.pgpass"
 echo "# --------------------------- #"
@@ -37,7 +38,7 @@ echo "# On installe d'abord l'extension hstore sur la base $database"
 echo "#"
 echo "sudo -u postgres \\"
 echo "     psql --username=postgres \\"
-echo '          --dbname=$database \'
+echo "          --dbname=$database \\"
 echo "          -c \"CREATE EXTENSION hstore;\""
       sudo -u postgres \
            psql --username=postgres \
@@ -47,18 +48,28 @@ echo "#"
 
 echo "# Dans la base $database, on peut avoir plusieurs schemas"
 echo "#"
-echo '# Faire en sorte de travailler dans le schema apidb'
+echo "# Faire en sorte de travailler dans le schema $dataschema"
 echo "#"
-echo 'psql \'
-echo '     --host=$datahost \'
-echo '     --dbname=$database \'
-echo '     --username=$datauser \'
-echo '     -c "ALTER DATABASE $database SET search_path TO apidb, public;"'
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
       psql \
            --host=$datahost \
            --dbname=$database \
            --username=$datauser \
-           -c "ALTER DATABASE $database SET search_path TO apidb, public;"
+           -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER ROLE $datauser SET search_path TO $dataschema, public;\""
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER ROLE $datauser SET search_path TO $dataschema, public;"
 
 echo "#"
 echo "# Puis on execute quelques scripts pour créer des tables dans la base"
@@ -69,10 +80,10 @@ echo "sudo gunzip /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6.sql.gz"
       sudo gunzip /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6.sql.gz
 echo "#"
 echo "#"
-echo 'psql \'
-echo '     --host=$datahost \'
-echo '     --dbname=$database \'
-echo '     --username=$datauser \'
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
 echo '     -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6.sql'
       psql \
            --host=$datahost \
@@ -80,10 +91,10 @@ echo '     -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6.sql'
            --username=$datauser \
            -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6.sql
 echo "#"
-echo 'psql \'
-echo '     --host=$datahost \'
-echo '     --dbname=$database \'
-echo '     --username=$datauser \'
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
 echo '     -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_action.sql'
       psql \
            --host=$datahost \
@@ -91,10 +102,10 @@ echo '     -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_action.sql'
            --username=$datauser \
            -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_action.sql
 echo "#"
-echo 'psql \'
-echo '     --host=$datahost \'
-echo '     --dbname=$database \'
-echo '     --username=$datauser \'
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
 echo '     -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_bbox.sql'
       psql  \
            --host=$datahost \
@@ -102,10 +113,10 @@ echo '     -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_bbox.sql'
            --username=$datauser \
            -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_bbox.sql
 echo "#"
-echo 'psql \'
-echo '     --host=$datahost \'
-echo '     --dbname=$database \'
-echo '     --username=$datauser \'
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
 echo '     -f /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_linestring.sql'
       psql  \
            --host=$datahost \
@@ -121,25 +132,37 @@ echo "# grace à osmosis"
 echo "# http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.45"
 echo "# ----------------------------------------------------------"
 
-echo '# Faire en sorte de travailler dans le schema apidb'
+dataschema='apidb'
+datauser='osmuser'
+
+echo "# Faire en sorte de travailler dans le schema $dataschema"
 echo "#"
-echo 'psql \'
-echo '     --host=$datahost \'
-echo '     --dbname=$database \'
-echo '     --username=$datauser \'
-echo '     -c "ALTER DATABASE $database SET search_path TO apidb, public;"'
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
       psql \
            --host=$datahost \
            --dbname=$database \
            --username=$datauser \
-           -c "ALTER DATABASE $database SET search_path TO apidb, public;"
-
+           -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER ROLE $datauser SET search_path TO $dataschema, public;\""
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER ROLE $datauser SET search_path TO $dataschema, public;"
 #echo "osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \\"
 #echo '        --write-pgsql host="localhost" database="osm" postgresSchema="apidb" user="osmuser" password="osmuser"'
 #osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \
 #        --write-pgsql host="localhost" database="osm" postgresSchema="apidb" user="osmuser" password="osmuser"
 echo "osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \\"
-echo '        --write-pgsql host="$datahost" database="$database" user="$datauser" password="$datapass"'
+echo "        --write-pgsql host=\"$datahost\" database=\"$database\" user=\"$datauser\" password=\"$datapass\""
       osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \
               --write-pgsql host="$datahost" database="$database" user="$datauser" password="$datapass"
 echo "#"
@@ -168,22 +191,38 @@ echo "# grace à osm2pgsql"
 echo "# http://wiki.openstreetmap.org/wiki/Osm2pgsql"
 echo "# ----------------------------------------------------------"
 
-echo '# Faire en sorte de travailler dans le schema osm2pgsql'
+dataschema='osm2pgsql'
+datauser='www-data'
+
+echo "# Faire en sorte de travailler dans le schema $dataschema"
 echo "#"
-echo 'psql \'
-echo '     --host=$datahost \'
-echo '     --dbname=$database \'
-echo '     --username=$datauser \'
-echo '     -c "ALTER DATABASE $database SET search_path TO osm2pgsql, public;"'
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
       psql \
            --host=$datahost \
            --dbname=$database \
            --username=$datauser \
-           -c "ALTER DATABASE $database SET search_path TO osm2pgsql, public;"
-echo "#"
+           -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER ROLE $datauser SET search_path TO $dataschema, public;\""
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER ROLE $datauser SET search_path TO $dataschema, public;"
 
 echo "#"
 echo "# Attention il faut se mettre dans le repertoire osmosis pour lancer la commande ...."
+echo "#"
+echo "export OLDPWDFG=$(pwd)"
+      export OLDPWDFG=$(pwd)
+      echo $OLDPWDFG
 echo "#"
 echo "cd ~/Documents/osmosis"
       cd ~/Documents/osmosis
@@ -208,8 +247,12 @@ echo '          poitou-charentes-latest.osm.pbf'
                 --style openstreetmap-carto.style \
                 poitou-charentes-latest.osm.pbf
 echo "#"
-echo "cd ~/Documents/install/source/environnementTravail"
-      cd ~/Documents/install/source/environnementTravail
+#echo "cd ~/Documents/install/source/osm"
+#      cd ~/Documents/install/source/osm
+echo "cd $OLDPWDFG"
+      cd $OLDPWDFG
+echo "pwd"
+      pwd
 echo "#"
 #echo "# ----------------------------------------------------------"
 #echo "# On va importer les données (de la région poitou-charentes)"

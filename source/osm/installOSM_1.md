@@ -88,20 +88,22 @@ Nous utiliserons les serveurs, les schemas, les tables, suivantes :
 
 
 
-Un script a été écrit pour créer les utilisateurs et les bases de données, mais attention, ce script est à executer sur le poste en local.
+Un premier script shell a été écrit pour créer les utilisateurs et les bases de données, mais attention, ce script est à executer sur le poste en local.
+Ce script a été réécrit en python
 
-Ce script est :
+Ces scripts sont :
  - installPostgresqlOsm.sh
+ - 01_base_create.py
 
 ```
 ssh fred@vlr6180x
-cd ~/Documents/install/source/environnementTravail/
-./installPostgresqlOsm.sh
+cd ~/Documents/install/source/osm/
+./01_base_create.py
 ```
 ```
 ssh fred@ssh.cdalr.fr
-cd ~/Documents/install/source/environnementTravail/
-./installPostgresqlOsm.sh
+cd ~/Documents/install/source/osm/
+./01_base_create.py
 ```
 
 ## Les scripts et utilitaires pour l'import des données
@@ -113,15 +115,21 @@ L'utilisation de ces utilitaires va etre automatisée avec des scripts.
 ### Les scripts
 
 les différents scripts osm sont ici:
- - osmCreateRepository.sh
- - osmDownloadFirstTime.sh
- - osmDownloadOtherTimes.sh
- - osmImportFirstTime2.sh
- - osmImportOtherTime.sh
- - osmMaj.sh
- - osmMaj15.sh
- - osmTest.sh
- - osmPrepareQgis.sh
+ - installation / configuration
+   - installOSMTools.sh
+   - installOSMCartoCSS.sh
+   - 01_base_create.py
+ - utilisation
+   - osmFirstTime.sh
+   - osmCreateRepository.sh
+   - osmDownloadFirstTime.sh
+   - osmDownloadOtherTimes.sh
+   - osmImportFirstTime.sh
+   - osmImportOtherTime.sh
+   - osmMaj.sh
+   - osmMaj15.sh
+   - osmTest.sh
+   - osmPrepareQgis.sh
 
 Le dernier script, **osmPrepareQgis.sh**, ne fait que créer des vues afin d'alléger
 l'usage des données avec Qgis.
@@ -150,7 +158,7 @@ Les utilitaires pour manipuler et importer les données osm sont :
 Pour que ces scripts fonctionnent, il faut que l'utilitaire *osmosis* soit installé sur le poste.
 
 ```
-./installOSM.sh
+./installOSMTools.sh
 ```
 
 #### osm2pgsql
@@ -163,7 +171,7 @@ C'est la version de la distribution qui est utilisé
 **TODO** : Réussir à le faire fonctionner ....
 
 Il faut aussi que le script *osm2postgresql_05rc4.sh* soit lui aussi sur le poste.
-Cet outil est disponible ici (installation à faire à la mian)
+Cet outil est disponible ici (installation à faire à la main)
 
 http://wiki.openstreetmap.org/wiki/Osm2postgresql
 
@@ -175,16 +183,16 @@ https://imposm.org/
 
 ### Première utilisation
 
-Astuce pour la suite : Pour éviter d'avoir à taper sans arret le mot de passe,
-il est possible d'editer le fichier ~/.pgpass
+Astuce pour la suite : Pour éviter d'avoir à taper sans arrêt le mot de passe,
+il est possible d'éditer le fichier ~/.pgpass
 
 ```
 vi ~/.pgpass
 ```
 
 ```
-localhost:5432:*:osmuser:osmuser
-localhost:5432:*:mapnikuser:mapnikuser
+localhost:5432:*:osmuser:osmpass
+localhost:5432:*:mapnikuser:mapnikpass
 ```
 
 ```
@@ -193,7 +201,7 @@ chmod 600 ~/.pgpass
 
 On verra ci dessous que l'import des données dans la base osm peut être paramétré à l'aide de "style".
 
-Nous allons donc recupérer les styles grace au script ./installOSMCartoCSS.sh
+Nous allons donc recupérer les styles grâce au script ./installOSMCartoCSS.sh
 
 ```
 ./installOSMCartoCSS.sh
@@ -205,14 +213,16 @@ On commence par créer un répertoire, dans le système de fichier, qui va nous 
 ./osmCreateRepository.sh
 ```
 
-On lance ensuite le premier téléchargement.
+On lance ensuite le premier téléchargement du fichier *planet* (.pbf)
 
-Cependant, il faut modifier le script avant de l'exécuter. Les explications sont dans le script, mais grossièrement, il faut aller sur la page :
+Cependant, il faut modifier le script de téléchargement avant de l'exécuter.
+Les explications sont dans le script, mais grossièrement, il faut aller sur la page :
 
 http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/
 
-Il faut alors noter le numero du fichier qui correspond à la date de la **veille** et inscrire ce numero dans le script
-(attention, le numero est à écrire deux fois)
+Il faut alors noter le numéro du fichier qui correspond à la date (de la **veille**)
+et inscrire ce numéro dans le script
+(attention, le numéro est à modifier à plusieurs endroits dans le script)
 
 ```
 vi ./osmDownloadFirstTime.sh
@@ -224,24 +234,22 @@ Une fois corrigé, il n'y a plus qu'à l'exécuter
 ./osmDownloadFirstTime.sh
 ```
 
-L'étape suivante, c'est de lancer l'import du fichier planete dans la base postgresql.
+L'étape suivante, c'est de lancer l'import des données dans la base postgresql.
 
-
-
-On peut lancer l'execution de l'import
+On peut lancer l'exécution de l'import
 ```
 ./osmImportFirstTime.sh
 ```
 
 L'import est réalisé dans différenst schémas.
 
-L'utiilitaire osmosis va nous permettre de stocker les données dans le schéma apidb.
+L'utilitaire osmosis va nous permettre de stocker les données dans le schéma apidb.
 
-L'utilitaire osm2pgsql va nous permettre de stocker les données dans le schema osm2pgsql.
+L'utilitaire osm2pgsql va nous permettre de stocker les données dans le schéma osm2pgsql.
 
 Avec cet utilitaire, il est possible de paramétrer l'import selon un "style".
 
-La doc sur le "style", c'est à dire sur la facon de paramétrer l'import des données dans postgresql à l'aide de l'outil osm2pgsql est ici :
+La doc sur le "style", c'est à dire sur la façon de paramétrer l'import des données dans postgresql à l'aide de l'outil osm2pgsql est ici :
 
 https://wiki.openstreetmap.org/wiki/Osm2pgsql#Import_style
 
@@ -255,13 +263,18 @@ et ici
 /usr/share/osm2pgsql/default.syle
 ```
 
-On modifiera peut-être le style par defaut et on ne gardera peut-être pas tous ces schemas : on fera le choix en fonction de l'usage.
+On modifiera peut-être le style par défaut et on ne gardera peut-être pas tous ces schémas : on fera le choix en fonction de l'usage.
 
-Le script ./installOSMCartoCSS.sh est chargé de la recuperation des styles spécifiques.
+Le script ./installOSMCartoCSS.sh est chargé de la récupération des styles spécifiques.
 
-Donc, l'enchainement de tous les scripts pour le premier chargement des données est :
+Donc, l'enchaînement de tous les scripts pour le premier chargement des données est :
 
 ```
+./osmFirstTime.sh
+```
+
+```
+./installOsmTools.sh \
 ./installPostgresqlOsm.sh \
 ./installOSMCartoCSS.sh \
 ./osmCreateRepository.sh \
@@ -288,7 +301,7 @@ Pour faire simple, il suffit donc d'exécuter :
 ```
 
 
-## Automatisation
+## Automatisation des mises à jour
 
 Le téléchargement des données et l'import dans la base de données ont été automatisés et un job est ajouté dans le crontab
 
@@ -303,5 +316,5 @@ crontab -e
 ```
 ```
 # tous les jours à 7h du matin, téléchargement et import des données osm
-0 7 * * * /home/fred/Documents/install/source/environnementTravail/osmMaj.sh
+0 7 * * * /home/fred/Documents/install/source/osm/osmMaj.sh
 ```

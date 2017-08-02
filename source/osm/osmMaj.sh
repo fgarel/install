@@ -8,19 +8,19 @@ echo "#"
 echo "#"
 echo "# Téléchargement des données diff"
 echo "./osmDownloadOtherTime.sh"
-echo "~fred/Documents/install/source/environnementTravail/osmDownloadOtherTime.sh"
-      ~fred/Documents/install/source/environnementTravail/osmDownloadOtherTime.sh
+echo "~fred/Documents/install/source/osm/osmDownloadOtherTime.sh"
+      ~fred/Documents/install/source/osm/osmDownloadOtherTime.sh
 echo "#"
 echo "#"
 echo "# Import de ces données"
 echo "./osmImportOtherTime.sh"
-echo "~fred/Documents/install/source/environnementTravail/osmImportOtherTime.sh"
-      ~fred/Documents/install/source/environnementTravail/osmImportOtherTime.sh
+echo "~fred/Documents/install/source/osm/osmImportOtherTime.sh"
+      ~fred/Documents/install/source/osm/osmImportOtherTime.sh
 echo "#"
 echo "#"
 echo "# Test"
 echo "#./osmTest.sh"
-echo "#~fred/Documents/install/source/environnementTravail/osmTest.sh"
+echo "#~fred/Documents/install/source/osm/osmTest.sh"
       #~fred/Documents/install/source/environnementTravail/osmTest.sh
 echo "#"
 echo '#'

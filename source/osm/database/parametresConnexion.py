@@ -66,6 +66,9 @@ class ParametresConnexion(object):
                                    'planet_osm_line',
                                    'planet_osm_roads',
                                    'planet_osm_polygon']}}
+        self.dict_dbname_dict_schema_listtables = \
+            {'osm': {'apidb':     [],
+                     'osm2pgsql': []}}
 
         # les paramètres pour la connexion
         self.hostname = 'localhost'

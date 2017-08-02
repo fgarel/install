@@ -12,7 +12,7 @@ https://cloud.sagemath.com/projects/c9022f4a-0154-4034-bb05-bf3e56d3e3cd/files/o
 
 
 ## Serveurs publics
-Cependant, dans les documents qui sont sur cloud.sagemath.com, il est question des serveurs publics d'OSM
+Cependant, dans les explications qui sont sur cloud.sagemath.com, il est question des serveurs publics d'OSM
 
 ## Serveurs Privés
 Ici, nous allons nous concentrer sur la mise en oeuvre d'une instance privée.
@@ -37,7 +37,7 @@ L'installation de ces composants nécessite parfois des prérequis.
 
 Par exemple, des outils comme osmosis sont développés en Java.
 
-D'autre part, il faut aussi veillez  avoir postgresql qui tourne...
+D'autre part, il faut aussi veiller à avoir postgresql qui tourne...
 
 Il faut donc au moins :
 
