@@ -51,6 +51,13 @@ def main():
             #print('schema = {}'.format(schema))
             maconnexion.create_schema(dbname, schema)
 
+    # Affectation des droits (niveau schemas)
+    for dbname, dict_schema_dict_dbuser_listdroits in maconnexion.dict_dbname_dict_schema_dict_dbuser_listdroits.items():
+        for schema, dict_dbuser_listdroits in dict_schema_dict_dbuser_listdroits.items():
+            for dbuser, listdroits in dict_dbuser_listdroits.items():
+                for droit in listdroits:
+                    maconnexion.update_schema(dbname, schema, dbuser, droit)
+                    
     # Creation des tables
     for dbname, dict_schema_listtables in maconnexion.dict_dbname_dict_schema_listtables.items():
         for schema, listtables in dict_schema_listtables.items():
