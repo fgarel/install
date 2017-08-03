@@ -26,6 +26,7 @@ class Database(object):
         self.dict_dbname_dict_dbuser_listdroits = paramconnexion.dict_dbname_dict_dbuser_listdroits
         self.dict_dbname_listextensions = paramconnexion.dict_dbname_listextensions
         self.dict_dbname_listschemas = paramconnexion.dict_dbname_listschemas
+        self.dict_dbname_dict_schema_dict_dbuser_listdroits = paramconnexion.dict_dbname_dict_schema_dict_dbuser_listdroits
         self.dict_dbname_dict_schema_listtables = paramconnexion.dict_dbname_dict_schema_listtables
 
         self.hostname = paramconnexion.hostname
@@ -142,6 +143,16 @@ class Database(object):
         self.cur.close()
         self.conn.close()
 
+    def update_schema(self, schema, dbuser, rights):
+        #print("dbname    = {}".format(self.dbname))
+        self.conn = self.conn_database('postgres')
+        self.schema = schema
+        self.conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT) # <-- ADD THIS LINE
+        self.cur = self.conn.cursor()
+        self.cur.execute("GRANT {} ON SCHEMA {} TO \"{}\";".format(rights, schema, dbuser))
+        self.cur.close()
+        self.conn.close()
+
     def create_table(self, dbname, schema, table):
         self.dbname = dbname
         self.schema = schema
@@ -208,6 +219,12 @@ def main():
         for schema in listschemas:
             #print('schema = {}'.format(schema))
             maconnexion.create_schema(dbname, schema)
+
+    # Affectation des droits (niveau schemas)
+    for dbname, dict_dbuser_listdroits in maconnexion.dict_dbname_dict_dbuser_listdroits.items():
+        for dbuser, listdroits in dict_dbuser_listdroits.items():
+            for droit in listdroits:
+                maconnexion.update_database(dbname, dbuser, droit)
 
     # Creation des tables
     for dbname, dict_schema_listtables in maconnexion.dict_dbname_dict_schema_listtables.items():

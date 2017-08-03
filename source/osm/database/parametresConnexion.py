@@ -59,6 +59,11 @@ class ParametresConnexion(object):
                                                                 'dblink']}
         self.dict_dbname_listschemas = {'osm': ['apidb',
                                                 'osm2pgsql']}
+        self.dict_dbname_dict_schema_dict_dbuser_listdroits = \
+            {'osm': {'apidb':     {'osmuser':    ['ALL']},
+                     'osm2pgsql': {'osmuser':    ['ALL'],
+                                   'mapnikuser': ['ALL'],
+                                   'www-data':   ['ALL']}}}
         self.dict_dbname_dict_schema_listtables = \
             {'osm': {'apidb':     ['nodes',
                                    'ways'],
