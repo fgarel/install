@@ -8,11 +8,34 @@
 echo "# 8ème Partie - Installation de mapnik dans un container docker"
 echo "######################################################"
 echo "#"
-echo "# Ici, on teste l'installation de mapnik à partir des paquets de la distribution"
+echo "# Ici, on teste l'installation de mapnik dans un container docker"
 echo "#"
 echo ""
+echo "# Attention, pour utiliser docker, il faut :"
+echo "#   vu sur cette page :"
+echo "#   https://forums.docker.com/t/cannot-connect-to-the-docker-daemon-is-the-docker-daemon-running-on-this-host/8925/15"
 echo "#"
+echo "# - que le daemon soit lancé"
+echo "#     non => service docker status"
+echo "#     non => service docker start"
+echo "#     oui => sudo docker daemon &"
+echo "# - que l'utilisateur unix fred doit dans le groupe docker"
+echo "#     => sudo usermod -aG docker $USER"
+echo "# - que la config de docker soit modifiée"
+echo "#     Inside file /lib/systemd/system/docker.service change:"
+echo "#       ExecStart=/usr/bin/dockerd fd://"
+echo "#       with"
+echo "#       ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375"
+echo "#     => sudo vi /lib/systemd/system/docker.service"
+echo "#     Inside file /etc/init.d/docker change:"
+echo "#       DOCKER_OPTS="
+echo "#       with"
+echo "#       DOCKER_OPTS=\"-H tcp://0.0.0.0:2375\""
+echo "#     => sudo vi /etc/init.d/docker"
+echo "#"
+echo "# "
 
+echo "#"
 echo "#"
 #echo "sudo service docker start"
 #      sudo service docker start
@@ -22,8 +45,13 @@ echo "#"
 #      docker pull ubuntu
 echo "docker image ls -a"
       docker image ls -a
+echo "docker images"
+      docker images
 echo "docker container ls -a"
       docker container ls -a
+echo "docker ps"
+      docker ps
+
 echo "#"
 echo "rm -rf docker-mapnik"
       rm -rf docker-mapnik

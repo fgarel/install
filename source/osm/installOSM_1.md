@@ -92,8 +92,8 @@ Un premier script shell a été écrit pour créer les utilisateurs et les bases
 Ce script a été réécrit en python
 
 Ces scripts sont :
- - installPostgresqlOsm.sh
- - 01_base_create.py
+ - installPostgresqlOsm.sh (old)
+ - 01_base_create.py       (new)
 
 ```
 ssh fred@vlr6180x

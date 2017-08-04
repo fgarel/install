@@ -27,12 +27,12 @@ echo "psql \\"
 echo "     --host=$datahost \\"
 echo "     --dbname=$database \\"
 echo "     --username=$datauser \\"
-echo "     -c \"ALTER ROLE $datauser SET search_path TO $dataschema, public;\""
+echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
       psql \
            --host=$datahost \
            --dbname=$database \
            --username=$datauser \
-           -c "ALTER ROLE $datauser SET search_path TO $dataschema, public;"
+           -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
 
 echo "#"
 echo "# Affichage de la date"
@@ -71,17 +71,16 @@ echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;
            --dbname=$database \
            --username=$datauser \
            -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
-
 echo "psql \\"
 echo "     --host=$datahost \\"
 echo "     --dbname=$database \\"
 echo "     --username=$datauser \\"
-echo "     -c \"ALTER ROLE $datauser SET search_path TO $dataschema, public;\""
+echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
       psql \
            --host=$datahost \
            --dbname=$database \
            --username=$datauser \
-           -c "ALTER ROLE $datauser SET search_path TO $dataschema, public;"
+           -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
 echo "#"
 echo "# Affichage de la date"
 echo "cat /home/fred/Documents/osmosis/state.txt"
