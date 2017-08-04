@@ -151,12 +151,12 @@ echo "psql \\"
 echo "     --host=$datahost \\"
 echo "     --dbname=$database \\"
 echo "     --username=$datauser \\"
-echo "     -c \"ALTER ROLE $datauser SET search_path TO $dataschema, public;\""
+echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
       psql \
            --host=$datahost \
            --dbname=$database \
            --username=$datauser \
-           -c "ALTER ROLE $datauser SET search_path TO $dataschema, public;"
+           -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
 #echo "osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \\"
 #echo '        --write-pgsql host="localhost" database="osm" postgresSchema="apidb" user="osmuser" password="osmuser"'
 #osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \

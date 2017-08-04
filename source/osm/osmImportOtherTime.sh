@@ -46,12 +46,12 @@ echo "psql \\"
 echo "     --host=$datahost \\"
 echo "     --dbname=$database \\"
 echo "     --username=$datauser \\"
-echo "     -c \"ALTER ROLE $datauser SET search_path TO $dataschema, public;\""
+echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
       psql \
-            --host=$datahost \
-            --dbname=$database \
-            --username=$datauser \
-            -c "ALTER ROLE $datauser SET search_path TO $dataschema, public;"
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
 echo "#"
 echo "osmosis --read-xml-change \\"
 echo "        /home/fred/Documents/osmosis/change.osc.gz \\"
@@ -90,12 +90,12 @@ echo "psql \\"
 echo "     --host=$datahost \\"
 echo "     --dbname=$database \\"
 echo "     --username=$datauser \\"
-echo "     -c \"ALTER ROLE $datauser SET search_path TO $dataschema, public;\""
+echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
       psql \
-            --host=$datahost \
-            --dbname=$database \
-            --username=$datauser \
-            -c "ALTER ROLE $datauser SET search_path TO $dataschema, public;"
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
 
 echo "#"
 echo "# Attention il faut se mettre dans le repertoire osmosis pour lancer la commande ...."
