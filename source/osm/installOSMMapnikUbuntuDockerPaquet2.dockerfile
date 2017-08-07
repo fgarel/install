@@ -22,7 +22,8 @@ RUN apt-get update && apt-get -qq install -y --no-install-recommends \
 
 # Recopie des fichiers d'install installOSM*.sh
 # COPY installOSMMapnikUbuntuDockerPaquet3.sh /usr/bin/
-COPY installOSM.sh /usr/bin/
+COPY installOSMUbuntu.sh /usr/bin/
+COPY installOSMTools.sh /usr/bin/
 COPY installOSMCartoCSS.sh /usr/bin/
 COPY installOSMBoostUbuntuPaquet.sh /usr/bin/
 COPY installOSMMapnikUbuntuPaquet.sh /usr/bin/
@@ -31,7 +32,8 @@ COPY installOSMPythonMapnikUbuntu.sh /usr/bin/
 
 # Execution des fichiers d'install dans le container
 # RUN /usr/bin/installOSMMapnikUbuntuDockerPaquet3.sh
-RUN /usr/bin/installOSM.sh
+RUN /usr/bin/installOSMUbuntu.sh
+RUN /usr/bin/installOSMTools.sh
 RUN /usr/bin/installOSMCartoCSS.sh
 RUN /usr/bin/installOSMBoostUbuntuPaquet.sh
 RUN /usr/bin/installOSMMapnikUbuntuPaquet.sh
