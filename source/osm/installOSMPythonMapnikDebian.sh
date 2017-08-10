@@ -53,34 +53,20 @@ echo "sudo -H pip install nik2img"
 
 echo "#"
 echo "#----------------------"
-echo "# test de l'installation de python-mapnik :"
+echo "# Test de l'installation de python-mapnik :"
 echo "#----------------------"
 echo "# La doc est ici"
 echo "# https://github.com/mapnik/mapnik/wiki/GettingStartedInPython"
 echo "#"
 echo "# Test 1 : python"
 echo '    python -c "import sys; print('\'\\\\n\''.join(sys.path))"'
-echo "# Test 2 : test interne : registration ?"
-echo "    ../mapnik/test/standalone/font_registration_test-bin"
-echo "    ../mapnik/test/standalone/datasource_registration_test-bin"
-echo "# Test 3 : mapnik-config"
-echo '    mapnik-config -v # should return a version number'
-echo '    mapnik-config --input-plugins'
-echo '    ls -al $(mapnik-config --input-plugins)'
-echo "# Test 4 : python import mapnik"
+echo "# Test 2 : python import mapnik"
 echo '    python -c "import mapnik;print(mapnik.__file__)" # should return the path to the python bindings and no errors'
 echo '    python -c "from mapnik import DatasourceCache as c; print('"'shape'"' in c.plugin_names())"'
 echo '    python -c "from mapnik import DatasourceCache as c; print('\'\\\\n\''.join(c.plugin_names()))"'
-echo '# Test 5 : rendu avec outil mapnik-render'
-echo "#   https://github.com/mapnik/mapnik/wiki/GettingStartedInXML"
-echo "#   !!! Attention, il faut etre dans le repertoire mapnik !!!!"
-echo "    cd ../mapnik ; \\"
-echo "    mapnik-render \\"
-echo "    ../environnementTravail/testMapnik.xml \\"
-echo "    ../environnementTravail/testMapnik.png ;\\"
-echo "    cd ../environnementTravail ; \\"
-echo "    display testMapnik.png"
-echo '# Test 6 : rendu avec des outils python (nik2img et nik4)'
+echo "# Test 3 : python et script maison"
+echo "    python testMapnik.py"
+echo '# Test 4 : rendu avec des outils python (nik2img et nik4)'
 echo "#   nik2img et nik4 : sont deux utilitaires qui utilisent mapnik,"
 echo "#   en passant par python :  il faut donc installer python-mapnik"
 echo "#   avant de pouvoir utiliser ces deux outils"
@@ -93,28 +79,26 @@ echo "    cd ../mapnik ; \\"
 echo "    make rendu ;\\"
 echo "    cd ../environnementTravail ; \\"
 echo "    display ...."
-echo '# Test 7 : Test de mapnik avec les données osm (et configuration xml)'
+echo '# Test 5 : Test de mapnik avec les données osm (et configuration xml)'
 echo "#   http://wiki.openstreetmap.org/wiki/User:Stanton/Mapnik_Test_Server"
 echo "#   Un outil permet de generer un fichier xml"
 echo "#   (fichier qui contient les paramètres pour que mapnik genère une carte)"
 echo "#   à partir informations sources (base postgresql qui contient les données osm)"
 echo "#   http://wiki.openstreetmap.org/wiki/User:Stanton/Mapnik_Test_Server#Mapnik_Initialization"
-echo '#   '
 echo "#----------------------"
+echo '#'
 echo "#----------------------"
-echo "# Test de l'installation d'openstreetmap-carto"
-echo "# et de openstreetmap-carto-vector-tiles :"
+echo "# Test de l'installation de python-mapnik et d'openstreetmap-carto-vector-tiles"
 echo "#----------------------"
-echo "#"
 echo "# Nous avons précedemment installé cartocss"
 echo "#"
-echo "# nous allons testé son utilisation dans son deuxième mode,"
+echo "# Nous allons tester son utilisation dans son deuxième mode,"
 echo "# c'est à dire, l'utilisation des fichier (.mss) en tant que parammètres pour mapnik"
 echo "#"
 echo "# La doc est ici"
 echo "# https://github.com/geofabrik/openstreetmap-carto-vector-tiles/blob/master/INSTALL.md"
 echo "#"
-echo "# Test 1 : Test de mapnik avec les données osm (et configuration cartocss)"
+echo "# Test 6 : Test de mapnik avec les données osm (et configuration cartocss)"
 echo "#   https://github.com/gravitystorm/openstreetmap-carto/blob/master/CONTRIBUTING.md"
 echo "#   Jusqu'à présent, pour configurer le rendu,"
 echo "#   - nous avions utilisé un fichier xml,"

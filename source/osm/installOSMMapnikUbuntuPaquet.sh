@@ -31,6 +31,10 @@ echo "# https://wiki.debian.org/Fonts"
 echo "fc-cache -fv # rebuilds cached list of fonts"
       fc-cache -fv
 echo "#"
+echo "#"
+echo "export OLDPWDFG=$(pwd)"
+      export OLDPWDFG=$(pwd)
+      echo $OLDPWDFG
 echo "cd .."
       cd ..
 echo "pwd"
@@ -56,8 +60,8 @@ echo "#   https://github.com/mapnik/mapnik/wiki/UbuntuInstallation"
 echo '#'
 echo "sudo aptitude install mapnik-utils mapnik-doc mapnik-vector-tile"
       sudo aptitude install mapnik-utils mapnik-doc mapnik-vector-tile
-echo "cd environnementTravail"
-      cd environnementTravail
+echo "cd $OLDPWDFG"
+      cd $OLDPWDFG
 echo "pwd"
       pwd
 echo "#"

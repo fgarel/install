@@ -42,20 +42,36 @@ echo ""
 echo "#"
 echo "# Nous utiliserons clang à la place de gcc"
 echo "#"
+echo "sudo aptitude install clang-3.8"
+      sudo aptitude install clang-3.8
+echo "sudo apt-get install clang-3.8"
+      sudo apt-get install clang-3.8
 echo 'export CXX="clang++-3.8" && export CC="clang-3.8"'
       export CXX="clang++-3.8" && export CC="clang-3.8"
 echo "#"
 echo "sudo aptitude remove python3-mapnik"
       sudo aptitude remove python3-mapnik
+echo "sudo apt-get remove python3-mapnik"
+      sudo apt-get remove python3-mapnik
 echo "sudo aptitude remove mapnik-utils libmapnik3.0"
       sudo aptitude remove mapnik-utils libmapnik3.0
+echo "sudo apt-get remove mapnik-utils libmapnik3.0"
+      sudo apt-get remove mapnik-utils libmapnik3.0
 echo "sudo aptitude remove mapnik-doc"
       sudo aptitude remove mapnik-doc
+echo "sudo apt-get remove mapnik-doc"
+      sudo apt-get remove mapnik-doc
 echo "sudo aptitude remove python-mapnik"
       sudo aptitude remove python-mapnik
+echo "sudo apt-get remove python-mapnik"
+      sudo apt-get remove python-mapnik
 echo "sudo aptitude remove libmapnik-dev"
       sudo aptitude remove libmapnik-dev
+echo "sudo apt-get remove libmapnik-dev"
+      sudo apt-get remove libmapnik-dev
 
+echo "sudo apt -y autoremove"
+      sudo apt -y autoremove
 ##echo "sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
 ##      sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
 echo "# Après installation des fonts, il faut les enregistrer"
@@ -65,10 +81,17 @@ echo "# https://wiki.debian.org/Fonts"
 echo "#"
 echo "sudo aptitude purge libmapnik* mapnik-* python-mapnik"
       sudo aptitude purge libmapnik* mapnik-* python-mapnik
+echo "sudo apt-get purge libmapnik* mapnik-* python-mapnik"
+      sudo apt-get purge libmapnik* mapnik-* python-mapnik
 echo "#"
 echo "sudo aptitude install libtiff5-dev libharfbuzz-dev libcairo2-dev libproj-dev"
       sudo aptitude install libtiff5-dev libharfbuzz-dev libcairo2-dev libproj-dev
+echo "sudo apt-get install libtiff5-dev libharfbuzz-dev libcairo2-dev libproj-dev"
+      sudo apt-get install libtiff5-dev libharfbuzz-dev libcairo2-dev libproj-dev
 echo "#"
+echo "export OLDPWDFG=$(pwd)"
+      export OLDPWDFG=$(pwd)
+      echo $OLDPWDFG
 echo "cd .."
       cd ..
 echo "pwd"
@@ -92,8 +115,8 @@ echo '# Installation de mapnik'
 echo '#   http://mapnik.org/pages/downloads.html'
 echo "#   https://github.com/mapnik/mapnik/wiki/UbuntuInstallation"
 echo '#'
-##echo "git clone https://github.com/mapnik/mapnik.git --depth=10"
-##      git clone https://github.com/mapnik/mapnik.git --depth=10
+echo "git clone https://github.com/mapnik/mapnik.git --depth=10"
+      git clone https://github.com/mapnik/mapnik.git --depth=10
 echo "cd mapnik"
       cd mapnik
 echo "pwd"
@@ -125,8 +148,8 @@ echo "#"
 echo "# ce lien se fait grace à une recopie de la librairie"
 echo "# à l'endroit adequat"
 echo "#"
-echo "ln -s /usr/local/lib/libboost_regex.a mason_packages/.link/lib/libboost_regex.a"
-      ln -s /usr/local/lib/libboost_regex.a mason_packages/.link/lib/libboost_regex.a
+##echo "ln -s /usr/local/lib/libboost_regex.a mason_packages/.link/lib/libboost_regex.a"
+##      ln -s /usr/local/lib/libboost_regex.a mason_packages/.link/lib/libboost_regex.a
 echo "#"
 #echo '# En fonction des developpements, il se peut que la compilation'
 #echo '# ne fonctionne pas très bien...'
@@ -145,8 +168,8 @@ echo "#"
 #echo '# https://github.com/mapnik/mapnik/blob/master/INSTALL.md'
 #echo '# ./configure CUSTOM_CXXFLAGS="-g -I/usr/include" CUSTOM_LDFLAGS="-L/usr/lib"'
 echo '# Autre solution : changer de branche'
-echo "git checkout v3.0.9"
-      git checkout v3.0.9
+##echo "git checkout v3.0.9"
+##      git checkout v3.0.9
 #echo "./configure"
 #      ./configure
 #echo "./configure CXX=g++ CC=gcc"
@@ -202,8 +225,10 @@ echo "# Les tests sont visibles ici :"
 echo "firefox file:///tmp/mapnik-visual-images/visual-test-results/index.html &"
       #firefox file:///tmp/mapnik-visual-images/visual-test-results/index.html
 echo "#"
-echo "cd ../environnementTravail"
-      cd ../environnementTravail
+echo "echo $OLDPWDFG"
+      echo $OLDPWDFG
+echo "cd $OLDPWDFG"
+      cd $OLDPWDFG
 echo "pwd"
       pwd
 echo "#"

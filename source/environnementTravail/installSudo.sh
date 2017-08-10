@@ -14,4 +14,12 @@ echo "#"
 #echo "# Installation de aptitude"
 #echo "sudo apt-get install aptitude"
 #      sudo apt-get install aptitude
+echo "#"
+echo "sudo apt-get install apt-utils"
+      sudo apt-get install apt-utils
+echo "#"
+echo "#"
+echo "#"
+echo "#"
+echo "#"
 echo ""

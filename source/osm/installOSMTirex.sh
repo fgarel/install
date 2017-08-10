@@ -49,6 +49,8 @@ echo "sudo aptitude -y install libmapnik-dev"
       sudo aptitude -y install libmapnik-dev
 echo "sudo apt-get -y install libmapnik-dev"
       sudo apt-get -y install libmapnik-dev
+echo "sudo apt-get -y install libharfbuzz-dev"
+      sudo apt-get -y install libharfbuzz-dev
 echo "make"
       make
 echo "make clean"

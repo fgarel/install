@@ -28,6 +28,7 @@ source/mapnik/*
 source/openstreetmap-carto/*
 source/openstreetmap-carto-vector-tiles/*
 source/osm/docker-mapnik/*
+source/osm/docker-mapnik3/*
 source/python-mapnik/*
 source/tirex/*
 source/tirex*

@@ -275,11 +275,11 @@ Donc, l'enchaînement de tous les scripts pour le premier chargement des donnée
 
 ```
 ./installOsmTools.sh \
-./installPostgresqlOsm.sh \
 ./installOSMCartoCSS.sh \
+./01_base_create.py \
 ./osmCreateRepository.sh \
 ./osmDownloadFirstTime.sh \
-./osmImportFirstTime2.sh \
+./osmImportFirstTime.sh \
 ./osmPrepareQgis.sh
 ```
 

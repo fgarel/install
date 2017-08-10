@@ -12,23 +12,25 @@ echo "# Ici, on teste l'installation de mapnik à partir des paquets de la distr
 echo "#"
 echo ""
 echo "#"
+echo "#"
 echo "#----------------------"
-echo "# Avec une distribution Ubuntu"
+echo "# Avec une distribution Debian"
 echo "#----------------------"
 
 echo "# ./installOSMTools.sh"
       ./installOSMTools.sh
 echo "# ./installOSMCartoCSS.sh"
       ./installOSMCartoCSS.sh
-echo "# ./installOSMMapnikUbuntuSource.sh"
-      ./installOSMMapnikUbuntuSource.sh
-####echo "# ./installOSMMapnikUbuntuPaquet.sh"
-echo "# ./installOSMPythonMapnikUbuntu.sh"
-      ./installOSMPythonMapnikUbuntu.sh
+####echo "# ./installOSMBoostDebian.sh"
+####echo "# ./installOSMMapnikDebianPaquet.sh"
+#echo "# ./installOSMMapnikDebianSource.sh"
+#      ./installOSMMapnikDebianSource.sh
+echo "# ./installOSMPythonMapnikDebian.sh"
+      ./installOSMPythonMapnikDebian.sh
 echo "# ./installOSMTirex.sh"
       ./installOSMTirex.sh
-echo "# ./installOSMTilemanUbuntu.sh"
-      ./installOSMTilemanUbuntu.sh
+echo "# ./installOSMTilemanDebian.sh"
+#      ./installOSMTilemanDebian.sh
 echo "#----------------------"
 echo "#"
 
@@ -57,13 +59,10 @@ echo '    mapnik-config --input-plugins'
 echo '    ls -al $(mapnik-config --input-plugins)'
 echo "# Test 4 : mapnik-render"
 echo "#   https://github.com/mapnik/mapnik/wiki/GettingStartedInXML"
-echo "#   Attention, il faut etre dans le repertoire mapnik !!!!"
 echo "#   (mapnik-render est normalement dans le paquet mapnik-utils)"
-echo "    cd ../mapnik ; \\"
 echo "    mapnik-render \\"
-echo "    ../environnementTravail/testMapnik.xml \\"
-echo "    ../environnementTravail/testMapnik.png ;\\"
-echo "    cd ../environnementTravail ; \\"
+echo "      testMapnik.xml \\"
+echo "      testMapnik.png ;\\"
 echo "    display testMapnik.png"
 echo "#"
 echo "#----------------------"

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import mapnik
 
@@ -37,8 +37,7 @@ r.symbols.append(polygon_symbolizer) # add the symbolizer to the rule object
 # to add outlines to a polygon we create a LineSymbolizer
 #line_symbolizer = mapnik.LineSymbolizer(mapnik.Color('rgb(50%,50%,50%)'),0.1)
 line_symbolizer = mapnik.LineSymbolizer()
-#line_symbolizer.stroke = mapnik.Color('rgb(50%,50%,50%)')
-#line_symbolizer.stroke = mapnik.Color('#888888');
+line_symbolizer.stroke = mapnik.Color('rgb(50%,50%,50%)')
 #line_symbolizer.stroke-width = "1.0"
 r.symbols.append(line_symbolizer) # add the symbolizer to the rule object
 s.rules.append(r) # now add the rule to the style and we're done
