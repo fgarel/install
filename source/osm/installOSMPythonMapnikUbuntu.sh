@@ -32,18 +32,30 @@ echo "# https://github.com/mapnik/python-mapnik"
 echo "#"
 echo "# Attention : Installation de python-mapnik .....????"
 echo "#"
-#echo "sudo aptitude install python-mapnik"
-#      sudo aptitude install python-mapnik
+echo "sudo aptitude install -y python-mapnik"
+      sudo aptitude install -y python-mapnik
+echo "sudo apt-get install -y python-mapnik"
+      sudo apt-get install -y python-mapnik
 #echo "sudo aptitude remove python-mapnik"
 #      sudo aptitude remove python-mapnik
-echo "sudo aptitude install python3-mapnik"
-      sudo aptitude install python3-mapnik
+echo "sudo aptitude install -y python3-mapnik"
+      sudo aptitude install -y python3-mapnik
+echo "sudo apt-get install -y python3-mapnik"
+      sudo apt-get install -y python3-mapnik
 
 
 echo "#"
 echo "# Installation de nik2img (python2) et nik4 (python3)"
+echo "sudo aptitude install -y python3-pip"
+      sudo aptitude install -y python3-pip
+echo "sudo apt-get install -y python3-pip"
+      sudo apt-get install -y python3-pip
+echo "sudo -H pip3 install --upgrade pip"
+      sudo -H pip3 install --upgrade pip
 echo "sudo -H pip3 install nik4"
       sudo -H pip3 install nik4
+echo "sudo -H pip install --upgrade pip"
+      sudo -H pip install --upgrade pip
 echo "sudo -H pip install nik2img"
       sudo -H pip install nik2img
 
@@ -70,11 +82,11 @@ echo '    python -c "from mapnik import DatasourceCache as c; print('\'\\\\n\''.
 echo '# Test 5 : rendu avec outil mapnik-render'
 echo "#   https://github.com/mapnik/mapnik/wiki/GettingStartedInXML"
 echo "#   !!! Attention, il faut etre dans le repertoire mapnik !!!!"
-echo "    cd ../mapnik ; \\"
+#echo "    cd ../mapnik ; \\"
 echo "    mapnik-render \\"
-echo "    ../environnementTravail/testMapnik.xml \\"
-echo "    ../environnementTravail/testMapnik.png ;\\"
-echo "    cd ../environnementTravail ; \\"
+echo "      testMapnik.xml \\"
+echo "      testMapnik.png ;\\"
+#echo "    cd ../environnementTravail ; \\"
 echo "    display testMapnik.png"
 echo '# Test 6 : rendu avec des outils python (nik2img et nik4)'
 echo "#   nik2img et nik4 : sont deux utilitaires qui utilisent mapnik,"
@@ -84,11 +96,13 @@ echo "#   https://github.com/springmeyer/nik2img/blob/master/INSTALL.txt"
 echo "#   https://github.com/Zverik/Nik4"
 echo "    sudo -H pip3 install nik4"
 echo "    sudo -H pip install nik2img"
-echo "#   Après installation, nous pouvons utiliser un autre test interne de mapnik"
-echo "    cd ../mapnik ; \\"
-echo "    make rendu ;\\"
-echo "    cd ../environnementTravail ; \\"
-echo "    display ...."
+#echo "#   Après installation, nous pouvons utiliser un autre test interne de mapnik"
+echo "    python testMapnik.py \\"
+echo "    python3 testMapnik3.py \\"
+#echo "    cd ../mapnik ; \\"
+#echo "    make rendu ;\\"
+#echo "    cd ../environnementTravail ; \\"
+#echo "    display ...."
 echo '# Test 7 : Test de mapnik avec les données osm (et configuration xml)'
 echo "#   http://wiki.openstreetmap.org/wiki/User:Stanton/Mapnik_Test_Server"
 echo "#   Un outil permet de generer un fichier xml"

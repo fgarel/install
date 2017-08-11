@@ -85,12 +85,12 @@ echo "# Il est nécessaire d'installer des polices supplémentaires pour utilise
 echo "#"
 echo "# Cette installation est dupliquée dans ../environnementTravail/installFonts.sh"
 echo "#"
-echo "sudo aptitude install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
-      sudo aptitude install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
-echo "sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
-      sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+echo "sudo aptitude install -y fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
+      sudo aptitude install -y fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
 echo "sudo apt-get -y install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
       sudo apt-get -y install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
+echo "sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+      sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
 echo "sudo apt-get -y install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
       sudo apt-get -y install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
 echo "#"

@@ -37,14 +37,14 @@ echo "git clone https://github.com/geofabrik/tirex.git"
       git clone https://github.com/geofabrik/tirex.git
 echo "cd tirex"
       cd tirex
-echo "sudo aptitude install libipc-sharelite-perl"
-      sudo aptitude install libipc-sharelite-perl
-echo "sudo apt-get install libipc-sharelite-perl"
-      sudo apt-get install libipc-sharelite-perl
-echo "sudo aptitude install libjson-perl"
-      sudo aptitude install libjson-perl
-echo "sudo apt-get install libjson-perl"
-      sudo apt-get install libjson-perl
+echo "sudo aptitude install -y libipc-sharelite-perl"
+      sudo aptitude install -y libipc-sharelite-perl
+echo "sudo apt-get install -y libipc-sharelite-perl"
+      sudo apt-get install -y libipc-sharelite-perl
+echo "sudo aptitude install -y libjson-perl"
+      sudo aptitude install -y libjson-perl
+echo "sudo apt-get install -y libjson-perl"
+      sudo apt-get install -y libjson-perl
 echo "sudo aptitude -y install libmapnik-dev"
       sudo aptitude -y install libmapnik-dev
 echo "sudo apt-get -y install libmapnik-dev"

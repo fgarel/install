@@ -94,47 +94,58 @@ echo "rm -rf docker-mapnik"
 echo "git clone https://github.com/aldoridhoni/docker-mapnik"
       git clone https://github.com/aldoridhoni/docker-mapnik
 echo "#"
-echo "# Modification du Dockerfile"
-echo "#"
-echo "sed -i -E -e 's/MAINTAINER/# MAINTAINER/g' docker-mapnik/Dockerfile"
-      sed -i -E -e 's/MAINTAINER/# MAINTAINER/g' docker-mapnik/Dockerfile
-echo "sed -i -E -e 's/RUN update-locale/# RUN update-locale/g' docker-mapnik/Dockerfile"
-      sed -i -E -e 's/RUN update-locale/# RUN update-locale/g' docker-mapnik/Dockerfile
-echo "sed -i -E -e 's/3.0.10/3.0.15/g' docker-mapnik/Dockerfile"
-      sed -i -E -e 's/3.0.10/3.0.15/g' docker-mapnik/Dockerfile
-echo "sed -i -E -e 's/RUN apt-get -qq install -y --no-install-recommends/RUN apt-get install -y --no-install-recommends/g' docker-mapnik/Dockerfile"
-      sed -i -E -e 's/RUN apt-get -qq install -y --no-install-recommends/RUN apt-get install -y --no-install-recommends/g' docker-mapnik/Dockerfile
-echo "sed -i -E -e 's/RUN curl/# RUN curl/g' docker-mapnik/Dockerfile"
-      sed -i -D -e 's/RUN curl/# RUN curl/g' docker-mapnik/Dockerfile
-echo "sed -i -E -e 's/RUN cd \/tmp\/ && curl/# RUN cd \/tmp\/ && curl/g' docker-mapnik/Dockerfile"
-      sed -i -D -e 's/RUN cd \/tmp\/ && curl/# RUN cd \/tmp\/ && curl/g' docker-mapnik/Dockerfile
-echo "sed -i -E -e 's/   &&/#    &&/g' docker-mapnik/Dockerfile"
-      sed -i -D -e 's/   &&/#    &&/g' docker-mapnik/Dockerfile
+# echo "# Modification du Dockerfile"
+# echo "#"
+# echo "sed -i -E -e 's/MAINTAINER/# MAINTAINER/g' docker-mapnik/Dockerfile"
+#       sed -i -E -e 's/MAINTAINER/# MAINTAINER/g' docker-mapnik/Dockerfile
+# echo "sed -i -E -e 's/RUN update-locale/# RUN update-locale/g' docker-mapnik/Dockerfile"
+#       sed -i -E -e 's/RUN update-locale/# RUN update-locale/g' docker-mapnik/Dockerfile
+# echo "sed -i -E -e 's/3.0.10/3.0.15/g' docker-mapnik/Dockerfile"
+#       sed -i -E -e 's/3.0.10/3.0.15/g' docker-mapnik/Dockerfile
+# echo "sed -i -E -e 's/# Boost/# Ajout de l utilisateur fred\nRUN useradd --create-home --shell \/bin\/bash fred\nRUN echo \'fred:fred\' \| chpasswd\nRUN adduser fred sudo\nUSER fred\nWORKDIR \/home\/fred\n\n# Boost/g' docker-mapnik/Dockerfile"
+#       sed -i -E -e 's/# Boost/# Ajout de l utilisateur fred\nRUN useradd --create-home --shell \/bin\/bash fred\nRUN echo \"fred:fred\" \| chpasswd\nRUN adduser fred sudo\nUSER fred\nWORKDIR \/home\/fred\n\n# Boost/g' docker-mapnik/Dockerfile
+# echo "sed -i -E -e 's/apt-get -qq install -y --no-install-recommends/apt-get install -y --no-install-recommends/g' docker-mapnik/Dockerfile"
+#       sed -i -E -e 's/apt-get -qq install -y --no-install-recommends/apt-get install -y --no-install-recommends/g' docker-mapnik/Dockerfile
+# echo "sed -i -E -e 's/RUN curl/# RUN curl/g' docker-mapnik/Dockerfile"
+#       sed -i -E -e 's/RUN curl/# RUN curl/g' docker-mapnik/Dockerfile
+# echo "sed -i -E -e 's/RUN cd \/tmp/# RUN cd \/tmp/g' docker-mapnik/Dockerfile"
+#       sed -i -E -e 's/RUN cd \/tmp/# RUN cd \/tmp/g' docker-mapnik/Dockerfile
+# echo "sed -i -E -e 's/    \&\&/#     \&\&/g' docker-mapnik/Dockerfile"
+#       sed -i -E -e 's/    \&\&/#     \&\&/g' docker-mapnik/Dockerfile
+# echo "sed -i -E -e 's/RUN add-apt-repository/# RUN add-apt-repository/g' docker-mapnik/Dockerfile"
+#       sed -i -E -e 's/RUN add-apt-repository/# RUN add-apt-repository/g' docker-mapnik/Dockerfile
 #echo "sed -i -E -e 's///g' docker-mapnik/Dockerfile"
-#      sed -i -D -e 's///g' docker-mapnik/Dockerfile
-#echo "sed -i -E -e 's///g' docker-mapnik/Dockerfile"
-#      sed -i -D -e 's///g' docker-mapnik/Dockerfile
-#echo "sed -i -E -e 's///g' docker-mapnik/Dockerfile"
-#      sed -i -D -e 's///g' docker-mapnik/Dockerfile
-#echo "Recopie du fichier Dockerfile"
-#echo "Recopie du fichier Dockerfile"
+#      sed -i -E -e 's///g' docker-mapnik/Dockerfile
+echo "sed -i -E -e 's/username=ma/username=fred/g' docker-mapnik/etc/supervisor_inet.conf"
+      sed -i -E -e 's/username=ma/username=fred/g' docker-mapnik/etc/supervisor_inet.conf
+echo "sed -i -E -e 's/password=ma1337/password=fred/g' docker-mapnik/etc/supervisor_inet.conf"
+      sed -i -E -e 's/password=ma1337/password=fred/g' docker-mapnik/etc/supervisor_inet.conf
 #echo "#"
-#echo "cp installOSMMapnikUbuntuDockerPaquet2.dockerfile docker-mapnik/Dockerfile"
-#      cp installOSMMapnikUbuntuDockerPaquet2.dockerfile docker-mapnik/Dockerfile
-#echo "cp installOSMUbuntu.sh docker-mapnik/installOSMUbuntu.sh"
-#      cp installOSMUbuntu.sh docker-mapnik/installOSMUbuntu.sh
-#echo "cp installOSMTools.sh docker-mapnik/installOSMTools.sh"
-#      cp installOSMTools.sh docker-mapnik/installOSMTools.sh
-#echo "cp installOSMCartoCSS.sh docker-mapnik/installOSMCartoCSS.sh"
-#      cp installOSMCartoCSS.sh docker-mapnik/installOSMCartoCSS.sh
+echo "#"
+echo "Recopie du fichier Dockerfile"
+echo "#"
+echo "cp installOSMMapnikUbuntuDockerPaquet2.dockerfile docker-mapnik/Dockerfile"
+      cp installOSMMapnikUbuntuDockerPaquet2.dockerfile docker-mapnik/Dockerfile
+echo "cp installOSMMapnikUbuntuDockerPaquet3.sh docker-mapnik/installOSMMapnikUbuntuDockerPaquet3.sh"
+      cp installOSMMapnikUbuntuDockerPaquet3.sh docker-mapnik/installOSMMapnikUbuntuDockerPaquet3.sh
+echo "cp installOSMUbuntu.sh docker-mapnik/installOSMUbuntu.sh"
+      cp installOSMUbuntu.sh docker-mapnik/installOSMUbuntu.sh
+echo "cp installOSMTools.sh docker-mapnik/installOSMTools.sh"
+      cp installOSMTools.sh docker-mapnik/installOSMTools.sh
+echo "cp installOSMCartoCSS.sh docker-mapnik/installOSMCartoCSS.sh"
+      cp installOSMCartoCSS.sh docker-mapnik/installOSMCartoCSS.sh
 #echo "cp installOSMBoostUbuntuPaquet.sh docker-mapnik/installOSMBoostUbuntuPaquet.sh"
 #      cp installOSMBoostUbuntuPaquet.sh docker-mapnik/installOSMBoostUbuntuPaquet.sh
-#echo "cp installOSMMapnikUbuntuPaquet.sh docker-mapnik/installOSMMapnikUbuntuPaquet.sh"
-#      cp installOSMMapnikUbuntuPaquet.sh docker-mapnik/installOSMMapnikUbuntuPaquet.sh
-#echo "cp installOSMMapnikUbuntuDockerPaquet3.sh docker-mapnik/installOSMMapnikUbuntuDockerPaquet3.sh"
-#      cp installOSMMapnikUbuntuDockerPaquet3.sh docker-mapnik/installOSMMapnikUbuntuDockerPaquet3.sh
-#echo "cp installOSMPythonMapnikUbuntu.sh docker-mapnik/installOSMPythonMapnikUbuntu.sh"
-#      cp installOSMPythonMapnikUbuntu.sh docker-mapnik/installOSMPythonMapnikUbuntu.sh
+echo "cp installOSMMapnikUbuntuPaquet.sh docker-mapnik/installOSMMapnikUbuntuPaquet.sh"
+      cp installOSMMapnikUbuntuPaquet.sh docker-mapnik/installOSMMapnikUbuntuPaquet.sh
+echo "cp installOSMPythonMapnikUbuntu.sh docker-mapnik/installOSMPythonMapnikUbuntu.sh"
+      cp installOSMPythonMapnikUbuntu.sh docker-mapnik/installOSMPythonMapnikUbuntu.sh
+#echo "cp installOSMTirex.sh docker-mapnik/installOSMTirex.sh"
+#      cp installOSMTirex.sh docker-mapnik/installOSMTirex.sh
+#echo "cp installOSMTilemanUbuntu.sh docker-mapnik/installOSMTilemanUbuntu.sh"
+#      cp installOSMTilemanUbuntu.sh docker-mapnik/installOSMTilemanUbuntu.sh
+echo "cp installOSMTilestache.sh docker-mapnik/installOSMTilestache.sh"
+      cp installOSMTilestache.sh docker-mapnik/installOSMTilestache.sh
 #echo "#"
 #echo "# On se place dans le repertoire-depot que l'on vient de telecharger"
 #echo "export OLDPWDFG=$(pwd)"
@@ -198,22 +209,32 @@ echo "#"
 echo "# En cas de problème de construction de l'image"
 echo "# ../environnementTravail/docksshuttlle2.sh"
 echo "# docker build -t i-ubuntu-mapnik docker-mapnik"
-echo '# docker run -ti -v $(readlink --canonicalize ..):/home/fred/Documents/install/source --name c-ubuntu-mapnik i-ubuntu-mapnik'
+echo '# docker run -ti -v $(readlink --canonicalize ..):/home/fred/Documents/install/source --name c-ubuntu-mapnik $(docker images -qa | head -1)'
 echo "#"
-echo "# Utilisation"
-#echo "# sudo docker run -d -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize .):/etc/tilestache/resources --name c-ubuntu-mapnik i-ubuntu-mapnik"
-      # sudo docker run -d -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize .):/etc/tilestache/resources --name c-ubuntu-mapnik i-ubuntu-mapnik
-echo "# docker rm c-ubuntu-mapnik"
-echo '# docker run -ti -p 8000:80 -v $(readlink --canonicalize ..):/home/fred/Documents/install/source --name c-ubuntu-mapnik i-ubuntu-mapnik'
-echo "# apt-get update"
-echo "# apt-get install sudo"
-echo "# adduser fred"
-echo "# adduser fred sudo"
-echo "# cd /home/fred"
-echo "# chown fred:fred ."
-echo "# chown -R fred:fred Documents"
-echo "# su fred"
+echo "# Nettoyage"
+echo '# docker rm $(docker ps -aq)'
+echo '# docker rmi $(docker images -qa)'
+echo "#"
+echo "#"
+echo "# 1ere utilisation après un build reussi :"
+echo '# docker run -ti -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize ./docker-mapnik/resources):/etc/tilestache/resources -v $(readlink --canonicalize ..):/home/fred/Documents/install/source --name c-ubuntu-mapnik i-ubuntu-mapnik'
+echo "# sudo chown -R fred:fred ."
 echo "# cd ~/Documents/install/source/environnementTravail"
 echo "# ./installAll.sh"
+echo "# zsh"
+#echo "# sudo docker run -d -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize .):/etc/tilestache/resources --name c-ubuntu-mapnik i-ubuntu-mapnik"
+      # sudo docker run -d -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize .):/etc/tilestache/resources --name c-ubuntu-mapnik i-ubuntu-mapnik
+#echo "# docker rm c-ubuntu-mapnik"
+echo "#"
+echo "# Autres utilisations après les installations"
+echo '# docker run -ti -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize ./docker-mapnik/resources):/etc/tilestache/resources -v $(readlink --canonicalize ..):/home/fred/Documents/install/source --name c-ubuntu-mapnik i-ubuntu-mapnik'
+#echo "# apt-get update"
+#echo "# apt-get install sudo"
+#echo "# adduser fred"
+#echo "# adduser fred sudo"
+#echo "# cd /home/fred"
+#echo "# chown fred:fred ."
+#echo "# chown -R fred:fred Documents"
+#echo "# su fred"
 echo "# cd ~/Documents/install/source/osm"
 echo "# ./installOSMMapnikUbuntuDockerPaquet3.sh"

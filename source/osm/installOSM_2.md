@@ -4,11 +4,57 @@
 
 Dans cette seconde partie, nous abordons l'installation et l'utilisation des outils qui sont plus liés à la diffusion de la données OSM.
 
-Ces outils sont, pour ne citer que les principaux, :
- - tileman
- - Tirex
- - nginx
- - mapnik
+
+
+Voici, en simplifié, les différentes briques,
+(vue ici : https://karussell.wordpress.com/2013/10/26/setup-tile-server-mapnik/) :
+
+```
+ A) browser/client (leaflet, openlayers)
+ |
+ B) tile server (mod_tile, tile cache, tile stache, mapproxy, geowebcache)
+ |
+ C) map web service = WMS (MapServer, GeoServer, Mapnik)
+ |
+ D) Data storage (PostgreSQL, vector tiles)
+ |
+ E) OSM data (xml, pbf)
+
+```
+Comments
+
+    for C => Mapnik can use TileMill to style to map
+    leaflet can do tile layers (B) but also WMS (C)
+    Nearly always you need PostgreSQL, but in rare cases you can avoid it via vector tiles.
+    A common approach is to use apache2 with mod_tile. Serving the tiles from disc or creating the image via mapnik through renderd. But also nginx gets more popular. Tiledrawer
+    has an old scripts also with mapnik and nginx.
+    You can also use GeoServer with a cache in front. Often it only serves some feature layers.
+    WFS = web feature service
+    MWS = map web service
+
+
+Ces outils sont, pour ne citer que les principaux (nous nous contenterons de mapnik et tilestache):
+
+ - des moteurs de rendus :
+   - mapnik
+   - mapbox-gl
+ - des serveurs de tuiles
+   - avec le moteur mapnik
+     - renderd (?)
+       http://wiki.openstreetmap.org/wiki/Mod_tile
+     - Tirex (en perl)
+       http://wiki.openstreetmap.org/wiki/Tirex
+     - tilestache (en python)
+       (pour servir des tuiles rendues a l'aide du moteur mapnik et mapbox)
+       http://tilestache.org/
+       https://github.com/TileStache/TileStache
+   - avec le moteur mapbox-gl
+     - tileserver (pour servir des tuiles rendues à l'aide du moteur mapbox)
+       http://tileserver.org/
+       https://github.com/klokantech/tileserver-gl
+ - des servers et des caches
+   - tileman
+     https://github.com/osmfj/tileman
 
 ## Sous-ensemble d'un environnement plus large
 
@@ -40,40 +86,57 @@ Il faut donc au moins :
   - une base de données postgresql, avec l'extension postgis, nécessaire pour stocker les données
   - l'outil osmosis, nécessaire pour télécharger les données OpenStreetMap, est fourni par le paquet osmosis
   - l'outil osm2pgsql, nécessaire pour importer les données dans postgresql, est fourni par le paquet osm2pgsql
-  - l'outil mapnik est installe manuellement
+  - l'outil mapnik qui est le "moteur"
+    Mapnik est l'outil principal pour le rendu
+    http://wiki.openstreetmap.org/wiki/FR:Rendu
+    http://wiki.openstreetmap.org/wiki/FR:Mapnik
+  - tilestache est le serveur de tuile
+    Tilestache
+    http://tilestache.org/
+    https://github.com/TileStache/TileStache
+
+old :
   - l'outil tirex, equivalent de renderd, nécessaire pour fabriquer les tuiles, est installé manuellement
-  - des scripts lua couplés au serveur NGINX, (outil tileman) remplacent le module apache mod_tile. (Ces scripts sont nécessaires pour servir les tuiles. L'outil tileman est aussi installé manuellement)
-
-Mapnik est l'outil principal pour le rendu
-
-http://wiki.openstreetmap.org/wiki/FR:Rendu
-
-http://wiki.openstreetmap.org/wiki/FR:Mapnik
-
-Tirex
-
-http://wiki.openstreetmap.org/wiki/Tirex
-
-Tileman
-
-https://github.com/osmfj/tileman
-
-http://osmfj.github.io/tileman/
-
-http://miurahr.github.io/slides/2013-0908-tileman.html#/title
+    Tirex
+    http://wiki.openstreetmap.org/wiki/Tirex
+  - des scripts lua couplés au serveur NGINX, (outil tileman) remplacent le module apache mod_tile.
+    (Ces scripts sont nécessaires pour servir les tuiles. L'outil tileman est aussi installé manuellement)
+    Tileman
+    https://github.com/osmfj/tileman
+    http://osmfj.github.io/tileman/
+    http://miurahr.github.io/slides/2013-0908-tileman.html#/title
 
 L'installation de ces composants a été réalisée grâce aux scripts :
 
-  - installOSM.sh
-  - installOSMBoost.sh
-  - installOSMMapnik.sh
-  - installOSMTirex.sh
-  - installOSMTilemanDebian.sh
-  - ou installOSMTilemanUbuntu.sh
+  - installOSMMapnikUbuntuDockerPaquet1.sh
+  - installOSMUbuntu.sh
+  - installOSMTools.sh
+  - installOSMCartoCSS.sh
+  - installOSMMapnikUbuntuPaquet.sh
+  - installOSMPythonMapnikUbuntu.sh
+  - installOSMTilestache.sh
 
 Après ces installations, il faudra configurer ces outils pour qu'ils fonctionnent ensemble.
 
-## Verification des installations
+## Installation
+
+Pour simplifier, nous allons faire les installations dans un container DOCKER
+
+Il faut donc commencer par le script pour creer l'image
+
+```
+./installOSMMapnikUbuntuDockerPaquet1.sh
+```
+
+puis, il faut créer un container basé sur cette image
+```
+docker run -ti -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize ./docker-mapnik/resources):/etc/tilestache/resources -v $(readlink --canonicalize ..):/home/fred/Documents/install/source --name c-ubuntu-mapnik i-ubuntu-mapnik
+```
+
+et enfin à l'intérieur de ce container, il faut lancer l'installation des outils
+```
+./installOSMMapnikUbuntuDockerPaquet3.sh
+```
 
 ### Mapnik
 

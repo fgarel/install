@@ -9,7 +9,7 @@ echo "# 8ème Partie - Installation de mapnik, libmapnik et libmapnik-dev"
 echo "######################################################"
 echo "#"
 echo "# Ici, on teste l'installation de mapnik à partir des paquets de la distribution"
-echo "#"
+echo "# ** A L INTERIEUR D UN CONTAINER DOCKER **"
 echo ""
 echo "#"
 echo "#----------------------"
@@ -17,18 +17,21 @@ echo "# Avec une distribution Ubuntu"
 echo "#----------------------"
 
 echo "# ./installOSMTools.sh"
-      ./installOSMTools.sh
+      installOSMTools.sh
 echo "# ./installOSMCartoCSS.sh"
-      ./installOSMCartoCSS.sh
-echo "# ./installOSMMapnikUbuntuSource.sh"
-      ./installOSMMapnikUbuntuSource.sh
-####echo "# ./installOSMMapnikUbuntuPaquet.sh"
+      installOSMCartoCSS.sh
+#echo "# ./installOSMMapnikUbuntuSource.sh"
+#      ./installOSMMapnikUbuntuSource.sh
+echo "# ./installOSMMapnikUbuntuPaquet.sh"
+      installOSMMapnikUbuntuPaquet.sh
 echo "# ./installOSMPythonMapnikUbuntu.sh"
-      ./installOSMPythonMapnikUbuntu.sh
-echo "# ./installOSMTirex.sh"
-      ./installOSMTirex.sh
-echo "# ./installOSMTilemanUbuntu.sh"
-      ./installOSMTilemanUbuntu.sh
+      installOSMPythonMapnikUbuntu.sh
+#echo "# ./installOSMTirex.sh"
+#      ./installOSMTirex.sh
+#echo "# ./installOSMTilemanUbuntu.sh"
+#      ./installOSMTilemanUbuntu.sh
+echo "# ./installOSMTilestache.sh"
+      installOSMTilestache.sh
 echo "#----------------------"
 echo "#"
 

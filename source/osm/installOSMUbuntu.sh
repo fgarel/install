@@ -42,15 +42,16 @@ echo "# ./installOSMTools.sh"
       ./installOSMTools.sh
 echo "# ./installOSMCartoCSS.sh"
       ./installOSMCartoCSS.sh
-echo "# ./installOSMMapnikUbuntuSource.sh"
-      ./installOSMMapnikUbuntuSource.sh
-####echo "# ./installOSMMapnikUbuntuPaquet.sh"
+echo "# ./installOSMMapnikUbuntuPaquet.sh"
+      ./installOSMMapnikUbuntuPaquet.sh
 echo "# ./installOSMPythonMapnikUbuntu.sh"
       ./installOSMPythonMapnikUbuntu.sh
-echo "# ./installOSMTirex.sh"
-      ./installOSMTirex.sh
-echo "# ./installOSMTilemanUbuntu.sh"
-      ./installOSMTilemanUbuntu.sh
+#echo "# ./installOSMTirex.sh"
+#      ./installOSMTirex.sh
+#echo "# ./installOSMTilemanUbuntu.sh"
+#      ./installOSMTilemanUbuntu.sh
+echo "# ./installOSMTilestache.sh"
+      ./installOSMTilestache.sh
 echo "#----------------------"
 echo "#"
 echo "#"

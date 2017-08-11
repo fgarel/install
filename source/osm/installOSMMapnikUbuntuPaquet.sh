@@ -14,18 +14,28 @@ echo ""
 echo "#"
 
 echo "#"
-echo "sudo aptitude install mapnik-doc"
-      sudo aptitude install mapnik-doc
+echo "sudo aptitude install -y mapnik-doc"
+      sudo aptitude install -y mapnik-doc
+echo "sudo apt-get install -y mapnik-doc"
+      sudo apt-get install -y mapnik-doc
 #echo "sudo aptitude install python3-mapnik"
 #      sudo aptitude install python3-mapnik
-echo "sudo aptitude install libmapnik-dev"
-      sudo aptitude install libmapnik-dev
-echo "sudo aptitude install libmapnik3.0"
-      sudo aptitude install libmapnik3.0
-echo "sudo aptitude install mapnik-utils"
-      sudo aptitude install mapnik-utils
-echo "sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
-      sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+echo "sudo aptitude install -y libmapnik-dev"
+      sudo aptitude install -y libmapnik-dev
+echo "sudo apt-get install -y libmapnik-dev"
+      sudo apt-get install -y libmapnik-dev
+echo "sudo aptitude install -y libmapnik3.0"
+      sudo aptitude install -y libmapnik3.0
+echo "sudo apt-get install -y libmapnik3.0"
+      sudo apt-get install -y libmapnik3.0
+echo "sudo aptitude install -y mapnik-utils"
+      sudo aptitude install -y mapnik-utils
+echo "sudo apt-get install -y mapnik-utils"
+      sudo apt-get install -y mapnik-utils
+echo "sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+      sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+echo "sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+      sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
 echo "# Après installation des fonts, il faut les enregistrer"
 echo "# https://wiki.debian.org/Fonts"
 echo "fc-cache -fv # rebuilds cached list of fonts"
@@ -58,8 +68,14 @@ echo '# Installation de mapnik'
 echo '#   http://mapnik.org/pages/downloads.html'
 echo "#   https://github.com/mapnik/mapnik/wiki/UbuntuInstallation"
 echo '#'
-echo "sudo aptitude install mapnik-utils mapnik-doc mapnik-vector-tile"
-      sudo aptitude install mapnik-utils mapnik-doc mapnik-vector-tile
+#echo "sudo aptitude install -y mapnik-utils mapnik-doc mapnik-vector-tile"
+#      sudo aptitude install -y mapnik-utils mapnik-doc mapnik-vector-tile
+#echo "sudo apt-get install -y mapnik-utils mapnik-doc mapnik-vector-tile"
+#      sudo apt-get install -y mapnik-utils mapnik-doc mapnik-vector-tile
+echo "sudo aptitude install -y mapnik-vector-tile"
+      sudo aptitude install -y mapnik-vector-tile
+echo "sudo apt-get install -y mapnik-vector-tile"
+      sudo apt-get install -y mapnik-vector-tile
 echo "cd $OLDPWDFG"
       cd $OLDPWDFG
 echo "pwd"
@@ -102,11 +118,11 @@ echo "# Test 4 : mapnik-render"
 echo "#   https://github.com/mapnik/mapnik/wiki/GettingStartedInXML"
 echo "#   Attention, il faut etre dans le repertoire mapnik !!!!"
 echo "#   (mapnik-render est normalement dans le paquet mapnik-utils)"
-echo "    cd ../mapnik ; \\"
+#echo "    cd ../mapnik ; \\"
 echo "    mapnik-render \\"
-echo "    ../environnementTravail/testMapnik.xml \\"
-echo "    ../environnementTravail/testMapnik.png ;\\"
-echo "    cd ../environnementTravail ; \\"
+echo "      testMapnik.xml \\"
+echo "      testMapnik.png ;\\"
+#echo "    cd ../environnementTravail ; \\"
 echo "    display testMapnik.png"
 echo "#"
 echo "#----------------------"
@@ -118,7 +134,7 @@ echo "#----------------------"
 #echo "# ./installOSMMapnikUbuntuSource.sh"
 ##echo "# ./installOSMMapnikUbuntuPaquet.sh"
 ####echo "# ./installOSMPythonMapnikDebian"
-echo "# ./installOSMPythonMapnikUbuntu"
+echo "# ./installOSMPythonMapnikUbuntu.sh"
 echo "# ./installOSMTirex.sh"
 ####echo "# ./installOSMTilemanDebian.sh"
 echo "# ./installOSMTilemanUbuntu.sh"

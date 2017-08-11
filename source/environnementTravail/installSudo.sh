@@ -15,10 +15,23 @@ echo "#"
 #echo "sudo apt-get install aptitude"
 #      sudo apt-get install aptitude
 echo "#"
-echo "sudo apt-get install apt-utils"
-      sudo apt-get install apt-utils
+echo "sudo apt-get install -y apt-utils"
+      sudo apt-get install -y apt-utils
 echo "#"
+echo "sudo apt-get install -y apt-file"
+      sudo apt-get install -y apt-file
 echo "#"
+echo "apt-file update"
+      apt-file update
+echo "#"
+echo "sudo apt-get install -y mlocate"
+      sudo apt-get install -y mlocate
+echo "#"
+echo "sudo updatedb"
+      sudo updatedb
+echo "#"
+echo "sudo apt-get install -y net-tools"
+      sudo apt-get install -y net-tools
 echo "#"
 echo "#"
 echo "#"

@@ -23,6 +23,9 @@ echo "# Installation de tileman "
 echo "#"
 echo "# https://github.com/osmfj/tileman/blob/master/INSTALL.md"
 echo "#"
+echo "export OLDPWDFG=$(pwd)"
+      export OLDPWDFG=$(pwd)
+      echo $OLDPWDFG
 echo "cd .."
       cd ..
 echo "pwd"
@@ -106,16 +109,13 @@ echo "# sudo aptitude install nginx-extras"
 #echo "# sudo mkdir -p /opt/tileman/cache"
 #echo "# sudo service nginx start"
 echo "#"
-
 echo "#"
 echo "#"
 echo "#"
-
-echo "cd ../environnementTravail"
-      cd ../environnementTravail
+echo "cd $OLDPWDFG"
+      cd $OLDPWDFG
 echo "pwd"
       pwd
-
 #echo "#----------------------"
 #echo "# Reste a faire :"
 #echo "#----------------------"

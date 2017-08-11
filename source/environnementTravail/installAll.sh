@@ -25,8 +25,8 @@ echo ""
 # Installation de quelques polices sur le poste client
 echo "# 1ère Partie : Installation de quelques polices sur le poste client"
 echo "###############################################"
-echo "./installFonts.sh"
-      ./installFonts.sh
+#echo "./installFonts.sh"
+#      ./installFonts.sh
 echo ""
 
 # 7ème Partie : python
@@ -101,8 +101,8 @@ echo ""
 # postgresql
 echo "# 7ème Partie : postgresql"
 echo "###############################################"
-echo "./installPostgresql.sh"
-      ./installPostgresql.sh
+#echo "./installPostgresql.sh"
+#      ./installPostgresql.sh
 #echo "./installPostgresqlGeogigGTReseaux.sh"
 #      ./installPostgresqlGeogigGTReseaux.sh
 #echo "./installPostgresqlGeogigVLR.sh"
