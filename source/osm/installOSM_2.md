@@ -4,7 +4,7 @@
 
 Dans cette seconde partie, nous abordons l'installation et l'utilisation des outils qui sont plus liés à la diffusion de la données OSM.
 
-
+(moteur de rendu (mapnik), serveur cache et serveur de tuile (tilestache))
 
 Voici, en simplifié, les différentes briques,
 (vue ici : https://karussell.wordpress.com/2013/10/26/setup-tile-server-mapnik/) :
@@ -33,7 +33,14 @@ Comments
     MWS = map web service
 
 
-Ces outils sont, pour ne citer que les principaux (nous nous contenterons de mapnik et tilestache):
+http://www.volkerschatz.com/net/osm/osm.html
+http://www.volkerschatz.com/net/osm/canonicalosm.html
+https://tilemill-project.github.io/tilemill/docs/guides/osm-bright-mac-quickstart/
+
+comparaison des serveurs de tuiles
+https://www.openstreetmap.org/user/pnorman/diary/39920
+
+Ces outils sont, pour ne citer que les principaux (nous nous contenterons de mapnik et tilestache et tessera):
 
  - des moteurs de rendus :
    - mapnik
@@ -48,10 +55,14 @@ Ces outils sont, pour ne citer que les principaux (nous nous contenterons de map
        (pour servir des tuiles rendues a l'aide du moteur mapnik et mapbox)
        http://tilestache.org/
        https://github.com/TileStache/TileStache
+     - tessera (en node-js)
+       https://github.com/mojodna/tessera
    - avec le moteur mapbox-gl
      - tileserver (pour servir des tuiles rendues à l'aide du moteur mapbox)
        http://tileserver.org/
        https://github.com/klokantech/tileserver-gl
+     - tilestream
+       https://github.com/cutting-room-floor/tilestream
  - des servers et des caches
    - tileman
      https://github.com/osmfj/tileman
@@ -122,20 +133,122 @@ Après ces installations, il faudra configurer ces outils pour qu'ils fonctionne
 
 Pour simplifier, nous allons faire les installations dans un container DOCKER
 
-Il faut donc commencer par le script pour creer l'image
+Il faut donc commencer par le script pour créer l'image
 
 ```
 ./installOSMMapnikUbuntuDockerPaquet1.sh
 ```
 
-puis, il faut créer un container basé sur cette image
+Puis, il faut créer un container basé sur cette image
 ```
 docker run -ti -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize ./docker-mapnik/resources):/etc/tilestache/resources -v $(readlink --canonicalize ..):/home/fred/Documents/install/source --name c-ubuntu-mapnik i-ubuntu-mapnik
 ```
 
-et enfin à l'intérieur de ce container, il faut lancer l'installation des outils
+Et enfin à l'intérieur de ce container, il faut lancer l'installation des outils
 ```
+chown -R fred:fred .
+cd ~/Documents/install/source/environnementTravail/
+./installAll.sh
+./installFonts.sh
+zsh
+cd ~/Documents/install/source/osm
 ./installOSMMapnikUbuntuDockerPaquet3.sh
+cd ~/Documents/install/source/openstreetmap-carto-vector-tiles/scripts
+./get-shapefile.py --no-shape
+```
+
+Une fois que l'installation est finie à l'intérieur du container, nous allons sortir de ce container,
+puis créer une seconde image à partir de ce container
+```
+docker commit c-ubuntu-mapnik i-ubuntu-mapnik-2
+```
+
+Enfin, nous pouvons maintenant utiliser cette seconde image pour travailler
+```
+docker run -ti -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize ./docker-mapnik/resources):/etc/tilestache/resources -v $(readlink --canonicalize ..):/home/fred/Documents/install/source --name c-ubuntu-mapnik-2 i-ubuntu-mapnik-2 /bin/zsh
+
+```
+
+verification que, depuis le container, nous soyons capable d'interroger la base de données hébergée sur la machine hote
+```
+psql -h 172.17.0.1 -d osm -U osmuser
+```
+
+A l'interieur du conatainer, nous allons lancer kosmtik pour qu'il serve le project.mml qui est dans le repertoire openstreetmap-carto-vector-tiles
+Cependant, nous devons modifier un peu ce fichier project.mml
+Modification du fichier project.mml de facon a ce qu'il pointe vers la base de données
+
+```
+cd ~/Documents/install/source/openstreetmap-carto-vector-tiles
+vi project.mml
+
+```
+Il faut remplacer :
+```
+  osm2pgsql: &osm2pgsql
+    type: "postgis"
+    dbname: "gis"
+    key_field: ""
+    geometry_field: "way"
+```
+par :
+```
+  osm2pgsql: &osm2pgsql
+    type: "postgis"
+    host: 172.17.0.1
+    dbname: "osm"
+    user: "www-data"
+    password: "www-data"
+    key_field: ""
+    geometry_field: "way"
+```
+
+On peut maintenant lancer kosmtik pour verifier que ca marche
+
+```
+cd ~/Documents/install/source/openstreetmap-carto-vector-tiles
+kosmtik serve --host 172.17.0.2 --port 8000 project.mml
+```
+
+Sur le poste client (host), on peut lancer la visualisation de la carte
+```
+http://172.17.0.2:8000/
+```
+
+
+## Quelques règlages
+
+Quelques reglages sont encore à faire...
+Notamment, quand nous sommes dans le container c-ubuntu-mapnik-2, il faut que nous soyons
+capable de se connecter au serveur de base de données qui est sur la machine host.
+
+### postgresql
+Sur la machine localhost, qui heberge à la fois :
+- le container docker qui est en train de s'executer
+- le serveur de base de données postgresql
+il faut configurer ce serveur de base de données postgresql pour qu'il
+accepte les connections d'un container docker
+
+Cette configuration a été vu ici :
+https://stackoverflow.com/questions/31249112/allow-docker-container-to-connect-to-a-local-host-postgres-database
+
+Sur localhost,
+```
+sudo vi /etc/postgresql/9.5/main/pg_hba.conf
+```
+
+```
+host      all     all     172.17.0.0/16    md5
+```
+
+```
+sudo service postgresql reload
+```
+
+Dans le container
+
+```
+psql -h 172.17.0.1 -d osm -U osmuser
 ```
 
 ### Mapnik

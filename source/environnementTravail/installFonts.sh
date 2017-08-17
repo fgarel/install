@@ -281,14 +281,33 @@ echo "# Il est nécessaire d'installer des polices supplémentaires pour utilise
 echo "#"
 echo "# Cette installation est dupliquée dans ../osm/installOSMCartoCSS.sh"
 echo "#"
-echo "sudo aptitude install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
-      sudo aptitude install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
-echo "sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
-      sudo aptitude install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
-echo "sudo apt-get -y install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
-      sudo apt-get -y install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
-echo "sudo apt-get -y install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
-      sudo apt-get -y install fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+echo "sudo aptitude install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
+      sudo aptitude install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
+echo "sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+      sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+echo "sudo apt-get install -y fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
+      sudo apt-get install -y fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
+echo "sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+      sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+echo ""
+echo "# -----------------------------------------------------"
+echo "# Installation 12 : les fonts pour les cartes (OSM et mapnik) les fonts noto de google"
+echo "#"
+echo "# Des fonts 'no tofu' de google sont utilisées également par openstreetmap-carto-vector-tiles"
+echo "# https://www.google.com/get/noto/"
+echo "# Précédemment nous avons installé une partie de ces fonts avec des paquets de ditribution"
+echo "# mais cette installation ne semble pas suffisante"
+echo "#"
+echo "# La procédure d'installation se trouve ici"
+echo "# https://www.google.com/get/noto/help/install/"
+
+echo "#"
+echo "# -----------------------------------------------------"
+echo "# Installation 13 : a continuer"
+echo "#"
+echo "# https://codeboxr.com/top-10-google-font-for-better-readability/"
+echo "#"
+
 echo ""
 echo "# -----------------------------------------------------"
 echo "#"

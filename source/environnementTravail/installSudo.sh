@@ -33,6 +33,11 @@ echo "#"
 echo "sudo apt-get install -y net-tools"
       sudo apt-get install -y net-tools
 echo "#"
+echo "sudo apt-get install -y iputils-ping"
+      sudo apt-get install -y iputils-ping
+echo "#"
+echo "sudo apt-get install -y iproute2"
+      sudo apt-get install -y iproute2
 echo "#"
 echo "#"
 echo ""
