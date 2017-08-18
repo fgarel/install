@@ -77,30 +77,12 @@ echo "cd openstreetmap-carto-vector-tiles"
 echo "pwd"
       pwd
 echo "#"
-echo "# Il faut aussi telecherger des données pour que le test fonctionne"
+echo "# Apres avoir cloner le projet, il faut faire quelques complements :"
+echo "#   - installer des fontes"
+echo "#   - faire un make. Ce make se charge de plusieurs autres choses :"
+echo "#     - telechargement des cartes de bases"
+echo "#     - installation d'outils complementaires (carto et kosmtik)"
 echo "#"
-echo "# http://openstreetmapdata.com/data/land-polygons"
-echo "# https://github.com/gravitystorm/openstreetmap-carto/issues/39"
-echo "# "
-echo "# curl http://data.openstreetmapdata.com/simplified-land-polygons-complete-3857.zip"
-echo "curl -O http://www.volkerschatz.com/net/osm/scripts/get-shapefiles.sh"
-      curl -O http://www.volkerschatz.com/net/osm/scripts/get-shapefiles.sh
-echo "chmod +x get-shapefiles.sh"
-      chmod +x get-shapefiles.sh
-echo "./get-shapefiles.sh"
-      ./get-shapefiles.sh
-echo "cd scripts"
-      cd scripts
-echo "./get-shapefiles.py --no-shape"
-      ./get-shapefiles.py --no-shape
-echo "#"
-#echo "sudo make install"
-#      sudo make install
-echo "#"
-echo "cd $OLDPWDFG"
-      cd $OLDPWDFG
-echo "pwd"
-      pwd
 echo "#"
 echo "# Installation des fonts"
 echo "#"
@@ -124,6 +106,51 @@ echo "# https://wiki.debian.org/Fonts"
 echo "fc-cache -fv # rebuilds cached list of fonts"
       fc-cache -fv
 echo "#"
+echo "# Execution de la commande make"
+echo "#"
+echo "# Cependant, sept choses sont à faire avant d'executer make"
+echo "#   - installer le paquet python-yaml"
+echo "#   - modifier le makfile de facon a pointer vers la bonne base de données"
+echo "#   - ajout de l'utilisateur www-data dans le fichier .pgpass"
+echo "#   - telecharger quelques données (contour continent océan)"
+echo "#   - installer npm"
+echo "#   - installer carto et kosmtik"
+echo "#   - modification du fichier project.mml pour qu'il pointe vers la bonne base de données"
+echo "#"
+echo "sudo apt-get install -y python-yaml"
+      sudo apt-get install -y python-yaml
+echo "#"
+echo "# Modification du Makefile"
+echo "	#PGOPTIONS='--client-min-messages=error' psql -d gis -f add-indexes.sql >/dev/null || true"
+echo "	PGOPTIONS='--client-min-messages=error' psql -h 172.17.0.1 -U www-data -d osm -f add-indexes.sql >/dev/null || true"
+echo "sed -i -E -e 's/-d gis/-h 172.17.0.1 -U www-data -d osm/g' ../openstreetmap-carto-vector-tiles/Makefile"
+      sed -i -E -e 's/-d gis/-h 172.17.0.1 -U www-data -d osm/g' ../openstreetmap-carto-vector-tiles/Makefile
+echo "#"
+echo "# L'utilisateur www-data doit pouvoir se connecter sans avoir a saisir son mot de passe"
+echo "echo '*:*:*:www-data:www-data' >> ~/.pgpass"
+      echo '*:*:*:www-data:www-data' >> ~/.pgpass
+echo "chmod 600 ~/.pgpass"
+      chmod 600 ~/.pgpass
+echo "#"
+echo "# Il faut aussi telecharger des données pour que le test fonctionne"
+echo "#"
+echo "# http://openstreetmapdata.com/data/land-polygons"
+echo "# https://github.com/gravitystorm/openstreetmap-carto/issues/39"
+echo "# "
+#echo "# curl http://data.openstreetmapdata.com/simplified-land-polygons-complete-3857.zip"
+#echo "curl -O http://www.volkerschatz.com/net/osm/scripts/get-shapefiles.sh"
+#      curl -O http://www.volkerschatz.com/net/osm/scripts/get-shapefiles.sh
+#echo "chmod +x get-shapefiles.sh"
+#      chmod +x get-shapefiles.sh
+#echo "./get-shapefiles.sh"
+#      ./get-shapefiles.sh
+echo "cd scripts"
+      cd scripts
+echo "./get-shapefiles.py --no-shape"
+      ./get-shapefiles.py --no-shape
+echo "cd .."
+      cd ..
+echo "#"
 echo "# Installation de cartocss et de kosmtik"
 echo "#"
 echo "# D'après la page suivante,"
@@ -131,46 +158,97 @@ echo "# https://github.com/mapbox/carto"
 echo "# https://cartocss.readthedocs.io/en/latest/"
 echo "# Il existe un outil, appelé carto, developpé a partir de nodejs,"
 echo "# qui permet de transfomer des styles mml en style xml"
-echo "#"
-#echo "# Installation a partir des paquets : trop vieille version..."
-#echo "sudo aptitude install -y node-carto"
-#      sudo aptitude install -y node-carto
-#echo "sudo apt-get install -y node-carto"
-#      sudo apt-get install -y node-carto
-echo "#"
+#echo "#"
+####echo "# Installation a partir des paquets : trop vieille version..."
+####echo "sudo aptitude install -y node-carto"
+####      sudo aptitude install -y node-carto
+####echo "sudo apt-get install -y node-carto"
+####      sudo apt-get install -y node-carto
+#echo "#"
 echo "# Installation a partir de npm : it's rocks"
 echo "sudo apt-get install -y npm"
       sudo apt-get install -y npm
 echo "#"
-#echo "sudo npm -g install carto"
-#      sudo npm -g install carto
-echo "npm install carto"
-      npm install carto
+echo "# carto et kosmtik ne sont pas a installer globalement (-g) mais localement"
+echo "# Ils vont etre installé dans le sous-repertoire node_modules "
+echo "# du repertoire openstreetmap-carto-vector-tiles"
 echo "#"
-echo "# kosmtik n'est pas a installé globalement (-g) mais localement"
-#echo "sudo npm -g install kosmtik"
-#      sudo npm -g install kosmtik
-echo "npm install kosmtik"
-      npm install kosmtik
+echo "# De plus, ces deux outils sont à installer avant de faire le make"
+echo "# car l'outil make a besoin de l'outil"
+echo "# node_modules/.bin/mapnik-shapeindex.js"
 echo "#"
-#echo "# https://github.com/mojodna/tessera"
-#echo "sudo npm -g install tessera"
-#      sudo npm -g install tessera
+#echo "#"
+#echo "cd ../openstreetmap-carto-vector-tiles"
+#      cd ../openstreetmap-carto-vector-tiles
+####echo "sudo npm -g install carto"
+####      sudo npm -g install carto
+#echo "npm install carto"
+#      npm install carto
+#echo "#"
+echo "sudo npm -g install kosmtik"
+      sudo npm -g install kosmtik
+#echo "npm install kosmtik"
+#      npm install kosmtik
+echo "sudo npm -g install tessera"
+      sudo npm -g install tessera
+###echo "#"
+####echo "# https://github.com/mojodna/tessera"
+####echo "sudo npm -g install tessera"
+####      sudo npm -g install tessera
 echo "#"
-echo "# Une fois que l'on a installé kosmtik, on peut executer le make (Makefile)"
+echo "# Modification du fichier project.mml"
+echo "#"
+echo "# A l'interieur du container, nous voulons lancer kosmtik pour qu'il "
+echo "# serve le project.mml qui est dans le repertoire openstreetmap-carto-vector-tiles"
+echo "# Cependant, nous devons modifier un peu ce fichier project.mml"
+echo "#"
+echo  "# Modification du fichier project.mml de facon a ce qu'il pointe vers la base de données"
+echo "#"
+echo "#"
+echo "# Il faut remplacer :"
+echo "#"
+echo '#  osm2pgsql: &osm2pgsql'
+echo '#    type: "postgis"'
+echo '#    dbname: "gis"'
+echo '#    key_field: ""'
+echo '#    geometry_field: "way"'
+echo "#"
+echo "# par :"
+echo "#"
+echo '#  osm2pgsql: &osm2pgsql'
+echo '#    type: "postgis"'
+echo '#    host: 172.17.0.1'
+echo '#    dbname: "osm"'
+echo '#    user: "www-data"'
+echo '#    password: "www-data"'
+echo '#    key_field: ""'
+echo '#    geometry_field: "way"'
+echo "#"
+echo "sed -i -E -e '/  type: \"postgis\"/ a \ \ \ \ host: 172.17.0.1' ../openstreetmap-carto-vector-tiles/project.mml"
+      sed -i -E -e '/  type: \"postgis\"/ a \ \ \ \ host: 172.17.0.1' ../openstreetmap-carto-vector-tiles/project.mml
+echo "sed -i -E -e 's/  dbname: \"gis\"/  dbname: \"osm\"/g' ../openstreetmap-carto-vector-tiles/project.mml"
+      sed -i -E -e 's/  dbname: \"gis\"/  dbname: \"osm\"/g' ../openstreetmap-carto-vector-tiles/project.mml
+echo "sed -i -E -e '/  dbname: \"osm\"/ a \ \ \ \ user: \"www-data\"' ../openstreetmap-carto-vector-tiles/project.mml"
+      sed -i -E -e '/  dbname: \"osm\"/ a \ \ \ \ user: \"www-data\"' ../openstreetmap-carto-vector-tiles/project.mml
+echo "sed -i -E -e '/  user: \"www-data\"/ a \ \ \ \ password: \"www-data\"' ../openstreetmap-carto-vector-tiles/project.mml"
+      sed -i -E -e '/  user: \"www-data\"/ a \ \ \ \ password: \"www-data\"' ../openstreetmap-carto-vector-tiles/project.mml
+echo "#"
+echo "# Enfin, le make !"
+echo "#"
+echo "# Une fois que l'on a installé npm, on peut executer le make (Makefile)"
 echo "# de facon à installer les outils complementaires (tessera, ....)"
 echo "#"
-echo "# Cependant, deux choses sont à faire avant d'executer make"
-echo "#   - modifier le makfile de facon a pointer vers la bonne base de données"
-echo "#   - installer le paquet python-yaml"
-echo "sudo apt-get install -y python-yaml"
-      sudo apt-get install -y python-yaml
 echo "#"
-echo "# "
-echo "	#PGOPTIONS='--client-min-messages=error' psql -d gis -f add-indexes.sql >/dev/null || true"
-echo "	PGOPTIONS='--client-min-messages=error' psql -h 172.17.0.1 -U www-data -d osm -f add-indexes.sql >/dev/null || true"
-echo "sed -i -E -e 's/-d gis/-h 172.17.0.1 -U www-data -d osm/g' Makefile"
-      sed -i -E -e 's/-d gis/-h 172.17.0.1 -U www-data -d osm/g' Makefile
+echo "make"
+      make
+echo "#"
+#echo "sudo make install"
+#      sudo make install
+echo "#"
+echo "cd $OLDPWDFG"
+      cd $OLDPWDFG
+echo "pwd"
+      pwd
 echo "#"
 echo "#"
 echo "#----------------------"

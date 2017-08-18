@@ -59,6 +59,9 @@ class ParametresConnexion(object):
                                                                 'dblink']}
         self.dict_dbname_listschemas = {'osm': ['apidb',
                                                 'osm2pgsql']}
+        self.dict_dbuser_searchpath = {'osmuser':    'apidb, osm2pgsql, public',
+                                       'mapnikuser': 'osm2pgsql, public',
+                                       'www-data':   'osm2pgsql, public'}
         self.dict_dbname_dict_schema_dict_dbuser_listdroits = \
             {'osm': {'apidb':     {'osmuser':    ['ALL']},
                      'osm2pgsql': {'osmuser':    ['ALL'],

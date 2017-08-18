@@ -153,8 +153,8 @@ cd ~/Documents/install/source/environnementTravail/
 zsh
 cd ~/Documents/install/source/osm
 ./installOSMMapnikUbuntuDockerPaquet3.sh
-cd ~/Documents/install/source/openstreetmap-carto-vector-tiles/scripts
-./get-shapefile.py --no-shape
+## cd ~/Documents/install/source/openstreetmap-carto-vector-tiles/scripts
+## ./get-shapefile.py --no-shape
 ```
 
 Une fois que l'installation est finie à l'intérieur du container, nous allons sortir de ce container,
@@ -169,12 +169,12 @@ docker run -ti -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize ./docker-map
 
 ```
 
-verification que, depuis le container, nous soyons capable d'interroger la base de données hébergée sur la machine hote
+Vérification que, depuis le container, nous soyons capable d'interroger la base de données hébergée sur la machine hôte
 ```
 psql -h 172.17.0.1 -d osm -U osmuser
 ```
 
-A l'interieur du conatainer, nous allons lancer kosmtik pour qu'il serve le project.mml qui est dans le repertoire openstreetmap-carto-vector-tiles
+A l'interieur du container, nous allons lancer kosmtik pour qu'il serve le project.mml qui est dans le repertoire openstreetmap-carto-vector-tiles
 Cependant, nous devons modifier un peu ce fichier project.mml
 Modification du fichier project.mml de facon a ce qu'il pointe vers la base de données
 
@@ -207,7 +207,7 @@ On peut maintenant lancer kosmtik pour verifier que ca marche
 
 ```
 cd ~/Documents/install/source/openstreetmap-carto-vector-tiles
-kosmtik serve --host 172.17.0.2 --port 8000 project.mml
+node_modules/.bin/kosmtik serve --host 172.17.0.2 --port 8000 project.mml
 ```
 
 Sur le poste client (host), on peut lancer la visualisation de la carte
@@ -216,9 +216,9 @@ http://172.17.0.2:8000/
 ```
 
 
-## Quelques règlages
+## Quelques réglages
 
-Quelques reglages sont encore à faire...
+Quelques réglages sont encore à faire...
 Notamment, quand nous sommes dans le container c-ubuntu-mapnik-2, il faut que nous soyons
 capable de se connecter au serveur de base de données qui est sur la machine host.
 

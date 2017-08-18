@@ -26,6 +26,7 @@ class Database(object):
         self.dict_dbname_dict_dbuser_listdroits = paramconnexion.dict_dbname_dict_dbuser_listdroits
         self.dict_dbname_listextensions = paramconnexion.dict_dbname_listextensions
         self.dict_dbname_listschemas = paramconnexion.dict_dbname_listschemas
+        self.dict_dbuser_searchpath = paramconnexion.dict_dbuser_searchpath
         self.dict_dbname_dict_schema_dict_dbuser_listdroits = paramconnexion.dict_dbname_dict_schema_dict_dbuser_listdroits
         self.dict_dbname_dict_schema_listtables = paramconnexion.dict_dbname_dict_schema_listtables
 
@@ -75,7 +76,7 @@ class Database(object):
             commande,
             shell=True)
 
-    def update_role(self, username, rights):
+    def update_role_right(self, username, right):
         # La modifiaction du role se fait hors connexion :
         # on a pas besoin d'etre connecté à une base de données
         # pour modifier le role
@@ -87,7 +88,21 @@ class Database(object):
         commande = "sudo -u postgres " + \
                    "     psql -c " + \
                    "\"" + "ALTER ROLE \\\"" + username + "\\\"" + \
-                   " " + rights + ";" + "\""
+                   " " + right + ";" + "\""
+
+        print("{}".format(commande))
+        subprocess.call(
+            commande,
+            shell=True)
+
+    def update_role_searchpath(self, username, searchpath):
+        # pour modifier le search_path d'un utilisateur
+
+        commande = "sudo -u postgres " + \
+                   "     psql -c " + \
+                   "\"" + "ALTER ROLE \\\"" + username + "\\\"" + \
+                   " " + "SET search_path = " + \
+                   " " + searchpath + ";" + "\""
 
         print("{}".format(commande))
         subprocess.call(
@@ -109,13 +124,13 @@ class Database(object):
         self.cur.close()
         self.conn.close()
 
-    def update_database(self, dbname, dbuser, rights):
+    def update_database(self, dbname, dbuser, right):
         #print("dbname    = {}".format(self.dbname))
         self.conn = self.conn_database('postgres')
         self.dbname = dbname
         self.conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT) # <-- ADD THIS LINE
         self.cur = self.conn.cursor()
-        self.cur.execute("GRANT {} ON DATABASE {} TO \"{}\";".format(rights, dbname, dbuser))
+        self.cur.execute("GRANT {} ON DATABASE {} TO \"{}\";".format(right, dbname, dbuser))
         self.cur.close()
         self.conn.close()
 
@@ -143,7 +158,7 @@ class Database(object):
         self.cur.close()
         self.conn.close()
 
-    def update_schema(self, dbname, schema, dbuser, rights):
+    def update_schema(self, dbname, schema, dbuser, right):
         self.dbname = dbname
         self.schema = schema
         #print("dbname    = {}".format(self.dbname))
@@ -152,7 +167,7 @@ class Database(object):
         self.conn.autocommit = True
         self.cur = self.conn.cursor()
         #print("GRANT {} ON SCHEMA {} TO \"{}\";".format(rights, schema, dbuser))
-        self.cur.execute("GRANT {} ON SCHEMA {} TO \"{}\";".format(rights, schema, dbuser))
+        self.cur.execute("GRANT {} ON SCHEMA {} TO \"{}\";".format(right, schema, dbuser))
         self.cur.close()
         self.conn.close()
 
@@ -201,7 +216,7 @@ def main():
     print('2 Affectation des droits (niveau utilisateurs)')
     for dbuser, listdroits in maconnexion.dict_dbuser_listdroits.items():
         for droit in listdroits:
-            maconnexion.update_role(dbuser, droit)
+            maconnexion.update_role_right(dbuser, droit)
 
     # Creation de la base de données
     print('3 Creation de la base de données')
@@ -229,8 +244,13 @@ def main():
             #print('schema = {}'.format(schema))
             maconnexion.create_schema(dbname, schema)
 
-    # Affectation des droits (niveau schemas)
-    print('7 Affectation des droits (niveau schemas)')
+    # Affectation des droits (niveau utilisateur)
+    print('7 Affectation des droits, (niveau utilisateur)')
+    for dbuser, searchpath in maconnexion.dict_dbuser_searchpath.items():
+        maconnexion.update_role_searchpath(dbuser, searchpath)
+
+    # Affectation des droits (niveau schema)
+    print('8 Affectation des droits (niveau schema)')
     for dbname, dict_schema_dict_dbuser_listdroits in maconnexion.dict_dbname_dict_schema_dict_dbuser_listdroits.items():
         for schema, dict_dbuser_listdroits in dict_schema_dict_dbuser_listdroits.items():
             for dbuser, listdroits in dict_dbuser_listdroits.items():
@@ -238,7 +258,7 @@ def main():
                     maconnexion.update_schema(dbname, schema, dbuser, droit)
 
     # Creation des tables
-    print('8 Creation des tables')
+    print('9 Creation des tables')
     for dbname, dict_schema_listtables in maconnexion.dict_dbname_dict_schema_listtables.items():
         for schema, listtables in dict_schema_listtables.items():
             for table in listtables:
