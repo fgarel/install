@@ -11,28 +11,28 @@ echo "# osmTest.sh"
 echo "###############################################"
 echo "#"
 
-echo "# Faire en sorte de travailler dans le schema $dataschema"
-echo "#"
-echo "psql \\"
-echo "     --host=$datahost \\"
-echo "     --dbname=$database \\"
-echo "     --username=$datauser \\"
-echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
-      psql \
-           --host=$datahost \
-           --dbname=$database \
-           --username=$datauser \
-           -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
-echo "psql \\"
-echo "     --host=$datahost \\"
-echo "     --dbname=$database \\"
-echo "     --username=$datauser \\"
-echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
-      psql \
-           --host=$datahost \
-           --dbname=$database \
-           --username=$datauser \
-           -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
+# echo "# Faire en sorte de travailler dans le schema $dataschema"
+# echo "#"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
+#       psql \
+#            --host=$datahost \
+#            --dbname=$database \
+#            --username=$datauser \
+#            -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
+#       psql \
+#            --host=$datahost \
+#            --dbname=$database \
+#            --username=$datauser \
+#            -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
 
 echo "#"
 echo "# Affichage de la date"
@@ -59,28 +59,28 @@ echo "#"
 dataschema='osm2pgsql'
 datauser='www-data'
 
-echo "# Faire en sorte de travailler dans le schema $dataschema"
-echo "#"
-echo "psql \\"
-echo "     --host=$datahost \\"
-echo "     --dbname=$database \\"
-echo "     --username=$datauser \\"
-echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
-      psql \
-           --host=$datahost \
-           --dbname=$database \
-           --username=$datauser \
-           -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
-echo "psql \\"
-echo "     --host=$datahost \\"
-echo "     --dbname=$database \\"
-echo "     --username=$datauser \\"
-echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
-      psql \
-           --host=$datahost \
-           --dbname=$database \
-           --username=$datauser \
-           -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
+# echo "# Faire en sorte de travailler dans le schema $dataschema"
+# echo "#"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
+#       psql \
+#            --host=$datahost \
+#            --dbname=$database \
+#            --username=$datauser \
+#            -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
+#       psql \
+#            --host=$datahost \
+#            --dbname=$database \
+#            --username=$datauser \
+#            -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
 echo "#"
 echo "# Affichage de la date"
 echo "cat /home/fred/Documents/osmosis/state.txt"

@@ -37,7 +37,7 @@ http://www.volkerschatz.com/net/osm/osm.html
 http://www.volkerschatz.com/net/osm/canonicalosm.html
 https://tilemill-project.github.io/tilemill/docs/guides/osm-bright-mac-quickstart/
 
-comparaison des serveurs de tuiles
+Comparaison des serveurs de tuiles
 https://www.openstreetmap.org/user/pnorman/diary/39920
 
 Ces outils sont, pour ne citer que les principaux (nous nous contenterons de mapnik et tilestache et tessera):
@@ -133,6 +133,84 @@ Après ces installations, il faudra configurer ces outils pour qu'ils fonctionne
 
 Pour simplifier, nous allons faire les installations dans un container DOCKER
 
+### Permettre la communication entre le poste host et le container
+Sur la machine hote, il faut autoriser un container :
+ - à acceder au display de la machine hote
+ - à acceder au serveur de base de données postgresql
+
+#### Serveur X
+La doc est ici
+https://stackoverflow.com/questions/16296753/can-you-run-gui-apps-in-a-docker-container
+
+```
+docker build -t xeyes - << __EOF__
+FROM debian
+RUN apt-get update
+RUN apt-get install -qqy x11-apps
+ENV DISPLAY :0
+CMD xeyes
+__EOF__
+```
+
+```
+XSOCK=/tmp/.X11-unix/X0
+XAUTH=/tmp/.docker.xauth
+```
+
+The Xauthority file can be written in a way so that the hostname does not matter.
+We need to set the Authentication Family to 'FamilyWild'.
+I am not sure, if xauth has a proper command line for this, so here is an example that combines xauth and sed to do that.
+We need to change the first 16 bits of the nlist output.
+The value of FamilyWild is 65535 or 0xffff.
+```
+xauth nlist $DISPLAY | sed -e 's/^..../ffff/'  | xauth -f $XAUTH nmerge -    
+```
+
+```
+docker run -ti -v $XSOCK:$XSOCK -v $XAUTH:$XAUTH -e DISPLAY=$DISPLAY -e XAUTHORITY=$XAUTH xeyes
+```
+
+#### Acces au server postgres
+
+
+Quand nous sommes dans le container c-ubuntu-mapnik-2, il faut que nous soyons
+capable de se connecter au serveur de base de données qui est sur la machine host.
+
+Sur la machine localhost, qui heberge à la fois :
+- le container docker qui est en train de s'executer
+- le serveur de base de données postgresql
+
+Il faut configurer ce serveur de base de données postgresql pour qu'il
+accepte les connections d'un container docker
+
+Cette configuration a été vu ici :
+https://stackoverflow.com/questions/31249112/allow-docker-container-to-connect-to-a-local-host-postgres-database
+
+Sur localhost,
+```
+sudo vi /etc/postgresql/9.5/main/pg_hba.conf
+```
+
+```
+host      all     all     172.17.0.0/16    md5
+```
+
+```
+sudo service postgresql reload
+```
+
+Dans le container, on pourra verifier
+
+```
+psql -h 172.17.0.1 -d osm -U osmuser
+```
+
+```
+
+```
+
+### Installation du container
+
 Il faut donc commencer par le script pour créer l'image
 
 ```
@@ -141,7 +219,17 @@ Il faut donc commencer par le script pour créer l'image
 
 Puis, il faut créer un container basé sur cette image
 ```
-docker run -ti -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize ./docker-mapnik/resources):/etc/tilestache/resources -v $(readlink --canonicalize ..):/home/fred/Documents/install/source --name c-ubuntu-mapnik i-ubuntu-mapnik
+docker run -ti \
+           -p 9001:9001 \
+           -p 8000:80 \
+           -v $(readlink --canonicalize ./docker-mapnik/resources):/etc/tilestache/resources \
+           -v $(readlink --canonicalize ..):/home/fred/Documents/install/source \
+           -v $XSOCK:$XSOCK \
+           -v $XAUTH:$XAUTH \
+           -e DISPLAY=$DISPLAY \
+           -e XAUTHORITY=$XAUTH \
+           --name c-ubuntu-mapnik \
+           i-ubuntu-mapnik
 ```
 
 Et enfin à l'intérieur de ce container, il faut lancer l'installation des outils
@@ -165,7 +253,18 @@ docker commit c-ubuntu-mapnik i-ubuntu-mapnik-2
 
 Enfin, nous pouvons maintenant utiliser cette seconde image pour travailler
 ```
-docker run -ti -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize ./docker-mapnik/resources):/etc/tilestache/resources -v $(readlink --canonicalize ..):/home/fred/Documents/install/source --name c-ubuntu-mapnik-2 i-ubuntu-mapnik-2 /bin/zsh
+docker run -ti \
+           -p 9001:9001 \
+           -p 8000:80 \
+           -v $(readlink --canonicalize ./docker-mapnik/resources):/etc/tilestache/resources \
+           -v $(readlink --canonicalize ..):/home/fred/Documents/install/source \
+           -v $XSOCK:$XSOCK \
+           -v $XAUTH:$XAUTH \
+           -e DISPLAY=$DISPLAY \
+           -e XAUTHORITY=$XAUTH \
+           --name c-ubuntu-mapnik-2 \
+           i-ubuntu-mapnik-2 \
+           /bin/zsh
 
 ```
 
@@ -218,41 +317,7 @@ http://172.17.0.2:8000/
 
 ## Quelques réglages
 
-Quelques réglages sont encore à faire...
-Notamment, quand nous sommes dans le container c-ubuntu-mapnik-2, il faut que nous soyons
-capable de se connecter au serveur de base de données qui est sur la machine host.
-
-### postgresql
-Sur la machine localhost, qui heberge à la fois :
-- le container docker qui est en train de s'executer
-- le serveur de base de données postgresql
-il faut configurer ce serveur de base de données postgresql pour qu'il
-accepte les connections d'un container docker
-
-Cette configuration a été vu ici :
-https://stackoverflow.com/questions/31249112/allow-docker-container-to-connect-to-a-local-host-postgres-database
-
-Sur localhost,
-```
-sudo vi /etc/postgresql/9.5/main/pg_hba.conf
-```
-
-```
-host      all     all     172.17.0.0/16    md5
-```
-
-```
-sudo service postgresql reload
-```
-
-Dans le container
-
-```
-psql -h 172.17.0.1 -d osm -U osmuser
-```
-
 ### Mapnik
-
 On installe Mapnik depuis les sources....
 ```
 ./installOSMMapnik.sh

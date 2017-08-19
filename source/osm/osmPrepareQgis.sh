@@ -12,18 +12,18 @@ echo "###############################################"
 echo "#"
 echo "#"
 
-echo "# Faire en sorte de travailler dans le schema $dataschema"
-echo "#"
-echo "psql \\"
-echo "     --host=$datahost \\"
-echo "     --dbname=$database \\"
-echo "     --username=$datauser \\"
-echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
-      psql \
-           --host=$datahost \
-           --dbname=$database \
-           --username=$datauser \
-           -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
+# echo "# Faire en sorte de travailler dans le schema $dataschema"
+# echo "#"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
+#       psql \
+#            --host=$datahost \
+#            --dbname=$database \
+#            --username=$datauser \
+#            -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
 
 echo "#"
 echo "# On fabrique des vues limitées à des emprises geographiques"

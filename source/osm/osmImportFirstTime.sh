@@ -46,30 +46,30 @@ echo "          -c \"CREATE EXTENSION hstore;\""
                 -c "CREATE EXTENSION hstore;"
 echo "#"
 
-echo "# Dans la base $database, on peut avoir plusieurs schemas"
-echo "#"
-echo "# Faire en sorte de travailler dans le schema $dataschema"
-echo "#"
-echo "psql \\"
-echo "     --host=$datahost \\"
-echo "     --dbname=$database \\"
-echo "     --username=$datauser \\"
-echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
-      psql \
-           --host=$datahost \
-           --dbname=$database \
-           --username=$datauser \
-           -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
-echo "psql \\"
-echo "     --host=$datahost \\"
-echo "     --dbname=$database \\"
-echo "     --username=$datauser \\"
-echo "     -c \"ALTER ROLE $datauser SET search_path TO $dataschema, public;\""
-      psql \
-           --host=$datahost \
-           --dbname=$database \
-           --username=$datauser \
-           -c "ALTER ROLE $datauser SET search_path TO $dataschema, public;"
+# echo "# Dans la base $database, on peut avoir plusieurs schemas"
+# echo "#"
+# echo "# Faire en sorte de travailler dans le schema $dataschema"
+# echo "#"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
+#       psql \
+#            --host=$datahost \
+#            --dbname=$database \
+#            --username=$datauser \
+#            -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo "     -c \"ALTER ROLE $datauser SET search_path TO $dataschema, public;\""
+#       psql \
+#            --host=$datahost \
+#            --dbname=$database \
+#            --username=$datauser \
+#            -c "ALTER ROLE $datauser SET search_path TO $dataschema, public;"
 
 echo "#"
 echo "# Puis on execute quelques scripts pour créer des tables dans la base"
@@ -135,28 +135,28 @@ echo "# ----------------------------------------------------------"
 dataschema='apidb'
 datauser='osmuser'
 
-echo "# Faire en sorte de travailler dans le schema $dataschema"
-echo "#"
-echo "psql \\"
-echo "     --host=$datahost \\"
-echo "     --dbname=$database \\"
-echo "     --username=$datauser \\"
-echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
-      psql \
-           --host=$datahost \
-           --dbname=$database \
-           --username=$datauser \
-           -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
-echo "psql \\"
-echo "     --host=$datahost \\"
-echo "     --dbname=$database \\"
-echo "     --username=$datauser \\"
-echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
-      psql \
-           --host=$datahost \
-           --dbname=$database \
-           --username=$datauser \
-           -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
+# echo "# Faire en sorte de travailler dans le schema $dataschema"
+# echo "#"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
+#       psql \
+#            --host=$datahost \
+#            --dbname=$database \
+#            --username=$datauser \
+#            -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
+#       psql \
+#            --host=$datahost \
+#            --dbname=$database \
+#            --username=$datauser \
+#            -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
 #echo "osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \\"
 #echo '        --write-pgsql host="localhost" database="osm" postgresSchema="apidb" user="osmuser" password="osmuser"'
 #osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \
@@ -194,28 +194,28 @@ echo "# ----------------------------------------------------------"
 dataschema='osm2pgsql'
 datauser='www-data'
 
-echo "# Faire en sorte de travailler dans le schema $dataschema"
-echo "#"
-echo "psql \\"
-echo "     --host=$datahost \\"
-echo "     --dbname=$database \\"
-echo "     --username=$datauser \\"
-echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
-      psql \
-           --host=$datahost \
-           --dbname=$database \
-           --username=$datauser \
-           -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
-echo "psql \\"
-echo "     --host=$datahost \\"
-echo "     --dbname=$database \\"
-echo "     --username=$datauser \\"
-echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
-      psql \
-           --host=$datahost \
-           --dbname=$database \
-           --username=$datauser \
-           -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
+# echo "# Faire en sorte de travailler dans le schema $dataschema"
+# echo "#"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
+#       psql \
+#            --host=$datahost \
+#            --dbname=$database \
+#            --username=$datauser \
+#            -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
+#       psql \
+#            --host=$datahost \
+#            --dbname=$database \
+#            --username=$datauser \
+#            -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
 
 echo "#"
 echo "# Attention il faut se mettre dans le repertoire osmosis pour lancer la commande ...."

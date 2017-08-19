@@ -101,6 +101,11 @@ echo "sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejav
 echo "sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
       sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
 echo "#"
+echo "# Test du parametrage de l'export display"
+echo "# programme xeyes"
+echo "sudo apt-get install -y x11-apps"
+      sudo apt-get install -y x11-apps
+echo "#"
 echo "# Après installation des fonts, il faut les enregistrer"
 echo "# https://wiki.debian.org/Fonts"
 echo "fc-cache -fv # rebuilds cached list of fonts"
@@ -185,6 +190,10 @@ echo "#"
 #echo "npm install carto"
 #      npm install carto
 #echo "#"
+#echo "sudo npm -g install mapnik"
+#      sudo npm -g install mapnik
+echo "npm install mapnik"
+      npm install mapnik
 echo "sudo npm -g install kosmtik"
       sudo npm -g install kosmtik
 #echo "npm install kosmtik"
