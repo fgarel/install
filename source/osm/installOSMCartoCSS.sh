@@ -173,8 +173,20 @@ echo "# qui permet de transfomer des styles mml en style xml"
 echo "# Installation a partir de npm : it's rocks"
 echo "sudo apt-get install -y npm"
       sudo apt-get install -y npm
+echo "npm -v"
+      npm -v
 echo "#"
-echo "# carto et kosmtik ne sont pas a installer globalement (-g) mais localement"
+#echo "# Mise à jour de npm (en utilisant npm...)"
+#echo "# https://stackoverflow.com/questions/23393707/how-to-update-npm"
+#echo "sudo npm install -g npm"
+#      sudo npm install -g npm
+#echo "sudo apt-get remove -y npm"
+#      sudo apt-get remove -y npm
+#echo "npm -v"
+#      npm -v
+echo "#"
+echo "# carto est pas a installer localement, tandis que"
+echo "# kosmtik est a installer globalement (-g)"
 echo "# Ils vont etre installé dans le sous-repertoire node_modules "
 echo "# du repertoire openstreetmap-carto-vector-tiles"
 echo "#"
@@ -187,19 +199,19 @@ echo "#"
 #      cd ../openstreetmap-carto-vector-tiles
 ####echo "sudo npm -g install carto"
 ####      sudo npm -g install carto
-#echo "npm install carto"
-#      npm install carto
+echo "npm install carto"
+      npm install carto
 #echo "#"
 #echo "sudo npm -g install mapnik"
 #      sudo npm -g install mapnik
-echo "npm install mapnik"
-      npm install mapnik
+#echo "npm install mapnik"
+#      npm install mapnik
 echo "sudo npm -g install kosmtik"
       sudo npm -g install kosmtik
 #echo "npm install kosmtik"
 #      npm install kosmtik
-echo "sudo npm -g install tessera"
-      sudo npm -g install tessera
+#echo "sudo npm -g install tessera"
+#      sudo npm -g install tessera
 ###echo "#"
 ####echo "# https://github.com/mojodna/tessera"
 ####echo "sudo npm -g install tessera"
@@ -241,6 +253,14 @@ echo "sed -i -E -e '/  dbname: \"osm\"/ a \ \ \ \ user: \"www-data\"' ../openstr
       sed -i -E -e '/  dbname: \"osm\"/ a \ \ \ \ user: \"www-data\"' ../openstreetmap-carto-vector-tiles/project.mml
 echo "sed -i -E -e '/  user: \"www-data\"/ a \ \ \ \ password: \"www-data\"' ../openstreetmap-carto-vector-tiles/project.mml"
       sed -i -E -e '/  user: \"www-data\"/ a \ \ \ \ password: \"www-data\"' ../openstreetmap-carto-vector-tiles/project.mml
+echo "#"
+echo "# Autre modification à faire dans le fichier project.mml"
+echo "#"
+echo "# Pour le moment, on utilise le projet avec kosmtik, sans tessera"
+echo "#"
+echo "sed -i -E -e 's/^source: /#source: /g' ../openstreetmap-carto-vector-tiles/project.mml"
+      sed -i -E -e 's/^source: /#source: /g' ../openstreetmap-carto-vector-tiles/project.mml
+echo "#"
 echo "#"
 echo "# Enfin, le make !"
 echo "#"

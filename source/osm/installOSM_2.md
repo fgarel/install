@@ -265,7 +265,6 @@ docker run -ti \
            --name c-ubuntu-mapnik-2 \
            i-ubuntu-mapnik-2 \
            /bin/zsh
-
 ```
 
 Vérification que, depuis le container, nous soyons capable d'interroger la base de données hébergée sur la machine hôte
