@@ -231,6 +231,10 @@ docker run -ti \
            --name c-ubuntu-mapnik \
            i-ubuntu-mapnik
 ```
+Cette ligne de commande est dans le script
+```
+./dockerRun1.sh
+```
 
 Et enfin à l'intérieur de ce container, il faut lancer l'installation des outils
 ```
@@ -244,6 +248,13 @@ cd ~/Documents/install/source/osm
 ## cd ~/Documents/install/source/openstreetmap-carto-vector-tiles/scripts
 ## ./get-shapefile.py --no-shape
 ```
+
+Cette ensemble de commande est dans le script
+```
+./Documents/install/source/osm/dockerInside1.sh
+```
+
+
 
 Une fois que l'installation est finie à l'intérieur du container, nous allons sortir de ce container,
 puis créer une seconde image à partir de ce container
