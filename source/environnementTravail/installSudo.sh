@@ -39,5 +39,9 @@ echo "#"
 echo "sudo apt-get install -y iproute2"
       sudo apt-get install -y iproute2
 echo "#"
+echo "# Test du parametrage de l'export display"
+echo "# programme xeyes"
+echo "sudo apt-get install -y x11-apps"
+      sudo apt-get install -y x11-apps
 echo "#"
 echo ""

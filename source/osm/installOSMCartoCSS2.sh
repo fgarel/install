@@ -5,10 +5,10 @@
 # 8ème Partie - Installation d'un environnement OSM
 ###############################################
 # Installation d'un environnement OSM
-echo "# 8ème Partie - Installation de cartocss"
+echo "# 8ème Partie - paramétrage et préparation de cartocss"
 echo "######################################################"
 echo "#"
-echo "# Ce script présente l'installation de cartocss"
+echo "# Ce script présente la fin de l'installation de cartocss"
 echo "# CartoCSS n'est peut-etre pas la technique ideal"
 echo "# mais il faut etudier un peu plus le monde mapbox..."
 echo "# https://blog.mapbox.com/the-end-of-cartocss-da2d7427cf1"
@@ -36,42 +36,44 @@ echo "export OLDPWDFG=$(pwd)"
       export OLDPWDFG=$(pwd)
       echo $OLDPWDFG
 echo "#"
-echo "# Installation d'openstreetmap-carto"
+#echo "# Installation d'openstreetmap-carto"
 echo "cd .."
       cd ..
 echo "pwd"
       pwd
-echo "rm -rf openstreetmap-carto"
-      rm -rf openstreetmap-carto
-echo "git clone https://github.com/gravitystorm/openstreetmap-carto"
-      git clone https://github.com/gravitystorm/openstreetmap-carto
-echo "cd openstreetmap-carto"
-      cd openstreetmap-carto
-echo "pwd"
-      pwd
-echo "#"
-echo "#"
+#echo "rm -rf openstreetmap-carto"
+#      rm -rf openstreetmap-carto
+#echo "git clone https://github.com/gravitystorm/openstreetmap-carto"
+#      git clone https://github.com/gravitystorm/openstreetmap-carto
+#echo "cd openstreetmap-carto"
+#      cd openstreetmap-carto
+#echo "pwd"
+#      pwd
+#echo "#"
+#echo "#"
 #echo "sudo make install"
 #      sudo make install
-echo "#"
-echo "cd $OLDPWDFG"
-      cd $OLDPWDFG
-echo "pwd"
-      pwd
+#echo "#"
+#echo "cd $OLDPWDFG"
+#      cd $OLDPWDFG
+#echo "pwd"
+#      pwd
 echo "#"
 echo "# Installation d'openstreetmap-carto-vector-tiles"
 echo "#"
 echo "# Les tuiles vecteurs"
 echo "# https://github.com/mapbox/awesome-vector-tiles"
 echo "#"
-echo "cd .."
-      cd ..
-echo "pwd"
-      pwd
-echo "rm -rf openstreetmap-carto-vector-tiles"
-      rm -rf openstreetmap-carto-vector-tiles
+#echo "cd .."
+#      cd ..
+#echo "pwd"
+#      pwd
+#echo "rm -rf openstreetmap-carto-vector-tiles"
+#      rm -rf openstreetmap-carto-vector-tiles
 echo "git clone https://github.com/geofabrik/openstreetmap-carto-vector-tiles"
       git clone https://github.com/geofabrik/openstreetmap-carto-vector-tiles
+echo "git fetch https://github.com/geofabrik/openstreetmap-carto-vector-tiles"
+      git fetch https://github.com/geofabrik/openstreetmap-carto-vector-tiles
 echo "cd openstreetmap-carto-vector-tiles"
       cd openstreetmap-carto-vector-tiles
 echo "pwd"
@@ -84,32 +86,28 @@ echo "#     - telechargement des cartes de bases"
 echo "#     - installation d'outils complementaires (carto et kosmtik)"
 echo "#"
 echo "#"
-echo "# Installation des fonts"
-echo "#"
-echo "# D'après la page suivante,"
-echo "# https://github.com/geofabrik/openstreetmap-carto-vector-tiles/blob/master/INSTALL.md"
-echo "# Il est nécessaire d'installer des polices supplémentaires pour utiliser ce système de rendu"
-echo "#"
-echo "# Cette installation est dupliquée dans ../environnementTravail/installFonts.sh"
-echo "#"
-echo "sudo aptitude install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
-      sudo aptitude install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
-echo "sudo apt-get install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
-      sudo apt-get install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
-echo "sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
-      sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
-echo "sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
-      sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
-echo "#"
-echo "# Test du parametrage de l'export display"
-echo "# programme xeyes"
-echo "sudo apt-get install -y x11-apps"
-      sudo apt-get install -y x11-apps
-echo "#"
-echo "# Après installation des fonts, il faut les enregistrer"
-echo "# https://wiki.debian.org/Fonts"
-echo "fc-cache -fv # rebuilds cached list of fonts"
-      fc-cache -fv
+#echo "# Installation des fonts"
+#echo "#"
+#echo "# D'après la page suivante,"
+#echo "# https://github.com/geofabrik/openstreetmap-carto-vector-tiles/blob/master/INSTALL.md"
+#echo "# Il est nécessaire d'installer des polices supplémentaires pour utiliser ce système de rendu"
+#echo "#"
+#echo "# Cette installation est dupliquée dans ../environnementTravail/installFonts.sh"
+#echo "#"
+#echo "sudo aptitude install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
+#      sudo aptitude install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
+#echo "sudo apt-get install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
+#      sudo apt-get install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
+#echo "sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+#      sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+#echo "sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+#      sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
+#echo "#"
+#echo "#"
+#echo "# Après installation des fonts, il faut les enregistrer"
+#echo "# https://wiki.debian.org/Fonts"
+#echo "fc-cache -fv # rebuilds cached list of fonts"
+#      fc-cache -fv
 echo "#"
 echo "# Execution de la commande make"
 echo "#"
@@ -121,6 +119,8 @@ echo "#   - telecharger quelques données (contour continent océan)"
 echo "#   - installer npm"
 echo "#   - installer carto et kosmtik"
 echo "#   - modification du fichier project.mml pour qu'il pointe vers la bonne base de données"
+echo "# Une chose est à faire après le make"
+echo "#   - modification du fichier project.mml pour supprimer la directive source"
 echo "#"
 echo "sudo apt-get install -y python-yaml"
       sudo apt-get install -y python-yaml
@@ -134,6 +134,11 @@ echo "#"
 echo "# L'utilisateur www-data doit pouvoir se connecter sans avoir a saisir son mot de passe"
 echo "echo '*:*:*:www-data:www-data' >> ~/.pgpass"
       echo '*:*:*:www-data:www-data' >> ~/.pgpass
+echo "# On rajoute aussi osmuser et mapnikuser"
+echo "echo '*:*:*:osmuser:osmpass' >> ~/.pgpass"
+      echo '*:*:*:osmuser:osmpass' >> ~/.pgpass
+echo "echo '*:*:*:mapnikuser:mapnikpass' >> ~/.pgpass"
+      echo '*:*:*:mapnikuser:mapnikpass' >> ~/.pgpass
 echo "chmod 600 ~/.pgpass"
       chmod 600 ~/.pgpass
 echo "#"
@@ -267,12 +272,20 @@ echo "#"
 echo "# Une fois que l'on a installé npm, on peut executer le make (Makefile)"
 echo "# de facon à installer les outils complementaires (tessera, ....)"
 echo "#"
-echo "#"
 echo "make"
       make
 echo "#"
 #echo "sudo make install"
 #      sudo make install
+echo "#"
+echo "# Après le make, nous retournons effectuer "
+echo "# une autre modification dans le fichier project.mml"
+echo "#"
+echo "# Pour le moment, on utilise le projet avec kosmtik, sans tessera"
+echo "#"
+echo "sed -i -E -e 's/^source: /#source: /g' ../openstreetmap-carto-vector-tiles/project.mml"
+      sed -i -E -e 's/^source: /#source: /g' ../openstreetmap-carto-vector-tiles/project.mml
+echo "#"
 echo "#"
 echo "cd $OLDPWDFG"
       cd $OLDPWDFG

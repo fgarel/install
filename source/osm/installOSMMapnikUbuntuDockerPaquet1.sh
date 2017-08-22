@@ -132,8 +132,10 @@ echo "cp installOSMUbuntu.sh docker-mapnik/installOSMUbuntu.sh"
       cp installOSMUbuntu.sh docker-mapnik/installOSMUbuntu.sh
 echo "cp installOSMTools.sh docker-mapnik/installOSMTools.sh"
       cp installOSMTools.sh docker-mapnik/installOSMTools.sh
-echo "cp installOSMCartoCSS.sh docker-mapnik/installOSMCartoCSS.sh"
-      cp installOSMCartoCSS.sh docker-mapnik/installOSMCartoCSS.sh
+echo "cp installOSMCartoCSS1.sh docker-mapnik/installOSMCartoCSS1.sh"
+      cp installOSMCartoCSS1.sh docker-mapnik/installOSMCartoCSS1.sh
+echo "cp installOSMCartoCSS2.sh docker-mapnik/installOSMCartoCSS2.sh"
+      cp installOSMCartoCSS2.sh docker-mapnik/installOSMCartoCSS2.sh
 #echo "cp installOSMBoostUbuntuPaquet.sh docker-mapnik/installOSMBoostUbuntuPaquet.sh"
 #      cp installOSMBoostUbuntuPaquet.sh docker-mapnik/installOSMBoostUbuntuPaquet.sh
 echo "cp installOSMMapnikUbuntuPaquet.sh docker-mapnik/installOSMMapnikUbuntuPaquet.sh"
@@ -217,24 +219,34 @@ echo '# docker rmi $(docker images -qa)'
 echo "#"
 echo "#"
 echo "# 1ere utilisation après un build reussi :"
-echo '# docker run -ti -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize ./docker-mapnik/resources):/etc/tilestache/resources -v $(readlink --canonicalize ..):/home/fred/Documents/install/source --name c-ubuntu-mapnik i-ubuntu-mapnik'
-echo "# sudo chown -R fred:fred ."
-echo "# cd ~/Documents/install/source/environnementTravail"
-echo "# ./installAll.sh"
-echo "# zsh"
-#echo "# sudo docker run -d -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize .):/etc/tilestache/resources --name c-ubuntu-mapnik i-ubuntu-mapnik"
-      # sudo docker run -d -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize .):/etc/tilestache/resources --name c-ubuntu-mapnik i-ubuntu-mapnik
-#echo "# docker rm c-ubuntu-mapnik"
-echo "#"
-echo "# Autres utilisations après les installations"
-echo '# docker run -ti -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize ./docker-mapnik/resources):/etc/tilestache/resources -v $(readlink --canonicalize ..):/home/fred/Documents/install/source --name c-ubuntu-mapnik i-ubuntu-mapnik'
+##echo "# sudo docker run -d -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize .):/etc/tilestache/resources --name c-ubuntu-mapnik i-ubuntu-mapnik"
+##      # sudo docker run -d -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize .):/etc/tilestache/resources --name c-ubuntu-mapnik i-ubuntu-mapnik
+##echo "# docker rm c-ubuntu-mapnik"
+#echo '# docker run -ti -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize ./docker-mapnik/resources):/etc/tilestache/resources -v $(readlink --canonicalize ..):/home/fred/Documents/install/source --name c-ubuntu-mapnik i-ubuntu-mapnik'
 #echo "# apt-get update"
 #echo "# apt-get install sudo"
 #echo "# adduser fred"
 #echo "# adduser fred sudo"
+#echo "# su fred"
 #echo "# cd /home/fred"
 #echo "# chown fred:fred ."
 #echo "# chown -R fred:fred Documents"
-#echo "# su fred"
-echo "# cd ~/Documents/install/source/osm"
-echo "# ./installOSMMapnikUbuntuDockerPaquet3.sh"
+#echo "# sudo chown -R fred:fred ."
+#echo "# cd ~/Documents/install/source/environnementTravail"
+#echo "# ./installAll.sh"
+echo "./dockerRun1.sh"
+echo "#"
+echo "# Puis à l'interieur"
+echo "~/Documents/install/source/osm/dockerInside1.sh"
+echo "zsh"
+echo "exit"
+echo "exit"
+echo "#"
+echo "# Sauvegarde du container"
+echo "docker commit c-ubuntu-mapnik i-ubuntu-mapnik-2"
+echo "#"
+echo "# Autres utilisations après les installations"
+#echo '# docker run -ti -p 9001:9001 -p 8000:80 -v $(readlink --canonicalize ./docker-mapnik/resources):/etc/tilestache/resources -v $(readlink --canonicalize ..):/home/fred/Documents/install/source --name c-ubuntu-mapnik i-ubuntu-mapnik'
+echo "./dockerRun2.sh"
+echo "cd ~/Documents/install/source/openstreetmap-carto-vector-tiles"
+echo "kosmtik serve --host 172.17.0.2 --port 8000 project.mml"

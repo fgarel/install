@@ -58,6 +58,20 @@ echo "# Installation 1 : les polices ms"
 echo "#"
 echo 'mkdir ~/.local/share/fonts/msfonts'
       mkdir ~/.local/share/fonts/msfonts
+echo "#"
+echo "# Attention, l'installation demande l'acceptation de la licence..."
+echo "# https://askubuntu.com/questions/16225/how-can-i-accept-the-microsoft-eula-agreement-for-ttf-mscorefonts-installer"
+echo "sudo apt-get install -y sudo"
+      sudo apt-get install -y sudo
+echo "sudo apt-get install -y apt-transport-https"
+      sudo apt-get install -y apt-transport-https
+echo "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections"
+      echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
+echo "sudo apt-get install -y ttf-mscorefonts-installer"
+      sudo apt-get install -y ttf-mscorefonts-installer
+echo "#"
+echo "#"
+echo "#"
 echo "sudo aptitude install -y ttf-mscorefonts-installer"
       sudo aptitude install -y ttf-mscorefonts-installer
 echo "sudo apt-get install -y ttf-mscorefonts-installer"
@@ -285,8 +299,8 @@ echo "sudo aptitude install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts
       sudo aptitude install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
 echo "sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
       sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
-echo "sudo apt-get install -y fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
-      sudo apt-get install -y fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
+echo "sudo apt-get install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
+      sudo apt-get install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
 echo "sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
       sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
 echo ""

@@ -211,6 +211,13 @@ psql -h 172.17.0.1 -d osm -U osmuser
 
 ### Installation du container
 
+Si besoin, on supprime tout, et on part d'une feuille blanche.
+
+Attention, cette commande supprime tous les containers et toutes les images...
+```
+./dockerRaz.sh
+```
+
 Il faut donc commencer par le script pour créer l'image
 
 ```
@@ -231,6 +238,7 @@ docker run -ti \
            --name c-ubuntu-mapnik \
            i-ubuntu-mapnik
 ```
+
 Cette ligne de commande est dans le script
 ```
 ./dockerRun1.sh
@@ -244,7 +252,7 @@ cd ~/Documents/install/source/environnementTravail/
 ./installFonts.sh
 zsh
 cd ~/Documents/install/source/osm
-./installOSMMapnikUbuntuDockerPaquet3.sh
+./installOSMCartoCSS2.sh
 ## cd ~/Documents/install/source/openstreetmap-carto-vector-tiles/scripts
 ## ./get-shapefile.py --no-shape
 ```
@@ -252,14 +260,16 @@ cd ~/Documents/install/source/osm
 Cette ensemble de commande est dans le script
 ```
 ./Documents/install/source/osm/dockerInside1.sh
+zsh
+exit
+exit
 ```
-
-
 
 Une fois que l'installation est finie à l'intérieur du container, nous allons sortir de ce container,
 puis créer une seconde image à partir de ce container
 ```
 docker commit c-ubuntu-mapnik i-ubuntu-mapnik-2
+docker rm c-ubuntu-mapnik
 ```
 
 Enfin, nous pouvons maintenant utiliser cette seconde image pour travailler
@@ -278,6 +288,11 @@ docker run -ti \
            /bin/zsh
 ```
 
+Cette ligne de commande est dans le script
+```
+./dockerRun2.sh
+```
+
 Vérification que, depuis le container, nous soyons capable d'interroger la base de données hébergée sur la machine hôte
 ```
 psql -h 172.17.0.1 -d osm -U osmuser
@@ -287,36 +302,14 @@ A l'interieur du container, nous allons lancer kosmtik pour qu'il serve le proje
 Cependant, nous devons modifier un peu ce fichier project.mml
 Modification du fichier project.mml de facon a ce qu'il pointe vers la base de données
 
-```
-cd ~/Documents/install/source/openstreetmap-carto-vector-tiles
-vi project.mml
+Nota : cette modification a déjà ete réalisée dans installOSMCartoCSS2.sh
 
-```
-Il faut remplacer :
-```
-  osm2pgsql: &osm2pgsql
-    type: "postgis"
-    dbname: "gis"
-    key_field: ""
-    geometry_field: "way"
-```
-par :
-```
-  osm2pgsql: &osm2pgsql
-    type: "postgis"
-    host: 172.17.0.1
-    dbname: "osm"
-    user: "www-data"
-    password: "www-data"
-    key_field: ""
-    geometry_field: "way"
-```
 
-On peut maintenant lancer kosmtik pour verifier que ca marche
+On peut maintenant lancer kosmtik pour avoir notre serveur de tuile qui marche
 
 ```
 cd ~/Documents/install/source/openstreetmap-carto-vector-tiles
-node_modules/.bin/kosmtik serve --host 172.17.0.2 --port 8000 project.mml
+kosmtik serve --host 172.17.0.2 --port 8000 project.mml
 ```
 
 Sur le poste client (host), on peut lancer la visualisation de la carte

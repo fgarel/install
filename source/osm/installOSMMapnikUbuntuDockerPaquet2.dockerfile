@@ -66,7 +66,8 @@ RUN apt-get install -y --no-install-recommends \
 COPY installOSMMapnikUbuntuDockerPaquet3.sh /usr/bin/
 COPY installOSMUbuntu.sh /usr/bin/
 COPY installOSMTools.sh /usr/bin/
-COPY installOSMCartoCSS.sh /usr/bin/
+COPY installOSMCartoCSS1.sh /usr/bin/
+COPY installOSMCartoCSS2.sh /usr/bin/
 COPY installOSMMapnikUbuntuPaquet.sh /usr/bin/
 COPY installOSMPythonMapnikUbuntu.sh /usr/bin/
 #COPY installOSMTirex.sh /usr/bin/

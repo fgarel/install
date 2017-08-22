@@ -16,8 +16,8 @@ echo "#"
 
 echo './installOSMTools.sh'
       ./installOSMTools.sh
-echo './installOSMCartoCSS.sh'
-      ./installOSMCartoCSS.sh
+echo './installOSMCartoCSS1.sh'
+      ./installOSMCartoCSS1.sh
 echo '#./installPostgresqlOsm.sh'
       #./installPostgresqlOsm.sh
 echo './01_base_create.py'

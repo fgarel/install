@@ -24,8 +24,8 @@ echo "./installFonts.sh"
 echo "#"
 echo "cd ~/Documents/install/source/osm"
       cd ~/Documents/install/source/osm
-echo "./installOSMMapnikUbuntuDockerPaquet3.sh"
-      ./installOSMMapnikUbuntuDockerPaquet3.sh
+echo "./installOSMCartoCSS2.sh"
+      ./installOSMCartoCSS2.sh
 echo "#"
 
 echo "cd $OLDPWDFG"
