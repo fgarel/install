@@ -24,6 +24,8 @@ echo "./installFonts.sh"
 echo "#"
 echo "cd ~/Documents/install/source/osm"
       cd ~/Documents/install/source/osm
+echo "./installOSMCartoCSS1.sh"
+      ./installOSMCartoCSS1.sh
 echo "./installOSMCartoCSS2.sh"
       ./installOSMCartoCSS2.sh
 echo "#"

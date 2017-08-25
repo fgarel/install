@@ -168,8 +168,8 @@ echo "#######################################"
 echo "#"
 echo "Construction de l'image"
 echo "#"
-echo "docker build -t i-ubuntu-mapnik docker-mapnik"
-      docker build -t i-ubuntu-mapnik docker-mapnik
+echo "docker build --rm -t i-ubuntu-mapnik docker-mapnik"
+      docker build --rm -t i-ubuntu-mapnik docker-mapnik
 echo "#"
 #echo "# on revient dans le repertoire initial"
 #echo "cd .."

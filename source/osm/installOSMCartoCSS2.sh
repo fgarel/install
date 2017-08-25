@@ -125,6 +125,12 @@ echo "#"
 echo "sudo apt-get install -y python-yaml"
       sudo apt-get install -y python-yaml
 echo "#"
+echo "# L'utilitaire shapeindex, "
+echo "# utilisé pour créer des index lors du telechargement des données mondiales,"
+echo "# est dans le paquet mapnik-utils"
+echo "sudo apt-get install -y mapnik-utils"
+      sudo apt-get install -y mapnik-utils
+echo "#"
 echo "# Modification du Makefile"
 echo "	#PGOPTIONS='--client-min-messages=error' psql -d gis -f add-indexes.sql >/dev/null || true"
 echo "	PGOPTIONS='--client-min-messages=error' psql -h 172.17.0.1 -U www-data -d osm -f add-indexes.sql >/dev/null || true"
@@ -156,8 +162,13 @@ echo "# "
 #      ./get-shapefiles.sh
 echo "cd scripts"
       cd scripts
-echo "./get-shapefiles.py --no-shape"
-      ./get-shapefiles.py --no-shape
+echo "# Si on a installé mapnik-utils (utilitaire shapeindex ),"
+echo "# alors, on peut faire l'indexation au moment du telechargement"
+echo "./get-shapefiles.py"
+      ./get-shapefiles.py
+#echo "# Dans le cas contraire, on telecharge sans indexation"
+#echo "./get-shapefiles.py --no-shape"
+#      ./get-shapefiles.py --no-shape
 echo "cd .."
       cd ..
 echo "#"
@@ -204,23 +215,39 @@ echo "#"
 #      cd ../openstreetmap-carto-vector-tiles
 ####echo "sudo npm -g install carto"
 ####      sudo npm -g install carto
-echo "npm install carto"
-      npm install carto
+echo "make install-node-modules"
+      make install-node-modules
+echo "#"
 #echo "#"
 #echo "sudo npm -g install mapnik"
 #      sudo npm -g install mapnik
-#echo "npm install mapnik"
-#      npm install mapnik
+echo "npm install mapnik"
+      npm install mapnik
 echo "sudo npm -g install kosmtik"
       sudo npm -g install kosmtik
 #echo "npm install kosmtik"
 #      npm install kosmtik
 #echo "sudo npm -g install tessera"
 #      sudo npm -g install tessera
+echo "npm install @mapbox/tilejson"
+      npm install @mapbox/tilejson
+echo "npm install @mapbox/tilelive-vector"
+      npm install @mapbox/tilelive-vector
+#echo "npm install carto"
+#      npm install carto
 ###echo "#"
 ####echo "# https://github.com/mojodna/tessera"
 ####echo "sudo npm -g install tessera"
 ####      sudo npm -g install tessera
+echo "#"
+echo "# Ajout des modules python"
+echo "sudo -H pip2 install --upgrade pip"
+      sudo -H pip2 install --upgrade pip
+echo "sudo -H pip2 install colormath"
+      sudo -H pip2 install colormath
+echo "sudo -H pip2 install lxml"
+      sudo -H pip2 install lxml
+echo "#"
 echo "#"
 echo "# Modification du fichier project.mml"
 echo "#"
@@ -259,12 +286,6 @@ echo "sed -i -E -e '/  dbname: \"osm\"/ a \ \ \ \ user: \"www-data\"' ../openstr
 echo "sed -i -E -e '/  user: \"www-data\"/ a \ \ \ \ password: \"www-data\"' ../openstreetmap-carto-vector-tiles/project.mml"
       sed -i -E -e '/  user: \"www-data\"/ a \ \ \ \ password: \"www-data\"' ../openstreetmap-carto-vector-tiles/project.mml
 echo "#"
-echo "# Autre modification à faire dans le fichier project.mml"
-echo "#"
-echo "# Pour le moment, on utilise le projet avec kosmtik, sans tessera"
-echo "#"
-echo "sed -i -E -e 's/^source: /#source: /g' ../openstreetmap-carto-vector-tiles/project.mml"
-      sed -i -E -e 's/^source: /#source: /g' ../openstreetmap-carto-vector-tiles/project.mml
 echo "#"
 echo "#"
 echo "# Enfin, le make !"
@@ -275,17 +296,34 @@ echo "#"
 echo "make"
       make
 echo "#"
-#echo "sudo make install"
-#      sudo make install
+echo "make postgresql-fix-geometry"
+      make postgresql-fix-geometry
+echo "#"
+echo "make kosmtik"
+      make kosmtik
+echo "#"
+echo "#----------------------"
+echo "# Pour lancer tessera"
+echo "# make tessera"
+      # make tessera
+echo "# Après le lancment de tessera, sur le client,"
+echo "# http://172.17.0.2:8080/pbfs/live/index.json"
+echo "#"
+echo "# Pour lancer kosmtik"
+#echo "# kosmtik serve --host 172.17.0.2 --port 8000 project.mml"
+#      # kosmtik serve --host 172.17.0.2 --port 8000 project.mml
+echo "# ./node_modules/.bin/kosmtik serve --host 172.17.0.2 --port 8000 osm-carto.tm2/project.yml"
+      # ./node_modules/.bin/kosmtik serve --host 172.17.0.2 --port 8000 osm-carto.tm2/project.yml
+echo "#----------------------"
 echo "#"
 echo "# Après le make, nous retournons effectuer "
 echo "# une autre modification dans le fichier project.mml"
+echo "# Pour l'usage orienté kosmtik"
 echo "#"
 echo "# Pour le moment, on utilise le projet avec kosmtik, sans tessera"
 echo "#"
 echo "sed -i -E -e 's/^source: /#source: /g' ../openstreetmap-carto-vector-tiles/project.mml"
       sed -i -E -e 's/^source: /#source: /g' ../openstreetmap-carto-vector-tiles/project.mml
-echo "#"
 echo "#"
 echo "cd $OLDPWDFG"
       cd $OLDPWDFG

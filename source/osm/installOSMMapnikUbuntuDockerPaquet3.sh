@@ -18,8 +18,8 @@ echo "#----------------------"
 
 echo "installOSMTools.sh"
       installOSMTools.sh
-echo "installOSMCartoCSS1.sh"
-      installOSMCartoCSS1.sh
+#echo "installOSMCartoCSS1.sh"
+#      installOSMCartoCSS1.sh
 echo "# installOSMMapnikUbuntuPaquet.sh"
       # installOSMMapnikUbuntuPaquet.sh
 echo "# installOSMPythonMapnikUbuntu.sh"
