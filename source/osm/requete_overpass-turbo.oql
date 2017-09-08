@@ -1,0 +1,614 @@
+/*
+This example shows how the data can be styled.
+Here, some common amenities are displayed in 
+different colors.
+
+Read more: http://wiki.openstreetmap.org/wiki/Overpass_turbo/MapCSS
+*/
+[out:json];
+
+(
+  // DEBUG : Toutes les voies
+  way
+    [highway]
+    ({{bbox}});
+  
+  // Piste cyclable T1
+  way
+    [highway=cycleway]
+    [oneway=yes]
+    ({{bbox}});
+ 
+  way
+    [highway]
+    [cycleway=track]
+    ({{bbox}});
+  
+  // Piste cyclable T2
+  way
+    [highway=cycleway]
+    [oneway=no]
+    ({{bbox}});
+ 
+  way
+    [highway]
+    [cycleway=track]
+    ({{bbox}});
+    
+  // Piste cyclable T3
+  way
+    [highway=cycleway]
+    [oneway=no]
+    ({{bbox}});
+ 
+  way
+    [highway]
+    [oneway=yes]
+    ['cycleway:track'=track]
+    ['oneway:bicycle'=no]
+    ({{bbox}});
+  
+  
+  // Bande cyclable L1a
+  way
+    [highway]
+    [cycleway=lane]
+    ({{bbox}});
+ 
+  way
+    [highway]
+    ['cycleway:left'=lane]
+    ['cycleway:right'=lane]
+    ({{bbox}});  
+  
+  way
+    [highway]
+    ['cycleway:both'=lane]
+    ({{bbox}});  
+  
+  // Bande cyclable L1b
+  way
+    [highway]
+    [cycleway=lane]
+    ({{bbox}});
+ 
+  way
+    [highway]
+    ['cycleway:right'=lane]
+    ({{bbox}});  
+ 
+  // Bande cyclable L2
+  way
+    [highway]
+    ['cycleway:right'=lane]
+    ({{bbox}});  
+
+  // Bande cyclable L3
+  way
+    [highway]
+    [cycleway=lane]
+    [lanes=1]
+    [oneway=no]
+    ({{bbox}});
+  
+  // Bande cyclable sur route a sens unique M1
+  way
+    [highway]
+    [oneway=yes]
+    [cycleway=lane]
+    ['oneway:bicycle'=no]
+    ({{bbox}});
+  
+  way
+    [highway]
+    [oneway=yes]
+    ['cycleway:left'=opposite_lane]
+    ['cycleway:right'=lane]
+    ({{bbox}});
+  
+  // Bande cyclable sur route a sens unique M2a
+  way
+    [highway]
+    [oneway=yes]
+    ['cycleway:right'=lane]
+    ({{bbox}});
+  
+  way
+    [highway]
+    [oneway=yes]
+    ['cycleway'=lane]
+    ({{bbox}});
+  
+  
+  // Bande cyclable sur route a sens unique M2b
+  way
+    [highway]
+    [oneway=yes]
+    ['cycleway:left'=lane]
+    ({{bbox}});
+  
+  way
+    [highway]
+    [oneway=yes]
+    ['cycleway'=lane]
+    ({{bbox}});  
+  
+  // Bande cyclable sur route a sens unique M2c
+  way
+    [highway]
+    [oneway=yes]
+    [lanes=2]
+    [cycleway=lane]
+    ({{bbox}});
+  
+  // Bande cyclable sur route a sens unique M2d
+  way
+    [highway]
+    [oneway=yes]
+    ['cycleway:left'=lane]
+    ['oneway:bicycle'=no]
+    ({{bbox}});
+  
+  // Bande cyclable sur route a sens unique M3a
+  way
+    [highway]
+    [oneway=yes]
+    ['oneway:bicycle'=no]
+    ['cycleway:left'=opposite_lane]
+    ({{bbox}});
+
+  way
+    [highway]
+    [oneway=yes]
+    ['oneway:bicycle'=no]
+    ['cycleway'=opposite_lane]
+    ({{bbox}});
+  
+  // Bande cyclable sur route a sens unique M3b
+  way
+    [highway]
+    [oneway=yes]
+    ['oneway:bicycle'=no]
+    ['cycleway:right'=opposite_lane]
+    ({{bbox}});
+  
+  way
+    [highway]
+    [oneway=yes]
+    ['oneway:bicycle'=no]
+    ['cycleway'=opposite_lane]
+    ({{bbox}});
+  
+  // Bande cyclable sur route a sens unique M4
+  way
+    [highway]
+    [oneway=yes]
+    ['cycleway:right'=lane]
+    ({{bbox}});
+  
+  way
+    [highway]
+    [cycleway=lane]
+    ({{bbox}});
+  
+  // Bande cyclable sur route a sens unique M5
+  way
+    [highway]
+    [oneway=yes]
+    ['cycleway:right'=lane]
+    ({{bbox}});
+  //way
+  //  [highway]
+  //  [oneway=yes]
+  //  ({{bbox}});
+  way
+    [highway]
+    ['cycleway:right'=lane]
+    ({{bbox}});  
+  
+  // Cas particulier S1
+  way
+    [highway]
+    [oneway=yes]
+    ['oneway:bicycle'=no]
+    ({{bbox}});
+
+  way
+    [highway]
+    [oneway=yes]
+    [cycleway=opposite]
+    ({{bbox}});
+  
+  // Cas particulier S2
+  way
+    [highway]
+    ['cycleway:right'=lane]
+    ['bicycle:backward'=use_sidepath]
+    ({{bbox}});
+
+  way
+    [highway]
+    ['cycleway:left'=track]
+    ['cycleway:right'=lane]
+    ({{bbox}});
+  
+  // Cas particulier S3
+  way
+    [highway]
+    [cycleway=track]
+    [segregated=yes]
+    ({{bbox}});
+
+  way
+    [highway]
+    [bicycle=use_sidepath]
+    ({{bbox}});
+
+  way
+    [highway=cycleway]
+    [oneway=yes]
+    ({{bbox}});
+  
+  way
+    [highway=cycleway]
+    [oneway=yes]
+    [foot=designated]
+    [segregated=yes]
+    ({{bbox}});
+
+  // Cas particulier S4
+  way
+    [highway]
+    [bicycle=use_sidepath]
+    ({{bbox}});
+
+  way
+    [highway=cycleway]
+    [oneway=yes]
+    [foot=designated]
+    [segregated=yes]
+    ({{bbox}});
+
+  way
+    [highway]
+    [cycleway=track]
+    [segregated=yes]
+    [foot=designated]
+    ({{bbox}});
+
+  way
+    [highway=cycleway]
+    [oneway=yes]
+    ({{bbox}});
+
+  // Couloir de bus ouvert aux vélos B1
+  way
+    [highway]
+    [lanes=3]
+    ['lanes:forward'=2]
+    // ['access:lanes'=*no|yes|yes|no|no]
+    // ['bicycle:lanes'=*designated|yes|yes|designated|yes]
+    // ['bus:lanes'=*no|yes|yes|no|designated]
+    // ['taxi:lanes'=*no|yes|yes|no|designated]
+    ({{bbox}});
+  
+  // Couloir de bus ouvert aux vélos B2
+  way
+    [highway]
+    [lanes=3]
+    ['lanes:forward'=2]
+    ['lanes:bus:forward'=1]
+    ['busway:right'=lane]
+    [cycleway=lane]
+    ({{bbox}});
+
+  // Couloir de bus ouvert aux vélos B3
+  way
+    [highway=cycleway]
+    ['busway:right'=lane]
+    ['cycleway:left'=lane]
+    ['cycleway:right'=share_busway]
+    ({{bbox}});
+
+  // Couloir de bus ouvert aux vélos B4
+  way
+    [highway=service]
+    [service=bus]
+    [oneway=yes]    
+    ['cycleway:right'=share_busway]
+    ({{bbox}});
+
+  way
+    [highway]
+    ['oneway:bus'=yes]
+    ['oneway:bicycle'=yes]
+    ({{bbox}});
+  
+  // Couloir de bus ouvert aux vélos B5
+  way
+    [highway]
+    ['lanes:bus:forward'=1]
+    ['busway:right'=lane]
+    ['cycleway:right'=share_busway]
+    ({{bbox}});
+
+  // Couloir de bus ouvert aux vélos B6
+  way
+    [highway]
+    ['cycleway:left'=share_busway]
+    [busway=opposite_lane]
+    [oneway=yes]   
+    ['oneway:bicycle'=no]
+    ({{bbox}});
+
+  way
+    [highway]
+    ['cycleway:left'=share_busway]
+    [busway=lane]
+    [oneway=yes]
+    ['oneway:bus'=no]
+    ['oneway:bicycle'=no]
+    ({{bbox}});
+
+  // Restriction d'acces
+  
+  way
+    [highway=pedestrian]
+    ({{bbox}});
+  
+  way
+    [highway]
+    [bicycle=yes]
+    ({{bbox}});
+  
+  way
+    [cycleway]
+    [bicycle=designated]
+    ({{bbox}});
+  
+  way
+    [highway]
+    [bicycle=permissive]
+    ({{bbox}});
+  
+  way
+    [highway]
+    [bicycle=destination]
+    ({{bbox}});
+);
+out body;
+>;
+out skel qt;
+
+{{style:
+
+/* this is the MapCSS stylesheet */
+
+/* Piste cyclable T1 */
+way [highway=cycleway]
+    [oneway=yes]
+{ color:#01C100; fill-color:#01C100; }
+
+/* Piste cyclable T2 */
+way [highway=cycleway]
+    [oneway=no]
+{ color:#01F400; fill-color:#01F400; }
+
+/* Piste cyclable T3 */
+way [highway=cycleway]
+    [oneway=no]
+{ color:#007400; fill-color:#007400; }
+
+/* Bande cyclable L1a */
+way [highway]
+    [cycleway=lane]
+{ color:#B16BF6; fill-color:#B16BF6; }
+
+/* Bande cyclable L1b */
+way [highway]
+    [cycleway=lane]
+{ color:#8B21F4; fill-color:#8B21F4; }
+
+/* Bande cyclable L2 */
+way [highway]
+    [cycleway:right=lane]
+{ color:#6E1AC1; fill-color:#6E1AC1; }
+
+/* Bande cyclable L3 */
+way [highway]
+    [cycleway=lane]
+    [lanes=1]
+    [oneway=no]
+{ color:#431074; fill-color:#431074; }
+
+/* Bande cyclable sur route a sens unique M1 */
+  way
+    [highway]
+    [oneway=yes]
+    [cycleway=lane]
+    [oneway:bicycle=no]
+{ color:#4AB1F6; fill-color:#4AB1F6; }
+
+/* Bande cyclable sur route a sens unique M2a */
+  way
+    [highway]
+    [oneway=yes]
+    [cycleway:right=lane]
+{ color:#235474; fill-color:#235474; }
+
+/* Bande cyclable sur route a sens unique M2b */
+  way
+    [highway]
+    [oneway=yes]
+    [cycleway:left=lane]
+{ color:#0092F4; fill-color:#0092F4; }
+
+/* Bande cyclable sur route a sens unique M2c */
+  way
+    [highway]
+    [oneway=yes]
+    [lanes=2]
+    [cycleway=lane]
+{ color:#0074C1; fill-color:#0074C1; }
+
+/* Bande cyclable sur route a sens unique M2d */
+  way
+    [highway]
+    [oneway=yes]
+    [cycleway:left=lane]
+    [oneway:bicycle=no]
+{ color:#0074C1; fill-color:#0074C1; }
+
+/* Bande cyclable sur route a sens unique M3a */
+  way
+    [highway]
+    [oneway=yes]
+    [oneway:bicycle=no]
+    [cycleway:left=opposite_lane]
+{ color:#95B9F6; fill-color:#95B9F6; }
+
+/* Bande cyclable sur route a sens unique M3b */
+  way
+    [highway]
+    [oneway=yes]
+    [oneway:bicycle=no]
+    [cycleway:right=opposite_lane]
+{ color:#4B8AF4; fill-color:#4B8AF4; }
+
+/* Bande cyclable sur route a sens unique M4 */
+  way
+    [highway]
+    [oneway=yes]
+    [cycleway:right=lane]
+{ color:#3B6DC1; fill-color:#3B6DC1; }
+
+/* Bande cyclable sur route a sens unique M5 */
+  way
+    [highway]
+    [oneway=yes]
+    [cycleway:right=lane]
+{ color:#244274; fill-color:#244274; }
+
+/* Cas particulier S1 */
+  way
+    [highway]
+    [oneway=yes]
+    [oneway:bicycle=no]
+{ color:#567408; fill-color:#567408; }
+
+  way
+    [highway]
+    [oneway=yes]
+    [cycleway=opposite]
+{ color:#567408; fill-color:#567408; }
+
+/* Cas particulier S2 */
+  way
+    [highway]
+    [cycleway:right=lane]
+    [bicycle:backward=use_sidepath]
+{ color:#60742B; fill-color:#60742B; }
+
+/* Cas particulier S3 */
+  way
+    [highway]
+    [cycleway=track]
+    [segregated=yes]
+{ color:#B4F410; fill-color:#B4F410; }
+
+/* Cas particulier S4 */
+  way
+    [highway=cycleway]
+    [oneway=yes]
+    [foot=designated]
+    [segregated=yes]
+{ color:#8FC10D; fill-color:#8FC10D; }
+  
+/* Couloir de bus ouvert aux vélos B1 */
+  way
+    [highway]
+    [lanes=3]
+    [lanes:forward=2]
+{ color:#097441; fill-color:#097441; }
+
+/* Couloir de bus ouvert aux vélos B2 */
+  way
+    [highway]
+    [lanes=3]
+    [lanes:forward=2]
+    [lanes:bus:forward=1]
+    [busway:right=lane]
+    [cycleway=lane]
+{ color:#5DF6AD; fill-color:#5DF6AD; }
+
+/* Couloir de bus ouvert aux vélos B3 */
+  way
+    [highway=cycleway]
+    [busway:right=lane]
+    [cycleway:left=lane]
+    [cycleway:right=share_busway]
+{ color:#2C7452; fill-color:#2C7452; }
+
+/* Couloir de bus ouvert aux vélos B4 */
+  way
+    [highway=service]
+    [service=bus]
+    [oneway=yes]
+    [cycleway:right=share_busway]
+{ color:#13F489; fill-color:#13F489; }
+
+  way
+    [highway]
+    [oneway:bus=yes]
+    [oneway:bicycle=yes]
+{ color:#13F489; fill-color:#13F489; }
+
+/* Couloir de bus ouvert aux vélos B5 */
+  way
+    [highway]
+    [lanes:bus:forward=1]
+    [busway:right=lane]
+    [cycleway:right=share_busway]
+{ color:#0FC16C; fill-color:#0FC16C; }
+
+/* Couloir de bus ouvert aux vélos B6 */
+  way
+    [highway]
+    [cycleway:left=share_busway]
+    [busway=opposite_lane]
+    [oneway=yes]   
+    [oneway:bicycle=no]
+{ color:#85F6C1; fill-color:#85F6C1; }
+
+/* Restriction d'acces */
+  way
+    [highway=pedestrian]
+    [bicycle=yes]
+{ color:#F9D230; fill-color:#F9D230; }
+
+  way
+    [highway=pedestrian]
+{ color:black; fill-color:black; }
+  
+  way
+    [highway]
+    [bicycle=yes]
+{ color:#DAA62A; fill-color:#DAA62A; }
+  
+  way
+    [cycleway]
+    [bicycle=designated]
+{ color:#F1A93A; fill-color:#F1A93A; }
+  
+  way
+    [highway]
+    [bicycle=permissive]
+{ color:#DA7D2A; fill-color:#DA7D2A; }
+  
+  way
+    [highway]
+    [bicycle=destination]
+{ color:#F97130; fill-color:#F97130; }
+
+
+}}

@@ -166,7 +166,7 @@ Pour que ces scripts fonctionnent, il faut que l'utilitaire *osmosis* soit insta
 C'est la version de la distribution qui est utilisé
 
 
-#### osm2postgrsql
+#### osm2postgresql
 
 **TODO** : Réussir à le faire fonctionner ....
 

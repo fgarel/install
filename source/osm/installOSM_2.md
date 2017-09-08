@@ -131,7 +131,7 @@ Après ces installations, il faudra configurer ces outils pour qu'ils fonctionne
 
 ## Installation
 
-Pour simplifier, nous allons faire les installations dans un container DOCKER
+Pour simplifier, nous allons faire les installations dans un container Docker
 
 ### Permettre la communication entre le poste host et le container
 Sur la machine hote, il faut autoriser un container :
@@ -139,6 +139,23 @@ Sur la machine hote, il faut autoriser un container :
  - à acceder au serveur de base de données postgresql
 
 #### Serveur X
+Par defaut, une application graphique ne peut pas être lancée dans un container docker.
+Par exemple, on ne peut pas lancer un navigateur graphique, ou même afficher une simple image.
+
+Pour modifier cette configuration, nous allons tester la création et l'utilisation d'un
+nouveau container dont le but est de démontrer l'affichage déportée d'une application
+graphique depuis un container vers le serveur hôte.
+
+Ce qu'il faut retenir de cette démonstration, c'est que nous allons utiliser les
+arguments supplémentaires dans notre appel à docker :
+```
+-v $XSOCK:$XSOCK \
+-v $XAUTH:$XAUTH \
+-e DISPLAY=$DISPLAY \
+-e XAUTHORITY=$XAUTH
+```
+
+Voici donc la démonstration (POC)
 La doc est ici
 https://stackoverflow.com/questions/16296753/can-you-run-gui-apps-in-a-docker-container
 
@@ -174,10 +191,10 @@ docker run -ti -v $XSOCK:$XSOCK -v $XAUTH:$XAUTH -e DISPLAY=$DISPLAY -e XAUTHORI
 
 
 Quand nous sommes dans le container c-ubuntu-mapnik-2, il faut que nous soyons
-capable de se connecter au serveur de base de données qui est sur la machine host.
+capable de se connecter au serveur de base de données qui est sur la machine hôte.
 
-Sur la machine localhost, qui heberge à la fois :
-- le container docker qui est en train de s'executer
+Sur la machine localhost, qui héberge à la fois :
+- le container docker qui est en train de s'exécuter
 - le serveur de base de données postgresql
 
 Il faut configurer ce serveur de base de données postgresql pour qu'il
@@ -298,11 +315,11 @@ Vérification que, depuis le container, nous soyons capable d'interroger la base
 psql -h 172.17.0.1 -d osm -U osmuser
 ```
 
-A l'interieur du container, nous allons lancer kosmtik pour qu'il serve le project.mml qui est dans le repertoire openstreetmap-carto-vector-tiles
+A l'intérieur du container, nous allons lancer kosmtik pour qu'il serve le project.mml qui est dans le répertoire openstreetmap-carto-vector-tiles
 Cependant, nous devons modifier un peu ce fichier project.mml
-Modification du fichier project.mml de facon a ce qu'il pointe vers la base de données
+Modification du fichier project.mml de façon a ce qu'il pointe vers la base de données
 
-Nota : cette modification a déjà ete réalisée dans installOSMCartoCSS2.sh
+Nota : cette modification a déjà été réalisée dans installOSMCartoCSS2.sh
 
 
 On peut maintenant lancer kosmtik pour avoir notre serveur de tuile qui marche
@@ -323,7 +340,7 @@ http://172.17.0.2:8000/
 
 Il faut que dans le fichier project.mml, la directive "source" soit activée
 
-En lancant tessera dans le container, on a donc maintenant un serveur de tuile
+En lançant tessera dans le container, on a donc maintenant un serveur de tuile
 make tessera
 
 Comment l'utiliser ?
@@ -359,7 +376,7 @@ http://172.17.0.2:8000/openstreetmap-carto-vector-tiles/tile/10/508/363.png
 Sous qgis
 Il faut l'extension "TileLayerPlugin"
 
-Il faut ajouter un fichier .qgis2/TuilesCDALR.tsv qui contient ces installFonts
+Il faut ajouter un fichier .qgis2/TuilesCDALR.tsv qui contient ces configurations
 ```
 #title	credit	serviceUrl	yOriginTop	zmin	zmax	xmin	ymin	xmax	ymax
 OpenStreetMap	© OpenStreetMap contributors	http://tile.openstreetmap.org/{z}/{x}/{y}.png	1	0	19
@@ -374,3 +391,181 @@ External Layer definition repository
 
 usage
 prendre la nouvelle couche "TuilesCDALR"
+
+
+
+## Autre test : tilestache
+
+Ici, le but est de mettre en place un cache entre un serveur de tuile et le client.
+
+### Tilestache en tant que proxy tuile open street map
+
+Voici quelques tuiles accessibles depuis le navigateur :
+```
+http://tile.openstreetmap.org/10/508/363.png
+http://tile.openstreetmap.org/11/1017/727.png
+http://tile.openstreetmap.org/12/2034/1454.png
+http://tile.openstreetmap.org/13/4069/2909.png
+http://tile.openstrretmap.org/14/8139/5818.png
+```
+
+
+Nous allons installer et configurer tilstache pour qu'il fasse office de proxy
+La doc pour configurer est ici :
+```
+http://tilestache.org/doc/
+```
+
+#### tilestache_test : le mode test
+
+Voici un fichier de configuration pour tilestache :
+```
+vi tilestache_test.cfg
+```
+
+```
+{
+  "cache": {
+    "name": "Test",
+    "verbose": false},
+  "layers": {
+    "openstreetmap": {
+      "provider": {
+        "name": "proxy",
+        "url": "http://tile.openstreetmap.org/{Z}/{X}/{Y}.png"}
+    }
+  }
+}
+```
+
+On peut maintenant lancer tilestache avec ce nouveau fichier de configuration :
+```
+tilestache-server -c tilestache_test.cfg -p 8081
+```
+
+Puis on teste cette configuration dans le navigateur
+```
+http://localhost:8081/roads/10/508/363.png
+http://localhost:8081/roads/11/1017/727.png
+http://localhost:8081/roads/12/2034/1454.png
+http://localhost:8081/roads/13/4069/2909.png
+http://localhost:8081/roads/14/8139/5818.png
+```
+
+#### tilestache_disk : un vrai cache
+
+Nous allons maintenant améliorer notre configuration pour avoir une véritable
+cache des tuiles sur notre disque local.
+
+Voici le nouveau fichier de configuration :
+
+```
+vi tilestache_disk.cfg
+```
+
+```
+{
+  "cache": {
+    "name": "Disk",
+    "path": "/tmp/stache",
+    "umask": "0000",
+    "dirs": "portable",
+    "gzip": ["xml", "json"],
+    "verbose": false},
+  "layers": {
+    "openstreetmap": {
+      "provider": {
+        "name": "proxy",
+        "url": "http://tile.openstreetmap.org/{Z}/{X}/{Y}.png"}
+    }
+  }
+}
+```
+
+On execute :
+```
+tilestache-server -c tilestache_disk.cfg -p 8081
+```
+
+Lorsque le client appelle la dalle 14/8139/5818, elle est copiée sur le disque pour une
+utilisation ultérieure.
+
+```
+ls -al /tmp/stache/roads/14/8139/5818.png
+```
+
+Nous avons donc maintenant un serveur proxy de tuile qui est configuré pour "cacher"
+des tuiles openstreetmap.
+
+Nous allons maintenant configurer qgis pour utiliser ce sytème de cache :
+
+Depuis qgis :
+Il faut l'extension "TileLayerPlugin"
+
+Il faut ajouter un fichier .qgis2/TuilesCDALR.tsv qui contient ces configurations
+```
+#title	credit	serviceUrl	yOriginTop	zmin	zmax	xmin	ymin	xmax	ymax
+OpenStreetMap direct	© OpenStreetMap contributors	http://tile.openstreetmap.org/{z}/{x}/{y}.png	1	0	19
+OpenStreetMap via Tilestache	CDALR	http://127.0.0.1:8081/roads/{z}/{x}/{y}.png	1	0	19
+TuilesCDALR container docker	CDALR	http://172.17.0.2:8000/openstreetmap-carto-vector-tiles/tile/{z}/{x}/{y}.png	1	0	19		
+```
+
+Internet / TileLayerPlugin / AddTileLayer
+
+Settings
+External Layer definition repository
+/home/fred/.qgis2
+
+usage
+prendre la nouvelle couche "OpenStreetMap via Tilestache"
+
+### Est il possible d'utiliser tilestache pour cacher des tuiles qui viennent de CeramikServer ?
+
+Vérifions tout d'abord que nous avons bien un serveur de tuiles
+```
+https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17?request=GetCapabilities
+```
+
+Voici l'url pour afficher une tuile dans le navigateur
+```
+https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17/default/epsg:3946/5/13/7
+```
+
+Le nouveau fichier TuilesCDALR.tsv
+```
+#title	credit	serviceUrl	yOriginTop	zmin	zmax	xmin	ymin	xmax	ymax
+OpenStreetMap direct	OpenStreetMap	http://tile.openstreetmap.org/{z}/{x}/{y}.png	1	0	19
+OpenStreetMap via Tilestache	OpenStreetMap	http://127.0.0.1:8081/openstreetmap/{z}/{x}/{y}.png	1	0	19
+TuilesCDALR container docker	CDALR	http://172.17.0.2:8000/openstreetmap-carto-vector-tiles/tile/{z}/{x}/{y}.png	1	0	19
+CeramikServer Ortho 2014 3857 direct	CDA	https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17/default/epsg:3857/{z}/{y}/{x}.png	1	0	19	-1.249	46.00	-0.907059	46.247775
+CeramikServer Ortho 2014 3946 direct	CDA	https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17/default/epsg:3946/{z}/{y}/{x}.png	1	0	19	-138525	5781063	-95109	5820461
+CeramikServer Ortho 2014 via Tilestache	CDA	https://127.0.0.1:8081/ortho_2014/{z}/{y}/{x}.png	1	0	19
+```
+
+Le nouveau fichier tilestache_disk.cfg
+```
+{
+  "cache": {
+    "name": "Disk",
+    "path": "/tmp/stache",
+    "umask": "0000",
+    "dirs": "portable",
+    "gzip": ["xml", "json"],
+    "verbose": false},
+  "layers": {
+    "openstreetmap": {
+      "provider": {
+        "name": "proxy",
+        "url": "http://tile.openstreetmap.org/{Z}/{X}/{Y}.png"}
+    },
+    "ortho_2014": {
+      "provider": {
+        "name": "proxy",
+        "url": "https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17/default/epsg:3946/{Z}/{X}/{Y}.png"}
+    }
+  }
+}
+```
+
+on voit les tuiles : mais on a un problème de coordonnées :
+le plugin ne gere que des tuiles en 3857 et dont le niveau 0 est mondial..
