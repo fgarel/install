@@ -68,8 +68,8 @@ echo "#"
 #      cd ..
 #echo "pwd"
 #      pwd
-#echo "rm -rf openstreetmap-carto-vector-tiles"
-#      rm -rf openstreetmap-carto-vector-tiles
+echo "rm -rf openstreetmap-carto-vector-tiles"
+      rm -rf openstreetmap-carto-vector-tiles
 echo "git clone https://github.com/geofabrik/openstreetmap-carto-vector-tiles"
       git clone https://github.com/geofabrik/openstreetmap-carto-vector-tiles
 echo "git fetch https://github.com/geofabrik/openstreetmap-carto-vector-tiles"
