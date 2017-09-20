@@ -72,10 +72,12 @@ echo "rm -rf openstreetmap-carto-vector-tiles"
       rm -rf openstreetmap-carto-vector-tiles
 echo "git clone https://github.com/geofabrik/openstreetmap-carto-vector-tiles"
       git clone https://github.com/geofabrik/openstreetmap-carto-vector-tiles
-echo "git fetch https://github.com/geofabrik/openstreetmap-carto-vector-tiles"
-      git fetch https://github.com/geofabrik/openstreetmap-carto-vector-tiles
-#echo "cd openstreetmap-carto-vector-tiles"
-#      cd openstreetmap-carto-vector-tiles
+#echo "git fetch https://github.com/geofabrik/openstreetmap-carto-vector-tiles"
+#      git fetch https://github.com/geofabrik/openstreetmap-carto-vector-tiles
+echo "cd openstreetmap-carto-vector-tiles"
+      cd openstreetmap-carto-vector-tiles
+echo "git fetch origin master"
+      git fetch origin master
 #echo "pwd"
 #      pwd
 echo "#"

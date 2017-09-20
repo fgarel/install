@@ -349,6 +349,13 @@ Acces a un page web
 http://172.17.0.2:8080/pbfs/live/index.json
 Acces a une dalle
 http://172.17.0.2:8080/pbfs/live/10/508/363.pbf
+http://172.17.0.2:8080/pbfs/live/11/1017/727.pbf
+http://172.17.0.2:8080/pbfs/live/12/2034/1454.pbf
+http://172.17.0.2:8080/pbfs/live/13/4069/2909.pbf
+http://172.17.0.2:8080/pbfs/live/14/8139/5818.pbf
+http://172.17.0.2:8080/pbfs/live/15/16278/11636.pbf
+http://172.17.0.2:8080/pbfs/live/16/32556/23272.pbf
+
 
 Avec qgis, il faut l'extension "Vector Tiles Reader"
 https://github.com/geometalab/Vector-Tiles-Reader-QGIS-Plugin

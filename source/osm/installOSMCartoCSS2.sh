@@ -78,6 +78,8 @@ echo "cd openstreetmap-carto-vector-tiles"
       cd openstreetmap-carto-vector-tiles
 echo "pwd"
       pwd
+echo "git fetch origin master"
+      git fetch origin master
 echo "#"
 echo "# Apres avoir cloner le projet, il faut faire quelques complements :"
 echo "#   - installer des fontes"
