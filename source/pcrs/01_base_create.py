@@ -32,7 +32,7 @@ def main():
     for extension in listext:
         #print('extension = {}'.format(extension))
         ####myconnection.create_extension('geogig', extension)
-        myconnection.create_extension('pcrs', extension)
+        myconnection.create_extension('a_pcrs', extension)
 
     # Creation des schemas
     #### listschema = ['pcrs']
