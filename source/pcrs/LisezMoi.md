@@ -16,7 +16,8 @@ Creation d'une version initiale d'une case à partir du rtge
 01_base_create.py
 sql/01_create_table_pcrs_v20_20170921.sql
 02_generate_caseFolio.py
-03_init_from_rtge.sql
+03_init_from_rtge.sh
+sql/03_init_from_rtge.sql
 
 ## Pull
 
@@ -44,3 +45,6 @@ sql/01_create_table_pcrs_v20_20170921.sql
 ### Comptage des opérations d'ecriture
 
 ### Comptage des opérations de lecture
+
+
+ sandman2ctl postgresql+psycopg2://frederic.garel:M....@172.17.150.6/sig

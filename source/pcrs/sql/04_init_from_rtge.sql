@@ -997,7 +997,7 @@ where st_setsrid(a_rtge."tmp_ligne".shape,3946) && a_pcrs."EmpriseEchangePCRS".g
     or a_rtge."tmp_ligne".layer = 'EV_L_NATVEG'
     or a_rtge."tmp_ligne".layer = 'FDP_L_HAIE'
     or a_rtge."tmp_ligne".layer = 'FDP_L_CLOT')
-  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA-46-ppppp-qqqqq-AA-B-CC';
+  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA_PCRS_EXPORT';
 
 
 
@@ -1067,7 +1067,7 @@ from
      a_pcrs."EmpriseEchangePCRS"
 where st_setsrid(a_voirie."vo_emprise".shape,3946) && a_pcrs."EmpriseEchangePCRS".geometrie
   and st_intersects(st_setsrid(a_voirie."vo_emprise".shape,3946), a_pcrs."EmpriseEchangePCRS".geometrie)
-  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA-46-ppppp-qqqqq-AA-B-CC'
+  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA_PCRS_EXPORT'
 )
 union
 (
@@ -1088,7 +1088,7 @@ from
      a_pcrs."EmpriseEchangePCRS"
 where st_setsrid(c_cadastre."bati".shape,3946) && a_pcrs."EmpriseEchangePCRS".geometrie
   and st_intersects(st_setsrid(c_cadastre."bati".shape,3946), a_pcrs."EmpriseEchangePCRS".geometrie)
-  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA-46-ppppp-qqqqq-AA-B-CC'
+  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA_PCRS_EXPORT'
 )
 union
 (
@@ -1109,7 +1109,7 @@ from
      a_pcrs."EmpriseEchangePCRS"
 where st_setsrid(c_cadastre."parcelle".shape,3946) && a_pcrs."EmpriseEchangePCRS".geometrie
   and st_intersects(st_setsrid(c_cadastre."parcelle".shape,3946), a_pcrs."EmpriseEchangePCRS".geometrie)
-  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA-46-ppppp-qqqqq-AA-B-CC'
+  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA_PCRS_EXPORT'
 )
 union
 (
@@ -1159,7 +1159,7 @@ where st_setsrid(a_rtge."tmp_ligne".shape,3946) && a_pcrs."EmpriseEchangePCRS".g
     or a_rtge."tmp_ligne".layer = 'FDP_L_BATI'
     or a_rtge."tmp_ligne".layer = 'CAD_L_PARCELLE'
     or a_rtge."tmp_ligne".layer = 'FDP_L_PARCELLE')
-  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA-46-ppppp-qqqqq-AA-B-CC'
+  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA_PCRS_EXPORT'
   --order by a_rtge."tmp_ligne".layer
 );
 
@@ -1231,7 +1231,7 @@ where st_setsrid(a_rtge."tmp_ligne".shape,3946) && a_pcrs."EmpriseEchangePCRS".g
     or a_rtge."tmp_ligne".layer = 'VOIRIE_LIMITE_REVETEMENT'
     or a_rtge."tmp_ligne".layer = 'VORIE_BORDURE'
     or a_rtge."tmp_ligne".layer = 'VORIE_CC1')
-  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA-46-ppppp-qqqqq-AA-B-CC';
+  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA_PCRS_EXPORT';
 
 
 -- ---------------------------------
@@ -1298,7 +1298,7 @@ where st_setsrid(a_rtge."tmp_ligne".shape,3946) && a_pcrs."EmpriseEchangePCRS".g
     --or a_rtge."tmp_ligne".layer = 'FDP_L_MURPLEIN'
     )
   and st_length(st_intersection(st_setsrid(a_rtge."tmp_ligne".shape,3946), a_pcrs."EmpriseEchangePCRS".geometrie)) >= 0.21
-  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA-46-ppppp-qqqqq-AA-B-CC'
+  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA_PCRS_EXPORT'
 )
 union
 (
@@ -1325,7 +1325,7 @@ where st_setsrid(a_rtge."tmp_ligne".shape,3946) && a_pcrs."EmpriseEchangePCRS".g
     --or a_rtge."tmp_ligne".layer = 'FDP_L_MURPLEIN'
     )
   and st_length(st_intersection(st_setsrid(a_rtge."tmp_ligne".shape,3946), a_pcrs."EmpriseEchangePCRS".geometrie)) >= 0.21
-  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA-46-ppppp-qqqqq-AA-B-CC'
+  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA_PCRS_EXPORT'
 );
 
 
@@ -1391,7 +1391,7 @@ where st_setsrid(a_rtge."tmp_ligne".shape,3946) && a_pcrs."EmpriseEchangePCRS".g
   and st_intersects(st_setsrid(a_rtge."tmp_ligne".shape,3946), a_pcrs."EmpriseEchangePCRS".geometrie)
   and (a_rtge."tmp_ligne".layer = 'FDP_L_MURPLEIN')
   and st_length(st_intersection(st_setsrid(a_rtge."tmp_ligne".shape,3946), a_pcrs."EmpriseEchangePCRS".geometrie)) < 0.21
-  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA-46-ppppp-qqqqq-AA-B-CC';
+  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA_PCRS_EXPORT';
 
 
 
@@ -1468,7 +1468,7 @@ where st_setsrid(a_rtge."tmp_ligne".shape,3946) && a_pcrs."EmpriseEchangePCRS".g
     or a_rtge."tmp_ligne".layer = 'FDP_L_MURBAHUT'
     )
   and st_length(st_intersection(st_setsrid(a_rtge."tmp_ligne".shape,3946), a_pcrs."EmpriseEchangePCRS".geometrie)) >= 0.21
-  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA-46-ppppp-qqqqq-AA-B-CC'
+  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA_PCRS_EXPORT'
 )
 union
 (
@@ -1499,5 +1499,5 @@ where st_setsrid(a_rtge."tmp_ligne".shape,3946) && a_pcrs."EmpriseEchangePCRS".g
     or a_rtge."tmp_ligne".layer = 'FDP_L_MURBAHUT'
     )
   and st_length(st_intersection(st_setsrid(a_rtge."tmp_ligne".shape,3946), a_pcrs."EmpriseEchangePCRS".geometrie)) >= 0.21
-  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA-46-ppppp-qqqqq-AA-B-CC'
+  and a_pcrs."EmpriseEchangePCRS".complement = 'CDA_PCRS_EXPORT'
 );

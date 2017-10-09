@@ -2262,7 +2262,8 @@ CREATE TABLE a_pcrs."ObjetGeneriquePCRS"
   "identification" character varying REFERENCES a_pcrs."CategorieObjetPCRS17Type" ("nomClasse"),
   CONSTRAINT "ObjetGeneriquePCRS_pkey" PRIMARY KEY ("idObjet"),
   CONSTRAINT enforce_dims_geometrie CHECK (st_ndims("geometrie") = 2),
-  CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'GEOMETRY'::text OR "geometrie" IS NULL),
+  --CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'GEOMETRY'::text OR "geometrie" IS NULL),
+  CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'GEOMETRY'::text OR geometrytype("geometrie") = 'MULTIPOLYGON'::text OR geometrytype("geometrie") = 'POLYGON'::text  OR geometrytype("geometrie") = 'MULTILINESTRING'::text OR geometrytype("geometrie") = 'LINESTRING'::text  OR geometrytype("geometrie") = 'MULTIPOINT'::text OR geometrytype("geometrie") = 'POINT'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
 INHERITS (a_pcrs."ObjetVecteurPCRS")
