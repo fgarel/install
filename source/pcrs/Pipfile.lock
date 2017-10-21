@@ -1,0 +1,81 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "2037418a407d368956fe4baa80ac5081b71c893ae58710b05ea5fc766dcf57ec"
+        },
+        "host-environment-markers": {
+            "implementation_name": "cpython",
+            "implementation_version": "3.5.3",
+            "os_name": "posix",
+            "platform_machine": "x86_64",
+            "platform_python_implementation": "CPython",
+            "platform_release": "4.10.0-37-generic",
+            "platform_system": "Linux",
+            "platform_version": "#41-Ubuntu SMP Fri Oct 6 20:20:37 UTC 2017",
+            "python_full_version": "3.5.3",
+            "python_version": "3.5",
+            "sys_platform": "linux"
+        },
+        "pipfile-spec": 6,
+        "requires": {},
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.python.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "click": {
+            "hashes": [
+                "sha256:29f99fc6125fbc931b758dc053b3114e55c77a6e4c6c3a2674a2dc986016381d",
+                "sha256:f15516df478d5a56180fbf80e68f206010e6d160fc39fa508b65e035fd75130b"
+            ],
+            "version": "==6.7"
+        },
+        "click-plugins": {
+            "hashes": [
+                "sha256:7acc5e7eedd2dfd719714e8d53ae99030b5357aed661d0b06dacd6c2d583d7c5"
+            ],
+            "version": "==1.0.3"
+        },
+        "cligj": {
+            "hashes": [
+                "sha256:7588487f1afcefbe65ae477cdbd4fca1828a3000fc3332e165dacb1dcb005f8a",
+                "sha256:2efdeb0ae64f2c2198ce7540ae0a5d67187d5fe9d79529ad8f4dbb8909210009",
+                "sha256:12ad07994f5c1173b06087ffbaacec52f9ebe4687926e5aacfc22b6b0c8b3f54"
+            ],
+            "version": "==0.4.0"
+        },
+        "fiona": {
+            "hashes": [
+                "sha256:29262bc8d1d55eb93dd640eb5d98abf76d55a9bdce59574e4e083c77b6034528",
+                "sha256:75d6d4290f215fdf9b4e298c57c3f6bddfe08a4304807fe2b8fa2b54efbef374",
+                "sha256:4e5a89263d36fe7e5ca4e127aff233d68d6d5a97d73788c53c5b1f0200dd7ddd",
+                "sha256:4b45e4c8d9c2af443052aa30c514dd4a48dff9fcf82a942a0c0da6330c1c1ef3",
+                "sha256:a90394cf2340586ead26d19aa9d11d74f91202e4daf7058f605f761ba70927e6",
+                "sha256:8e70ea3e6556ab88f75ee87bb82ad8b8fc4f4ac72d28e345674b97ae73edb3db",
+                "sha256:87da16b430b41bfa808bd681b6e039e8392e6cc53beb9e9d4be6207c3a0f7c77",
+                "sha256:f4e3e7b35b82eaf9e788b699bac09b6be565426d72b36da0a2660d4bcd3cfa9c",
+                "sha256:ff1dca503c0fd6f4013800a0772bf748f08f8e88101485cc65c62c5ec45cdeb8",
+                "sha256:68e8a925b23e3987845c11b0fdd6378fdec4316fe8ba767a935151b6ee1fc607"
+            ],
+            "version": "==1.7.9.post1"
+        },
+        "munch": {
+            "hashes": [
+                "sha256:62fb4fb318e965a464b088e6af52a63e0905a50500b770596a939d3855e7aa15"
+            ],
+            "version": "==2.2.0"
+        },
+        "six": {
+            "hashes": [
+                "sha256:832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb",
+                "sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9"
+            ],
+            "version": "==1.11.0"
+        }
+    },
+    "develop": {}
+}

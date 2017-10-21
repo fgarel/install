@@ -8,12 +8,12 @@
 #-----------------------------------------------
 echo "# 4ème Partie : zsh et antigen"
 echo "###############################################"
-echo "# Installation de nodejs-legacy"
-echo "# pour le prompt"
-echo "sudo aptitude install -y nodejs-legacy"
-      sudo aptitude install -y nodejs-legacy
-echo "sudo apt-get install -y nodejs-legacy"
-      sudo apt-get install -y nodejs-legacy
+#echo "# Installation de nodejs-legacy"
+#echo "# pour le prompt"
+#echo "sudo aptitude install -y nodejs-legacy"
+#      sudo aptitude install -y nodejs-legacy
+#echo "sudo apt-get install -y nodejs-legacy"
+#      sudo apt-get install -y nodejs-legacy
 echo "# Affichage du shell courant"
 echo "echo $SHELL"
       echo $SHELL

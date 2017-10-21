@@ -27,6 +27,7 @@ DBNAME=sig
 #DBSCHEMA=private
 DBSCHEMA=a_pcrs
 #psql -h $DBHOST -p $DBPORT -d $DBNAME -U $DBUSER -c "ALTER ROLE \"$DBUSER\" SET search_path TO \"$DBSCHEMA\", public;"
-#psql -h $DBHOST -p $DBPORT -d $DBNAME -U $DBUSER -f "sql/01_create_table_pcrs_v2.sql"
+#psql -h $DBHOST -p $DBPORT -d $DBNAME -U $DBUSER -f "sql/01_create_table_pcrs_v2_20170921.sql"
 #psql -h $DBHOST -p $DBPORT -d $DBNAME -U $DBUSER -f "sql/02_rtge2pcrs_create.sql"
+psql -h $DBHOST -p $DBPORT -d $DBNAME -U $DBUSER -f "sql/03_init.sql"
 psql -h $DBHOST -p $DBPORT -d $DBNAME -U $DBUSER -f "sql/04_init_from_rtge.sql"

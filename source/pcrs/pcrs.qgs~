@@ -5,7 +5,7 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="spatialite" checked="Qt::Unchecked" id="symboletest20170912173707484" source="dbname='/home/fred/Documents/technic/source/symbologie/data/qgis/Test.sqlite' table=&quot;symboletest&quot; (geometry) sql=" name="symboletest">
+    <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="communes_emprises20171010164622631" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='gid' srid=-1 type=MultiPolygon table=&quot;a_habillage&quot;.&quot;communes_emprises&quot; (shape) sql=" name="communes_emprises">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-group expanded="1" checked="Qt::Unchecked" name="a_rtge">
@@ -29,7 +29,7 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" name="reseaux">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="reseaux">
       <customproperties/>
       <layer-tree-group expanded="0" checked="Qt::Unchecked" name="assepl">
         <customproperties/>
@@ -157,7 +157,7 @@
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
-      <layer-tree-group expanded="1" checked="Qt::Unchecked" name="fibre">
+      <layer-tree-group expanded="0" checked="Qt::Unchecked" name="fibre">
         <customproperties/>
         <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="chambre20171006094341513" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='gid' srid=-1 type=Point table=&quot;b_fibreoptique&quot;.&quot;chambre&quot; (shape) sql=" name="chambre">
           <customproperties/>
@@ -165,12 +165,12 @@
         <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="fo_faisceau_w20171006094344062" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='gid' srid=-1 type=MultiLineString table=&quot;b_fibreoptique&quot;.&quot;fo_faisceau_w&quot; (shape) sql=" name="fo_faisceau_w">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="faisceau20171006094342445" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='gid' srid=-1 type=MultiLineString table=&quot;b_fibreoptique&quot;.&quot;faisceau&quot; (shape) sql=" name="faisceau">
+        <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="faisceau20171006094342445" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='gid' srid=-1 type=MultiLineString table=&quot;b_fibreoptique&quot;.&quot;faisceau&quot; (shape) sql=" name="faisceau">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::PartiallyChecked" name="a_pcrs">
+    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="a_pcrs">
       <customproperties/>
       <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="FacadePCRS20171009153457748" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='idObjet' srid=3946 type=LineString table=&quot;a_pcrs&quot;.&quot;FacadePCRS&quot; (geometrie) sql=" name="FacadePCRS">
         <customproperties/>
@@ -184,7 +184,7 @@
       <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="MurPCRS20171009153516861" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='idObjet' srid=3946 type=LineString table=&quot;a_pcrs&quot;.&quot;MurPCRS&quot; (geometrie) sql=" name="MurPCRS">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="LimiteVoiriePCRS20171004105808831" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='idObjet' srid=3946 type=LineString table=&quot;a_pcrs&quot;.&quot;LimiteVoiriePCRS&quot; (geometrie) sql=" name="LimiteVoiriePCRS">
+      <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="LimiteVoiriePCRS20171004105808831" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='idObjet' srid=3946 type=LineString table=&quot;a_pcrs&quot;.&quot;LimiteVoiriePCRS&quot; (geometrie) sql=" name="LimiteVoiriePCRS">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="ObjetGeneriquePCRS20171009152829276" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='idObjet' srid=3946 type=MultiPolygon table=&quot;a_pcrs&quot;.&quot;ObjetGeneriquePCRS&quot; (geometrie) sql=" name="ObjetGeneriquePCRS">
@@ -193,22 +193,22 @@
       <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="EmpriseEchangePCRS20170929180514947" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='idEmpriseEchange' srid=3946 type=MultiPolygon table=&quot;a_pcrs&quot;.&quot;EmpriseEchangePCRS&quot; (geometrie) sql=" name="EmpriseEchangePCRS">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="EmpriseDisponibilitePCRS20171007213409155" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='idEmpriseDisponibilite' srid=3946 type=MultiPolygon table=&quot;a_pcrs&quot;.&quot;EmpriseDisponibilitePCRS&quot; (geometrie) sql=" name="EmpriseDisponibilitePCRS">
+      <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="EmpriseDisponibilitePCRS20171007213409155" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='idEmpriseDisponibilite' srid=3946 type=MultiPolygon table=&quot;a_pcrs&quot;.&quot;EmpriseDisponibilitePCRS&quot; (geometrie) sql=" name="EmpriseDisponibilitePCRS">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="InitiativePCRS20171007213515612" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='idInitiative' srid=3946 type=MultiPolygon table=&quot;a_pcrs&quot;.&quot;InitiativePCRS&quot; (geometrie) sql=" name="InitiativePCRS">
+      <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Checked" id="InitiativePCRS20171007213515612" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='idInitiative' srid=3946 type=MultiPolygon table=&quot;a_pcrs&quot;.&quot;InitiativePCRS&quot; (geometrie) sql=" name="InitiativePCRS">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="sondage_diagnostic20170912174627158" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='gid' srid=-1 type=Point table=&quot;b_espace_public_travail&quot;.&quot;sondage_diagnostic&quot; (shape) sql=" name="sondage_diagnostic">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="fdp_cadastre">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="fdp_cadastre">
       <customproperties/>
       <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="vo_emprise20171009115628158" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='gid' srid=-1 type=MultiPolygon table=&quot;a_voirie&quot;.&quot;vo_emprise&quot; (shape) sql=" name="vo_emprise">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Checked" id="bati20171004112023735" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='gid' srid=-1 type=MultiPolygon table=&quot;c_cadastre&quot;.&quot;bati&quot; (shape) sql=" name="bati">
+      <layer-tree-layer expanded="0" providerKey="postgres" checked="Qt::Unchecked" id="bati20171004112023735" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='gid' srid=-1 type=MultiPolygon table=&quot;c_cadastre&quot;.&quot;bati&quot; (shape) sql=" name="bati">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="1" providerKey="postgres" checked="Qt::Unchecked" id="parcelle20171004112037541" source="dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' sslmode=disable key='gid' srid=-1 type=MultiPolygon table=&quot;c_cadastre&quot;.&quot;parcelle&quot; (shape) sql=" name="parcelle">
@@ -223,10 +223,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>1379282.10745016182772815</xmin>
-      <ymin>5225931.54660198278725147</ymin>
-      <xmax>1379509.96328537608496845</xmax>
-      <ymax>5226090.53556165285408497</ymax>
+      <xmin>1377622.3823234043084085</xmin>
+      <ymin>5225592.82178776059299707</ymin>
+      <xmax>1377850.23815861856564879</xmax>
+      <ymax>5225751.81074743065983057</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -244,44 +244,71 @@
     </destinationsrs>
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="chambre20171006094341513"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="symboletest20170912173707484"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_depart_torsade20171006094242166"/>
       <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="EmpriseDisponibilitePCRS20171007213409155"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="LimiteVoiriePCRS20171009114646154"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="EmpriseEchangePCRS20170929180514947"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ortho2014_geo1720170912163452256"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_poteau_beton20171006094242808"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="MurPCRS20171009153516861"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_regard20171006094243047"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="USER:100002" srcDatumTransform="-1" destDatumTransform="-1" layerid="vo_emprise20171009115628158"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ObjetGeneriquePCRS20171009152829276"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_depart_nu20171006094241734"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_coffret_intermediaire20171006094241239"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="HabillageLignesPCRS20171009115243441"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="AffleurantSymbolePCRS20170912174627350"/>
       <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="fo_faisceau_w20171006094344062"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="tmp_point20171004105937909"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="bati20171004112023735"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_depart_ht20171006094241504"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="dxf_autre_l20171003180308630"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="tmp_ligne20171004105937361"/>
       <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_depart_souterrain20171006094241943"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_point_eclairage20171006094242384"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_poste20171006094242608"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_reseau_facade20171006094243273"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="LimiteVoiriePCRS20171004105808831"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="InitiativePCRS20171007213515612"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="eau_vanne20171006094147761"/>
       <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_trousse_cable20171006094243518"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_reseau_facade20171006094243273"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_regard20171006094243047"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_coffret_intermediaire20171006094241239"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ca_pga20171005092310822"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="USER:100002" srcDatumTransform="-1" destDatumTransform="-1" layerid="vo_emprise20171009115628158"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_ouvrage_collecte20171006094056693"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ca_bus_cuivre20171005092309537"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="FacadePCRS20171009153457748"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="AffleurantSymbolePCRS20170912174627350"/>
       <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="LimiteVoiriePCRS20171009115041126"/>
       <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="faisceau20171006094342445"/>
-      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="FacadePCRS20171009153457748"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="eau_forage20171006094147066"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_depart_ht20171006094241504"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="eau_borne_fontaine20171006094145870"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="LimiteVoiriePCRS20171004105808831"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="eau_reducteur_pression20171006094147548"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_ouvrage_engouffrement20171006094056921"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_depart_nu20171006094241734"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_bassin_retention20171006094046751"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="bati20171004112023735"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_point_eclairage20171006094242384"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="EmpriseEchangePCRS20170929180514947"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ObjetGeneriquePCRS20171009152829276"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="HabillageLignesPCRS20171009115243441"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ca_tampon20171005092311201"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_poteau_beton20171006094242808"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="eau_conduite20171006094146342"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="eau_poteau_incendie20171006094147305"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="USER:100002" srcDatumTransform="-1" destDatumTransform="-1" layerid="communes_emprises20171010164622631"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_regard_pluvial20171006094057737"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="symboletest20170912173707484"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_bati_souterrain20171006094056181"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_puisard20171006094057488"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_branchement20171006094056466"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_sortie_fosse20171006094057950"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="eau_cotation_ligne20171006094146595"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_station_pompage20171006094058206"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="tmp_point20171004105937909"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ca_borne20171005092311546"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ca_coffret_electrique20171005092310447"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="MurPCRS20171009153516861"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="tmp_ligne20171004105937361"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_depart_torsade20171006094242166"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="InitiativePCRS20171007213515612"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="dxf_autre_l20171003180308630"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_ouvrage_fonctionnel20171006094057235"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="eau_branchement20171006094146123"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="chambre20171006094341513"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ep_poste20171006094242608"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ca_reseau_electrique20171005092310077"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="eau_vidange20171006094148222"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="eau_ventouse20171006094147999"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="LimiteVoiriePCRS20171009114646154"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="ortho2014_geo1720170912163452256"/>
+      <layer_coordinate_transform destAuthId="USER:100002" srcAuthId="EPSG:3946" srcDatumTransform="-1" destDatumTransform="-1" layerid="eau_cotation_texte20171006094146826"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
   <layer-tree-canvas>
     <custom-order enabled="0">
       <item>ortho2014_geo1720170912163452256</item>
-      <item>symboletest20170912173707484</item>
       <item>sondage_diagnostic20170912174627158</item>
       <item>AffleurantSymbolePCRS20170912174627350</item>
       <item>EmpriseEchangePCRS20170929180514947</item>
@@ -342,12 +369,13 @@
       <item>ObjetGeneriquePCRS20171009152829276</item>
       <item>FacadePCRS20171009153457748</item>
       <item>MurPCRS20171009153516861</item>
+      <item>communes_emprises20171010164622631</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="symboletest" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="communes_emprises" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="symboletest20170912173707484" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="communes_emprises20171010164622631" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendgroup open="true" checked="Qt::Unchecked" name="a_rtge">
@@ -382,7 +410,7 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="reseaux">
+    <legendgroup open="true" checked="Qt::Unchecked" name="reseaux">
       <legendgroup open="false" checked="Qt::Unchecked" name="assepl">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ep_bassin_retention" showFeatureCount="0">
           <filegroup open="true" hidden="false">
@@ -581,7 +609,7 @@
           </filegroup>
         </legendlayer>
       </legendgroup>
-      <legendgroup open="true" checked="Qt::Unchecked" name="fibre">
+      <legendgroup open="false" checked="Qt::Unchecked" name="fibre">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="chambre" showFeatureCount="0">
           <filegroup open="true" hidden="false">
             <legendlayerfile isInOverview="0" layerid="chambre20171006094341513" visible="0"/>
@@ -592,14 +620,14 @@
             <legendlayerfile isInOverview="0" layerid="fo_faisceau_w20171006094344062" visible="0"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="faisceau" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="faisceau" showFeatureCount="0">
+          <filegroup open="false" hidden="false">
             <legendlayerfile isInOverview="0" layerid="faisceau20171006094342445" visible="0"/>
           </filegroup>
         </legendlayer>
       </legendgroup>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::PartiallyChecked" name="a_pcrs">
+    <legendgroup open="true" checked="Qt::PartiallyChecked" name="a_pcrs">
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="FacadePCRS" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="FacadePCRS20171009153457748" visible="1"/>
@@ -620,9 +648,9 @@
           <legendlayerfile isInOverview="0" layerid="MurPCRS20171009153516861" visible="1"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="LimiteVoiriePCRS" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="LimiteVoiriePCRS" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="LimiteVoiriePCRS20171004105808831" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="LimiteVoiriePCRS20171004105808831" visible="1"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="ObjetGeneriquePCRS" showFeatureCount="0">
@@ -635,14 +663,14 @@
           <legendlayerfile isInOverview="0" layerid="EmpriseEchangePCRS20170929180514947" visible="1"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="EmpriseDisponibilitePCRS" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="EmpriseDisponibilitePCRS" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="EmpriseDisponibilitePCRS20171007213409155" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="EmpriseDisponibilitePCRS20171007213409155" visible="1"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="InitiativePCRS" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="InitiativePCRS" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="InitiativePCRS20171007213515612" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="InitiativePCRS20171007213515612" visible="1"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
@@ -651,15 +679,15 @@
         <legendlayerfile isInOverview="0" layerid="sondage_diagnostic20170912174627158" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendgroup open="true" checked="Qt::PartiallyChecked" name="fdp_cadastre">
+    <legendgroup open="true" checked="Qt::Unchecked" name="fdp_cadastre">
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="vo_emprise" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="vo_emprise20171009115628158" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="bati" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="bati" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="bati20171004112023735" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="bati20171004112023735" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="parcelle" showFeatureCount="0">
@@ -3483,8 +3511,8 @@ def my_form_open(dialog, layer, feature):
       <renderer-v2 attr="thematique" forceraster="0" symbollevels="0" type="categorizedSymbol" enableorderby="0">
         <categories>
           <category render="true" symbol="0" value="02" label="Theme Bati"/>
-          <category render="false" symbol="1" value="03" label="Theme Voirie"/>
-          <category render="false" symbol="2" value="05" label="Theme Cloture"/>
+          <category render="true" symbol="1" value="03" label="Theme Voirie"/>
+          <category render="true" symbol="2" value="05" label="Theme Cloture"/>
           <category render="true" symbol="3" value="" label=""/>
         </categories>
         <symbols>
@@ -6536,6 +6564,358 @@ def my_form_open(dialog, layer, feature):
         <default field="id_prop" expression=""/>
         <default field="libelle" expression=""/>
         <default field="angle" expression=""/>
+      </defaults>
+      <previewExpression></previewExpression>
+    </maplayer>
+    <maplayer simplifyAlgorithm="0" minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <id>communes_emprises20171010164622631</id>
+      <datasource>dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' password='Mie9Asie' sslmode=disable key='gid' srid=-1 type=MultiPolygon table="a_habillage"."communes_emprises" (shape) sql=</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>communes_emprises</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=45.25 +lat_2=46.75 +lat_0=46 +lon_0=3 +x_0=1700000 +y_0=5200000 +ellps=GRS80 +units=m +no_defs</proj4>
+          <srsid>100002</srsid>
+          <srid>0</srid>
+          <authid>USER:100002</authid>
+          <description> * SCR généré (+proj=lcc +lat_1=45.25 +lat_2=46.75 +lat_0=46 +lon_0=3 +x_0=1700000 +y_0=5200000 +ellps=GRS80 +units=m +no_defs)</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <provider encoding="UTF-8">postgres</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="gid">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="st_ig">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="st_map">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="st_layer">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="st_nature">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="st_name">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="st_type">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="st_size">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="id">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="0,0,0,0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="49,49,49,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale scalemethod="diameter"/>
+      </renderer-v2>
+      <labeling type="simple"/>
+      <customproperties>
+        <property key="labeling" value="pal"/>
+        <property key="labeling/addDirectionSymbol" value="false"/>
+        <property key="labeling/angleOffset" value="0"/>
+        <property key="labeling/blendMode" value="0"/>
+        <property key="labeling/bufferBlendMode" value="0"/>
+        <property key="labeling/bufferColorA" value="255"/>
+        <property key="labeling/bufferColorB" value="255"/>
+        <property key="labeling/bufferColorG" value="255"/>
+        <property key="labeling/bufferColorR" value="255"/>
+        <property key="labeling/bufferDraw" value="false"/>
+        <property key="labeling/bufferJoinStyle" value="64"/>
+        <property key="labeling/bufferNoFill" value="false"/>
+        <property key="labeling/bufferSize" value="1"/>
+        <property key="labeling/bufferSizeInMapUnits" value="false"/>
+        <property key="labeling/bufferSizeMapUnitMaxScale" value="0"/>
+        <property key="labeling/bufferSizeMapUnitMinScale" value="0"/>
+        <property key="labeling/bufferSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/bufferTransp" value="0"/>
+        <property key="labeling/centroidInside" value="false"/>
+        <property key="labeling/centroidWhole" value="false"/>
+        <property key="labeling/decimals" value="3"/>
+        <property key="labeling/displayAll" value="false"/>
+        <property key="labeling/dist" value="0"/>
+        <property key="labeling/distInMapUnits" value="false"/>
+        <property key="labeling/distMapUnitMaxScale" value="0"/>
+        <property key="labeling/distMapUnitMinScale" value="0"/>
+        <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/drawLabels" value="false"/>
+        <property key="labeling/enabled" value="false"/>
+        <property key="labeling/fieldName" value=""/>
+        <property key="labeling/fitInPolygonOnly" value="false"/>
+        <property key="labeling/fontBold" value="false"/>
+        <property key="labeling/fontCapitals" value="0"/>
+        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
+        <property key="labeling/fontItalic" value="false"/>
+        <property key="labeling/fontLetterSpacing" value="0"/>
+        <property key="labeling/fontLimitPixelSize" value="false"/>
+        <property key="labeling/fontMaxPixelSize" value="10000"/>
+        <property key="labeling/fontMinPixelSize" value="3"/>
+        <property key="labeling/fontSize" value="8.25"/>
+        <property key="labeling/fontSizeInMapUnits" value="false"/>
+        <property key="labeling/fontSizeMapUnitMaxScale" value="0"/>
+        <property key="labeling/fontSizeMapUnitMinScale" value="0"/>
+        <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/fontStrikeout" value="false"/>
+        <property key="labeling/fontUnderline" value="false"/>
+        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWordSpacing" value="0"/>
+        <property key="labeling/formatNumbers" value="false"/>
+        <property key="labeling/isExpression" value="true"/>
+        <property key="labeling/labelOffsetInMapUnits" value="true"/>
+        <property key="labeling/labelOffsetMapUnitMaxScale" value="0"/>
+        <property key="labeling/labelOffsetMapUnitMinScale" value="0"/>
+        <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/labelPerPart" value="false"/>
+        <property key="labeling/leftDirectionSymbol" value="&lt;"/>
+        <property key="labeling/limitNumLabels" value="false"/>
+        <property key="labeling/maxCurvedCharAngleIn" value="20"/>
+        <property key="labeling/maxCurvedCharAngleOut" value="-20"/>
+        <property key="labeling/maxNumLabels" value="2000"/>
+        <property key="labeling/mergeLines" value="false"/>
+        <property key="labeling/minFeatureSize" value="0"/>
+        <property key="labeling/multilineAlign" value="0"/>
+        <property key="labeling/multilineHeight" value="1"/>
+        <property key="labeling/namedStyle" value="Normal"/>
+        <property key="labeling/obstacle" value="true"/>
+        <property key="labeling/obstacleFactor" value="1"/>
+        <property key="labeling/obstacleType" value="0"/>
+        <property key="labeling/offsetType" value="0"/>
+        <property key="labeling/placeDirectionSymbol" value="0"/>
+        <property key="labeling/placement" value="1"/>
+        <property key="labeling/placementFlags" value="0"/>
+        <property key="labeling/plussign" value="false"/>
+        <property key="labeling/predefinedPositionOrder" value="TR,TL,BR,BL,R,L,TSR,BSR"/>
+        <property key="labeling/preserveRotation" value="true"/>
+        <property key="labeling/previewBkgrdColor" value="#ffffff"/>
+        <property key="labeling/priority" value="5"/>
+        <property key="labeling/quadOffset" value="4"/>
+        <property key="labeling/repeatDistance" value="0"/>
+        <property key="labeling/repeatDistanceMapUnitMaxScale" value="0"/>
+        <property key="labeling/repeatDistanceMapUnitMinScale" value="0"/>
+        <property key="labeling/repeatDistanceMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/repeatDistanceUnit" value="1"/>
+        <property key="labeling/reverseDirectionSymbol" value="false"/>
+        <property key="labeling/rightDirectionSymbol" value=">"/>
+        <property key="labeling/scaleMax" value="10000000"/>
+        <property key="labeling/scaleMin" value="1"/>
+        <property key="labeling/scaleVisibility" value="false"/>
+        <property key="labeling/shadowBlendMode" value="6"/>
+        <property key="labeling/shadowColorB" value="0"/>
+        <property key="labeling/shadowColorG" value="0"/>
+        <property key="labeling/shadowColorR" value="0"/>
+        <property key="labeling/shadowDraw" value="false"/>
+        <property key="labeling/shadowOffsetAngle" value="135"/>
+        <property key="labeling/shadowOffsetDist" value="1"/>
+        <property key="labeling/shadowOffsetGlobal" value="true"/>
+        <property key="labeling/shadowOffsetMapUnitMaxScale" value="0"/>
+        <property key="labeling/shadowOffsetMapUnitMinScale" value="0"/>
+        <property key="labeling/shadowOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shadowOffsetUnits" value="1"/>
+        <property key="labeling/shadowRadius" value="1.5"/>
+        <property key="labeling/shadowRadiusAlphaOnly" value="false"/>
+        <property key="labeling/shadowRadiusMapUnitMaxScale" value="0"/>
+        <property key="labeling/shadowRadiusMapUnitMinScale" value="0"/>
+        <property key="labeling/shadowRadiusMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shadowRadiusUnits" value="1"/>
+        <property key="labeling/shadowScale" value="100"/>
+        <property key="labeling/shadowTransparency" value="30"/>
+        <property key="labeling/shadowUnder" value="0"/>
+        <property key="labeling/shapeBlendMode" value="0"/>
+        <property key="labeling/shapeBorderColorA" value="255"/>
+        <property key="labeling/shapeBorderColorB" value="128"/>
+        <property key="labeling/shapeBorderColorG" value="128"/>
+        <property key="labeling/shapeBorderColorR" value="128"/>
+        <property key="labeling/shapeBorderWidth" value="0"/>
+        <property key="labeling/shapeBorderWidthMapUnitMaxScale" value="0"/>
+        <property key="labeling/shapeBorderWidthMapUnitMinScale" value="0"/>
+        <property key="labeling/shapeBorderWidthMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeBorderWidthUnits" value="1"/>
+        <property key="labeling/shapeDraw" value="false"/>
+        <property key="labeling/shapeFillColorA" value="255"/>
+        <property key="labeling/shapeFillColorB" value="255"/>
+        <property key="labeling/shapeFillColorG" value="255"/>
+        <property key="labeling/shapeFillColorR" value="255"/>
+        <property key="labeling/shapeJoinStyle" value="64"/>
+        <property key="labeling/shapeOffsetMapUnitMaxScale" value="0"/>
+        <property key="labeling/shapeOffsetMapUnitMinScale" value="0"/>
+        <property key="labeling/shapeOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeOffsetUnits" value="1"/>
+        <property key="labeling/shapeOffsetX" value="0"/>
+        <property key="labeling/shapeOffsetY" value="0"/>
+        <property key="labeling/shapeRadiiMapUnitMaxScale" value="0"/>
+        <property key="labeling/shapeRadiiMapUnitMinScale" value="0"/>
+        <property key="labeling/shapeRadiiMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeRadiiUnits" value="1"/>
+        <property key="labeling/shapeRadiiX" value="0"/>
+        <property key="labeling/shapeRadiiY" value="0"/>
+        <property key="labeling/shapeRotation" value="0"/>
+        <property key="labeling/shapeRotationType" value="0"/>
+        <property key="labeling/shapeSVGFile" value=""/>
+        <property key="labeling/shapeSizeMapUnitMaxScale" value="0"/>
+        <property key="labeling/shapeSizeMapUnitMinScale" value="0"/>
+        <property key="labeling/shapeSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeSizeType" value="0"/>
+        <property key="labeling/shapeSizeUnits" value="1"/>
+        <property key="labeling/shapeSizeX" value="0"/>
+        <property key="labeling/shapeSizeY" value="0"/>
+        <property key="labeling/shapeTransparency" value="0"/>
+        <property key="labeling/shapeType" value="0"/>
+        <property key="labeling/textColorA" value="255"/>
+        <property key="labeling/textColorB" value="0"/>
+        <property key="labeling/textColorG" value="0"/>
+        <property key="labeling/textColorR" value="0"/>
+        <property key="labeling/textTransp" value="0"/>
+        <property key="labeling/upsidedownLabels" value="0"/>
+        <property key="labeling/wrapChar" value=""/>
+        <property key="labeling/xOffset" value="0"/>
+        <property key="labeling/yOffset" value="0"/>
+        <property key="labeling/zIndex" value="0"/>
+        <property key="variableNames" value="_fields_"/>
+        <property key="variableValues" value=""/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>st_name</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Étiquette"/>
+        <family fieldname="" name="MS Shell Dlg 2"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <SingleCategoryDiagramRenderer diagramType="Pie" sizeLegend="0" attributeLegend="1">
+        <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="-4.65661e-10">
+          <fontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
+        </DiagramCategory>
+        <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
+          <layer pass="0" class="SimpleMarker" locked="0">
+            <prop k="angle" v="0"/>
+            <prop k="color" v="255,0,0,255"/>
+            <prop k="horizontal_anchor_point" v="1"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="name" v="circle"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0"/>
+            <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="scale_method" v="diameter"/>
+            <prop k="size" v="2"/>
+            <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="size_unit" v="MM"/>
+            <prop k="vertical_anchor_point" v="1"/>
+          </layer>
+        </symbol>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings yPosColumn="-1" showColumn="0" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
+      <annotationform>.</annotationform>
+      <aliases>
+        <alias field="gid" index="0" name=""/>
+        <alias field="st_ig" index="1" name=""/>
+        <alias field="st_map" index="2" name=""/>
+        <alias field="st_layer" index="3" name=""/>
+        <alias field="st_nature" index="4" name=""/>
+        <alias field="st_name" index="5" name=""/>
+        <alias field="st_type" index="6" name=""/>
+        <alias field="st_size" index="7" name=""/>
+        <alias field="id" index="8" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <attributeactions default="-1"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform>.</editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath>.</editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+Les formulaires QGIS peuvent avoir une fonction Python qui sera appelée à l'ouverture du formulaire.
+
+Utilisez cette fonction pour ajouter plus de fonctionnalités à vos formulaires.
+
+Entrez le nom de la fonction dans le champ
+"Fonction d'initialisation Python"
+Voici un exemple à suivre:
+"""
+from PyQt4.QtGui import QWidget
+
+def my_form_open(dialog, layer, feature):
+⇥geom = feature.geometry()
+⇥control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <defaults>
+        <default field="gid" expression=""/>
+        <default field="st_ig" expression=""/>
+        <default field="st_map" expression=""/>
+        <default field="st_layer" expression=""/>
+        <default field="st_nature" expression=""/>
+        <default field="st_name" expression=""/>
+        <default field="st_type" expression=""/>
+        <default field="st_size" expression=""/>
+        <default field="id" expression=""/>
       </defaults>
       <previewExpression></previewExpression>
     </maplayer>
@@ -13944,356 +14324,6 @@ def my_form_open(dialog, layer, feature):
       </defaults>
       <previewExpression></previewExpression>
     </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>symboletest20170912173707484</id>
-      <datasource>dbname='../../../technic/source/symbologie/data/qgis/Test.sqlite' table="symboletest" (geometry) sql=</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>symboletest</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=lcc +lat_1=45.25 +lat_2=46.75 +lat_0=46 +lon_0=3 +x_0=1700000 +y_0=5200000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>1765</srsid>
-          <srid>3946</srid>
-          <authid>EPSG:3946</authid>
-          <description>RGF93 / CC46</description>
-          <projectionacronym>lcc</projectionacronym>
-          <ellipsoidacronym>GRS80</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <provider encoding="windows-1250">spatialite</provider>
-      <vectorjoins/>
-      <layerDependencies/>
-      <expressionfields/>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="oid">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="CodeSymbole">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="EchelleRepresentation">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Obs_Rotation">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Obs_LargeurX">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Obs_HauteurY">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="X">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Y">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-      </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
-        <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer pass="0" class="SvgMarker" locked="0">
-              <prop k="angle" v="0"/>
-              <prop k="angle_dd_active" v="1"/>
-              <prop k="angle_dd_expression" v="&quot;Obs_Rotation&quot;"/>
-              <prop k="angle_dd_field" v=""/>
-              <prop k="angle_dd_useexpr" v="1"/>
-              <prop k="color" v="172,142,23,255"/>
-              <prop k="horizontal_anchor_point" v="0"/>
-              <prop k="name" v=""/>
-              <prop k="name_dd_active" v="1"/>
-              <prop k="name_dd_expression" v="'/home/fred/Documents/documentation/GTReseaux/pcrs/symbologie/symbole/original/' ||  &quot;CodeSymbole&quot;"/>
-              <prop k="name_dd_field" v=""/>
-              <prop k="name_dd_useexpr" v="1"/>
-              <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="offset_unit" v="MM"/>
-              <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_width" v="0"/>
-              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="outline_width_unit" v="MM"/>
-              <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="1"/>
-              <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="size_unit" v="MapUnit"/>
-              <prop k="vertical_anchor_point" v="1"/>
-            </layer>
-          </symbol>
-        </symbols>
-        <rotation/>
-        <sizescale scalemethod="diameter"/>
-      </renderer-v2>
-      <labeling type="simple"/>
-      <customproperties>
-        <property key="embeddedWidgets/count" value="0"/>
-        <property key="labeling" value="pal"/>
-        <property key="labeling/addDirectionSymbol" value="false"/>
-        <property key="labeling/angleOffset" value="0"/>
-        <property key="labeling/blendMode" value="0"/>
-        <property key="labeling/bufferBlendMode" value="0"/>
-        <property key="labeling/bufferColorA" value="255"/>
-        <property key="labeling/bufferColorB" value="255"/>
-        <property key="labeling/bufferColorG" value="255"/>
-        <property key="labeling/bufferColorR" value="255"/>
-        <property key="labeling/bufferDraw" value="false"/>
-        <property key="labeling/bufferJoinStyle" value="128"/>
-        <property key="labeling/bufferNoFill" value="false"/>
-        <property key="labeling/bufferSize" value="1"/>
-        <property key="labeling/bufferSizeInMapUnits" value="false"/>
-        <property key="labeling/bufferSizeMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/bufferTransp" value="0"/>
-        <property key="labeling/centroidInside" value="false"/>
-        <property key="labeling/centroidWhole" value="false"/>
-        <property key="labeling/decimals" value="3"/>
-        <property key="labeling/displayAll" value="false"/>
-        <property key="labeling/dist" value="0"/>
-        <property key="labeling/distInMapUnits" value="false"/>
-        <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/drawLabels" value="false"/>
-        <property key="labeling/enabled" value="false"/>
-        <property key="labeling/fieldName" value=""/>
-        <property key="labeling/fitInPolygonOnly" value="false"/>
-        <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Ubuntu"/>
-        <property key="labeling/fontItalic" value="false"/>
-        <property key="labeling/fontLetterSpacing" value="0"/>
-        <property key="labeling/fontLimitPixelSize" value="false"/>
-        <property key="labeling/fontMaxPixelSize" value="10000"/>
-        <property key="labeling/fontMinPixelSize" value="3"/>
-        <property key="labeling/fontSize" value="11"/>
-        <property key="labeling/fontSizeInMapUnits" value="false"/>
-        <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/fontStrikeout" value="false"/>
-        <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
-        <property key="labeling/fontWordSpacing" value="0"/>
-        <property key="labeling/formatNumbers" value="false"/>
-        <property key="labeling/isExpression" value="true"/>
-        <property key="labeling/labelOffsetInMapUnits" value="true"/>
-        <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/labelPerPart" value="false"/>
-        <property key="labeling/leftDirectionSymbol" value="&lt;"/>
-        <property key="labeling/limitNumLabels" value="false"/>
-        <property key="labeling/maxCurvedCharAngleIn" value="25"/>
-        <property key="labeling/maxCurvedCharAngleOut" value="-25"/>
-        <property key="labeling/maxNumLabels" value="2000"/>
-        <property key="labeling/mergeLines" value="false"/>
-        <property key="labeling/minFeatureSize" value="0"/>
-        <property key="labeling/multilineAlign" value="3"/>
-        <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Medium Italic"/>
-        <property key="labeling/obstacle" value="true"/>
-        <property key="labeling/obstacleFactor" value="1"/>
-        <property key="labeling/obstacleType" value="0"/>
-        <property key="labeling/offsetType" value="0"/>
-        <property key="labeling/placeDirectionSymbol" value="0"/>
-        <property key="labeling/placement" value="6"/>
-        <property key="labeling/placementFlags" value="10"/>
-        <property key="labeling/plussign" value="false"/>
-        <property key="labeling/predefinedPositionOrder" value="TR,TL,BR,BL,R,L,TSR,BSR"/>
-        <property key="labeling/preserveRotation" value="true"/>
-        <property key="labeling/previewBkgrdColor" value="#ffffff"/>
-        <property key="labeling/priority" value="5"/>
-        <property key="labeling/quadOffset" value="4"/>
-        <property key="labeling/repeatDistance" value="0"/>
-        <property key="labeling/repeatDistanceMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/repeatDistanceUnit" value="1"/>
-        <property key="labeling/reverseDirectionSymbol" value="false"/>
-        <property key="labeling/rightDirectionSymbol" value=">"/>
-        <property key="labeling/scaleMax" value="10000000"/>
-        <property key="labeling/scaleMin" value="1"/>
-        <property key="labeling/scaleVisibility" value="false"/>
-        <property key="labeling/shadowBlendMode" value="6"/>
-        <property key="labeling/shadowColorB" value="0"/>
-        <property key="labeling/shadowColorG" value="0"/>
-        <property key="labeling/shadowColorR" value="0"/>
-        <property key="labeling/shadowDraw" value="false"/>
-        <property key="labeling/shadowOffsetAngle" value="135"/>
-        <property key="labeling/shadowOffsetDist" value="1"/>
-        <property key="labeling/shadowOffsetGlobal" value="true"/>
-        <property key="labeling/shadowOffsetMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/shadowOffsetUnits" value="1"/>
-        <property key="labeling/shadowRadius" value="1.5"/>
-        <property key="labeling/shadowRadiusAlphaOnly" value="false"/>
-        <property key="labeling/shadowRadiusMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/shadowRadiusUnits" value="1"/>
-        <property key="labeling/shadowScale" value="100"/>
-        <property key="labeling/shadowTransparency" value="30"/>
-        <property key="labeling/shadowUnder" value="0"/>
-        <property key="labeling/shapeBlendMode" value="0"/>
-        <property key="labeling/shapeBorderColorA" value="255"/>
-        <property key="labeling/shapeBorderColorB" value="128"/>
-        <property key="labeling/shapeBorderColorG" value="128"/>
-        <property key="labeling/shapeBorderColorR" value="128"/>
-        <property key="labeling/shapeBorderWidth" value="0"/>
-        <property key="labeling/shapeBorderWidthMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/shapeBorderWidthUnits" value="1"/>
-        <property key="labeling/shapeDraw" value="false"/>
-        <property key="labeling/shapeFillColorA" value="255"/>
-        <property key="labeling/shapeFillColorB" value="255"/>
-        <property key="labeling/shapeFillColorG" value="255"/>
-        <property key="labeling/shapeFillColorR" value="255"/>
-        <property key="labeling/shapeJoinStyle" value="64"/>
-        <property key="labeling/shapeOffsetMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/shapeOffsetUnits" value="1"/>
-        <property key="labeling/shapeOffsetX" value="0"/>
-        <property key="labeling/shapeOffsetY" value="0"/>
-        <property key="labeling/shapeRadiiMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/shapeRadiiUnits" value="1"/>
-        <property key="labeling/shapeRadiiX" value="0"/>
-        <property key="labeling/shapeRadiiY" value="0"/>
-        <property key="labeling/shapeRotation" value="0"/>
-        <property key="labeling/shapeRotationType" value="0"/>
-        <property key="labeling/shapeSVGFile" value=""/>
-        <property key="labeling/shapeSizeMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/shapeSizeType" value="0"/>
-        <property key="labeling/shapeSizeUnits" value="1"/>
-        <property key="labeling/shapeSizeX" value="0"/>
-        <property key="labeling/shapeSizeY" value="0"/>
-        <property key="labeling/shapeTransparency" value="0"/>
-        <property key="labeling/shapeType" value="0"/>
-        <property key="labeling/substitutions" value="&lt;substitutions/>"/>
-        <property key="labeling/textColorA" value="255"/>
-        <property key="labeling/textColorB" value="0"/>
-        <property key="labeling/textColorG" value="0"/>
-        <property key="labeling/textColorR" value="0"/>
-        <property key="labeling/textTransp" value="0"/>
-        <property key="labeling/upsidedownLabels" value="0"/>
-        <property key="labeling/useSubstitutions" value="false"/>
-        <property key="labeling/wrapChar" value=""/>
-        <property key="labeling/xOffset" value="0"/>
-        <property key="labeling/yOffset" value="0"/>
-        <property key="labeling/zIndex" value="0"/>
-        <property key="variableNames"/>
-        <property key="variableValues"/>
-      </customproperties>
-      <blendMode>0</blendMode>
-      <featureBlendMode>0</featureBlendMode>
-      <layerTransparency>0</layerTransparency>
-      <displayfield>oid</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Étiquette"/>
-        <family fieldname="" name="Ubuntu"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
-      <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
-        <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
-          <fontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
-          <attribute field="" color="#000000" label=""/>
-        </DiagramCategory>
-        <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
-          <layer pass="0" class="SimpleMarker" locked="0">
-            <prop k="angle" v="0"/>
-            <prop k="color" v="255,0,0,255"/>
-            <prop k="horizontal_anchor_point" v="1"/>
-            <prop k="joinstyle" v="bevel"/>
-            <prop k="name" v="circle"/>
-            <prop k="offset" v="0,0"/>
-            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
-            <prop k="offset_unit" v="MM"/>
-            <prop k="outline_color" v="0,0,0,255"/>
-            <prop k="outline_style" v="solid"/>
-            <prop k="outline_width" v="0"/>
-            <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
-            <prop k="outline_width_unit" v="MM"/>
-            <prop k="scale_method" v="diameter"/>
-            <prop k="size" v="2"/>
-            <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
-            <prop k="size_unit" v="MM"/>
-            <prop k="vertical_anchor_point" v="1"/>
-          </layer>
-        </symbol>
-      </SingleCategoryDiagramRenderer>
-      <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform>../../../technic/source/symbologie/data/qgis</annotationform>
-      <aliases>
-        <alias field="oid" index="0" name=""/>
-        <alias field="CodeSymbole" index="1" name=""/>
-        <alias field="EchelleRepresentation" index="2" name=""/>
-        <alias field="Obs_Rotation" index="3" name=""/>
-        <alias field="Obs_LargeurX" index="4" name=""/>
-        <alias field="Obs_HauteurY" index="5" name=""/>
-        <alias field="X" index="6" name=""/>
-        <alias field="Y" index="7" name=""/>
-      </aliases>
-      <excludeAttributesWMS/>
-      <excludeAttributesWFS/>
-      <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="1">
-        <columns>
-          <column width="-1" hidden="0" type="field" name="oid"/>
-          <column width="606" hidden="0" type="field" name="CodeSymbole"/>
-          <column width="141" hidden="0" type="field" name="EchelleRepresentation"/>
-          <column width="-1" hidden="0" type="field" name="Obs_Rotation"/>
-          <column width="-1" hidden="0" type="field" name="Obs_LargeurX"/>
-          <column width="-1" hidden="0" type="field" name="Obs_HauteurY"/>
-          <column width="-1" hidden="0" type="field" name="X"/>
-          <column width="-1" hidden="0" type="field" name="Y"/>
-          <column width="-1" hidden="1" type="actions"/>
-        </columns>
-      </attributetableconfig>
-      <editform>../../../technic/source/symbologie/data/qgis</editform>
-      <editforminit/>
-      <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>../../../technic/source/symbologie/data/qgis</editforminitfilepath>
-      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
-"""
-Les formulaires QGIS peuvent avoir une fonction Python qui sera appelée à l'ouverture du formulaire.
-
-Utilisez cette fonction pour ajouter plus de fonctionnalités à vos formulaires.
-
-Entrez le nom de la fonction dans le champ "Fonction d'initialisation Python".
-Voici un exemple à suivre:
-"""
-from qgis.PyQt.QtWidgets import QWidget
-
-def my_form_open(dialog, layer, feature):
-    geom = feature.geometry()
-    control = dialog.findChild(QWidget, "MyLineEdit")
-
-]]></editforminitcode>
-      <featformsuppress>0</featformsuppress>
-      <editorlayout>generatedlayout</editorlayout>
-      <widgets/>
-      <conditionalstyles>
-        <rowstyles/>
-        <fieldstyles/>
-      </conditionalstyles>
-      <defaults>
-        <default field="oid" expression=""/>
-        <default field="CodeSymbole" expression=""/>
-        <default field="EchelleRepresentation" expression=""/>
-        <default field="Obs_Rotation" expression=""/>
-        <default field="Obs_LargeurX" expression=""/>
-        <default field="Obs_HauteurY" expression=""/>
-        <default field="X" expression=""/>
-        <default field="Y" expression=""/>
-      </defaults>
-      <previewExpression>COALESCE( "oid", '&lt;NULL>' )</previewExpression>
-    </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>tmp_ligne20171004105937361</id>
       <datasource>dbname='sig' host=172.17.150.6 port=5432 user='frederic.garel' password='Mie9Asie' sslmode=disable key='gid' srid=-1 type=LineString table="a_rtge"."tmp_ligne" (shape) sql=</datasource>
@@ -15522,8 +15552,12 @@ def my_form_open(dialog, layer, feature):
         <value>AffleurantSymbolePCRS20170912174627350</value>
         <value>EmpriseDisponibilitePCRS20171007213409155</value>
         <value>EmpriseEchangePCRS20170929180514947</value>
+        <value>FacadePCRS20171009153457748</value>
+        <value>HabillageLignesPCRS20171009115243441</value>
         <value>InitiativePCRS20171007213515612</value>
         <value>LimiteVoiriePCRS20171004105808831</value>
+        <value>MurPCRS20171009153516861</value>
+        <value>ObjetGeneriquePCRS20171009152829276</value>
         <value>bati20171004112023735</value>
         <value>ca_borne20171005092311546</value>
         <value>ca_bus_cuivre20171005092309537</value>
@@ -15569,14 +15603,18 @@ def my_form_open(dialog, layer, feature):
         <value>fo_faisceau_w20171006094344062</value>
         <value>parcelle20171004112037541</value>
         <value>sondage_diagnostic20170912174627158</value>
-        <value>symboletest20170912173707484</value>
         <value>tmp_ligne20171004105937361</value>
         <value>tmp_point20171004105937909</value>
         <value>tmp_point_leve20171004105938312</value>
         <value>tmp_surface20171004105938678</value>
         <value>tmp_texte20171004105939067</value>
+        <value>vo_emprise20171009115628158</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
@@ -15693,8 +15731,16 @@ def my_form_open(dialog, layer, feature):
         <value>2</value>
         <value>2</value>
         <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
       </LayerSnappingToleranceUnitList>
       <LayerSnapToList type="QStringList">
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
@@ -15755,6 +15801,10 @@ def my_form_open(dialog, layer, feature):
       <DefaultSnapType type="QString">off</DefaultSnapType>
       <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnappingToleranceList type="QStringList">
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>

@@ -114,3 +114,8 @@ source $(pew shell_config)
 
 # Ajouté suite à l'installation des fontes
 source ~/.local/share/fonts/*.sh
+
+# Utilisation de powerline pour le prompt
+# il faut forcer la lecture de ce fichier
+# http://powerline.readthedocs.io/en/master/usage/shell-prompts.html#zsh-prompt
+source /usr/local/lib/python3.6/dist-packages/powerline/bindings/zsh/powerline.zsh
