@@ -8,6 +8,13 @@
 echo "# Installation de ssh_scan"
 echo "###############################################"
 echo "#"
+echo "# Autre utilitaire aussi a regarder : mida"
+echo "#"
+echo "# https://homputersecurity.com/2017/10/24/mida-loutil-denumeration-systeme-sous-linux/"
+echo "#"
+echo "git clone https://github.com/NullArray/MIDA-Multitool.git"
+      git clone https://github.com/NullArray/MIDA-Multitool.git
+echo "#"
 echo "# La doc sur ssh_scan est ici :"
 echo "# http://homputersecurity.com/2017/04/13/ssh_scan-le-scanneur-de-configuration-ssh/"
 echo "#"
