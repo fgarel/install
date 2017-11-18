@@ -46,15 +46,27 @@ Maputnik est un autre editeur, avec des styles paramétrables
 
 C'est le site pour interroger (select avec filtre) les données osm
 
-### la liste des tags
+### Utilisation de overpass-turbo.eu
 
-la liste des tags OSM peut-etre vu ici :
+1. aller sur le site
+2. copier coller le contenu du fichier
+```
+~/Documents/install/source/osm/requete_overpass-turbo_BandesPistesCyclables.oql
+```
+```
+~/Documents/install/source/osm/requete_overpass-turbo_FondDePlan.oql
+```
+
+
+### La liste des tags
+
+La liste des tags OSM peut-etre vu ici :
 http://jawg.github.io/h2geo
 
 https://github.com/jawg/h2geo
 http://taginfo.openstreetmap.org/
 http://wiki.openstreetmap.org/wiki/Tag:shop%3Dpharmacy
-
+https://wiki.openstreetmap.org/wiki/FR%3AKey%3Aamenity
 
 ### OpenMapTiles
-outil pour fair des tuiles ? => partie 2
+Outil pour fair des tuiles ? => partie 2

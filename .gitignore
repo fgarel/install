@@ -1,6 +1,6 @@
 build
-source/boost_1_63_0/*
-source/dvdrip2/*
+source/boost_1_63_0/
+source/dvdrip2/
 source/environnementTravail/awesome-terminal-fonts/*
 source/environnementTravail/fantasque_awesome_powerline/*
 source/environnementTravail/fonts-powerline/*

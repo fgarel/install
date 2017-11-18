@@ -1,0 +1,197 @@
+/*
+This example shows how the data can be styled.
+Here, some common amenities are displayed in
+different colors.
+
+Read more: http://wiki.openstreetmap.org/wiki/Overpass_turbo/MapCSS
+*/
+[out:json];
+
+(
+   node
+    [amenity]
+
+    /* consommation */
+    [amenity!~"bar"]
+    [amenity!~"bbq"]
+    [amenity!~"cafe"]
+    [amenity!~"drinking_water"]
+    [amenity!~"fast_food"]
+    [amenity!~"food_court"]
+    [amenity!~"ice_cream"]
+    [amenity!~"pub"]
+    [amenity!~"restaurant"]
+
+    /* education */
+    [amenity!~"college"]
+    [amenity!~"nursery"]  /* childcare or kindergarten creche ou jardin d'enfants */
+    [amenity!~"kindergarten"]  /* jardin d'enfants */
+    [amenity!~"library"]
+    [amenity!~"school"]
+    [amenity!~"university"]
+
+    /* transports*/
+    [amenity!~"compressed_air"]
+    [amenity!~"bicycle_parking"]
+    [amenity!~"bicycle_rental"]
+    [amenity!~"bicycle_repair_station"]
+    [amenity!~"boat_rental"]
+    [amenity!~"bus_station"]
+    [amenity!~"canoe_rental"]
+    [amenity!~"car_rental"]
+    [amenity!~"car_sharing"]
+    [amenity!~"car_wash"]  /* station de lavage pour automobiles */
+    [amenity!~"charging_station"]
+    [amenity!~"ferry_terminal"]
+    [amenity!~"fuel"]
+    [amenity!~"parking"]
+    [amenity!~"parking_space"]
+    [amenity!~"parking_entrance"]
+    [amenity!~"taxi"]
+
+    /* argent */
+    [amenity!~"atm"]  /* distributeur automatique de billets */
+    [amenity!~"bank"]
+
+    /* sante */
+    [amenity!~"clinic"]
+    [amenity!~"dentist"]
+    [amenity!~"doctors"]
+    [amenity!~"emergency_service"] /*  */
+    [amenity!~"health_facility"] /* laboratoire */
+    [amenity!~"hospital"]
+    [amenity!~"nursing_home"] /* centre médicalisé */
+    [amenity!~"Ostéopathe"] /* Ostéopathe */
+    [amenity!~"pharmacy"]
+    [amenity!~"social_center"]
+    [amenity!~"social_centre"]
+    [amenity!~"social_facility"] /* Services sociaux */
+    [amenity!~"veterinary"]
+
+    /* loisirs art et culture */
+    [amenity!~"arts_centre"]
+    [amenity!~"cinema"]
+    [amenity!~"community_centre"]  /* Maison de quartier, salle des fetes */
+    [amenity!~"concert_hall"]
+    [amenity!~"fountain"]
+    [amenity!~"nightclub"]
+    [amenity!~"piano"]
+    [amenity!~"studio"]
+    [amenity!~"swimming_pool"]
+    [amenity!~"theatre"]
+
+    /* autres */
+    [amenity!~"bench"]
+    [amenity!~"childcare"]
+    [amenity!~"clock"]
+    [amenity!~"courthouse"]  /* palais de justice */
+    [amenity!~"crematorium"]
+    [amenity!~"dog_toilet"]  /* canisette */
+    [amenity!~"dojo"]
+    [amenity!~"fire_station"]  /* caserne de pompiers */
+    [amenity!~"grave_yard"]  /* petit cimetière */
+    [amenity!~"hunting_stand"]  /* affut de chasse */
+    [amenity!~"internet"]
+    [amenity!~"marketplace"]  /* place de marché */
+    [amenity!~"personal_service"]
+    [amenity!~"place_of_worship"]  /* edifice religieux */
+    [amenity!~"police"]
+    [amenity!~"polling_station"]  /* lieu de vote */
+    [amenity!~"post_box"]
+    [amenity!~"post_office"]
+    [amenity!~"recycling"]  /* point de collecte pour le recyclage */
+    [amenity!~"sanitary_dump_station"]  /* station de vidange sanitaire */
+    [amenity!~"shelter"]  /* abri */
+    [amenity!~"shower"]
+    [amenity!~"telephone"]
+    [amenity!~"toilets"]
+    [amenity!~"townhall"]  /* mairie */
+    [amenity!~"vehicle_inspection"]  /* Contrôle Technique */
+    [amenity!~"vending_machine"]
+    [amenity!~"waste_basket"]  /* poubelle publique */
+    [amenity!~"waste_disposal"]  /* point d'apport ordures */
+    [amenity!~"water_point"]  /* point d'eau */
+
+    ({{bbox}});
+
+   way
+    [amenity]
+
+    /* consommation */
+    [amenity!~"bar"]
+    [amenity!~"cafe"]
+    [amenity!~"fast_food"]
+    [amenity!~"ice_cream"]
+    [amenity!~"pub"]
+    [amenity!~"restaurant"]
+
+    /* education */
+    [amenity!~"childcare"]  /* childcare or kindergarten creche ou jardin d'enfants */
+    [amenity!~"college"]
+    [amenity!~"driving_school"]
+    [amenity!~"kindergarten"]  /* jardin d'enfants */
+    [amenity!~"library"]
+    [amenity!~"school"]
+    [amenity!~"university"]
+
+    /* transports*/
+    [amenity!~"bicycle_rental"]
+    [amenity!~"boat_rental"]
+    [amenity!~"boat_storage"]
+    [amenity!~"bus_station"]
+    [amenity!~"car_wash"]
+    [amenity!~"fuel"]
+    [amenity!~"parking"]
+
+    /* argent */
+    [amenity!~"atm"]  /* distributeur automatique de billets */
+    [amenity!~"bank"]
+
+    /* sante */
+    [amenity!~"clinic"]
+    [amenity!~"dentist"]
+    [amenity!~"doctors"]
+    [amenity!~"hospital"]
+    [amenity!~"nursing_home"] /* centre médicalisé */
+    [amenity!~"pharmacy"]
+    [amenity!~"social_facility"] /* Services sociaux */
+    [amenity!~"veterinary"]
+
+    /* loisirs art et culture */
+    [amenity!~"arts_centre"]
+    [amenity!~"casino"]
+    [amenity!~"cinema"]
+    [amenity!~"community_centre"]  /* Maison de quartier, salle des fetes */
+    [amenity!~"nightclub"]
+    [amenity!~"fountain"]
+    [amenity!~"swimming_pool"]
+    [amenity!~"theatre"]
+
+    /* autres */
+    [amenity!~"baywatch"]  /* poste de secours */
+    [amenity!~"bench"]
+    [amenity!~"dojo"]
+    [amenity!~"fire_station"]  /* caserne de pompiers */
+    [amenity!~"grave_yard"]  /* petit cimetière */
+    [amenity!~"marketplace"]  /* place de marché */
+    [amenity!~"meteo_station"]  /* station meteo */
+    [amenity!~"monastery"]
+    [amenity!~"place_of_worship"]  /* edifice religieux */
+    [amenity!~"police"]
+    [amenity!~"post_office"]
+    [amenity!~"prison"]
+    [amenity!~"public_building"]  /* office=government */
+    [amenity!~"ranger_station"]  /* services publics */
+    [amenity!~"recycling"]  /* point de collecte pour le recyclage */
+    [amenity!~"sanitary_dump_station"]  /* station de vidange sanitaire */
+    [amenity!~"shelter"]  /* abri */
+    [amenity!~"toilets"]
+    [amenity!~"townhall"]  /* mairie */
+    [amenity!~"vehicle_inspection"]  /* Contrôle Technique */
+    [amenity!~"washing_place"]  /* lavoir */
+
+    ({{bbox}});
+);
+out body;
+>;
+out skel qt;
