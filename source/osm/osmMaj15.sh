@@ -12,16 +12,13 @@ do
     echo "# day = "$day;
     echo "# ===========";
     echo "#";
-    echo "# Téléchargement des données diff";
-    echo "./osmDownloadOtherTime.sh";
-    echo "~fred/Documents/install/source/osm/osmDownloadOtherTime.sh";
-          ~fred/Documents/install/source/osm/osmDownloadOtherTime.sh;
-    echo "#";
-    echo "#";
-    echo "# Import de ces données";
-    echo "./osmImportOtherTime.sh";
-    echo "~fred/Documents/install/source/osm/osmImportOtherTime.sh";
-          ~fred/Documents/install/source/osm/osmImportOtherTime.sh;
+    echo 'sudo -u www-data \'
+    echo "     ~fred/Documents/install/source/osm/osmMajWww-data.sh"
+          sudo -u www-data \
+               ~fred/Documents/install/source/osm/osmMajWww-data.sh
+    echo "#"
+    echo "~fred/Documents/install/source/osm/osmMajNormal-user.sh"
+          ~fred/Documents/install/source/osm/osmMajNormal-user.sh
     echo "#";
     echo "#";
 done

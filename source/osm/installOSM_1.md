@@ -20,17 +20,17 @@ Il faut donc au moins :
 
 ## La base postgresql
 
-Un serveur Postgresql va acueillir une base appelée *"osm"*.
+Un serveur Postgresql va accueillir une base appelée *"osm"*.
 
 (Il y aura plusieurs serveurs)
 
 La base est divisée en plusieurs schémas, en fonction des outils utilisés pour l'import, mais aussi en fonction des usages.
 
-La doc sur les shémas de postgresql est ici :
+La doc sur les schémas de postgresql est ici :
 
 http://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs
 
-Nous utiliserons les serveurs, les schemas, les tables, suivantes :
+Nous utiliserons les serveurs, les schémas, les tables, suivantes :
 
 (les dernières colonnes indiquent le système de coordonnées à utiliser quand on charge les données dans qgis)
 
@@ -110,7 +110,7 @@ cd ~/Documents/install/source/osm/
 
 Nous allons tester plusieurs utilitaires pour l'import des données.
 
-L'utilisation de ces utilitaires va etre automatisée avec des scripts.
+L'utilisation de ces utilitaires va être automatisée avec des scripts.
 
 ### Les scripts
 
@@ -134,7 +134,7 @@ les différents scripts osm sont ici:
 Le dernier script, **osmPrepareQgis.sh**, ne fait que créer des vues afin d'alléger
 l'usage des données avec Qgis.
 
-Le fihier qgis est ici
+Le fichier qgis est ici
 ```
 ~/Documents/technic/source/voirie/localhost_osm.qgs
 ```
@@ -201,10 +201,10 @@ chmod 600 ~/.pgpass
 
 On verra ci dessous que l'import des données dans la base osm peut être paramétré à l'aide de "style".
 
-Nous allons donc recupérer les styles grâce au script ./installOSMCartoCSS.sh
+Nous allons donc récupérer les styles grâce au script ./installOSMCartoCSS1.sh
 
 ```
-./installOSMCartoCSS.sh
+./installOSMCartoCSS1.sh
 ```
 
 On commence par créer un répertoire, dans le système de fichier, qui va nous permettre de stocker les données au format planet.
@@ -241,7 +241,7 @@ On peut lancer l'exécution de l'import
 ./osmImportFirstTime.sh
 ```
 
-L'import est réalisé dans différenst schémas.
+L'import est réalisé dans différents schémas.
 
 L'utilitaire osmosis va nous permettre de stocker les données dans le schéma apidb.
 
@@ -253,7 +253,7 @@ La doc sur le "style", c'est à dire sur la façon de paramétrer l'import des d
 
 https://wiki.openstreetmap.org/wiki/Osm2pgsql#Import_style
 
-Le style par defaut est ici
+Le style par défaut est ici
 
 https://github.com/openstreetmap/osm2pgsql/blob/master/default.style
 
@@ -265,7 +265,7 @@ et ici
 
 On modifiera peut-être le style par défaut et on ne gardera peut-être pas tous ces schémas : on fera le choix en fonction de l'usage.
 
-Le script ./installOSMCartoCSS.sh est chargé de la récupération des styles spécifiques.
+Le script ./installOSMCartoCSS1.sh est chargé de la récupération des styles spécifiques.
 
 Donc, l'enchaînement de tous les scripts pour le premier chargement des données est :
 
@@ -275,7 +275,7 @@ Donc, l'enchaînement de tous les scripts pour le premier chargement des donnée
 
 ```
 ./installOsmTools.sh \
-./installOSMCartoCSS.sh \
+./installOSMCartoCSS1.sh \
 ./01_base_create.py \
 ./osmCreateRepository.sh \
 ./osmDownloadFirstTime.sh \
@@ -305,7 +305,7 @@ Pour faire simple, il suffit donc d'exécuter :
 
 Le téléchargement des données et l'import dans la base de données ont été automatisés et un job est ajouté dans le crontab
 
-Ajout d une tache cron qui va mettre a jour les donnes osm'
+Ajout d'une tache cron qui va mettre a jour les donnes osm'
 https://doc.ubuntu-fr.org/cron'
 
 ```

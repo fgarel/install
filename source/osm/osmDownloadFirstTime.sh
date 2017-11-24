@@ -58,28 +58,28 @@ echo "# On prend celui du jour (de la veille ?), car on veut être sûr qu'on ne
 echo "# de données : ce n'est pas grave de prendre des données plus vielles,"
 echo "# car il va juste réécrire dessus."
 echo "#"
-echo "# Dans notre cas, nous sommes le 18 aout 2017,"
+echo "# Dans notre cas, nous sommes le 20 novembre 2017,"
 echo "# alors, on va telecharger le fichier qui se trouve dans ce repertoire :"
 echo "#"
 echo "# http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/"
 echo "#"
 echo "# et qui s'appelle"
 echo "#"
-echo "# 610.state.txt   :-> car il date du 18 aout 2017"
+echo "# 704.state.txt   :-> car il date du 20 novembre 2017"
 echo "#"
 echo "# cf aussi https://osm.mazdermind.de/replicate-sequences/"
 echo "#"
 #echo "wget -P /home/fred/Documents/osmosis/\\"
-#echo "     http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/488.state.txt"
+#echo "     http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/704.state.txt"
 #      wget -P /home/fred/Documents/osmosis/ \
-#           http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/488.state.txt
-echo "sudo -u www-data wget http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/610.state.txt"
-      sudo -u www-data wget http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/610.state.txt
+#           http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/704.state.txt
+echo "sudo -u www-data wget http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/704.state.txt"
+      sudo -u www-data wget http://download.geofabrik.de/europe/france/poitou-charentes-updates/000/001/704.state.txt
 echo "#"
 echo "# Lorsqu'on a téléchargé le fichier xxx.state.txt, il est nécessaire de le renommer en state.txt"
 echo "#"
-echo "sudo -u www-data mv 610.state.txt state.txt"
-      sudo -u www-data mv 610.state.txt state.txt
+echo "sudo -u www-data mv 704.state.txt state.txt"
+      sudo -u www-data mv 704.state.txt state.txt
 #echo "mv /home/fred/Documents/osmosis/596-state.txt /home/fred/Documents/osmosis/state.txt"
 #      mv /home/fred/Documents/osmosis/596.state.txt /home/fred/Documents/osmosis/state.txt
 echo "#"

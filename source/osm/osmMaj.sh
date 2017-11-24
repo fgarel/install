@@ -6,40 +6,45 @@ echo "# osmMaj.sh"
 echo "###############################################"
 echo "#"
 echo "#"
-echo "# Téléchargement des données diff"
-echo "./osmDownloadOtherTime.sh"
-echo "~fred/Documents/install/source/osm/osmDownloadOtherTime.sh"
-      ~fred/Documents/install/source/osm/osmDownloadOtherTime.sh
+echo '# Attention, il faut distinguer deux scripts a cause des droits des utilisateurs'
+echo '# En effet, osmosis et osm2pgsql ne sont pas lancer par le même utilisateur'
+echo '# et pour automatiser ces taches, nous avons créer un script par utilisateur'
+echo '# chacun aura son fichier crontab'
 echo "#"
 echo "#"
-echo "# Import de ces données"
-echo "./osmImportOtherTime.sh"
-echo "~fred/Documents/install/source/osm/osmImportOtherTime.sh"
-      ~fred/Documents/install/source/osm/osmImportOtherTime.sh
+echo 'sudo -u www-data \'
+echo "     ~fred/Documents/install/source/osm/osmMajWww-data.sh"
+      sudo -u www-data \
+           ~fred/Documents/install/source/osm/osmMajWww-data.sh
 echo "#"
+echo "~fred/Documents/install/source/osm/osmMajNormal-user.sh"
+      ~fred/Documents/install/source/osm/osmMajNormal-user.sh
 echo "#"
 echo "# Test"
 echo "#./osmTest.sh"
 echo "#~fred/Documents/install/source/osm/osmTest.sh"
-      #~fred/Documents/install/source/environnementTravail/osmTest.sh
-echo "#"
 echo '#'
 echo '#---------------------------------------'
-echo '# Ajout d une tache cron qui va mettre a jour les donnes osm'
+echo '# Ajout de deux taches cron qui vont mettre a jour les donnes osm'
 echo '# https://doc.ubuntu-fr.org/cron'
 echo '#'
-echo '# crontab -l'
+echo '# A. une tache cron pour l utilisateur www-data'
+echo '#      cette tache se decompose en 1. telechargement des données'
+echo '#                                  2. import avec osm2pgsql'
+echo '# B. une tache cron pour l utilisateur normal'
+echo '#      cette tache se limite a     3. import avec osmosis'
 echo '#'
-echo '# crontab -e'
 echo '#'
-echo '# tous les jours à 7 heure'
-echo '# 0 7 * * * /home/fred/Documents/install/source/environnementTravail/osmMaj.sh'
+echo '# Tous les jours à 7 heure'
+echo '# 0 7 * * * /home/fred/Documents/install/source/osm/osmMajWww-data.sh'
+echo '# Tous les jours à 7 heure 10'
+echo '# 10 7 * * * /home/fred/Documents/install/source/osm/osmMajNomral-user.sh'
 echo '#'
 echo '#---------------------------------------'
-# attention, il faudra peut-etre distinguer l'execution de osmosis et de osm2pgsql
-# en effet, une commande peut-etre utilisée par l'utiliateur normal,
-# tandis que l'autre outil doit etre untilisé par www-data
-# pour ajouter un job à la crontab de www-data, la commande est :
+# Attention, il faudra peut-etre distinguer l'execution de osmosis et de osm2pgsql
+# En effet, une commande peut-etre utilisée par l'utiliateur normal,
+# tandis que l'autre outil doit etre utilisé par www-data
+# Pour ajouter un job à la crontab de www-data, la commande est :
 
 # sudo crontab -u www-data -e
 
