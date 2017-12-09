@@ -1,18 +1,20 @@
 #!/bin/sh
 
 
+export JAVA_VERSION='9'
+export TOMCAT_VERSION='8'
 
 # installation de java
 ###############################################
 # installation de java
-echo "# Installation de java version openjdk 7"
+echo "# Installation de java version openjdk $JAVA_VERSION"
 echo "###############################################"
 echo "#"
 echo "# Installation de java (jre)"
-echo "sudo aptitude install openjdk-7-jre"
-      sudo aptitude install openjdk-7-jre
+echo "sudo aptitude install openjdk-$JAVA_VERSION-jre"
+      sudo aptitude install openjdk-$JAVA_VERSION-jre
 echo "#"
-echo "# declaration de la variable JAVA_HOME"
+echo "# Declaration de la variable JAVA_HOME"
 echo "#"
 echo "# http://serverfault.com/questions/143786/how-to-determine-java-home-on-debian-ubuntu"
 echo "# http://stackoverflow.com/questions/84882/sudo-echo-something-etc-privilegedfile-doesnt-work-is-there-an-alterna"
@@ -67,11 +69,11 @@ echo "#"
 #echo "sudo dpkg -i oracle-java8-jre_8u121_amd64.deb"
 #      sudo dpkg -i oracle-java8-jre_8u121_amd64.deb
 echo "#"
-echo "# configuration des alternatives"
+echo "# Configuration des alternatives"
 #echo "sudo update-alternatives --config java"
 #      sudo update-alternatives --config java
 echo "#"
-echo "# declaration de la variable JAVA_HOME"
+echo "# Declaration de la variable JAVA_HOME"
 echo "#"
 echo "# http://serverfault.com/questions/143786/how-to-determine-java-home-on-debian-ubuntu"
 echo "# http://stackoverflow.com/questions/84882/sudo-echo-something-etc-privilegedfile-doesnt-work-is-there-an-alterna"
@@ -84,28 +86,32 @@ echo "source /etc/environment"
 echo 'echo $JAVA_HOME'
 echo "# -------------------------------"
 echo "#"
-echo "# Installation de Tomcat 8"
+echo "# Installation de Tomcat $TOMCAT_VERSION"
 echo "#"
 echo "# http://docs.geoserver.org/latest/en/user/installation/war.html"
 echo "#"
-echo "sudo aptitude install tomcat8"
-      sudo aptitude install tomcat8
+echo "sudo aptitude install tomcat$TOMCAT_VERSION"
+      sudo aptitude install tomcat$TOMCAT_VERSION
 echo "#"
-echo "sudo aptitude install tomcat8-admin"
-      sudo aptitude install tomcat8-admin
+echo "sudo aptitude install tomcat$TOMCAT_VERSION-admin"
+      sudo aptitude install tomcat$TOMCAT_VERSION-admin
 echo "#"
-echo "sudo aptitude install tomcat8-user"
-      sudo aptitude install tomcat8-user
+echo "sudo aptitude install tomcat$TOMCAT_VERSION-user"
+      sudo aptitude install tomcat$TOMCAT_VERSION-user
 echo "#"
-echo "#sudo aptitude install tomcat8-examples"
-      #sudo aptitude install tomcat8-examples
+echo "#sudo aptitude install tomcat$TOMCAT_VERSION-examples"
+      #sudo aptitude install tomcat$TOMCAT_VERSION-examples
 echo "#"
-echo "#sudo aptitude install tomcat8-docs"
-      #sudo aptitude install tomcat8-docs
+echo "#sudo aptitude install tomcat$TOMCAT_VERSION-docs"
+      #sudo aptitude install tomcat$TOMCAT_VERSION-docs
 echo "#"
 echo "# Ajout des roles admini-gui et manager-gui"
 echo "#"
-echo "# vi /var/lib/tomcat8/conf/tomcat-users.xml"
+echo "# Attention il faut etre super-utilisateur pour pouvoir modifier"
+echo "# ce fichier de configuration"
+echo "#"
+echo "# sudo su"
+echo "# vi /var/lib/tomcat$TOMCAT_VERSION/conf/tomcat-users.xml"
 echo "#"
 echo "<tomcat-users>"
 echo '  <role rolename="admin-gui"/>'
@@ -119,7 +125,7 @@ echo '  <user username="geoserver" password="geoserver" roles="profil-01"/>'
 echo "</tomcat-users>"
 echo "#"
 echo "#"
-echo "# sudo service tomcat8 restart"
+echo "# sudo service tomcat$TOMCAT_VERSION restart"
 echo "#"
 
 echo ""

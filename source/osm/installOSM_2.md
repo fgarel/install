@@ -108,6 +108,9 @@ Il faut donc au moins :
   - autre serveur de tuile openmaptiles (tuiles vectorielles)
     https://git.osgeo.org/gogs/foss4g-europe/foss4g-europe-2017-paris/src/master/presentations/2017-07-20/general_track/foss4g-europe-2017-OpenMapTiles_Ready_to_use_OpenStreetMap_vector_tiles-PetrSloup.pdf
 
+  - autre doc
+    https://www.apicy.fr/carte/realiser-une-carte-similaire
+
 old :
   - l'outil tirex, equivalent de renderd, nécessaire pour fabriquer les tuiles, est installé manuellement
     Tirex

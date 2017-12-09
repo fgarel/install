@@ -103,8 +103,20 @@ echo 'nnoremap <F5> :w<CR>:make<CR>'
 echo 'nnoremap <F5> :w<CR>:make<CR>' >> ~/.vimrc.local.d/functions.vim
 echo 'inoremap <F5> <Esc>:w<CR>:make<CR>'
 echo 'inoremap <F5> <Esc>:w<CR>:make<CR>' >> ~/.vimrc.local.d/functions.vim
-echo 'vnoremap <F5> :<C-u>:w<CR>:make<CR>'
-echo 'vnoremap <F5> :<C-u>:w<CR>:make<CR>' >> ~/.vimrc.local.d/functions.vim
+echo ''
+echo '' >> ~/.vimrc.local.d/functions.vim
+echo '" vu ici : http://stackoverflow.com/questions/12030965/change-the-mapping-of-f5-on-the-basis-of-specific-file-type'
+echo 'vu ici : https://stackoverflow.com/questions/12030965/change-the-mapping-of-f5-on-the-basis-of-specific-file-type' >> ~/.vimrc.local.d/functions.vim
+echo 'autocmd Filetype c,cpp  inoremap <buffer> <F5> <C-o>:update<Bar>execute '!make '.shellescape(expand('%:r'), 1)<CR>'
+echo 'autocmd Filetype c,cpp  inoremap <buffer> <F5> <C-o>:update<Bar>execute '!make '.shellescape(expand('%:r'), 1)<CR>' >> ~/.vimrc.local.d/functions.vim
+echo 'autocmd Filetype python inoremap <buffer> <F5> <C-o>:update<Bar>execute '!python '.shellescape(@%, 1)<CR>'
+echo 'autocmd Filetype python inoremap <buffer> <F5> <C-o>:update<Bar>execute '!python '.shellescape(@%, 1)<CR>' >> ~/.vimrc.local.d/functions.vim
+echo 'autocmd Filetype java   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!javac '.shellescape(@%, 1)<CR>'
+echo 'autocmd Filetype java   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!javac '.shellescape(@%, 1)<CR>' >> ~/.vimrc.local.d/functions.vim
+echo '" autocmd Filetype plantuml   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!plantuml '.shellescape(@%, 1)<CR>"'
+echo '" autocmd Filetype plantuml   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!plantuml '.shellescape(@%, 1)<CR>"' >> ~/.vimrc.local.d/functions.vim
+echo ''
+echo '' >> ~/.vimrc.local.d/functions.vim
 echo ""
 echo "# Fabrication du fichier ~/.vimrc.before.local"
 echo "##############################################"
