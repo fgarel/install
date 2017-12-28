@@ -14,6 +14,14 @@ echo "#"
 echo "sudo apt-get install unzip"
       sudo apt-get install unzip
 echo "#"
+echo "export OLDPWDFG=$(pwd)"
+      export OLDPWDFG=$(pwd)
+echo $OLDPWDFG
+echo "cd .."
+      cd ..
+echo "pwd"
+      pwd
+echo "#"
 echo "# Installation de geoserver et de quelques extensions"
 echo "# dont le plugin geogig"
 echo "#"
@@ -109,6 +117,10 @@ echo "rm -f gs-geogig-$GEOSERVER_PLUGIN_GEOGIG_VERSION.zip"
 echo "rm -rf gs-geogig-$GEOSERVER_PLUGIN_GEOGIG_VERSION"
       rm -rf gs-geogig-$GEOSERVER_PLUGIN_GEOGIG_VERSION
 echo "#"
+echo "cd $OLDPWDFG"
+      cd $OLDPWDFG
+echo "pwd"
+      pwd
 echo "#-----------------------------------------------------------------------"
 echo "#"
 echo "# Attention, il faut redemarer geoserver, pour qu'il prenne en compte le plugin geogig"

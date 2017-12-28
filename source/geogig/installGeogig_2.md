@@ -43,7 +43,7 @@ sudo -u postgres psql -c "ALTER ROLE '$POSTGRESQL_USER' SUPERUSER NOCREATEDB NOC
 
 La création de cette base de données geogig se fait grace au script python
 ```
-~/Documents/install/source/geogig/01_base_create.py
+~/Documents/install/source/geogig/bin/01_base_create.py
 ```
 
 Nota :
@@ -69,7 +69,7 @@ name : pcrs
 uri : http://geoserver.cdalr.fr/geoserver/pcrs
 default workspace : oui
 
-les différents espaces de travail que l'on va créer par la suite sont :
+Les différents espaces de travail que l'on va créer par la suite sont :
 pcrs
 rtge
 cada
@@ -82,7 +82,7 @@ bati
 Création d'un nouvel entrepot de type geogig
 
 2 façons de faire :
- - la première, en passanat par le menu Données / Entrepôts
+ - la première, en passant par le menu Données / Entrepôts
  - la seconde, en passant par le menu Geogig / Geogig Repositories
 
 ##### 1ere methode : Données / Entrepôts

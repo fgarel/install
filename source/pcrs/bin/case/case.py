@@ -7,7 +7,12 @@
 #from database import parametresConnection
 import sys
 import math
-
+import datetime
+import os
+import stat
+# les deux derniers imports, c'est
+# pour rendre le script executable...
+# https://stackoverflow.com/questions/12791997/how-do-you-do-a-simple-chmod-x-from-within-python
 
 class GenerateurCaseFolio(object):
 
@@ -18,19 +23,37 @@ class GenerateurCaseFolio(object):
     - une fonction qui genère une instruction sql à partir d'un nom de case
     """
 
-    def __init__(self):
+    def __init__(self, echelle=200, format='A1'):
         u""" Fonction lancée au moment de l'instanciation. """
         self.CCC = "CDA"
         self.PP = "46"
         self.separateur = "-"
-        self.format = "010000_A1_07000_05000"
-        self.format = "005000_A1_03500_02500"
-        self.format = "002000_A1_01400_01000"
-        self.format = "001000_A1_00700_00500"
-        self.format = "000500_A1_00350_00250"
-        self.format = "000200_A1_00140_00100"
-        #self.format = "000200_A3_00070_00050"
-        self.datePublication = '2017-10-02'
+
+        if (echelle == 10000 and format == "A1"):
+            self.format = "010000_A1_07000_05000"
+        elif (echelle == 5000 and format == "A1"):
+            self.format = "005000_A1_03500_02500"
+        elif (echelle == 2000 and format == "A1"):
+            self.format = "002000_A1_01400_01000"
+        elif (echelle == 1000 and format == "A1"):
+            self.format = "001000_A1_00700_00500"
+        elif (echelle == 500 and format == "A1"):
+            self.format = "000500_A1_00350_00250"
+        elif (echelle == 200 and format == "A1"):
+            self.format = "000200_A1_00140_00100"
+        elif (echelle == 200 and format == "A3"):
+            self.format = "000200_A3_00070_00050"
+        else:
+            self.format = "000200_A1_00140_00100"
+
+        # self.format = "010000_A1_07000_05000"
+        # self.format = "005000_A1_03500_02500"
+        # self.format = "002000_A1_01400_01000"
+        # self.format = "001000_A1_00700_00500"
+        # self.format = "000500_A1_00350_00250"
+        # self.format = "000200_A1_00140_00100"
+        # self.format = "000200_A3_00070_00050"
+        self.datePublication = datetime.datetime.now().strftime("%Y-%m-%d")
         self.gestionnaire = '05'
         self.type = '03'
         self.dictDiviseEn04 = { '0,1': 'A', '1,1': 'B',
@@ -213,6 +236,7 @@ class GenerateurCaseFolio(object):
         if len(case)==18:
             self.XM = int(self.ppppp) * 7000
             self.YM = int(self.qqqqq) * 5000
+            self.format = "010000_A1_07000_05000"
         elif len(case)==20:
             self.A = case[19]
             for cle, valeur in self.dictDiviseEn04.items():
@@ -220,6 +244,7 @@ class GenerateurCaseFolio(object):
                     self.p005000,self.q005000 = cle.split(',')
             self.XM = int(self.ppppp) * 7000 + int(self.p005000) * 3500
             self.YM = int(self.qqqqq) * 5000 + int(self.q005000) * 2500
+            self.format = "005000_A1_03500_02500"
         elif len(case)==21:
             self.AA = case[19:21]
             #print(case, self.AA)
@@ -229,6 +254,7 @@ class GenerateurCaseFolio(object):
                     #print(self.p002000, self.q002000)
             self.XM = int(self.ppppp) * 7000 + int(self.p002000) * 1400
             self.YM = int(self.qqqqq) * 5000 + int(self.q002000) * 1000
+            self.format = "002000_A1_01400_01000"
         elif len(case)==23:
             self.AA = case[19:21]
             self.B = case[22]
@@ -242,6 +268,7 @@ class GenerateurCaseFolio(object):
                     #print(self.p001000, self.q001000)
             self.XM = int(self.ppppp) * 7000 + int(self.p002000) * 1400 + int(self.p001000) * 700
             self.YM = int(self.qqqqq) * 5000 + int(self.q002000) * 1000 + int(self.q001000) * 500
+            self.format = "001000_A1_00700_00500"
         elif len(case)==25:
             self.AA = case[19:21]
             self.B = case[22]
@@ -260,6 +287,7 @@ class GenerateurCaseFolio(object):
                     #print(self.p000500, self.q000500)
             self.XM = int(self.ppppp) * 7000 + int(self.p002000) * 1400 + int(self.p001000) * 700 + int(self.p000500) * 350
             self.YM = int(self.qqqqq) * 5000 + int(self.q002000) * 1000 + int(self.q001000) * 500 + int(self.q000500) * 250
+            self.format = "000500_A1_00350_00250"
         elif len(case)==26:
             self.AA = case[19:21]
             self.B = case[22]
@@ -279,6 +307,7 @@ class GenerateurCaseFolio(object):
                     #print(self.p000200, self.q000200)
             self.XM = int(self.ppppp) * 7000 + int(self.p002000) * 1400 + int(self.p001000) * 700 + int(self.p000200) * 140
             self.YM = int(self.qqqqq) * 5000 + int(self.q002000) * 1000 + int(self.q001000) * 500 + int(self.q000200) * 100
+            self.format = "000200_A1_00140_00100"
         elif len(case)==28:
             self.AA = case[19:21]
             self.B = case[22]
@@ -302,11 +331,12 @@ class GenerateurCaseFolio(object):
                     #print(self.p000200A3, self.q000200A3)
             self.XM = int(self.ppppp) * 7000 + int(self.p002000) * 1400 + int(self.p001000) * 700 + int(self.p000200) * 140 + int(self.p000200A3) * 70
             self.YM = int(self.qqqqq) * 5000 + int(self.q002000) * 1000 + int(self.q001000) * 500 + int(self.q000200) * 100 + int(self.q000200A3) * 50
+            self.format = "000200_A3_00070_00050"
         #print('XM = {}, YM =  {}'.format(self.XM, self.YM))
         self.casesFromXMYM(self.XM, self.YM)
 
 
-    def printUpsert(self):
+    def updateCaseGeom(self):
         u""" """
         if (self.format == "010000_A1_07000_05000"):
             self.case = self.case_010000_A1_07000_05000
@@ -330,6 +360,12 @@ class GenerateurCaseFolio(object):
             self.case = self.case_000200_A3_00070_00050
             self.geom = self.geom_000200_A3_00070_00050
 
+    def sqlFileCreate(self, dbschema, sqlfile):
+        u""" """
+        self.updateCaseGeom()
+
+        self.sqlfileraw = open(sqlfile,'w')
+
         print("""
         INSERT INTO a_pcrs."EmpriseEchangePCRS"(
                                     complement,
@@ -347,32 +383,211 @@ class GenerateurCaseFolio(object):
                                              gestionnaire=self.gestionnaire,
                                              type=self.type,
                                              geom=self.geom))
+        self.sqlfileraw.write("""
+        INSERT INTO "{schema}"."EmpriseEchangePCRS"(
+                                    complement,
+                                    "datePublication",
+                                    gestionnaire,
+                                    type,
+                                    geometrie)
+            select
+              '{case}' as "complement",
+              date '{date}' as "datePublication",
+              '{gestionnaire}' as "gestionnaire",
+              '{type}' as "type",
+              {geom} as geometrie;""".format(schema=dbschema,
+                                             case=self.case,
+                                             date=self.datePublication,
+                                             gestionnaire=self.gestionnaire,
+                                             type=self.type,
+                                             geom=self.geom))
+        self.sqlfileraw.close()
         return
 
+    def geogigShellCreate(self,
+                          dbhost='localhost',
+                          dbport=5432,
+                          dbname='geogig',
+                          dbschema='pcrs',
+                          dbuser='',
+                          dbpass='',
+                          ggusername='',
+                          gguseremail='',
+                          geogigfile=''):
+        u""" """
+
+        self.updateCaseGeom()
+        self.geogigfileraw = open(geogigfile,'w')
+        self.geogigfileraw.write("#!/bin/sh\n")
+        self.geogigfileraw.write("\n")
+        self.geogigfileraw.write("""
+        DBHOST={dbhost}
+        DBPORT={dbport}
+        DBNAMEGEOGIG={dbname}
+        DBSCHEMAGEOGIG={dbschema}
+        DBNAMEORIGINE=sandbox
+        DBSCHEMAORIGINE=a_pcrs
+        DBREPO={dbrepo}
+        DBUSER={dbuser}
+        DBPASS={dbpass}
+        USERNAME={ggusername}
+        USERMAIL={gguseremail}
+
+        REPOMULTI="postgresql://$DBHOST:$DBPORT/$DBNAMEGEOGIG/$DBSCHEMAGEOGIG?user=$DBUSER&password=$DBPASS"
+
+        LISTBRANCHES='develop_enCoursDeMiseAJourInterne feature_projetExterne release_pourDiffusion hotfix_modifRapide'
+
+        echo "#"
+        echo "#"
+        echo "# Creation et Initialisation du dépot {dbrepo}"
+        echo "#"
+        echo "# C'est un depot geogig qui utilise postgresql comme storage backend"
+        echo "# La doc est sur cette page"
+        echo "# http://geogig.org/docs/repo/storage.html"
+        echo "#"
+        echo "# Initialisation du depot geogig"
+        echo "#"
+        echo "#"
+        echo "geogig --repo $REPOONE \ "
+        echo "       init"
+              geogig --repo $REPOONE \\
+                     init
+        echo "#"
+        echo "#"
+        echo "# Configuration de geogig"
+        echo "#"
+        echo "geogig --repo $REPOONE \ "
+        echo "       config --global user.name \"$USERNAME\""
+              geogig --repo $REPOONE \\
+                     config --global user.name "$USERNAME"
+        echo "geogig --repo $REPOONE \ "
+        echo "       config --global user.email \"$USERMAIL\""
+              geogig --repo $REPOONE \\
+                     config --global user.email "$USERMAIL"
+        echo "#"
+        echo "# On renomme la branche master"
+        echo "#"
+        echo "geogig --repo $REPOONE \ "
+        echo "       branch -m master_selonInfosDisponibles"
+              geogig --repo $REPOONE \\
+                     branch -m master_selonInfosDisponibles
+        echo "#"
+        echo "# Import des données de la base origine dans le depot"
+        echo "#"
+              ./03_baseUpdate.py
+        echo "geogig --repo $REPOONE \ "
+        echo "       pg import --host $DBHOST --database $DBNAMEORIGINE --user $DBUSER --password $DBPASS --schema \"$DBSCHEMAORIGINE\" --all"
+              geogig --repo $REPOONE \\
+                     pg import --host $DBHOST --database $DBNAMEORIGINE --user $DBUSER --password $DBPASS --schema \"$DBSCHEMAORIGINE\" --all
+
+        echo "#"
+        echo "# Enregistrement des données importées pour validation"
+        echo "#"
+        echo "geogig --repo $REPOONE \ "
+        echo "       add"
+              geogig --repo $REPOONE \\
+                     add
+        echo "#"
+        echo "# Commit"
+        echo "#"
+        echo "geogig --repo $REPOONE \ "
+        echo "       commit -m 'Commit initial'"
+              geogig --repo $REPOONE \\
+                     commit -m 'Commit initial'
+        echo "#"
+        echo "# Creation de 4 autres branches"
+        echo "#"
+        echo 'for BRANCHE in $LISTBRANCHES ; '
+        echo '    do'
+        echo '        echo ""'
+        echo '        geogig --repo $REPOONE \ '
+        echo '               branch $BRANCHE'
+        echo '    done'
+             for BRANCHE in $LISTBRANCHES ;
+                 do
+                     echo ""
+                     geogig --repo $REPOONE \\
+                            branch $BRANCHE
+                 done
+        echo "#"
+        echo "# Status"
+        echo "#"
+        echo "geogig --repo $REPOONE \ "
+        echo "       status"
+              geogig --repo $REPOONE \\
+                     status
+        """.format(dbhost=dbhost,
+                   dbport=dbport,
+                   dbname=dbname,
+                   dbschema=dbschema,
+                   dbrepo=self.case,
+                   dbuser=dbuser,
+                   dbpass=dbpass,
+                   ggusername=ggusername,
+                   gguseremail=gguseremail))
+        self.geogigfileraw.close()
+
+        # pour rendre le script executable...
+        # https://stackoverflow.com/questions/12791997/how-do-you-do-a-simple-chmod-x-from-within-python
+        st = os.stat(geogigfile)
+        os.chmod(geogigfile, st.st_mode | stat.S_IEXEC)
+
+        return
 
 def main():
     u""" Fonction appelée par défaut. """
-    mygenerateur = GenerateurCaseFolio()
-    if len(sys.argv) > 3:
-        raise 'Expected at most one argument.'
+    #from ../database import parametresConnexion
+
+    if len(sys.argv) > 5 or len(sys.argv)  == 4:
+        raise 'Pas plus de quatre arguments.....'
+    elif len(sys.argv) == 5:
+        # Si on a quatre arguments, alors, c'est que les données initiales sont
+        # les coordonnées d'un point (X et Y)
+        # l'echelle du plan
+        # le format de papier
+        mygenerateur = GenerateurCaseFolio(float(sys.argv[3]), sys.argv[4])
+        mygenerateur.casesFromXMYM(float(sys.argv[1]),float(sys.argv[2]))
     elif len(sys.argv) == 3:
         # Si on a deux arguments, alors, c'est que les données initiales sont
         # les coordonnées d'un point
+        mygenerateur = GenerateurCaseFolio(200, "A1")
         mygenerateur.XM = sys.argv[1]
         mygenerateur.YM = sys.argv[2]
         mygenerateur.casesFromXMYM(float(sys.argv[1]),float(sys.argv[2]))
     elif len(sys.argv) == 2:
         # Si on a qu'un argument, alors, c'est que nous avons comme donnée initiale
         # le nom de la case
+        mygenerateur = GenerateurCaseFolio()
         mygenerateur.casesFromName(sys.argv[1])
-
     elif len(sys.argv) == 1:
+        mygenerateur = GenerateurCaseFolio(200, "A1")
         mygenerateur.casesFromXMYM(1379337.91,5225674.16)
         print('Test !')
         print('1 argument  : nom d une case')
+        print('              CDA-46-00197-01045-21-A-18')
+        print('              CDA-46-00197-01045-16-D-16')
+        print('              CDA-46-00197-01045-16-D-16-D')
         print('2 arguments : X et Y d un point')
-    #mygenerateur.casesFromXMYM(1379337.91,5225674.16)
-    mygenerateur.printUpsert()
+        print('              1379337.91 5225674.16')
+        print('              1379700 5226110')
+        print('4 arguments : nom d une case, echelle, format papier')
+        print('              1379700 5226110 1000 A1')
+        print('              1379700 5226110 200 A1')
+        print('              1379700 5226110 200 A3')
+
+    mygenerateur.sqlFileCreate(
+        dbschema='a_pcrs',
+        sqlfile='../../../pcrs/bin/sql/03_empriseEchangePCRSInsert.sql')
+    mygenerateur.geogigShellCreate(
+        dbhost='localhost',
+        dbport=5432,
+        dbname='geogig',
+        dbschema='pcrs',
+        dbuser='fred',
+        dbpass='fred',
+        ggusername='Frédéric Garel',
+        gguseremail='frederic.garel@ville-larochelle.fr',
+        geogigfile='../../../geogig/bin/06_geogigRepoInit.sh')
     #print('CCC        = {}'.format(mygenerateur.CCC))
     #print('PP         = {}'.format(mygenerateur.PP))
     #print('separateur = {}'.format(mygenerateur.separateur))

@@ -29,6 +29,7 @@ class Database(object):
         self.dict_dbuser_searchpath = paramconnexion.dict_dbuser_searchpath
         self.dict_dbname_dict_schema_dict_dbuser_listdroits = paramconnexion.dict_dbname_dict_schema_dict_dbuser_listdroits
         self.dict_dbname_dict_schema_listtables = paramconnexion.dict_dbname_dict_schema_listtables
+        self.dict_dbname_dict_schema_listsqlfiles = paramconnexion.dict_dbname_dict_schema_listsqlfiles
 
         self.hostname = paramconnexion.hostname
         self.port = paramconnexion.port
@@ -185,9 +186,25 @@ class Database(object):
         self.cur.close()
         self.conn.close()
 
-    def do_all(self):
+    def execute_sqlfile(self, dbname, schema, sqlfile):
+        self.dbname = dbname
+        self.schema = schema
+        self.sqlfile = sqlfile
+        #print("dbname    = {}".format(self.dbname))
+        #print('schema    = {}'.format(self.schema))
+        #print('sqlfile   = {}'.format(self.sqlfile))
+        self.conn = self.conn_database(self.dbname)
+        self.conn.autocommit = True
+        self.cur = self.conn.cursor()
+        self.sqlfileraw = open(self.sqlfile,'r')
+        self.cur.execute(self.sqlfileraw.read())
+        self.sqlfileraw.close()
+        self.cur.close()
+        self.conn.close()
+
+    def do_first(self):
         """
-        Methode pour automatiser la configuration de la base de données postgresql
+        Methode pour automatiser la creation de la base de données postgresql
         """
 
         # Creation des roles / utilisateurs
@@ -247,6 +264,29 @@ class Database(object):
             for schema, listtables in dict_schema_listtables.items():
                 for table in listtables:
                     self.create_table(dbname, schema, table)
+
+    def do_last(self):
+        """
+        Methode pour simplement executer un fichier sql dans la base
+        """
+
+        # Execution fichier de commandes SQL
+        print('10 Execution fichier de commandes SQL')
+        for dbname, dict_schema_listsqlfiles in self.dict_dbname_dict_schema_listsqlfiles.items():
+            for schema, listsqlfiles in dict_schema_listsqlfiles.items():
+                for sqlfile in listsqlfiles:
+                    self.execute_sqlfile(dbname, schema, sqlfile)
+
+
+
+    def do_all(self):
+        """
+        Methode pour automatiser la creation et la configuration de la base de
+        données postgresql
+        """
+
+        self.do_first()
+        self.do_last()
 
 def main():
     u""" Fonction appelée par défaut. """

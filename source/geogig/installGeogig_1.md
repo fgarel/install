@@ -20,12 +20,12 @@ L'installation est automatisée et détaillée via l'exécution d'un script
 Édition du fichier installGeogig.sh en fonction des versions,
 
 ```
-vi ~/Documents/install/source/geogig/installGeogig.sh
+vi ~/Documents/install/source/geogig/bin/installGeogig.sh
 ```
 
 Puis exécution
 ```
-~/Documents/install/source/geogig/installGeogig.sh
+~/Documents/install/source/geogig/bin/installGeogig.sh
 ```
 
 ## Installation de nginx et configuration des sites web
@@ -44,10 +44,13 @@ Le script a exécuter est donc :
 Java et Tomcat sont nécessaires pour l'installation de geoserver
 
 Quelle version de java ?
+Attention : il semble que geogig fonctionne avec java 8 mais pas avec java 9
+Avec java 9, nos tests on t fait apparaitre ce genre de messages :
+"WARNING: Illegal reflective access"
 ```
 apt-cache search openjdk | grep jre
 ```
-openjdk-9-jre
+openjdk-8-jre
 
 Quelle version de tomcat ?
 ```
@@ -98,11 +101,11 @@ https://github.com/locationtech/geogig/relesases/tag/v.1.2.0
 
 Edition du fichier installGeoServer.sh
 ```
-vi ~/Documents/install/source/geogig/installGeoServer.sh
+vi ~/Documents/install/source/geogig/bin/installGeoServer.sh
 ```
 Puis Execution
 ```
-~/Documents/install/source/geogig/installGeoServer.sh
+~/Documents/install/source/geogig/bin/installGeoServer.sh
 ```
 
 ```
@@ -120,7 +123,7 @@ https://github.com/SWM-IT/qgis-netze-gas/blob/master/documents/en_gb/Dokumentati
 ### Installation du plugin de boundlessgeo : Geogig Client
 L'installation du plugin se fait grace au script
 ```
-~/Documents/install/source/geogig/installPluginQgis.sh
+~/Documents/install/source/geogig/bin/installPluginQgis.sh
 ```
 
 Le plugin est accessible sous QGis dans le menu
@@ -131,7 +134,7 @@ Extension / Geogig
 ### Installation du plugin alternatif : Geogig Local Client
 L'installation du plugin se fait grace au script
 ```
-~/Documents/install/source/geogig/installPluginQgis.sh
+~/Documents/install/source/geogig/bin/installPluginQgis.sh
 ```
 
 Le plugin est accessible sous QGis dans le menu

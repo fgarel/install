@@ -89,17 +89,17 @@ def main():
     u""" Fonction appelée par défaut. """
     paramconnexion = ParametresConnexion()
 
-    print('dict_dbuser_dbpass = {}'.format(paramconnexion.dict_dbuser_dbpass))
-    print('dict_dbuser_droits = {}'.format(paramconnexion.dict_dbuser_droits))
-    print('dbname             = {}'.format(paramconnexion.dbname))
-    print('dbowner            = {}'.format(paramconnexion.dbowner))
-    print('listextension      = {}'.format(paramconnexion.listextension))
-    print('listschema         = {}'.format(paramconnexion.listschema))
+    print('dict_dbuser_dbpass         = {}'.format(paramconnexion.dict_dbuser_dbpass))
+    print('dict_dbuser_listdroits     = {}'.format(paramconnexion.dict_dbuser_listdroits))
+    print('listdbname                 = {}'.format(paramconnexion.listdbname))
+    print('dict_dbname_dbowner        = {}'.format(paramconnexion.dict_dbname_dbowner))
+    print('dict_dbname_listextensions = {}'.format(paramconnexion.dict_dbname_listextensions))
+    print('dict_dbname_listschemas    = {}'.format(paramconnexion.dict_dbname_listschemas))
 
-    print('hostname           = {}'.format(paramconnexion.hostname))
-    print('port               = {}'.format(paramconnexion.port))
-    print('username           = {}'.format(paramconnexion.username))
-    print('password           = {}'.format(paramconnexion.password))
+    print('hostname                   = {}'.format(paramconnexion.hostname))
+    print('port                       = {}'.format(paramconnexion.port))
+    print('username                   = {}'.format(paramconnexion.username))
+    print('password                   = {}'.format(paramconnexion.password))
     #print(connection)
 
 if __name__ == '__main__':

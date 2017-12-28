@@ -14,6 +14,14 @@ echo "#"
 #echo "rm -rf qgis-geogiglight-plugin"
 #      rm -rf qgis-geogiglight-plugin
 #echo "#"
+echo "export OLDPWDFG=$(pwd)"
+      export OLDPWDFG=$(pwd)
+echo $OLDPWDFG
+echo "cd .."
+      cd ..
+echo "pwd"
+      pwd
+echo "#"
 echo "git clone https://github.com/boundlessgeo/qgis-geogiglight-plugin"
       git clone https://github.com/boundlessgeo/qgis-geogiglight-plugin
 echo "git fetch https://github.com/boundlessgeo/qgis-geogiglight-plugin"
@@ -83,3 +91,7 @@ echo "#"
 echo "cp -r ./qgis-netze-gas/source/examples/python/plugins/GeogigLocalClient ~/.qgis2/python/plugins"
       cp -r ./qgis-netze-gas/source/examples/python/plugins/GeogigLocalClient ~/.qgis2/python/plugins
 echo "#"
+echo "cd $OLDPWDFG"
+      cd $OLDPWDFG
+echo "pwd"
+      pwd

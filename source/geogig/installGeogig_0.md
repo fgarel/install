@@ -22,7 +22,7 @@ Seconde partie,
   - Paramétrage d'un serveur web formulaire django
 
 Troisième partie,
-  - usage pour le geomètre, le dépositaire d'un plan de recolement
+  - usage pour le geomètre, le dépositaire d'un plan de récolement
   - usage pour la cellule Topo
 
 
