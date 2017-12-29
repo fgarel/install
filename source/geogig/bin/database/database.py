@@ -88,8 +88,8 @@ class Database(object):
         # La troisième commande, c'est pour lui affecter des droits
         commande = "sudo -u postgres " + \
                    "     psql -c " + \
-                   "\"" + "ALTER ROLE \\\"" + username + "\\\"" + \
-                   " " + right + ";" + "\""
+                   "\'" + 'ALTER ROLE "' + username + '"' + \
+                   " " + right + ";" + "\'"
 
         print("{}".format(commande))
         subprocess.call(
@@ -98,12 +98,11 @@ class Database(object):
 
     def update_role_searchpath(self, username, searchpath):
         # pour modifier le search_path d'un utilisateur
-
         commande = "sudo -u postgres " + \
                    "     psql -c " + \
-                   "\"" + "ALTER ROLE \\\"" + username + "\\\"" + \
+                   "\'" + 'ALTER ROLE "' + username + '"' + \
                    " " + "SET search_path = " + \
-                   "\\\"" + searchpath + "\\\";" + "\""
+                   " " + searchpath + ";" + "\'"
 
         print("{}".format(commande))
         subprocess.call(
@@ -117,6 +116,7 @@ class Database(object):
         self.dbowner = dbowner
         self.conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT) # <-- ADD THIS LINE
         self.cur = self.conn.cursor()
+        #self.cur.execute("-- REVOKE CONNECT ON DATABASE {} FROM public;".format(self.dbname))
         self.cur.execute("DROP DATABASE if exists {} ;".format(self.dbname))
         self.cur.execute("CREATE DATABASE {} ;".format(self.dbname))
         self.cur.execute("ALTER DATABASE {} OWNER TO \"{}\";".format(self.dbname, self.dbowner))

@@ -88,7 +88,7 @@ def main():
         dbpass='fred',
         ggusername='Frédéric Garel',
         gguseremail='frederic.garel@ville-larochelle.fr',
-        geogigfile='../../geogig/bin/06_geogigRepoInit.sh')
+        geogigfile='../../geogig/bin/05_flowParameters.sh')
     #print('CCC        = {}'.format(mygenerateur.CCC))
     #print('PP         = {}'.format(mygenerateur.PP))
     #print('separateur = {}'.format(mygenerateur.separateur))

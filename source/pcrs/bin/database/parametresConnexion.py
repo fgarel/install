@@ -52,10 +52,8 @@ class ParametresConnexion(object):
         #self.dbowner = 'osmuser'
         #self.listextension = ['adminpack', 'postgis', 'postgis_topology', 'fuzzystrmatch', 'hstore', 'dblink']
         #self.listschema = ['apidb', 'osm2pgsql']
-        self.listdbname = ['pcrs',
-                           'sandox']
-        self.dict_dbname_dbowner = {'pcrs':      'fred',
-                                    'sandbox':   'fred'}
+        self.listdbname = ['pcrs']
+        self.dict_dbname_dbowner = {'pcrs':      'fred'}
 
         self.dict_dbname_dict_dbuser_listdroits = \
             {'pcrs':             {'fred':                 ['CONNECT', 'TEMPORARY', 'ALL'],
@@ -67,11 +65,7 @@ class ParametresConnexion(object):
                                   'enedis':               ['CONNECT', 'TEMPORARY', 'ALL'],
                                   'sde':                  ['CONNECT', 'TEMPORARY', 'ALL'],
                                   'sdeer':                ['CONNECT', 'TEMPORARY', 'ALL'],
-                                  'dgfip':                ['CONNECT', 'TEMPORARY', 'ALL']},
-             'sandbox':          {'fred':                 ['CONNECT', 'TEMPORARY', 'ALL'],
-                                  'francois':             ['CONNECT', 'TEMPORARY', 'ALL'],
-                                  'michel':               ['CONNECT', 'TEMPORARY', 'ALL'],
-                                  'pascal':               ['CONNECT', 'TEMPORARY', 'ALL']}}
+                                  'dgfip':                ['CONNECT', 'TEMPORARY', 'ALL']}}
 
 
         self.dict_dbname_listextensions = {'pcrs':             ['adminpack',
@@ -79,60 +73,51 @@ class ParametresConnexion(object):
                                                                 'postgis_topology',
                                                                 'fuzzystrmatch',
                                                                 'hstore',
-                                                                'dblink'],
-                                           'sandbox':          ['adminpack',
-                                                                'postgis',
-                                                                'postgis_topology',
-                                                                'fuzzystrmatch',
-                                                                'hstore',
                                                                 'dblink']}
 
-        self.dict_dbname_listschemas = {'pcrs':   ['CDA-46-00197-01045-16-D-16',
-                                                   'CDA-46-00196-01045-20-D-15'],
-                                        'sandbox': ['a_pcrs']}
-        self.dict_dbuser_searchpath = {'fred':                 'public',
-                                       'francois':             'CDA-46-00197-01045-16-D-16, public',
-                                       'michel':               'CDA-46-00197-01045-16-D-16, public',
-                                       'pascal':               'CDA-46-00197-01045-16-D-16, public',
-                                       'cda':                  'CDA-46-00197-01045-16-D-16, public',
-                                       'soluris':              'CDA-46-00197-01045-16-D-16, public',
-                                       'enedis':               'CDA-46-00197-01045-16-D-16, public',
-                                       'sde':                  'CDA-46-00197-01045-16-D-16, public',
-                                       'sdeer':                'CDA-46-00197-01045-16-D-16, public',
-                                       'dgfip':                'CDA-46-00197-01045-16-D-16, public'                                       }
+        self.dict_dbname_listschemas = {'pcrs':   ['user_01',
+                                                   'user_02',
+                                                   'user_03',
+                                                   'user_04']}
+        self.dict_dbuser_searchpath = {'fred':                 '"$user", user_01, public',
+                                       'francois':             '"$user", user_02, public',
+                                       'michel':               '"$user", user_03, public',
+                                       'pascal':               '"$user", user_04, public',
+                                       'cda':                  'public',
+                                       'soluris':              'public',
+                                       'enedis':               'public',
+                                       'sde':                  'public',
+                                       'sdeer':                'public',
+                                       'dgfip':                'public'                                       }
         self.dict_dbname_dict_schema_dict_dbuser_listdroits = \
-            {'pcrs': {'CDA-46-00197-01045-16-D-16': {'fred':                 ['ALL'],
+            {'pcrs': {'user_01':                    {'fred':                 ['ALL'],
                                                      'francois':             ['ALL'],
                                                      'michel':               ['ALL'],
-                                                     'pascal':               ['ALL'],
-                                                     'cda':                  ['ALL'],
-                                                     'soluris':              ['ALL'],
-                                                     'enedis':               ['ALL'],
-                                                     'sde':                  ['ALL'],
-                                                     'sdeer':                ['ALL'],
-                                                     'dgfip':                ['ALL']},
-                      'CDA-46-00196-01045-20-D-15': {'fred':                 ['ALL'],
+                                                     'pascal':               ['ALL']},
+                      'user_02':                    {'fred':                 ['ALL'],
                                                      'francois':             ['ALL'],
                                                      'michel':               ['ALL'],
-                                                     'pascal':               ['ALL'],
-                                                     'cda':                  ['ALL'],
-                                                     'soluris':              ['ALL'],
-                                                     'enedis':               ['ALL'],
-                                                     'sde':                  ['ALL'],
-                                                     'sdeer':                ['ALL'],
-                                                     'dgfip':                ['ALL']}}}
+                                                     'pascal':               ['ALL']},
+                      'user_03':                    {'fred':                 ['ALL'],
+                                                     'francois':             ['ALL'],
+                                                     'michel':               ['ALL'],
+                                                     'pascal':               ['ALL']},
+                      'user_04':                    {'fred':                 ['ALL'],
+                                                     'francois':             ['ALL'],
+                                                     'michel':               ['ALL'],
+                                                     'pascal':               ['ALL']}}}
         self.dict_dbname_dict_schema_listtables = \
-            {'pcrs':     {'CDA-46-00197-01045-16-D-16': [],
-                          'CDA-46-00196-01045-20-D-15': []},
-             'sandbox':  {'public': [],
-                          'a_pcrs': []}}
+            {'pcrs':     {'user_01': [],
+                          'user_02': [],
+                          'user_03': [],
+                          'user_04': []}}
 
 
         self.dict_dbname_dict_schema_listsqlfiles = \
-            {'pcrs':     {'CDA-46-00197-01045-16-D-16': [],
-                          'CDA-46-00196-01045-20-D-15': []},
-             'sandbox':  {'a_pcrs': ['sql/01_create_table_pcrs_v199_20171227.sql',
-                                     'sql/03_init_empriseechange.sql']}}
+            {'pcrs':     {'user_01': [],
+                          'user_02': [],
+                          'user_03': [],
+                          'user_04': []}}
 
         # les paramètres pour la connexion
         self.hostname = 'localhost'

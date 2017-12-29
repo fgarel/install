@@ -421,101 +421,48 @@ class GenerateurCaseFolio(object):
         self.geogigfileraw.write("#!/bin/sh\n")
         self.geogigfileraw.write("\n")
         self.geogigfileraw.write("""
-        DBHOST={dbhost}
-        DBPORT={dbport}
-        DBNAMEGEOGIG={dbname}
-        DBSCHEMAGEOGIG={dbschema}
-        DBNAMEORIGINE=sandbox
-        DBSCHEMAORIGINE=a_pcrs
-        DBREPO={dbrepo}
-        DBUSER={dbuser}
-        DBPASS={dbpass}
-        USERNAME={ggusername}
-        USERMAIL={gguseremail}
+        DBHOST_ORIGINE={dbhost}
+        DBPORT_ORIGINE={dbport}
+        DBNAME_ORIGINE=sandbox
+        DBSCHE_ORIGINE=a_pcrs
+        DBUSER_ORIGINE={dbuser}
+        DBPASS_ORIGINE={dbpass}
 
-        REPOMULTI="postgresql://$DBHOST:$DBPORT/$DBNAMEGEOGIG/$DBSCHEMAGEOGIG?user=$DBUSER&password=$DBPASS"
+        DBHOST_CENTRAL={dbhost}
+        DBPORT_CENTRAL={dbport}
+        DBNAME_CENTRAL={dbname}
+        DBSCHE_CENTRAL={dbschema}
+        DBREPO_CENTRAL={dbrepo}
+        DBUSER_CENTRAL={dbuser}
+        DBPASS_CENTRAL={dbpass}
 
-        LISTBRANCHES='develop_enCoursDeMiseAJourInterne feature_projetExterne release_pourDiffusion hotfix_modifRapide'
+        DBHOST_LOCAL={dbhost}
+        DBPORT_LOCAL={dbport}
+        DBNAME_LOCAL=pcrs
+        DBSCHE_LOCAL=user_01
+        DBREPO_LOCAL=case
+        DBUSER_LOCAL={dbuser}
+        DBPASS_LOCAL={dbpass}
 
-        echo "#"
-        echo "#"
-        echo "# Creation et Initialisation du dépot {dbrepo}"
-        echo "#"
-        echo "# C'est un depot geogig qui utilise postgresql comme storage backend"
-        echo "# La doc est sur cette page"
-        echo "# http://geogig.org/docs/repo/storage.html"
-        echo "#"
-        echo "# Initialisation du depot geogig"
-        echo "#"
-        echo "#"
-        echo "geogig --repo $REPOONE \ "
-        echo "       init"
-              geogig --repo $REPOONE \\
-                     init
-        echo "#"
-        echo "#"
-        echo "# Configuration de geogig"
-        echo "#"
-        echo "geogig --repo $REPOONE \ "
-        echo "       config --global user.name \"$USERNAME\""
-              geogig --repo $REPOONE \\
-                     config --global user.name "$USERNAME"
-        echo "geogig --repo $REPOONE \ "
-        echo "       config --global user.email \"$USERMAIL\""
-              geogig --repo $REPOONE \\
-                     config --global user.email "$USERMAIL"
-        echo "#"
-        echo "# On renomme la branche master"
-        echo "#"
-        echo "geogig --repo $REPOONE \ "
-        echo "       branch -m master_selonInfosDisponibles"
-              geogig --repo $REPOONE \\
-                     branch -m master_selonInfosDisponibles
-        echo "#"
-        echo "# Import des données de la base origine dans le depot"
-        echo "#"
-              ./03_baseUpdate.py
-        echo "geogig --repo $REPOONE \ "
-        echo "       pg import --host $DBHOST --database $DBNAMEORIGINE --user $DBUSER --password $DBPASS --schema \"$DBSCHEMAORIGINE\" --all"
-              geogig --repo $REPOONE \\
-                     pg import --host $DBHOST --database $DBNAMEORIGINE --user $DBUSER --password $DBPASS --schema \"$DBSCHEMAORIGINE\" --all
+        GGUSER_NAME="{ggusername}"
+        GGUSER_EMAIL="{gguseremail}"
 
-        echo "#"
-        echo "# Enregistrement des données importées pour validation"
-        echo "#"
-        echo "geogig --repo $REPOONE \ "
-        echo "       add"
-              geogig --repo $REPOONE \\
-                     add
-        echo "#"
-        echo "# Commit"
-        echo "#"
-        echo "geogig --repo $REPOONE \ "
-        echo "       commit -m 'Commit initial'"
-              geogig --repo $REPOONE \\
-                     commit -m 'Commit initial'
-        echo "#"
-        echo "# Creation de 4 autres branches"
-        echo "#"
-        echo 'for BRANCHE in $LISTBRANCHES ; '
-        echo '    do'
-        echo '        echo ""'
-        echo '        geogig --repo $REPOONE \ '
-        echo '               branch $BRANCHE'
-        echo '    done'
-             for BRANCHE in $LISTBRANCHES ;
-                 do
-                     echo ""
-                     geogig --repo $REPOONE \\
-                            branch $BRANCHE
-                 done
-        echo "#"
-        echo "# Status"
-        echo "#"
-        echo "geogig --repo $REPOONE \ "
-        echo "       status"
-              geogig --repo $REPOONE \\
-                     status
+        REPO_CENTRAL_ONE="postgresql://$DBHOST_CENTRAL:$DBPORT_CENTRAL/$DBNAME_CENTRAL/$DBSCHE_CENTRAL/$DBREPO_CENTRAL?user=$DBUSER_CENTRAL&password=$DBPASS_CENTRAL"
+        REPO_CENTRAL_MULTI="postgresql://$DBHOST_CENTRAL:$DBPORT_CENTRAL/$DBNAME_CENTRAL/$DBSCHE_CENTRAL?user=$DBUSER_CENTRAL&password=$DBPASS_CENTRAL"
+        REPO_LOCAL_ONE="postgresql://$DBHOST_LOCAL:$DBPORT_LOCAL/$DBNAME_LOCAL/$DBSCHE_LOCAL/$DBREPO_LOCAL?user=$DBUSER_LOCAL&password=$DBPASS_LOCAL"
+        REPO_LOCAL_MULTI="postgresql://$DBHOST_LOCAL:$DBPORT_LOCAL/$DBNAME_LOCAL/$DBSCHE_LOCAL?user=$DBUSER_LOCAL&password=$DBPASS_LOCAL"
+
+        REPO_PORT_CENTRAL_ONE=8181
+        REPO_PORT_CENTRAL_MULTI=8182
+        REPO_PORT_LOCAL_ONE=8183
+        REPO_PORT_LOCAL_MULTI=8184
+
+        BRANCHE_MASTER='master_diffusionAuPublic'
+        BRANCHE_DEVELOP='develop_miseAJourInterne'
+        BRANCHE_RELEASE_1='release_preparationAvantDiffusion/1'
+        BRANCHE_FEATURE_1='feature_misaAjourImportanteProjetExterne/1'
+        BRANCHE_HOTFIX_1='hotfix_modifRapide/1'
+
         """.format(dbhost=dbhost,
                    dbport=dbport,
                    dbname=dbname,
@@ -587,7 +534,7 @@ def main():
         dbpass='fred',
         ggusername='Frédéric Garel',
         gguseremail='frederic.garel@ville-larochelle.fr',
-        geogigfile='../../../geogig/bin/06_geogigRepoInit.sh')
+        geogigfile='../../../geogig/bin/05_flowParameters.sh')
     #print('CCC        = {}'.format(mygenerateur.CCC))
     #print('PP         = {}'.format(mygenerateur.PP))
     #print('separateur = {}'.format(mygenerateur.separateur))
