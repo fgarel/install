@@ -38,4 +38,4 @@ source/python-mapnik/*
 source/tirex/*
 source/tirex*
 source/tileman/*
-source/tileman*
+source/tilestache/cache_data/*
