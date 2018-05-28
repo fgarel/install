@@ -18,8 +18,8 @@ echo "sudo service tomcat8 stop"
 echo ""
 # Lancement le server
 echo "# Lancement du proxy"
-echo "mapproxy-util serve-develop -b 0.0.0.0:8080 wms_ortho_cda.yaml"
-      mapproxy-util serve-develop -b 0.0.0.0:8080 wms_ortho_cda.yaml
+echo "mapproxy-util serve-develop -b 0.0.0.0:8080 wms_ortho_cda_plus.yaml"
+      mapproxy-util serve-develop -b 0.0.0.0:8080 wms_ortho_cda_plus.yaml
 
 # utilisation sous qgis
 # configurer une nouvelle couche wms

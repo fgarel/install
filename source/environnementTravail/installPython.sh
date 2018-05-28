@@ -98,4 +98,16 @@ echo "#   #pew new mapproxy"
 echo '#   #pew new -p $(pythonz locate 2.7.10) mapproxy'
 echo '#   pew new -p $(pythonz locate 3.4.3) mapproxy'
 echo ""
+echo "#"
+echo "# Installation de pipenv"
+echo "# http://sametmax.com/pipenv-solution-moderne-pour-remplacer-pip-et-virtualenv/"
+echo "#"
+echo "# Mise à jour de pip, mais juste au niveau utilisateur"
+echo "# pour pas casser le system"
+echo "python3 -m pip install pip --upgrade --user"
+      python3 -m pip install pip --upgrade --user
+echo "# Installation de pipenv"
+echo "python3 -m pip install pipenv --user"
+      python3 -m pip install pipenv --user
+echo "#"
 
