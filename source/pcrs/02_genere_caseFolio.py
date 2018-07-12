@@ -331,7 +331,7 @@ class GenerateurCaseFolio(object):
             self.geom = self.geom_000200_A3_00070_00050
 
         print("""
-        INSERT INTO a_pcrs."EmpriseEchangePCRS"(
+        INSERT INTO origine."EmpriseEchangePCRS"(
                                     complement,
                                     "datePublication",
                                     gestionnaire,

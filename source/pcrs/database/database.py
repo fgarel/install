@@ -44,8 +44,8 @@ class Database(object):
 
         self.conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT) # <-- ADD THIS LINE
         self.cur = self.conn.cursor()
-        self.cur.execute("DROP DATABASE if exists %s ;" % self.dbname)
-        self.cur.execute("CREATE DATABASE %s  ;" % self.dbname)
+        self.cur.execute("DROP DATABASE if exists \"%s\" ;" % self.dbname)
+        self.cur.execute("CREATE DATABASE \"%s\"  ;" % self.dbname)
         self.cur.close()
         self.conn.close()
 
@@ -57,7 +57,7 @@ class Database(object):
         self.conn = self.conn_database(self.dbname)
         self.conn.autocommit = True
         self.cur = self.conn.cursor()
-        self.cur.execute("CREATE EXTENSION if not exists %s ;" % self.extension)
+        self.cur.execute("CREATE EXTENSION if not exists \"%s\" ;" % self.extension)
         self.cur.close()
         self.conn.close()
 
@@ -69,7 +69,7 @@ class Database(object):
         self.conn = self.conn_database(self.dbname)
         self.conn.autocommit = True
         self.cur = self.conn.cursor()
-        self.cur.execute("CREATE SCHEMA if not exists %s ;" % self.schema)
+        self.cur.execute("CREATE SCHEMA if not exists \"%s\" ;" % self.schema)
         self.cur.close()
         self.conn.close()
 
