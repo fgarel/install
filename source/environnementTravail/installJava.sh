@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-export JAVA_VERSION='9'
+export JAVA_VERSION='8'
 export TOMCAT_VERSION='8'
 
 # installation de java

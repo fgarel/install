@@ -14,6 +14,14 @@ echo "#"
 echo "sudo apt-get install spatialite-gui sqlitebrowser sqlite3"
       sudo apt-get install spatialite-gui sqlitebrowser sqlite3
 echo "#"
+echo "export OLDPWDFG=$(pwd)"
+      export OLDPWDFG=$(pwd)
+echo $OLDPWDFG
+echo "cd .."
+      cd ..
+echo "pwd"
+      pwd
+echo "#"
 echo "# Installation de geogig : Téléchargement de la dernière version"
 echo "#"
 echo "# Attention : il faut peut-etre contourner le proxy..."
@@ -47,6 +55,10 @@ echo "#"
 echo "rm -f geogig-$GEOGIG_VERSION.zip"
       rm -f geogig-$GEOGIG_VERSION.zip
 echo "#"
+echo "cd $OLDPWDFG"
+      cd $OLDPWDFG
+echo "pwd"
+      pwd
 echo "# Ajout de geogig/bin dans le PATH"
 echo "#"
 echo "#-----------------------------------------------------------------------"
