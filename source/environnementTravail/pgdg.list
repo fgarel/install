@@ -1,0 +1,10 @@
+#
+# paquet des developpeurs postgresql
+# https://www.postgresql.org/download/linux/debian/
+#
+deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main
+#
+# paquet "version beta" des developpeurs postgresql
+# https://wiki.postgresql.org/wiki/Apt/FAQ#I_want_to_try_the_beta_version_of_the_next_PostgreSQL_release
+#
+deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main 11

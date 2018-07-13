@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 u""" Definition des paramètres de connexion.
@@ -18,10 +18,10 @@ class ParametresConnexion(object):
         u""" Fonction lancée au moment de l'instanciation. """
         # les parametres pour la creation
         # Attention : la creation se fait sur la machine localhost
-        self.dict_dbuser_dbpass = {'fred': 'fred',
-                                   'francois': 'fc',
-                                   'michel': 'mr',
-                                   'pascal': 'pb',
+        self.dict_dbuser_dbpass = {'fred': 'fgpass',
+                                   'francois': 'fcpass',
+                                   'michel': 'mrpass',
+                                   'pascal': 'pbpass',
                                    'cda': 'cdapass',
                                    'soluris': 'solurispass',
                                    'enedis': 'enedispass',
@@ -123,7 +123,7 @@ class ParametresConnexion(object):
         self.hostname = 'localhost'
         self.port = '5432'
         self.username = 'fred'
-        self.password = 'fred'
+        self.password = 'fgpass'
 
 
 def main():

@@ -116,7 +116,7 @@ class Database(object):
         self.dbowner = dbowner
         self.conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT) # <-- ADD THIS LINE
         self.cur = self.conn.cursor()
-        self.cur.execute("REVOKE CONNECT ON DATABASE {} FROM public;".format(self.dbname))
+        #self.cur.execute("REVOKE CONNECT ON DATABASE {} FROM public;".format(self.dbname))
         self.cur.execute("DROP DATABASE if exists {} ;".format(self.dbname))
         self.cur.execute("CREATE DATABASE {} ;".format(self.dbname))
         self.cur.execute("ALTER DATABASE {} OWNER TO \"{}\";".format(self.dbname, self.dbowner))
