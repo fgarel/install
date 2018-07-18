@@ -13,12 +13,16 @@ echo "#"
 echo "#"
 echo "sudo aptitude install nginx-common"
       sudo aptitude install nginx-common
+echo "sudo apt-get install nginx-common"
+      sudo apt-get install nginx-common
 echo "# sudo aptitude install nginx-core"
       # sudo aptitude install nginx-core
 echo "# sudo aptitude install nginx-light"
       # sudo aptitude install nginx-light
 echo "sudo aptitude install nginx-full"
       sudo aptitude install nginx-full
+echo "sudo apt-get install nginx-full"
+      sudo apt-get install nginx-full
 echo "# sudo service nginx status"
       # sudo service nginx status
 echo "sudo service nginx stop"
@@ -36,7 +40,8 @@ echo "# sudo service nginx status"
       # sudo service nginx status
 echo "sudo aptitude install -y gunicorn3"
       sudo aptitude install -y gunicorn3
-
+echo "sudo apt-get install -y gunicorn3"
+      sudo apt-get install -y gunicorn3
 
 echo
 echo ""

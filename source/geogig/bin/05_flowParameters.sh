@@ -1,28 +1,28 @@
 #!/bin/sh
 
 
-        DBHOST_ORIGINE=localhost
+        DBHOST_ORIGINE=pg.cdalr.fr
         DBPORT_ORIGINE=5432
         DBNAME_ORIGINE=sandbox
         DBSCHE_ORIGINE=a_pcrs
         DBUSER_ORIGINE=fred
-        DBPASS_ORIGINE=fred
+        DBPASS_ORIGINE=fgpass
 
-        DBHOST_CENTRAL=localhost
+        DBHOST_CENTRAL=pg.cdalr.fr
         DBPORT_CENTRAL=5432
         DBNAME_CENTRAL=geogig
         DBSCHE_CENTRAL=pcrs
-        DBREPO_CENTRAL=CDA-46-00197-01045-11-C-19
+        DBREPO_CENTRAL=CDA-46-00197-01045-16-D-16
         DBUSER_CENTRAL=fred
-        DBPASS_CENTRAL=fred
+        DBPASS_CENTRAL=fgpass
 
-        DBHOST_LOCAL=localhost
+        DBHOST_LOCAL=pg.cdalr.fr
         DBPORT_LOCAL=5432
         DBNAME_LOCAL=pcrs
         DBSCHE_LOCAL=user_01
         DBREPO_LOCAL=case
         DBUSER_LOCAL=fred
-        DBPASS_LOCAL=fred
+        DBPASS_LOCAL=fgpass
 
         GGUSER_NAME="Frédéric Garel"
         GGUSER_EMAIL="frederic.garel@ville-larochelle.fr"
@@ -42,5 +42,3 @@
         BRANCHE_RELEASE_1='release_preparationAvantDiffusion/1'
         BRANCHE_FEATURE_1='feature_misaAjourImportanteProjetExterne/1'
         BRANCHE_HOTFIX_1='hotfix_modifRapide/1'
-
-        

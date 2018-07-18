@@ -1,18 +1,80 @@
 #!/bin/sh
 
-
-export JAVA_VERSION='8'
+# Attention : geoserver ne fonctionne qu'avec Java 8
+# http://docs.geoserver.org/latest/en/user/production/java.html
+#
+# ubuntu
+export JAVA_VERSION_KO_1='11'
+export JAVA_VERSION_KO_2='10'
+export JAVA_VERSION_KO_3='9'
+export JAVA_VERSION_OK='8'
 export TOMCAT_VERSION='8'
+
+# debian
+export JAVA_VERSION_KO_1='11'
+export JAVA_VERSION_KO_2='10'
+export JAVA_VERSION_KO_3='9'
+export JAVA_VERSION_OK='8'
+export TOMCAT_VERSION='8'
+
 
 # installation de java
 ###############################################
 # installation de java
-echo "# Installation de java version openjdk $JAVA_VERSION"
+echo "# Installation de java version openjdk $JAVA_VERSION_OK"
 echo "###############################################"
 echo "#"
 echo "# Installation de java (jre)"
-echo "sudo aptitude install openjdk-$JAVA_VERSION-jre"
-      sudo aptitude install openjdk-$JAVA_VERSION-jre
+echo "sudo apt-get remove -y default-jre"
+      sudo apt-get remove -y default-jre
+echo "sudo apt-get remove -y default-jre-headless"
+      sudo apt-get remove -y default-jre-headless
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre-headless"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre-headless
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre-headless"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre-headless
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre-headless"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre-headless
+echo "#"
+echo "# Installation du jre, du jdk, de maven"
+echo "sudo aptitude install -y openjdk-$JAVA_VERSION_OK-jre"
+      sudo aptitude install -y openjdk-$JAVA_VERSION_OK-jre
+echo "sudo apt-get install -y openjdk-$JAVA_VERSION_OK-jre"
+      sudo apt-get install -y openjdk-$JAVA_VERSION_OK-jre
+echo "sudo aptitude install -y openjdk-$JAVA_VERSION_OK-jre-headless"
+      sudo aptitude install -y openjdk-$JAVA_VERSION_OK-jre-headless
+echo "sudo apt-get install -y openjdk-$JAVA_VERSION_OK-jre-headless"
+      sudo apt-get install -y openjdk-$JAVA_VERSION_OK-jre-headless
+echo "sudo aptitude install -y openjdk-$JAVA_VERSION_OK-jdk"
+      sudo aptitude install -y openjdk-$JAVA_VERSION_OK-jdk
+echo "sudo apt-get install -y openjdk-$JAVA_VERSION_OK-jdk"
+      sudo apt-get install -y openjdk-$JAVA_VERSION_OK-jdk
+echo "sudo apt-get install -y maven"
+      sudo apt-get install -y maven
+echo "#"
+echo "sudo apt-get remove -y default-jre"
+      sudo apt-get remove -y default-jre
+echo "sudo apt-get remove -y default-jre-headless"
+      sudo apt-get remove -y default-jre-headless
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre-headless"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre-headless
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre-headless"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre-headless
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre-headless"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre-headless
+
 echo "#"
 echo "# Declaration de la variable JAVA_HOME"
 echo "#"
@@ -92,18 +154,28 @@ echo "# http://docs.geoserver.org/latest/en/user/installation/war.html"
 echo "#"
 echo "sudo aptitude install tomcat$TOMCAT_VERSION"
       sudo aptitude install tomcat$TOMCAT_VERSION
+echo "sudo apt-get install tomcat$TOMCAT_VERSION"
+      sudo apt-get install tomcat$TOMCAT_VERSION
 echo "#"
 echo "sudo aptitude install tomcat$TOMCAT_VERSION-admin"
       sudo aptitude install tomcat$TOMCAT_VERSION-admin
+echo "sudo apt-get install tomcat$TOMCAT_VERSION-admin"
+      sudo apt-get install tomcat$TOMCAT_VERSION-admin
 echo "#"
 echo "sudo aptitude install tomcat$TOMCAT_VERSION-user"
       sudo aptitude install tomcat$TOMCAT_VERSION-user
+echo "sudo apt-get install tomcat$TOMCAT_VERSION-user"
+      sudo apt-get install tomcat$TOMCAT_VERSION-user
 echo "#"
 echo "#sudo aptitude install tomcat$TOMCAT_VERSION-examples"
       #sudo aptitude install tomcat$TOMCAT_VERSION-examples
+echo "#sudo apt-get install tomcat$TOMCAT_VERSION-examples"
+      #sudo apt-get install tomcat$TOMCAT_VERSION-examples
 echo "#"
 echo "#sudo aptitude install tomcat$TOMCAT_VERSION-docs"
       #sudo aptitude install tomcat$TOMCAT_VERSION-docs
+echo "#sudo apt-get install tomcat$TOMCAT_VERSION-docs"
+      #sudo apt-get install tomcat$TOMCAT_VERSION-docs
 echo "#"
 echo "# Ajout des roles admini-gui et manager-gui"
 echo "#"

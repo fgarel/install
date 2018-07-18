@@ -22,16 +22,30 @@ echo "cd .."
 echo "pwd"
       pwd
 echo "#"
-echo "git clone https://github.com/boundlessgeo/qgis-geogiglight-plugin"
-      git clone https://github.com/boundlessgeo/qgis-geogiglight-plugin
-echo "git fetch https://github.com/boundlessgeo/qgis-geogiglight-plugin"
-      git fetch https://github.com/boundlessgeo/qgis-geogiglight-plugin
+echo "# Suppression du repertoire si il existe"
+echo "rm -rf qgis-geogiglight-plugin"
+      rm -rf qgis-geogiglight-plugin
+echo "#"
+echo "git clone -b development https://github.com/boundlessgeo/qgis-geogiglight-plugin"
+      git clone -b development https://github.com/boundlessgeo/qgis-geogiglight-plugin
+#echo "git fetch https://github.com/boundlessgeo/qgis-geogiglight-plugin qgis3"
+#      git fetch https://github.com/boundlessgeo/qgis-geogiglight-plugin qgis3
 echo "#"
 
 echo "# Installation de paver"
 echo "#"
+echo "# On met a jour pip3,....."
+echo "sudo -H pip3 install --upgrade pip"
+      sudo -H pip3 install --upgrade pip
+#echo "# ...Mais, en fait, paver est en python2"
+#echo "sudo -H pip install --upgrade pip"
+#      sudo -H pip install --upgrade pip
+echo "#"
 echo "sudo -H pip3 install Paver"
       sudo -H pip3 install Paver
+echo "#"
+echo "sudo -H pip3 install --upgrade Paver"
+      sudo -H pip3 install --upgrade Paver
 echo "#"
 echo "# On lance paver dans le repertoire que l'on vient de cloner"
 echo "#"

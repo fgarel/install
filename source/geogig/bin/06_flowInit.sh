@@ -1,16 +1,17 @@
 #!/bin/sh
 
 
-        DBHOST=localhost
+        DBHOST=pg.cdalr.fr
         DBPORT=5432
         DBNAMEGEOGIG=geogig
         DBSCHEMAGEOGIG=pcrs
         DBNAMEORIGINE=sandbox
         DBSCHEMAORIGINE=a_pcrs
         DBREPO=CDA-46-00197-01045-16-D-C
+        DBREPO=CDA-46-00197-01045-16-D-16
         DBUSER=fred
-        DBPASS=fred
-        USERNAME=Frédéric Garel
+        DBPASS=fgpass
+        USERNAME='Frédéric Garel'
         USERMAIL=frederic.garel@ville-larochelle.fr
 
         REPOONE="postgresql://$DBHOST:$DBPORT/$DBNAMEGEOGIG/$DBSCHEMAGEOGIG/$DBREPO?user=$DBUSER&password=$DBPASS"
@@ -25,6 +26,7 @@
         echo "#"
         echo "# -----------------------------------------------------------------------------------"
         echo "# Initialisation du dépot CDA-46-00197-01045-16-D-C"
+        echo "# Initialisation du dépot CDA-46-00197-01045-16-D-16"
         echo "#"
         echo "# https://danielkummer.github.io/git-flow-cheatsheet/index.fr_FR.html#getting_started"
         echo "# https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac"
@@ -127,4 +129,3 @@
         echo "       status"
               geogig --repo $REPOONE \
                      status
-        

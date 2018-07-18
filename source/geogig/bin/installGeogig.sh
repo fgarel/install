@@ -1,6 +1,6 @@
 #!/bin/sh
 
-
+# vu ici : http://geogig.org/
 export GEOGIG_VERSION='1.2.0'
 
 echo "#"
@@ -22,7 +22,10 @@ echo "cd .."
 echo "pwd"
       pwd
 echo "#"
-echo "# Installation de geogig : Téléchargement de la dernière version"
+echo "# Installation de geogig Version ZIP "
+echo "# ----------------------------------"
+echo "#"
+echo "# Téléchargement de la version 1.2"
 echo "#"
 echo "# Attention : il faut peut-etre contourner le proxy..."
 echo "# environnementTravail/docksshuttle1.sh"
@@ -54,6 +57,43 @@ echo "#"
 #      rm -f geogig-1.1.0.zip
 echo "rm -f geogig-$GEOGIG_VERSION.zip"
       rm -f geogig-$GEOGIG_VERSION.zip
+
+echo "#"
+echo "#"
+echo "# Installation de geogig Version Github "
+echo "# -------------------------------------"
+echo "#"
+echo "# Suppression du repertoire si il existe"
+echo "rm -rf geogig"
+      rm -rf geogig
+echo "#"
+echo "git clone https://github.com/locationtech/geogig"
+      git clone https://github.com/locationtech/geogig
+#echo "git fetch https://github.com/locationtech/geogig"
+#      git fetch https://github.com/locationtech/geogig
+echo "#"
+echo "# On lance l'install dans le repertoire que l'on vient de cloner"
+echo "#"
+echo "cd geogig"
+      cd geogig
+echo "#"
+echo "# Pour la compilation, la doc est ici :"
+echo "# http://geogig.org/technical/developers.html"
+echo "#"
+echo "# Installation de maven"
+echo "#"
+echo "sudo apt-get install -y maven"
+      sudo apt-get install -y maven
+echo "#"
+echo "cd src/parent"
+      cd src/parent
+echo "#"
+echo "mvn clean install"
+      mvn clean install
+echo "#"
+echo "#"
+echo "#"
+echo "#"
 echo "#"
 echo "cd $OLDPWDFG"
       cd $OLDPWDFG

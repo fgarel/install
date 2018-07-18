@@ -18,10 +18,10 @@ class ParametresConnexion(object):
         u""" Fonction lancée au moment de l'instanciation. """
         # les parametres pour la creation
         # Attention : la creation se fait sur la machine localhost
-        self.dict_dbuser_dbpass = {'fred': 'fred',
-                                   'francois': 'fc',
-                                   'michel': 'mr',
-                                   'pascal': 'pb',
+        self.dict_dbuser_dbpass = {'fred': 'fgpass',
+                                   'francois': 'fcpass',
+                                   'michel': 'mrpass',
+                                   'pascal': 'pbpass',
                                    'cda': 'cdapass',
                                    'soluris': 'solurispass',
                                    'enedis': 'enedispass',
@@ -163,10 +163,10 @@ class ParametresConnexion(object):
                                      '../../pcrs/bin/sql/03_empriseEchangePCRSInsert.sql']}}
 
         # les paramètres pour la connexion
-        self.hostname = 'localhost'
+        self.hostname = 'pg.cdalr.fr'
         self.port = '5432'
         self.username = 'fred'
-        self.password = 'fred'
+        self.password = 'fgpass'
 
 
 def main():

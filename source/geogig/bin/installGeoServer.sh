@@ -1,8 +1,13 @@
 #!/bin/sh
 
-
-export GEOSERVER_VERSION='2.12.1'
-export GEOSERVER_PLUGIN_GEOGIG_VERSION='2.12'
+# vu ici (stable) : http://geoserver.org/
+# https://github.com/locationtech/geogig/releases/tag/v1.2.0
+#export GEOSERVER_VERSION='2.12.1'
+#export GEOSERVER_PLUGIN_GEOGIG_VERSION='2.12'
+export GEOSERVER_VERSION='2.13.1'
+export GEOSERVER_PLUGIN_GEOGIG_VERSION='2.13'
+# vu ici : http://geogig.org/
+# et ici : https://github.com/locationtech/geogig/releases
 export GEOGIG_VERSION='1.2.0'
 export TOMCAT_VERSION='8'
 export POSTGRESQL_USER='fred'
