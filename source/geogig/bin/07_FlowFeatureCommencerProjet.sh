@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-        DBHOST=localhost
+        DBHOST=pg.cdalr.fr
         DBPORT=5432
         DBNAMEGEOGIG=geogig
         DBSCHEMAGEOGIG=pcrs
@@ -9,7 +9,7 @@
         DBSCHEMAORIGINE=a_pcrs
         DBREPO=CDA-46-00197-01045-21-A-18-A
         DBUSER=fred
-        DBPASS=fred
+        DBPASS=fgpass
         USERNAME=Frédéric Garel
         USERMAIL=frederic.garel@ville-larochelle.fr
 
