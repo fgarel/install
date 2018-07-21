@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-        DBHOST=localhost
+        DBHOST=pg.cdalr.fr
         DBPORT=5432
         DBNAMEGEOGIG=geogig
         DBSCHEMAGEOGIG=pcrs
@@ -9,7 +9,7 @@
         DBSCHEMAORIGINE=a_pcrs
         DBREPO=CDA-46-00197-01045-21-A-18-A
         DBUSER=fred
-        DBPASS=fred
+        DBPASS=pgpass
         USERNAME=Frédéric Garel
         USERMAIL=frederic.garel@ville-larochelle.fr
 
@@ -29,7 +29,7 @@
         echo "# https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac"
         echo "# -----------------------------------------------------------------------------------"
         echo "#"
-        
+
         echo "# Publication/Partage de la branche feature"
         echo "#"
         echo "# Cette action effectue les opérations suivantes :"
@@ -54,5 +54,3 @@
         echo '       push origin $BRANCHEFEATURE'
               geogig --repo $REPOONE \
                      push origin $BRANCHEFEATURE
-                     
- 

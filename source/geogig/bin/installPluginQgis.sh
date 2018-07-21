@@ -9,6 +9,12 @@ echo "#"
 echo "#"
 echo "# Le plugin boundlessgeo"
 echo "#"
+echo "#Attention à la suptilité :"
+echo "# il faut prendre la branch qgis3 du depot,"
+echo "# sauf le fichier pavement.py, qu'il faut prendre sur la branche master"
+echo "#"
+echo "#"
+
 #echo "# Si celui ci existe dejà, Suppression du sous-repertoire qgis-geogiglight-plugin"
 #echo "#"
 #echo "rm -rf qgis-geogiglight-plugin"
@@ -26,8 +32,8 @@ echo "# Suppression du repertoire si il existe"
 echo "rm -rf qgis-geogiglight-plugin"
       rm -rf qgis-geogiglight-plugin
 echo "#"
-echo "git clone -b development https://github.com/boundlessgeo/qgis-geogiglight-plugin"
-      git clone -b development https://github.com/boundlessgeo/qgis-geogiglight-plugin
+echo "git clone -b qgis3 https://github.com/boundlessgeo/qgis-geogiglight-plugin"
+      git clone -b qgis3 https://github.com/boundlessgeo/qgis-geogiglight-plugin
 #echo "git fetch https://github.com/boundlessgeo/qgis-geogiglight-plugin qgis3"
 #      git fetch https://github.com/boundlessgeo/qgis-geogiglight-plugin qgis3
 echo "#"
@@ -35,8 +41,17 @@ echo "#"
 echo "# Installation de paver"
 echo "#"
 echo "# On met a jour pip3,....."
-echo "sudo -H pip3 install --upgrade pip"
-      sudo -H pip3 install --upgrade pip
+echo "#"
+echo "# pas trop a jour quand meme, car il y a des problèmes avec pip10"
+echo "# pip10 n'a pas de main"
+echo "# https://stackoverflow.com/questions/49839610/attributeerror-module-pip-has-no-attribute-main"
+#echo "# si pb avec pip"
+#echo "# https://askubuntu.com/questions/1025189/pip-is-not-working-importerror-no-module-named-pip-internal"
+#echo "#"
+echo "sudo -H python -m pip install --user --upgrade pip==9.0.3"
+      sudo -H python -m pip install --user --upgrade pip==9.0.3
+#echo "sudo -H pip3 install --upgrade pip"
+#      sudo -H pip3 install --upgrade pip
 #echo "# ...Mais, en fait, paver est en python2"
 #echo "sudo -H pip install --upgrade pip"
 #      sudo -H pip install --upgrade pip
@@ -52,13 +67,30 @@ echo "#"
 echo "cd qgis-geogiglight-plugin"
       cd qgis-geogiglight-plugin
 echo "#"
+echo "#"
+echo "# Récupération du fichier pavement.py, qu'il faut prendre sur la branche master"
+echo "#"
+echo "rm -f pavement.py"
+      rm -f pavement.py
+echo "wget https://raw.githubusercontent.com/boundlessgeo/qgis-geogiglight-plugin/master/pavement.py"
+      wget https://raw.githubusercontent.com/boundlessgeo/qgis-geogiglight-plugin/master/pavement.py
+echo "#"
 echo "paver setup"
       paver setup
 echo "paver install"
       paver install
+echo "paver install3"
+      paver install3
+echo "paver package"
+      paver package
 echo "#"
 echo "cd .."
       cd ..
+echo "#"
+echo "# ---------------------------------------------------------"
+echo "# le plugin est a installer via un paquet zip"
+echo "/~/Documents/install/source/geogig/qgis-geogiglight-plugin/geogig.zip"
+echo "# ---------------------------------------------------------"
 echo "#"
 echo "# Mise à jour de requests"
 echo "#"

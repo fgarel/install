@@ -178,7 +178,7 @@ echo "#sudo apt-get install tomcat$TOMCAT_VERSION-docs"
       #sudo apt-get install tomcat$TOMCAT_VERSION-docs
 echo "#"
 echo "# -----------------------------------------------"
-echo "# Ajout des roles admini-gui et manager-gui"
+echo "# Ajout des roles admin-gui et manager-gui"
 echo "#"
 echo "# Attention il faut etre super-utilisateur pour pouvoir modifier"
 echo "# ce fichier de configuration"

@@ -37,7 +37,11 @@ from database import parametresConnexion
 def main():
     u""" Fonction principale. """
     print('Lancement de la creation d une case')
-    print('# ~/Documents/install/pcrs/bin/case/case.py')
+    print('# ~/Documents/install/source/pcrs/bin/case/case.py')
+    print('#')
+    print('# Les fichiers resultats de ce script sont :')
+    print('vi ~/Documents/install/source/pcrs/bin/sql/03_empriseEchangePCRSInsert.sql')
+    print('vi ~/Documents/install/source/geogig/bin/05_flowParameters.sh')
     # mesparametres = parametresConnexion.ParametresConnexion()
     # maconnexion = database.Database(mesparametres)
     # maconnexion.do_all()
