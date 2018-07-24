@@ -4,10 +4,11 @@
         DBHOST=pg.cdalr.fr
         DBPORT=5432
         DBNAMEGEOGIG=geogig
-        DBSCHEMAGEOGIG=pcrs
+        #DBSCHEMAGEOGIG=pcrs
+        DBSCHEMAGEOGIG=repos
         DBNAMEORIGINE=sandbox
         DBSCHEMAORIGINE=a_pcrs
-        DBREPO=CDA-46-00197-01045-16-D-C
+        #DBREPO=CDA-46-00197-01045-16-D-C
         DBREPO=CDA-46-00197-01045-16-D-16
         DBUSER=fred
         DBPASS=fgpass
