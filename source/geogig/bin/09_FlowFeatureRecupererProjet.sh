@@ -4,12 +4,14 @@
         DBHOST=localhost
         DBPORT=5432
         DBNAMEGEOGIG=geogig
-        DBSCHEMAGEOGIG=pcrs
+        #DBSCHEMAGEOGIG=pcrs
+        DBSCHEMAGEOGIG=repos
         DBNAMEORIGINE=sandbox
         DBSCHEMAORIGINE=a_pcrs
-        DBREPO=CDA-46-00197-01045-21-A-18-A
+        #DBREPO=CDA-46-00197-01045-21-A-18-A
+        DBREPO=CDA-46-00197-01045-16-D-16
         DBUSER=fred
-        DBPASS=fred
+        DBPASS=fgpass
         USERNAME=Frédéric Garel
         USERMAIL=frederic.garel@ville-larochelle.fr
 

@@ -107,3 +107,30 @@ username : fred
 password :
 
 ##### 2de methode : Geogig / Geogig Repositories
+
+##### Import d'un depot
+
+Dans le paragraphe précédent, nous avons vu comment créer un nouvel entrepot.
+Ici, nous allons voir comment importer un entrepot
+
+Si on parle d'importer, c'est parce qu'auparavant, nous l'avons déjà créer.
+
+La création se fait à l'aide des scripts
+01 - 06
+
+Une fois que le depot geogig est crée (sous la forme d'un schema, pcrs, dans la base geogig, sous posgresl),
+il faut donc l'importer en tant que depot sous geoserver
+
+Cela se fait en passant par le menu Geogig / Geogig Repositories
+
+Repository Type : postgresql
+
+repository name : CDA-46-00197-01045-16*-D-16
+
+hostname : pg.cdalr.fr
+port : 5432
+
+database : geogig
+schema : pcrs
+user : fred
+password : fg....

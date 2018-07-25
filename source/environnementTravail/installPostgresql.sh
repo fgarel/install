@@ -155,16 +155,16 @@ echo "     sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1/a host    all         
 echo "     /etc/postgresql/$VERSION_POSTGRESQL_NEW/main/pg_hba.conf"
 echo "# ---"
       sudo \
-           sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1\/a host    all             all             10.2.10.0/24            md5' \
+           sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1/a host    all             all             10.2.10.0/24            md5' \
            /etc/postgresql/$VERSION_POSTGRESQL_NEW/main/pg_hba.conf
       sudo \
-           sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1\/a host    all             fred            217.112.51.3/32         md5' \
+           sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1/a host    all             fred            217.112.51.3/32         md5' \
            /etc/postgresql/$VERSION_POSTGRESQL_NEW/main/pg_hba.conf
       sudo \
-           sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1\/a host    all             fred            149.202.43.81/32        md5' \
+           sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1/a host    all             fred            149.202.43.81/32        md5' \
            /etc/postgresql/$VERSION_POSTGRESQL_NEW/main/pg_hba.conf
       sudo \
-           sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1\/a host    all             fred            78.200.3.27/32          md5' \
+           sed -i -r -e '/host[ ]+all[ ]+all[ ]+127.0.0.1/a host    all             fred            78.200.3.27/32          md5' \
            /etc/postgresql/$VERSION_POSTGRESQL_NEW/main/pg_hba.conf
 echo "#"
 echo "# 2. Suppression des installations précedentes"

@@ -93,7 +93,8 @@ class ParametresConnexion(object):
                                                    'bati',
                                                    'rtge',
                                                    'rese',
-                                                   'cada'],
+                                                   'cada',
+                                                   'repos'],
                                         'sandbox': ['a_pcrs']}
         self.dict_dbuser_searchpath = {'fred':                 '"$user", pcrs, espu, public',
                                        'francois':             '"$user", pcrs, espu, public',
@@ -141,14 +142,20 @@ class ParametresConnexion(object):
                         'cada':                     {'fred':                 ['ALL'],
                                                      'francois':             ['ALL'],
                                                      'michel':               ['ALL'],
-                                                     'pascal':               ['ALL']}}}
+                                                     'pascal':               ['ALL']},
+                        'repos':                    {'fred':                 ['ALL'],
+                                                     'francois':             ['ALL'],
+                                                     'michel':               ['ALL'],
+                                                     'pascal':               ['ALL']}
+                                                                                     }}
         self.dict_dbname_dict_schema_listtables = \
             {'geogig':   {'pcrs': [],
                           'espu': [],
                           'bati': [],
                           'rtge': [],
                           'rese': [],
-                          'cada': []},
+                          'cada': [],
+                          'repos': []},
            'sandbox':    {'public': [],
                           'a_pcrs': []}}
 
@@ -158,7 +165,8 @@ class ParametresConnexion(object):
                           'bati': [],
                           'rtge': [],
                           'rese': [],
-                          'cada': []},
+                          'cada': [],
+                          'repos': []},
              'sandbox':  {'a_pcrs': ['../../pcrs/bin/sql/01_create_table_pcrs_v199_20171227.sql',
                                      '../../pcrs/bin/sql/03_empriseEchangePCRSInsert.sql']}}
 

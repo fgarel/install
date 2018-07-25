@@ -12,6 +12,7 @@
         DBPORT_CENTRAL=5432
         DBNAME_CENTRAL=geogig
         DBSCHE_CENTRAL=pcrs
+        DBSCHE_CENTRAL=repos
         DBREPO_CENTRAL=CDA-46-00197-01045-16-D-16
         DBUSER_CENTRAL=fred
         DBPASS_CENTRAL=fgpass
