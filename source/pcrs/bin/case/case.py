@@ -360,14 +360,14 @@ class GenerateurCaseFolio(object):
             self.case = self.case_000200_A3_00070_00050
             self.geom = self.geom_000200_A3_00070_00050
 
-    def sqlFileCreate(self, dbschema, sqlfile):
+    def sqlFileCreate(self, dbschema='init', sqlfile=''):
         u""" """
         self.updateCaseGeom()
 
         self.sqlfileraw = open(sqlfile,'w')
 
         print("""
-        INSERT INTO origine."EmpriseEchangePCRS"(
+        INSERT INTO "{schema}"."EmpriseEchangePCRS"(
                                     complement,
                                     "datePublication",
                                     gestionnaire,
@@ -378,7 +378,8 @@ class GenerateurCaseFolio(object):
               date '{date}' as "datePublication",
               '{gestionnaire}' as "gestionnaire",
               '{type}' as "type",
-              {geom} as geometrie;""".format(case=self.case,
+              {geom} as geometrie;""".format(schema=dbschema,
+                                             case=self.case,
                                              date=self.datePublication,
                                              gestionnaire=self.gestionnaire,
                                              type=self.type,
@@ -405,9 +406,9 @@ class GenerateurCaseFolio(object):
         return
 
     def geogigShellCreate(self,
-                          dbhost='localhost',
+                          dbhost='pg.cdalr.fr',
                           dbport=5432,
-                          dbname='geogig',
+                          dbname='geogig_central',
                           dbschema='pcrs',
                           dbuser='',
                           dbpass='',
@@ -421,47 +422,64 @@ class GenerateurCaseFolio(object):
         self.geogigfileraw.write("#!/bin/sh\n")
         self.geogigfileraw.write("\n")
         self.geogigfileraw.write("""
-        DBHOST_ORIGINE={dbhost}
-        DBPORT_ORIGINE={dbport}
-        DBNAME_ORIGINE=sandbox
-        DBSCHE_ORIGINE=a_pcrs
-        DBUSER_ORIGINE={dbuser}
-        DBPASS_ORIGINE={dbpass}
+        DBHOST_WORKSPACE={dbhost}
+        DBPORT_WORKSPACE={dbport}
+        DBNAME_WORKSPACE=dbworkspace
+        DBSCHE_WORKSPACE=init
+        DBUSER_WORKSPACE={dbuser}
+        DBPASS_WORKSPACE={dbpass}
 
         DBHOST_CENTRAL={dbhost}
         DBPORT_CENTRAL={dbport}
-        DBNAME_CENTRAL={dbname}
-        DBSCHE_CENTRAL={dbschema}
+        DBNAME_CENTRAL=geogig_central
+        DBSCHE_CENTRAL=pcrs
         DBREPO_CENTRAL={dbrepo}
         DBUSER_CENTRAL={dbuser}
         DBPASS_CENTRAL={dbpass}
 
         DBHOST_LOCAL={dbhost}
         DBPORT_LOCAL={dbport}
-        DBNAME_LOCAL=pcrs
-        DBSCHE_LOCAL=user_01
-        DBREPO_LOCAL=case
+        DBNAME_LOCAL=geogig_local
+        DBSCHE_LOCAL=pcrs
+        DBREPO_LOCAL={dbrepo}
         DBUSER_LOCAL={dbuser}
         DBPASS_LOCAL={dbpass}
+
+        DBHOST_INDIVIDUEL={dbhost}
+        DBPORT_INDIVIDUEL={dbport}
+        DBNAME_INDIVIDUEL=geogig_individuel
+        DBSCHE_INDIVIDUEL=pcrsQ
+        DBREPO_INDIVIDUEL=caseM
+        DBUSER_INDIVIDUEL={dbuser}
+        DBPASS_INDIVIDUEL={dbpass}
 
         GGUSER_NAME="{ggusername}"
         GGUSER_EMAIL="{gguseremail}"
 
         REPO_CENTRAL_ONE="postgresql://$DBHOST_CENTRAL:$DBPORT_CENTRAL/$DBNAME_CENTRAL/$DBSCHE_CENTRAL/$DBREPO_CENTRAL?user=$DBUSER_CENTRAL&password=$DBPASS_CENTRAL"
-        REPO_CENTRAL_MULTI="postgresql://$DBHOST_CENTRAL:$DBPORT_CENTRAL/$DBNAME_CENTRAL/$DBSCHE_CENTRAL?user=$DBUSER_CENTRAL&password=$DBPASS_CENTRAL"
         REPO_LOCAL_ONE="postgresql://$DBHOST_LOCAL:$DBPORT_LOCAL/$DBNAME_LOCAL/$DBSCHE_LOCAL/$DBREPO_LOCAL?user=$DBUSER_LOCAL&password=$DBPASS_LOCAL"
+        REPO_INDIVIDUEL_ONE="postgresql://$DBHOST_INDIVIDUEL:$DBPORT_INDIVIDUEL/$DBNAME_INDIVIDUEL/$DBSCHE_INDIVIDUEL/$DBREPO_INDIVIDUEL?user=$DBUSER_INDIVIDUEL&password=$DBPASS_INDIVIDUEL"
+
+        REPO_CENTRAL_MULTI="postgresql://$DBHOST_CENTRAL:$DBPORT_CENTRAL/$DBNAME_CENTRAL/$DBSCHE_CENTRAL?user=$DBUSER_CENTRAL&password=$DBPASS_CENTRAL"
         REPO_LOCAL_MULTI="postgresql://$DBHOST_LOCAL:$DBPORT_LOCAL/$DBNAME_LOCAL/$DBSCHE_LOCAL?user=$DBUSER_LOCAL&password=$DBPASS_LOCAL"
+        REPO_INDIVIDUEL_MULTI="postgresql://$DBHOST_INDIVIDUEL:$DBPORT_INDIVIDUEL/$DBNAME_INDIVIDUEL/$DBSCHE_INDIVIDUEL?user=$DBUSER_INDIVIDUEL&password=$DBPASS_INDIVIDUEL"
 
         REPO_PORT_CENTRAL_ONE=8181
-        REPO_PORT_CENTRAL_MULTI=8182
-        REPO_PORT_LOCAL_ONE=8183
-        REPO_PORT_LOCAL_MULTI=8184
+        REPO_PORT_LOCAL_ONE=8182
+        REPO_PORT_INDIVIDUEL_ONE=8183
+
+        REPO_PORT_CENTRAL_MULTI=8184
+        REPO_PORT_LOCAL_MULTI=8185
+        REPO_PORT_INDIVIDUEL_MULTI=8186
 
         BRANCHE_MASTER='master_diffusionAuPublic'
         BRANCHE_DEVELOP='develop_miseAJourInterne'
         BRANCHE_RELEASE_1='release_preparationAvantDiffusion/1'
         BRANCHE_FEATURE_1='feature_misaAjourImportanteProjetExterne/1'
         BRANCHE_HOTFIX_1='hotfix_modifRapide/1'
+
+        LISTBRANCHES='release_preparationAvantDiffusion/1 feature_misaAjourImportanteProjetExterne/1 hotfix_modifRapide/1'
+
 
         """.format(dbhost=dbhost,
                    dbport=dbport,
@@ -532,15 +550,15 @@ def main():
         print('')
 
     mygenerateur.sqlFileCreate(
-        dbschema='a_pcrs',
+        dbschema='init',
         sqlfile='../../../pcrs/bin/sql/03_empriseEchangePCRSInsert.sql')
     mygenerateur.geogigShellCreate(
-        dbhost='localhost',
+        dbhost='pg.cdalr.fr',
         dbport=5432,
-        dbname='geogig',
+        dbname='geogig_central',
         dbschema='pcrs',
         dbuser='fred',
-        dbpass='fred',
+        dbpass='fgpass',
         ggusername='Frédéric Garel',
         gguseremail='frederic.garel@ville-larochelle.fr',
         geogigfile='../../../geogig/bin/05_flowParameters.sh')

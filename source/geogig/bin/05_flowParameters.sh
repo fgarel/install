@@ -1,45 +1,63 @@
 #!/bin/sh
 
 
-        DBHOST_ORIGINE=pg.cdalr.fr
-        DBPORT_ORIGINE=5432
-        DBNAME_ORIGINE=sandbox
-        DBSCHE_ORIGINE=a_pcrs
-        DBUSER_ORIGINE=fred
-        DBPASS_ORIGINE=fgpass
+        DBHOST_WORKSPACE=pg.cdalr.fr
+        DBPORT_WORKSPACE=5432
+        DBNAME_WORKSPACE=dbworkspace
+        DBSCHE_WORKSPACE=init
+        DBUSER_WORKSPACE=fred
+        DBPASS_WORKSPACE=fgpass
 
         DBHOST_CENTRAL=pg.cdalr.fr
         DBPORT_CENTRAL=5432
-        DBNAME_CENTRAL=geogig
+        DBNAME_CENTRAL=geogig_central
         DBSCHE_CENTRAL=pcrs
-        DBSCHE_CENTRAL=repos
-        DBREPO_CENTRAL=CDA-46-00197-01045-16-D-16
+        DBREPO_CENTRAL=CDA-46-00197-01045-21-A
         DBUSER_CENTRAL=fred
         DBPASS_CENTRAL=fgpass
 
         DBHOST_LOCAL=pg.cdalr.fr
         DBPORT_LOCAL=5432
-        DBNAME_LOCAL=pcrs
-        DBSCHE_LOCAL=user_01
-        DBREPO_LOCAL=case
+        DBNAME_LOCAL=geogig_local
+        DBSCHE_LOCAL=pcrs
+        DBREPO_LOCAL=CDA-46-00197-01045-21-A
         DBUSER_LOCAL=fred
         DBPASS_LOCAL=fgpass
+
+        DBHOST_INDIVIDUEL=pg.cdalr.fr
+        DBPORT_INDIVIDUEL=5432
+        DBNAME_INDIVIDUEL=geogig_individuel
+        DBSCHE_INDIVIDUEL=pcrsQ
+        DBREPO_INDIVIDUEL=caseM
+        DBUSER_INDIVIDUEL=fred
+        DBPASS_INDIVIDUEL=fgpass
 
         GGUSER_NAME="Frédéric Garel"
         GGUSER_EMAIL="frederic.garel@ville-larochelle.fr"
 
         REPO_CENTRAL_ONE="postgresql://$DBHOST_CENTRAL:$DBPORT_CENTRAL/$DBNAME_CENTRAL/$DBSCHE_CENTRAL/$DBREPO_CENTRAL?user=$DBUSER_CENTRAL&password=$DBPASS_CENTRAL"
-        REPO_CENTRAL_MULTI="postgresql://$DBHOST_CENTRAL:$DBPORT_CENTRAL/$DBNAME_CENTRAL/$DBSCHE_CENTRAL?user=$DBUSER_CENTRAL&password=$DBPASS_CENTRAL"
         REPO_LOCAL_ONE="postgresql://$DBHOST_LOCAL:$DBPORT_LOCAL/$DBNAME_LOCAL/$DBSCHE_LOCAL/$DBREPO_LOCAL?user=$DBUSER_LOCAL&password=$DBPASS_LOCAL"
+        REPO_INDIVIDUEL_ONE="postgresql://$DBHOST_INDIVIDUEL:$DBPORT_INDIVIDUEL/$DBNAME_INDIVIDUEL/$DBSCHE_INDIVIDUEL/$DBREPO_INDIVIDUEL?user=$DBUSER_INDIVIDUEL&password=$DBPASS_INDIVIDUEL"
+
+        REPO_CENTRAL_MULTI="postgresql://$DBHOST_CENTRAL:$DBPORT_CENTRAL/$DBNAME_CENTRAL/$DBSCHE_CENTRAL?user=$DBUSER_CENTRAL&password=$DBPASS_CENTRAL"
         REPO_LOCAL_MULTI="postgresql://$DBHOST_LOCAL:$DBPORT_LOCAL/$DBNAME_LOCAL/$DBSCHE_LOCAL?user=$DBUSER_LOCAL&password=$DBPASS_LOCAL"
+        REPO_INDIVIDUEL_MULTI="postgresql://$DBHOST_INDIVIDUEL:$DBPORT_INDIVIDUEL/$DBNAME_INDIVIDUEL/$DBSCHE_INDIVIDUEL?user=$DBUSER_INDIVIDUEL&password=$DBPASS_INDIVIDUEL"
 
         REPO_PORT_CENTRAL_ONE=8181
-        REPO_PORT_CENTRAL_MULTI=8182
-        REPO_PORT_LOCAL_ONE=8183
-        REPO_PORT_LOCAL_MULTI=8184
+        REPO_PORT_LOCAL_ONE=8182
+        REPO_PORT_INDIVIDUEL_ONE=8183
+
+        REPO_PORT_CENTRAL_MULTI=8184
+        REPO_PORT_LOCAL_MULTI=8185
+        REPO_PORT_INDIVIDUEL_MULTI=8186
 
         BRANCHE_MASTER='master_diffusionAuPublic'
         BRANCHE_DEVELOP='develop_miseAJourInterne'
         BRANCHE_RELEASE_1='release_preparationAvantDiffusion/1'
         BRANCHE_FEATURE_1='feature_misaAjourImportanteProjetExterne/1'
         BRANCHE_HOTFIX_1='hotfix_modifRapide/1'
+
+        LISTBRANCHES='release_preparationAvantDiffusion/1 feature_misaAjourImportanteProjetExterne/1 hotfix_modifRapide/1'
+
+
+        

@@ -24,6 +24,10 @@
         BRANCHEDEVELOP='develop_enCoursDeMiseAJourInterne'
         BRANCHERELEASE='release_pourDiffusion'
 
+        . ./05_flowParameters.sh
+
+        echo "# "
+
         echo "#"
         echo "# -----------------------------------------------------------------------------------"
         echo "# Initialisation du dépot CDA-46-00197-01045-16-D-C"
@@ -40,93 +44,90 @@
         echo "# Initialisation du depot geogig"
         echo "#"
         echo "#"
-        echo "geogig --repo $REPOONE \ "
+        echo "geogig --repo $REPO_CENTRAL_ONE \ "
         echo "       init"
-              geogig --repo $REPOONE \
+              geogig --repo $REPO_CENTRAL_ONE \
                      init
         echo "#"
         echo "#"
         echo "# Configuration de geogig"
         echo "#"
-        echo "geogig --repo $REPOONE \ "
-        echo "       config --global user.name "$USERNAME""
-              geogig --repo $REPOONE \
-                     config --global user.name "$USERNAME"
-        echo "geogig --repo $REPOONE \ "
-        echo "       config --global user.email "$USERMAIL""
-              geogig --repo $REPOONE \
-                     config --global user.email "$USERMAIL"
+        echo "geogig --repo $REPO_CENTRAL_ONE \ "
+        echo "       config --global user.name "$GGUSER_NAME""
+              geogig --repo $REPO_CENTRAL_ONE \
+                     config --global user.name "$GGUSER_NAME"
+        echo "geogig --repo $REPO_CENTRAL_ONE \ "
+        echo "       config --global user.email "$GGUSER_EMAIL""
+              geogig --repo $REPO_CENTRAL_ONE \
+                     config --global user.email "$GGUSER_EMAIL"
         echo "#"
         echo "# On renomme la branche master"
         echo "#"
-        echo "geogig --repo $REPOONE \ "
-        echo "       branch -m $BRANCHEMASTER"
-              geogig --repo $REPOONE \
-                     branch -m $BRANCHEMASTER
+        echo "geogig --repo $REPO_CENTRAL_ONE \ "
+        echo "       branch -m $BRANCHE_MASTER"
+              geogig --repo $REPO_CENTRAL_ONE \
+                     branch -m $BRANCHE_MASTER
         echo "#"
         echo "# Import des données de la base origine dans le depot"
         echo "#"
               ./03_baseUpdate.py
-        echo "geogig --repo $REPOONE \ "
-        echo '       pg import --host $DBHOST --database $DBNAMEORIGINE --user $DBUSER --password $DBPASS --schema "$DBSCHEMAORIGINE" --all'
-              geogig --repo $REPOONE \
-                     pg import --host $DBHOST --database $DBNAMEORIGINE --user $DBUSER --password $DBPASS --schema "$DBSCHEMAORIGINE" --all
+        echo "geogig --repo $REPO_CENTRAL_ONE \ "
+        echo "       pg import --host $DBHOST_WORKSPACE --database $DBNAME_WORKSPACE --user $DBUSER_WORKSPACE --password $DBPASS_WORKSPACE --schema \"$DBSCHE_WORKSPACE\" --all"
+              geogig --repo $REPO_CENTRAL_ONE \
+                     pg import --host $DBHOST_WORKSPACE --database $DBNAME_WORKSPACE --user $DBUSER_WORKSPACE --password $DBPASS_WORKSPACE --schema "$DBSCHE_WORKSPACE" --all
 
         echo "#"
         echo "# Enregistrement des données importées pour validation"
         echo "#"
-        echo "geogig --repo $REPOONE \ "
+        echo "geogig --repo $REPO_CENTRAL_ONE \ "
         echo "       add"
-              geogig --repo $REPOONE \
+              geogig --repo $REPO_CENTRAL_ONE \
                      add
         echo "#"
         echo "# Commit"
         echo "#"
-        echo "geogig --repo $REPOONE \ "
+        echo "geogig --repo $REPO_CENTRAL_ONE \ "
         echo "       commit -m 'Commit initial'"
-              geogig --repo $REPOONE \
+              geogig --repo $REPO_CENTRAL_ONE \
                      commit -m 'Commit initial'
         echo "#"
 
         echo "#"
-        echo "# Ajout d'un depot origine (depot distant)"
-        echo "#"
-        echo "geogig --repo $REPOONE \ "
-        echo "       remote add origin $REPOREMOTE"
-              geogig --repo $REPOONE \
-                     remote add origin $REPOREMOTE
+        #echo "# Ajout d'un depot origine (depot distant)"
+        #echo "#"
+        #echo "geogig --repo $REPO_LOCAL_ONE \ "
+        #echo "       remote add origin $REPO_CENTRAL_ONE"
+        #      geogig --repo $REPO_LOCAL_ONE \
+        #             remote add origin $REPO_CENTRAL_ONE
         echo "#"
 
-        echo "# Creation de 2 autres branches"
+
+
         echo "#"
-        echo "geogig --repo $REPOONE \ "
-        echo '       branch $BRANCHERELEASE'
-              geogig --repo $REPOONE \
-                     branch $BRANCHERELEASE
-        echo "#"
+        echo "# Creation de quelques autres branches"
+        echo 'for BRANCHE in $LISTBRANCHES ; '
+        echo '    do'
+        echo '        echo ""'
+        echo '        geogig --repo $REPOONE \ '
+        echo '               branch $BRANCHE'
+        echo '    done'
+             for BRANCHE in $LISTBRANCHES ;
+                 do
+                     echo "# branche $BRANCHE"
+                     geogig --repo $REPO_CENTRAL_ONE \
+                            branch $BRANCHE
+                 done
+
         echo "# On crée et on se postionne sur la branche develop"
-        echo "geogig --repo $REPOONE \ "
-        echo '       branch -c $BRANCHEDEVELOP'
-              geogig --repo $REPOONE \
-                     branch -c $BRANCHEDEVELOP
+        echo "geogig --repo $REPO_CENTRAL_ONE \ "
+        echo "       branch -c $BRANCHE_DEVELOP"
+              geogig --repo $REPO_CENTRAL_ONE \
+                     branch -c $BRANCHE_DEVELOP
 
-        echo "#"
-        #echo 'for BRANCHE in $LISTBRANCHES ; '
-        #echo '    do'
-        #echo '        echo ""'
-        #echo '        geogig --repo $REPOONE \ '
-        #echo '               branch $BRANCHE'
-        #echo '    done'
-        #     for BRANCHE in $LISTBRANCHES ;
-        #         do
-        #             echo ""
-        #             geogig --repo $REPOONE \
-        #                    branch $BRANCHE
-        #         done
         echo "#"
         echo "# Status"
         echo "#"
-        echo "geogig --repo $REPOONE \ "
+        echo "geogig --repo $REPO_CENTRAL_ONE \ "
         echo "       status"
-              geogig --repo $REPOONE \
+              geogig --repo $REPO_CENTRAL_ONE \
                      status

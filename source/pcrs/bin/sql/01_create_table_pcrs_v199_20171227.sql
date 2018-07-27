@@ -10,103 +10,103 @@
 -- ---------------------------------
 
 -- Information
-DROP TABLE if exists a_pcrs."EmpriseDisponibilitePCRS" cascade;
-DROP TABLE if exists a_pcrs."InitiativePCRS" cascade;
+DROP TABLE if exists "init"."EmpriseDisponibilitePCRS" cascade;
+DROP TABLE if exists "init"."InitiativePCRS" cascade;
 -- Publication
-DROP TABLE if exists a_pcrs."EmpriseEchangePCRS" cascade;
-DROP TABLE if exists a_pcrs."TronconVoirie" cascade;
-DROP TABLE if exists a_pcrs."Commune" cascade;
+DROP TABLE if exists "init"."EmpriseEchangePCRS" cascade;
+DROP TABLE if exists "init"."TronconVoirie" cascade;
+DROP TABLE if exists "init"."Commune" cascade;
 -- Habillage
-DROP TABLE if exists a_pcrs."HabillagePCRS" cascade;
-DROP TABLE if exists a_pcrs."HabillageSymbolePCRS" cascade;
-DROP TABLE if exists a_pcrs."HabillageTextePCRS" cascade;
-DROP TABLE if exists a_pcrs."HabillageLignesPCRS" cascade;
-DROP TABLE if exists a_pcrs."HabillagePointsPCRS" cascade;
-DROP TABLE if exists a_pcrs."HabillageEnveloppePCRS" cascade;
+DROP TABLE if exists "init"."HabillagePCRS" cascade;
+DROP TABLE if exists "init"."HabillageSymbolePCRS" cascade;
+DROP TABLE if exists "init"."HabillageTextePCRS" cascade;
+DROP TABLE if exists "init"."HabillageLignesPCRS" cascade;
+DROP TABLE if exists "init"."HabillagePointsPCRS" cascade;
+DROP TABLE if exists "init"."HabillageEnveloppePCRS" cascade;
 -- Topographie
-DROP TABLE if exists a_pcrs."NomVoiriePCRS" cascade;
-DROP TABLE if exists a_pcrs."NumeroVoiriePCRS" cascade;
-DROP TABLE if exists a_pcrs."PointLevePCRS" cascade;
-DROP TABLE if exists a_pcrs."PointCanevasPCRS" cascade;
+DROP TABLE if exists "init"."NomVoiriePCRS" cascade;
+DROP TABLE if exists "init"."NumeroVoiriePCRS" cascade;
+DROP TABLE if exists "init"."PointLevePCRS" cascade;
+DROP TABLE if exists "init"."PointCanevasPCRS" cascade;
 -- Multi
-DROP TABLE if exists a_pcrs."ObjetVecteurPCRS" cascade;
-DROP TABLE if exists a_pcrs."ObjetGeneriquePCRS" cascade;
+DROP TABLE if exists "init"."ObjetVecteurPCRS" cascade;
+DROP TABLE if exists "init"."ObjetGeneriquePCRS" cascade;
 -- Raster
-DROP TABLE if exists a_pcrs."RasterPCRS" cascade;
-DROP TABLE if exists a_pcrs."MasqueOpacitePCRS" cascade;
+DROP TABLE if exists "init"."RasterPCRS" cascade;
+DROP TABLE if exists "init"."MasqueOpacitePCRS" cascade;
 -- Voirie
-DROP TABLE if exists a_pcrs."LimiteVoiriePCRS" cascade;
+DROP TABLE if exists "init"."LimiteVoiriePCRS" cascade;
 -- Voirie ou Bati
-DROP TABLE if exists a_pcrs."MarcheEscalierPCRS" cascade;
+DROP TABLE if exists "init"."MarcheEscalierPCRS" cascade;
 -- Bati
-DROP TABLE if exists a_pcrs."FacadePCRS" cascade;
-DROP TABLE if exists a_pcrs."ProeminenceBatiPCRS" cascade;
-DROP TABLE if exists a_pcrs."SeuilPCRS" cascade;
+DROP TABLE if exists "init"."FacadePCRS" cascade;
+DROP TABLE if exists "init"."ProeminenceBatiPCRS" cascade;
+DROP TABLE if exists "init"."SeuilPCRS" cascade;
 -- Clotures
-DROP TABLE if exists a_pcrs."MurPCRS" cascade;
-DROP TABLE if exists a_pcrs."PilierPCRS" cascade;
-DROP TABLE if exists a_pcrs."PilierRegulierPCRS" cascade;
-DROP TABLE if exists a_pcrs."PilierParticulierPCRS" cascade;
+DROP TABLE if exists "init"."MurPCRS" cascade;
+DROP TABLE if exists "init"."PilierPCRS" cascade;
+DROP TABLE if exists "init"."PilierRegulierPCRS" cascade;
+DROP TABLE if exists "init"."PilierParticulierPCRS" cascade;
 -- Ferroviaire
-DROP TABLE if exists a_pcrs."QuaiRailPCRS" cascade;
-DROP TABLE if exists a_pcrs."RailPCRS" cascade;
+DROP TABLE if exists "init"."QuaiRailPCRS" cascade;
+DROP TABLE if exists "init"."RailPCRS" cascade;
 -- Végétal
-DROP TABLE if exists a_pcrs."ArbrePCRS" cascade;
+DROP TABLE if exists "init"."ArbrePCRS" cascade;
 -- Ouvrage d'Art
-DROP TABLE if exists a_pcrs."PilePontPCRS" cascade;
-DROP TABLE if exists a_pcrs."QuaiFluvioMaritimePCRS" cascade;
+DROP TABLE if exists "init"."PilePontPCRS" cascade;
+DROP TABLE if exists "init"."QuaiFluvioMaritimePCRS" cascade;
 -- Affleurant
-DROP TABLE if exists a_pcrs."AffleurantPCRS" cascade;
-DROP TABLE if exists a_pcrs."AffleurantGeometriquePCRS" cascade;
-DROP TABLE if exists a_pcrs."AffleurantSymbolePCRS" cascade;
-DROP TABLE if exists a_pcrs."AffleurantEnveloppePCRS" cascade;
-DROP TABLE if exists a_pcrs."AffleurantPointPCRS" cascade;
-DROP TABLE if exists a_pcrs."AffleurantLignesPCRS" cascade;
+DROP TABLE if exists "init"."AffleurantPCRS" cascade;
+DROP TABLE if exists "init"."AffleurantGeometriquePCRS" cascade;
+DROP TABLE if exists "init"."AffleurantSymbolePCRS" cascade;
+DROP TABLE if exists "init"."AffleurantEnveloppePCRS" cascade;
+DROP TABLE if exists "init"."AffleurantPointPCRS" cascade;
+DROP TABLE if exists "init"."AffleurantLignesPCRS" cascade;
 
 
 -- --- Enumeration 1
 
-DROP TABLE if exists a_pcrs."CategorieThematiquePCRSType" cascade;
-DROP TABLE if exists a_pcrs."SectionPilierPCRSType" cascade;
-DROP TABLE if exists a_pcrs."CategoriePlacementPCRSType" cascade;
-DROP TABLE if exists a_pcrs."ProprieteEspaceType" cascade;
-DROP TABLE if exists a_pcrs."TexteJustificationPCRSType" cascade;
-DROP TABLE if exists a_pcrs."QualiteCategorisationPCRSType" cascade;
-DROP TABLE if exists a_pcrs."NatureAffleurantPCRSType" cascade;
-DROP TABLE if exists a_pcrs."NatureReseauPCRSType" cascade;
-DROP TABLE if exists a_pcrs."CategoriePrecisionPCRSType" cascade;
-DROP TABLE if exists a_pcrs."CategorieMurPCRSType" cascade;
+DROP TABLE if exists "init"."CategorieThematiquePCRSType" cascade;
+DROP TABLE if exists "init"."SectionPilierPCRSType" cascade;
+DROP TABLE if exists "init"."CategoriePlacementPCRSType" cascade;
+DROP TABLE if exists "init"."ProprieteEspaceType" cascade;
+DROP TABLE if exists "init"."TexteJustificationPCRSType" cascade;
+DROP TABLE if exists "init"."QualiteCategorisationPCRSType" cascade;
+DROP TABLE if exists "init"."NatureAffleurantPCRSType" cascade;
+DROP TABLE if exists "init"."NatureReseauPCRSType" cascade;
+DROP TABLE if exists "init"."CategoriePrecisionPCRSType" cascade;
+DROP TABLE if exists "init"."CategorieMurPCRSType" cascade;
 
 
 -- --- Enumeration 2
 
-DROP TABLE if exists a_pcrs."NatureReseauPCRS17Type" cascade;
-DROP TABLE if exists a_pcrs."CodeCouleurNormePCRS17Type" cascade;
-DROP TABLE if exists a_pcrs."CategoriePrecisionPCRS17Type" cascade;
-DROP TABLE if exists a_pcrs."CalendrierPCRS17Type" cascade;
-DROP TABLE if exists a_pcrs."NatureEmprisePCRS17Type" cascade;
--- DROP TABLE if exists a_pcrs."CotationPCRS17Type";
-DROP TABLE if exists a_pcrs."RoleNiveau1PCRS17Type" CASCADE;
-DROP TABLE if exists a_pcrs."RoleNiveau2PCRS17Type" CASCADE;
-DROP TABLE if exists a_pcrs."ActeurPCRS17Type" CASCADE;
-DROP TABLE if exists a_pcrs."CategorieObjetPCRS17Type" cascade;
+DROP TABLE if exists "init"."NatureReseauPCRS17Type" cascade;
+DROP TABLE if exists "init"."CodeCouleurNormePCRS17Type" cascade;
+DROP TABLE if exists "init"."CategoriePrecisionPCRS17Type" cascade;
+DROP TABLE if exists "init"."CalendrierPCRS17Type" cascade;
+DROP TABLE if exists "init"."NatureEmprisePCRS17Type" cascade;
+-- DROP TABLE if exists "init"."CotationPCRS17Type";
+DROP TABLE if exists "init"."RoleNiveau1PCRS17Type" CASCADE;
+DROP TABLE if exists "init"."RoleNiveau2PCRS17Type" CASCADE;
+DROP TABLE if exists "init"."ActeurPCRS17Type" CASCADE;
+DROP TABLE if exists "init"."CategorieObjetPCRS17Type" cascade;
 
 -- --- Relation
 
---DROP TABLE if exists a_pcrs."RoleActeurPCRS17Relation" CASCADE;
-DROP TABLE if exists a_pcrs."InitiativeActeurPCRS17Relation" CASCADE;
-DROP TABLE if exists a_pcrs."InitiativeCommunePCRS17Relation" CASCADE;
-DROP TABLE if exists a_pcrs."EmpriseDisponibiliteCommunePCRS17Relation" CASCADE;
-DROP TABLE if exists a_pcrs."EmpriseEchangeCommunePCRS17Relation" CASCADE;
-DROP TABLE if exists a_pcrs."EmpriseDisponibiliteTronconVoiriePCRS17Relation" CASCADE;
-DROP TABLE if exists a_pcrs."EmpriseEchangeTronconVoiriePCRS17Relation" CASCADE;
-DROP TABLE if exists a_pcrs."HabillageHabillagePCRS17Relation" CASCADE;
-DROP TABLE if exists a_pcrs."ObjetVecteurPointLevePCRS17Relation" CASCADE;
-DROP TABLE if exists a_pcrs."AffleurantGeometriqueAffleurantLignesPCRS17Relation" CASCADE;
-DROP TABLE if exists a_pcrs."AffleurantGeometriqueAffleurantPointPCRS17Relation" CASCADE;
-DROP TABLE if exists a_pcrs."AffleurantGeometriqueAffleurantEnveloppePCRS17Relation" CASCADE;
-DROP TABLE if exists a_pcrs."AffleurantEnveloppeHabillageLignesPCRS17Relation" CASCADE;
-DROP TABLE if exists a_pcrs."RasterMasqueOpacitePCRS17Relation" CASCADE;
+--DROP TABLE if exists "init"."RoleActeurPCRS17Relation" CASCADE;
+DROP TABLE if exists "init"."InitiativeActeurPCRS17Relation" CASCADE;
+DROP TABLE if exists "init"."InitiativeCommunePCRS17Relation" CASCADE;
+DROP TABLE if exists "init"."EmpriseDisponibiliteCommunePCRS17Relation" CASCADE;
+DROP TABLE if exists "init"."EmpriseEchangeCommunePCRS17Relation" CASCADE;
+DROP TABLE if exists "init"."EmpriseDisponibiliteTronconVoiriePCRS17Relation" CASCADE;
+DROP TABLE if exists "init"."EmpriseEchangeTronconVoiriePCRS17Relation" CASCADE;
+DROP TABLE if exists "init"."HabillageHabillagePCRS17Relation" CASCADE;
+DROP TABLE if exists "init"."ObjetVecteurPointLevePCRS17Relation" CASCADE;
+DROP TABLE if exists "init"."AffleurantGeometriqueAffleurantLignesPCRS17Relation" CASCADE;
+DROP TABLE if exists "init"."AffleurantGeometriqueAffleurantPointPCRS17Relation" CASCADE;
+DROP TABLE if exists "init"."AffleurantGeometriqueAffleurantEnveloppePCRS17Relation" CASCADE;
+DROP TABLE if exists "init"."AffleurantEnveloppeHabillageLignesPCRS17Relation" CASCADE;
+DROP TABLE if exists "init"."RasterMasqueOpacitePCRS17Relation" CASCADE;
 
 -- ---------------------------------
 -- Creation des tables "liste de valeurs / énumérations"
@@ -118,8 +118,8 @@ DROP TABLE if exists a_pcrs."RasterMasqueOpacitePCRS17Relation" CASCADE;
 -- ---------------------------------
 
 -- Table: CategorieThematiquePCRSType
---DROP TABLE if exists a_pcrs."CategorieThematiquePCRSType" cascade;
-CREATE TABLE a_pcrs."CategorieThematiquePCRSType"
+--DROP TABLE if exists "init"."CategorieThematiquePCRSType" cascade;
+CREATE TABLE "init"."CategorieThematiquePCRSType"
 (
   code character varying(2) unique,
   valeur character varying(13),
@@ -130,21 +130,21 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('00', 'A déterminer', 'Concerne essentiellement les objets génériques dont la thématique, liée en général à la classe d''objet, ne peut être déterminée à partir de la nomenclature lors de l''initialisation du PCRS.');
-INSERT INTO a_pcrs."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('01', 'Topographie', 'Concerne les objets spécifiques à la topographie, et notamment les points de canevas et les points de levés topographiques');
-INSERT INTO a_pcrs."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('02', 'Bâti', 'Concerne les objets liés au bâti sur le domaine public ou en limite de celui-ci, et en particulier les seuils de bâtiments, les façades, les amorces de bâti, les proéminences de bâti, et les escaliers.');
-INSERT INTO a_pcrs."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('03', 'Voirie', 'Concerne les objets de types voies de circulation terrestre non ferroviaire du domaine public, et comprenant les limites apparentes de voirie et escaliers');
-INSERT INTO a_pcrs."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('04', 'Ferroviaire', 'Concerne aussi bien les rails de SNCF Réseau que ceux liés à un transport public de type tramway ou tram-train et situés sur le domaine public');
-INSERT INTO a_pcrs."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('05', 'Clôture', 'Concerne les objets destinés à la clôture d''un espace et ayant une limite apparente avec le domaine public, dont les murs de tous types et parapets, surmontés ou non d''une clôture, les socles de clôtures, et les piliers.');
-INSERT INTO a_pcrs."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('06', 'Végétal', 'Concerne les objets végétaux de type haies et espaces verts, ainsi que les arbres');
-INSERT INTO a_pcrs."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('07', 'Ouvrage d Art', 'Concerne les ouvrages d''art du domaine public (ex : piles de ponts)');
-INSERT INTO a_pcrs."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('08', 'Hydrographie', 'Concerne l''hydrographie');
-INSERT INTO a_pcrs."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('09', 'Orographie', 'Concerne l''orographie');
-INSERT INTO a_pcrs."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('10', 'Affleurant', 'Concerne un élément de réseau affleurant');
-INSERT INTO a_pcrs."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('11', 'Raster', 'Concerne une orthoimage (par exemple masque d''opacité)');
-INSERT INTO a_pcrs."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('99', 'Non définie', 'La thématique n''est pas définie dans les données sources du gestionnaire du PCRS');
+INSERT INTO "init"."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('00', 'A déterminer', 'Concerne essentiellement les objets génériques dont la thématique, liée en général à la classe d''objet, ne peut être déterminée à partir de la nomenclature lors de l''initialisation du PCRS.');
+INSERT INTO "init"."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('01', 'Topographie', 'Concerne les objets spécifiques à la topographie, et notamment les points de canevas et les points de levés topographiques');
+INSERT INTO "init"."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('02', 'Bâti', 'Concerne les objets liés au bâti sur le domaine public ou en limite de celui-ci, et en particulier les seuils de bâtiments, les façades, les amorces de bâti, les proéminences de bâti, et les escaliers.');
+INSERT INTO "init"."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('03', 'Voirie', 'Concerne les objets de types voies de circulation terrestre non ferroviaire du domaine public, et comprenant les limites apparentes de voirie et escaliers');
+INSERT INTO "init"."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('04', 'Ferroviaire', 'Concerne aussi bien les rails de SNCF Réseau que ceux liés à un transport public de type tramway ou tram-train et situés sur le domaine public');
+INSERT INTO "init"."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('05', 'Clôture', 'Concerne les objets destinés à la clôture d''un espace et ayant une limite apparente avec le domaine public, dont les murs de tous types et parapets, surmontés ou non d''une clôture, les socles de clôtures, et les piliers.');
+INSERT INTO "init"."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('06', 'Végétal', 'Concerne les objets végétaux de type haies et espaces verts, ainsi que les arbres');
+INSERT INTO "init"."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('07', 'Ouvrage d Art', 'Concerne les ouvrages d''art du domaine public (ex : piles de ponts)');
+INSERT INTO "init"."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('08', 'Hydrographie', 'Concerne l''hydrographie');
+INSERT INTO "init"."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('09', 'Orographie', 'Concerne l''orographie');
+INSERT INTO "init"."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('10', 'Affleurant', 'Concerne un élément de réseau affleurant');
+INSERT INTO "init"."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('11', 'Raster', 'Concerne une orthoimage (par exemple masque d''opacité)');
+INSERT INTO "init"."CategorieThematiquePCRSType" (code, valeur, definition) VALUES ('99', 'Non définie', 'La thématique n''est pas définie dans les données sources du gestionnaire du PCRS');
 
-COMMENT ON TABLE a_pcrs."CategorieThematiquePCRSType" IS
+COMMENT ON TABLE "init"."CategorieThematiquePCRSType" IS
 'Code permettant de décrire la thématique rattachée à un objet donné du PCRS';
 
 
@@ -153,8 +153,8 @@ COMMENT ON TABLE a_pcrs."CategorieThematiquePCRSType" IS
 -- ---------------------------------
 
 -- Table: SectionPilierPCRSType
---DROP TABLE if exists a_pcrs."SectionPilierPCRSType" cascade;
-CREATE TABLE a_pcrs."SectionPilierPCRSType"
+--DROP TABLE if exists "init"."SectionPilierPCRSType" cascade;
+CREATE TABLE "init"."SectionPilierPCRSType"
 (
   code character varying(2) unique,
   valeur character varying(20),
@@ -165,12 +165,12 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."SectionPilierPCRSType" (code, valeur, definition) VALUES ('00', 'Pilier autre', 'Autre type de pilier');
-INSERT INTO a_pcrs."SectionPilierPCRSType" (code, valeur, definition) VALUES ('01', 'Pilier carré', 'Pilier à section carrée');
-INSERT INTO a_pcrs."SectionPilierPCRSType" (code, valeur, definition) VALUES ('02', 'Pilier rectangulaire', 'Pilier à section rectangulaire');
-INSERT INTO a_pcrs."SectionPilierPCRSType" (code, valeur, definition) VALUES ('03', 'Pilier circulaire', 'Pilier à section circulaire');
+INSERT INTO "init"."SectionPilierPCRSType" (code, valeur, definition) VALUES ('00', 'Pilier autre', 'Autre type de pilier');
+INSERT INTO "init"."SectionPilierPCRSType" (code, valeur, definition) VALUES ('01', 'Pilier carré', 'Pilier à section carrée');
+INSERT INTO "init"."SectionPilierPCRSType" (code, valeur, definition) VALUES ('02', 'Pilier rectangulaire', 'Pilier à section rectangulaire');
+INSERT INTO "init"."SectionPilierPCRSType" (code, valeur, definition) VALUES ('03', 'Pilier circulaire', 'Pilier à section circulaire');
 
-COMMENT ON TABLE a_pcrs."SectionPilierPCRSType" IS
+COMMENT ON TABLE "init"."SectionPilierPCRSType" IS
 'Code permettant de décrire le type de pilier.';
 
 
@@ -179,8 +179,8 @@ COMMENT ON TABLE a_pcrs."SectionPilierPCRSType" IS
 -- ---------------------------------
 
 -- Table: CategoriePlacementPCRSType
---DROP TABLE if exists a_pcrs."CategoriePlacementPCRSType" cascade;
-CREATE TABLE a_pcrs."CategoriePlacementPCRSType"
+--DROP TABLE if exists "init"."CategoriePlacementPCRSType" cascade;
+CREATE TABLE "init"."CategoriePlacementPCRSType"
 (
   code character varying(2) unique,
   valeur character varying(21),
@@ -191,13 +191,13 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('01', 'Sans Repositionnement', 'L''élément d''habillage n''a pas été repositionné par rapport à la source de données dont il est issu.');
-INSERT INTO a_pcrs."CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('02', 'Axe Voirie', 'L''élément d''habillage est positionné sur ou très proche d''un axe de voirie ');
-INSERT INTO a_pcrs."CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('03', 'Limite Voirie', 'L''élément d''habillage est positionné en limite de voirie');
-INSERT INTO a_pcrs."CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('04', 'Hors Voirie', 'L''élément d''habillage est positionné en dehors des limites de voirie');
-INSERT INTO a_pcrs."CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('05', 'Parcelle', 'L''élément d''habillage est positionné à l''intérieur d''une parcelle et proche des limites de voirie');
+INSERT INTO "init"."CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('01', 'Sans Repositionnement', 'L''élément d''habillage n''a pas été repositionné par rapport à la source de données dont il est issu.');
+INSERT INTO "init"."CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('02', 'Axe Voirie', 'L''élément d''habillage est positionné sur ou très proche d''un axe de voirie ');
+INSERT INTO "init"."CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('03', 'Limite Voirie', 'L''élément d''habillage est positionné en limite de voirie');
+INSERT INTO "init"."CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('04', 'Hors Voirie', 'L''élément d''habillage est positionné en dehors des limites de voirie');
+INSERT INTO "init"."CategoriePlacementPCRSType" (code, valeur, definition) VALUES ('05', 'Parcelle', 'L''élément d''habillage est positionné à l''intérieur d''une parcelle et proche des limites de voirie');
 
-COMMENT ON TABLE a_pcrs."CategoriePlacementPCRSType" IS
+COMMENT ON TABLE "init"."CategoriePlacementPCRSType" IS
 'Code permettant de décrire le type de positionnement des éléments d''habillage.';
 
 
@@ -206,8 +206,8 @@ COMMENT ON TABLE a_pcrs."CategoriePlacementPCRSType" IS
 -- ---------------------------------
 
 -- Table: ProprieteEspaceType
---DROP TABLE if exists a_pcrs."ProprieteEspaceType" cascade;
-CREATE TABLE a_pcrs."ProprieteEspaceType"
+--DROP TABLE if exists "init"."ProprieteEspaceType" cascade;
+CREATE TABLE "init"."ProprieteEspaceType"
 (
   code character varying(2) unique,
   valeur character varying(13),
@@ -218,10 +218,10 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."ProprieteEspaceType" (code, valeur, definition) VALUES ('01', 'Espace Public', 'L''espace considéré fait partie du domaine public');
-INSERT INTO a_pcrs."ProprieteEspaceType" (code, valeur, definition) VALUES ('02', 'Espace Privé', 'L''espace considéré fait partie du domaine privé');
+INSERT INTO "init"."ProprieteEspaceType" (code, valeur, definition) VALUES ('01', 'Espace Public', 'L''espace considéré fait partie du domaine public');
+INSERT INTO "init"."ProprieteEspaceType" (code, valeur, definition) VALUES ('02', 'Espace Privé', 'L''espace considéré fait partie du domaine privé');
 
-COMMENT ON TABLE a_pcrs."ProprieteEspaceType" IS
+COMMENT ON TABLE "init"."ProprieteEspaceType" IS
 'Code permettant de décrire la nature de l''espace au sens distinction de l''espce public / espace privé.';
 
 
@@ -230,8 +230,8 @@ COMMENT ON TABLE a_pcrs."ProprieteEspaceType" IS
 -- ---------------------------------
 
 -- Table: TexteJustificationPCRSType
---DROP TABLE if exists a_pcrs."TexteJustificationPCRSType" cascade;
-CREATE TABLE a_pcrs."TexteJustificationPCRSType"
+--DROP TABLE if exists "init"."TexteJustificationPCRSType" cascade;
+CREATE TABLE "init"."TexteJustificationPCRSType"
 (
   code character varying(1) unique,
   valeur character varying(6),
@@ -242,11 +242,11 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."TexteJustificationPCRSType" (code, valeur, definition) VALUES ('G', 'Gauche', 'Le texte est justifé à gauche');
-INSERT INTO a_pcrs."TexteJustificationPCRSType" (code, valeur, definition) VALUES ('C', 'Centré', 'Le texte est centré');
-INSERT INTO a_pcrs."TexteJustificationPCRSType" (code, valeur, definition) VALUES ('D', 'Droite', 'Le texte est justifé à droite');
+INSERT INTO "init"."TexteJustificationPCRSType" (code, valeur, definition) VALUES ('G', 'Gauche', 'Le texte est justifé à gauche');
+INSERT INTO "init"."TexteJustificationPCRSType" (code, valeur, definition) VALUES ('C', 'Centré', 'Le texte est centré');
+INSERT INTO "init"."TexteJustificationPCRSType" (code, valeur, definition) VALUES ('D', 'Droite', 'Le texte est justifé à droite');
 
-COMMENT ON TABLE a_pcrs."TexteJustificationPCRSType" IS
+COMMENT ON TABLE "init"."TexteJustificationPCRSType" IS
 'Code permettant de justifier un texte d''habillage.';
 
 
@@ -255,8 +255,8 @@ COMMENT ON TABLE a_pcrs."TexteJustificationPCRSType" IS
 -- ---------------------------------
 
 -- Table: QualiteCategorisationPCRSType
---DROP TABLE if exists a_pcrs."QualiteCategorisationPCRSType" cascade;
-CREATE TABLE a_pcrs."QualiteCategorisationPCRSType"
+--DROP TABLE if exists "init"."QualiteCategorisationPCRSType" cascade;
+CREATE TABLE "init"."QualiteCategorisationPCRSType"
 (
   code character varying(2) unique,
   valeur character varying(27),
@@ -267,11 +267,11 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."QualiteCategorisationPCRSType" (code, valeur, definition) VALUES ('01', 'Très fiable / Conforme PCRS', 'La catégorisation de l''objet du PCRS est conforme aux spécifications');
-INSERT INTO a_pcrs."QualiteCategorisationPCRSType" (code, valeur, definition) VALUES ('02', 'Moyennement Fiable ', 'La catégorisation de l''objet du PCRS est moyennement fiable');
-INSERT INTO a_pcrs."QualiteCategorisationPCRSType" (code, valeur, definition) VALUES ('03', 'Peu fiable', 'La catégorisation de l''objet du PCRS est peu fiable');
+INSERT INTO "init"."QualiteCategorisationPCRSType" (code, valeur, definition) VALUES ('01', 'Très fiable / Conforme PCRS', 'La catégorisation de l''objet du PCRS est conforme aux spécifications');
+INSERT INTO "init"."QualiteCategorisationPCRSType" (code, valeur, definition) VALUES ('02', 'Moyennement Fiable ', 'La catégorisation de l''objet du PCRS est moyennement fiable');
+INSERT INTO "init"."QualiteCategorisationPCRSType" (code, valeur, definition) VALUES ('03', 'Peu fiable', 'La catégorisation de l''objet du PCRS est peu fiable');
 
-COMMENT ON TABLE a_pcrs."QualiteCategorisationPCRSType" IS
+COMMENT ON TABLE "init"."QualiteCategorisationPCRSType" IS
 'Code permettant de décrire de façon extensible la qualité de catégorisation des objets du PCRS.';
 
 
@@ -280,8 +280,8 @@ COMMENT ON TABLE a_pcrs."QualiteCategorisationPCRSType" IS
 -- ---------------------------------
 
 -- Table: NatureAffleurantPCRSType
---DROP TABLE if exists a_pcrs."NatureAffleurantPCRSType" cascade;
-CREATE TABLE a_pcrs."NatureAffleurantPCRSType"
+--DROP TABLE if exists "init"."NatureAffleurantPCRSType" cascade;
+CREATE TABLE "init"."NatureAffleurantPCRSType"
 (
   code character varying(2) unique,
   valeur character varying(32),
@@ -292,16 +292,16 @@ WITH (
   OIDS=FALSE
 );
 
---INSERT INTO a_pcrs."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('00', 'Non défini', 'Les informations collectées ne permettent pas d identifier sans ambiguité la nature de l affleurant');
-INSERT INTO a_pcrs."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('01', 'Avaloir', 'Dispositif à garde d''eau destiné principalement à recueillir les eaux de ruisselement ou de nettoyage des sols');
-INSERT INTO a_pcrs."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('02', 'Boîte, Coffret, Armoire', 'Boîte, coffret ou armoire technique qui centralise des éléments de réseaux');
-INSERT INTO a_pcrs."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('03', 'Tampon, Plaque, Chambre', 'Couvercle d''un regard d''assainissement ou d''une chambre souterraine de génie civil pour le passage des réseaux et présent notamment sur les chaussées');
-INSERT INTO a_pcrs."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('04', 'Branchement, Vanne, Bouche à clé', 'Accessoire de robinetterie permettant de manoeuvrer depuis la chaussée, une vanne ou un robinet de branchement enterré');
-INSERT INTO a_pcrs."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('05', 'Bouche incendie, Poteau incendie', 'Permet aux services de lutte contre l''incendie (pompiers) de puiser l''eau du réseau');
-INSERT INTO a_pcrs."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('06', 'Poteau', 'Poteau supportant le passage aérien d''un ou plusieurs réseaux ou une signalisation tricolore');
-INSERT INTO a_pcrs."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('07', 'Poteau d éclairage', 'Borne lumineuse pour la mise en valeur / l''éclairage de l''espace public');
+--INSERT INTO "init"."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('00', 'Non défini', 'Les informations collectées ne permettent pas d identifier sans ambiguité la nature de l affleurant');
+INSERT INTO "init"."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('01', 'Avaloir', 'Dispositif à garde d''eau destiné principalement à recueillir les eaux de ruisselement ou de nettoyage des sols');
+INSERT INTO "init"."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('02', 'Boîte, Coffret, Armoire', 'Boîte, coffret ou armoire technique qui centralise des éléments de réseaux');
+INSERT INTO "init"."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('03', 'Tampon, Plaque, Chambre', 'Couvercle d''un regard d''assainissement ou d''une chambre souterraine de génie civil pour le passage des réseaux et présent notamment sur les chaussées');
+INSERT INTO "init"."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('04', 'Branchement, Vanne, Bouche à clé', 'Accessoire de robinetterie permettant de manoeuvrer depuis la chaussée, une vanne ou un robinet de branchement enterré');
+INSERT INTO "init"."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('05', 'Bouche incendie, Poteau incendie', 'Permet aux services de lutte contre l''incendie (pompiers) de puiser l''eau du réseau');
+INSERT INTO "init"."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('06', 'Poteau', 'Poteau supportant le passage aérien d''un ou plusieurs réseaux ou une signalisation tricolore');
+INSERT INTO "init"."NatureAffleurantPCRSType" (code, valeur, definition) VALUES ('07', 'Poteau d éclairage', 'Borne lumineuse pour la mise en valeur / l''éclairage de l''espace public');
 
-COMMENT ON TABLE a_pcrs."NatureAffleurantPCRSType" IS
+COMMENT ON TABLE "init"."NatureAffleurantPCRSType" IS
 'Code permettant de décrire de façon extensible la nature d''un affleurant de réseaux.';
 
 
@@ -310,8 +310,8 @@ COMMENT ON TABLE a_pcrs."NatureAffleurantPCRSType" IS
 -- ---------------------------------
 
 -- Table: NatureReseauPCRSType
---DROP TABLE if exists a_pcrs."NatureReseauPCRSType" cascade;
-CREATE TABLE a_pcrs."NatureReseauPCRSType"
+--DROP TABLE if exists "init"."NatureReseauPCRSType" cascade;
+CREATE TABLE "init"."NatureReseauPCRSType"
 (
   code character varying(8) unique,
   valeur character varying(33),
@@ -321,26 +321,26 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('00', 'Non défini');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('ELEC', 'Electricité');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('ELECECL', 'Eclairage public');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('ELECSLT', 'Signalisation lumineuse tricolore');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('ELECBT', 'Electricité basse tension');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('ELECHT', 'Electricité haute tension');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('GAZ', 'Gaz');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('MULT', 'Multi réseaux');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('CHIM', 'Produits chimiques');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('COM', 'Télécom');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('AEP', 'Eau Potable');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('ASSA', 'Assainissement et pluvial');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('ASSAEP', 'Eaux pluviales');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('ASSAEU', 'Eaux usées');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('ASSARU', 'Réseau unitaire');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('DECH', 'Déchets');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('CHAU', 'Chauffage et climatisation');
-INSERT INTO a_pcrs."NatureReseauPCRSType" (code, valeur) VALUES ('INCE', 'Incendie');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('00', 'Non défini');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('ELEC', 'Electricité');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('ELECECL', 'Eclairage public');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('ELECSLT', 'Signalisation lumineuse tricolore');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('ELECBT', 'Electricité basse tension');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('ELECHT', 'Electricité haute tension');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('GAZ', 'Gaz');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('MULT', 'Multi réseaux');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('CHIM', 'Produits chimiques');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('COM', 'Télécom');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('AEP', 'Eau Potable');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('ASSA', 'Assainissement et pluvial');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('ASSAEP', 'Eaux pluviales');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('ASSAEU', 'Eaux usées');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('ASSARU', 'Réseau unitaire');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('DECH', 'Déchets');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('CHAU', 'Chauffage et climatisation');
+INSERT INTO "init"."NatureReseauPCRSType" (code, valeur) VALUES ('INCE', 'Incendie');
 
-COMMENT ON TABLE a_pcrs."NatureReseauPCRSType" IS
+COMMENT ON TABLE "init"."NatureReseauPCRSType" IS
 'Code permettant de décrire de façon extensible la nature d''un réseau.';
 
 
@@ -349,8 +349,8 @@ COMMENT ON TABLE a_pcrs."NatureReseauPCRSType" IS
 -- ---------------------------------
 
 -- Table: CategoriePrecisionPCRSType
---DROP TABLE if exists a_pcrs."CategoriePrecisionPCRSType" cascade;
-CREATE TABLE a_pcrs."CategoriePrecisionPCRSType"
+--DROP TABLE if exists "init"."CategoriePrecisionPCRSType" cascade;
+CREATE TABLE "init"."CategoriePrecisionPCRSType"
 (
   code character varying(3) unique,
   valeur character varying(17),
@@ -360,14 +360,14 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."CategoriePrecisionPCRSType" (code, valeur) VALUES ('002', 'moins de 2 cm');
-INSERT INTO a_pcrs."CategoriePrecisionPCRSType" (code, valeur) VALUES ('005', 'de 2 à 5 cm');
-INSERT INTO a_pcrs."CategoriePrecisionPCRSType" (code, valeur) VALUES ('010', 'de 5 à 10 cm');
-INSERT INTO a_pcrs."CategoriePrecisionPCRSType" (code, valeur) VALUES ('040', 'de 10 à 40 cm');
-INSERT INTO a_pcrs."CategoriePrecisionPCRSType" (code, valeur) VALUES ('150', 'de 40 à 150 cm');
-INSERT INTO a_pcrs."CategoriePrecisionPCRSType" (code, valeur) VALUES ('999', 'au delà de 150 cm');
+INSERT INTO "init"."CategoriePrecisionPCRSType" (code, valeur) VALUES ('002', 'moins de 2 cm');
+INSERT INTO "init"."CategoriePrecisionPCRSType" (code, valeur) VALUES ('005', 'de 2 à 5 cm');
+INSERT INTO "init"."CategoriePrecisionPCRSType" (code, valeur) VALUES ('010', 'de 5 à 10 cm');
+INSERT INTO "init"."CategoriePrecisionPCRSType" (code, valeur) VALUES ('040', 'de 10 à 40 cm');
+INSERT INTO "init"."CategoriePrecisionPCRSType" (code, valeur) VALUES ('150', 'de 40 à 150 cm');
+INSERT INTO "init"."CategoriePrecisionPCRSType" (code, valeur) VALUES ('999', 'au delà de 150 cm');
 
-COMMENT ON TABLE a_pcrs."CategoriePrecisionPCRSType" IS
+COMMENT ON TABLE "init"."CategoriePrecisionPCRSType" IS
 'Code permettant de décrire un intervalle de précision exprimée en cm associée au levé d''un objet ou d''un affleurant du PCRS';
 
 
@@ -376,8 +376,8 @@ COMMENT ON TABLE a_pcrs."CategoriePrecisionPCRSType" IS
 -- ---------------------------------
 
 -- Table: CategorieMurPCRSType
---DROP TABLE if exists  a_pcrs."CategorieMurPCRSType" cascade;
-CREATE TABLE a_pcrs."CategorieMurPCRSType"
+--DROP TABLE if exists  "init"."CategorieMurPCRSType" cascade;
+CREATE TABLE "init"."CategorieMurPCRSType"
 (
   code character varying(2) unique,
   valeur character varying(22),
@@ -387,16 +387,16 @@ WITH (
   OIDS=FALSE
 );
 
---INSERT INTO a_pcrs."CategorieMurPCRSType" (code, valeur) VALUES ('00', 'Non défini');
-INSERT INTO a_pcrs."CategorieMurPCRSType" (code, valeur) VALUES ('01', 'Mur');
-INSERT INTO a_pcrs."CategorieMurPCRSType" (code, valeur) VALUES ('02', 'Mur de soutènement');
-INSERT INTO a_pcrs."CategorieMurPCRSType" (code, valeur) VALUES ('03', 'Mur bahut');
-INSERT INTO a_pcrs."CategorieMurPCRSType" (code, valeur) VALUES ('04', 'Mur bahut avec clôture');
-INSERT INTO a_pcrs."CategorieMurPCRSType" (code, valeur) VALUES ('05', 'Parapet');
---INSERT INTO a_pcrs."CategorieMurPCRSType" (code, valeur) VALUES ('06', 'Clôture sur socle');
-INSERT INTO a_pcrs."CategorieMurPCRSType" (code, valeur) VALUES ('06', 'Enrochement');
+--INSERT INTO "init"."CategorieMurPCRSType" (code, valeur) VALUES ('00', 'Non défini');
+INSERT INTO "init"."CategorieMurPCRSType" (code, valeur) VALUES ('01', 'Mur');
+INSERT INTO "init"."CategorieMurPCRSType" (code, valeur) VALUES ('02', 'Mur de soutènement');
+INSERT INTO "init"."CategorieMurPCRSType" (code, valeur) VALUES ('03', 'Mur bahut');
+INSERT INTO "init"."CategorieMurPCRSType" (code, valeur) VALUES ('04', 'Mur bahut avec clôture');
+INSERT INTO "init"."CategorieMurPCRSType" (code, valeur) VALUES ('05', 'Parapet');
+--INSERT INTO "init"."CategorieMurPCRSType" (code, valeur) VALUES ('06', 'Clôture sur socle');
+INSERT INTO "init"."CategorieMurPCRSType" (code, valeur) VALUES ('06', 'Enrochement');
 
-COMMENT ON TABLE a_pcrs."CategorieMurPCRSType" IS
+COMMENT ON TABLE "init"."CategorieMurPCRSType" IS
 'Code permettant de décrire les différents types de mur.';
 
 
@@ -408,8 +408,8 @@ COMMENT ON TABLE a_pcrs."CategorieMurPCRSType" IS
 -- ---------------------------------
 
 -- Table: CodeCouleurNormePCRS17Type
--- DROP TABLE if exists a_pcrs."CodeCouleurNormePCRS17Type" cascade;
-CREATE TABLE a_pcrs."CodeCouleurNormePCRS17Type"
+-- DROP TABLE if exists "init"."CodeCouleurNormePCRS17Type" cascade;
+CREATE TABLE "init"."CodeCouleurNormePCRS17Type"
 (
   code character varying(6) unique,
   valeur character varying(11),
@@ -420,18 +420,18 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Rouge', '255,0,0', 'Electricité BT, HTA ou HTB, éclairage, signalisation routière et feux tricolores');
-INSERT INTO a_pcrs."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Jaune', '255,255,0', 'Gaz combustible (transport ou distribution) et Hydrocarbures');
-INSERT INTO a_pcrs."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Orange', '255,100,0', 'Produits chimiques');
-INSERT INTO a_pcrs."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Bleu', '0,0,255', 'Eau potable');
-INSERT INTO a_pcrs."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Marron', '125,73,0', 'Assainissement et Pluvial');
-INSERT INTO a_pcrs."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Violet', '100,0,100', 'Chauffage et Climatisation');
-INSERT INTO a_pcrs."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Vert', '0,255,0', 'Communications électroniques et électricité TBT');
-INSERT INTO a_pcrs."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Rose', '255,0,139', 'Emprise multi-réseaux');
-INSERT INTO a_pcrs."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Blanc', '255,255,255', 'Non-défini');
-INSERT INTO a_pcrs."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('None', '130,130,130', 'Non-défini');
+INSERT INTO "init"."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Rouge', '255,0,0', 'Electricité BT, HTA ou HTB, éclairage, signalisation routière et feux tricolores');
+INSERT INTO "init"."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Jaune', '255,255,0', 'Gaz combustible (transport ou distribution) et Hydrocarbures');
+INSERT INTO "init"."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Orange', '255,100,0', 'Produits chimiques');
+INSERT INTO "init"."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Bleu', '0,0,255', 'Eau potable');
+INSERT INTO "init"."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Marron', '125,73,0', 'Assainissement et Pluvial');
+INSERT INTO "init"."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Violet', '100,0,100', 'Chauffage et Climatisation');
+INSERT INTO "init"."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Vert', '0,255,0', 'Communications électroniques et électricité TBT');
+INSERT INTO "init"."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Rose', '255,0,139', 'Emprise multi-réseaux');
+INSERT INTO "init"."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('Blanc', '255,255,255', 'Non-défini');
+INSERT INTO "init"."CodeCouleurNormePCRS17Type" (code, valeur, definition) VALUES ('None', '130,130,130', 'Non-défini');
 
-COMMENT ON TABLE a_pcrs."CodeCouleurNormePCRS17Type" IS
+COMMENT ON TABLE "init"."CodeCouleurNormePCRS17Type" IS
 'Code permettant de décrire la couleur associée à une nature de réseau. cf norme NF P 98-332';
 
 
@@ -440,39 +440,39 @@ COMMENT ON TABLE a_pcrs."CodeCouleurNormePCRS17Type" IS
 -- ---------------------------------
 
 -- Table: NatureReseauPCRS17Type
---DROP TABLE if exists a_pcrs."NatureReseauPCRS17Type" cascade;
-CREATE TABLE a_pcrs."NatureReseauPCRS17Type"
+--DROP TABLE if exists "init"."NatureReseauPCRS17Type" cascade;
+CREATE TABLE "init"."NatureReseauPCRS17Type"
 (
   code character varying(8) unique,
   valeur character varying(33),
   "valeurCouleurRepresentation" character varying(11),
-  "codeCouleurNorme" character varying(6) REFERENCES a_pcrs."CodeCouleurNormePCRS17Type" (code),
+  "codeCouleurNorme" character varying(6) REFERENCES "init"."CodeCouleurNormePCRS17Type" (code),
   CONSTRAINT "NatureReseauPCRS17Type_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('00', 'Non défini', '130,130,130', 'None');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ELEC', 'Electricité', '255,0,0', 'Rouge');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ELECECL', 'Eclairage public', '255,0,0', 'Rouge');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ELECSLT', 'Signalisation lumineuse tricolore', '255,0,0', 'Blanc');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ELECBT', 'Electricité basse tension', '255,0,0', 'Rouge');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ELECHT', 'Electricité haute tension', '255,0,0', 'Rouge');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('GAZ', 'Gaz', '255,255,0', 'Jaune');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('MULT', 'Multi réseaux', '255,0,139', 'Rose');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('CHIM', 'Produits chimiques', '255,100,0', 'Orange');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('COM', 'Télécom', '0,255,0', 'Vert');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('AEP', 'Eau Potable', '0,0,255', 'Bleu');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ASSA', 'Assainissement et pluvial', '125,73,0', 'Marron');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ASSAEP', 'Eaux pluviales', '125,73,0', 'Marron');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ASSAEU', 'Eaux usées', '125,73,0', 'Marron');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ASSARU', 'Réseau unitaire', '125,73,0', 'Marron');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('DECH', 'Déchets', '130,130,130', 'None');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('CHAU', 'Chauffage et climatisation', '100,0,100', 'Violet');
-INSERT INTO a_pcrs."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('INCE', 'Incendie', '0,0,255', 'Bleu');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('00', 'Non défini', '130,130,130', 'None');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ELEC', 'Electricité', '255,0,0', 'Rouge');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ELECECL', 'Eclairage public', '255,0,0', 'Rouge');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ELECSLT', 'Signalisation lumineuse tricolore', '255,0,0', 'Blanc');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ELECBT', 'Electricité basse tension', '255,0,0', 'Rouge');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ELECHT', 'Electricité haute tension', '255,0,0', 'Rouge');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('GAZ', 'Gaz', '255,255,0', 'Jaune');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('MULT', 'Multi réseaux', '255,0,139', 'Rose');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('CHIM', 'Produits chimiques', '255,100,0', 'Orange');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('COM', 'Télécom', '0,255,0', 'Vert');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('AEP', 'Eau Potable', '0,0,255', 'Bleu');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ASSA', 'Assainissement et pluvial', '125,73,0', 'Marron');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ASSAEP', 'Eaux pluviales', '125,73,0', 'Marron');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ASSAEU', 'Eaux usées', '125,73,0', 'Marron');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('ASSARU', 'Réseau unitaire', '125,73,0', 'Marron');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('DECH', 'Déchets', '130,130,130', 'None');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('CHAU', 'Chauffage et climatisation', '100,0,100', 'Violet');
+INSERT INTO "init"."NatureReseauPCRS17Type" (code, valeur, "valeurCouleurRepresentation", "codeCouleurNorme") VALUES ('INCE', 'Incendie', '0,0,255', 'Bleu');
 
-COMMENT ON TABLE a_pcrs."NatureReseauPCRS17Type" IS
+COMMENT ON TABLE "init"."NatureReseauPCRS17Type" IS
 'Code permettant de décrire de façon extensible la nature d''un réseau.';
 
 
@@ -481,8 +481,8 @@ COMMENT ON TABLE a_pcrs."NatureReseauPCRS17Type" IS
 -- ---------------------------------
 
 -- Table: CategoriePrecisionPCRS17Type
---DROP TABLE if exists a_pcrs."CategoriePrecisionPCRS17Type" cascade;
-CREATE TABLE a_pcrs."CategoriePrecisionPCRS17Type"
+--DROP TABLE if exists "init"."CategoriePrecisionPCRS17Type" cascade;
+CREATE TABLE "init"."CategoriePrecisionPCRS17Type"
 (
   code character varying(3) unique,
   valeur character varying(17),
@@ -492,15 +492,15 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."CategoriePrecisionPCRS17Type" (code, valeur) VALUES ('002', 'moins de 2 cm');
-INSERT INTO a_pcrs."CategoriePrecisionPCRS17Type" (code, valeur) VALUES ('005', 'de 2 à 5 cm');
-INSERT INTO a_pcrs."CategoriePrecisionPCRS17Type" (code, valeur) VALUES ('010', 'de 5 à 10 cm');
-INSERT INTO a_pcrs."CategoriePrecisionPCRS17Type" (code, valeur) VALUES ('040', 'de 10 à 40 cm');
-INSERT INTO a_pcrs."CategoriePrecisionPCRS17Type" (code, valeur) VALUES ('100', 'de 40 à 100 cm');
-INSERT INTO a_pcrs."CategoriePrecisionPCRS17Type" (code, valeur) VALUES ('150', 'de 100 à 150 cm');
-INSERT INTO a_pcrs."CategoriePrecisionPCRS17Type" (code, valeur) VALUES ('999', 'au delà de 150 cm');
+INSERT INTO "init"."CategoriePrecisionPCRS17Type" (code, valeur) VALUES ('002', 'moins de 2 cm');
+INSERT INTO "init"."CategoriePrecisionPCRS17Type" (code, valeur) VALUES ('005', 'de 2 à 5 cm');
+INSERT INTO "init"."CategoriePrecisionPCRS17Type" (code, valeur) VALUES ('010', 'de 5 à 10 cm');
+INSERT INTO "init"."CategoriePrecisionPCRS17Type" (code, valeur) VALUES ('040', 'de 10 à 40 cm');
+INSERT INTO "init"."CategoriePrecisionPCRS17Type" (code, valeur) VALUES ('100', 'de 40 à 100 cm');
+INSERT INTO "init"."CategoriePrecisionPCRS17Type" (code, valeur) VALUES ('150', 'de 100 à 150 cm');
+INSERT INTO "init"."CategoriePrecisionPCRS17Type" (code, valeur) VALUES ('999', 'au delà de 150 cm');
 
-COMMENT ON TABLE a_pcrs."CategoriePrecisionPCRS17Type" IS
+COMMENT ON TABLE "init"."CategoriePrecisionPCRS17Type" IS
 'Code permettant de décrire un intervalle de précision exprimée en cm associée au levé d''un objet ou d''un affleurant du PCRS';
 
 
@@ -509,8 +509,8 @@ COMMENT ON TABLE a_pcrs."CategoriePrecisionPCRS17Type" IS
 -- ---------------------------------
 
 -- Table: CalendrierPCRS17Type
--- DROP TABLE if exists a_pcrs."CalendrierPCRS17Type" cascade;
-CREATE TABLE a_pcrs."CalendrierPCRS17Type"
+-- DROP TABLE if exists "init"."CalendrierPCRS17Type" cascade;
+CREATE TABLE "init"."CalendrierPCRS17Type"
 (
   code character varying(2) unique,
   valeur character varying(24),
@@ -520,12 +520,12 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."CalendrierPCRS17Type" (code, valeur) VALUES ('01', 'Livré, Mis A Disposition');
-INSERT INTO a_pcrs."CalendrierPCRS17Type" (code, valeur) VALUES ('02', 'Actualisation En Cours');
-INSERT INTO a_pcrs."CalendrierPCRS17Type" (code, valeur) VALUES ('03', 'En Projet, Planifié');
-INSERT INTO a_pcrs."CalendrierPCRS17Type" (code, valeur) VALUES ('04', 'Non Planifié');
+INSERT INTO "init"."CalendrierPCRS17Type" (code, valeur) VALUES ('01', 'Livré, Mis A Disposition');
+INSERT INTO "init"."CalendrierPCRS17Type" (code, valeur) VALUES ('02', 'Actualisation En Cours');
+INSERT INTO "init"."CalendrierPCRS17Type" (code, valeur) VALUES ('03', 'En Projet, Planifié');
+INSERT INTO "init"."CalendrierPCRS17Type" (code, valeur) VALUES ('04', 'Non Planifié');
 --
-COMMENT ON TABLE a_pcrs."CalendrierPCRS17Type" IS
+COMMENT ON TABLE "init"."CalendrierPCRS17Type" IS
 'Code permettant de décrire la date de disponibilité du PCRS.';
 
 
@@ -534,8 +534,8 @@ COMMENT ON TABLE a_pcrs."CalendrierPCRS17Type" IS
 -- ---------------------------------
 
 -- Table: NatureEmprisePCRS17Type
---DROP TABLE if exists a_pcrs."NatureEmprisePCRS17Type" cascade;
-CREATE TABLE a_pcrs."NatureEmprisePCRS17Type"
+--DROP TABLE if exists "init"."NatureEmprisePCRS17Type" cascade;
+CREATE TABLE "init"."NatureEmprisePCRS17Type"
 (
   code character varying(2) unique,
   valeur character varying(21),
@@ -545,14 +545,14 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."NatureEmprisePCRS17Type" (code, valeur) VALUES ('01', 'Couloir');
-INSERT INTO a_pcrs."NatureEmprisePCRS17Type" (code, valeur) VALUES ('02', 'Opération');
-INSERT INTO a_pcrs."NatureEmprisePCRS17Type" (code, valeur) VALUES ('03', 'Carreau');
-INSERT INTO a_pcrs."NatureEmprisePCRS17Type" (code, valeur) VALUES ('04', 'Limite Administrative');
-INSERT INTO a_pcrs."NatureEmprisePCRS17Type" (code, valeur) VALUES ('05', 'Raster');
-INSERT INTO a_pcrs."NatureEmprisePCRS17Type" (code, valeur) VALUES ('06', 'Masque');
+INSERT INTO "init"."NatureEmprisePCRS17Type" (code, valeur) VALUES ('01', 'Couloir');
+INSERT INTO "init"."NatureEmprisePCRS17Type" (code, valeur) VALUES ('02', 'Opération');
+INSERT INTO "init"."NatureEmprisePCRS17Type" (code, valeur) VALUES ('03', 'Carreau');
+INSERT INTO "init"."NatureEmprisePCRS17Type" (code, valeur) VALUES ('04', 'Limite Administrative');
+INSERT INTO "init"."NatureEmprisePCRS17Type" (code, valeur) VALUES ('05', 'Raster');
+INSERT INTO "init"."NatureEmprisePCRS17Type" (code, valeur) VALUES ('06', 'Masque');
 
-COMMENT ON TABLE a_pcrs."NatureEmprisePCRS17Type" IS
+COMMENT ON TABLE "init"."NatureEmprisePCRS17Type" IS
 'Code permettant de décrire la nature de l''emprise d''echange du PCRS.';
 
 
@@ -561,8 +561,8 @@ COMMENT ON TABLE a_pcrs."NatureEmprisePCRS17Type" IS
 -- ---------------------------------
 
 -- Table: CotationPCRS17Type
--- DROP TABLE if exists a_pcrs."CotationPCRS17Type" cascade;
--- CREATE TABLE a_pcrs."CotationPCRS17Type"
+-- DROP TABLE if exists "init"."CotationPCRS17Type" cascade;
+-- CREATE TABLE "init"."CotationPCRS17Type"
 -- (
 --   code character varying(2) unique,
 --   valeur character varying(38),
@@ -572,11 +572,11 @@ COMMENT ON TABLE a_pcrs."NatureEmprisePCRS17Type" IS
 --   OIDS=FALSE
 -- );
 --
--- INSERT INTO a_pcrs."CotationPCRS17Type" (code, valeur) VALUES ('01', 'Non Utilisable Pour Coter');
--- INSERT INTO a_pcrs."CotationPCRS17Type" (code, valeur) VALUES ('02', 'Cotation Planimetrique Uniquement');
--- INSERT INTO a_pcrs."CotationPCRS17Type" (code, valeur) VALUES ('03', 'Cotation Planimetrique Et Altimetrique');
+-- INSERT INTO "init"."CotationPCRS17Type" (code, valeur) VALUES ('01', 'Non Utilisable Pour Coter');
+-- INSERT INTO "init"."CotationPCRS17Type" (code, valeur) VALUES ('02', 'Cotation Planimetrique Uniquement');
+-- INSERT INTO "init"."CotationPCRS17Type" (code, valeur) VALUES ('03', 'Cotation Planimetrique Et Altimetrique');
 --
--- COMMENT ON TABLE a_pcrs."CotationPCRS17Type" IS
+-- COMMENT ON TABLE "init"."CotationPCRS17Type" IS
 -- 'Code permettant de décrire si l''objet peut etre utilisable pour coter.';
 
 
@@ -585,8 +585,8 @@ COMMENT ON TABLE a_pcrs."NatureEmprisePCRS17Type" IS
 -- ---------------------------------
 
 -- Table: RoleNiveau1PCRS17Type
---DROP TABLE if exists a_pcrs."RoleNiveau1PCRS17Type" cascade;
-CREATE TABLE a_pcrs."RoleNiveau1PCRS17Type"
+--DROP TABLE if exists "init"."RoleNiveau1PCRS17Type" cascade;
+CREATE TABLE "init"."RoleNiveau1PCRS17Type"
 (
   code character varying(2) unique,
   valeur character varying(38),
@@ -597,7 +597,7 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."RoleNiveau1PCRS17Type" (code, valeur, caracteristique) VALUES ('01', 'Echelon national du PCRS',
+INSERT INTO "init"."RoleNiveau1PCRS17Type" (code, valeur, caracteristique) VALUES ('01', 'Echelon national du PCRS',
 'Le CNIG met en place un observatoire en charge du suivi du
 déploiement des accords locaux ainsi que de la dissémination du PCRS.
 Le CNIG maintient les spécifications du PCRS,
@@ -610,7 +610,7 @@ en cohérence avec les infrastructures locales,
 et selon des conditions financières définies dans les conventions
 partenariales locales mises en place,
 à défaut selon des conditions financières à définir.');
-INSERT INTO a_pcrs."RoleNiveau1PCRS17Type" (code, valeur, caracteristique) VALUES ('02', 'Gestionnaire du PCRS',
+INSERT INTO "init"."RoleNiveau1PCRS17Type" (code, valeur, caracteristique) VALUES ('02', 'Gestionnaire du PCRS',
 'Le gestionnaire du PCRS est une autorité publique locale compétente.
 Il met en place les conditions pour constituer un PCRS,
 organise la mutualisation (initialisation et mise à jour du PCRS)
@@ -624,13 +624,13 @@ et/ou si possible par service web conformes aux standards
 de l''Open Geospatial Consortium).
 Il élargit progressivement la mutualisation à de nouveaux partenaires,
 il en spécifie toutefois les conditions.');
-INSERT INTO a_pcrs."RoleNiveau1PCRS17Type" (code, valeur, caracteristique) VALUES ('03', 'Producteur du PCRS',
+INSERT INTO "init"."RoleNiveau1PCRS17Type" (code, valeur, caracteristique) VALUES ('03', 'Producteur du PCRS',
 'Produit un ou plusieurs composant(s) du PCRS
 comme le bâti, la voirie, les affleurants etc...
 Il contrôle ses données pour s''assurer qu''elles correspondent
 à minima à la qualité requise dans la règlementation, et le cas échéant,
 aux spécifications techniques du gestionnaire du PCRS.');
-INSERT INTO a_pcrs."RoleNiveau1PCRS17Type" (code, valeur, caracteristique) VALUES ('04', 'Utilisateur du PCRS',
+INSERT INTO "init"."RoleNiveau1PCRS17Type" (code, valeur, caracteristique) VALUES ('04', 'Utilisateur du PCRS',
 'L''utilisateur reçoit les données du PCRS,
 elles lui permettent de construire une réponse à une DT/DICT
 en y faisant figurer les données métiers superposées aux données PCRS.
@@ -642,7 +642,7 @@ peut faire figurer ses réseaux/ouvrages.
 L''utilisateur peut avoir différentes fonctions, en voici quelques exemples :
 maître d''ouvrage, entreprise de travaux, exploitant de réseaux, bureau d''études.');
 
-COMMENT ON TABLE a_pcrs."RoleNiveau1PCRS17Type" IS
+COMMENT ON TABLE "init"."RoleNiveau1PCRS17Type" IS
 'Code permettant de décrire le role de l''acteur.
 Les cas d utilisation s''appuient sur des rôles liés à l''échange de données au format PCRS.
 Par leurs missions, les différents intervenants liés au PCRS peuvent être
@@ -659,10 +659,10 @@ et/ou producteur d''un composant du PCRS.';
 -- ---------------------------------
 
 -- Table: RoleNiveau2PCRS17Type
---DROP TABLE if exists a_pcrs."RoleNiveau2PCRS17Type" cascade;
-CREATE TABLE a_pcrs."RoleNiveau2PCRS17Type"
+--DROP TABLE if exists "init"."RoleNiveau2PCRS17Type" cascade;
+CREATE TABLE "init"."RoleNiveau2PCRS17Type"
 (
-  "roleNiveau1" character varying(2) NOT NULL REFERENCES a_pcrs."RoleNiveau1PCRS17Type" ("code"),
+  "roleNiveau1" character varying(2) NOT NULL REFERENCES "init"."RoleNiveau1PCRS17Type" ("code"),
   code character varying(2) unique,
   valeur character varying(40),
   CONSTRAINT "RoleNiveau2PCRS17Type_pkey" PRIMARY KEY (code)
@@ -671,17 +671,17 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('01', '01', 'Echelon national du PCRS');
-INSERT INTO a_pcrs."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('02', '02', 'Gestionnaire du PCRS');
-INSERT INTO a_pcrs."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('03', '03', 'Gestionnaire Référentiel Voirie');
-INSERT INTO a_pcrs."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('03', '04', 'Gestionnaire Foncier');
-INSERT INTO a_pcrs."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('03', '05', 'Gestionnaire Voirie');
-INSERT INTO a_pcrs."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('03', '06', 'Exploitant de réseaux');
-INSERT INTO a_pcrs."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('03', '07', 'Autre Gestionnaire');
-INSERT INTO a_pcrs."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('03', '08', 'Producteur d orthophotos');
-INSERT INTO a_pcrs."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('04', '09', 'Maitre d''ouvrage ou executant de travaux');
+INSERT INTO "init"."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('01', '01', 'Echelon national du PCRS');
+INSERT INTO "init"."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('02', '02', 'Gestionnaire du PCRS');
+INSERT INTO "init"."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('03', '03', 'Gestionnaire Référentiel Voirie');
+INSERT INTO "init"."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('03', '04', 'Gestionnaire Foncier');
+INSERT INTO "init"."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('03', '05', 'Gestionnaire Voirie');
+INSERT INTO "init"."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('03', '06', 'Exploitant de réseaux');
+INSERT INTO "init"."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('03', '07', 'Autre Gestionnaire');
+INSERT INTO "init"."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('03', '08', 'Producteur d orthophotos');
+INSERT INTO "init"."RoleNiveau2PCRS17Type" ("roleNiveau1", code, valeur) VALUES ('04', '09', 'Maitre d''ouvrage ou executant de travaux');
 
-COMMENT ON TABLE a_pcrs."RoleNiveau2PCRS17Type" IS
+COMMENT ON TABLE "init"."RoleNiveau2PCRS17Type" IS
 'Code permettant de décrire le role de l''acteur.';
 
 
@@ -690,8 +690,8 @@ COMMENT ON TABLE a_pcrs."RoleNiveau2PCRS17Type" IS
 -- ---------------------------------
 
 -- Table: ActeurPCRS17Type
---DROP TABLE if exists a_pcrs."ActeurPCRS17Type" cascade;
-CREATE TABLE a_pcrs."ActeurPCRS17Type"
+--DROP TABLE if exists "init"."ActeurPCRS17Type" cascade;
+CREATE TABLE "init"."ActeurPCRS17Type"
 (
   code character varying(2) unique,
   valeur character varying(255),
@@ -701,16 +701,16 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."ActeurPCRS17Type" (code, valeur) VALUES ('01', 'Soluris 17');
-INSERT INTO a_pcrs."ActeurPCRS17Type" (code, valeur) VALUES ('02', 'Enedis');
-INSERT INTO a_pcrs."ActeurPCRS17Type" (code, valeur) VALUES ('03', 'SDE');
-INSERT INTO a_pcrs."ActeurPCRS17Type" (code, valeur) VALUES ('04', 'SDEER');
-INSERT INTO a_pcrs."ActeurPCRS17Type" (code, valeur) VALUES ('05', 'CDA');
-INSERT INTO a_pcrs."ActeurPCRS17Type" (code, valeur) VALUES ('06', 'VLR');
-INSERT INTO a_pcrs."ActeurPCRS17Type" (code, valeur) VALUES ('07', 'DGFiP');
+INSERT INTO "init"."ActeurPCRS17Type" (code, valeur) VALUES ('01', 'Soluris 17');
+INSERT INTO "init"."ActeurPCRS17Type" (code, valeur) VALUES ('02', 'Enedis');
+INSERT INTO "init"."ActeurPCRS17Type" (code, valeur) VALUES ('03', 'SDE');
+INSERT INTO "init"."ActeurPCRS17Type" (code, valeur) VALUES ('04', 'SDEER');
+INSERT INTO "init"."ActeurPCRS17Type" (code, valeur) VALUES ('05', 'CDA');
+INSERT INTO "init"."ActeurPCRS17Type" (code, valeur) VALUES ('06', 'VLR');
+INSERT INTO "init"."ActeurPCRS17Type" (code, valeur) VALUES ('07', 'DGFiP');
 
 
-COMMENT ON TABLE a_pcrs."ActeurPCRS17Type" IS
+COMMENT ON TABLE "init"."ActeurPCRS17Type" IS
 'Code permettant de décrire l''acteur.';
 
 
@@ -719,62 +719,62 @@ COMMENT ON TABLE a_pcrs."ActeurPCRS17Type" IS
 -- ---------------------------------
 
 -- Table: CategorieObjetPCRS17Type
---DROP TABLE if exists a_pcrs."CategorieObjetPCRS17Type" cascade;
-CREATE TABLE a_pcrs."CategorieObjetPCRS17Type"
+--DROP TABLE if exists "init"."CategorieObjetPCRS17Type" cascade;
+CREATE TABLE "init"."CategorieObjetPCRS17Type"
 (
   "idCategorieObjet" character varying(2) not null,
   "boolClasseAbstraite" character varying(1) not null,
   "nomClasse" character varying(38) unique,
   "nomClasseMere" character varying(38),
-  "thematique" character varying(2) NOT NULL REFERENCES a_pcrs."CategorieThematiquePCRSType" ("code"),
+  "thematique" character varying(2) NOT NULL REFERENCES "init"."CategorieThematiquePCRSType" ("code"),
   CONSTRAINT "CategorieObjetPCRS17Type_pkey" PRIMARY KEY ("nomClasse")
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('01', 0, 'InitiativePCRS', '', '99');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('02', 0, 'EmpriseDisponibilitePCRS', '', '99');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('03', 0, 'EmpriseEchangePCRS', '', '99');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('04', 0, 'Commune', '', '99');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('05', 0, 'TronconVoirie', '', '99');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('06', 0, 'HabillagePCRS', '', '00');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('07', 0, 'HabillagePointsPCRS', 'HabillagePCRS', '00');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('08', 0, 'HabillageSymbolePCRS', 'HabillagePCRS', '00');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('09', 0, 'HabillageTextePCRS', 'HabillagePCRS', '00');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('10', 0, 'NomVoiriePCRS', 'HabillageTextePCRS', '01');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('11', 0, 'NumeroVoiriePCRS', 'HabillageTextePCRS', '01');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('12', 0, 'HabillageLignesPCRS', 'HabillagePCRS', '00');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('13', 0, 'HabillageEnveloppePCRS', 'HabillagePCRS', '00');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('14', 0, 'PointLevePCRS', '', '01');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('15', 1, 'ObjetVecteurPCRS', '', '00');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('16', 0, 'PointCanevasPCRS', 'ObjetVecteurPCRS', '01');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('17', 0, 'ObjetGeneriquePCRS', 'ObjetVecteurPCRS', '00');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('18', 0, 'QuaiFluvioMaritimePCRS', 'ObjetVecteurPCRS', '07');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('19', 0, 'QuaiRailPCRS', 'ObjetVecteurPCRS', '04');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('20', 0, 'LimiteVoiriePCRS', 'ObjetVecteurPCRS', '03');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('21', 0, 'MarcheEscalierPCRS', 'ObjetVecteurPCRS', '00');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('22', 0, 'FacadePCRS', 'ObjetVecteurPCRS', '02');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('23', 0, 'ProeminenceBatiPCRS', 'ObjetVecteurPCRS', '02');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('24', 0, 'SeuilPCRS', 'ObjetVecteurPCRS', '02');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('25', 0, 'MurPCRS', 'ObjetVecteurPCRS', '05');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('26', 1, 'PilierPCRS', 'ObjetVecteurPCRS', '05');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('27', 0, 'PilierRegulierPCRS', 'PilierPCRS', '05');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('28', 0, 'PilierParticulierPCRS', 'PilierPCRS', '05');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('29', 0, 'RailPCRS', 'ObjetVecteurPCRS', '04');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('30', 0, 'ArbrePCRS', 'ObjetVecteurPCRS', '06');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('31', 0, 'PilePontPCRS', 'ObjetVecteurPCRS', '07');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('32', 1, 'AffleurantPCRS', 'ObjetVecteurPCRS', '10');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('33', 0, 'AffleurantGeometriquePCRS', '', '10');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('34', 0, 'AffleurantEnveloppePCRS', '', '10');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('35', 0, 'AffleurantLignesPCRS', '', '10');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('36', 0, 'AffleurantPointPCRS', '', '10');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('37', 0, 'AffleurantSymbolePCRS', 'AffleurantPCRS', '10');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('38', 0, 'RasterPCRS', '', '11');
-INSERT INTO a_pcrs."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('39', 0, 'MasqueOpacitePCRS', 'Habillage', '11');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('01', 0, 'InitiativePCRS', '', '99');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('02', 0, 'EmpriseDisponibilitePCRS', '', '99');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('03', 0, 'EmpriseEchangePCRS', '', '99');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('04', 0, 'Commune', '', '99');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('05', 0, 'TronconVoirie', '', '99');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('06', 0, 'HabillagePCRS', '', '00');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('07', 0, 'HabillagePointsPCRS', 'HabillagePCRS', '00');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('08', 0, 'HabillageSymbolePCRS', 'HabillagePCRS', '00');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('09', 0, 'HabillageTextePCRS', 'HabillagePCRS', '00');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('10', 0, 'NomVoiriePCRS', 'HabillageTextePCRS', '01');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('11', 0, 'NumeroVoiriePCRS', 'HabillageTextePCRS', '01');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('12', 0, 'HabillageLignesPCRS', 'HabillagePCRS', '00');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('13', 0, 'HabillageEnveloppePCRS', 'HabillagePCRS', '00');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('14', 0, 'PointLevePCRS', '', '01');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('15', 1, 'ObjetVecteurPCRS', '', '00');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('16', 0, 'PointCanevasPCRS', 'ObjetVecteurPCRS', '01');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('17', 0, 'ObjetGeneriquePCRS', 'ObjetVecteurPCRS', '00');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('18', 0, 'QuaiFluvioMaritimePCRS', 'ObjetVecteurPCRS', '07');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('19', 0, 'QuaiRailPCRS', 'ObjetVecteurPCRS', '04');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('20', 0, 'LimiteVoiriePCRS', 'ObjetVecteurPCRS', '03');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('21', 0, 'MarcheEscalierPCRS', 'ObjetVecteurPCRS', '00');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('22', 0, 'FacadePCRS', 'ObjetVecteurPCRS', '02');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('23', 0, 'ProeminenceBatiPCRS', 'ObjetVecteurPCRS', '02');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('24', 0, 'SeuilPCRS', 'ObjetVecteurPCRS', '02');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('25', 0, 'MurPCRS', 'ObjetVecteurPCRS', '05');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('26', 1, 'PilierPCRS', 'ObjetVecteurPCRS', '05');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('27', 0, 'PilierRegulierPCRS', 'PilierPCRS', '05');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('28', 0, 'PilierParticulierPCRS', 'PilierPCRS', '05');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('29', 0, 'RailPCRS', 'ObjetVecteurPCRS', '04');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('30', 0, 'ArbrePCRS', 'ObjetVecteurPCRS', '06');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('31', 0, 'PilePontPCRS', 'ObjetVecteurPCRS', '07');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('32', 1, 'AffleurantPCRS', 'ObjetVecteurPCRS', '10');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('33', 0, 'AffleurantGeometriquePCRS', '', '10');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('34', 0, 'AffleurantEnveloppePCRS', '', '10');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('35', 0, 'AffleurantLignesPCRS', '', '10');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('36', 0, 'AffleurantPointPCRS', '', '10');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('37', 0, 'AffleurantSymbolePCRS', 'AffleurantPCRS', '10');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('38', 0, 'RasterPCRS', '', '11');
+INSERT INTO "init"."CategorieObjetPCRS17Type" ("idCategorieObjet", "boolClasseAbstraite", "nomClasse", "nomClasseMere", "thematique") VALUES ('39', 0, 'MasqueOpacitePCRS', 'Habillage', '11');
 
 
-COMMENT ON TABLE a_pcrs."CategorieObjetPCRS17Type" IS
+COMMENT ON TABLE "init"."CategorieObjetPCRS17Type" IS
 'Contenu du PCRS : les différentes classe d''objets';
 
 
@@ -795,11 +795,11 @@ COMMENT ON TABLE a_pcrs."CategorieObjetPCRS17Type" IS
 -- ---------------------------------
 
 
---DROP INDEX if exists a_pcrs."InitiativePCRS_geometrie_geomidx" cascade;
-DROP SEQUENCE if exists a_pcrs."InitiativePCRS_idInitiative_seq" cascade;
---DROP TABLE if exists a_pcrs."InitiativePCRS" cascade;
+--DROP INDEX if exists "init"."InitiativePCRS_geometrie_geomidx" cascade;
+DROP SEQUENCE if exists "init"."InitiativePCRS_idInitiative_seq" cascade;
+--DROP TABLE if exists "init"."InitiativePCRS" cascade;
 
-CREATE SEQUENCE a_pcrs."InitiativePCRS_idInitiative_seq"
+CREATE SEQUENCE "init"."InitiativePCRS_idInitiative_seq"
   INCREMENT 1
   MINVALUE 1
   MAXVALUE 9223372036854775807
@@ -807,10 +807,10 @@ CREATE SEQUENCE a_pcrs."InitiativePCRS_idInitiative_seq"
   CACHE 1;
 
 -- Table: InitiativePCRS
---DROP TABLE if exists a_pcrs."InitiativePCRS" cascade;
-CREATE TABLE a_pcrs."InitiativePCRS"
+--DROP TABLE if exists "init"."InitiativePCRS" cascade;
+CREATE TABLE "init"."InitiativePCRS"
 (
-  "idInitiative" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."InitiativePCRS_idInitiative_seq"'::regclass),
+  "idInitiative" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."InitiativePCRS_idInitiative_seq"'::regclass),
   "description" character varying,
   "gestionnaire" character varying NOT NULL,
   --"partenaires" character varying,
@@ -826,14 +826,14 @@ WITH (
 );
 
 -- Index: InitiativePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."InitiativePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."InitiativePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "InitiativePCRS_geometrie_geomidx"
-  ON a_pcrs."InitiativePCRS"
+  ON "init"."InitiativePCRS"
   USING gist
   (geometrie);
 
 
-COMMENT ON TABLE a_pcrs."InitiativePCRS" IS
+COMMENT ON TABLE "init"."InitiativePCRS" IS
 'Nom de la classe :
 InitiativePCRS
 
@@ -857,17 +857,17 @@ La zone décrite ne présume pas que les données soient disponibles.
 Contraintes :
 Classe métadonnée du PCRS';
 
-COMMENT ON COLUMN a_pcrs."InitiativePCRS"."idInitiative" IS
+COMMENT ON COLUMN "init"."InitiativePCRS"."idInitiative" IS
 'Identifiant unique des initiatives du PCRS.
 L''unicité doit être assurée par le gestionnaire et viser une unicité nationale.
 Elle peut être atteinte en préfixant l''identifiant par le code SIREN du producteur.';
-COMMENT ON COLUMN a_pcrs."InitiativePCRS"."description" IS
+COMMENT ON COLUMN "init"."InitiativePCRS"."description" IS
 'Information complémentaire liée à l''initiative';
-COMMENT ON COLUMN a_pcrs."InitiativePCRS"."gestionnaire" IS
+COMMENT ON COLUMN "init"."InitiativePCRS"."gestionnaire" IS
 'Nom de l''autorité publique compétente gestionnaire du PCRS';
---COMMENT ON COLUMN a_pcrs."InitiativePCRS"."partenaires" IS
+--COMMENT ON COLUMN "init"."InitiativePCRS"."partenaires" IS
 --'Nom des partenaires dans l''intiative';
-COMMENT ON COLUMN a_pcrs."InitiativePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."InitiativePCRS"."geometrie" IS
 'Géométrie représentée par un ensemble de surfaces.';
 
 
@@ -876,11 +876,11 @@ COMMENT ON COLUMN a_pcrs."InitiativePCRS"."geometrie" IS
 -- ---------------------------------
 
 
---DROP INDEX if exists a_pcrs."EmpriseDisponibilitePCRS_geometrie_geomidx" cascade;
-DROP SEQUENCE if exists a_pcrs."EmpriseDisponibilitePCRS_idEmpriseDisponibilite_seq" cascade;
---DROP TABLE if exists a_pcrs."EmpriseDisponibilitePCRS" cascade;
+--DROP INDEX if exists "init"."EmpriseDisponibilitePCRS_geometrie_geomidx" cascade;
+DROP SEQUENCE if exists "init"."EmpriseDisponibilitePCRS_idEmpriseDisponibilite_seq" cascade;
+--DROP TABLE if exists "init"."EmpriseDisponibilitePCRS" cascade;
 
-CREATE SEQUENCE a_pcrs."EmpriseDisponibilitePCRS_idEmpriseDisponibilite_seq"
+CREATE SEQUENCE "init"."EmpriseDisponibilitePCRS_idEmpriseDisponibilite_seq"
   INCREMENT 1
   MINVALUE 1
   MAXVALUE 9223372036854775807
@@ -888,13 +888,13 @@ CREATE SEQUENCE a_pcrs."EmpriseDisponibilitePCRS_idEmpriseDisponibilite_seq"
   CACHE 1;
 
 -- Table: EmpriseDisponibilitePCRS
---DROP TABLE if exists a_pcrs."EmpriseDisponibilitePCRS" cascade;
-CREATE TABLE a_pcrs."EmpriseDisponibilitePCRS"
+--DROP TABLE if exists "init"."EmpriseDisponibilitePCRS" cascade;
+CREATE TABLE "init"."EmpriseDisponibilitePCRS"
 (
-  "idEmpriseDisponibilite" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."EmpriseDisponibilitePCRS_idEmpriseDisponibilite_seq"'::regclass),
+  "idEmpriseDisponibilite" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."EmpriseDisponibilitePCRS_idEmpriseDisponibilite_seq"'::regclass),
   "dateActualite" date NOT NULL,
-  "initiative" character varying REFERENCES a_pcrs."InitiativePCRS" ("idInitiative"),
-  "calendrier" character varying REFERENCES a_pcrs."CalendrierPCRS17Type" ("code"),
+  "initiative" character varying REFERENCES "init"."InitiativePCRS" ("idInitiative"),
+  "calendrier" character varying REFERENCES "init"."CalendrierPCRS17Type" ("code"),
   --"geometrie" geometry(MULTIPOLYGON,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
   --CONSTRAINT "EmpriseDisponibilitePCRS_pkey" PRIMARY KEY ("idEmpriseDisponibilite"),
@@ -907,14 +907,14 @@ WITH (
 );
 
 -- Index: EmpriseDisponibilitePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."EmpriseDisponibilitePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."EmpriseDisponibilitePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "EmpriseDisponibilitePCRS_geometrie_geomidx"
-  ON a_pcrs."EmpriseDisponibilitePCRS"
+  ON "init"."EmpriseDisponibilitePCRS"
   USING gist
   (geometrie);
 
 
-COMMENT ON TABLE a_pcrs."EmpriseDisponibilitePCRS" IS
+COMMENT ON TABLE "init"."EmpriseDisponibilitePCRS" IS
 'Nom de la classe :
 EmpriseDisponibilitePCRS
 
@@ -940,13 +940,13 @@ de voirie, à un ensemble de commune ou un ensemble de casés liés à un carroy
 Contraintes :
 Classe métadonnée du PCRS';
 
-COMMENT ON COLUMN a_pcrs."EmpriseDisponibilitePCRS"."idEmpriseDisponibilite" IS
+COMMENT ON COLUMN "init"."EmpriseDisponibilitePCRS"."idEmpriseDisponibilite" IS
 'Identifiant unique des emprises de disponibilité du PCRS.
 L''unicité doit être assurée par le gestionnaire et viser une unicité nationale.
 Elle peut être atteinte en préfixant l''identifiant par le code SIREN du producteur.';
-COMMENT ON COLUMN a_pcrs."EmpriseDisponibilitePCRS"."dateActualite" IS
+COMMENT ON COLUMN "init"."EmpriseDisponibilitePCRS"."dateActualite" IS
 'Date à laquelle la disponibilité est valide';
-COMMENT ON COLUMN a_pcrs."EmpriseDisponibilitePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."EmpriseDisponibilitePCRS"."geometrie" IS
 'Géométrie représentée par un ensemble de surfaces.';
 
 
@@ -959,11 +959,11 @@ COMMENT ON COLUMN a_pcrs."EmpriseDisponibilitePCRS"."geometrie" IS
 -- Classe : EmpriseEchangePCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."EmpriseEchangePCRS_geometrie_geomidx" cascade;
-DROP SEQUENCE if exists a_pcrs."EmpriseEchangePCRS_idEmpriseEchange_seq" cascade;
---DROP TABLE if exists a_pcrs."EmpriseEchangePCRS" cascade;
+--DROP INDEX if exists "init"."EmpriseEchangePCRS_geometrie_geomidx" cascade;
+DROP SEQUENCE if exists "init"."EmpriseEchangePCRS_idEmpriseEchange_seq" cascade;
+--DROP TABLE if exists "init"."EmpriseEchangePCRS" cascade;
 
-CREATE SEQUENCE a_pcrs."EmpriseEchangePCRS_idEmpriseEchange_seq"
+CREATE SEQUENCE "init"."EmpriseEchangePCRS_idEmpriseEchange_seq"
   INCREMENT 1
   MINVALUE 1
   MAXVALUE 9223372036854775807
@@ -971,14 +971,14 @@ CREATE SEQUENCE a_pcrs."EmpriseEchangePCRS_idEmpriseEchange_seq"
   CACHE 1;
 
 -- Table: EmpriseEchangePCRS
---DROP TABLE if exists a_pcrs."EmpriseEchangePCRS" cascade;
-CREATE TABLE a_pcrs."EmpriseEchangePCRS"
+--DROP TABLE if exists "init"."EmpriseEchangePCRS" cascade;
+CREATE TABLE "init"."EmpriseEchangePCRS"
 (
-  "idEmpriseEchange" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."EmpriseEchangePCRS_idEmpriseEchange_seq"'::regclass),
+  "idEmpriseEchange" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."EmpriseEchangePCRS_idEmpriseEchange_seq"'::regclass),
   "complement" character varying,
   "datePublication" date NOT NULL,
   "gestionnaire" character varying NOT NULL,
-  "type" character varying REFERENCES a_pcrs."NatureEmprisePCRS17Type" ("code"),
+  "type" character varying REFERENCES "init"."NatureEmprisePCRS17Type" ("code"),
   --"geometrie" geometry(MULTIPOLYGON,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
   --CONSTRAINT "EmpriseEchangePCRS_pkey" PRIMARY KEY ("idEmpriseEchange"),
@@ -991,14 +991,14 @@ WITH (
 );
 
 -- Index: EmpriseEchangePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."EmpriseEchangePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."EmpriseEchangePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "EmpriseEchangePCRS_geometrie_geomidx"
-  ON a_pcrs."EmpriseEchangePCRS"
+  ON "init"."EmpriseEchangePCRS"
   USING gist
   (geometrie);
 
 
-COMMENT ON TABLE a_pcrs."EmpriseEchangePCRS" IS
+COMMENT ON TABLE "init"."EmpriseEchangePCRS" IS
 'Nom de la classe :
 EmpriseEchangePCRS
 
@@ -1056,11 +1056,11 @@ Les emprises d''échanges du PCRS peuvent suivre des logiques différentes :
 Contraintes :
 Classe essentielle du PCRS, accompagnant les métadonnées de publication du PCRS';
 
-COMMENT ON COLUMN a_pcrs."EmpriseEchangePCRS"."idEmpriseEchange" IS
+COMMENT ON COLUMN "init"."EmpriseEchangePCRS"."idEmpriseEchange" IS
 'Identifiant unique dans le jeu de données des emprises d''échange du PCRS.
 L''unicité doit être assurée par le gestionnaire et viser une unicité nationale.
 Elle peut être atteinte en préfixant l identifiant par le code SIREN du producteur.';
-COMMENT ON COLUMN a_pcrs."EmpriseEchangePCRS"."complement" IS
+COMMENT ON COLUMN "init"."EmpriseEchangePCRS"."complement" IS
 'Information complémentaire liée au type d''emprise de publication du PCRS,
 gérée par le gestionnaire du PCRS et potentiellement utile à tout utilisateur du PCRS
 Valeurs possibles :
@@ -1071,16 +1071,16 @@ Selon le type d''emprise de publication, par exemple :
   (si elle n''est pas redondante avec l''identifiant de l''emprise),
   ou le nom du carroyage pour une emprise de type régulière
 - le nom ou le type de la limite administrative pour une emprise de type administrative';
-COMMENT ON COLUMN a_pcrs."EmpriseEchangePCRS"."datePublication" IS
+COMMENT ON COLUMN "init"."EmpriseEchangePCRS"."datePublication" IS
 'Date de mise à disposition de l''emprise du PCRS';
-COMMENT ON COLUMN a_pcrs."EmpriseEchangePCRS"."gestionnaire" IS
+COMMENT ON COLUMN "init"."EmpriseEchangePCRS"."gestionnaire" IS
 'Nom de la collectivité gestionnaire du PCRS';
-COMMENT ON COLUMN a_pcrs."EmpriseEchangePCRS"."type" IS
+COMMENT ON COLUMN "init"."EmpriseEchangePCRS"."type" IS
 'Type d''emprise du PCRS
 Valeurs possibles :
 Par exemple :
 Couloir, Operation, Carreau, LimiteAdministrative';
-COMMENT ON COLUMN a_pcrs."EmpriseEchangePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."EmpriseEchangePCRS"."geometrie" IS
 'Géométrie représentée par un ensemble de surfaces.';
 
 
@@ -1088,12 +1088,12 @@ COMMENT ON COLUMN a_pcrs."EmpriseEchangePCRS"."geometrie" IS
 -- Classe : Commune
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."Commune_geometrie_geomidx" cascade;
---DROP TABLE if exists a_pcrs."Commune" cascade;
+--DROP INDEX if exists "init"."Commune_geometrie_geomidx" cascade;
+--DROP TABLE if exists "init"."Commune" cascade;
 
 -- Table: Commune
---DROP TABLE if exists a_pcrs."Commune" cascade;
-CREATE TABLE a_pcrs."Commune"
+--DROP TABLE if exists "init"."Commune" cascade;
+CREATE TABLE "init"."Commune"
 (
   "codeINSEE" character varying UNIQUE NOT NULL,
   --"geometrie" geometry(MULTIPOLYGON,3946) NOT NULL,
@@ -1110,14 +1110,14 @@ WITH (
 );
 
 -- Index: Commune_geometrie_geomidx
---DROP INDEX if exists a_pcrs."Commune_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."Commune_geometrie_geomidx" cascade;
 CREATE INDEX "Commune_geometrie_geomidx"
-  ON a_pcrs."Commune"
+  ON "init"."Commune"
   USING gist
   (geometrie);
 
 
-COMMENT ON TABLE a_pcrs."Commune" IS
+COMMENT ON TABLE "init"."Commune" IS
 'Nom de la classe :
 Commune
 
@@ -1136,13 +1136,13 @@ Critères de sélection :
 Seuls sont considérés les objets ''commune'' d''un jeu de données de référence, défini par
 le gestionnaire du PCRS.';
 
-COMMENT ON COLUMN a_pcrs."Commune"."codeINSEE" IS
+COMMENT ON COLUMN "init"."Commune"."codeINSEE" IS
 'Code INSEE de la commune.';
-COMMENT ON COLUMN a_pcrs."Commune"."geometrie" IS
+COMMENT ON COLUMN "init"."Commune"."geometrie" IS
 'Géométrie représentée par un ensemble de surfaces.';
-COMMENT ON COLUMN a_pcrs."Commune"."nom" IS
+COMMENT ON COLUMN "init"."Commune"."nom" IS
 'Nom de la commune.';
-COMMENT ON COLUMN a_pcrs."Commune"."reference" IS
+COMMENT ON COLUMN "init"."Commune"."reference" IS
 'Référence vers une base de données des communes.';
 
 
@@ -1151,11 +1151,11 @@ COMMENT ON COLUMN a_pcrs."Commune"."reference" IS
 -- ---------------------------------
 
 -- Sequence: TronconVoirie_reference_seq
---DROP INDEX if exists a_pcrs."TronconVoirie_geometrie_geomidx" cascade;
-DROP SEQUENCE if exists a_pcrs."TronconVoirie_reference_seq" cascade;
---DROP TABLE if exists a_pcrs."TronconVoirie" cascade;
+--DROP INDEX if exists "init"."TronconVoirie_geometrie_geomidx" cascade;
+DROP SEQUENCE if exists "init"."TronconVoirie_reference_seq" cascade;
+--DROP TABLE if exists "init"."TronconVoirie" cascade;
 
-CREATE SEQUENCE a_pcrs."TronconVoirie_reference_seq"
+CREATE SEQUENCE "init"."TronconVoirie_reference_seq"
   INCREMENT 1
   MINVALUE 1
   MAXVALUE 9223372036854775807
@@ -1163,13 +1163,13 @@ CREATE SEQUENCE a_pcrs."TronconVoirie_reference_seq"
   CACHE 1;
 
 -- Table: TronconVoirie
---DROP TABLE if exists a_pcrs."TronconVoirie" cascade;
-CREATE TABLE a_pcrs."TronconVoirie"
+--DROP TABLE if exists "init"."TronconVoirie" cascade;
+CREATE TABLE "init"."TronconVoirie"
 (
   --"geometrie" geometry(LINESTRING,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
-  "propriete" character varying(2) REFERENCES a_pcrs."ProprieteEspaceType" (code),
-  "reference" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."TronconVoirie_reference_seq"'::regclass),
+  "propriete" character varying(2) REFERENCES "init"."ProprieteEspaceType" (code),
+  "reference" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."TronconVoirie_reference_seq"'::regclass),
   "source" character varying NOT NULL,
   CONSTRAINT "TronconVoirie_pkey" PRIMARY KEY ("reference"),
   CONSTRAINT enforce_dims_geometrie CHECK (st_ndims("geometrie") = 2),
@@ -1181,13 +1181,13 @@ WITH (
 );
 
 -- Index: TronconVoirie_geometrie_geomidx
---DROP INDEX if exists a_pcrs."TronconVoirie_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."TronconVoirie_geometrie_geomidx" cascade;
 CREATE INDEX "TronconVoirie_geometrie_geomidx"
-  ON a_pcrs."TronconVoirie"
+  ON "init"."TronconVoirie"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."TronconVoirie" IS
+COMMENT ON TABLE "init"."TronconVoirie" IS
 'Nom de la classe :
 TronconVoirie
 
@@ -1215,13 +1215,13 @@ BDUni ou la BD TOPO
 Contraintes :
 Classe accompagnant les métadonnées de publication du PCRS';
 
-COMMENT ON COLUMN a_pcrs."TronconVoirie"."geometrie" IS
+COMMENT ON COLUMN "init"."TronconVoirie"."geometrie" IS
 'Géométrie de type courbe.';
-COMMENT ON COLUMN a_pcrs."TronconVoirie"."propriete" IS
+COMMENT ON COLUMN "init"."TronconVoirie"."propriete" IS
 'Distinction d''appartenance d''un troncon de voirie à l''espace public ou à l''espace privé.';
-COMMENT ON COLUMN a_pcrs."TronconVoirie"."reference" IS
+COMMENT ON COLUMN "init"."TronconVoirie"."reference" IS
 'Identifiant unique du tronçon dans le référentiel source utilisé.';
-COMMENT ON COLUMN a_pcrs."TronconVoirie"."source" IS
+COMMENT ON COLUMN "init"."TronconVoirie"."source" IS
 'Acronyme du référentiel utilisé.';
 
 
@@ -1230,11 +1230,11 @@ COMMENT ON COLUMN a_pcrs."TronconVoirie"."source" IS
 -- ---------------------------------
 
 -- Sequence: HabillagePCRS_idHabillage_seq
---DROP INDEX if exists a_pcrs."HabillagePCRS_geometrie_geomidx" cascade;
-DROP SEQUENCE if exists a_pcrs."HabillagePCRS_idHabillage_seq" cascade;
---DROP TABLE if exists a_pcrs."HabillagePCRS" cascade;
+--DROP INDEX if exists "init"."HabillagePCRS_geometrie_geomidx" cascade;
+DROP SEQUENCE if exists "init"."HabillagePCRS_idHabillage_seq" cascade;
+--DROP TABLE if exists "init"."HabillagePCRS" cascade;
 
-CREATE SEQUENCE a_pcrs."HabillagePCRS_idHabillage_seq"
+CREATE SEQUENCE "init"."HabillagePCRS_idHabillage_seq"
   INCREMENT 1
   MINVALUE 1
   MAXVALUE 9223372036854775807
@@ -1242,12 +1242,12 @@ CREATE SEQUENCE a_pcrs."HabillagePCRS_idHabillage_seq"
   CACHE 1;
 
 -- Table: HabillagePCRS
---DROP TABLE if exists a_pcrs."HabillagePCRS" cascade;
-CREATE TABLE a_pcrs."HabillagePCRS"
+--DROP TABLE if exists "init"."HabillagePCRS" cascade;
+CREATE TABLE "init"."HabillagePCRS"
 (
   --geometrie geometry(Geometry,3946) NOT NULL,
-  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."HabillagePCRS_idHabillage_seq"'::regclass),
-  "thematique" character varying(2) NOT NULL REFERENCES a_pcrs."CategorieThematiquePCRSType" ("code"),
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."HabillagePCRS_idHabillage_seq"'::regclass),
+  "thematique" character varying(2) NOT NULL REFERENCES "init"."CategorieThematiquePCRSType" ("code"),
   CONSTRAINT "HabillagePCRS_pkey" PRIMARY KEY ("idHabillage")
 )
 WITH (
@@ -1255,13 +1255,13 @@ WITH (
 );
 
 -- Index: HabillagePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."HabillagePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."HabillagePCRS_geometrie_geomidx" cascade;
 --CREATE INDEX "HabillagePCRS_geometrie_geomidx"
---  ON a_pcrs."HabillagePCRS"
+--  ON "init"."HabillagePCRS"
 --  USING gist
 --  (geometrie);
 
-COMMENT ON TABLE a_pcrs."HabillagePCRS" IS
+COMMENT ON TABLE "init"."HabillagePCRS" IS
 'Nom de la classe :
 HabillagePCRS
 
@@ -1294,12 +1294,12 @@ Contraintes :
 Contraintes de positionnement en dehors de la voirie, en particulier en zone dense ou
 très dense';
 
-COMMENT ON COLUMN a_pcrs."HabillagePCRS"."idHabillage" IS
+COMMENT ON COLUMN "init"."HabillagePCRS"."idHabillage" IS
 'Identifiant unique de l''habillage.
 Valeurs possibles :
 Selon la collectivité gestionnaire du PCRS,
 et le cas échéant lié à celui du référentiel dont peut-être issue la donnée.';
-COMMENT ON COLUMN a_pcrs."HabillagePCRS"."thematique" IS
+COMMENT ON COLUMN "init"."HabillagePCRS"."thematique" IS
 'La thématique à laquelle est associé l''élément d''habillage du PCRS';
 
 
@@ -1307,12 +1307,12 @@ COMMENT ON COLUMN a_pcrs."HabillagePCRS"."thematique" IS
 -- Classe : HabillagePointsPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."HabillagePointsPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."HabillagePointsPCRS_idHabillage_seq" cascade;
---DROP TABLE if exists a_pcrs."HabillagePointsPCRS" cascade;
+--DROP INDEX if exists "init"."HabillagePointsPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."HabillagePointsPCRS_idHabillage_seq" cascade;
+--DROP TABLE if exists "init"."HabillagePointsPCRS" cascade;
 
 
---CREATE SEQUENCE a_pcrs."HabillagePointsPCRS_idHabillage_seq"
+--CREATE SEQUENCE "init"."HabillagePointsPCRS_idHabillage_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -1320,11 +1320,11 @@ COMMENT ON COLUMN a_pcrs."HabillagePCRS"."thematique" IS
 --  CACHE 1;
 
 -- Table: HabillagePointsPCRS
---DROP TABLE if exists a_pcrs."HabillagePointsPCRS" cascade;
-CREATE TABLE a_pcrs."HabillagePointsPCRS"
+--DROP TABLE if exists "init"."HabillagePointsPCRS" cascade;
+CREATE TABLE "init"."HabillagePointsPCRS"
 (
-  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."HabillagePCRS_idHabillage_seq"'::regclass),
-  "thematique" character varying(2) NOT NULL REFERENCES a_pcrs."CategorieThematiquePCRSType" ("code"),
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."HabillagePCRS_idHabillage_seq"'::regclass),
+  "thematique" character varying(2) NOT NULL REFERENCES "init"."CategorieThematiquePCRSType" ("code"),
   --"geometrie" geometry(MULTIPOINT,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
   CONSTRAINT "HabillagePointsPCRS_pkey" PRIMARY KEY ("idHabillage"),
@@ -1332,19 +1332,19 @@ CREATE TABLE a_pcrs."HabillagePointsPCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'MULTIPOINT'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."HabillagePCRS")
+INHERITS ("init"."HabillagePCRS")
 WITH (
   OIDS=FALSE
 );
 
 -- Index: HabillagePointsPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."HabillagePointsPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."HabillagePointsPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "HabillagePointsPCRS_geometrie_geomidx"
-  ON a_pcrs."HabillagePointsPCRS"
+  ON "init"."HabillagePointsPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."HabillagePointsPCRS" IS
+COMMENT ON TABLE "init"."HabillagePointsPCRS" IS
 'Nom de la classe :
 HabillagePointsPCRS
 
@@ -1367,11 +1367,11 @@ La Classe contient :
 Modélisation :
 Multipoints';
 
-COMMENT ON COLUMN a_pcrs."HabillagePointsPCRS"."idHabillage" IS
+COMMENT ON COLUMN "init"."HabillagePointsPCRS"."idHabillage" IS
 'Identifiant unique de l''habillage.';
-COMMENT ON COLUMN a_pcrs."HabillagePointsPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."HabillagePointsPCRS"."thematique" IS
 'La thématique à laquelle est associé l''élément d''habillage du PCRS';
-COMMENT ON COLUMN a_pcrs."HabillagePointsPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."HabillagePointsPCRS"."geometrie" IS
 'Géométrie de type multipoint';
 
 
@@ -1379,11 +1379,11 @@ COMMENT ON COLUMN a_pcrs."HabillagePointsPCRS"."geometrie" IS
 -- Classe : HabillageSymbolePCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."HabillageSymbolePCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."HabillageSymbolePCRS_idHabillage_seq" cascade;
---DROP TABLE if exists a_pcrs."HabillageSymbolePCRS" cascade;
+--DROP INDEX if exists "init"."HabillageSymbolePCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."HabillageSymbolePCRS_idHabillage_seq" cascade;
+--DROP TABLE if exists "init"."HabillageSymbolePCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."HabillageSymbolePCRS_idHabillage_seq"
+--CREATE SEQUENCE "init"."HabillageSymbolePCRS_idHabillage_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -1391,11 +1391,11 @@ COMMENT ON COLUMN a_pcrs."HabillagePointsPCRS"."geometrie" IS
 --  CACHE 1;
 
 -- Table: HabillageSymbolePCRS
---DROP TABLE if exists a_pcrs."HabillageSymbolePCRS" cascade;
-CREATE TABLE a_pcrs."HabillageSymbolePCRS"
+--DROP TABLE if exists "init"."HabillageSymbolePCRS" cascade;
+CREATE TABLE "init"."HabillageSymbolePCRS"
 (
-  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."HabillagePCRS_idHabillage_seq"'::regclass),
-  "thematique" character varying(2) NOT NULL REFERENCES a_pcrs."CategorieThematiquePCRSType" ("code"),
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."HabillagePCRS_idHabillage_seq"'::regclass),
+  "thematique" character varying(2) NOT NULL REFERENCES "init"."CategorieThematiquePCRSType" ("code"),
   "angleRotation" decimal NOT NULL CHECK ("angleRotation" >= 0 AND "angleRotation" < 360),
   --"geometrie" geometry(POINT,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
@@ -1407,19 +1407,19 @@ CREATE TABLE a_pcrs."HabillageSymbolePCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'POINT'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."HabillagePCRS")
+INHERITS ("init"."HabillagePCRS")
 WITH (
   OIDS=FALSE
 );
 
 -- Index: SymboleHabillagePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."SymboleHabillagePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."SymboleHabillagePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "HabillageSymbolePCRS_geometrie_geomidx"
-  ON a_pcrs."HabillageSymbolePCRS"
+  ON "init"."HabillageSymbolePCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."HabillageSymbolePCRS" IS
+COMMENT ON TABLE "init"."HabillageSymbolePCRS" IS
 'Nom de la classe :
 HabillageSymbolePCRS
 
@@ -1442,20 +1442,20 @@ Contraintes :
 Contraintes de positionnement en dehors de la voirie, en particulier en zone dense ou
 très dense';
 
-COMMENT ON COLUMN a_pcrs."HabillageSymbolePCRS"."idHabillage" IS
+COMMENT ON COLUMN "init"."HabillageSymbolePCRS"."idHabillage" IS
 'Identifiant unique de l''habillage.';
-COMMENT ON COLUMN a_pcrs."HabillageSymbolePCRS"."thematique" IS
+COMMENT ON COLUMN "init"."HabillageSymbolePCRS"."thematique" IS
 'La thématique à laquelle est associé l''élément d''habillage du PCRS';
-COMMENT ON COLUMN a_pcrs."HabillageSymbolePCRS"."angleRotation" IS
+COMMENT ON COLUMN "init"."HabillageSymbolePCRS"."angleRotation" IS
 'Utilisé uniquement pour l''orientation de l''élément d''habillage
 Valeur angulaire en degrés décimaux';
-COMMENT ON COLUMN a_pcrs."HabillageSymbolePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."HabillageSymbolePCRS"."geometrie" IS
 'Géométrie de type ponctuel';
-COMMENT ON COLUMN a_pcrs."HabillageSymbolePCRS"."largeur_mm" IS
+COMMENT ON COLUMN "init"."HabillageSymbolePCRS"."largeur_mm" IS
 'Utilisé uniquement pour la mise à l''échelle Y du symbole en habillage';
-COMMENT ON COLUMN a_pcrs."HabillageSymbolePCRS"."longueur_mm" IS
+COMMENT ON COLUMN "init"."HabillageSymbolePCRS"."longueur_mm" IS
 'Utilisé uniquement pour la mise à l''échelle X du symbole en habillage';
-COMMENT ON COLUMN a_pcrs."HabillageSymbolePCRS"."reference" IS
+COMMENT ON COLUMN "init"."HabillageSymbolePCRS"."reference" IS
 'Désignation du symbole à utiliser pour la représentation de l''habillage sous forme de symbole.';
 
 
@@ -1463,11 +1463,11 @@ COMMENT ON COLUMN a_pcrs."HabillageSymbolePCRS"."reference" IS
 -- Classe : HabillageTextePCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."HabillageTextePCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."HabillageTextePCRS_idHabillage_seq" cascade;
---DROP TABLE if exists a_pcrs."HabillageTextePCRS" cascade;
+--DROP INDEX if exists "init"."HabillageTextePCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."HabillageTextePCRS_idHabillage_seq" cascade;
+--DROP TABLE if exists "init"."HabillageTextePCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."HabillageTextePCRS_idHabillage_seq"
+--CREATE SEQUENCE "init"."HabillageTextePCRS_idHabillage_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -1475,15 +1475,15 @@ COMMENT ON COLUMN a_pcrs."HabillageSymbolePCRS"."reference" IS
 --  CACHE 1;
 
 -- Table: HabillageTextePCRS
---DROP TABLE if exists a_pcrs."HabillageTextePCRS" cascade;
-CREATE TABLE a_pcrs."HabillageTextePCRS"
+--DROP TABLE if exists "init"."HabillageTextePCRS" cascade;
+CREATE TABLE "init"."HabillageTextePCRS"
 (
-  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."HabillagePCRS_idHabillage_seq"'::regclass),
-  "thematique" character varying(2) NOT NULL REFERENCES a_pcrs."CategorieThematiquePCRSType" ("code"),
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."HabillagePCRS_idHabillage_seq"'::regclass),
+  "thematique" character varying(2) NOT NULL REFERENCES "init"."CategorieThematiquePCRSType" ("code"),
   "angleRotation" decimal NOT NULL CHECK ("angleRotation" >= 0 AND "angleRotation" < 360),
   --"geometrie" geometry(POINT,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
-  "justification" character varying(1) NOT NULL REFERENCES a_pcrs."TexteJustificationPCRSType" (code),
+  "justification" character varying(1) NOT NULL REFERENCES "init"."TexteJustificationPCRSType" (code),
   "libelle" character varying NOT NULL,
   "taille" decimal NOT NULL,
   CONSTRAINT "HabillageTextePCRS_pkey" PRIMARY KEY ("idHabillage"),
@@ -1491,19 +1491,19 @@ CREATE TABLE a_pcrs."HabillageTextePCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'POINT'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."HabillagePCRS")
+INHERITS ("init"."HabillagePCRS")
 WITH (
   OIDS=FALSE
 );
 
 -- Index: HabillageTextePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."HabillageTextePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."HabillageTextePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "HabillageTextePCRS_geometrie_geomidx"
-  ON a_pcrs."HabillageTextePCRS"
+  ON "init"."HabillageTextePCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."HabillageTextePCRS" IS
+COMMENT ON TABLE "init"."HabillageTextePCRS" IS
 'Nom de la classe :
 HabillageTextePCRS
 
@@ -1532,21 +1532,21 @@ Contraintes :
 Contraintes de positionnement en dehors de la voirie, en particulier en zone dense ou
 très dense';
 
-COMMENT ON COLUMN a_pcrs."HabillageTextePCRS"."idHabillage" IS
+COMMENT ON COLUMN "init"."HabillageTextePCRS"."idHabillage" IS
 'Identifiant unique de l''habillage.';
-COMMENT ON COLUMN a_pcrs."HabillageTextePCRS"."thematique" IS
+COMMENT ON COLUMN "init"."HabillageTextePCRS"."thematique" IS
 'La thématique à laquelle est associé l''élément d''habillage du PCRS';
-COMMENT ON COLUMN a_pcrs."HabillageTextePCRS"."angleRotation" IS
+COMMENT ON COLUMN "init"."HabillageTextePCRS"."angleRotation" IS
 'Utilisé uniquement pour l''orientation de l''élément d''habillage
 Valeur angulaire en degrés décimaux';
-COMMENT ON COLUMN a_pcrs."HabillageTextePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."HabillageTextePCRS"."geometrie" IS
 'Géométrie de type point';
-COMMENT ON COLUMN a_pcrs."HabillageTextePCRS"."justification" IS
+COMMENT ON COLUMN "init"."HabillageTextePCRS"."justification" IS
 'Utilisé pour la justification du texte';
-COMMENT ON COLUMN a_pcrs."HabillageTextePCRS"."libelle" IS
+COMMENT ON COLUMN "init"."HabillageTextePCRS"."libelle" IS
 'Texte du libellé à utiliser comme habillage du PCRS
 Valeur textuelle. Exemple : 123 m';
-COMMENT ON COLUMN a_pcrs."HabillageTextePCRS"."taille" IS
+COMMENT ON COLUMN "init"."HabillageTextePCRS"."taille" IS
 'Facteur de taille permettant le cas échéant aux utilisateurs de pondérer la taille du texte';
 
 
@@ -1554,11 +1554,11 @@ COMMENT ON COLUMN a_pcrs."HabillageTextePCRS"."taille" IS
 -- Classe : NomVoiriePCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."NomVoiriePCRS_geometrie_geomidx" cascade;
-DROP SEQUENCE if exists a_pcrs."NomVoiriePCRS_idNomVoirie_seq" cascade;
---DROP TABLE if exists a_pcrs."NomVoiriePCRS" cascade;
+--DROP INDEX if exists "init"."NomVoiriePCRS_geometrie_geomidx" cascade;
+DROP SEQUENCE if exists "init"."NomVoiriePCRS_idNomVoirie_seq" cascade;
+--DROP TABLE if exists "init"."NomVoiriePCRS" cascade;
 
-CREATE SEQUENCE a_pcrs."NomVoiriePCRS_idNomVoirie_seq"
+CREATE SEQUENCE "init"."NomVoiriePCRS_idNomVoirie_seq"
   INCREMENT 1
   MINVALUE 1
   MAXVALUE 9223372036854775807
@@ -1566,38 +1566,38 @@ CREATE SEQUENCE a_pcrs."NomVoiriePCRS_idNomVoirie_seq"
   CACHE 1;
 
 -- Table: NomVoiriePCRS
---DROP TABLE if exists a_pcrs."NomVoiriePCRS" cascade;
-CREATE TABLE a_pcrs."NomVoiriePCRS"
+--DROP TABLE if exists "init"."NomVoiriePCRS" cascade;
+CREATE TABLE "init"."NomVoiriePCRS"
 (
-  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."HabillagePCRS_idHabillage_seq"'::regclass),
-  "thematique" character varying(2) NOT NULL REFERENCES a_pcrs."CategorieThematiquePCRSType" ("code"),
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."HabillagePCRS_idHabillage_seq"'::regclass),
+  "thematique" character varying(2) NOT NULL REFERENCES "init"."CategorieThematiquePCRSType" ("code"),
   "angleRotation" decimal NOT NULL CHECK ("angleRotation" >= 0 AND "angleRotation" < 360),
   --"geometrie" geometry(POINT,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
-  "justification" character varying(1) NOT NULL REFERENCES a_pcrs."TexteJustificationPCRSType" (code),
+  "justification" character varying(1) NOT NULL REFERENCES "init"."TexteJustificationPCRSType" (code),
   "libelle" character varying NOT NULL,
   "taille" decimal NOT NULL,
-  "idNomVoirie" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."NomVoiriePCRS_idNomVoirie_seq"'::regclass),
-  "positionnement" character varying(2) REFERENCES a_pcrs."CategoriePlacementPCRSType" (code),
+  "idNomVoirie" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."NomVoiriePCRS_idNomVoirie_seq"'::regclass),
+  "positionnement" character varying(2) REFERENCES "init"."CategoriePlacementPCRSType" (code),
   CONSTRAINT "NomVoiriePCRS_pkey" PRIMARY KEY ("idHabillage"),
   --CONSTRAINT "NomVoiriePCRS_pkey" PRIMARY KEY ("idNomVoirie")
   CONSTRAINT enforce_dims_geometrie CHECK (st_ndims("geometrie") = 2),
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'POINT'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."HabillageTextePCRS")
+INHERITS ("init"."HabillageTextePCRS")
 WITH (
   OIDS=FALSE
 );
 
 -- Index: NomVoiriePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."NomVoiriePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."NomVoiriePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "NomVoiriePCRS_geometrie_geomidx"
-  ON a_pcrs."NomVoiriePCRS"
+  ON "init"."NomVoiriePCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."NomVoiriePCRS" IS
+COMMENT ON TABLE "init"."NomVoiriePCRS" IS
 'Nom de la classe :
 NomVoiriePCRS
 
@@ -1625,27 +1625,27 @@ Contraintes :
 Contraintes de positionnement en dehors de l''espace public de la voirie, en particulier en
 zone dense ou très dense, à préciser localement';
 
-COMMENT ON COLUMN a_pcrs."NomVoiriePCRS"."idHabillage" IS
+COMMENT ON COLUMN "init"."NomVoiriePCRS"."idHabillage" IS
 'Identifiant unique de l''habillage.';
-COMMENT ON COLUMN a_pcrs."NomVoiriePCRS"."thematique" IS
+COMMENT ON COLUMN "init"."NomVoiriePCRS"."thematique" IS
 'La thématique à laquelle est associé l''élément d''habillage du PCRS';
-COMMENT ON COLUMN a_pcrs."NomVoiriePCRS"."angleRotation" IS
+COMMENT ON COLUMN "init"."NomVoiriePCRS"."angleRotation" IS
 'Utilisé uniquement pour l''orientation de l''élément d''habillage
 Valeur angulaire en degrés décimaux';
-COMMENT ON COLUMN a_pcrs."NomVoiriePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."NomVoiriePCRS"."geometrie" IS
 'Géométrie de type point';
-COMMENT ON COLUMN a_pcrs."NomVoiriePCRS"."justification" IS
+COMMENT ON COLUMN "init"."NomVoiriePCRS"."justification" IS
 'Utilisé pour la justification du texte';
-COMMENT ON COLUMN a_pcrs."NomVoiriePCRS"."libelle" IS
+COMMENT ON COLUMN "init"."NomVoiriePCRS"."libelle" IS
 'Texte du libellé à utiliser comme habillage du PCRS';
-COMMENT ON COLUMN a_pcrs."NomVoiriePCRS"."taille" IS
+COMMENT ON COLUMN "init"."NomVoiriePCRS"."taille" IS
 'Facteur de taille permettant le cas échéant aux utilisateurs de pondérer la taille du texte';
-COMMENT ON COLUMN a_pcrs."NomVoiriePCRS"."idNomVoirie" IS
+COMMENT ON COLUMN "init"."NomVoiriePCRS"."idNomVoirie" IS
 'Identifiant unique dans le jeu de données des noms de voirie.
 Valeurs possibles :
 Selon la collectivité gestionnaire du PCRS,
 et si possible identique à celui du référentiel dont est issu la donnée.';
-COMMENT ON COLUMN a_pcrs."NomVoiriePCRS"."positionnement" IS
+COMMENT ON COLUMN "init"."NomVoiriePCRS"."positionnement" IS
 'Indication quant au positionnement de l''élément d''habillage par rapport à la voirie.';
 
 
@@ -1654,11 +1654,11 @@ COMMENT ON COLUMN a_pcrs."NomVoiriePCRS"."positionnement" IS
 -- ---------------------------------
 
 
---DROP INDEX if exists a_pcrs."NumeroVoiriePCRS_geometrie_geomidx" cascade;
-DROP SEQUENCE if exists a_pcrs."NumeroVoiriePCRS_idNumeroVoirie_seq" cascade;
---DROP TABLE if exists a_pcrs."NumeroVoiriePCRS" cascade;
+--DROP INDEX if exists "init"."NumeroVoiriePCRS_geometrie_geomidx" cascade;
+DROP SEQUENCE if exists "init"."NumeroVoiriePCRS_idNumeroVoirie_seq" cascade;
+--DROP TABLE if exists "init"."NumeroVoiriePCRS" cascade;
 
-CREATE SEQUENCE a_pcrs."NumeroVoiriePCRS_idNumeroVoirie_seq"
+CREATE SEQUENCE "init"."NumeroVoiriePCRS_idNumeroVoirie_seq"
   INCREMENT 1
   MINVALUE 1
   MAXVALUE 9223372036854775807
@@ -1666,39 +1666,39 @@ CREATE SEQUENCE a_pcrs."NumeroVoiriePCRS_idNumeroVoirie_seq"
   CACHE 1;
 
 -- Table: NumeroVoiriePCRS
---DROP TABLE if exists a_pcrs."NumeroVoiriePCRS" cascade;
-CREATE TABLE a_pcrs."NumeroVoiriePCRS"
+--DROP TABLE if exists "init"."NumeroVoiriePCRS" cascade;
+CREATE TABLE "init"."NumeroVoiriePCRS"
 (
-  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."HabillagePCRS_idHabillage_seq"'::regclass),
-  "thematique" character varying(2) NOT NULL REFERENCES a_pcrs."CategorieThematiquePCRSType" ("code"),
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."HabillagePCRS_idHabillage_seq"'::regclass),
+  "thematique" character varying(2) NOT NULL REFERENCES "init"."CategorieThematiquePCRSType" ("code"),
   "angleRotation" decimal NOT NULL CHECK ("angleRotation" >= 0 AND "angleRotation" < 360),
   --"geometrie" geometry(POINT,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
-  "justification" character varying(1) NOT NULL REFERENCES a_pcrs."TexteJustificationPCRSType" (code),
+  "justification" character varying(1) NOT NULL REFERENCES "init"."TexteJustificationPCRSType" (code),
   "libelle" character varying NOT NULL,
   "taille" decimal NOT NULL,
-  "idNumeroVoirie" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."NumeroVoiriePCRS_idNumeroVoirie_seq"'::regclass),
-  "positionnement" character varying(2) REFERENCES a_pcrs."CategoriePlacementPCRSType" (code),
+  "idNumeroVoirie" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."NumeroVoiriePCRS_idNumeroVoirie_seq"'::regclass),
+  "positionnement" character varying(2) REFERENCES "init"."CategoriePlacementPCRSType" (code),
   CONSTRAINT "NumeroVoiriePCRS_pkey" PRIMARY KEY ("idHabillage"),
   --CONSTRAINT "NumeroVoiriePCRS_pkey" PRIMARY KEY ("idHabillage")
   CONSTRAINT enforce_dims_geometrie CHECK (st_ndims("geometrie") = 2),
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'POINT'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."HabillageTextePCRS")
+INHERITS ("init"."HabillageTextePCRS")
 WITH (
   OIDS=FALSE
 );
 
 -- Index: NumeroVoiriePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."NumeroVoiriePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."NumeroVoiriePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "NumeroVoiriePCRS_geometrie_geomidx"
-  ON a_pcrs."NumeroVoiriePCRS"
+  ON "init"."NumeroVoiriePCRS"
   USING gist
   (geometrie);
 
 
-COMMENT ON TABLE a_pcrs."NumeroVoiriePCRS" IS
+COMMENT ON TABLE "init"."NumeroVoiriePCRS" IS
 'Nom de la classe :
 NumeroVoiriePCRS
 
@@ -1725,26 +1725,26 @@ Contraintes :
 Contraintes de positionnement en dehors de l''espace public de la voirie, en particulier en
 zone dense ou très dense';
 
-COMMENT ON COLUMN a_pcrs."NumeroVoiriePCRS"."idHabillage" IS
+COMMENT ON COLUMN "init"."NumeroVoiriePCRS"."idHabillage" IS
 'Identifiant unique de l''habillage.';
-COMMENT ON COLUMN a_pcrs."NumeroVoiriePCRS"."thematique" IS
+COMMENT ON COLUMN "init"."NumeroVoiriePCRS"."thematique" IS
 'La thématique à laquelle est associé l''élément d''habillage du PCRS';
-COMMENT ON COLUMN a_pcrs."NumeroVoiriePCRS"."angleRotation" IS
+COMMENT ON COLUMN "init"."NumeroVoiriePCRS"."angleRotation" IS
 'Utilisé uniquement pour l''orientation de l''élément d''habillage
 Valeur angulaire en degrés décimaux';
-COMMENT ON COLUMN a_pcrs."NumeroVoiriePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."NumeroVoiriePCRS"."geometrie" IS
 'Géométrie de type point';
-COMMENT ON COLUMN a_pcrs."NumeroVoiriePCRS"."justification" IS
+COMMENT ON COLUMN "init"."NumeroVoiriePCRS"."justification" IS
 'Utilisé pour la justification du texte';
-COMMENT ON COLUMN a_pcrs."NumeroVoiriePCRS"."libelle" IS
+COMMENT ON COLUMN "init"."NumeroVoiriePCRS"."libelle" IS
 'Texte du libellé à utiliser comme habillage du PCRS';
-COMMENT ON COLUMN a_pcrs."NumeroVoiriePCRS"."taille" IS
+COMMENT ON COLUMN "init"."NumeroVoiriePCRS"."taille" IS
 'Facteur de taille permettant le cas échéant aux utilisateurs de pondérer la taille du texte';
-COMMENT ON COLUMN a_pcrs."NumeroVoiriePCRS"."idNumeroVoirie" IS
+COMMENT ON COLUMN "init"."NumeroVoiriePCRS"."idNumeroVoirie" IS
 'Identifiant unique dans le jeu de données des numéros de voirie.
 Selon la collectivité gestionnaire du PCRS,
 et si possible identique à celui du référentiel dont est issu la donnée.';
-COMMENT ON COLUMN a_pcrs."NumeroVoiriePCRS"."positionnement" IS
+COMMENT ON COLUMN "init"."NumeroVoiriePCRS"."positionnement" IS
 'Indication quant au positionnement de l''élément d''habillage par rapport à la voirie.';
 
 
@@ -1752,12 +1752,12 @@ COMMENT ON COLUMN a_pcrs."NumeroVoiriePCRS"."positionnement" IS
 -- Classe : HabillageLignesPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."HabillageLignesPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."HabillageLignesPCRS_idHabillage_seq" cascade;
---DROP TABLE if exists a_pcrs."HabillageLignesPCRS" cascade;
+--DROP INDEX if exists "init"."HabillageLignesPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."HabillageLignesPCRS_idHabillage_seq" cascade;
+--DROP TABLE if exists "init"."HabillageLignesPCRS" cascade;
 
 
---CREATE SEQUENCE a_pcrs."HabillageLignesPCRS_idHabillage_seq"
+--CREATE SEQUENCE "init"."HabillageLignesPCRS_idHabillage_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -1765,11 +1765,11 @@ COMMENT ON COLUMN a_pcrs."NumeroVoiriePCRS"."positionnement" IS
 --  CACHE 1;
 
 -- Table: HabillageLignesPCRS
---DROP TABLE if exists a_pcrs."HabillageLignesPCRS" cascade;
-CREATE TABLE a_pcrs."HabillageLignesPCRS"
+--DROP TABLE if exists "init"."HabillageLignesPCRS" cascade;
+CREATE TABLE "init"."HabillageLignesPCRS"
 (
-  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."HabillagePCRS_idHabillage_seq"'::regclass),
-  "thematique" character varying(2) NOT NULL REFERENCES a_pcrs."CategorieThematiquePCRSType" ("code"),
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."HabillagePCRS_idHabillage_seq"'::regclass),
+  "thematique" character varying(2) NOT NULL REFERENCES "init"."CategorieThematiquePCRSType" ("code"),
   --"geometrie" geometry(MULTILINESTRING,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
   CONSTRAINT "HabillageLignesPCRS_pkey" PRIMARY KEY ("idHabillage"),
@@ -1777,19 +1777,19 @@ CREATE TABLE a_pcrs."HabillageLignesPCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'MULTILINESTRING'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."HabillagePCRS")
+INHERITS ("init"."HabillagePCRS")
 WITH (
   OIDS=FALSE
 );
 
 -- Index: HabillageLignesPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."HabillageLignesPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."HabillageLignesPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "HabillageLignesPCRS_geometrie_geomidx"
-  ON a_pcrs."HabillageLignesPCRS"
+  ON "init"."HabillageLignesPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."HabillageLignesPCRS" IS
+COMMENT ON TABLE "init"."HabillageLignesPCRS" IS
 'Nom de la classe :
 HabillageLignesPCRS
 
@@ -1815,11 +1815,11 @@ La classe contient :
 - largeur des ouvertures
 ...';
 
-COMMENT ON COLUMN a_pcrs."HabillageLignesPCRS"."idHabillage" IS
+COMMENT ON COLUMN "init"."HabillageLignesPCRS"."idHabillage" IS
 'Identifiant unique de l''habillage.';
-COMMENT ON COLUMN a_pcrs."HabillageLignesPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."HabillageLignesPCRS"."thematique" IS
 'La thématique à laquelle est associé l''élément d''habillage du PCRS';
-COMMENT ON COLUMN a_pcrs."HabillageLignesPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."HabillageLignesPCRS"."geometrie" IS
 'Géométrie de type multiligne';
 
 
@@ -1827,12 +1827,12 @@ COMMENT ON COLUMN a_pcrs."HabillageLignesPCRS"."geometrie" IS
 -- Classe : HabillageEnveloppePCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."HabillageEnveloppePCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."HabillageEnveloppePCRS_idHabillage_seq" cascade;
---DROP TABLE if exists a_pcrs."HabillageEnveloppePCRS" cascade;
+--DROP INDEX if exists "init"."HabillageEnveloppePCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."HabillageEnveloppePCRS_idHabillage_seq" cascade;
+--DROP TABLE if exists "init"."HabillageEnveloppePCRS" cascade;
 
 
---CREATE SEQUENCE a_pcrs."HabillageEnveloppePCRS_idHabillage_seq"
+--CREATE SEQUENCE "init"."HabillageEnveloppePCRS_idHabillage_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -1840,11 +1840,11 @@ COMMENT ON COLUMN a_pcrs."HabillageLignesPCRS"."geometrie" IS
 --  CACHE 1;
 
 -- Table: HabillageEnveloppePCRS
---DROP TABLE if exists a_pcrs."HabillageEnveloppePCRS" cascade;
-CREATE TABLE a_pcrs."HabillageEnveloppePCRS"
+--DROP TABLE if exists "init"."HabillageEnveloppePCRS" cascade;
+CREATE TABLE "init"."HabillageEnveloppePCRS"
 (
-  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."HabillagePCRS_idHabillage_seq"'::regclass),
-  "thematique" character varying(2) NOT NULL REFERENCES a_pcrs."CategorieThematiquePCRSType" ("code"),
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."HabillagePCRS_idHabillage_seq"'::regclass),
+  "thematique" character varying(2) NOT NULL REFERENCES "init"."CategorieThematiquePCRSType" ("code"),
   --"geometrie" geometry(POLYGON,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
   CONSTRAINT "HabillageEnveloppePCRS_pkey" PRIMARY KEY ("idHabillage"),
@@ -1852,19 +1852,19 @@ CREATE TABLE a_pcrs."HabillageEnveloppePCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'POLYGON'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."HabillagePCRS")
+INHERITS ("init"."HabillagePCRS")
 WITH (
   OIDS=FALSE
 );
 
 -- Index: HabillageEnveloppePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."HabillageEnveloppePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."HabillageEnveloppePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "HabillageEnveloppePCRS_geometrie_geomidx"
-  ON a_pcrs."HabillageEnveloppePCRS"
+  ON "init"."HabillageEnveloppePCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."HabillageEnveloppePCRS" IS
+COMMENT ON TABLE "init"."HabillageEnveloppePCRS" IS
 'Nom de la classe :
 HabillageEnveloppePCRS
 
@@ -1885,11 +1885,11 @@ La classe contient :
 - les mobiliers urbains,
 ...';
 
-COMMENT ON COLUMN a_pcrs."HabillageEnveloppePCRS"."idHabillage" IS
+COMMENT ON COLUMN "init"."HabillageEnveloppePCRS"."idHabillage" IS
 'Identifiant unique de l''habillage.';
-COMMENT ON COLUMN a_pcrs."HabillageEnveloppePCRS"."thematique" IS
+COMMENT ON COLUMN "init"."HabillageEnveloppePCRS"."thematique" IS
 'La thématique à laquelle est associé l''élément d''habillage du PCRS';
-COMMENT ON COLUMN a_pcrs."HabillageEnveloppePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."HabillageEnveloppePCRS"."geometrie" IS
 'Géométrie de type surfacique';
 
 
@@ -1898,11 +1898,11 @@ COMMENT ON COLUMN a_pcrs."HabillageEnveloppePCRS"."geometrie" IS
 -- ---------------------------------
 
 
---DROP INDEX if exists a_pcrs."PointLevePCRS_geometrie_geomidx" cascade;
-DROP SEQUENCE if exists a_pcrs."PointLevePCRS_numeroPoint_seq" cascade;
---DROP TABLE if exists a_pcrs."PointLevePCRS" cascade;
+--DROP INDEX if exists "init"."PointLevePCRS_geometrie_geomidx" cascade;
+DROP SEQUENCE if exists "init"."PointLevePCRS_numeroPoint_seq" cascade;
+--DROP TABLE if exists "init"."PointLevePCRS" cascade;
 
-CREATE SEQUENCE a_pcrs."PointLevePCRS_numeroPoint_seq"
+CREATE SEQUENCE "init"."PointLevePCRS_numeroPoint_seq"
   INCREMENT 1
   MINVALUE 1
   MAXVALUE 9223372036854775807
@@ -1910,13 +1910,13 @@ CREATE SEQUENCE a_pcrs."PointLevePCRS_numeroPoint_seq"
   CACHE 1;
 
 -- Table: PointLevePCRS
---DROP TABLE if exists a_pcrs."PointLevePCRS" cascade;
-CREATE TABLE a_pcrs."PointLevePCRS"
+--DROP TABLE if exists "init"."PointLevePCRS" cascade;
+CREATE TABLE "init"."PointLevePCRS"
 (
   --"geometrie" geometry(POINT,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
   "horodatage" date,
-  "numeroPoint"  character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."PointLevePCRS_numeroPoint_seq"'::regclass),
+  "numeroPoint"  character varying UNIQUE NOT NULL DEFAULT nextval('"init"."PointLevePCRS_numeroPoint_seq"'::regclass),
   "precisionXY" integer NOT NULL,
   "precisionZ" integer,
   "producteur" character varying,
@@ -1929,13 +1929,13 @@ WITH (
 );
 
 -- Index: PointLevePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."PointLevePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."PointLevePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "PointLevePCRS_geometrie_geomidx"
-  ON a_pcrs."PointLevePCRS"
+  ON "init"."PointLevePCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."PointLevePCRS" IS
+COMMENT ON TABLE "init"."PointLevePCRS" IS
 'Nom de la classe :
 PointLevePCRS
 
@@ -1973,11 +1973,11 @@ Tout point servant à qualifier un objet du PCRS en tant que support pour une co
 réseaux en classe A (planimétrie et altimétrie) ou en classe AP (planimétrie seulement)
 au sens DT-DICT.';
 
-COMMENT ON COLUMN a_pcrs."PointLevePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."PointLevePCRS"."geometrie" IS
 'Géométrie de type ponctuel';
-COMMENT ON COLUMN a_pcrs."PointLevePCRS"."horodatage" IS
+COMMENT ON COLUMN "init"."PointLevePCRS"."horodatage" IS
 'Horodatage du point au moment du levé topographique';
-COMMENT ON COLUMN a_pcrs."PointLevePCRS"."numeroPoint" IS
+COMMENT ON COLUMN "init"."PointLevePCRS"."numeroPoint" IS
 'Numéro attribué au point levé lors du levé topographique ou de l''integration
 au référentiel selon une ou plusieurs
 méthodologies à préciser si possible dans les métadonnées.
@@ -1985,11 +1985,11 @@ Valeurs possibles :
 Un ou plusiseurs caractères alpha non accentués préfixant un nombre
 à valeurs dans une série numérique croissante avec possibilités de
 sauts / valeurs manquantes dans la suite.';
-COMMENT ON COLUMN a_pcrs."PointLevePCRS"."precisionXY" IS
+COMMENT ON COLUMN "init"."PointLevePCRS"."precisionXY" IS
 'Précision planimétrique exprimée en cm';
-COMMENT ON COLUMN a_pcrs."PointLevePCRS"."precisionZ" IS
+COMMENT ON COLUMN "init"."PointLevePCRS"."precisionZ" IS
 'Précision altimétrique exprimée en cm';
-COMMENT ON COLUMN a_pcrs."PointLevePCRS"."producteur" IS
+COMMENT ON COLUMN "init"."PointLevePCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
@@ -2000,11 +2000,11 @@ Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné
 -- ---------------------------------
 
 -- Sequence: ObjetVecteurPCRS_idObjet_seq
---DROP INDEX if exists a_pcrs."ObjetVecteurPCRS_geometrie_geomidx" cascade;
-DROP SEQUENCE if exists a_pcrs."ObjetVecteurPCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."ObjetVecteurPCRS" cascade;
+--DROP INDEX if exists "init"."ObjetVecteurPCRS_geometrie_geomidx" cascade;
+DROP SEQUENCE if exists "init"."ObjetVecteurPCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."ObjetVecteurPCRS" cascade;
 
-CREATE SEQUENCE a_pcrs."ObjetVecteurPCRS_idObjet_seq"
+CREATE SEQUENCE "init"."ObjetVecteurPCRS_idObjet_seq"
   INCREMENT 1
   MINVALUE 1
   MAXVALUE 9223372036854775807
@@ -2012,15 +2012,15 @@ CREATE SEQUENCE a_pcrs."ObjetVecteurPCRS_idObjet_seq"
   CACHE 1;
 
 -- Table: ObjetVecteurPCRS
---DROP TABLE if exists a_pcrs."ObjetVecteurPCRS" cascade;
-CREATE TABLE a_pcrs."ObjetVecteurPCRS"
+--DROP TABLE if exists "init"."ObjetVecteurPCRS" cascade;
+CREATE TABLE "init"."ObjetVecteurPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   CONSTRAINT "ObjetVecteurPCRS_pkey" PRIMARY KEY ("idObjet")
 )
@@ -2029,13 +2029,13 @@ WITH (
 );
 
 -- Index: ObjetVecteurPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."ObjetVecteurPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."ObjetVecteurPCRS_geometrie_geomidx" cascade;
 --CREATE INDEX "ObjetVecteurPCRS_geometrie_geomidx"
---  ON a_pcrs."ObjetVecteurPCRS"
+--  ON "init"."ObjetVecteurPCRS"
 --  USING gist
 --  (geometrie);
 
-COMMENT ON TABLE a_pcrs."ObjetVecteurPCRS" IS
+COMMENT ON TABLE "init"."ObjetVecteurPCRS" IS
 'Nom de la classe :
 ObjetVecteurPCRS
 
@@ -2082,24 +2082,24 @@ les affleurants
 Critères de sélection :
 Selon la nomenclature des objets vecteur du PCRS';
 
-COMMENT ON COLUMN a_pcrs."ObjetVecteurPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."ObjetVecteurPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."ObjetVecteurPCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."ObjetVecteurPCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."ObjetVecteurPCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."ObjetVecteurPCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."ObjetVecteurPCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."ObjetVecteurPCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."ObjetVecteurPCRS"."producteur" IS
+COMMENT ON COLUMN "init"."ObjetVecteurPCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."ObjetVecteurPCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."ObjetVecteurPCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."ObjetVecteurPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."ObjetVecteurPCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
 
 
@@ -2107,11 +2107,11 @@ COMMENT ON COLUMN a_pcrs."ObjetVecteurPCRS"."thematique" IS
 -- Classe : PointCanevasPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."PointCanevasPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."PointCanevasPCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."PointCanevasPCRS" cascade;
+--DROP INDEX if exists "init"."PointCanevasPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."PointCanevasPCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."PointCanevasPCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."PointCanevasPCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."PointCanevasPCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -2119,15 +2119,15 @@ COMMENT ON COLUMN a_pcrs."ObjetVecteurPCRS"."thematique" IS
 --  CACHE 1;
 
 -- Table: PointCanevasPCRS
---DROP TABLE if exists a_pcrs."PointCanevasPCRS" cascade;
-CREATE TABLE a_pcrs."PointCanevasPCRS"
+--DROP TABLE if exists "init"."PointCanevasPCRS" cascade;
+CREATE TABLE "init"."PointCanevasPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   "canevas" character varying,
   "dateCreation" date,
@@ -2142,19 +2142,19 @@ CREATE TABLE a_pcrs."PointCanevasPCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'POINT'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
 
 -- Index: PointCanevasPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."PointCanevasPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."PointCanevasPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "PointCanevasPCRS_geometrie_geomidx"
-  ON a_pcrs."PointCanevasPCRS"
+  ON "init"."PointCanevasPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."PointCanevasPCRS" IS
+COMMENT ON TABLE "init"."PointCanevasPCRS" IS
 'Nom de la classe :
 PointCanevasPCRS
 
@@ -2195,39 +2195,39 @@ Critères de sélection :
 Les points de canevas dont la précision ne serait pas au moins égale à celle attendue
 lors du levé topographique des objets du PCRS sont exclus de cette classe d''objets';
 
-COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."PointCanevasPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."PointCanevasPCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."PointCanevasPCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."PointCanevasPCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."producteur" IS
+COMMENT ON COLUMN "init"."PointCanevasPCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."PointCanevasPCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."PointCanevasPCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."canevas" IS
+COMMENT ON COLUMN "init"."PointCanevasPCRS"."canevas" IS
 'Type de canevas auquel appartient le point considéré';
-COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."dateCreation" IS
+COMMENT ON COLUMN "init"."PointCanevasPCRS"."dateCreation" IS
 'Date de création ou de mise à jour des données du point de canevas';
-COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."fiche" IS
+COMMENT ON COLUMN "init"."PointCanevasPCRS"."fiche" IS
 'Addresse de type URL susceptible de fournir des informations supplémentaires,
 comme des photographies de repérage, sur le point de canevas';
-COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."PointCanevasPCRS"."geometrie" IS
 'Géométrie du point';
-COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."immatriculation" IS
+COMMENT ON COLUMN "init"."PointCanevasPCRS"."immatriculation" IS
 'Référence externe selon la convention d''immatriculation du canevas considéré';
-COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."precisionXY" IS
+COMMENT ON COLUMN "init"."PointCanevasPCRS"."precisionXY" IS
 'Précision planimétrique exprimée en cm';
-COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."precisionZ" IS
+COMMENT ON COLUMN "init"."PointCanevasPCRS"."precisionZ" IS
 'Précision altimétrique exprimée en cm';
 
 
@@ -2235,11 +2235,11 @@ COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."precisionZ" IS
 -- Classe : ObjetGeneriquePCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."ObjetGeneriquePCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."ObjetGeneriquePCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."ObjetGeneriquePCRS" cascade;
+--DROP INDEX if exists "init"."ObjetGeneriquePCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."ObjetGeneriquePCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."ObjetGeneriquePCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."ObjetGeneriquePCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."ObjetGeneriquePCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -2247,39 +2247,39 @@ COMMENT ON COLUMN a_pcrs."PointCanevasPCRS"."precisionZ" IS
 --  CACHE 1;
 
 -- Table: ObjetGeneriquePCRS
---DROP TABLE if exists a_pcrs."ObjetGeneriquePCRS" cascade;
-CREATE TABLE a_pcrs."ObjetGeneriquePCRS"
+--DROP TABLE if exists "init"."ObjetGeneriquePCRS" cascade;
+CREATE TABLE "init"."ObjetGeneriquePCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   --"geometrie" geometry(GEOMETRY,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
-  "identification" character varying REFERENCES a_pcrs."CategorieObjetPCRS17Type" ("nomClasse"),
+  "identification" character varying REFERENCES "init"."CategorieObjetPCRS17Type" ("nomClasse"),
   CONSTRAINT "ObjetGeneriquePCRS_pkey" PRIMARY KEY ("idObjet"),
   CONSTRAINT enforce_dims_geometrie CHECK (st_ndims("geometrie") = 2),
   --CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'GEOMETRY'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'GEOMETRY'::text OR geometrytype("geometrie") = 'MULTIPOLYGON'::text OR geometrytype("geometrie") = 'POLYGON'::text  OR geometrytype("geometrie") = 'MULTILINESTRING'::text OR geometrytype("geometrie") = 'LINESTRING'::text  OR geometrytype("geometrie") = 'MULTIPOINT'::text OR geometrytype("geometrie") = 'POINT'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: ObjetGeneriquePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."ObjetGeneriquePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."ObjetGeneriquePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "ObjetGeneriquePCRS_geometrie_geomidx"
-  ON a_pcrs."ObjetGeneriquePCRS"
+  ON "init"."ObjetGeneriquePCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."ObjetGeneriquePCRS" IS
+COMMENT ON TABLE "init"."ObjetGeneriquePCRS" IS
 'Nom de la classe :
 ObjetGeneriquePCRS
 
@@ -2301,28 +2301,28 @@ Point, Ligne polygonale, ou Polygone
 Les aspects de la modélisation géométrique sont propres à ceux décrits dans la
 modélisation des objets linéaires de la classe abstraite <ObjetVecteurPCRS>';
 
-COMMENT ON COLUMN a_pcrs."ObjetGeneriquePCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."ObjetGeneriquePCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."ObjetGeneriquePCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."ObjetGeneriquePCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."ObjetGeneriquePCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."ObjetGeneriquePCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."ObjetGeneriquePCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."ObjetGeneriquePCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."ObjetGeneriquePCRS"."producteur" IS
+COMMENT ON COLUMN "init"."ObjetGeneriquePCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."ObjetGeneriquePCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."ObjetGeneriquePCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."ObjetGeneriquePCRS"."thematique" IS
+COMMENT ON COLUMN "init"."ObjetGeneriquePCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."ObjetGeneriquePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."ObjetGeneriquePCRS"."geometrie" IS
 'Géométrie de l''objet générique';
-COMMENT ON COLUMN a_pcrs."ObjetGeneriquePCRS"."identification" IS
+COMMENT ON COLUMN "init"."ObjetGeneriquePCRS"."identification" IS
 'L''identification décrit le nom de la classe spécialisée selon
 la nomenclature des objets du PCRS.
 Inconnue à l''initialisation du PCRS par la collectivité gestionnaire, elle peut-être
@@ -2333,11 +2333,11 @@ précisée lors de tout échange inverse entre utilisateur et collectivité gest
 -- Classe : QuaiFluvioMaritimePCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."QuaiFluvioMaritimePCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."QuaiFluvioMaritimePCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."QuaiFluvioMaritimePCRS" cascade;
+--DROP INDEX if exists "init"."QuaiFluvioMaritimePCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."QuaiFluvioMaritimePCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."QuaiFluvioMaritimePCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."QuaiFluvioMaritimePCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."QuaiFluvioMaritimePCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -2345,15 +2345,15 @@ précisée lors de tout échange inverse entre utilisateur et collectivité gest
 --  CACHE 1;
 
 -- Table: QuaiPCRS
---DROP TABLE if exists a_pcrs."QuaiFluvioMaritimePCRS" cascade;
-CREATE TABLE a_pcrs."QuaiFluvioMaritimePCRS"
+--DROP TABLE if exists "init"."QuaiFluvioMaritimePCRS" cascade;
+CREATE TABLE "init"."QuaiFluvioMaritimePCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   --"geometrie" geometry(LINESTRING,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
@@ -2362,7 +2362,7 @@ CREATE TABLE a_pcrs."QuaiFluvioMaritimePCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'LINESTRING'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
@@ -2371,11 +2371,11 @@ WITH (
 -- Index: QuaiFluvioMaritimePCRS_geometrie_geomidx
 --DROP INDEX if exists "QuaiFluvioMaritimePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "QuaiFluvioMaritimePCRS_geometrie_geomidx"
-  ON a_pcrs."QuaiFluvioMaritimePCRS"
+  ON "init"."QuaiFluvioMaritimePCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."QuaiFluvioMaritimePCRS" IS
+COMMENT ON TABLE "init"."QuaiFluvioMaritimePCRS" IS
 'Nom de la classe :
 QuaiFluvioMaritimePCRS
 
@@ -2405,26 +2405,26 @@ Classe essentielle du PCRS
 Critères de sélection :
 ';
 
-COMMENT ON COLUMN a_pcrs."QuaiFluvioMaritimePCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."QuaiFluvioMaritimePCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."QuaiFluvioMaritimePCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."QuaiFluvioMaritimePCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."QuaiFluvioMaritimePCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."QuaiFluvioMaritimePCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."QuaiFluvioMaritimePCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."QuaiFluvioMaritimePCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."QuaiFluvioMaritimePCRS"."producteur" IS
+COMMENT ON COLUMN "init"."QuaiFluvioMaritimePCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."QuaiFluvioMaritimePCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."QuaiFluvioMaritimePCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."QuaiFluvioMaritimePCRS"."thematique" IS
+COMMENT ON COLUMN "init"."QuaiFluvioMaritimePCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."QuaiFluvioMaritimePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."QuaiFluvioMaritimePCRS"."geometrie" IS
 'Géométrie du quai';
 
 
@@ -2432,11 +2432,11 @@ COMMENT ON COLUMN a_pcrs."QuaiFluvioMaritimePCRS"."geometrie" IS
 -- Classe : QuaiRailPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."QuaiRailPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."QuaiRailPCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."QuaiRailPCRS" cascade;
+--DROP INDEX if exists "init"."QuaiRailPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."QuaiRailPCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."QuaiRailPCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."QuaiRailPCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."QuaiRailPCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -2444,15 +2444,15 @@ COMMENT ON COLUMN a_pcrs."QuaiFluvioMaritimePCRS"."geometrie" IS
 --  CACHE 1;
 
 -- Table: QuaiRailPCRS
---DROP TABLE if exists a_pcrs."QuaiRailPCRS" cascade;
-CREATE TABLE a_pcrs."QuaiRailPCRS"
+--DROP TABLE if exists "init"."QuaiRailPCRS" cascade;
+CREATE TABLE "init"."QuaiRailPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   --"geometrie" geometry(LINESTRING,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
@@ -2461,7 +2461,7 @@ CREATE TABLE a_pcrs."QuaiRailPCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'LINESTRING'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
@@ -2470,11 +2470,11 @@ WITH (
 -- Index: QuaiRailPCRS_geometrie_geomidx
 --DROP INDEX if exists "QuaiRailPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "QuaiRailPCRS_geometrie_geomidx"
-  ON a_pcrs."QuaiRailPCRS"
+  ON "init"."QuaiRailPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."QuaiRailPCRS" IS
+COMMENT ON TABLE "init"."QuaiRailPCRS" IS
 'Nom de la classe :
 QuaiRailPCRS
 
@@ -2503,26 +2503,26 @@ Classe essentielle du PCRS
 Critères de sélection :
 ';
 
-COMMENT ON COLUMN a_pcrs."QuaiRailPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."QuaiRailPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."QuaiRailPCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."QuaiRailPCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."QuaiRailPCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."QuaiRailPCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."QuaiRailPCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."QuaiRailPCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."QuaiRailPCRS"."producteur" IS
+COMMENT ON COLUMN "init"."QuaiRailPCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."QuaiRailPCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."QuaiRailPCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."QuaiRailPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."QuaiRailPCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."QuaiRailPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."QuaiRailPCRS"."geometrie" IS
 'Géométrie du quai';
 
 
@@ -2530,12 +2530,12 @@ COMMENT ON COLUMN a_pcrs."QuaiRailPCRS"."geometrie" IS
 -- Classe : LimiteVoiriePCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."LimiteVoiriePCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."LimiteVoiriePCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."LimiteVoiriePCRS" cascade;
+--DROP INDEX if exists "init"."LimiteVoiriePCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."LimiteVoiriePCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."LimiteVoiriePCRS" cascade;
 
 
---CREATE SEQUENCE a_pcrs."LimiteVoiriePCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."LimiteVoiriePCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -2543,15 +2543,15 @@ COMMENT ON COLUMN a_pcrs."QuaiRailPCRS"."geometrie" IS
 --  CACHE 1;
 
 -- Table: LimiteVoiriePCRS
---DROP TABLE if exists a_pcrs."LimiteVoiriePCRS" cascade;
-CREATE TABLE a_pcrs."LimiteVoiriePCRS"
+--DROP TABLE if exists "init"."LimiteVoiriePCRS" cascade;
+CREATE TABLE "init"."LimiteVoiriePCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   --"geometrie" geometry(LINESTRING,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
@@ -2560,20 +2560,20 @@ CREATE TABLE a_pcrs."LimiteVoiriePCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'LINESTRING'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: LimiteVoiriePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."LimiteVoiriePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."LimiteVoiriePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "LimiteVoiriePCRS_geometrie_geomidx"
-  ON a_pcrs."LimiteVoiriePCRS"
+  ON "init"."LimiteVoiriePCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."LimiteVoiriePCRS" IS
+COMMENT ON TABLE "init"."LimiteVoiriePCRS" IS
 'Nom de la classe :
 LimiteVoiriePCRS
 
@@ -2602,26 +2602,26 @@ Limites de chaussée revêtue, marquant le limite de la voirie
 Bordure de chaussées
 ';
 
-COMMENT ON COLUMN a_pcrs."LimiteVoiriePCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."LimiteVoiriePCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."LimiteVoiriePCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."LimiteVoiriePCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."LimiteVoiriePCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."LimiteVoiriePCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."LimiteVoiriePCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."LimiteVoiriePCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."LimiteVoiriePCRS"."producteur" IS
+COMMENT ON COLUMN "init"."LimiteVoiriePCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."LimiteVoiriePCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."LimiteVoiriePCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."LimiteVoiriePCRS"."thematique" IS
+COMMENT ON COLUMN "init"."LimiteVoiriePCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."LimiteVoiriePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."LimiteVoiriePCRS"."geometrie" IS
 'Géométrie de type courbe';
 
 
@@ -2629,12 +2629,12 @@ COMMENT ON COLUMN a_pcrs."LimiteVoiriePCRS"."geometrie" IS
 -- Classe : MarcheEscalierPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."MarcheEscalierPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."MarcheEscalierPCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."MarcheEscalierPCRS" cascade;
+--DROP INDEX if exists "init"."MarcheEscalierPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."MarcheEscalierPCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."MarcheEscalierPCRS" cascade;
 
 
---CREATE SEQUENCE a_pcrs."MarcheEscalierPCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."MarcheEscalierPCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -2642,38 +2642,38 @@ COMMENT ON COLUMN a_pcrs."LimiteVoiriePCRS"."geometrie" IS
 --  CACHE 1;
 
 -- Table: MarcheEscalierPCRS
---DROP TABLE if exists a_pcrs."MarcheEscalierPCRS" cascade;
-CREATE TABLE a_pcrs."MarcheEscalierPCRS"
+--DROP TABLE if exists "init"."MarcheEscalierPCRS" cascade;
+CREATE TABLE "init"."MarcheEscalierPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   --"geometrie" geometry(LINESTRING,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
-  "symbole" character varying REFERENCES a_pcrs."HabillageSymbolePCRS" ("idHabillage"),
+  "symbole" character varying REFERENCES "init"."HabillageSymbolePCRS" ("idHabillage"),
   CONSTRAINT "MarcheEscalierPCRS_pkey" PRIMARY KEY ("idObjet"),
   CONSTRAINT enforce_dims_geometrie CHECK (st_ndims("geometrie") = 2),
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'LINESTRING'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: MarcheEscalierPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."MarcheEscalierPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."MarcheEscalierPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "MarcheEscalierPCRS_geometrie_geomidx"
-  ON a_pcrs."MarcheEscalierPCRS"
+  ON "init"."MarcheEscalierPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."MarcheEscalierPCRS" IS
+COMMENT ON TABLE "init"."MarcheEscalierPCRS" IS
 'Nom de la classe :
 MarcheEscalierPCRS
 
@@ -2715,28 +2715,28 @@ Critères de sélection :
 L''escalier du PCRS doit obligatoirement être situé à l''extérieur, et proposer au moins une
 limite apparente avec le domaine public.';
 
-COMMENT ON COLUMN a_pcrs."MarcheEscalierPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."MarcheEscalierPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."MarcheEscalierPCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."MarcheEscalierPCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."MarcheEscalierPCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."MarcheEscalierPCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."MarcheEscalierPCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."MarcheEscalierPCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."MarcheEscalierPCRS"."producteur" IS
+COMMENT ON COLUMN "init"."MarcheEscalierPCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."MarcheEscalierPCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."MarcheEscalierPCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."MarcheEscalierPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."MarcheEscalierPCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."MarcheEscalierPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."MarcheEscalierPCRS"."geometrie" IS
 'Géométrie de type curve';
-COMMENT ON COLUMN a_pcrs."MarcheEscalierPCRS"."symbole" IS
+COMMENT ON COLUMN "init"."MarcheEscalierPCRS"."symbole" IS
 'Lien vers un symbole utilisé pour la définition du sens de l''escalier';
 
 
@@ -2744,11 +2744,11 @@ COMMENT ON COLUMN a_pcrs."MarcheEscalierPCRS"."symbole" IS
 -- Classe : FacadePCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."FacadePCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."FacadePCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."FacadePCRS" cascade;
+--DROP INDEX if exists "init"."FacadePCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."FacadePCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."FacadePCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."FacadePCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."FacadePCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -2756,15 +2756,15 @@ COMMENT ON COLUMN a_pcrs."MarcheEscalierPCRS"."symbole" IS
 --  CACHE 1;
 
 -- Table: FacadePCRS
---DROP TABLE if exists a_pcrs."FacadePCRS" cascade;
-CREATE TABLE a_pcrs."FacadePCRS"
+--DROP TABLE if exists "init"."FacadePCRS" cascade;
+CREATE TABLE "init"."FacadePCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   --"geometrie" geometry(LINESTRING,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
@@ -2773,7 +2773,7 @@ CREATE TABLE a_pcrs."FacadePCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'LINESTRING'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
@@ -2782,11 +2782,11 @@ WITH (
 -- Index: FacadePCRS_geometrie_geomidx
 --DROP INDEX if exists "FacadePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "FacadePCRS_geometrie_geomidx"
-  ON a_pcrs."FacadePCRS"
+  ON "init"."FacadePCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."FacadePCRS" IS
+COMMENT ON TABLE "init"."FacadePCRS" IS
 'Nom de la classe :
 FacadePCRS
 
@@ -2832,26 +2832,26 @@ Ne tient pas compte des éventuels décrochements de seuil (seuils de maison, de
 ou de garage), décrits par ailleurs par l''objet SeuilPCRS.
 ';
 
-COMMENT ON COLUMN a_pcrs."FacadePCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."FacadePCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."FacadePCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."FacadePCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."FacadePCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."FacadePCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."FacadePCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."FacadePCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."FacadePCRS"."producteur" IS
+COMMENT ON COLUMN "init"."FacadePCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."FacadePCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."FacadePCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."FacadePCRS"."thematique" IS
+COMMENT ON COLUMN "init"."FacadePCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."FacadePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."FacadePCRS"."geometrie" IS
 'Géométrie de type courbe';
 
 
@@ -2859,11 +2859,11 @@ COMMENT ON COLUMN a_pcrs."FacadePCRS"."geometrie" IS
 -- Classe : ProeminenceBatiPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."ProeminenceBatiPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."ProeminenceBatiPCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."ProeminenceBatiPCRS" cascade;
+--DROP INDEX if exists "init"."ProeminenceBatiPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."ProeminenceBatiPCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."ProeminenceBatiPCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."ProeminenceBatiPCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."ProeminenceBatiPCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -2871,15 +2871,15 @@ COMMENT ON COLUMN a_pcrs."FacadePCRS"."geometrie" IS
 --  CACHE 1;
 
 -- Table: ProeminenceBatiPCRS
---DROP TABLE if exists a_pcrs."ProeminenceBatiPCRS" cascade;
-CREATE TABLE a_pcrs."ProeminenceBatiPCRS"
+--DROP TABLE if exists "init"."ProeminenceBatiPCRS" cascade;
+CREATE TABLE "init"."ProeminenceBatiPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   --"geometrie" geometry(LINESTRING,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
@@ -2888,20 +2888,20 @@ CREATE TABLE a_pcrs."ProeminenceBatiPCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'LINESTRING'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: ProeminenceBatiPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."ProeminenceBatiPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."ProeminenceBatiPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "ProeminenceBatiPCRS_geometrie_geomidx"
-  ON a_pcrs."ProeminenceBatiPCRS"
+  ON "init"."ProeminenceBatiPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."ProeminenceBatiPCRS" IS
+COMMENT ON TABLE "init"."ProeminenceBatiPCRS" IS
 'Nom de la classe :
 ProeminenceBatiPCRS
 
@@ -2931,26 +2931,26 @@ Véranda
 Critères de sélection :
 Ne comprend pas les caves';
 
-COMMENT ON COLUMN a_pcrs."ProeminenceBatiPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."ProeminenceBatiPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."ProeminenceBatiPCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."ProeminenceBatiPCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."ProeminenceBatiPCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."ProeminenceBatiPCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."ProeminenceBatiPCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."ProeminenceBatiPCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."ProeminenceBatiPCRS"."producteur" IS
+COMMENT ON COLUMN "init"."ProeminenceBatiPCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."ProeminenceBatiPCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."ProeminenceBatiPCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."ProeminenceBatiPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."ProeminenceBatiPCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."ProeminenceBatiPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."ProeminenceBatiPCRS"."geometrie" IS
 'Géométrie de type courbe';
 
 
@@ -2958,11 +2958,11 @@ COMMENT ON COLUMN a_pcrs."ProeminenceBatiPCRS"."geometrie" IS
 -- Classe : SeuilPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."SeuilPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."SeuilPCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."SeuilPCRS" cascade;
+--DROP INDEX if exists "init"."SeuilPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."SeuilPCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."SeuilPCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."SeuilPCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."SeuilPCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -2970,38 +2970,38 @@ COMMENT ON COLUMN a_pcrs."ProeminenceBatiPCRS"."geometrie" IS
 --  CACHE 1;
 
 -- Table: SeuilPCRS
---DROP TABLE if exists a_pcrs."SeuilPCRS" cascade;
-CREATE TABLE a_pcrs."SeuilPCRS"
+--DROP TABLE if exists "init"."SeuilPCRS" cascade;
+CREATE TABLE "init"."SeuilPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   --"geometrie" geometry(LINESTRING,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
-  "symbole" character varying REFERENCES a_pcrs."HabillageSymbolePCRS" ("idHabillage"),
+  "symbole" character varying REFERENCES "init"."HabillageSymbolePCRS" ("idHabillage"),
   CONSTRAINT "SeuilPCRS_pkey" PRIMARY KEY ("idObjet"),
   CONSTRAINT enforce_dims_geometrie CHECK (st_ndims("geometrie") = 2),
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'LINESTRING'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: SeuilPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."SeuilPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."SeuilPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "SeuilPCRS_geometrie_geomidx"
-  ON a_pcrs."SeuilPCRS"
+  ON "init"."SeuilPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."SeuilPCRS" IS
+COMMENT ON TABLE "init"."SeuilPCRS" IS
 'Nom de la classe :
 SeuilPCRS
 
@@ -3031,28 +3031,28 @@ Seuil d''ouverture
 Critères de sélection :
 À l''exclusion de tout seuil de cave';
 
-COMMENT ON COLUMN a_pcrs."SeuilPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."SeuilPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."SeuilPCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."SeuilPCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."SeuilPCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."SeuilPCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."SeuilPCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."SeuilPCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."SeuilPCRS"."producteur" IS
+COMMENT ON COLUMN "init"."SeuilPCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."SeuilPCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."SeuilPCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."SeuilPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."SeuilPCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."SeuilPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."SeuilPCRS"."geometrie" IS
 'Géométrie de type curve';
-COMMENT ON COLUMN a_pcrs."SeuilPCRS"."symbole" IS
+COMMENT ON COLUMN "init"."SeuilPCRS"."symbole" IS
 '';
 
 
@@ -3060,11 +3060,11 @@ COMMENT ON COLUMN a_pcrs."SeuilPCRS"."symbole" IS
 -- Classe : MurPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."MurPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."MurPCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."MurPCRS" cascade;
+--DROP INDEX if exists "init"."MurPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."MurPCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."MurPCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."MurPCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."MurPCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -3072,38 +3072,38 @@ COMMENT ON COLUMN a_pcrs."SeuilPCRS"."symbole" IS
 --  CACHE 1;
 
 -- Table: MurPCRS
---DROP TABLE if exists a_pcrs."MurPCRS" cascade;
-CREATE TABLE a_pcrs."MurPCRS"
+--DROP TABLE if exists "init"."MurPCRS" cascade;
+CREATE TABLE "init"."MurPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   --"geometrie" geometry(LINESTRING,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
-  "typeMur" character varying(2) REFERENCES a_pcrs."CategorieMurPCRSType" ("code"),
+  "typeMur" character varying(2) REFERENCES "init"."CategorieMurPCRSType" ("code"),
   CONSTRAINT "MurPCRS_pkey" PRIMARY KEY ("idObjet"),
   CONSTRAINT enforce_dims_geometrie CHECK (st_ndims("geometrie") = 2),
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'LINESTRING'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: MurPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."MurPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."MurPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "MurPCRS_geometrie_geomidx"
-  ON a_pcrs."MurPCRS"
+  ON "init"."MurPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."MurPCRS" IS
+COMMENT ON TABLE "init"."MurPCRS" IS
 'Nom de la classe :
 MurPCRS
 
@@ -3158,28 +3158,28 @@ Ils doivent toutefois être décrits en renseignant spécifiquement les précisi
 planimétriques et/ou altimétriques par des valeurs très supérieures à celles exigées pour
 le PCRS';
 
-COMMENT ON COLUMN a_pcrs."MurPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."MurPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."MurPCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."MurPCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."MurPCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."MurPCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."MurPCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."MurPCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."MurPCRS"."producteur" IS
+COMMENT ON COLUMN "init"."MurPCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."MurPCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."MurPCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."MurPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."MurPCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."MurPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."MurPCRS"."geometrie" IS
 'Géométrie de type curve';
-COMMENT ON COLUMN a_pcrs."MurPCRS"."typeMur" IS
+COMMENT ON COLUMN "init"."MurPCRS"."typeMur" IS
 '';
 
 
@@ -3187,11 +3187,11 @@ COMMENT ON COLUMN a_pcrs."MurPCRS"."typeMur" IS
 -- Classe : PilierPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."PilierPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."PilierPCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."PilierPCRS" cascade;
+--DROP INDEX if exists "init"."PilierPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."PilierPCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."PilierPCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."PilierPCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."PilierPCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -3199,32 +3199,32 @@ COMMENT ON COLUMN a_pcrs."MurPCRS"."typeMur" IS
 --  CACHE 1;
 
 -- Table: PilierPCRS
---DROP TABLE if exists a_pcrs."PilierPCRS" cascade;
-CREATE TABLE a_pcrs."PilierPCRS"
+--DROP TABLE if exists "init"."PilierPCRS" cascade;
+CREATE TABLE "init"."PilierPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   CONSTRAINT "PilierPCRS_pkey" PRIMARY KEY ("idObjet")
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: PilierPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."PilierPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."PilierPCRS_geometrie_geomidx" cascade;
 --CREATE INDEX "PilierPCRS_geometrie_geomidx"
---  ON a_pcrs."PilierPCRS"
+--  ON "init"."PilierPCRS"
 --  USING gist
 --  (geometrie);
 
-COMMENT ON TABLE a_pcrs."PilierPCRS" IS
+COMMENT ON TABLE "init"."PilierPCRS" IS
 'Nom de la classe :
 PilierPCRS
 
@@ -3255,24 +3255,24 @@ Critères de sélection :
 Lorsque le pilier est associé à un socle ou à un mur, ses dimensions au sol doivent le rendre
 différenciable (aux limites de précision planimétrique) du socle ou du mur attenant';
 
-COMMENT ON COLUMN a_pcrs."PilierPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."PilierPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."PilierPCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."PilierPCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."PilierPCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."PilierPCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."PilierPCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."PilierPCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."PilierPCRS"."producteur" IS
+COMMENT ON COLUMN "init"."PilierPCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."PilierPCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."PilierPCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."PilierPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."PilierPCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
 
 
@@ -3280,11 +3280,11 @@ COMMENT ON COLUMN a_pcrs."PilierPCRS"."thematique" IS
 -- Classe : PilierRegulierPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."PilierRegulierPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."PilierRegulierPCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."PilierRegulierPCRS" cascade;
+--DROP INDEX if exists "init"."PilierRegulierPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."PilierRegulierPCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."PilierRegulierPCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."PilierRegulierPCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."PilierRegulierPCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -3292,41 +3292,41 @@ COMMENT ON COLUMN a_pcrs."PilierPCRS"."thematique" IS
 --  CACHE 1;
 
 -- Table: PilierRegulierPCRS
---DROP TABLE if exists a_pcrs."PilierRegulierPCRS" cascade;
-CREATE TABLE a_pcrs."PilierRegulierPCRS"
+--DROP TABLE if exists "init"."PilierRegulierPCRS" cascade;
+CREATE TABLE "init"."PilierRegulierPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   "angleRotation" decimal NOT NULL CHECK ("angleRotation" >= 0 AND "angleRotation" < 360),
   --"geometrie" geometry(POINT,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
   "largeur_mm" decimal NOT NULL,
   "longueur_mm" decimal NOT NULL,
-  "section" character varying(2) NOT NULL REFERENCES a_pcrs."SectionPilierPCRSType" (code),
+  "section" character varying(2) NOT NULL REFERENCES "init"."SectionPilierPCRSType" (code),
   CONSTRAINT "PilierRegulierPCRS_pkey" PRIMARY KEY ("idObjet"),
   CONSTRAINT enforce_dims_geometrie CHECK (st_ndims("geometrie") = 2),
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'POINT'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."PilierPCRS")
+INHERITS ("init"."PilierPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: PilierRegulierPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."PilierRegulierPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."PilierRegulierPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "PilierRegulierPCRS_geometrie_geomidx"
-  ON a_pcrs."PilierRegulierPCRS"
+  ON "init"."PilierRegulierPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."PilierRegulierPCRS" IS
+COMMENT ON TABLE "init"."PilierRegulierPCRS" IS
 'Nom de la classe :
 PilierRegulierPCRS
 
@@ -3355,35 +3355,35 @@ Critères de sélection :
 Lorsque le pilier est associé à un socle ou à un mur, ses dimensions au sol doivent le
 rendre différenciable (aux limites de précision planimétrique) du socle ou du mur attenant';
 
-COMMENT ON COLUMN a_pcrs."PilierRegulierPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."PilierRegulierPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."PilierRegulierPCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."PilierRegulierPCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."PilierRegulierPCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."PilierRegulierPCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."PilierRegulierPCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."PilierRegulierPCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."PilierRegulierPCRS"."producteur" IS
+COMMENT ON COLUMN "init"."PilierRegulierPCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."PilierRegulierPCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."PilierRegulierPCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."PilierRegulierPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."PilierRegulierPCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."PilierRegulierPCRS"."angleRotation" IS
+COMMENT ON COLUMN "init"."PilierRegulierPCRS"."angleRotation" IS
 'Utlisé uniquement pour l''orientation du symbole de poteau après rotation.
 Peut être étendu pour un poteau ovale pour orienter le symbole';
-COMMENT ON COLUMN a_pcrs."PilierRegulierPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."PilierRegulierPCRS"."geometrie" IS
 'Géométrie de type point';
-COMMENT ON COLUMN a_pcrs."PilierRegulierPCRS"."largeur_mm" IS
+COMMENT ON COLUMN "init"."PilierRegulierPCRS"."largeur_mm" IS
 'Utlisé uniquement pour la mise à l''échelle Y du symbole de poteau après rotation';
-COMMENT ON COLUMN a_pcrs."PilierRegulierPCRS"."longueur_mm" IS
+COMMENT ON COLUMN "init"."PilierRegulierPCRS"."longueur_mm" IS
 'Utlisé uniquement pour la mise à l''échelle X du symbole de poteau après rotation';
-COMMENT ON COLUMN a_pcrs."PilierRegulierPCRS"."section" IS
+COMMENT ON COLUMN "init"."PilierRegulierPCRS"."section" IS
 'Forme de la section à la base du pilier';
 
 
@@ -3391,12 +3391,12 @@ COMMENT ON COLUMN a_pcrs."PilierRegulierPCRS"."section" IS
 -- Classe : PilierParticulierPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."PilierParticulierPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."PilierParticulierPCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."PilierParticulierPCRS" cascade;
+--DROP INDEX if exists "init"."PilierParticulierPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."PilierParticulierPCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."PilierParticulierPCRS" cascade;
 
 
---CREATE SEQUENCE a_pcrs."PilierParticulierPCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."PilierParticulierPCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -3404,15 +3404,15 @@ COMMENT ON COLUMN a_pcrs."PilierRegulierPCRS"."section" IS
 --  CACHE 1;
 
 -- Table: PilierParticulierPCRS
---DROP TABLE if exists a_pcrs."PilierParticulierPCRS" cascade;
-CREATE TABLE a_pcrs."PilierParticulierPCRS"
+--DROP TABLE if exists "init"."PilierParticulierPCRS" cascade;
+CREATE TABLE "init"."PilierParticulierPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   --"geometrie" geometry(POLYGON,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
@@ -3421,20 +3421,20 @@ CREATE TABLE a_pcrs."PilierParticulierPCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'POLYGON'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."PilierPCRS")
+INHERITS ("init"."PilierPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: PilierParticulierPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."PilierParticulierPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."PilierParticulierPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "PilierParticulierPCRS_geometrie_geomidx"
-  ON a_pcrs."PilierParticulierPCRS"
+  ON "init"."PilierParticulierPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."PilierParticulierPCRS" IS
+COMMENT ON TABLE "init"."PilierParticulierPCRS" IS
 'Nom de la classe :
 PilierParticulierPCRS
 
@@ -3468,26 +3468,26 @@ Critères de sélection :
 Lorsque le pilier est attenant à un socle ou à un mur, ses dimensions au sol doivent le
 rendre différenciable (aux limites de précision planimétrique) du socle ou du mur attenant';
 
-COMMENT ON COLUMN a_pcrs."PilierParticulierPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."PilierParticulierPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."PilierParticulierPCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."PilierParticulierPCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."PilierParticulierPCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."PilierParticulierPCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."PilierParticulierPCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."PilierParticulierPCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."PilierParticulierPCRS"."producteur" IS
+COMMENT ON COLUMN "init"."PilierParticulierPCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."PilierParticulierPCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."PilierParticulierPCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."PilierParticulierPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."PilierParticulierPCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."PilierParticulierPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."PilierParticulierPCRS"."geometrie" IS
 'Géométrie de type polygone';
 
 
@@ -3495,11 +3495,11 @@ COMMENT ON COLUMN a_pcrs."PilierParticulierPCRS"."geometrie" IS
 -- Classe : RailPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."RailPCRS_geometrie_geomidx" cascade;
---DROP TABLE if exists a_pcrs."RailPCRS" cascade;
---DROP SEQUENCE if exists a_pcrs."RailPCRS_idObjet_seq" cascade;
+--DROP INDEX if exists "init"."RailPCRS_geometrie_geomidx" cascade;
+--DROP TABLE if exists "init"."RailPCRS" cascade;
+--DROP SEQUENCE if exists "init"."RailPCRS_idObjet_seq" cascade;
 
---CREATE SEQUENCE a_pcrs."RailPCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."RailPCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -3507,15 +3507,15 @@ COMMENT ON COLUMN a_pcrs."PilierParticulierPCRS"."geometrie" IS
 --  CACHE 1;
 
 -- Table: RailPCRS
---DROP TABLE if exists a_pcrs."RailPCRS" cascade;
-CREATE TABLE a_pcrs."RailPCRS"
+--DROP TABLE if exists "init"."RailPCRS" cascade;
+CREATE TABLE "init"."RailPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   --"geometrie" geometry(LINESTRING,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
@@ -3524,20 +3524,20 @@ CREATE TABLE a_pcrs."RailPCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'LINESTRING'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: RailPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."RailPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."RailPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "RailPCRS_geometrie_geomidx"
-  ON a_pcrs."RailPCRS"
+  ON "init"."RailPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."RailPCRS" IS
+COMMENT ON TABLE "init"."RailPCRS" IS
 'Nom de la classe :
 RailPCRS
 
@@ -3592,26 +3592,26 @@ Classe essentielle du PCRS
 Critères de sélection :
 Ne concerne que les voies situées sur le domaine public ou en assurant sa desserte';
 
-COMMENT ON COLUMN a_pcrs."RailPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."RailPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."RailPCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."RailPCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."RailPCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."RailPCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."RailPCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."RailPCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."RailPCRS"."producteur" IS
+COMMENT ON COLUMN "init"."RailPCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."RailPCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."RailPCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."RailPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."RailPCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."RailPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."RailPCRS"."geometrie" IS
 'Géométrie de type curve';
 
 
@@ -3619,11 +3619,11 @@ COMMENT ON COLUMN a_pcrs."RailPCRS"."geometrie" IS
 -- Classe : ArbrePCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."ArbrePCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."ArbrePCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."ArbrePCRS" cascade;
+--DROP INDEX if exists "init"."ArbrePCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."ArbrePCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."ArbrePCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."ArbrePCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."ArbrePCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -3631,15 +3631,15 @@ COMMENT ON COLUMN a_pcrs."RailPCRS"."geometrie" IS
 --  CACHE 1;
 
 -- Table: ArbrePCRS
---DROP TABLE if exists a_pcrs."ArbrePCRS" cascade;
-CREATE TABLE a_pcrs."ArbrePCRS"
+--DROP TABLE if exists "init"."ArbrePCRS" cascade;
+CREATE TABLE "init"."ArbrePCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   --"geometrie" geometry(POINT,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
@@ -3650,20 +3650,20 @@ CREATE TABLE a_pcrs."ArbrePCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'POINT'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: ArbrePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."ArbrePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."ArbrePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "ArbrePCRS_geometrie_geomidx"
-  ON a_pcrs."ArbrePCRS"
+  ON "init"."ArbrePCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."ArbrePCRS" IS
+COMMENT ON TABLE "init"."ArbrePCRS" IS
 'Nom de la classe :
 ArbrePCRS
 
@@ -3687,28 +3687,28 @@ modélisation des objets linéaires de la classe abstraite ObjetVecteurPCRS
 La classe contient :
 Selon toutes essences et espèces d''arbres';
 
-COMMENT ON COLUMN a_pcrs."ArbrePCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."ArbrePCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."ArbrePCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."ArbrePCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."ArbrePCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."ArbrePCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."ArbrePCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."ArbrePCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."ArbrePCRS"."producteur" IS
+COMMENT ON COLUMN "init"."ArbrePCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."ArbrePCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."ArbrePCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."ArbrePCRS"."thematique" IS
+COMMENT ON COLUMN "init"."ArbrePCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."ArbrePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."ArbrePCRS"."geometrie" IS
 'Géométrie de type point';
-COMMENT ON COLUMN a_pcrs."ArbrePCRS"."reference" IS
+COMMENT ON COLUMN "init"."ArbrePCRS"."reference" IS
 '';
 
 
@@ -3716,11 +3716,11 @@ COMMENT ON COLUMN a_pcrs."ArbrePCRS"."reference" IS
 -- Classe : PilePontPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."PilePontPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."PilePontPCRS_idObjet_seq" cascade;
---DROP TABLE if exists a_pcrs."PilePontPCRS" cascade;
+--DROP INDEX if exists "init"."PilePontPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."PilePontPCRS_idObjet_seq" cascade;
+--DROP TABLE if exists "init"."PilePontPCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."PilePontPCRS_idObjet_seq"
+--CREATE SEQUENCE "init"."PilePontPCRS_idObjet_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -3728,15 +3728,15 @@ COMMENT ON COLUMN a_pcrs."ArbrePCRS"."reference" IS
 --  CACHE 1;
 
 -- Table: PilePontPCRS
---DROP TABLE if exists a_pcrs."PilePontPCRS" cascade;
-CREATE TABLE a_pcrs."PilePontPCRS"
+--DROP TABLE if exists "init"."PilePontPCRS" cascade;
+CREATE TABLE "init"."PilePontPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   --"geometrie" geometry(Polygon,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
@@ -3745,20 +3745,20 @@ CREATE TABLE a_pcrs."PilePontPCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'LINESTRING'::text OR geometrytype("geometrie") = 'POLYGON'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: PilePontPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."PilePontPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."PilePontPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "PilePontPCRS_geometrie_geomidx"
-  ON a_pcrs."PilePontPCRS"
+  ON "init"."PilePontPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."PilePontPCRS" IS
+COMMENT ON TABLE "init"."PilePontPCRS" IS
 'Nom de la classe :
 PilePontPCRS
 
@@ -3786,26 +3786,26 @@ Critères de sélection :
 Appuis massifs et permanents supportant le tablier d''un pont
 ';
 
-COMMENT ON COLUMN a_pcrs."PilePontPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."PilePontPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."PilePontPCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."PilePontPCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."PilePontPCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."PilePontPCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."PilePontPCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."PilePontPCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."PilePontPCRS"."producteur" IS
+COMMENT ON COLUMN "init"."PilePontPCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."PilePontPCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."PilePontPCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."PilePontPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."PilePontPCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."PilePontPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."PilePontPCRS"."geometrie" IS
 'Géométrie de type polygone';
 
 
@@ -3814,12 +3814,12 @@ COMMENT ON COLUMN a_pcrs."PilePontPCRS"."geometrie" IS
 -- Classe : AffleurantSymbolePCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."AffleurantSymbolePCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."AffleurantSymbolePCRS_idAffleurant_seq" cascade;
---DROP TABLE if exists a_pcrs."AffleurantSymbolePCRS" cascade;
+--DROP INDEX if exists "init"."AffleurantSymbolePCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."AffleurantSymbolePCRS_idAffleurant_seq" cascade;
+--DROP TABLE if exists "init"."AffleurantSymbolePCRS" cascade;
 
 
---CREATE SEQUENCE a_pcrs."AffleurantSymbolePCRS_idAffleurant_seq"
+--CREATE SEQUENCE "init"."AffleurantSymbolePCRS_idAffleurant_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -3827,23 +3827,23 @@ COMMENT ON COLUMN a_pcrs."PilePontPCRS"."geometrie" IS
 --  CACHE 1;
 
 -- Table: AffleurantSymbolePCRS
---DROP TABLE if exists a_pcrs."AffleurantSymbolePCRS" cascade;
-CREATE TABLE a_pcrs."AffleurantSymbolePCRS"
+--DROP TABLE if exists "init"."AffleurantSymbolePCRS" cascade;
+CREATE TABLE "init"."AffleurantSymbolePCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  --"precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  --"precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  --"precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  --"precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   --"dateLeve" date,
   --"producteur" character varying NOT NULL,
-  --"qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  --"qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   --"thematique" character varying(2) NOT NULL,
   --"gestionnaire" character varying,
   --"idSource" character varying,
-  --"nature" character varying(2) NOT NULL REFERENCES a_pcrs."NatureAffleurantPCRSType" (code),
-  --"reseau" character varying(8) NOT NULL REFERENCES a_pcrs."NatureReseauPCRSType" (code),
+  --"nature" character varying(2) NOT NULL REFERENCES "init"."NatureAffleurantPCRSType" (code),
+  --"reseau" character varying(8) NOT NULL REFERENCES "init"."NatureReseauPCRSType" (code),
   --"source" character varying,
-  --"symbolisation" character varying(8) REFERENCES a_pcrs."AffleurantSymbolePCRS" (code),
-  --"representations" character varying(8) NOT NULL REFERENCES a_pcrs."AffleurantGeometriquePCRS" (code),
+  --"symbolisation" character varying(8) REFERENCES "init"."AffleurantSymbolePCRS" (code),
+  --"representations" character varying(8) NOT NULL REFERENCES "init"."AffleurantGeometriquePCRS" (code),
   "angleRotation" decimal NOT NULL CHECK ("angleRotation" >= 0 AND "angleRotation" < 360),
   --"geometrie" geometry(POINT,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
@@ -3855,20 +3855,20 @@ CREATE TABLE a_pcrs."AffleurantSymbolePCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'POINT'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
---INHERITS (a_pcrs."AffleurantPCRS")
+--INHERITS ("init"."AffleurantPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: AffleurantSymbolePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."AffleurantSymbolePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."AffleurantSymbolePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "AffleurantSymbolePCRS_geometrie_geomidx"
-  ON a_pcrs."AffleurantSymbolePCRS"
+  ON "init"."AffleurantSymbolePCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."AffleurantSymbolePCRS" IS
+COMMENT ON TABLE "init"."AffleurantSymbolePCRS" IS
 'Nom de la classe :
 AffleurantSymbolePCRS
 
@@ -3903,52 +3903,52 @@ la version v2.0 recommande plutôt l''utilisation de la classe <AffleurantEnvelo
 éventuellement complétée par un habillage <HabillageLignesPCRS> pour le dessin de
 l''affleurant à l''intérieur de son enveloppe';
 
-COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
---COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."precisionAltimetrique" IS
+--COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."precisionAltimetrique" IS
 --'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 --associée au levé topographique de l''objet';
---COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."precisionPlanimetrique" IS
+--COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."precisionPlanimetrique" IS
 --'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 --associée au levé topographique de l''objet';
---COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."dateLeve" IS
+--COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."dateLeve" IS
 --'Date de levé de l''objet';
---COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."producteur" IS
+--COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."producteur" IS
 --'Producteur de la donnée.
 --La valeur sera saisie et déterminée par le producteur de façon stable.
 --Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
---COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."qualiteCategorisation" IS
+--COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."qualiteCategorisation" IS
 --'Indication du producteur quant à la qualité de la catégorisation.
 --Permet des représentations plus riches pour les migrations / reprises de données';
---COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."thematique" IS
+--COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."thematique" IS
 --'La thématique à laquelle est associé chaque objet du PCRS';
---COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."gestionnaire" IS
+--COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."gestionnaire" IS
 --'Nom court, sigle, acronyme de l''opérteur gestionnaire du réseau et fournisseur de la donnée';
---COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."idSource" IS
+--COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."idSource" IS
 --'Identifiant unique de l''affleurant';
---COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."nature" IS
+--COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."nature" IS
 --'Nature de l''affleurant';
---COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."reseau" IS
+--COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."reseau" IS
 --'Nature du réseau';
---COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."source" IS
+--COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."source" IS
 --'Source des données d''affleurant dans le SI du gestionnaire de réseaux
 --Nom d''application ou de base de données dans le système d''information du gestionnaire de réseaux';
---COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."symbolisation" IS
+--COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."symbolisation" IS
 --'Lien vers une représentation symbolique'
---COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."representations" IS
+--COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."representations" IS
 --'Lien vers  une représentation de type géométrique.
 --Il est nécessaire de fournir au moins un type de representation géométrique'
-COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."angleRotation" IS
+COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."angleRotation" IS
 'Angle utilisé uniquement pour l''orientation du symbole d''affleurant,
 dans le sens horaire par rapport au Nord.
 Valeur angulaire en degrés décimaux';
-COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."geometrie" IS
 'Géométrie de type point';
-COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."largeur_mm" IS
+COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."largeur_mm" IS
 'Utilisé uniquement pour la mise à l''échelle Y du symbole de l''affleurant';
-COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."longueur_mm" IS
+COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."longueur_mm" IS
 'Utilisé uniquement pour la mise à l''échelle X du symbole de l''affleurant';
-COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."reference" IS
+COMMENT ON COLUMN "init"."AffleurantSymbolePCRS"."reference" IS
 'Désignation du symbole à utiliser pour la représentation de l''affleurant.';
 
 
@@ -3956,11 +3956,11 @@ COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."reference" IS
 -- Classe : AffleurantGeometriquePCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."AffleurantGeometriquePCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."AffleurantGeometriquePCRS_idAffleurant_seq" cascade;
---DROP TABLE if exists a_pcrs."AffleurantGeometriquePCRS" cascade;
+--DROP INDEX if exists "init"."AffleurantGeometriquePCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."AffleurantGeometriquePCRS_idAffleurant_seq" cascade;
+--DROP TABLE if exists "init"."AffleurantGeometriquePCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."AffleurantGeometriquePCRS_idAffleurant_seq"
+--CREATE SEQUENCE "init"."AffleurantGeometriquePCRS_idAffleurant_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -3968,39 +3968,39 @@ COMMENT ON COLUMN a_pcrs."AffleurantSymbolePCRS"."reference" IS
 --  CACHE 1;
 
 -- Table: AffleurantGeometriquePCRS
---DROP TABLE if exists a_pcrs."AffleurantGeometriquePCRS" cascade;
-CREATE TABLE a_pcrs."AffleurantGeometriquePCRS"
+--DROP TABLE if exists "init"."AffleurantGeometriquePCRS" cascade;
+CREATE TABLE "init"."AffleurantGeometriquePCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  -- "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  -- "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  -- "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  -- "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   -- "dateLeve" date,
   -- "producteur" character varying NOT NULL,
-  -- "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  -- "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   -- "thematique" character varying(2) NOT NULL,
   -- "gestionnaire" character varying,
   -- "idSource" character varying,
-  -- "nature" character varying(2) NOT NULL REFERENCES a_pcrs."NatureAffleurantPCRSType" (code),
-  -- "reseau" character varying(8) NOT NULL REFERENCES a_pcrs."NatureReseauPCRSType" (code),
+  -- "nature" character varying(2) NOT NULL REFERENCES "init"."NatureAffleurantPCRSType" (code),
+  -- "reseau" character varying(8) NOT NULL REFERENCES "init"."NatureReseauPCRSType" (code),
   -- "source" character varying,
-  -- "symbolisation" character varying(8) REFERENCES a_pcrs."AffleurantSymbolePCRS" (code),
-  -- "representations" character varying(8) NOT NULL REFERENCES a_pcrs."AffleurantGeometriquePCRS" (code),
+  -- "symbolisation" character varying(8) REFERENCES "init"."AffleurantSymbolePCRS" (code),
+  -- "representations" character varying(8) NOT NULL REFERENCES "init"."AffleurantGeometriquePCRS" (code),
   CONSTRAINT "AffleurantGeometriquePCRS_pkey" PRIMARY KEY ("idObjet")
 )
---INHERITS (a_pcrs."ObjetVecteurPCRS")
+--INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: AffleurantGeometriquePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."AffleurantGeometriquePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."AffleurantGeometriquePCRS_geometrie_geomidx" cascade;
 --CREATE INDEX "AffleurantGeometriquePCRS_geometrie_geomidx"
---  ON a_pcrs."AffleurantGeometriquePCRS"
+--  ON "init"."AffleurantGeometriquePCRS"
 --  USING gist
 --  (geometrie);
 
-COMMENT ON TABLE a_pcrs."AffleurantGeometriquePCRS" IS
+COMMENT ON TABLE "init"."AffleurantGeometriquePCRS" IS
 'Nom de la classe :
 AffleurantGeometriquePCRS
 
@@ -4017,7 +4017,7 @@ Modélisation :
 Selon les représentations liées
 ';
 
-COMMENT ON COLUMN a_pcrs."AffleurantGeometriquePCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."AffleurantGeometriquePCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
 
 
@@ -4027,11 +4027,11 @@ COMMENT ON COLUMN a_pcrs."AffleurantGeometriquePCRS"."idObjet" IS
 -- Classe : AffleurantPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."AffleurantPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."AffleurantPCRS_idAffleurant_seq" cascade;
---DROP TABLE if exists a_pcrs."AffleurantPCRS" cascade;
+--DROP INDEX if exists "init"."AffleurantPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."AffleurantPCRS_idAffleurant_seq" cascade;
+--DROP TABLE if exists "init"."AffleurantPCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."AffleurantPCRS_idAffleurant_seq"
+--CREATE SEQUENCE "init"."AffleurantPCRS_idAffleurant_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -4039,39 +4039,39 @@ COMMENT ON COLUMN a_pcrs."AffleurantGeometriquePCRS"."idObjet" IS
 --  CACHE 1;
 
 -- Table: AffleurantPCRS
---DROP TABLE if exists a_pcrs."AffleurantPCRS" cascade;
-CREATE TABLE a_pcrs."AffleurantPCRS"
+--DROP TABLE if exists "init"."AffleurantPCRS" cascade;
+CREATE TABLE "init"."AffleurantPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  "precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  "precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  "precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   "dateLeve" date,
   "producteur" character varying NOT NULL,
-  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  "qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   "thematique" character varying(2) NOT NULL,
   "gestionnaire" character varying,
   "idSource" character varying,
-  "nature" character varying(2) NOT NULL REFERENCES a_pcrs."NatureAffleurantPCRSType" (code),
-  "reseau" character varying(8) NOT NULL REFERENCES a_pcrs."NatureReseauPCRSType" (code),
+  "nature" character varying(2) NOT NULL REFERENCES "init"."NatureAffleurantPCRSType" (code),
+  "reseau" character varying(8) NOT NULL REFERENCES "init"."NatureReseauPCRSType" (code),
   "source" character varying,
-  "symbolisation" character varying(8) REFERENCES a_pcrs."AffleurantSymbolePCRS" ("idObjet"),
-  "representations" character varying(8) NOT NULL REFERENCES a_pcrs."AffleurantGeometriquePCRS" ("idObjet"),
+  "symbolisation" character varying(8) REFERENCES "init"."AffleurantSymbolePCRS" ("idObjet"),
+  "representations" character varying(8) NOT NULL REFERENCES "init"."AffleurantGeometriquePCRS" ("idObjet"),
   CONSTRAINT "AffleurantPCRS_pkey" PRIMARY KEY ("idObjet")
 )
-INHERITS (a_pcrs."ObjetVecteurPCRS")
+INHERITS ("init"."ObjetVecteurPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: AffleurantPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."AffleurantPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."AffleurantPCRS_geometrie_geomidx" cascade;
 --CREATE INDEX "AffleurantPCRS_geometrie_geomidx"
---  ON a_pcrs."AffleurantPCRS"
+--  ON "init"."AffleurantPCRS"
 --  USING gist
 --  (geometrie);
 
-COMMENT ON TABLE a_pcrs."AffleurantPCRS" IS
+COMMENT ON TABLE "init"."AffleurantPCRS" IS
 'Nom de la classe :
 AffleurantPCRS
 
@@ -4105,39 +4105,39 @@ Bouches, avaloirs, regards, plaques, poteaux, coffrets...
 Contraintes :
 Classe essentielle du PCRS';
 
-COMMENT ON COLUMN a_pcrs."AffleurantPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."AffleurantPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."AffleurantPCRS"."precisionAltimetrique" IS
+COMMENT ON COLUMN "init"."AffleurantPCRS"."precisionAltimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."AffleurantPCRS"."precisionPlanimetrique" IS
+COMMENT ON COLUMN "init"."AffleurantPCRS"."precisionPlanimetrique" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée au levé topographique de l''objet';
-COMMENT ON COLUMN a_pcrs."AffleurantPCRS"."dateLeve" IS
+COMMENT ON COLUMN "init"."AffleurantPCRS"."dateLeve" IS
 'Date de levé de l''objet';
-COMMENT ON COLUMN a_pcrs."AffleurantPCRS"."producteur" IS
+COMMENT ON COLUMN "init"."AffleurantPCRS"."producteur" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."AffleurantPCRS"."qualiteCategorisation" IS
+COMMENT ON COLUMN "init"."AffleurantPCRS"."qualiteCategorisation" IS
 'Indication du producteur quant à la qualité de la catégorisation.
 Permet des représentations plus riches pour les migrations / reprises de données';
-COMMENT ON COLUMN a_pcrs."AffleurantPCRS"."thematique" IS
+COMMENT ON COLUMN "init"."AffleurantPCRS"."thematique" IS
 'La thématique à laquelle est associé chaque objet du PCRS';
-COMMENT ON COLUMN a_pcrs."AffleurantPCRS"."gestionnaire" IS
+COMMENT ON COLUMN "init"."AffleurantPCRS"."gestionnaire" IS
 'Nom court, sigle, acronyme de l''opérteur gestionnaire du réseau et fournisseur de la donnée';
-COMMENT ON COLUMN a_pcrs."AffleurantPCRS"."idSource" IS
+COMMENT ON COLUMN "init"."AffleurantPCRS"."idSource" IS
 'Identifiant unique de l''affleurant';
-COMMENT ON COLUMN a_pcrs."AffleurantPCRS"."nature" IS
+COMMENT ON COLUMN "init"."AffleurantPCRS"."nature" IS
 'Nature de l''affleurant';
-COMMENT ON COLUMN a_pcrs."AffleurantPCRS"."reseau" IS
+COMMENT ON COLUMN "init"."AffleurantPCRS"."reseau" IS
 'Nature du réseau';
-COMMENT ON COLUMN a_pcrs."AffleurantPCRS"."source" IS
+COMMENT ON COLUMN "init"."AffleurantPCRS"."source" IS
 'Source des données d''affleurant dans le SI du gestionnaire de réseaux
 Nom d''application ou de base de données dans le système d''information du gestionnaire de réseaux';
-COMMENT ON COLUMN a_pcrs."AffleurantPCRS"."symbolisation" IS
+COMMENT ON COLUMN "init"."AffleurantPCRS"."symbolisation" IS
 'Lien vers une représentation symbolique';
-COMMENT ON COLUMN a_pcrs."AffleurantPCRS"."representations" IS
+COMMENT ON COLUMN "init"."AffleurantPCRS"."representations" IS
 'Lien vers  une représentation de type géométrique.
 Il est nécessaire de fournir au moins un type de representation géométrique';
 
@@ -4146,11 +4146,11 @@ Il est nécessaire de fournir au moins un type de representation géométrique';
 -- Classe : AffleurantEnveloppePCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."AffleurantEnveloppePCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."AffleurantEnveloppePCRS_idAffleurant_seq" cascade;
---DROP TABLE if exists a_pcrs."AffleurantEnveloppePCRS" cascade;
+--DROP INDEX if exists "init"."AffleurantEnveloppePCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."AffleurantEnveloppePCRS_idAffleurant_seq" cascade;
+--DROP TABLE if exists "init"."AffleurantEnveloppePCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."AffleurantEnveloppePCRS_idAffleurant_seq"
+--CREATE SEQUENCE "init"."AffleurantEnveloppePCRS_idAffleurant_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -4158,23 +4158,23 @@ Il est nécessaire de fournir au moins un type de representation géométrique';
 --  CACHE 1;
 
 -- Table: AffleurantEnveloppePCRS
---DROP TABLE if exists a_pcrs."AffleurantEnveloppePCRS" cascade;
-CREATE TABLE a_pcrs."AffleurantEnveloppePCRS"
+--DROP TABLE if exists "init"."AffleurantEnveloppePCRS" cascade;
+CREATE TABLE "init"."AffleurantEnveloppePCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  --"precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  --"precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  --"precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  --"precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   --"dateLeve" date,
   --"producteur" character varying NOT NULL,
-  --"qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  --"qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   --"thematique" character varying(2) NOT NULL,
   --"gestionnaire" character varying,
   --"idSource" character varying,
-  --"nature" character varying(2) NOT NULL REFERENCES a_pcrs."NatureAffleurantPCRSType" (code),
-  --"reseau" character varying(8) NOT NULL REFERENCES a_pcrs."NatureReseauPCRSType" (code),
+  --"nature" character varying(2) NOT NULL REFERENCES "init"."NatureAffleurantPCRSType" (code),
+  --"reseau" character varying(8) NOT NULL REFERENCES "init"."NatureReseauPCRSType" (code),
   --"source" character varying,
-  --"symbolisation" character varying(8) REFERENCES a_pcrs."AffleurantSymbolePCRS" (code),
-  --"representations" character varying(8) NOT NULL REFERENCES a_pcrs."AffleurantGeometriquePCRS" (code),
+  --"symbolisation" character varying(8) REFERENCES "init"."AffleurantSymbolePCRS" (code),
+  --"representations" character varying(8) NOT NULL REFERENCES "init"."AffleurantGeometriquePCRS" (code),
   --"geometrie" geometry(POLYGON,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
   CONSTRAINT "AffleurantEnveloppePCRS_pkey" PRIMARY KEY ("idObjet"),
@@ -4182,20 +4182,20 @@ CREATE TABLE a_pcrs."AffleurantEnveloppePCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'POLYGON'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
---INHERITS (a_pcrs."AffleurantPCRS")
+--INHERITS ("init"."AffleurantPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: AffleurantEnveloppePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."AffleurantEnveloppePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."AffleurantEnveloppePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "AffleurantEnveloppePCRS_geometrie_geomidx"
-  ON a_pcrs."AffleurantEnveloppePCRS"
+  ON "init"."AffleurantEnveloppePCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."AffleurantEnveloppePCRS" IS
+COMMENT ON TABLE "init"."AffleurantEnveloppePCRS" IS
 'Nom de la classe :
 AffleurantEnveloppePCRS
 
@@ -4222,42 +4222,42 @@ La version actuelle du PCRS recommande l''utilisation de cette classe
 <AffleurantEnveloppePCRS>, éventuellement complétée par un habillage
 <HabillageLignesPCRS> pour le dessin de l''affleurant à l''intérieur de son enveloppe';
 
-COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
--- COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."precisionAltimetrique" IS
+-- COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."precisionAltimetrique" IS
 -- 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 -- associée au levé topographique de l''objet';
--- COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."precisionPlanimetrique" IS
+-- COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."precisionPlanimetrique" IS
 -- 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 -- associée au levé topographique de l''objet';
--- COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."dateLeve" IS
+-- COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."dateLeve" IS
 -- 'Date de levé de l''objet';
--- COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."producteur" IS
+-- COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."producteur" IS
 -- 'Producteur de la donnée.
 -- La valeur sera saisie et déterminée par le producteur de façon stable.
 -- Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
--- COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."qualiteCategorisation" IS
+-- COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."qualiteCategorisation" IS
 -- 'Indication du producteur quant à la qualité de la catégorisation.
 -- Permet des représentations plus riches pour les migrations / reprises de données';
--- COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."thematique" IS
+-- COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."thematique" IS
 -- 'La thématique à laquelle est associé chaque objet du PCRS';
--- COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."gestionnaire" IS
+-- COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."gestionnaire" IS
 -- 'Nom court, sigle, acronyme de l''opérteur gestionnaire du réseau et fournisseur de la donnée';
--- COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."idSource" IS
+-- COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."idSource" IS
 -- 'Identifiant unique de l''affleurant';
--- COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."nature" IS
+-- COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."nature" IS
 -- 'Nature de l''affleurant';
--- COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."reseau" IS
+-- COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."reseau" IS
 -- 'Nature du réseau';
--- COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."source" IS
+-- COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."source" IS
 -- 'Source des données d''affleurant dans le SI du gestionnaire de réseaux
 -- Nom d''application ou de base de données dans le système d''information du gestionnaire de réseaux';
--- COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."symbolisation" IS
+-- COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."symbolisation" IS
 -- 'Lien vers une représentation symbolique'
--- COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."representations" IS
+-- COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."representations" IS
 -- 'Lien vers  une représentation de type géométrique.
 -- Il est nécessaire de fournir au moins un type de representation géométrique'
-COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."AffleurantEnveloppePCRS"."geometrie" IS
 'Géométrie de type polygone';
 
 
@@ -4265,9 +4265,9 @@ COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."geometrie" IS
 -- Classe : AffleurantLignesPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."AffleurantLignesPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."AffleurantLignesPCRS_idAffleurant_seq" cascade;
---DROP TABLE if exists a_pcrs."AffleurantLignesPCRS" cascade;
+--DROP INDEX if exists "init"."AffleurantLignesPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."AffleurantLignesPCRS_idAffleurant_seq" cascade;
+--DROP TABLE if exists "init"."AffleurantLignesPCRS" cascade;
 
 
 --CREATE SEQUENCE "AffleurantLignePCRS_idAffleurant_seq"
@@ -4278,23 +4278,23 @@ COMMENT ON COLUMN a_pcrs."AffleurantEnveloppePCRS"."geometrie" IS
 --  CACHE 1;
 
 -- Table: AffleurantLignesPCRS
---DROP TABLE if exists a_pcrs."AffleurantLignesPCRS" cascade;
-CREATE TABLE a_pcrs."AffleurantLignesPCRS"
+--DROP TABLE if exists "init"."AffleurantLignesPCRS" cascade;
+CREATE TABLE "init"."AffleurantLignesPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  --"precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  --"precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  --"precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  --"precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   --"dateLeve" date,
   --"producteur" character varying NOT NULL,
-  --"qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  --"qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   --"thematique" character varying(2) NOT NULL,
   --"gestionnaire" character varying,
   --"idSource" character varying,
-  --"nature" character varying(2) NOT NULL REFERENCES a_pcrs."NatureAffleurantPCRSType" (code),
-  --"reseau" character varying(8) NOT NULL REFERENCES a_pcrs."NatureReseauPCRSType" (code),
+  --"nature" character varying(2) NOT NULL REFERENCES "init"."NatureAffleurantPCRSType" (code),
+  --"reseau" character varying(8) NOT NULL REFERENCES "init"."NatureReseauPCRSType" (code),
   --"source" character varying,
-  --"symbolisation" character varying(8) REFERENCES a_pcrs."AffleurantSymbolePCRS" ("idObjet"),
-  --"representations" character varying(8) NOT NULL REFERENCES a_pcrs."AffleurantGeometriquePCRS" ("idObjet"),
+  --"symbolisation" character varying(8) REFERENCES "init"."AffleurantSymbolePCRS" ("idObjet"),
+  --"representations" character varying(8) NOT NULL REFERENCES "init"."AffleurantGeometriquePCRS" ("idObjet"),
   --"geometrie" geometry(MULTILINESTRING,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
   CONSTRAINT "AffleurantLignesPCRS_pkey" PRIMARY KEY ("idObjet"),
@@ -4302,20 +4302,20 @@ CREATE TABLE a_pcrs."AffleurantLignesPCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'MULTILINESTRING'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."AffleurantPCRS")
+INHERITS ("init"."AffleurantPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: AffleurantLignesPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."AffleurantLignesPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."AffleurantLignesPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "AffleurantLignesPCRS_geometrie_geomidx"
-  ON a_pcrs."AffleurantLignesPCRS"
+  ON "init"."AffleurantLignesPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."AffleurantLignesPCRS" IS
+COMMENT ON TABLE "init"."AffleurantLignesPCRS" IS
 'Nom de la classe :
 AffleurantLignesPCRS
 
@@ -4339,42 +4339,42 @@ La version actuelle du PCRS recommande plutôt l''utilisation de la classe
 <AffleurantEnveloppePCRS>, éventuellement complétée par un habillage
 <HabillageLignesPCRS> pour le dessin de l''affleurant à l''intérieur de son enveloppe';
 
-COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
--- COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."precisionAltimetrique" IS
+-- COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."precisionAltimetrique" IS
 -- 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 -- associée au levé topographique de l''objet';
--- COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."precisionPlanimetrique" IS
+-- COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."precisionPlanimetrique" IS
 -- 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 -- associée au levé topographique de l''objet';
--- COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."dateLeve" IS
+-- COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."dateLeve" IS
 -- 'Date de levé de l''objet';
--- COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."producteur" IS
+-- COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."producteur" IS
 -- 'Producteur de la donnée.
 -- La valeur sera saisie et déterminée par le producteur de façon stable.
 -- Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
--- COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."qualiteCategorisation" IS
+-- COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."qualiteCategorisation" IS
 -- 'Indication du producteur quant à la qualité de la catégorisation.
 -- Permet des représentations plus riches pour les migrations / reprises de données';
--- COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."thematique" IS
+-- COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."thematique" IS
 -- 'La thématique à laquelle est associé chaque objet du PCRS';
--- COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."gestionnaire" IS
+-- COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."gestionnaire" IS
 -- 'Nom court, sigle, acronyme de l''opérteur gestionnaire du réseau et fournisseur de la donnée';
--- COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."idSource" IS
+-- COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."idSource" IS
 -- 'Identifiant unique de l''affleurant';
--- COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."nature" IS
+-- COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."nature" IS
 -- 'Nature de l''affleurant';
--- COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."reseau" IS
+-- COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."reseau" IS
 -- 'Nature du réseau';
--- COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."source" IS
+-- COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."source" IS
 -- 'Source des données d''affleurant dans le SI du gestionnaire de réseaux
 -- Nom d''application ou de base de données dans le système d''information du gestionnaire de réseaux';
--- COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."symbolisation" IS
+-- COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."symbolisation" IS
 -- 'Lien vers une représentation symbolique';
--- COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."representations" IS
+-- COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."representations" IS
 -- 'Lien vers  une représentation de type géométrique.
 -- Il est nécessaire de fournir au moins un type de representation géométrique';
-COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."AffleurantLignesPCRS"."geometrie" IS
 'Géométrie composée d''un ensemble de lignes';
 
 
@@ -4382,12 +4382,12 @@ COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."geometrie" IS
 -- Classe : AffleurantPointPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."AffleurantPointPCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."AffleurantPointPCRS_idAffleurant_seq" cascade;
---DROP TABLE if exists a_pcrs."AffleurantPointPCRS" cascade;
+--DROP INDEX if exists "init"."AffleurantPointPCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."AffleurantPointPCRS_idAffleurant_seq" cascade;
+--DROP TABLE if exists "init"."AffleurantPointPCRS" cascade;
 
 
---CREATE SEQUENCE a_pcrs."AffleurantPointPCRS_idAffleurant_seq"
+--CREATE SEQUENCE "init"."AffleurantPointPCRS_idAffleurant_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -4395,23 +4395,23 @@ COMMENT ON COLUMN a_pcrs."AffleurantLignesPCRS"."geometrie" IS
 --  CACHE 1;
 
 -- Table: AffleurantPointPCRS
---DROP TABLE if exists a_pcrs."AffleurantPointPCRS" cascade;
-CREATE TABLE a_pcrs."AffleurantPointPCRS"
+--DROP TABLE if exists "init"."AffleurantPointPCRS" cascade;
+CREATE TABLE "init"."AffleurantPointPCRS"
 (
-  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."ObjetVecteurPCRS_idObjet_seq"'::regclass),
-  --"precisionAltimetrique" character varying(3) REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
-  --"precisionPlanimetrique" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRS17Type" (code),
+  "idObjet" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."ObjetVecteurPCRS_idObjet_seq"'::regclass),
+  --"precisionAltimetrique" character varying(3) REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
+  --"precisionPlanimetrique" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRS17Type" (code),
   --"dateLeve" date,
   --"producteur" character varying NOT NULL,
-  --"qualiteCategorisation" character varying(2) NOT NULL REFERENCES a_pcrs."QualiteCategorisationPCRSType" (code),
+  --"qualiteCategorisation" character varying(2) NOT NULL REFERENCES "init"."QualiteCategorisationPCRSType" (code),
   --"thematique" character varying(2) NOT NULL,
   --"gestionnaire" character varying,
   --"idSource" character varying,
-  --"nature" character varying(2) NOT NULL REFERENCES a_pcrs."NatureAffleurantPCRSType" (code),
-  --"reseau" character varying(8) NOT NULL REFERENCES a_pcrs."NatureReseauPCRSType" (code),
+  --"nature" character varying(2) NOT NULL REFERENCES "init"."NatureAffleurantPCRSType" (code),
+  --"reseau" character varying(8) NOT NULL REFERENCES "init"."NatureReseauPCRSType" (code),
   --"source" character varying,
-  --"symbolisation" character varying(8) REFERENCES a_pcrs."AffleurantSymbolePCRS" ("idObjet"),
-  --"representations" character varying(8) NOT NULL REFERENCES a_pcrs."AffleurantGeometriquePCRS" ("idObjet"),
+  --"symbolisation" character varying(8) REFERENCES "init"."AffleurantSymbolePCRS" ("idObjet"),
+  --"representations" character varying(8) NOT NULL REFERENCES "init"."AffleurantGeometriquePCRS" ("idObjet"),
   --"geometrie" geometry(POINT,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
   CONSTRAINT "AffleurantPointPCRS_pkey" PRIMARY KEY ("idObjet"),
@@ -4419,20 +4419,20 @@ CREATE TABLE a_pcrs."AffleurantPointPCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'POINT'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."AffleurantPCRS")
+INHERITS ("init"."AffleurantPCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: AffleurantPointPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."AffleurantPointPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."AffleurantPointPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "AffleurantPointPCRS_geometrie_geomidx"
-  ON a_pcrs."AffleurantPointPCRS"
+  ON "init"."AffleurantPointPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."AffleurantPointPCRS" IS
+COMMENT ON TABLE "init"."AffleurantPointPCRS" IS
 'Nom de la classe :
 AffleurantPointPCRS
 
@@ -4457,42 +4457,42 @@ La version actuelle du PCRS recommande plutôt l''utilisation de la classe
 <HabillageLignesPCRS> pour le dessin de l''affleurant à l''intérieur de son enveloppe. La
 représentation par un unique point sera donc utilisée faute d''informations suffisantes.';
 
-COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."idObjet" IS
+COMMENT ON COLUMN "init"."AffleurantPointPCRS"."idObjet" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
--- COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."precisionAltimetrique" IS
+-- COMMENT ON COLUMN "init"."AffleurantPointPCRS"."precisionAltimetrique" IS
 -- 'Intervalle de précision dans lequel s''exprime en cm la précision altimétrique
 -- associée au levé topographique de l''objet';
--- COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."precisionPlanimetrique" IS
+-- COMMENT ON COLUMN "init"."AffleurantPointPCRS"."precisionPlanimetrique" IS
 -- 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 -- associée au levé topographique de l''objet';
--- COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."dateLeve" IS
+-- COMMENT ON COLUMN "init"."AffleurantPointPCRS"."dateLeve" IS
 -- 'Date de levé de l''objet';
--- COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."producteur" IS
+-- COMMENT ON COLUMN "init"."AffleurantPointPCRS"."producteur" IS
 -- 'Producteur de la donnée.
 -- La valeur sera saisie et déterminée par le producteur de façon stable.
 -- Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
--- COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."qualiteCategorisation" IS
+-- COMMENT ON COLUMN "init"."AffleurantPointPCRS"."qualiteCategorisation" IS
 -- 'Indication du producteur quant à la qualité de la catégorisation.
 -- Permet des représentations plus riches pour les migrations / reprises de données';
--- COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."thematique" IS
+-- COMMENT ON COLUMN "init"."AffleurantPointPCRS"."thematique" IS
 -- 'La thématique à laquelle est associé chaque objet du PCRS';
--- COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."gestionnaire" IS
+-- COMMENT ON COLUMN "init"."AffleurantPointPCRS"."gestionnaire" IS
 -- 'Nom court, sigle, acronyme de l''opérteur gestionnaire du réseau et fournisseur de la donnée';
--- COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."idSource" IS
+-- COMMENT ON COLUMN "init"."AffleurantPointPCRS"."idSource" IS
 -- 'Identifiant unique de l''affleurant';
--- COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."nature" IS
+-- COMMENT ON COLUMN "init"."AffleurantPointPCRS"."nature" IS
 -- 'Nature de l''affleurant';
--- COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."reseau" IS
+-- COMMENT ON COLUMN "init"."AffleurantPointPCRS"."reseau" IS
 -- 'Nature du réseau';
--- COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."source" IS
+-- COMMENT ON COLUMN "init"."AffleurantPointPCRS"."source" IS
 -- 'Source des données d''affleurant dans le SI du gestionnaire de réseaux
 -- Nom d''application ou de base de données dans le système d''information du gestionnaire de réseaux';
--- COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."symbolisation" IS
+-- COMMENT ON COLUMN "init"."AffleurantPointPCRS"."symbolisation" IS
 -- 'Lien vers une représentation symbolique';
--- COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."representations" IS
+-- COMMENT ON COLUMN "init"."AffleurantPointPCRS"."representations" IS
 -- 'Lien vers  une représentation de type géométrique.
 -- Il est nécessaire de fournir au moins un type de representation géométrique';
-COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."AffleurantPointPCRS"."geometrie" IS
 'Géométrie de type point';
 
 
@@ -4500,11 +4500,11 @@ COMMENT ON COLUMN a_pcrs."AffleurantPointPCRS"."geometrie" IS
 -- Classe : RasterPCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."RasterPCRS_geometrie_geomidx" cascade;
-DROP SEQUENCE if exists a_pcrs."RasterPCRS_idPCRS_seq" cascade;
---DROP TABLE if exists a_pcrs."RasterPCRS" cascade;
+--DROP INDEX if exists "init"."RasterPCRS_geometrie_geomidx" cascade;
+DROP SEQUENCE if exists "init"."RasterPCRS_idPCRS_seq" cascade;
+--DROP TABLE if exists "init"."RasterPCRS" cascade;
 
-CREATE SEQUENCE a_pcrs."RasterPCRS_idPCRS_seq"
+CREATE SEQUENCE "init"."RasterPCRS_idPCRS_seq"
   INCREMENT 1
   MINVALUE 1
   MAXVALUE 9223372036854775807
@@ -4512,18 +4512,18 @@ CREATE SEQUENCE a_pcrs."RasterPCRS_idPCRS_seq"
   CACHE 1;
 
 -- Table: RasterPCRS
---DROP TABLE if exists a_pcrs."RasterPCRS" cascade;
-CREATE TABLE a_pcrs."RasterPCRS"
+--DROP TABLE if exists "init"."RasterPCRS" cascade;
+CREATE TABLE "init"."RasterPCRS"
 (
   "dateAcquisition" date NOT NULL,
   "dateRecette" date NOT NULL,
   "descriptionElementsQualite" character varying NOT NULL,
   --"geometrie" geometry(POLYGON,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
-  "idPCRS" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."RasterPCRS_idPCRS_seq"'::regclass),
+  "idPCRS" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."RasterPCRS_idPCRS_seq"'::regclass),
   "nomImage" character varying NOT NULL,
-  "precisionPlanimetriqueCorpsdeRue" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRSType" (code),
-  "precisionPlanimetriqueZonesNaturelles" character varying(3) NOT NULL REFERENCES a_pcrs."CategoriePrecisionPCRSType" (code),
+  "precisionPlanimetriqueCorpsdeRue" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRSType" (code),
+  "precisionPlanimetriqueZonesNaturelles" character varying(3) NOT NULL REFERENCES "init"."CategoriePrecisionPCRSType" (code),
   "resolution" integer NOT NULL,
   "typeImage" character varying NOT NULL,
   "producteur" character varying NOT NULL,
@@ -4538,13 +4538,13 @@ WITH (
 
 
 -- Index: RasterPCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."RasterPCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."RasterPCRS_geometrie_geomidx" cascade;
 CREATE INDEX "RasterPCRS_geometrie_geomidx"
-  ON a_pcrs."RasterPCRS"
+  ON "init"."RasterPCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."RasterPCRS" IS
+COMMENT ON TABLE "init"."RasterPCRS" IS
 'Nom de la classe :
 RasterPCRS
 
@@ -4572,39 +4572,39 @@ clichés aériens. Les paramètres descriptifs du MNE utiles à la compréhensio
 qualité de l’ortho-image se trouvent dans le champ « description des éléments de qualité »
 ';
 
-COMMENT ON COLUMN a_pcrs."RasterPCRS"."dateAcquisition" IS
+COMMENT ON COLUMN "init"."RasterPCRS"."dateAcquisition" IS
 'La date et l''heure à laquelle la photo aérienne a été prise /
 la date à laquelle la mission aérienne a eu lieu (au détail du jour ou celui du mois voire l''année)';
-COMMENT ON COLUMN a_pcrs."RasterPCRS"."dateRecette" IS
+COMMENT ON COLUMN "init"."RasterPCRS"."dateRecette" IS
 'La date à laquelle le maître d''ouvrage a intégré l''ortho-image dans le PCRS';
-COMMENT ON COLUMN a_pcrs."RasterPCRS"."descriptionElementsQualite" IS
+COMMENT ON COLUMN "init"."RasterPCRS"."descriptionElementsQualite" IS
 'Description des paramètres externes donnant les clés de compréhension de la qualité de l''otho-imagerie
 Comprend la liste des éléments qui sont effectivement redressés dans le MNE qui a servi à l''ortho-rectification
 Peut inclure toute exigence de qualité supplémentaire exigée lors du vol
 (masque de nuage, recouvrement, etc ...)';
-COMMENT ON COLUMN a_pcrs."RasterPCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."RasterPCRS"."geometrie" IS
 'Géométrie de type surfacique représentant l''emprise de la dalle';
-COMMENT ON COLUMN a_pcrs."RasterPCRS"."idPCRS" IS
+COMMENT ON COLUMN "init"."RasterPCRS"."idPCRS" IS
 'Identifiant unique dans le jeu de données des objets du PCRS';
-COMMENT ON COLUMN a_pcrs."RasterPCRS"."nomImage" IS
+COMMENT ON COLUMN "init"."RasterPCRS"."nomImage" IS
 'Producteur de la donnée.
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des objets d''un producteur donné';
-COMMENT ON COLUMN a_pcrs."RasterPCRS"."precisionPlanimetriqueCorpsdeRue" IS
+COMMENT ON COLUMN "init"."RasterPCRS"."precisionPlanimetriqueCorpsdeRue" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée aux informations photométriques sur l''orthophotoplan pour ce qui concerne
 les surfaces couvertes pas les corps de rue';
-COMMENT ON COLUMN a_pcrs."RasterPCRS"."precisionPlanimetriqueZonesNaturelles" IS
+COMMENT ON COLUMN "init"."RasterPCRS"."precisionPlanimetriqueZonesNaturelles" IS
 'Intervalle de précision dans lequel s''exprime en cm la précision planimétrique
 associée aux informations photométriques sur l''orthophotoplan pour ce qui concerne
 les surfaces non couvertes pas les corps de rue';
-COMMENT ON COLUMN a_pcrs."RasterPCRS"."resolution" IS
+COMMENT ON COLUMN "init"."RasterPCRS"."resolution" IS
 'La taille au sol d''un pixel de l''ortho-image en cm';
-COMMENT ON COLUMN a_pcrs."RasterPCRS"."typeImage" IS
+COMMENT ON COLUMN "init"."RasterPCRS"."typeImage" IS
 'Format de l''image
 Les mime-types s''ils existent doivent être privilégiés.
 Exemple : image/jp2';
-COMMENT ON COLUMN a_pcrs."RasterPCRS"."producteur" IS
+COMMENT ON COLUMN "init"."RasterPCRS"."producteur" IS
 'Producteur de la donnée
 La valeur sera saisie et déterminée par le producteur de façon stable.
 Cet attribut permettra de filtrer l''ensemble des dalles d''un producteur donné.';
@@ -4614,11 +4614,11 @@ Cet attribut permettra de filtrer l''ensemble des dalles d''un producteur donné
 -- Classe : MasqueOpacitePCRS
 -- ---------------------------------
 
---DROP INDEX if exists a_pcrs."MasqueOpacitePCRS_geometrie_geomidx" cascade;
---DROP SEQUENCE if exists a_pcrs."MasqueOpacitePCRS_idHabillage_seq" cascade;
---DROP TABLE if exists a_pcrs."MasqueOpacitePCRS" cascade;
+--DROP INDEX if exists "init"."MasqueOpacitePCRS_geometrie_geomidx" cascade;
+--DROP SEQUENCE if exists "init"."MasqueOpacitePCRS_idHabillage_seq" cascade;
+--DROP TABLE if exists "init"."MasqueOpacitePCRS" cascade;
 
---CREATE SEQUENCE a_pcrs."MasqueOpacitePCRS_idHabillage_seq"
+--CREATE SEQUENCE "init"."MasqueOpacitePCRS_idHabillage_seq"
 --  INCREMENT 1
 --  MINVALUE 1
 --  MAXVALUE 9223372036854775807
@@ -4626,11 +4626,11 @@ Cet attribut permettra de filtrer l''ensemble des dalles d''un producteur donné
 --  CACHE 1;
 
 -- Table: MasqueOpacitePCRS
---DROP TABLE if exists a_pcrs."MasqueOpacitePCRS" cascade;
-CREATE TABLE a_pcrs."MasqueOpacitePCRS"
+--DROP TABLE if exists "init"."MasqueOpacitePCRS" cascade;
+CREATE TABLE "init"."MasqueOpacitePCRS"
 (
-  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('a_pcrs."HabillagePCRS_idHabillage_seq"'::regclass),
-  "thematique" character varying(2) NOT NULL REFERENCES a_pcrs."CategorieThematiquePCRSType" ("code"),
+  "idHabillage" character varying UNIQUE NOT NULL DEFAULT nextval('"init"."HabillagePCRS_idHabillage_seq"'::regclass),
+  "thematique" character varying(2) NOT NULL REFERENCES "init"."CategorieThematiquePCRSType" ("code"),
   --"geometrie" geometry(POLYGON,3946) NOT NULL,
   "geometrie" geometry NOT NULL,
   "transparence" integer NOT NULL CHECK ("transparence" >= 0 AND "transparence" <= 100),
@@ -4639,20 +4639,20 @@ CREATE TABLE a_pcrs."MasqueOpacitePCRS"
   CONSTRAINT enforce_geotype_geometrie CHECK (geometrytype("geometrie") = 'POLYGON'::text OR "geometrie" IS NULL),
   CONSTRAINT enforce_srid_geometrie CHECK (st_srid("geometrie") = (3946))
 )
-INHERITS (a_pcrs."HabillagePCRS")
+INHERITS ("init"."HabillagePCRS")
 WITH (
   OIDS=FALSE
 );
 
 
 -- Index: MasqueOpacitePCRS_geometrie_geomidx
---DROP INDEX if exists a_pcrs."MasqueOpacitePCRS_geometrie_geomidx" cascade;
+--DROP INDEX if exists "init"."MasqueOpacitePCRS_geometrie_geomidx" cascade;
 CREATE INDEX "MasqueOpacitePCRS_geometrie_geomidx"
-  ON a_pcrs."MasqueOpacitePCRS"
+  ON "init"."MasqueOpacitePCRS"
   USING gist
   (geometrie);
 
-COMMENT ON TABLE a_pcrs."MasqueOpacitePCRS" IS
+COMMENT ON TABLE "init"."MasqueOpacitePCRS" IS
 'Nom de la classe :
 MasqueOpacitePCRS
 
@@ -4675,13 +4675,13 @@ Surface
 Contraintes :
 Classe essentielle pour l''utilisation d''orthophotoplans';
 
-COMMENT ON COLUMN a_pcrs."MasqueOpacitePCRS"."idHabillage" IS
+COMMENT ON COLUMN "init"."MasqueOpacitePCRS"."idHabillage" IS
 'Identifiant unique de l''habillage.';
-COMMENT ON COLUMN a_pcrs."MasqueOpacitePCRS"."thematique" IS
+COMMENT ON COLUMN "init"."MasqueOpacitePCRS"."thematique" IS
 'La thématique à laquelle est associé l''élément d''habillage du PCRS';
-COMMENT ON COLUMN a_pcrs."MasqueOpacitePCRS"."geometrie" IS
+COMMENT ON COLUMN "init"."MasqueOpacitePCRS"."geometrie" IS
 'Géométrie de type surfacique représentant la zone masquée';
-COMMENT ON COLUMN a_pcrs."MasqueOpacitePCRS"."transparence" IS
+COMMENT ON COLUMN "init"."MasqueOpacitePCRS"."transparence" IS
 'Pourcentage de transparence inversement proportionnelle à l''opacité de la zone';
 
 
@@ -4698,46 +4698,46 @@ COMMENT ON COLUMN a_pcrs."MasqueOpacitePCRS"."transparence" IS
 -- ---------------------------------
 -- Classe : RoleActeurPCRS17Relation
 -- ---------------------------------
---DROP TABLE if exists a_pcrs."RoleActeurPCRS17Relation" cascade;
---CREATE TABLE a_pcrs."RoleActeurPCRS17Relation"
+--DROP TABLE if exists "init"."RoleActeurPCRS17Relation" cascade;
+--CREATE TABLE "init"."RoleActeurPCRS17Relation"
 --(
---  "acteur" character varying NOT NULL REFERENCES a_pcrs."ActeurPCRS17Type" ("code"),
---  "role" character varying NOT NULL REFERENCES a_pcrs."RoleNiveau2PCRS17Type" ("code")
+--  "acteur" character varying NOT NULL REFERENCES "init"."ActeurPCRS17Type" ("code"),
+--  "role" character varying NOT NULL REFERENCES "init"."RoleNiveau2PCRS17Type" ("code")
 --)
 --WITH (
 --  OIDS=FALSE
 --);
 
---INSERT INTO a_pcrs."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('01', '02');
---INSERT INTO a_pcrs."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('02', '06');
---INSERT INTO a_pcrs."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('03', '06');
---INSERT INTO a_pcrs."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('04', '06');
---INSERT INTO a_pcrs."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('05', '02');
---INSERT INTO a_pcrs."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('05', '03');
---INSERT INTO a_pcrs."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('05', '06');
---INSERT INTO a_pcrs."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('06', '05');
---INSERT INTO a_pcrs."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('06', '06');
---INSERT INTO a_pcrs."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('07', '04');
+--INSERT INTO "init"."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('01', '02');
+--INSERT INTO "init"."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('02', '06');
+--INSERT INTO "init"."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('03', '06');
+--INSERT INTO "init"."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('04', '06');
+--INSERT INTO "init"."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('05', '02');
+--INSERT INTO "init"."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('05', '03');
+--INSERT INTO "init"."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('05', '06');
+--INSERT INTO "init"."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('06', '05');
+--INSERT INTO "init"."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('06', '06');
+--INSERT INTO "init"."RoleActeurPCRS17Relation" ("acteur", "role") VALUES ('07', '04');
 
 
 -- ---------------------------------
 -- Classe : InitiativeActeurPCRS17Relation
 -- ---------------------------------
---DROP TABLE if exists a_pcrs."InitiativeActeurPCRS17Relation" cascade;
-CREATE TABLE a_pcrs."InitiativeActeurPCRS17Relation"
+--DROP TABLE if exists "init"."InitiativeActeurPCRS17Relation" cascade;
+CREATE TABLE "init"."InitiativeActeurPCRS17Relation"
 (
   --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"EmpriseCommunePCRSRelation_idRelation_seq"'::regclass),
-  "initiative" character varying NOT NULL REFERENCES a_pcrs."InitiativePCRS" ("idInitiative"),
-  "acteur" character varying NOT NULL REFERENCES a_pcrs."ActeurPCRS17Type" ("code"),
-  "roleNiveau1" character varying NOT NULL REFERENCES a_pcrs."RoleNiveau1PCRS17Type" ("code"),
-  "roleNiveau2" character varying NOT NULL REFERENCES a_pcrs."RoleNiveau2PCRS17Type" ("code")
+  "initiative" character varying NOT NULL REFERENCES "init"."InitiativePCRS" ("idInitiative"),
+  "acteur" character varying NOT NULL REFERENCES "init"."ActeurPCRS17Type" ("code"),
+  "roleNiveau1" character varying NOT NULL REFERENCES "init"."RoleNiveau1PCRS17Type" ("code"),
+  "roleNiveau2" character varying NOT NULL REFERENCES "init"."RoleNiveau2PCRS17Type" ("code")
   --CONSTRAINT "EmpriseCommunePCRSRelation_pkey" PRIMARY KEY ("idRelation")
 )
 WITH (
   OIDS=FALSE
 );
 
-COMMENT ON TABLE a_pcrs."InitiativeActeurPCRS17Relation" IS
+COMMENT ON TABLE "init"."InitiativeActeurPCRS17Relation" IS
 'Une initiative du PCRS constitue une zone dans laquelle différents acteurs se sont
 coordonnés pour initier un PCRS.
 Par leurs missions, les différents intervenants liés au PCRS peuvent être amenés
@@ -4749,24 +4749,24 @@ cas d''utilisation bien identifié au PCRS.';
 -- ---------------------------------
 
 -- Table: InitiativeCommunePCRS17Relation
---DROP TABLE if exists a_pcrs."InitiativeCommunePCRS17Relation" cascade;
-CREATE TABLE a_pcrs."InitiativeCommunePCRS17Relation"
+--DROP TABLE if exists "init"."InitiativeCommunePCRS17Relation" cascade;
+CREATE TABLE "init"."InitiativeCommunePCRS17Relation"
 (
   --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"EmpriseCommunePCRSRelation_idRelation_seq"'::regclass),
-  "commune" character varying NOT NULL REFERENCES a_pcrs."Commune" ("codeINSEE"),
-  "initiative" character varying NOT NULL REFERENCES a_pcrs."InitiativePCRS" ("idInitiative")
+  "commune" character varying NOT NULL REFERENCES "init"."Commune" ("codeINSEE"),
+  "initiative" character varying NOT NULL REFERENCES "init"."InitiativePCRS" ("idInitiative")
   --CONSTRAINT "EmpriseCommunePCRSRelation_pkey" PRIMARY KEY ("idRelation")
 )
 WITH (
   OIDS=FALSE
 );
 
-COMMENT ON TABLE a_pcrs."InitiativeCommunePCRS17Relation" IS
+COMMENT ON TABLE "init"."InitiativeCommunePCRS17Relation" IS
 'Une initiative PCRS concerne une ou plusieurs communes';
 
-COMMENT ON COLUMN a_pcrs."InitiativeCommunePCRS17Relation"."commune" IS
+COMMENT ON COLUMN "init"."InitiativeCommunePCRS17Relation"."commune" IS
 '';
-COMMENT ON COLUMN a_pcrs."InitiativeCommunePCRS17Relation"."initiative" IS
+COMMENT ON COLUMN "init"."InitiativeCommunePCRS17Relation"."initiative" IS
 '';
 
 
@@ -4775,24 +4775,24 @@ COMMENT ON COLUMN a_pcrs."InitiativeCommunePCRS17Relation"."initiative" IS
 -- ---------------------------------
 
 -- Table: EmpriseDisponibiliteCommunePCRS17Relation
---DROP TABLE if exists a_pcrs."EmpriseDisponibiliteCommunePCRS17Relation" cascade;
-CREATE TABLE a_pcrs."EmpriseDisponibiliteCommunePCRS17Relation"
+--DROP TABLE if exists "init"."EmpriseDisponibiliteCommunePCRS17Relation" cascade;
+CREATE TABLE "init"."EmpriseDisponibiliteCommunePCRS17Relation"
 (
   --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"EmpriseCommunePCRSRelation_idRelation_seq"'::regclass),
-  "commune" character varying NOT NULL REFERENCES a_pcrs."Commune" ("codeINSEE"),
-  "empriseDisponibilite" character varying NOT NULL REFERENCES a_pcrs."EmpriseDisponibilitePCRS" ("idEmpriseDisponibilite")
+  "commune" character varying NOT NULL REFERENCES "init"."Commune" ("codeINSEE"),
+  "empriseDisponibilite" character varying NOT NULL REFERENCES "init"."EmpriseDisponibilitePCRS" ("idEmpriseDisponibilite")
   --CONSTRAINT "EmpriseCommunePCRSRelation_pkey" PRIMARY KEY ("idRelation")
 )
 WITH (
   OIDS=FALSE
 );
 
-COMMENT ON TABLE a_pcrs."EmpriseDisponibiliteCommunePCRS17Relation" IS
+COMMENT ON TABLE "init"."EmpriseDisponibiliteCommunePCRS17Relation" IS
 'Une emprise de disponibilité concerne une ou plusieurs communes';
 
-COMMENT ON COLUMN a_pcrs."EmpriseDisponibiliteCommunePCRS17Relation"."commune" IS
+COMMENT ON COLUMN "init"."EmpriseDisponibiliteCommunePCRS17Relation"."commune" IS
 '';
-COMMENT ON COLUMN a_pcrs."EmpriseDisponibiliteCommunePCRS17Relation"."empriseDisponibilite" IS
+COMMENT ON COLUMN "init"."EmpriseDisponibiliteCommunePCRS17Relation"."empriseDisponibilite" IS
 '';
 
 -- ---------------------------------
@@ -4800,24 +4800,24 @@ COMMENT ON COLUMN a_pcrs."EmpriseDisponibiliteCommunePCRS17Relation"."empriseDis
 -- ---------------------------------
 
 -- Table: EmpriseEchangeCommunePCRS17Relation
---DROP TABLE if exists a_pcrs."EmpriseEchangeCommunePCRS17Relation" cascade;
-CREATE TABLE a_pcrs."EmpriseEchangeCommunePCRS17Relation"
+--DROP TABLE if exists "init"."EmpriseEchangeCommunePCRS17Relation" cascade;
+CREATE TABLE "init"."EmpriseEchangeCommunePCRS17Relation"
 (
   --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"EmpriseCommunePCRSRelation_idRelation_seq"'::regclass),
-  "commune" character varying NOT NULL REFERENCES a_pcrs."Commune" ("codeINSEE"),
-  "empriseEchange" character varying NOT NULL REFERENCES a_pcrs."EmpriseEchangePCRS" ("idEmpriseEchange")
+  "commune" character varying NOT NULL REFERENCES "init"."Commune" ("codeINSEE"),
+  "empriseEchange" character varying NOT NULL REFERENCES "init"."EmpriseEchangePCRS" ("idEmpriseEchange")
   --CONSTRAINT "EmpriseCommunePCRSRelation_pkey" PRIMARY KEY ("idRelation")
 )
 WITH (
   OIDS=FALSE
 );
 
-COMMENT ON TABLE a_pcrs."EmpriseEchangeCommunePCRS17Relation" IS
+COMMENT ON TABLE "init"."EmpriseEchangeCommunePCRS17Relation" IS
 'Une emprise d''échange est réalisé sur une ou plusieurs communes';
 
-COMMENT ON COLUMN a_pcrs."EmpriseEchangeCommunePCRS17Relation"."commune" IS
+COMMENT ON COLUMN "init"."EmpriseEchangeCommunePCRS17Relation"."commune" IS
 '';
-COMMENT ON COLUMN a_pcrs."EmpriseEchangeCommunePCRS17Relation"."empriseEchange" IS
+COMMENT ON COLUMN "init"."EmpriseEchangeCommunePCRS17Relation"."empriseEchange" IS
 '';
 
 
@@ -4826,24 +4826,24 @@ COMMENT ON COLUMN a_pcrs."EmpriseEchangeCommunePCRS17Relation"."empriseEchange" 
 -- ---------------------------------
 
 -- Table: EmpriseDisponibiliteTronconVoiriePCRS17Relation
---DROP TABLE if exists a_pcrs."EmpriseDisponibiliteTronconVoiriePCRS17Relation" cascade;
-CREATE TABLE a_pcrs."EmpriseDisponibiliteTronconVoiriePCRS17Relation"
+--DROP TABLE if exists "init"."EmpriseDisponibiliteTronconVoiriePCRS17Relation" cascade;
+CREATE TABLE "init"."EmpriseDisponibiliteTronconVoiriePCRS17Relation"
 (
   --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"EmpriseCommunePCRSRelation_idRelation_seq"'::regclass),
-  "tronconVoirie" character varying NOT NULL REFERENCES a_pcrs."TronconVoirie" ("reference"),
-  "empriseDisponibilite" character varying NOT NULL REFERENCES a_pcrs."EmpriseDisponibilitePCRS" ("idEmpriseDisponibilite")
+  "tronconVoirie" character varying NOT NULL REFERENCES "init"."TronconVoirie" ("reference"),
+  "empriseDisponibilite" character varying NOT NULL REFERENCES "init"."EmpriseDisponibilitePCRS" ("idEmpriseDisponibilite")
   --CONSTRAINT "EmpriseCommunePCRSRelation_pkey" PRIMARY KEY ("idRelation")
 )
 WITH (
   OIDS=FALSE
 );
 
-COMMENT ON TABLE a_pcrs."EmpriseDisponibiliteTronconVoiriePCRS17Relation" IS
+COMMENT ON TABLE "init"."EmpriseDisponibiliteTronconVoiriePCRS17Relation" IS
 'Une emprise de disponibilité concerne un ou plusieurs tronçons de voirie.';
 
-COMMENT ON COLUMN a_pcrs."EmpriseDisponibiliteTronconVoiriePCRS17Relation"."tronconVoirie" IS
+COMMENT ON COLUMN "init"."EmpriseDisponibiliteTronconVoiriePCRS17Relation"."tronconVoirie" IS
 '';
-COMMENT ON COLUMN a_pcrs."EmpriseDisponibiliteTronconVoiriePCRS17Relation"."empriseDisponibilite" IS
+COMMENT ON COLUMN "init"."EmpriseDisponibiliteTronconVoiriePCRS17Relation"."empriseDisponibilite" IS
 '';
 
 -- ---------------------------------
@@ -4851,96 +4851,96 @@ COMMENT ON COLUMN a_pcrs."EmpriseDisponibiliteTronconVoiriePCRS17Relation"."empr
 -- ---------------------------------
 
 -- Table: EmpriseEchangeTronconVoiriePCRS17Relation
---DROP TABLE if exists a_pcrs."EmpriseEchangeTronconVoiriePCRS17Relation" cascade;
-CREATE TABLE a_pcrs."EmpriseEchangeTronconVoiriePCRS17Relation"
+--DROP TABLE if exists "init"."EmpriseEchangeTronconVoiriePCRS17Relation" cascade;
+CREATE TABLE "init"."EmpriseEchangeTronconVoiriePCRS17Relation"
 (
   --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"EmpriseCommunePCRSRelation_idRelation_seq"'::regclass),
-  "tronconVoirie" character varying NOT NULL REFERENCES a_pcrs."TronconVoirie" ("reference"),
-  "empriseEchange" character varying NOT NULL REFERENCES a_pcrs."EmpriseEchangePCRS" ("idEmpriseEchange")
+  "tronconVoirie" character varying NOT NULL REFERENCES "init"."TronconVoirie" ("reference"),
+  "empriseEchange" character varying NOT NULL REFERENCES "init"."EmpriseEchangePCRS" ("idEmpriseEchange")
   --CONSTRAINT "EmpriseCommunePCRSRelation_pkey" PRIMARY KEY ("idRelation")
 )
 WITH (
   OIDS=FALSE
 );
 
-COMMENT ON TABLE a_pcrs."EmpriseEchangeTronconVoiriePCRS17Relation" IS
+COMMENT ON TABLE "init"."EmpriseEchangeTronconVoiriePCRS17Relation" IS
 'Une emprise d''échange est localisée sur un ou plusieurs tronçons de voirie.';
 
-COMMENT ON COLUMN a_pcrs."EmpriseEchangeTronconVoiriePCRS17Relation"."tronconVoirie" IS
+COMMENT ON COLUMN "init"."EmpriseEchangeTronconVoiriePCRS17Relation"."tronconVoirie" IS
 '';
-COMMENT ON COLUMN a_pcrs."EmpriseEchangeTronconVoiriePCRS17Relation"."empriseEchange" IS
+COMMENT ON COLUMN "init"."EmpriseEchangeTronconVoiriePCRS17Relation"."empriseEchange" IS
 '';
 
 
 -- ---------------------------------
 -- Classe : HabillageHabillagePCRS17Relation
 -- ---------------------------------
---DROP TABLE if exists a_pcrs."HabillageHabillagePCRS17Relation" cascade;
-CREATE TABLE a_pcrs."HabillageHabillagePCRS17Relation"
+--DROP TABLE if exists "init"."HabillageHabillagePCRS17Relation" cascade;
+CREATE TABLE "init"."HabillageHabillagePCRS17Relation"
 (
   --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"ObjetVecteurPointLevePCRSRelation_idRelation_seq"'::regclass),
-  "habillage1" character varying NOT NULL REFERENCES a_pcrs."HabillagePCRS" ("idHabillage"),
-  "habillage2" character varying NOT NULL REFERENCES a_pcrs."HabillagePCRS" ("idHabillage")
+  "habillage1" character varying NOT NULL REFERENCES "init"."HabillagePCRS" ("idHabillage"),
+  "habillage2" character varying NOT NULL REFERENCES "init"."HabillagePCRS" ("idHabillage")
 )
 WITH (
   OIDS=FALSE
 );
 
-COMMENT ON TABLE a_pcrs."HabillageHabillagePCRS17Relation" IS
+COMMENT ON TABLE "init"."HabillageHabillagePCRS17Relation" IS
 'Une élément d''habillage peut être relié à 0, un ou plusieurs autres éléments d''habillage.';
 
 
 -- ---------------------------------
 -- Classe : ObjetVecteurPointLevePCRS17Relation
 -- ---------------------------------
---DROP TABLE if exists a_pcrs."ObjetVecteurPointLevePCRS17Relation" cascade;
-CREATE TABLE a_pcrs."ObjetVecteurPointLevePCRS17Relation"
+--DROP TABLE if exists "init"."ObjetVecteurPointLevePCRS17Relation" cascade;
+CREATE TABLE "init"."ObjetVecteurPointLevePCRS17Relation"
 (
   --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"ObjetVecteurPointLevePCRSRelation_idRelation_seq"'::regclass),
-  "objet" character varying NOT NULL REFERENCES a_pcrs."ObjetVecteurPCRS" ("idObjet"),
-  "pointLeve" character varying NOT NULL REFERENCES a_pcrs."PointLevePCRS" ("numeroPoint")
+  "objet" character varying NOT NULL REFERENCES "init"."ObjetVecteurPCRS" ("idObjet"),
+  "pointLeve" character varying NOT NULL REFERENCES "init"."PointLevePCRS" ("numeroPoint")
   --CONSTRAINT "ObjetVecteurPointLevePCRSRelation_pkey" PRIMARY KEY ("idRelation")
 )
 WITH (
   OIDS=FALSE
 );
 
-COMMENT ON TABLE a_pcrs."ObjetVecteurPointLevePCRS17Relation" IS
+COMMENT ON TABLE "init"."ObjetVecteurPointLevePCRS17Relation" IS
 'Un objet vecteur peut être lié à 0, un ou plusieurs points levés.';
 
 -- ---------------------------------
 -- Classe : AffleurantGeometriqueAffleurantLignesPCRS17Relation
 -- ---------------------------------
---DROP TABLE if exists a_pcrs."AffleurantGeometriqueAffleurantLignesPCRS17Relation" cascade;
-CREATE TABLE a_pcrs."AffleurantGeometriqueAffleurantLignesPCRS17Relation"
+--DROP TABLE if exists "init"."AffleurantGeometriqueAffleurantLignesPCRS17Relation" cascade;
+CREATE TABLE "init"."AffleurantGeometriqueAffleurantLignesPCRS17Relation"
 (
   --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"ObjetVecteurPointLevePCRSRelation_idRelation_seq"'::regclass),
-  "affleurantGeometrique" character varying NOT NULL REFERENCES a_pcrs."AffleurantGeometriquePCRS" ("idObjet"),
-  "affleurantLignes" character varying NOT NULL REFERENCES a_pcrs."AffleurantLignesPCRS" ("idObjet")
+  "affleurantGeometrique" character varying NOT NULL REFERENCES "init"."AffleurantGeometriquePCRS" ("idObjet"),
+  "affleurantLignes" character varying NOT NULL REFERENCES "init"."AffleurantLignesPCRS" ("idObjet")
 )
 WITH (
   OIDS=FALSE
 );
 
-COMMENT ON TABLE a_pcrs."AffleurantGeometriqueAffleurantLignesPCRS17Relation" IS
+COMMENT ON TABLE "init"."AffleurantGeometriqueAffleurantLignesPCRS17Relation" IS
 'Un AffleurantGéométrique peut être lié à 0, un ou plusieurs AffleurantLignes.
 Un caniveau peut être considéré comme un affleurant dont la géométrie est linéaire';
 
 -- ---------------------------------
 -- Classe : AffleurantGeometriqueAffleurantPointPCRS17Relation
 -- ---------------------------------
---DROP TABLE if exists a_pcrs."AffleurantGeometriqueAffleurantPointPCRS17Relation" cascade;
-CREATE TABLE a_pcrs."AffleurantGeometriqueAffleurantPointPCRS17Relation"
+--DROP TABLE if exists "init"."AffleurantGeometriqueAffleurantPointPCRS17Relation" cascade;
+CREATE TABLE "init"."AffleurantGeometriqueAffleurantPointPCRS17Relation"
 (
   --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"ObjetVecteurPointLevePCRSRelation_idRelation_seq"'::regclass),
-  "affleurantGeometrique" character varying NOT NULL REFERENCES a_pcrs."AffleurantGeometriquePCRS" ("idObjet"),
-  "affleurantPoint" character varying NOT NULL REFERENCES a_pcrs."AffleurantPointPCRS" ("idObjet")
+  "affleurantGeometrique" character varying NOT NULL REFERENCES "init"."AffleurantGeometriquePCRS" ("idObjet"),
+  "affleurantPoint" character varying NOT NULL REFERENCES "init"."AffleurantPointPCRS" ("idObjet")
 )
 WITH (
   OIDS=FALSE
 );
 
-COMMENT ON TABLE a_pcrs."AffleurantGeometriqueAffleurantPointPCRS17Relation" IS
+COMMENT ON TABLE "init"."AffleurantGeometriqueAffleurantPointPCRS17Relation" IS
 'Un AffleurantGéométrique peut être lié à 0, un ou plusieurs AffleurantPoint.
 Un poteau supportant le passage aérien d''un ou plusieurs réseaux ou une signalisation
 tricolore peut être considéré comme un affleurant dont la géométrie est ponctuelle.';
@@ -4948,18 +4948,18 @@ tricolore peut être considéré comme un affleurant dont la géométrie est pon
 -- ---------------------------------
 -- Classe : AffleurantGeometriqueAffleurantEnveloppePCRS17Relation
 -- ---------------------------------
---DROP TABLE if exists a_pcrs."AffleurantGeometriqueAffleurantEnveloppePCRS17Relation" cascade;
-CREATE TABLE a_pcrs."AffleurantGeometriqueAffleurantEnveloppePCRS17Relation"
+--DROP TABLE if exists "init"."AffleurantGeometriqueAffleurantEnveloppePCRS17Relation" cascade;
+CREATE TABLE "init"."AffleurantGeometriqueAffleurantEnveloppePCRS17Relation"
 (
   --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"ObjetVecteurPointLevePCRSRelation_idRelation_seq"'::regclass),
-  "affleurantGeometrique" character varying NOT NULL REFERENCES a_pcrs."AffleurantGeometriquePCRS" ("idObjet"),
-  "affleurantEnveloppe" character varying NOT NULL REFERENCES a_pcrs."AffleurantEnveloppePCRS" ("idObjet")
+  "affleurantGeometrique" character varying NOT NULL REFERENCES "init"."AffleurantGeometriquePCRS" ("idObjet"),
+  "affleurantEnveloppe" character varying NOT NULL REFERENCES "init"."AffleurantEnveloppePCRS" ("idObjet")
 )
 WITH (
   OIDS=FALSE
 );
 
-COMMENT ON TABLE a_pcrs."AffleurantGeometriqueAffleurantEnveloppePCRS17Relation" IS
+COMMENT ON TABLE "init"."AffleurantGeometriqueAffleurantEnveloppePCRS17Relation" IS
 'Un AffleurantGéométrique peut être lié à 0, un ou plusieurs AffleurantEnveloppe.
 La version actuelle du PCRS recommande l''utilisation de la classe AffleurantEnveloppe,
 éventuellement complétée par un habillage HabillageLignes pour le dessin de
@@ -4968,18 +4968,18 @@ l''affleurant à l''intérieur de son enveloppe.';
 -- ---------------------------------
 -- Classe : AffleurantEnveloppeHabillageLignesPCRS17Relation
 -- ---------------------------------
---DROP TABLE if exists a_pcrs."AffleurantEnveloppeHabillageLignesPCRS17Relation" cascade;
-CREATE TABLE a_pcrs."AffleurantEnveloppeHabillageLignesPCRS17Relation"
+--DROP TABLE if exists "init"."AffleurantEnveloppeHabillageLignesPCRS17Relation" cascade;
+CREATE TABLE "init"."AffleurantEnveloppeHabillageLignesPCRS17Relation"
 (
   --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"ObjetVecteurPointLevePCRSRelation_idRelation_seq"'::regclass),
-  "affleurantEnveloppe" character varying NOT NULL REFERENCES a_pcrs."AffleurantEnveloppePCRS" ("idObjet"),
-  "habillageLignes" character varying NOT NULL REFERENCES a_pcrs."HabillageLignesPCRS" ("idHabillage")
+  "affleurantEnveloppe" character varying NOT NULL REFERENCES "init"."AffleurantEnveloppePCRS" ("idObjet"),
+  "habillageLignes" character varying NOT NULL REFERENCES "init"."HabillageLignesPCRS" ("idHabillage")
 )
 WITH (
   OIDS=FALSE
 );
 
-COMMENT ON TABLE a_pcrs."AffleurantEnveloppeHabillageLignesPCRS17Relation" IS
+COMMENT ON TABLE "init"."AffleurantEnveloppeHabillageLignesPCRS17Relation" IS
 'Un AffleurantEnveloppe peut être lié à 0, un ou plusieurs HabillageLignes.
 La version actuelle du PCRS recommande l''utilisation de la classe AffleurantEnveloppe,
 éventuellement complétée par un habillage HabillageLignes pour le dessin de
@@ -4988,18 +4988,18 @@ l''affleurant à l''intérieur de son enveloppe.';
 -- ---------------------------------
 -- Classe : RasterMasqueOpacitePCRS17Relation
 -- ---------------------------------
---DROP TABLE if exists a_pcrs."RasterMasqueOpacitePCRS17Relation";
-CREATE TABLE a_pcrs."RasterMasqueOpacitePCRS17Relation"
+--DROP TABLE if exists "init"."RasterMasqueOpacitePCRS17Relation";
+CREATE TABLE "init"."RasterMasqueOpacitePCRS17Relation"
 (
   --"idRelation" character varying UNIQUE NOT NULL DEFAULT nextval('"ObjetVecteurPointLevePCRSRelation_idRelation_seq"'::regclass),
-  "raster" character varying NOT NULL REFERENCES a_pcrs."RasterPCRS" ("idPCRS"),
-  "masqueOpacite" character varying NOT NULL REFERENCES a_pcrs."MasqueOpacitePCRS" ("idHabillage")
+  "raster" character varying NOT NULL REFERENCES "init"."RasterPCRS" ("idPCRS"),
+  "masqueOpacite" character varying NOT NULL REFERENCES "init"."MasqueOpacitePCRS" ("idHabillage")
 )
 WITH (
   OIDS=FALSE
 );
 
-COMMENT ON TABLE a_pcrs."RasterMasqueOpacitePCRS17Relation" IS
+COMMENT ON TABLE "init"."RasterMasqueOpacitePCRS17Relation" IS
 'Un AffleurantEnveloppe peut être lié à 0, un ou plusieurs HabillageLignes.
 La version actuelle du PCRS recommande l''utilisation de la classe AffleurantEnveloppe,
 éventuellement complétée par un habillage HabillageLignes pour le dessin de

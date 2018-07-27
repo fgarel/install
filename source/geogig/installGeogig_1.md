@@ -13,9 +13,14 @@ Première partie,
 ## Installation ou upgrade de postrgresql / postgis
 
 Quelles versions ?
-postgresql 10 et postgis 2.4 ... en attendant que ...
-postgresql 11 et postgis 2.5 soient sortis
+postgresql 10 et postgis 2.4 (?) ... en attendant que ...
+postgresql 11 et postgis 2.5 soient sortis (?)
 (actuellement ces deux dernieres versions sont en beta)
+Mais, après quelques essais, bien que geogig soit adapté à postgresql 10,
+il semble que le plugin geoserver-geogig ne communique bien qu'avec postgresql 9.6
+
+Nous allons donc installer :
+postgresql 9.6 et postgis 2.3
 
 la base de données est installé sur le serveur pg.cdalr.fr
 ```
@@ -135,9 +140,18 @@ Le script a exécuter est donc :
 ## Installation de geogig
 
 Compilation a partir des sources (branch master)
-car la version proposée en zip ne fonctionne pas correctement avec postgresql 10...
+car :
+1 - la version proposée en zip ne fonctionne pas correctement avec postgresql 10...
 https://github.com/locationtech/geogig/issues/417
+2 - il ne faut pas prendre une version trop recente de geogig, car, si nous souhaitons
+utiliser le plugin qgis-geogiglight-plugin, il faut se limiter à la version 1.1 de geogig
 
+Attention, ce plugin de qgis ne fonctionne pas avec une version trop recente de geogig :
+
+file:///home/fred/.local/share/QGIS/QGIS3/profiles/default/python/plugins/geogig/docs/html/usage.html#geogig-plugin-interface-and-tools
+```
+You need GeoGig 1.1.1 version to use the QGIS plugin; version 1.2 may not work due to API changes. You can download it here.
+```
 
 Le depot github
 https://github.com/locationtech/geogig/
@@ -169,7 +183,6 @@ source ~/Documents/install/source/geogig/bin/majGeogig.sh
 
 ## Installation de geoserver et de son plugin gs-geogig
 
-
 Quelles versions de geoserver, et du plugin gs-geogig ?
 Normalement, la derniere version devrait fonctionner, mais, en decelant une erreur
 lors de l'affichage de la page geogig settings, nous sommes revenus à une version antérieure
@@ -195,7 +208,9 @@ Puis Execution
 ```
 ~/Documents/install/source/geogig/bin/installGeoServer.sh
 ```
+
 ### Rechargement de tomcat8
+
 Attention : après l'installation, il est fort probable qu'il faille
 recharger geoserver (tomcat ?) pour qu'il prenne en compte le plugin gs-geogig
 
@@ -222,6 +237,15 @@ https://github.com/boundlessgeo/qgis-geogiglight-plugin
 https://github.com/SWM-IT/qgis-netze-gas/blob/master/documents/en_gb/Dokumentation%20GeogigLocalClient.rst
 
 ### Installation du plugin de boundlessgeo : Geogig Client
+
+Attention, ce plugin de qgis ne fonctionne pas avec une version trop recente de geogig :
+
+file:///home/fred/.local/share/QGIS/QGIS3/profiles/default/python/plugins/geogig/docs/html/usage.html#geogig-plugin-interface-and-tools
+```
+You need GeoGig 1.1.1 version to use the QGIS plugin; version 1.2 may not work due to API changes. You can download it here.
+```
+
+Il faut donc installer la version 1.1.1 de geogig et non pas la derniere version
 L'installation du plugin se fait grace au script
 ```
 ~/Documents/install/source/geogig/bin/installPluginQgis.sh

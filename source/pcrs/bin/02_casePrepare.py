@@ -77,15 +77,15 @@ def main():
         print('              1379700 5226110 200 A3')
 
     mygenerateur.sqlFileCreate(
-        dbschema='a_pcrs',
+        dbschema='init',
         sqlfile='../../pcrs/bin/sql/03_empriseEchangePCRSInsert.sql')
     mygenerateur.geogigShellCreate(
-        dbhost='localhost',
+        dbhost='pg.cdalr.fr',
         dbport=5432,
-        dbname='geogig',
+        dbname='geogig_central',
         dbschema='pcrs',
         dbuser='fred',
-        dbpass='fred',
+        dbpass='fgpass',
         ggusername='Frédéric Garel',
         gguseremail='frederic.garel@ville-larochelle.fr',
         geogigfile='../../geogig/bin/05_flowParameters.sh')

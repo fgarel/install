@@ -1,6 +1,13 @@
 #!/bin/sh
 
 # vu ici : http://geogig.org/
+# nous ne prenons pas la derniere version (1.2.0)
+# car la version zippe n'integre pas encore la version corrigé qui fonctionne avec postgresql 10
+# nous ne prenons pas la version github
+# car, bien qu'elle integre cette correction postgresql 10, elle ne fonctionne pas avec le plugin qgis
+# file:///home/fred/.local/share/QGIS/QGIS3/profiles/default/python/plugins/geogig/docs/html/usage.html#geogig-plugin-interface-and-tools
+
+export GEOGIG_VERSION='1.1.0'
 export GEOGIG_VERSION='1.2.0'
 
 echo "#"
@@ -92,8 +99,17 @@ echo "#"
 echo "cd src/parent"
       cd src/parent
 echo "#"
-echo "mvn clean install"
-      mvn clean install
+echo "git checkout 1.1.x"
+      git checkout 1.1.x
+echo "#"
+echo "git checkout 1.2.x"
+      git checkout 1.2.x
+echo "#"
+#echo "git checkout 1.3.x"
+#      git checkout 1.3.x
+echo "#"
+#echo "mvn clean install"
+#      mvn clean install
 echo "#"
 echo "mvn -B -U install -DskipTests=true"
       mvn -B -U install -DskipTests=true
