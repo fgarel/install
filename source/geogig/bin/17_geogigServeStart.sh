@@ -49,6 +49,10 @@ echo "# Depot Local"
 echo "geogig serve $REPO_LOCAL_ONE -p $REPO_PORT_LOCAL_ONE &"
       geogig serve $REPO_LOCAL_ONE -p $REPO_PORT_LOCAL_ONE &
 echo "#"
+echo "# Depot Individuel"
+echo "geogig serve $REPO_INDIVIDUEL_ONE -p $REPO_PORT_INDIVIDUEL_ONE &"
+      geogig serve $REPO_INDIVIDUEL_ONE -p $REPO_PORT_INDIVIDUEL_ONE &
+echo "#"
 echo "# ------------------------"
 echo "# Servir plusieurs repo postgresql"
 echo "# ------------------------"
@@ -60,6 +64,10 @@ echo "#"
 echo "# Depot Local"
 echo "geogig serve -m $REPO_LOCAL_MULTI -p $REPO_PORT_LOCAL_MULTI &"
       geogig serve -m $REPO_LOCAL_MULTI -p $REPO_PORT_LOCAL_MULTI &
+echo "#"
+echo "# Depot Individuel"
+echo "geogig serve -m $REPO_INDIVIDUEL_MULTI -p $REPO_PORT_INDIVIDUEL_MULTI &"
+      geogig serve -m $REPO_INDIVIDUEL_MULTI -p $REPO_PORT_INDIVIDUEL_MULTI &
 echo "#"
 sleep 5
 # echo "cd $OLDPWDFG"

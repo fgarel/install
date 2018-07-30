@@ -12,7 +12,7 @@
         DBPORT_CENTRAL=5432
         DBNAME_CENTRAL=geogig_central
         DBSCHE_CENTRAL=pcrs
-        DBREPO_CENTRAL=CDA-46-00197-01045-21-A
+        DBREPO_CENTRAL=CDA-46-00197-01045-15-C-14
         DBUSER_CENTRAL=fred
         DBPASS_CENTRAL=fgpass
 
@@ -20,15 +20,15 @@
         DBPORT_LOCAL=5432
         DBNAME_LOCAL=geogig_local
         DBSCHE_LOCAL=pcrs
-        DBREPO_LOCAL=CDA-46-00197-01045-21-A
+        DBREPO_LOCAL=CDA-46-00197-01045-15-C-14
         DBUSER_LOCAL=fred
         DBPASS_LOCAL=fgpass
 
         DBHOST_INDIVIDUEL=pg.cdalr.fr
         DBPORT_INDIVIDUEL=5432
         DBNAME_INDIVIDUEL=geogig_individuel
-        DBSCHE_INDIVIDUEL=pcrsQ
-        DBREPO_INDIVIDUEL=caseM
+        DBSCHE_INDIVIDUEL=pcrs
+        DBREPO_INDIVIDUEL=case
         DBUSER_INDIVIDUEL=fred
         DBPASS_INDIVIDUEL=fgpass
 

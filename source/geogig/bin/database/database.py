@@ -29,7 +29,8 @@ class Database(object):
         self.dict_dbuser_searchpath = paramconnexion.dict_dbuser_searchpath
         self.dict_dbname_dict_schema_dict_dbuser_listdroits = paramconnexion.dict_dbname_dict_schema_dict_dbuser_listdroits
         self.dict_dbname_dict_schema_listtables = paramconnexion.dict_dbname_dict_schema_listtables
-        self.dict_dbname_dict_schema_listsqlfiles = paramconnexion.dict_dbname_dict_schema_listsqlfiles
+        self.dict_dbname_dict_schema_listsqlfilescreate = paramconnexion.dict_dbname_dict_schema_listsqlfilescreate
+        self.dict_dbname_dict_schema_listsqlfilesinsert = paramconnexion.dict_dbname_dict_schema_listsqlfilesinsert
 
         self.hostname = paramconnexion.hostname
         self.port = paramconnexion.port
@@ -265,18 +266,29 @@ class Database(object):
                 for table in listtables:
                     self.create_table(dbname, schema, table)
 
-    def do_last(self):
+    def do_sqlfilescreate(self):
         """
         Methode pour simplement executer un fichier sql dans la base
         """
 
         # Execution fichier de commandes SQL
-        print('10 Execution fichier de commandes SQL')
-        for dbname, dict_schema_listsqlfiles in self.dict_dbname_dict_schema_listsqlfiles.items():
-            for schema, listsqlfiles in dict_schema_listsqlfiles.items():
-                for sqlfile in listsqlfiles:
-                    self.execute_sqlfile(dbname, schema, sqlfile)
+        print('10 Execution fichier de commandes SQL : Create')
+        for dbname, dict_schema_listsqlfilescreate in self.dict_dbname_dict_schema_listsqlfilescreate.items():
+            for schema, listsqlfilescreate in dict_schema_listsqlfilescreate.items():
+                for sqlfilecreate in listsqlfilescreate:
+                    self.execute_sqlfile(dbname, schema, sqlfilecreate)
 
+    def do_sqlfilesinsert(self):
+        """
+        Methode pour simplement executer un fichier sql dans la base
+        """
+
+        # Execution fichier de commandes SQL
+        print('11 Execution fichier de commandes SQL : Insert')
+        for dbname, dict_schema_listsqlfilesinsert in self.dict_dbname_dict_schema_listsqlfilesinsert.items():
+            for schema, listsqlfilesinsert in dict_schema_listsqlfilesinsert.items():
+                for sqlfileinsert in listsqlfilesinsert:
+                    self.execute_sqlfile(dbname, schema, sqlfileinsert)
 
 
     def do_all(self):
@@ -286,7 +298,8 @@ class Database(object):
         """
 
         self.do_first()
-        self.do_last()
+        self.do_sqlfilescreate()
+        self.do_sqlfilesinsert()
 
 def main():
     u""" Fonction appelée par défaut. """

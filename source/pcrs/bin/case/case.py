@@ -448,8 +448,8 @@ class GenerateurCaseFolio(object):
         DBHOST_INDIVIDUEL={dbhost}
         DBPORT_INDIVIDUEL={dbport}
         DBNAME_INDIVIDUEL=geogig_individuel
-        DBSCHE_INDIVIDUEL=pcrsQ
-        DBREPO_INDIVIDUEL=caseM
+        DBSCHE_INDIVIDUEL=pcrs
+        DBREPO_INDIVIDUEL=case
         DBUSER_INDIVIDUEL={dbuser}
         DBPASS_INDIVIDUEL={dbpass}
 
@@ -480,6 +480,8 @@ class GenerateurCaseFolio(object):
 
         LISTBRANCHES='release_preparationAvantDiffusion/1 feature_misaAjourImportanteProjetExterne/1 hotfix_modifRapide/1'
 
+        RELEASETAG='1.0'
+        HOTFIXTAG='1.1'
 
         """.format(dbhost=dbhost,
                    dbport=dbport,

@@ -37,7 +37,8 @@ from database import parametresConnexion
 def main():
     u""" Fonction principale. """
     print('Lancement de la creation d une case')
-    print('# ~/Documents/install/source/pcrs/bin/case/case.py')
+    print('# ~/Documents/install/source/pcrs/bin/02_casePrepare.py')
+    print('# ~/Documents/install/source/pcrs/bin/02_casePrepare.py CDA-46-00197-01045-16-D-16')
     print('#')
     print('# Les fichiers resultats de ce script sont :')
     print('vi ~/Documents/install/source/pcrs/bin/sql/03_empriseEchangePCRSInsert.sql')

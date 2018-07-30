@@ -36,15 +36,11 @@ echo "# Installation de geogig Version ZIP "
 echo "# ----------------------------------"
 echo "# ne semble pas fonctionner correctement avec postgresql 10"
 echo "#"
-echo "# Téléchargement de la version 1.2"
+echo "# Téléchargement de la version 1.2.0"
 echo "#"
 echo "# Attention : il faut peut-etre contourner le proxy..."
 echo "# environnementTravail/docksshuttle1.sh"
 echo "#"
-#echo "wget http://download.locationtech.org/geogig/geogig-1.1.0.zip \ "
-#echo "     -O geogig-1.1.0.zip"
-#      wget http://download.locationtech.org/geogig/geogig-1.1.0.zip \
-#          -O geogig-1.1.0.zip
 echo "wget http://download.locationtech.org/geogig/geogig-$GEOGIG_VERSION.zip \ "
 echo "     -O geogig-$GEOGIG_VERSION.zip"
       wget http://download.locationtech.org/geogig/geogig-$GEOGIG_VERSION.zip \
@@ -57,15 +53,11 @@ echo "rm -rf geogig"
 echo "#"
 echo "# Decompression du fichier"
 echo "#"
-#echo "unzip geogig-1.1.0.zip -d ."
-#      unzip geogig-1.1.0.zip -d .
 echo "unzip geogig-$GEOGIG_VERSION.zip -d ."
       unzip geogig-$GEOGIG_VERSION.zip -d .
 echo "#"
 echo "# Nettoyage"
 echo "#"
-#echo "rm -f geogig-1.1.0.zip"
-#      rm -f geogig-1.1.0.zip
 echo "rm -f geogig-$GEOGIG_VERSION.zip"
       rm -f geogig-$GEOGIG_VERSION.zip
 
@@ -122,13 +114,13 @@ echo "pwd"
       pwd
 echo "# Ajout de geogig/bin dans le PATH"
 echo "#"
-echo "#-----------------------------------------------------------------------"
-echo "echo \$PATH"
-echo "export PATH=\$PATH:/home/fred/Documents/install/source/geogig/geogig/bin"
-echo "echo \$PATH"
-      export PATH=$PATH:/home/fred/Documents/install/source/geogig/geogig/bin
-      echo $PATH
-echo "#-----------------------------------------------------------------------"
+#echo "#-----------------------------------------------------------------------"
+#echo "echo \$PATH"
+#echo "export PATH=\$PATH:/home/fred/Documents/install/source/geogig/geogig/bin"
+#echo "echo \$PATH"
+#      export PATH=$PATH:/home/fred/Documents/install/source/geogig/geogig/bin
+#      echo $PATH
+#echo "#-----------------------------------------------------------------------"
 echo "#-----------------------------------------------------------------------"
 echo "echo \$PATH"
 echo "export PATH=\$PATH:/home/fred/Documents/install/source/geogig/geogig/src/cli-app/target/geogig/bin"

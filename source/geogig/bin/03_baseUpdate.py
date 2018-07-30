@@ -37,7 +37,8 @@ def main():
     u""" Fonction principale. """
     mesparametres = parametresConnexion.ParametresConnexion()
     maconnexion = database.Database(mesparametres)
-    maconnexion.do_last()
+    maconnexion.do_sqlfilescreate()
+    maconnexion.do_sqlfilesinsert()
 
 
 if __name__ == '__main__':
