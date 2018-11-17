@@ -1,18 +1,25 @@
 #!/bin/sh
 
 
-        DBHOST_WORKSPACE=pg.cdalr.fr
-        DBPORT_WORKSPACE=5432
-        DBNAME_WORKSPACE=dbworkspace
-        DBSCHE_WORKSPACE=init
-        DBUSER_WORKSPACE=fred
-        DBPASS_WORKSPACE=fgpass
+        DBHOST_WORKSPACE_INI=pg.cdalr.fr
+        DBPORT_WORKSPACE_INI=5432
+        DBNAME_WORKSPACE_INI=dbworkspace
+        DBSCHE_WORKSPACE_INI=init
+        DBUSER_WORKSPACE_INI=fred
+        DBPASS_WORKSPACE_INI=fgpass
+
+        DBHOST_WORKSPACE_FIN=pg.cdalr.fr
+        DBPORT_WORKSPACE_FIN=5432
+        DBNAME_WORKSPACE_FIN=dbworkspace
+        DBSCHE_WORKSPACE_FIN=pcrs
+        DBUSER_WORKSPACE_FIN=fred
+        DBPASS_WORKSPACE_FIN=fgpass
 
         DBHOST_CENTRAL=pg.cdalr.fr
         DBPORT_CENTRAL=5432
         DBNAME_CENTRAL=geogig_central
         DBSCHE_CENTRAL=pcrs
-        DBREPO_CENTRAL=CDA-46-00197-01045-15-C-14
+        DBREPO_CENTRAL=CDA-46-00197-01045-21-C-09
         DBUSER_CENTRAL=fred
         DBPASS_CENTRAL=fgpass
 
@@ -20,7 +27,7 @@
         DBPORT_LOCAL=5432
         DBNAME_LOCAL=geogig_local
         DBSCHE_LOCAL=pcrs
-        DBREPO_LOCAL=CDA-46-00197-01045-15-C-14
+        DBREPO_LOCAL=CDA-46-00197-01045-21-C-09
         DBUSER_LOCAL=fred
         DBPASS_LOCAL=fgpass
 
@@ -59,5 +66,103 @@
 
         LISTBRANCHES='release_preparationAvantDiffusion/1 feature_misaAjourImportanteProjetExterne/1 hotfix_modifRapide/1'
 
+        LISTTABLES_WITH_OVERWRITE='
+        EmpriseDisponibilitePCRS
+        InitiativePCRS
+        EmpriseEchangePCRS
+        TronconVoirie
+        Commune
+        HabillagePCRS
+        HabillageSymbolePCRS
+        HabillageTextePCRS
+        HabillageLignesPCRS
+        HabillagePointsPCRS
+        HabillageEnveloppePCRS
+        NomVoiriePCRS
+        NumeroVoiriePCRS
+        PointLevePCRS
+        PointCanevasPCRS
+        ObjetVecteurPCRS
+        ObjetGeneriquePCRS
+        RasterPCRS
+        MasqueOpacitePCRS
+        LimiteVoiriePCRS
+        MarcheEscalierPCRS
+        FacadePCRS
+        ProeminenceBatiPCRS
+        SeuilPCRS
+        MurPCRS
+        PilierPCRS
+        PilierRegulierPCRS
+        PilierParticulierPCRS
+        QuaiRailPCRS
+        RailPCRS
+        ArbrePCRS
+        PilePontPCRS
+        QuaiFluvioMaritimePCRS
+        AffleurantPCRS
+        AffleurantGeometriquePCRS
+        AffleurantSymbolePCRS
+        AffleurantEnveloppePCRS
+        AffleurantPointPCRS
+        AffleurantLignesPCRS
+        RoleActeurPCRS17Relation
+        InitiativeActeurPCRS17Relation
+        InitiativeCommunePCRS17Relation
+        EmpriseDisponibiliteCommunePCRS17Relation
+        EmpriseEchangeCommunePCRS17Relation
+        EmpriseDisponibiliteTronconVoiriePCRS17Relation
+        EmpriseEchangeTronconVoiriePCRS17Relation
+        HabillageHabillagePCRS17Relation
+        ObjetVecteurPointLevePCRS17Relation
+        AffleurantGeometriqueAffleurantLignesPCRS17Relation
+        AffleurantGeometriqueAffleurantPointPCRS17Relation
+        AffleurantGeometriqueAffleurantEnveloppePCRS17Relation
+        AffleurantEnveloppeHabillageLignesPCRS17Relation
+        RasterMasqueOpacitePCRS17Relation
+        '
+
+        LISTTABLES_WITHOUT_CHANGE='
+        CategorieThematiquePCRSType
+        SectionPilierPCRSType
+        CategoriePlacementPCRSType
+        ProprieteEspaceType
+        TexteJustificationPCRSType
+        QualiteCategorisationPCRSType
+        NatureAffleurantPCRSType
+        NatureReseauPCRSType
+        CategoriePrecisionPCRSType
+        CategorieMurPCRSType
+        NatureReseauPCRS17Type
+        CodeCouleurNormePCRS17Type
+        CategoriePrecisionPCRS17Type
+        CalendrierPCRS17Type
+        NatureEmprisePCRS17Type
+        CotationPCRS17Type";
+        RoleNiveau1PCRS17Type
+        RoleNiveau2PCRS17Type
+        ActeurPCRS17Type
+        CategorieObjetPCRS17Type
+        '
+
+        LISTTABLES_WITHOUT_OVERWRITE='
+        RoleActeurPCRS17Relation
+        InitiativeActeurPCRS17Relation
+        InitiativeCommunePCRS17Relation
+        EmpriseDisponibiliteCommunePCRS17Relation
+        EmpriseEchangeCommunePCRS17Relation
+        EmpriseDisponibiliteTronconVoiriePCRS17Relation
+        EmpriseEchangeTronconVoiriePCRS17Relation
+        HabillageHabillagePCRS17Relation
+        ObjetVecteurPointLevePCRS17Relation
+        AffleurantGeometriqueAffleurantLignesPCRS17Relation
+        AffleurantGeometriqueAffleurantPointPCRS17Relation
+        AffleurantGeometriqueAffleurantEnveloppePCRS17Relation
+        AffleurantEnveloppeHabillageLignesPCRS17Relation
+        RasterMasqueOpacitePCRS17Relation
+        '
+
+        RELEASETAG='1.0'
+        HOTFIXTAG='1.1'
 
         

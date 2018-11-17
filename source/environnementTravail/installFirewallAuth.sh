@@ -38,8 +38,8 @@ echo 'cp firewall-auth-sh/firewall-auth.sh firewall-auth.sh'
       cp firewall-auth-sh/firewall-auth.sh firewall-auth.sh
 echo '#'
 echo '#'
-echo "rm -rf firewall-auth-sh"
-      rm -rf firewall-auth-sh
+#echo "rm -rf firewall-auth-sh"
+#      rm -rf firewall-auth-sh
 echo "#"
 echo '#'
 echo 'sudo cp firewall-auth-init /etc/init.d/firewall-auth'

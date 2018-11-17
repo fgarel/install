@@ -1,16 +1,16 @@
 #!/bin/sh
 
 # ubuntu
-export VERSION_POSTGRESQL_OLD="9.5"
-export VERSION_POSTGRESQL_NEW="9.6"
-export VERSION_POSTGIS_OLD="2.2"
-export VERSION_POSTGIS_NEW="2.3"
+export VERSION_POSTGRESQL_OLD="10"
+export VERSION_POSTGRESQL_NEW="11"
+export VERSION_POSTGIS_OLD="2.4"
+export VERSION_POSTGIS_NEW="2.5"
 
 # debian
-export VERSION_POSTGRESQL_OLD="9.5"
-export VERSION_POSTGRESQL_NEW="9.6"
-export VERSION_POSTGIS_OLD="2.2"
-export VERSION_POSTGIS_NEW="2.3"
+#export VERSION_POSTGRESQL_OLD="9.5"
+#export VERSION_POSTGRESQL_NEW="9.6"
+#export VERSION_POSTGIS_OLD="2.2"
+#export VERSION_POSTGIS_NEW="2.3"
 
 # 7ème Partie : Installation de postgresql et postgis
 #####################################################
@@ -186,8 +186,8 @@ echo "sudo dpkg -P postgresql-$VERSION_POSTGRESQL_OLD"
 echo "# ---"
 echo "sudo aptitude -y purge \\~c"
       sudo aptitude -y purge \~c
-echo "sudo apt-get -y purge autoremove"
-      sudo apt-get -y purge autoremove
+echo "sudo apt-get -y purge"
+      sudo apt-get -y purge
 echo "sudo apt -y autoremove"
       sudo apt -y autoremove
 #echo "#"
@@ -197,7 +197,7 @@ echo "pg_lsclusters"
 echo "#"
 echo "# remove du cluster $VERSION_POSTGRESQL_OLD : Attention DANGER"
 echo "sudo pg_dropcluster $VERSION_POSTGRESQL_OLD main --stop"
-      sudo pg_dropcluster $VERSION_POSTGRESQL_OLD main --stop
+      #sudo pg_dropcluster $VERSION_POSTGRESQL_OLD main --stop
 echo "#"
 echo "# On liste les cluster"
 echo "pg_lsclusters"

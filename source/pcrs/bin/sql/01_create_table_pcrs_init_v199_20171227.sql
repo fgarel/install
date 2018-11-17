@@ -242,9 +242,9 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO "init"."TexteJustificationPCRSType" (code, valeur, definition) VALUES ('G', 'Gauche', 'Le texte est justifé à gauche');
+INSERT INTO "init"."TexteJustificationPCRSType" (code, valeur, definition) VALUES ('G', 'Gauche', 'Le texte est justifié à gauche');
 INSERT INTO "init"."TexteJustificationPCRSType" (code, valeur, definition) VALUES ('C', 'Centré', 'Le texte est centré');
-INSERT INTO "init"."TexteJustificationPCRSType" (code, valeur, definition) VALUES ('D', 'Droite', 'Le texte est justifé à droite');
+INSERT INTO "init"."TexteJustificationPCRSType" (code, valeur, definition) VALUES ('D', 'Droite', 'Le texte est justifié à droite');
 
 COMMENT ON TABLE "init"."TexteJustificationPCRSType" IS
 'Code permettant de justifier un texte d''habillage.';

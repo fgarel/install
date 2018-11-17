@@ -113,7 +113,13 @@ class ParametresConnexion(object):
                           'user_04': []}}
 
 
-        self.dict_dbname_dict_schema_listsqlfiles = \
+        self.dict_dbname_dict_schema_listsqlfilescreate = \
+            {'pcrs':     {'user_01': [],
+                          'user_02': [],
+                          'user_03': [],
+                          'user_04': []}}
+
+        self.dict_dbname_dict_schema_listsqlfilesinsert = \
             {'pcrs':     {'user_01': [],
                           'user_02': [],
                           'user_03': [],

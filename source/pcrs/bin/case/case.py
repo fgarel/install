@@ -422,12 +422,19 @@ class GenerateurCaseFolio(object):
         self.geogigfileraw.write("#!/bin/sh\n")
         self.geogigfileraw.write("\n")
         self.geogigfileraw.write("""
-        DBHOST_WORKSPACE={dbhost}
-        DBPORT_WORKSPACE={dbport}
-        DBNAME_WORKSPACE=dbworkspace
-        DBSCHE_WORKSPACE=init
-        DBUSER_WORKSPACE={dbuser}
-        DBPASS_WORKSPACE={dbpass}
+        DBHOST_WORKSPACE_INI={dbhost}
+        DBPORT_WORKSPACE_INI={dbport}
+        DBNAME_WORKSPACE_INI=dbworkspace
+        DBSCHE_WORKSPACE_INI=init
+        DBUSER_WORKSPACE_INI={dbuser}
+        DBPASS_WORKSPACE_INI={dbpass}
+
+        DBHOST_WORKSPACE_FIN={dbhost}
+        DBPORT_WORKSPACE_FIN={dbport}
+        DBNAME_WORKSPACE_FIN=dbworkspace
+        DBSCHE_WORKSPACE_FIN=pcrs
+        DBUSER_WORKSPACE_FIN={dbuser}
+        DBPASS_WORKSPACE_FIN={dbpass}
 
         DBHOST_CENTRAL={dbhost}
         DBPORT_CENTRAL={dbport}
@@ -479,6 +486,102 @@ class GenerateurCaseFolio(object):
         BRANCHE_HOTFIX_1='hotfix_modifRapide/1'
 
         LISTBRANCHES='release_preparationAvantDiffusion/1 feature_misaAjourImportanteProjetExterne/1 hotfix_modifRapide/1'
+
+        LISTTABLES_WITH_OVERWRITE='
+        EmpriseDisponibilitePCRS
+        InitiativePCRS
+        EmpriseEchangePCRS
+        TronconVoirie
+        Commune
+        HabillagePCRS
+        HabillageSymbolePCRS
+        HabillageTextePCRS
+        HabillageLignesPCRS
+        HabillagePointsPCRS
+        HabillageEnveloppePCRS
+        NomVoiriePCRS
+        NumeroVoiriePCRS
+        PointLevePCRS
+        PointCanevasPCRS
+        ObjetVecteurPCRS
+        ObjetGeneriquePCRS
+        RasterPCRS
+        MasqueOpacitePCRS
+        LimiteVoiriePCRS
+        MarcheEscalierPCRS
+        FacadePCRS
+        ProeminenceBatiPCRS
+        SeuilPCRS
+        MurPCRS
+        PilierPCRS
+        PilierRegulierPCRS
+        PilierParticulierPCRS
+        QuaiRailPCRS
+        RailPCRS
+        ArbrePCRS
+        PilePontPCRS
+        QuaiFluvioMaritimePCRS
+        AffleurantPCRS
+        AffleurantGeometriquePCRS
+        AffleurantSymbolePCRS
+        AffleurantEnveloppePCRS
+        AffleurantPointPCRS
+        AffleurantLignesPCRS
+        RoleActeurPCRS17Relation
+        InitiativeActeurPCRS17Relation
+        InitiativeCommunePCRS17Relation
+        EmpriseDisponibiliteCommunePCRS17Relation
+        EmpriseEchangeCommunePCRS17Relation
+        EmpriseDisponibiliteTronconVoiriePCRS17Relation
+        EmpriseEchangeTronconVoiriePCRS17Relation
+        HabillageHabillagePCRS17Relation
+        ObjetVecteurPointLevePCRS17Relation
+        AffleurantGeometriqueAffleurantLignesPCRS17Relation
+        AffleurantGeometriqueAffleurantPointPCRS17Relation
+        AffleurantGeometriqueAffleurantEnveloppePCRS17Relation
+        AffleurantEnveloppeHabillageLignesPCRS17Relation
+        RasterMasqueOpacitePCRS17Relation
+        '
+
+        LISTTABLES_WITHOUT_CHANGE='
+        CategorieThematiquePCRSType
+        SectionPilierPCRSType
+        CategoriePlacementPCRSType
+        ProprieteEspaceType
+        TexteJustificationPCRSType
+        QualiteCategorisationPCRSType
+        NatureAffleurantPCRSType
+        NatureReseauPCRSType
+        CategoriePrecisionPCRSType
+        CategorieMurPCRSType
+        NatureReseauPCRS17Type
+        CodeCouleurNormePCRS17Type
+        CategoriePrecisionPCRS17Type
+        CalendrierPCRS17Type
+        NatureEmprisePCRS17Type
+        CotationPCRS17Type";
+        RoleNiveau1PCRS17Type
+        RoleNiveau2PCRS17Type
+        ActeurPCRS17Type
+        CategorieObjetPCRS17Type
+        '
+
+        LISTTABLES_WITHOUT_OVERWRITE='
+        RoleActeurPCRS17Relation
+        InitiativeActeurPCRS17Relation
+        InitiativeCommunePCRS17Relation
+        EmpriseDisponibiliteCommunePCRS17Relation
+        EmpriseEchangeCommunePCRS17Relation
+        EmpriseDisponibiliteTronconVoiriePCRS17Relation
+        EmpriseEchangeTronconVoiriePCRS17Relation
+        HabillageHabillagePCRS17Relation
+        ObjetVecteurPointLevePCRS17Relation
+        AffleurantGeometriqueAffleurantLignesPCRS17Relation
+        AffleurantGeometriqueAffleurantPointPCRS17Relation
+        AffleurantGeometriqueAffleurantEnveloppePCRS17Relation
+        AffleurantEnveloppeHabillageLignesPCRS17Relation
+        RasterMasqueOpacitePCRS17Relation
+        '
 
         RELEASETAG='1.0'
         HOTFIXTAG='1.1'

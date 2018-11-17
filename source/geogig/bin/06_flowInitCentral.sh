@@ -60,11 +60,20 @@
         echo "#"
         echo "# Import des données de la base origine dans le depot"
         echo "#"
-              ./03_baseUpdate.py
+        echo "#   - Dans un premier temps, on lance un script pour remplir une base origine"
+        echo "#     dbworkspace/init"
+        echo "#"
+        echo "#     ./03_baseSqlFilesCreate.py"
+        echo "#     ./03_baseSqlFilesInsert.py"
+              ./03_baseSqlFilesCreate.py
+              ./03_baseSqlFilesInsert.py
+        echo "#"
+        echo "#   - Dans un second temps, on transvase de la base origine vers le depot"
+        echo "#"
         echo "geogig --repo \"$REPO_CENTRAL_ONE\" \ "
-        echo "       pg import --host $DBHOST_WORKSPACE --database $DBNAME_WORKSPACE --user $DBUSER_WORKSPACE --password $DBPASS_WORKSPACE --schema \"$DBSCHE_WORKSPACE\" --all"
+        echo "       pg import --host $DBHOST_WORKSPACE_INI --database $DBNAME_WORKSPACE_INI --user $DBUSER_WORKSPACE_INI --password $DBPASS_WORKSPACE_INI --schema \"$DBSCHE_WORKSPACE_INI\" --all"
               geogig --repo $REPO_CENTRAL_ONE \
-                     pg import --host $DBHOST_WORKSPACE --database $DBNAME_WORKSPACE --user $DBUSER_WORKSPACE --password $DBPASS_WORKSPACE --schema "$DBSCHE_WORKSPACE" --all
+                     pg import --host $DBHOST_WORKSPACE_INI --database $DBNAME_WORKSPACE_INI --user $DBUSER_WORKSPACE_INI --password $DBPASS_WORKSPACE_INI --schema "$DBSCHE_WORKSPACE_INI" --all
 
         echo "#"
         echo "# Enregistrement des données importées pour validation"

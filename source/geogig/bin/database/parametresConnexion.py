@@ -116,7 +116,7 @@ class ParametresConnexion(object):
                                                               'init',
                                                               'other',
                                                               'cases']}
-        self.dict_dbuser_searchpath = {'fred':                 '"$user", pcrs, espu, public',
+        self.dict_dbuser_searchpath = {'fred':                 '"$user", public',
                                        'francois':             '"$user", pcrs, espu, public',
                                        'michel':               '"$user", pcrs, espu, public',
                                        'pascal':               '"$user", pcrs, espu, public',
@@ -232,8 +232,8 @@ class ParametresConnexion(object):
                                    'rtge': [],
                                    'rese': [],
                                    'cada': []},
-             'dbworkspace':       {'pcrs': [],
-                                   'init': ['../../pcrs/bin/sql/01_create_table_pcrs_v199_20171227.sql'],
+             'dbworkspace':       {'pcrs': ['../../pcrs/bin/sql/01_create_table_pcrs_pcrs_v199_20171227.sql'],
+                                   'init': ['../../pcrs/bin/sql/01_create_table_pcrs_init_v199_20171227.sql'],
                                    'other': [],
                                    'cases': []}}
         self.dict_dbname_dict_schema_listsqlfilesinsert = \

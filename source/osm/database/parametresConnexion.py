@@ -18,7 +18,7 @@ class ParametresConnexion(object):
         u""" Fonction lancée au moment de l'instanciation. """
         # les parametres pour la creation
         # Attention : la creation se fait sur la machine localhost
-        self.dict_dbuser_dbpass = {'fred': 'fred',
+        self.dict_dbuser_dbpass = {'fred': 'fgpass',
                                    'osmuser': 'osmpass',
                                    'mapnikuser': 'mapnikpass',
                                    'www-data': 'www-data'}
@@ -59,9 +59,9 @@ class ParametresConnexion(object):
                                                                 'dblink']}
         self.dict_dbname_listschemas = {'osm': ['apidb',
                                                 'osm2pgsql']}
-        self.dict_dbuser_searchpath = {'osmuser':    'apidb, osm2pgsql, public',
-                                       'mapnikuser': 'osm2pgsql, public',
-                                       'www-data':   'osm2pgsql, public'}
+        self.dict_dbuser_searchpath = {'osmuser':    '"$user", apidb, osm2pgsql, public',
+                                       'mapnikuser': '"$user", osm2pgsql, public',
+                                       'www-data':   '"$user", osm2pgsql, public'}
         self.dict_dbname_dict_schema_dict_dbuser_listdroits = \
             {'osm': {'apidb':     {'osmuser':    ['ALL']},
                      'osm2pgsql': {'osmuser':    ['ALL'],
@@ -74,15 +74,19 @@ class ParametresConnexion(object):
                                    'planet_osm_line',
                                    'planet_osm_roads',
                                    'planet_osm_polygon']}}
-        self.dict_dbname_dict_schema_listtables = \
-            {'osm': {'apidb':     [],
-                     'osm2pgsql': []}}
+
+        self.dict_dbname_dict_schema_listsqlfilescreate = \
+            {'osm':               {'apidb': [],
+                                   'osm2pgsql': []}}
+        self.dict_dbname_dict_schema_listsqlfilesinsert = \
+            {'osm':               {'apidb': [],
+                                   'osm2pgsql': []}}
 
         # les paramètres pour la connexion
         self.hostname = 'localhost'
         self.port = '5432'
         self.username = 'fred'
-        self.password = 'fred'
+        self.password = 'fgpass'
 
 
 def main():

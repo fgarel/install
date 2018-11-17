@@ -1,16 +1,16 @@
 #!/bin/sh
 
 # ubuntu
-export VERSION_POSTGRESQL_OLD="9.6"
 export VERSION_POSTGRESQL_OLD="10"
-export VERSION_POSTGIS_OLD="2.3"
-export VERSION_POSTGIS_NEW="2.4"
+export VERSION_POSTGRESQL_NEW="11"
+export VERSION_POSTGIS_OLD="2.4"
+export VERSION_POSTGIS_NEW="2.5"
 
 # debian
-export VERSION_POSTGRESQL_OLD="9.6"
-export VERSION_POSTGRESQL_NEW="10"
-export VERSION_POSTGIS_OLD="2.3"
-export VERSION_POSTGIS_NEW="2.4"
+#export VERSION_POSTGRESQL_OLD="9.6"
+#export VERSION_POSTGRESQL_NEW="10"
+#export VERSION_POSTGIS_OLD="2.3"
+#export VERSION_POSTGIS_NEW="2.4"
 
 # 7ème Partie : Installation de postgresql et postgis
 #####################################################
@@ -150,7 +150,7 @@ echo "# This is done so that a fresh installation works out of the box without t
 echo "# but of course it clashes when you try to upgrade 9.6/main when 10/main also exists."
 echo "# We need to rename the new postgres cluster so that when we upgrade the old cluster the names won't conflict."
 echo "#"
-echo "sudo pg_renamecluster $VERSION_POSTGIS_NEW main main_vide_$VERSION_POSTGRESQL_NEW"
+echo "sudo pg_renamecluster $VERSION_POSTGRESQL_NEW main main_vide_$VERSION_POSTGRESQL_NEW"
       sudo pg_renamecluster $VERSION_POSTGRESQL_NEW main main_vide_$VERSION_POSTGRESQL_NEW
 echo "#"
 echo "# On liste les cluster"
@@ -182,7 +182,7 @@ echo "pg_lsclusters"
 echo "#"
 echo "# remove du cluster $VERSION_POSTGRESQL_OLD : Attention DANGER"
 echo "sudo pg_dropcluster $VERSION_POSTGRESQL_OLD main --stop"
-      sudo pg_dropcluster $VERSION_POSTGRESQL_OLD main --stop
+#      sudo pg_dropcluster $VERSION_POSTGRESQL_OLD main --stop
 echo "#"
 echo "# On liste les cluster"
 echo "pg_lsclusters"

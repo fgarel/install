@@ -3,7 +3,7 @@
 
 """
 ***************************************************************************
-    03_baseUpdate.py
+    03_baseSqlFilesInsert.py
     ---------------------
     Date                 : January 2018
     Copyright            : (C) 2018-2018 La Rochelle,
@@ -37,7 +37,7 @@ def main():
     u""" Fonction principale. """
     mesparametres = parametresConnexion.ParametresConnexion()
     maconnexion = database.Database(mesparametres)
-    maconnexion.do_sqlfilescreate()
+    #maconnexion.do_sqlfilescreate()
     maconnexion.do_sqlfilesinsert()
 
 
