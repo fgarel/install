@@ -23,6 +23,11 @@
 #---------------------------------------
 bindkey -v
 autoload -Uz compinit
+
+# ajouté suite à l'installation de poetry (python)
+# https://poetry.eustace.io/docs/
+fpath+=~/.zfunc
+
 compinit
 export TERM="xterm-256color"
 
@@ -111,13 +116,13 @@ antigen apply
 
 
 # Ajouté suite à l'installation de pyenv
-export PATH="/home/fred/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#export PATH="/home/fred/.pyenv/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 # Ajouté suite à l'installation de pew
 # pew peut etre remplacé par pipenv
-source $(pew shell_config)
+#source $(pew shell_config)
 
 # Ajouté suite à l'installation des fontes
 source ~/.local/share/fonts/*.sh
@@ -125,6 +130,6 @@ source ~/.local/share/fonts/*.sh
 # Utilisation de powerline pour le prompt
 # il faut forcer la lecture de ce fichier
 # http://powerline.readthedocs.io/en/master/usage/shell-prompts.html#zsh-prompt
-source /usr/local/lib/python3.6/dist-packages/powerline/bindings/zsh/powerline.zsh
+source /usr/local/lib/python3.5/dist-packages/powerline/bindings/zsh/powerline.zsh
 
 
