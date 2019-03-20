@@ -1,12 +1,9 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [packages]
-
-
+pgadmin4 = {path = "./pgadmin4-4.3-py2.py3-none-any.whl"}
 
 [dev-packages]
