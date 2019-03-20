@@ -13,8 +13,19 @@ echo "#"
 echo "# Dans cet environnement virtuel, installation de :"
 echo "# -"
 echo "# -"
-
 echo "#"
+echo "# la documentation est vue ici :"
+echo "# http://taigaio.github.io/taiga-doc/dist/setup-production.html"
+echo "#"
+echo "# Paquets essentiels"
+sudo apt-get update
+sudo apt-get install -y build-essential binutils-doc autoconf flex bison libjpeg-dev
+sudo apt-get install -y libfreetype6-dev zlib1g-dev libzmq3-dev libgdbm-dev libncurses5-dev
+sudo apt-get install -y automake libtool libffi-dev curl git tmux gettext
+sudo apt-get install -y nginx
+sudo apt-get install -y rabbitmq-server redis-server
+sudo apt-get install -y libxml2-dev libxslt-dev
+sudo apt-get install -y libssl-dev libffi-dev
 echo "# Installation de l'environnement virtuel"
 echo "#"
 echo "# Utilisation de l'utilitaire pew"

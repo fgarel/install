@@ -18,6 +18,12 @@
 # Le script zsh-newuser-install permet de creer un fichier zshrc minimal
 #
 
+# python est utilisé pour powerline et poetry
+# installZsh.sh est donc a lancé en parallèle avec installPython.sh
+#
+export PYTHON_VERSION_COURT=3.6
+# cette version est issue de installPython.sh
+# la version 3.6.6 fonctionne avec cookiecutter
 #
 # Paramètres courants pour zsh
 #---------------------------------------
@@ -26,7 +32,15 @@ autoload -Uz compinit
 
 # ajouté suite à l'installation de poetry (python)
 # https://poetry.eustace.io/docs/
+#
 fpath+=~/.zfunc
+# 
+# Ajout d'un chemin dans le path zsh
+# https://stackoverflow.com/questions/11530090/adding-a-new-entry-to-the-path-variable-in-zsh
+#
+# append
+#
+path+=("$HOME/.poetry/bin")
 
 compinit
 export TERM="xterm-256color"
@@ -130,6 +144,6 @@ source ~/.local/share/fonts/*.sh
 # Utilisation de powerline pour le prompt
 # il faut forcer la lecture de ce fichier
 # http://powerline.readthedocs.io/en/master/usage/shell-prompts.html#zsh-prompt
-source /usr/local/lib/python3.5/dist-packages/powerline/bindings/zsh/powerline.zsh
+source /usr/local/lib/python$PYTHON_VERSION_COURT/site-packages/powerline/bindings/zsh/powerline.zsh
 
 
