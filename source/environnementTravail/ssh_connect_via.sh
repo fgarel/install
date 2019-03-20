@@ -45,7 +45,9 @@ ssh -f \
     -L 62390:localhost:52390 \
     -L 62380:localhost:52380 \
     -L 62391:localhost:52391 \
+    -L 62392:localhost:52392 \
     -L 62381:localhost:52381 \
+    -L 62382:localhost:52382 \
     -L 63230:localhost:43230 \
     fred@cdalr.fr
 #
@@ -80,7 +82,9 @@ ssh -f \
     -L 62490:localhost:52490 \
     -L 62480:localhost:52480 \
     -L 62491:localhost:52491 \
+    -L 62492:localhost:52492 \
     -L 62481:localhost:52481 \
+    -L 62482:localhost:52482 \
     fgarel@ssh.freeshell.de \
     -p 443
 #
@@ -164,6 +168,7 @@ echo "# ..3.. : via ssh.cdalr.fr"
 echo "# ...9. : via VLR6180Y"
 echo "# ....0 : distante après le troisième tiers = dsibdd09"
 echo "# ....1 : distante après le troisième tiers = brulhois"
+echo "# ....2 : distante après le troisième tiers = dsiappli39"
 echo "# "
 echo "# 62380 : dsibdd09_postgres_sig_via_tunnel_cdalr_vlr6180x"
 echo "# 62390 : dsibdd09_postgres_sig_via_tunnel_cdalr_vlr6180y"
@@ -175,6 +180,10 @@ echo "# 62391 : brulhois_sig_prenomnom_via_tunnel_cdalr_vlr6180y"
 echo "# 62481 : brulhois_sig_prenomnom_via_tunnel_freeshell_vlr6180x"
 echo "# 62491 : brulhois_sig_prenomnom_via_tunnel_freeshell_vlr6180y"
 echo "# "
+echo "# 62382 : dsiappli39_sig_prenomnom_via_tunnel_cdalr_vlr6180x"
+echo "# 62392 : dsiappli39_sig_prenomnom_via_tunnel_cdalr_vlr6180y"
+echo "# 62482 : dsiappli39_sig_prenomnom_via_tunnel_freeshell_vlr6180x"
+echo "# 62492 : dsiappli39_sig_prenomnom_via_tunnel_freeshell_vlr6180y"
 echo "# "
 echo "# ---------------------------------------------"
 echo "# Sur la machine dstante, on peut lancer le serveur vnc"

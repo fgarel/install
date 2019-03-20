@@ -20,7 +20,7 @@
 # Fabrication du troisième tiers du tunnel (entre la machine VLR6180Y et la machine DSIBDD09)
 # (ports ...0000 et +)
 #
-echo "# Mot de passe pour vlr6180y"
+echo "# Mot de passe pour vlr6180y : aliabMi"
 ssh -f \
     -o ServerAliveInterval=240 \
     -N \
@@ -31,13 +31,25 @@ ssh -f \
 # Fabrication du troisième tiers du tunnel (entre la machine VLR6180Y et la machine brulhois)
 # (ports ...0000 et +)
 #
-echo "# Mot de passe pour vlr6180y"
+echo "# Mot de passe pour vlr6180y : aliabMi"
 ssh -f \
     -o ServerAliveInterval=240 \
     -N \
     -X \
     -L 43291:172.17.150.6:5432 \
     fred@vlr6180y
+#
+#
+# Fabrication du troisième tiers du tunnel (entre la machine VLR6180Y et la machine dsiappli58)
+# (ports ...0000 et +)
+#
+#echo "# Mot de passe root pour dsiappli58 : aliab12"
+#ssh -f \
+#    -o ServerAliveInterval=240 \
+#    -N \
+#    -X \
+#    -L 43292:dsiappli58.mairie.fr:33292 \
+#    root@dsiappli58
 #
 
 echo "# "
@@ -61,7 +73,7 @@ echo "# Mie7.."
 # Fabrication du tiers central du tunnel "ssh.cdalr.fr" (entre la machine boulot et ssh.cdalr.fr)
 #
 # attention, on rajoute le lien vers le troisième tiers
-echo "# Mot de passe pour ssh.cdalr.fr"
+echo "# Mot de passe pour ssh.cdalr.fr : aliabMi"
 ssh -f \
     -o ServerAliveInterval=240 \
     -N \
@@ -73,12 +85,13 @@ ssh -f \
     -R 52239:localhost:22 \
     -R 52390:localhost:43290 \
     -R 52391:localhost:43291 \
+    -R 52392:localhost:33292 \
     fred@cdalr.fr
 #
 #
 # Fabrication d'un second tiers central du tunnel "freeshell.de" (entre la machine boulot et freeshell.de)
 #
-echo "# Mot de passe pour ssh.freeshell.de"
+echo "# Mot de passe pour ssh.freeshell.de : aliabLei6Vie5"
 ssh -f \
     -o ServerAliveInterval=240 \
     -N \
@@ -90,6 +103,7 @@ ssh -f \
     -R 52249:localhost:22 \
     -R 52490:localhost:43290 \
     -R 52491:localhost:43291 \
+    -R 52492:localhost:33292 \
     fgarel@ssh.freeshell.de \
     -p 443
 #
