@@ -15,10 +15,10 @@
 # -X = Transfert X11 et TCP (X11 and TCP forwarding) http://www.delafond.org/traducmanfr/man/man1/ssh.1.html
 
 
-# 1ere etape : on va commencer par la fin : le troisième tiers du tunnel
+# 1ere etape : on va commencer par la fin : la troisième partie de tunnel
 #
-# pour cdalr, il y a un troisième tiers :
-# cdalr est un relais vers sa base postgresql
+# pour cdalr, il y a une autre partie de tunnel :
+# cdalr est un relais vers sa propre base postgresql
 #
 echo "# Mot de passe pour cdalr.fr"
 ssh -f \
@@ -31,7 +31,7 @@ ssh -f \
 
 echo "# "
 echo "# Maintenant, à partir de cdalr.fr, il est possible de se connecter vers"
-echo "# sa base de données via localhos"
+echo "# sa base de données via localhost"
 echo "# psql -h localhost -p 43230 -d cadlr -U sig"
 echo "# "
 echo "# Mie3B.."
@@ -40,4 +40,4 @@ echo "# Mie3B.."
 # le tiers central du tunnel n'est pas a faire ici
 #
 
-# le premier tiers du tunnel est fait via ssh_connect_via.sh
+# le premier tiers du tunnel est faite via ssh_connect_via.sh
