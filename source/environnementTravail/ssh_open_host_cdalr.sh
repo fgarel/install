@@ -26,15 +26,15 @@ ssh -f \
     -N \
     -X \
     -L 43230:localhost:5432 \
-    fred@localhost
+    fred@cdalr.fr
 #
 
 echo "# "
 echo "# Maintenant, à partir de cdalr.fr, il est possible de se connecter vers"
 echo "# sa base de données via localhost"
-echo "# psql -h localhost -p 43230 -d cadlr -U sig"
+echo "# psql -h localhost -p 43230 -d dbworkspace -U fred"
 echo "# "
-echo "# Mie3B.."
+echo "# "
 #
 
 # le tiers central du tunnel n'est pas a faire ici
