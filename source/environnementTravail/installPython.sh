@@ -79,13 +79,29 @@ echo "rm -f Python-$VERSION_PYTHON.tgz"
 #      sudo apt-get -y install python3-psycopg2
 echo "#"
 echo "# Mise à jour de pip (niveau utilisateur pour ne pas casser le système)"
+echo "sudo -H pip$VERSION_PYTHON_COURT install --upgrade pip"
+      sudo -H pip$VERSION_PYTHON_COURT install --upgrade pip
 echo "pip$VERSION_PYTHON_COURT install --upgrade pip --user"
       pip$VERSION_PYTHON_COURT install --upgrade pip --user
 echo "#"
 echo "# Installation de powerline"
 echo "# https://powerline.readthedocs.io/en/master/installation.html#pip-installation"
-echo "sudo pip$VERSION_PYTHON_COURT install powerline-status"
-      sudo pip$VERSION_PYTHON_COURT install powerline-status
+echo "#sudo -H pip$VERSION_PYTHON_COURT install powerline-status"
+      #sudo -H pip$VERSION_PYTHON_COURT install powerline-status
+echo "#sudo -H pip$VERSION_PYTHON_COURT install powerline-shell"
+      #sudo -H pip$VERSION_PYTHON_COURT install powerline-shell
+echo "#sudo -H pip$VERSION_PYTHON_COURT install --upgrade powerline-status"
+      #sudo -H pip$VERSION_PYTHON_COURT install --upgrade powerline-status
+echo "#sudo -H pip$VERSION_PYTHON_COURT install --upgrade powerline-shell"
+      #sudo -H pip$VERSION_PYTHON_COURT install --upgrade powerline-shell
+echo "pip$VERSION_PYTHON_COURT install powerline-status --user"
+      pip$VERSION_PYTHON_COURT install powerline-status --user
+echo "pip$VERSION_PYTHON_COURT install powerline-shell --user"
+      pip$VERSION_PYTHON_COURT install powerline-shell --user
+echo "pip$VERSION_PYTHON_COURT install --upgrade powerline-status --user"
+      pip$VERSION_PYTHON_COURT install --upgrade powerline-status --user
+echo "pip$VERSION_PYTHON_COURT install --upgrade powerline-shell --user"
+      pip$VERSION_PYTHON_COURT install --upgrade powerline-shell --user
 echo "#"
 echo "# Apres l'installation de powerline-status, il faudra verifier que le "
 echo "# zshrc_antigen est correctement configuré"
@@ -130,7 +146,7 @@ echo "#"
 #      sudo -H pip3 install --upgrade pip
 #echo "sudo -H pip3 install pew"
 #      sudo -H pip3 install pew
-echo "pip$VERSION_PYTHON_COURT install pew --user"
+echo "#pip$VERSION_PYTHON_COURT install pew --user"
 #      pip$VERSION_PYTHON_COURT install pew --user
 echo "#"
 echo "# http://sametmax.com/mieux-que-python-virtualenvwrapper-pew/"
@@ -182,11 +198,11 @@ echo "# http://sametmax.com/pipenv-solution-moderne-pour-remplacer-pip-et-virtua
 echo "#"
 echo "# Mise à jour de pip, mais juste au niveau utilisateur"
 echo "# pour pas casser le system"
-echo "python3 -m pip install pip --upgrade --user"
+echo "#python3 -m pip install pip --upgrade --user"
 #      python3 -m pip install pip --upgrade --user
 echo "#"
 echo "# Installation de pipenv"
-echo "python3 -m pip install pipenv --user"
+echo "#python3 -m pip install pipenv --user"
 #      python3 -m pip install pipenv --user
 echo "#"
 echo "# Installation de poetry"
