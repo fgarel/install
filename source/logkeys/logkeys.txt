@@ -1,0 +1,1550 @@
+Logging started ...
+
+2018-10-15 15:46:04+0200 > ls
+2018-10-15 15:46:08+0200 > <KP1><KP2><KP3><KP4><KP5><KP6><KP7><KP8><KP9><KP1><KP2><KP3><KP4><KP5><KP6><KP7><KP8><KP9><KP1><KP2><KP3><KP4><KP5><KP6><KP7><KP8><KP9><KP1><KP2><KP3><KP4><KP5><KP6><KP7><KP8><KP9><KP0><KP1><KP2><KP3><KP4><KP5><KP6><KP7><KP8><KP9><KP0><KP1><KP2><KP3><KP4><KP5><KP6><KP7><KP8><KP9><KP0><KP1><KP1>
+2018-10-15 15:46:32+0200 > <Lctrl>a<Down><Up><Lctrl>a<Up><Lctrl>an<Lctrl>an<Up><Lctrl>a<Down><Up>
+2018-10-15 15:46:47+0200 > <Lctrl>a<Up><Lctrl>a<Up><Lctrl>a<Up><Left><Lctrl>a<Left><Lctrl>a<Up><Lctrl>c
+2018-10-15 15:47:41+0200 > <Lctrl>v http_post example
+2018-10-15 15:47:50+0200 > <Lctrl>an<Lctrl><Up><Up><Up><Up>
+2018-10-15 15:48:09+0200 > <BckSp><BckSp><BckSp><BckSp><BckSp><Right><Right><Right><Right>-http
+2018-10-15 15:48:19+0200 > logkeys http<Left><Left><Left><Left>post-<Right><#+1><Right><Right><Right> server so<BckSp>tore <BckSp>
+2018-10-15 15:51:27+0200 > <Lctrl>a<Down><Lctrl>an<Lctrl>an<BckSp><#+47><LShft><Lctrl>V
+2018-10-15 15:54:46+0200 > <Up><Left><#+6><Up><Left><Left><BckSp><#+24>:<RShft>//localhost:<KP8><BckSp><KP5><KP0><KP0><KP0><RShft>/
+2018-10-15 15:55:29+0200 > flask upload raw data
+2018-10-15 15:57:52+0200 > <Lctrl>a<Up><Lctrl>c
+2018-10-15 15:59:48+0200 > <Up><Up><Up><Up><Down><#+16>vi p<BckSp>u<Tab>
+2018-10-15 15:59:56+0200 > <Lctrl><LAlt><Up><Up><Up><LAlt><Lctrl><Down>p<BckSp><BckSp>totem
+2018-10-15 16:06:34+0200 > frederic<RShft>?<BckSp><RShft>.garel<LShft>Mie<RShft>7Asie
+2018-10-15 16:07:12+0200 > stephanie<RShft>.canu<Lctrl><LAlt><Up><Lctrl><LAlt><Up>agglo
+2018-10-15 16:13:05+0200 > travaux
+2018-10-15 16:14:30+0200 > <Esc><LShft>Mie<RShft>3Asie
+2018-10-15 16:24:47+0200 > <LShft><Lctrl>c
+2018-10-15 16:25:55+0200 > <Lctrl>vtravaux<Lctrl>c
+2018-10-15 16:26:24+0200 > <Lctrl>vnom<LShft>Prom<BckSp>jet""<LShft>Montant<LShft>TTC""<Up><Right><BckSp><LShft>B<BckSp><LShft>N<LShft>Categorie"<Left>"nom du po<BckSp>rojetmontta<BckSp><BckSp>ant <LShft>TTC du proje<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>, cout ud<BckSp><BckSp>du projet<LShft>Categorie (<KP1> ou <KP2>)<Lctrl>c
+2018-10-15 16:30:31+0200 > <Lctrl>v<Lctrl>c
+2018-10-15 16:30:37+0200 > 
+2018-10-15 16:30:38+0200 > <BckSp><BckSp><Lctrl>v<LShft>Axe<KP1>
+2018-10-15 16:30:45+0200 > <Lctrl>v<LShft>Axe<KP2><LShft>Axe<KP1><Lctrl>axe<Lctrl>zz<LShft>Axe<KP2><BckSp><BckSp><LShft>A, <LShft>B ou <LShft>C(<LShft>A<KP1>, <LShft>A<KP2>, <LShft>A<KP3>, <RShft>...<LShft>B<BckSp>, <LShft>B<KP1>, <LShft>B<KP2>, <LShft>V<BckSp><LShft>B<KP3>, <RShft>...., <LShft>C<KP1>, <LShft>C<KP2>, <LShft>C<KP3><KP3>numeric<Lctrl>c
+2018-10-15 16:32:44+0200 > 
+2018-10-15 16:32:47+0200 > <Lctrl><BckSp><BckSp><Lctrl>v<LShft>Grand<LShft>Projet<LShft>Action <LShft><BckSp><LShft>Transition<LShft>Energetique<LShft>P<BckSp><LShft>Rapple<BckSp><BckSp>er<BckSp>lx si le projet est un di<BckSp>uplicatat<BckSp>x si le <Lctrl><LAlt><Up><Lctrl><LAlt><Up>distrowatch
+2018-10-15 16:34:16+0200 > l<BckSp>pro<BckSp><BckSp>rojet est <Lctrl><LAlt><Up><Up>me<BckSp>ateriel<RShft>.net
+2018-10-15 16:38:42+0200 > <BckSp>
+2018-10-15 16:38:54+0200 > materie
+2018-10-15 16:39:11+0200 > <Esc><LShft>Mie<RShft>3Asie
+2018-10-15 17:00:41+0200 > <Lctrl>c
+2018-10-15 17:00:58+0200 > 
+2018-10-15 17:01:02+0200 > <Lctrl>v<BckSp><BckSp><LShft>Numero<LShft>PPInumero du <LShft><BckSp><BckSp>e projet<Lctrl>c
+2018-10-15 17:01:32+0200 > 
+2018-10-15 17:01:34+0200 > <Lctrl>v<Left><BckSp><BckSp><LShft>Localisatble<BckSp><BckSp><LShft>Nonn'est pas localisabe<BckSp>le<Lctrl>c
+2018-10-15 17:02:14+0200 > 
+2018-10-15 17:02:16+0200 > <BckSp>
+2018-10-15 17:02:16+0200 > <BckSp><Lctrl>v
+2018-10-15 17:02:19+0200 > <BckSp><BckSp><Lctrl>v<LShft>Pico<BckSp>to<LShft>Couleur<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>nom ud <BckSp><BckSp>du<BckSp><BckSp><BckSp>du pictocode des a<BckSp><BckSp><BckSp> lc<BckSp>a couleur<BckSp><BckSp><Lctrl>c
+2018-10-15 17:10:43+0200 > <Lctrl>v <Lctrl>v <LShft>LINET<BckSp><LShft>STRING<Lctrl>c
+2018-10-15 17:11:02+0200 > <LAlt><Lctrl><Up><Lctrl><LAlt><Up><Lctrl>a<Lctrl>v<Lctrl><LAlt><Down><Lctrl><LAlt><Down><BckSp><BckSp><BckSp><LShft>LU<BckSp><LShft>YGON<LShft>Projet<Del>ptrav<BckSp><BckSp><BckSp><BckSp>projet<Lctrl>c
+2018-10-15 17:13:33+0200 > 
+2018-10-15 17:13:35+0200 > <BckSp><BckSp><Lctrl>v
+2018-10-15 17:13:39+0200 > <BckSp><BckSp><BckSp>
+2018-10-15 17:13:41+0200 > <BckSp><BckSp><Lctrl>v<LShft>Date<LShft>Debut<LShft>Date<LShft>Fin<LShft>Date de début des travu<BckSp>aux<LShft>Date de fin des travayux<BckSp><BckSp><BckSp>ux<KP1><BckSp>''<Left><Lctrl>c
+2018-10-15 17:16:59+0200 > <Lctrl>v<Lctrl>c
+2018-10-15 17:17:09+0200 > <BckSp><Lctrl>v''<LShft>I''<Left><LShft>A<BckSp>'<LShft>A<KP1>'<BckSp>''<Right><BckSp>''<Right><Right><Right><BckSp>''<Right><Right><Right><BckSp>''<Right><Right><Right><Left><Left><Left><BckSp><BckSp><KP1><Right><Right><Right><BckSp>'<LShft>Non'<Down><Left><Left><Left><#+12><Left><Left><Left><BckSp>''<Left><Right><Right><Right><Right><BckSp>''<Left><KP2><KP2><KP8>,<KP5><KP4>,<KP2><KP3><Right><Right><Right><Right><BckSp>''<Right><Right><Right><BckSp>''<Left><Left><Left><Left><Left><KP2><KP0><KP1><KP8><KP0><KP1><KP0><KP1><Right><Right><Right><Right><KP2><KP0><KP1><KP8><KP1><KP2><KP3><KP1><Right><Right><Right><Right><BckSp><LShft>NULL
+2018-10-15 17:19:24+0200 > 
+2018-10-15 17:19:24+0200 > 
+2018-10-15 17:19:25+0200 > <BckSp><BckSp><BckSp><Lctrl>v<F5><BckSp><BckSp><LShft>NULL<Left>
+2018-10-15 17:20:20+0200 > 
+2018-10-15 17:20:20+0200 > <Up><Up><Lctrl>c
+2018-10-15 17:20:23+0200 > <Lctrl>b<Lctrl>v;<Left><#+27><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><LShft>DROP<Right><Right><Right><Right><Right><Right><Right>if exists<Lctrl><LAlt><Up><LAlt><Lctrl><Up> <F5><F5><Lctrl><LAlt><Up><Up><LShft>juwetransfer
+2018-10-15 17:24:00+0200 > jushu<BckSp><BckSp><BckSp>jusi<BckSp>tijutine<RShft>.chastel<AltGr>@hotmail<RShft>.frfrederic<RShft>.garel<AltGr>@gl<BckSp>mail<RShft>.comvoici les phots<BckSp>os de charlotte<RShft>...<LShft><LShft><Lctrl><LAlt><Down><LAlt><Lctrl><Down><Del><Right><BckSp><BckSp><LShft>NULL<Right><BckSp><BckSp><LShft>NULL<BckSp><BckSp><LShft>NULLvlr<KP6><KP1><KP8><KP0>yvlr<KP6><KP1><KP8><KP0>yespu_espu_fredfred<LShft>Mie<BckSp><BckSp><BckSp>vi <AltGr>~<RShft>/<RShft>.pgpass
+2018-10-15 17:34:58+0200 > <PgDn><Lctrl><LAlt><Up><Lctrl><LAlt><Up><Lctrl><LAlt><Down><Down><Down>fgpassvlr<KP6><KP1><KP8><KP0>y_espu_fred<KP6><KP1><KP8><KP0>y<KP6><KP6><KP1><KP8><KP0><KP7>f<Left><Left><Right><BckSp>y<Left><Left><Left><Left><Right><Right><Right><Right><Left><Left><Left><Left><Left><Right><Right><Right><Right><Right><Right>g<Lctrl><LAlt><Up><Up>geometrytype postgis
+2018-10-15 17:43:19+0200 > <BckSp><BckSp>adte
+2018-10-15 17:43:26+0200 > 
+2018-10-15 17:47:19+0200 > "<LShft>Range"<Left><Left><Left><Left><Left><BckSp>tsr<Right><Right><Right><Right><Right><Right><Left> tsrange,<LShft>Projzt<BckSp><BckSp>z<BckSp>et<LShft>Date<BckSp><BckSp><BckSp><BckSp><Left><Left><Left><Left><Left><Left><Left><LShft>Date<Right><BckSp>s<BckSp><RShft>T --"", <Left><Left><Left><LShft>Dta<BckSp><BckSp>ate<LShft>Tsrange'', <Lctrl>c
+2018-10-15 17:49:07+0200 > <Lctrl>v<BckSp><AltGr>]<BckSp><KP8><BckSp><KP1><KP8><Del><Right><Right><#+12><Left><BckSp><BckSp><KP0><KP0><Right><Right><BckSp><KP0><Right><#+11><Left><BckSp><KP8><Right><Right><Right><BckSp><BckSp><KP1><KP2><Right><Right><Right><Right><Left><BckSp><BckSp><KP3><KP1><Right><Right><Right><BckSp><BckSp><KP2><KP3><Right><Right><Right><BckSp><BckSp><KP5><KP9><F5><Lctrl><LAlt><Up><Lctrl><LAlt><Down>timestamptimestamp---- <KP0><KP0>:<KP0><KP0>:<KP0><KP0> <KP2><KP3>:<KP5><KP9>:<KP5><KP9>:<KP0><KP0>:<KP5><KP9><F5>--<Lctrl><LAlt><Down><Lctrl><LAlt><Down><BckSp><BckSp><Left><Left><Left><Left><Left><Left>"<Right><Right><Right><Right><Right><Right>"<Left><LShft>Point<LShft>Point<LShft>Point"<LShft>Point"<Lctrl>c
+2018-10-15 17:59:09+0200 > 
+2018-10-15 17:59:10+0200 > 
+2018-10-15 17:59:11+0200 > <BckSp><BckSp><BckSp>
+2018-10-15 17:59:12+0200 > <Lctrl>v<BckSp><BckSp><BckSp><BckSp><BckSp><LShft>Linestring<BckSp><BckSp><BckSp><BckSp><BckSp><LShft>Linestring""""<BckSp><BckSp><BckSp><BckSp><BckSp><LShft>Linestring<Lctrl>c
+2018-10-15 17:59:51+0200 > 
+2018-10-15 17:59:55+0200 > 
+2018-10-15 17:59:55+0200 > <BckSp><BckSp><BckSp>
+2018-10-15 17:59:57+0200 > <Lctrl>v<Up><Down><Right><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><LShft>Polygon<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><LShft>Polygon<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><LShft>Polygon<LShft><Lctrl>c
+2018-10-15 18:00:33+0200 > 
+2018-10-15 18:00:37+0200 > 
+2018-10-15 18:00:37+0200 > 
+2018-10-15 18:00:37+0200 > <Up>""<Lctrl>v<LShft>Multi<LShft>Multi<LShft>Multi<LShft>Multi<LShft>Multi<LShft>Multi<LShft>Multi<LShft>Multi<LShft>Multi<Del><LShft>MULTI<LShft>MULTI<BckSp><BckSp><BckSp><LShft>MULTI<Del><Del><LShft><Del><Del><Del><Del><BckSp><BckSp><LShft><Del><LShft><Del><Lctrl>c
+2018-10-15 18:03:43+0200 > <Left>
+2018-10-15 18:03:46+0200 > 
+2018-10-15 18:03:46+0200 > <Up><Up><Lctrl>v<BckSp><BckSp><BckSp><BckSp><BckSp><LShft><LShft><LShft>projetè<BckSp>_point_<Lctrl>c
+2018-10-15 18:07:19+0200 > <Lctrl>v<BckSp><BckSp><BckSp><BckSp><BckSp>linestring<Lctrl>v<BckSp><BckSp><BckSp>lygon<Lctrl>vmulti<Lctrl>v<BckSp><BckSp><BckSp><BckSp><BckSp>multilinestring<Lctrl>v<BckSp><BckSp><BckSp><BckSp><BckSp>multipoli<BckSp>ygon<LShft><LShft><Lctrl><LAlt><Up><Lctrl><LAlt><Up><Lctrl>a<Lctrl>c
+2018-10-15 18:11:34+0200 > og<BckSp><BckSp><BckSp>writer<KP1><KP0><Lctrl>v<LShft><Del><LShft><LShft>Po<BckSp>rojet<LShft><Esc><Esc><Down><Up><Esc><Esc><Esc><LShft>Mie<RShft>3Asie
+2018-10-16 08:44:07+0200 > to
+2018-10-16 08:44:23+0200 > <LShft><Lctrl>a<LShft><Lctrl>a<Lctrl>v<LShft><Home><Del><Del><Del><Del><Del><Del><Del><Del><Left>
+2018-10-16 08:50:30+0200 > 
+2018-10-16 08:50:30+0200 > <BckSp>
+2018-10-16 08:51:47+0200 > <BckSp><BckSp><Del>
+2018-10-16 08:51:54+0200 > <Del>
+2018-10-16 08:52:00+0200 > <Del><Del>
+2018-10-16 08:52:31+0200 > <BckSp><BckSp><Left><BckSp><BckSp><Lctrl>aq<Lctrl>a<Del><Del><Lctrl>a<Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del><Del>
+2018-10-16 08:58:52+0200 > 
+2018-10-16 08:58:52+0200 > <Del>
+2018-10-16 09:01:55+0200 > <Del><Del><Del>
+2018-10-16 09:02:01+0200 > <Del><Del>
+2018-10-16 09:02:04+0200 > <Del>
+2018-10-16 09:02:07+0200 > <Del><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>l<Del>
+2018-10-16 09:02:50+0200 > <Del><Del><Del>
+2018-10-16 09:02:54+0200 > <Del><Del>
+2018-10-16 09:02:58+0200 > <Del><Del>
+2018-10-16 09:03:03+0200 > <BckSp><BckSp><Left><BckSp><BckSp><Left><BckSp><BckSp><Del><Del>
+2018-10-16 09:04:09+0200 > <Del>
+2018-10-16 09:04:11+0200 > <Del><Del>
+2018-10-16 09:04:15+0200 > <Del><Del><Del>
+2018-10-16 09:04:19+0200 > <Del><Del>
+2018-10-16 09:04:22+0200 > <BckSp><BckSp><Left><BckSp><BckSp><Left><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><Del><Del>
+2018-10-16 09:05:57+0200 > <Del><Del>
+2018-10-16 09:06:01+0200 > <Del><Del>
+2018-10-16 09:06:04+0200 > <Del><Del>
+2018-10-16 09:06:06+0200 > <Del><Del>
+2018-10-16 09:06:09+0200 > <Del><Del>
+2018-10-16 09:06:11+0200 > <Right><BckSp><BckSp><Left><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><Left><BckSp><BckSp><Del><Del>
+2018-10-16 09:06:46+0200 > <Del><Del>
+2018-10-16 09:06:48+0200 > <Del><Del>
+2018-10-16 09:06:51+0200 > <Del><Del>
+2018-10-16 09:06:54+0200 > <Del><Del>
+2018-10-16 09:06:56+0200 > <Del><Del>
+2018-10-16 09:06:59+0200 > 
+2018-10-16 09:07:01+0200 > 
+2018-10-16 09:07:01+0200 > <Del><Del><BckSp><Left><LShft><LShft><LShft><LShft><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><Left><BckSp><BckSp><BckSp><BckSp><Del>
+2018-10-16 09:08:08+0200 > <Del><Del><BckSp>
+2018-10-16 09:08:16+0200 > <Del><Del>
+2018-10-16 09:08:20+0200 > <Del><Del>
+2018-10-16 09:08:23+0200 > <Del><Del>
+2018-10-16 09:08:27+0200 > <LShft><LShft><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><Del><Del>
+2018-10-16 09:10:29+0200 > <Del><Del>
+2018-10-16 09:10:32+0200 > <Del><Del>
+2018-10-16 09:10:36+0200 > <Del><Del>
+2018-10-16 09:10:39+0200 > <Del><Del>
+2018-10-16 09:10:41+0200 > <BckSp><BckSp><Left><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><LShft><LShft>
+2018-10-16 09:12:21+0200 > <Del><Del><Del><Del>
+2018-10-16 09:12:38+0200 > <Del><Del>
+2018-10-16 09:12:40+0200 > <Del><Del>
+2018-10-16 09:12:45+0200 > <Del><Del>
+2018-10-16 09:12:48+0200 > <Del><Del>
+2018-10-16 09:12:54+0200 > <Del><Del>
+2018-10-16 09:13:18+0200 > <Del><Del>
+2018-10-16 09:13:20+0200 > <Del><Del>
+2018-10-16 09:13:24+0200 > <Del><Del>
+2018-10-16 09:13:26+0200 > <Del><Del>
+2018-10-16 09:13:28+0200 > <Del><Del>
+2018-10-16 09:13:30+0200 > <Del><Del>
+2018-10-16 09:13:33+0200 > <Del><Del>
+2018-10-16 09:13:38+0200 > <Del><Del>
+2018-10-16 09:13:41+0200 > <Del>
+2018-10-16 09:13:57+0200 > <BckSp><BckSp><Del><Del>
+2018-10-16 09:16:27+0200 > <Del><Del>
+2018-10-16 09:16:33+0200 > <Del><Del>
+2018-10-16 09:16:47+0200 > <Del><Del>
+2018-10-16 09:16:51+0200 > <Del><Del>
+2018-10-16 09:16:55+0200 > <Del><Del>
+2018-10-16 09:16:59+0200 > <Del><Del>
+2018-10-16 09:17:01+0200 > <Del><Del><Del>
+2018-10-16 09:17:27+0200 > <Del><Del>
+2018-10-16 09:17:30+0200 > <Del><Del>
+2018-10-16 09:17:33+0200 > <Del><Del>
+2018-10-16 09:17:36+0200 > <Del><Del>
+2018-10-16 09:17:39+0200 > <BckSp>
+2018-10-16 09:17:44+0200 > <Del><Del><Del><Del>
+2018-10-16 09:18:06+0200 > <Del><Del>
+2018-10-16 09:18:10+0200 > <Del><Del>
+2018-10-16 09:18:13+0200 > <Del><Del>
+2018-10-16 09:18:17+0200 > <Del><Del>
+2018-10-16 09:18:20+0200 > <Del><Del>
+2018-10-16 09:18:22+0200 > <Del><Del>
+2018-10-16 09:18:25+0200 > <Del><Del>
+2018-10-16 09:18:27+0200 > <Del><Del>
+2018-10-16 09:18:31+0200 > <Del><Del>
+2018-10-16 09:18:32+0200 > <Del><Del><Del>
+2018-10-16 09:18:38+0200 > 
+2018-10-16 09:18:40+0200 > <Del><Del><Del><Del><Del><Del>
+2018-10-16 09:18:51+0200 > <Del><Del>
+2018-10-16 09:18:54+0200 > <Del><Del>
+2018-10-16 09:18:57+0200 > <Del><Del><Del>
+2018-10-16 09:19:03+0200 > <Del><Del>
+2018-10-16 09:19:07+0200 > 
+2018-10-16 09:19:09+0200 > 
+2018-10-16 09:19:09+0200 > <Del><Del><BckSp><Del><Del>
+2018-10-16 09:19:15+0200 > <Del><Del>
+2018-10-16 09:19:19+0200 > <Del><Del>
+2018-10-16 09:19:20+0200 > <Del><Del>
+2018-10-16 09:19:23+0200 > <Del><Del>
+2018-10-16 09:19:25+0200 > <Del><Del>
+2018-10-16 09:19:27+0200 > <Del><Del>
+2018-10-16 09:19:29+0200 > <Del><Del>
+2018-10-16 09:19:31+0200 > <Del><Del><Del><Del><Del><Del><Lctrl>a<Esc><LShft>Mie<RShft>3Asie
+2018-10-16 09:35:58+0200 > <BckSp><Del><Del><Del>
+2018-10-16 09:37:26+0200 > <LShft>Propriété pu<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>ete<LShft>Publique<LShft>Et<LShft>Domanialite<LShft>Pul<BckSp>blique<Del><Lctrl><LAlt><Up><LShft>Mi<BckSp><BckSp><LShft>Mie<RShft>7Asie
+2018-10-16 09:40:42+0200 > <RCtrl><Lctrl><LAlt><Down>plez
+2018-10-16 09:50:55+0200 > 
+2018-10-16 09:50:55+0200 > linuxfr
+2018-10-16 09:52:07+0200 > plez
+2018-10-16 10:00:34+0200 > <LShft>Mie<RShft>3Asie
+2018-10-16 10:02:12+0200 > <LShft><Lctrl>a<LShft><LShft><LShft>postgis
+2018-10-16 10:07:46+0200 > <Lctrl>a<Lctrl>c
+2018-10-16 10:09:21+0200 > espu_voiei<BckSp>rie<BckSp><BckSp><BckSp><BckSp>rie<LShft>Travaux_projet<RShft>.sql
+2018-10-16 10:11:09+0200 > <Lctrl>v<Home>
+2018-10-16 10:11:20+0200 > 
+2018-10-16 10:11:20+0200 > 
+2018-10-16 10:11:20+0200 > 
+2018-10-16 10:11:20+0200 > <Up><Up><Up>-- connex<BckSp>xion a sql<BckSp><BckSp><BckSp>la base espu <BckSp> <BckSp>
+2018-10-16 10:12:07+0200 > -- identifiant : fred
+2018-10-16 10:12:16+0200 > <BckSp><#+18><BckSp>fred <BckSp>
+2018-10-16 10:12:20+0200 > -- password = <BckSp><BckSp>=<BckSp>: fgpass<Esc><Esc><Lctrl>sth<LShft><LShft><Lctrl>c
+2018-10-16 10:17:29+0200 > <Lctrl>v<Lctrl>a<Lctrl>c
+2018-10-16 10:18:07+0200 > <Lctrl>v<Lctrl>c
+2018-10-16 10:18:41+0200 > <Lctrl>v<Lctrl>a<Lctrl>c
+2018-10-16 10:19:15+0200 > test<RShft>.txt
+2018-10-16 10:19:36+0200 > <Lctrl>v<LShft>Agent<Right><LShft>Voies<Right><LShft>Quat<BckSp>rtier<Right><LShft>En<LShft>Cours_<LShft>Debutant_<LShft>A<LShft>Venir<LShft><LShft>Debut<Right><LShft>Fin<Down><Up><LShft>Chantier<LShft>Circulation<LShft><Lctrl>c
+2018-10-16 10:23:16+0200 > <Lctrl><Lctrl>v<Del><Del><LShft><Lctrl>c
+2018-10-16 10:23:29+0200 > <Lctrl>v<Lctrl>v<BckSp><BckSp>
+2018-10-16 10:23:38+0200 > <BckSp><BckSp><BckSp><BckSp><BckSp><#+13><BckSp><BckSp><BckSp><BckSp><BckSp>
+2018-10-16 10:23:47+0200 > <BckSp>
+2018-10-16 10:23:51+0200 > <LShft><Lctrl>c
+2018-10-16 10:23:54+0200 > <Lctrl>v<BckSp><BckSp>
+2018-10-16 10:24:01+0200 > <BckSp><BckSp>
+2018-10-16 10:24:06+0200 > <BckSp><BckSp>
+2018-10-16 10:24:10+0200 > <BckSp>
+2018-10-16 10:24:13+0200 > <BckSp>
+2018-10-16 10:24:27+0200 > <BckSp>
+2018-10-16 10:24:29+0200 > <BckSp>
+2018-10-16 10:24:31+0200 > <BckSp>
+2018-10-16 10:24:35+0200 > <LShft><Del>
+2018-10-16 10:24:44+0200 > <LShft><Lctrl>x<Lctrl>v<Lctrl><Lctrl>x<Lctrl>v<Lctrl>x <Lctrl>v<Lctrl><Lctrl>x<Lctrl>v<Lctrl>x<LAlt>
+2018-10-16 10:25:31+0200 > <Up><Lctrl> 
+2018-10-16 10:25:36+0200 > <Lctrl>v
+2018-10-16 10:25:40+0200 > <BckSp><Lctrl> 
+2018-10-16 10:25:43+0200 > 
+2018-10-16 10:25:44+0200 > <Lctrl>x<Lctrl>v<Lctrl>x<Lctrl> 
+2018-10-16 10:26:10+0200 > <Lctrl><Lctrl>v
+2018-10-16 10:26:17+0200 > <LShft><Lctrl>x<Lctrl>v<LShft><Lctrl>x<Lctrl>v<LShft><Lctrl>c
+2018-10-16 10:27:08+0200 > <Lctrl>v<Lctrl>v<BckSp><BckSp>
+2018-10-16 10:27:49+0200 > <BckSp><BckSp>
+2018-10-16 10:27:52+0200 > <BckSp><BckSp>
+2018-10-16 10:27:55+0200 > <Lctrl>x<Lctrl> 
+2018-10-16 10:28:06+0200 > <Lctrl>v
+2018-10-16 10:28:07+0200 > centre<Up><BckSp>
+2018-10-16 10:28:20+0200 > <BckSp>
+2018-10-16 10:28:23+0200 > <BckSp><BckSp><BckSp>
+2018-10-16 10:28:28+0200 > <BckSp><BckSp>
+2018-10-16 10:28:34+0200 > <BckSp><BckSp>
+2018-10-16 10:28:38+0200 > <LShft><Lctrl>c
+2018-10-16 10:29:15+0200 > <Lctrl>c
+2018-10-16 10:29:24+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<BckSp><BckSp>
+2018-10-16 10:29:34+0200 > <BckSp><BckSp><BckSp>
+2018-10-16 10:29:42+0200 > <BckSp><BckSp><BckSp>
+2018-10-16 10:29:51+0200 > <BckSp>
+2018-10-16 10:29:58+0200 > <LShft><Lctrl>c
+2018-10-16 10:30:15+0200 > <Lctrl>v<Lctrl>v<BckSp><BckSp>
+2018-10-16 10:30:25+0200 > <BckSp><BckSp>
+2018-10-16 10:30:29+0200 > <BckSp><BckSp>
+2018-10-16 10:30:31+0200 > <Lctrl>c
+2018-10-16 10:30:34+0200 > <Lctrl>v<BckSp>
+2018-10-16 10:30:39+0200 > <BckSp>
+2018-10-16 10:30:42+0200 > <BckSp><BckSp>
+2018-10-16 10:30:44+0200 > <BckSp>
+2018-10-16 10:30:47+0200 > <Del><Del><BckSp>
+2018-10-16 10:30:54+0200 > <BckSp>
+2018-10-16 10:30:57+0200 > <Del><Del>
+2018-10-16 10:31:00+0200 > <BckSp>
+2018-10-16 10:31:02+0200 > <BckSp>
+2018-10-16 10:31:05+0200 > <BckSp>
+2018-10-16 10:31:07+0200 > <BckSp>
+2018-10-16 10:31:10+0200 > <BckSp>
+2018-10-16 10:31:14+0200 > <Del><Del>
+2018-10-16 10:31:20+0200 > <Del><Down><Del><Down><Del><Down><Del><Lctrl>c
+2018-10-16 10:31:28+0200 > <Lctrl>v<Del><Del>
+2018-10-16 10:31:33+0200 > <Lctrl>c
+2018-10-16 10:31:39+0200 > <Lctrl>v<BckSp>
+2018-10-16 10:31:45+0200 > <BckSp><BckSp>
+2018-10-16 10:31:49+0200 > <BckSp><BckSp>
+2018-10-16 10:31:52+0200 > <Del><Lctrl>c
+2018-10-16 10:32:03+0200 > <Lctrl>v()<Lctrl>x<Right><Lctrl>v<Del><Lctrl>x<Lctrl> 
+2018-10-16 10:32:31+0200 > <Lctrl>v
+2018-10-16 10:32:32+0200 > <Lctrl>x<Lctrl>v<Lctrl>x<Lctrl> 
+2018-10-16 10:32:45+0200 > <Lctrl>v
+2018-10-16 10:32:46+0200 > <LShft><LShft><LShft><Lctrl>x<Lctrl>v<LShft><Lctrl>x<Lctrl>v<Del><LShft><Lctrl>x<Lctrl>v<Del><LShft><Lctrl>x<Lctrl>v<Lctrl>v<Lctrl>x<Lctrl><Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<LShft><Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl><LShft>En<LShft>Coursplez
+2018-10-16 10:37:53+0200 > <Lctrl><LAlt><Up><Lctrl><LAlt><Down><LAlt><Lctrl><LShft><Down><Lctrl><LAlt><Up>google maps
+2018-10-16 10:42:43+0200 > <LAlt><Lctrl><Down><LAlt><Lctrl><Up>association ararat
+2018-10-16 10:46:20+0200 > <Lctrl><LAlt><Lctrl><LAlt><Down><LShft>Pour ma part, je suis dispo le e<BckSp>jeudi et le vendredi
+2018-10-16 10:54:34+0200 > et puis j'aime bien les deux endroits<RShft>. (<BckSp><BckSp><RShft>... (une excuse supplémentaire pour ne pas courir<RShft>...)<Lctrl><Lctrl>port
+2018-10-16 11:00:54+0200 > 
+2018-10-16 11:00:54+0200 > <RCtrl><Lctrl><LAlt><Up><Up><LShft>Mie<RShft><LShft>Mie<RShft>7Asie
+2018-10-16 11:01:43+0200 > <RCtrl><Lctrl><LAlt><Down><LAlt><Lctrl><Up><RCtrl><Lctrl><LAlt><Down><Lctrl>aconstruire<Down>
+2018-10-16 14:14:10+0200 > <BckSp><BckSp><BckSp><BckSp>
+2018-10-16 14:25:18+0200 > <Left><Left><Left><Left><Left><Left><Up><Down><LShft><LShft><Lctrl>c
+2018-10-16 14:31:39+0200 > <Lctrl>v<LShft><Lctrl>x<Lctrl>v<Lctrl>c
+2018-10-16 14:33:17+0200 > <Lctrl>v<Lctrl>v<BckSp><BckSp><BckSp>
+2018-10-16 14:35:11+0200 > <BckSp>
+2018-10-16 14:35:17+0200 > <LShft><LShft><Lctrl>c
+2018-10-16 14:35:31+0200 > <Lctrl>v<Lctrl>v<Del><BckSp>
+2018-10-16 14:35:55+0200 > <BckSp><BckSp>
+2018-10-16 14:35:58+0200 > <BckSp><BckSp>
+2018-10-16 14:36:06+0200 > <BckSp><BckSp>
+2018-10-16 14:36:12+0200 > <BckSp>
+2018-10-16 14:36:36+0200 > <BckSp><BckSp>
+2018-10-16 14:37:50+0200 > <BckSp><BckSp>
+2018-10-16 14:37:53+0200 > <BckSp><BckSp>
+2018-10-16 14:37:56+0200 > <BckSp><BckSp>
+2018-10-16 14:37:59+0200 > <BckSp><BckSp>
+2018-10-16 14:38:02+0200 > <BckSp>
+2018-10-16 14:38:06+0200 > <BckSp>
+2018-10-16 14:38:10+0200 > <BckSp>
+2018-10-16 14:38:13+0200 > <BckSp><BckSp>
+2018-10-16 14:38:16+0200 > <BckSp><BckSp><BckSp>
+2018-10-16 14:38:20+0200 > <BckSp><BckSp>
+2018-10-16 14:38:22+0200 > <Del><BckSp>
+2018-10-16 14:38:44+0200 > <BckSp>
+2018-10-16 14:38:50+0200 > <BckSp><BckSp>
+2018-10-16 14:38:54+0200 > <BckSp>
+2018-10-16 14:38:59+0200 > <BckSp>
+2018-10-16 14:39:02+0200 > <BckSp>
+2018-10-16 14:39:05+0200 > <BckSp>
+2018-10-16 14:39:08+0200 > <BckSp>
+2018-10-16 14:39:11+0200 > <BckSp>
+2018-10-16 14:39:14+0200 > <BckSp>
+2018-10-16 14:39:17+0200 > <BckSp>
+2018-10-16 14:39:24+0200 > <Del><Del>
+2018-10-16 14:39:28+0200 > <BckSp>
+2018-10-16 14:39:32+0200 > <Del><BckSp><BckSp>
+2018-10-16 14:39:52+0200 > <Del><Del><BckSp><BckSp><BckSp>
+2018-10-16 14:40:00+0200 > <Del><Del><BckSp>
+2018-10-16 14:40:06+0200 > <BckSp>
+2018-10-16 14:40:10+0200 > <BckSp><BckSp>
+2018-10-16 14:40:13+0200 > <BckSp><BckSp>
+2018-10-16 14:40:15+0200 > <BckSp>
+2018-10-16 14:40:17+0200 > <BckSp>
+2018-10-16 14:40:20+0200 > <BckSp>
+2018-10-16 14:40:22+0200 > <BckSp>
+2018-10-16 14:40:24+0200 > <BckSp>
+2018-10-16 14:40:27+0200 > <BckSp>
+2018-10-16 14:40:32+0200 > <BckSp>
+2018-10-16 14:40:34+0200 > <BckSp>
+2018-10-16 14:40:41+0200 > <BckSp>
+2018-10-16 14:40:44+0200 > <BckSp>
+2018-10-16 14:40:46+0200 > <BckSp>
+2018-10-16 14:40:48+0200 > <BckSp>
+2018-10-16 14:40:50+0200 > <BckSp>
+2018-10-16 14:40:53+0200 > <BckSp>
+2018-10-16 14:40:56+0200 > <Del><Del>
+2018-10-16 14:40:59+0200 > <BckSp>
+2018-10-16 14:41:01+0200 > <BckSp>
+2018-10-16 14:41:05+0200 > <BckSp>
+2018-10-16 14:41:08+0200 > <Lctrl>c
+2018-10-16 14:41:13+0200 > <Lctrl> 
+2018-10-16 14:41:16+0200 > <Lctrl>v<Del><Lctrl>c
+2018-10-16 14:41:26+0200 > <Lctrl>v<Lctrl>c
+2018-10-16 14:41:32+0200 > <Lctrl>v<Lctrl>c
+2018-10-16 14:41:35+0200 > <Lctrl>v<BckSp><BckSp><BckSp>
+2018-10-16 14:41:41+0200 > <BckSp>
+2018-10-16 14:41:45+0200 > c
+2018-10-16 14:41:52+0200 > <BckSp><BckSp>
+2018-10-16 14:41:59+0200 > <Del><Lctrl>x<Lctrl>v<LShft><Lctrl>x<Lctrl>v<LShft><Lctrl>x<Lctrl>v<LShft><Lctrl>c
+2018-10-16 14:44:42+0200 > <Lctrl>v<Del>
+2018-10-16 14:44:48+0200 > <LShft><Lctrl>x<Lctrl>v<Lctrl><Lctrl>v<Del><Del><Del><LShft>Debutant<Down><Down><#+18><Up><Up><LShft>A<LShft>Venir<BckSp><LShft>V
+2018-10-16 14:45:49+0200 > <Up><BckSp><LShft>V<Lctrl> 
+2018-10-16 14:45:53+0200 > <BckSp>
+2018-10-16 14:45:55+0200 > <BckSp><LShft>V<Left><Left>'
+2018-10-16 14:46:03+0200 > <Up><BckSp><BckSp><LShft>A
+2018-10-16 14:46:10+0200 > <Lctrl>c
+2018-10-16 14:46:13+0200 > <Lctrl>v<LShft><Lctrl>x<Lctrl>v<LShft><Lctrl>x<Lctrl>v<Lctrl><Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<LShft><Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<LShft><Lctrl>x<Lctrl>v<Lctrl>vplage<LShft><Lctrl>c
+2018-10-16 14:52:33+0200 > <Lctrl>v<BckSp><BckSp>
+2018-10-16 14:52:42+0200 > <BckSp>
+2018-10-16 14:52:45+0200 > <BckSp><BckSp>
+2018-10-16 14:52:48+0200 > <BckSp><BckSp>
+2018-10-16 14:52:54+0200 > <BckSp>
+2018-10-16 14:52:57+0200 > <BckSp>
+2018-10-16 14:53:00+0200 > <BckSp>
+2018-10-16 14:53:02+0200 > <BckSp><BckSp>
+2018-10-16 14:53:06+0200 > <BckSp>
+2018-10-16 14:53:09+0200 > <BckSp><BckSp>
+2018-10-16 14:53:12+0200 > <BckSp><BckSp>
+2018-10-16 14:53:14+0200 > <BckSp>
+2018-10-16 14:53:16+0200 > <BckSp>
+2018-10-16 14:53:19+0200 > <BckSp>
+2018-10-16 14:53:21+0200 > <BckSp>
+2018-10-16 14:53:26+0200 > <BckSp><BckSp>
+2018-10-16 14:53:28+0200 > <BckSp><BckSp>
+2018-10-16 14:53:30+0200 > <BckSp><BckSp>
+2018-10-16 14:53:32+0200 > <BckSp><BckSp>
+2018-10-16 14:53:34+0200 > <BckSp>
+2018-10-16 14:53:36+0200 > <BckSp>
+2018-10-16 14:53:38+0200 > <BckSp>
+2018-10-16 14:53:41+0200 > <BckSp>
+2018-10-16 14:53:42+0200 > <BckSp>
+2018-10-16 14:53:44+0200 > <BckSp>
+2018-10-16 14:53:46+0200 > <BckSp>
+2018-10-16 14:53:48+0200 > <BckSp>
+2018-10-16 14:53:50+0200 > <BckSp><BckSp>
+2018-10-16 14:53:52+0200 > <BckSp>
+2018-10-16 14:53:54+0200 > <BckSp>
+2018-10-16 14:53:56+0200 > <BckSp><BckSp>
+2018-10-16 14:53:58+0200 > <BckSp>
+2018-10-16 14:53:59+0200 > <BckSp><BckSp>
+2018-10-16 14:54:01+0200 > <BckSp>
+2018-10-16 14:54:04+0200 > <BckSp>
+2018-10-16 14:54:06+0200 > <BckSp>
+2018-10-16 14:54:08+0200 > <BckSp>
+2018-10-16 14:54:10+0200 > <BckSp>
+2018-10-16 14:54:17+0200 > <BckSp>
+2018-10-16 14:54:20+0200 > <BckSp>
+2018-10-16 14:54:22+0200 > <BckSp>
+2018-10-16 14:54:24+0200 > <BckSp>
+2018-10-16 14:54:25+0200 > <BckSp>
+2018-10-16 14:54:28+0200 > <BckSp>
+2018-10-16 14:54:30+0200 > <BckSp>
+2018-10-16 14:54:33+0200 > <BckSp>
+2018-10-16 14:54:36+0200 > <BckSp>
+2018-10-16 14:54:38+0200 > <BckSp>
+2018-10-16 14:54:41+0200 > <BckSp>
+2018-10-16 14:54:43+0200 > <BckSp>
+2018-10-16 14:54:46+0200 > <BckSp>
+2018-10-16 14:54:48+0200 > <BckSp>
+2018-10-16 14:54:51+0200 > <BckSp>
+2018-10-16 14:54:53+0200 > <BckSp>
+2018-10-16 14:54:55+0200 > <BckSp>
+2018-10-16 14:54:57+0200 > <BckSp>
+2018-10-16 14:54:59+0200 > <BckSp>
+2018-10-16 14:55:01+0200 > <BckSp>
+2018-10-16 14:55:03+0200 > <BckSp>
+2018-10-16 14:55:05+0200 > <BckSp>
+2018-10-16 14:55:08+0200 > <BckSp>
+2018-10-16 14:55:10+0200 > <BckSp>
+2018-10-16 14:55:13+0200 > <BckSp>
+2018-10-16 14:55:15+0200 > <BckSp>
+2018-10-16 14:55:16+0200 > <BckSp>
+2018-10-16 14:55:19+0200 > <BckSp>
+2018-10-16 14:55:21+0200 > <BckSp>
+2018-10-16 14:55:23+0200 > <BckSp>
+2018-10-16 14:55:25+0200 > <BckSp>
+2018-10-16 14:55:27+0200 > <BckSp>
+2018-10-16 14:55:30+0200 > <BckSp>
+2018-10-16 14:55:32+0200 > <BckSp>
+2018-10-16 14:55:35+0200 > <BckSp>
+2018-10-16 14:55:37+0200 > <BckSp>
+2018-10-16 14:55:40+0200 > <LShft>Paris<Right><LShft>Paris <LShft>Orly<Down><Left><LShft>Lisbon<Down><Up><Right><LShft>Lisbon<LShft> <LShft>AIrpoert<BckSp><BckSp>r<BckSp><BckSp><BckSp>ort<Down><Left><Up><Up><Right><Right><Right><Left><KP1><KP7><RShft>/<KP1><KP0><RShft>/<KP2><KP0><KP1><KP8><Right><KP1><KP0>;<BckSp>:<KP4><KP5>:<KP0><KP0>
+2018-10-16 14:59:13+0200 > <Up><Down><Left><KP1><KP7>:<KP1><KP0><RShft>/<KP2><KP0><KP1><KP8><Left><Left><Right><Right><BckSp><RShft>/<Right>
+2018-10-16 14:59:28+0200 > <Up><Right><KP1><KP2>:<KP1><KP5><Down><Up><Down><Left><Left><Left><Down><LShft><Lctrl>c
+2018-10-16 14:59:42+0200 > <Lctrl>v<LShft>Rio<Right><Lctrl>c
+2018-10-16 15:00:00+0200 >  de <LShft>Janerio
+2018-10-16 15:00:08+0200 > <Lctrl>c
+2018-10-16 15:00:17+0200 > <Lctrl>v <LShft>Galeao <LShft>A<RShft>.
+2018-10-16 15:00:28+0200 > <LShft><Lctrl>c
+2018-10-16 15:00:42+0200 > <Lctrl>v<KP1><KP3>:<KP0><KP5>:<KP0><KP0><Down><KP1><KP9>:<KP0><KP0>:<KP0><KP0>
+2018-10-16 15:00:56+0200 > <LShft><Lctrl>c
+2018-10-16 15:01:02+0200 > <Lctrl>v<KP2><KP1><Right><Right><BckSp><KP3><Down><Lctrl>c
+2018-10-16 15:01:37+0200 > <LShft>Bueo<BckSp>nos <LShft>Aires<Right><LShft>Buenos <LShft>Aires <LShft>Pistarini<Right><Down><Down>
+2018-10-16 15:02:03+0200 > <KP1><KP8>:<KP1><KP0><BckSp><BckSp><BckSp><RShft>/<KP1><KP0><RShft>/<KP1><KP8><Right><KP0><KP1>:<KP0><KP0>:<KP0><KP0>
+2018-10-16 15:02:24+0200 > <LShft>GMT<Left><LShft>Local<Down><Right>ho<BckSp>eure gmt
+2018-10-16 15:02:51+0200 > paris<KP+><KP0><KP2><KP0><KP0> <LShft>UTClisbonbn<BckSp><BckSp><RShft>+<KP0><KP1><KP0><KP0> <LShft>UTClondonb<BckSp>dublintemps de vol paris lisbonne
+2018-10-16 15:06:23+0200 > <KP2>h<KP3><KP0><BckSp><BckSp> rio<KP9>h<KP5><KP5><BckSp> buenos aires
+2018-10-16 15:07:11+0200 > <KP3>h<KP2><KP5><Lctrl>c
+2018-10-16 15:07:28+0200 > <Lctrl>v=<KP+><KP2>
+2018-10-16 15:07:45+0200 > =<KP+><BckSp><KP-><KP2>:<KP0><KP0>:<KP0><KP0>
+2018-10-16 15:08:02+0200 > <KP2>:<KP0><KP0>:<KP0><KP0>
+2018-10-16 15:08:08+0200 > =<KP->
+2018-10-16 15:08:15+0200 > <Right><BckSp><BckSp><KP2><KP2>
+2018-10-16 15:08:22+0200 > <BckSp><KP+>
+2018-10-16 15:08:27+0200 > <KP-><KP0>
+2018-10-16 15:08:35+0200 > <KP-><KP1>:<KP0><KP0>:<KP0><KP0>
+2018-10-16 15:08:43+0200 > =<KP+>
+2018-10-16 15:08:50+0200 > rio de janeii<BckSp>ron
+2018-10-16 15:09:07+0200 > <BckSp>
+2018-10-16 15:09:09+0200 > riorio<KP-><KP3>:<BckSp><BckSp><BckSp><KP-><KP3><BckSp><KP0><KP3><KP0><KP0> <LShft>UTCparis<BckSp><KP+>
+2018-10-16 15:10:29+0200 > <BckSp><KP+>
+2018-10-16 15:10:32+0200 > <Del><KP->
+2018-10-16 15:10:37+0200 > <Del><KP->
+2018-10-16 15:10:43+0200 > <LShft><Lctrl>c
+2018-10-16 15:10:50+0200 > <Lctrl>v<Lctrl>v<BckSp><KP-><KP3>
+2018-10-16 15:10:58+0200 > <BckSp><BckSp><KP0><KP3>
+2018-10-16 15:11:05+0200 > <KP0>h<KP5><KP0>
+2018-10-16 15:11:35+0200 > <KP0><KP2>h<BckSp>:<KP3><KP0>:<KP0><KP0><Down><Up><Up><Up><Up><KP0><KP0>:<KP5><KP0>:<KP0><KP0><Down><Up>=<KP->
+2018-10-16 15:12:17+0200 > =<KP->
+2018-10-16 15:12:33+0200 > =<KP->
+2018-10-16 15:12:41+0200 > =<KP->
+2018-10-16 15:12:51+0200 > =<KP->
+2018-10-16 15:12:59+0200 > <LShft><Lctrl>c
+2018-10-16 15:13:06+0200 > <Lctrl>v<LShft><Lctrl>c
+2018-10-16 15:13:11+0200 > <Lctrl>vbueo<BckSp>nos<LShft><Lctrl>c
+2018-10-16 15:13:37+0200 > <Lctrl>v=<KP+>
+2018-10-16 15:13:59+0200 > =<KP+><KP+>
+2018-10-16 15:14:08+0200 > =<KP+>
+2018-10-16 15:14:15+0200 > <Lctrl><Lctrl><Lctrl><Lctrl><Lctrl><LShft>Parie<BckSp>s=<KP+><F4>
+2018-10-16 15:15:28+0200 > <Del><Del>un peu de statistiques<BckSp> pour ton voyage
+2018-10-16 15:16:40+0200 > 
+2018-10-16 15:16:40+0200 > le vol paris <BckSp>-<LShft>Lisobonn<BckSp><BckSp><BckSp><BckSp><BckSp>bonne va durer <KP2>h<KP3><KP0><Left><Left><Left><Left><KP0><Right><Right><Right><Right> <BckSp>
+2018-10-16 15:17:26+0200 > le b<BckSp>vole libonne-<LShft>Rio<BckSp><BckSp><LShft>P<Down><BckSp><LShft>L     <BckSp>va durer <KP9><BckSp><KP0><KP5><BckSp><KP9>h<KP5><KP5> (<KP1> heure de <BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>car il y a <KP1>j<BckSp>h<BckSp> heure de decalage entre le lieu de depart er <BckSp><BckSp>t le lieu d'arrivée)<BckSp>
+2018-10-16 15:19:00+0200 > <BckSp><Lctrl>c
+2018-10-16 15:19:08+0200 > 
+2018-10-16 15:19:10+0200 > <Lctrl>v<BckSp><KP3><BckSp><KP4>s
+2018-10-16 15:19:23+0200 > (donc depui <BckSp>s le but<BckSp><BckSp><BckSp>début
+2018-10-16 15:19:38+0200 > (tu arrives à <LShft>Lisbonne à <KP1><KP1>h<KP1><KP5> heure<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><KP1><KP3>h<KP1><KP5>, heure <LShft>Française)ftu arrives à <LShft>Rio à minuit, heure <RShft>F<BckSp>franço<BckSp>aise)
+2018-10-16 15:20:45+0200 > 
+2018-10-16 15:20:45+0200 > 
+2018-10-16 15:20:48+0200 > lk<BckSp>e vol  <BckSp>s<BckSp><LShft>Rio-<LShft>Bur<BckSp>eo<BckSp>nos <RShft>Aires      <LShft>><LShft>><LShft>>     va duer<BckSp><BckSp>rer <KP0><KP3>h<KP3><KP0>
+2018-10-16 15:21:48+0200 > (pas de decalage en<BckSp><BckSp>horaire entre rio <BckSp><BckSp><BckSp><BckSp><Lctrl>c
+2018-10-16 15:22:13+0200 > <Lctrl>v)
+2018-10-16 15:22:18+0200 > (tu arrives à <LShft>Bur<BckSp>enos <LShft>Aires à <LShft>T<BckSp>tu pars de <LShft>Lisbonne à <KP1><KP4>:<KP0><KP5><BckSp><BckSp><BckSp>h<KP0><KP5>, heure française,
+2018-10-16 15:23:23+0200 >  tu pars de <LShft>Rio à <KP0><KP3><BckSp><BckSp><KP2><BckSp><KP0><KP5><BckSp><KP2>h<KP3><KP0>, heure française,
+2018-10-16 15:24:10+0200 >  à <BckSp><BckSp><KP6>h<KP3><KP0>, heure française)
+2018-10-16 15:24:37+0200 > 
+2018-10-16 15:24:37+0200 > tu <BckSp><BckSp><BckSp>en additionnant<BckSp>, <BckSp><BckSp> les trois vols, tu seras dans l'avion pendant <KP1><KP5>:<BckSp>h<KP5><KP5>
+2018-10-16 15:25:22+0200 > 
+2018-10-16 15:25:23+0200 > tu as deux pos<BckSp><BckSp>auses, la premièer <BckSp><BckSp><BckSp>re, à <LShft>Lisbonne <LShft>Due<BckSp><BckSp><BckSp>di<BckSp><BckSp><BckSp>, dure <KP5><KP0> minutes, la seconde, à <RShft>Rio, dure <KP2>h<KP3><KP0><RShft>, soit <KP3>h<KP2><KP0> en tout
+2018-10-16 15:26:28+0200 > <BckSp><RShft>.
+2018-10-16 15:26:31+0200 > <RShft>
+2018-10-16 15:26:33+0200 > <RShft>Entre le décollage à <LShft>Paris, à <KP1><KP0>h<KP4><KP5> heure française, et l'atterissage à <LShft>Buenos <LShft>Aires, à <KP6>h<Left><BckSp><KP0><KP0><KP0> heure française, tu vas donc passer <KP1><KP9>h<KP1><KP5><KP3><KP0>_<KP1><KP1><BckSp><BckSp><BckSp>-<KP1><KP1>
+2018-10-16 15:28:27+0200 > =
+2018-10-16 15:28:31+0200 >  à <BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>h et <KP1><KP5> miunues<BckSp><BckSp><BckSp><BckSp><BckSp>nutes à vor<BckSp>yager (tra<BckSp>ajet <RShft>+ escales)s :<Left><BckSp><LShft>L<BckSp><LShft>U<BckSp><LShft>L<BckSp><LShft>L<BckSp><LShft>Een additionnant
+2018-10-16 15:29:53+0200 > <Left>d<BckSp><LShft>T <Right>eures<RShft>.
+2018-10-16 15:30:52+0200 > 
+2018-10-16 15:30:52+0200 > <LShft>Je prevois une permanence téléphoniques <BckSp><BckSp> pendant les escales :
+2018-10-16 15:31:29+0200 > tu peux m'al<BckSp>ppeler entre <KP1><KP3>j<BckSp>h<KP1><KP5> et <KP1><KP4>h<KP0><KP5> demain mini<BckSp><BckSp>di
+2018-10-16 15:31:54+0200 > tu peux aussi m'appelemer<BckSp><BckSp><BckSp>er ntre <BckSp><BckSp><BckSp><BckSp><BckSp>entre <BckSp>minuit et <KP2>h<KP3><KP0>, dans la nuit de jeudi à vendredi
+2018-10-16 15:33:47+0200 > et tu peux enfin m'appeler à <KP6>h du mai<BckSp>tin<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>, vendredi mai<BckSp>tinmercredijeudijeudimercredi<Right> - <Down><Left><Left><Left> - <Down><Left><Left><Left> - ""<Del><Lctrl>c
+2018-10-16 15:37:29+0200 > <Lctrl>v<BckSp>t<BckSp>dès
+2018-10-16 15:38:50+0200 > 
+2018-10-16 15:38:50+0200 > et, au fait, d<BckSp>tu sais quio<BckSp><BckSp>oi <RShft>? : je peux perdre mon temps de plai<BckSp><BckSp>ein de façons avec toi,<BckSp> à faire des statistiques inutiles<BckSp><#+11>loug<BckSp><BckSp><BckSp><BckSp><BckSp><#+25><BckSp><BckSp><BckSp><BckSp>passerquand je fais ça,  je cr<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>, m^eme à faire des tuc<BckSp><BckSp>rucs ini<BckSp>utiles, je crois <BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>'aime bien passer mon temps à penser à toi<RShft>...<Lctrl>adistrowatch
+2018-10-16 15:52:19+0200 > slashgeo
+2018-10-16 15:52:39+0200 > planet libre
+2018-10-16 15:55:22+0200 > <Esc><LShft>Mie<RShft>3Asie
+2018-10-16 16:06:38+0200 > <Lctrl>c
+2018-10-16 16:14:18+0200 > fre<Lctrl>vlien<Left>
+2018-10-16 16:14:58+0200 > 
+2018-10-16 16:14:58+0200 > <Up><Up>ssh<LShft>Hebdomadaire<Home><LShft>VT_
+2018-10-16 16:15:36+0200 > <LShft>VT_<LShft><LShft>Coordination
+2018-10-16 16:15:50+0200 > <LShft>Grans<BckSp><BckSp><BckSp><BckSp><BckSp><LShft>CA<BckSp><BckSp><LShft>AC_<LShft>Grands<LShft>Projey<BckSp>ts
+2018-10-16 16:16:49+0200 > <LShft>Taiga<LShft>Taiga<Down><LShft>Gann<BckSp>tt
+2018-10-16 16:17:58+0200 > <LShft>Qgis<Down><LShft>Geogig
+2018-10-16 16:18:06+0200 > pour l'ergonomie, la pla<BckSp><BckSp><BckSp><BckSp>m<BckSp> modification des tache<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><#+16><BckSp>o<BckSp>'ro<BckSp><BckSp>ordonnemant e<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>mencement des tachespour la planification<Down>pour la localisation<Down>l=pour l'ho<BckSp>ir<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><LShft>P<BckSp>pour l'hisot<BckSp><BckSp>toridatio<BckSp><BckSp><BckSp><BckSp><BckSp>sation
+2018-10-16 16:19:38+0200 > <Down><Left><Esc><LShft>Mie<RShft>3Asie
+2018-10-16 16:31:00+0200 > <LAlt><Lctrl><Down><Lctrl><LAlt><LAlt><Lctrl><Down><LShft>Plan<LShft>Velo<Del><Del><Del><Lctrl><LShft>Mie<RShft>7Asie
+2018-10-16 16:38:42+0200 > <LShft><Home><Right><#+28><Right><#+31><Lctrl><Del><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>liés au <LShft>Plan <LShft>Vélo<LShft><LShft><Del><Del><LShft><F5><F5><F5><LShft>Plan<LShft>Velo
+2018-10-16 16:51:03+0200 > <KP8><KP0><KP0><KP0>
+2018-10-16 16:52:45+0200 > <KP6><KP0><KP0><KP0>
+2018-10-16 16:52:55+0200 > <BckSp><KP5>
+2018-10-16 16:53:35+0200 > <Lctrl><Lctrl><Lctrl><KP2><KP3><KP3><KP3><KP.><KP3><KP3><LShft>Velo
+2018-10-16 17:05:38+0200 > <LShft>b_transport<LShft><LShft><Lctrl>b_mobitrans
+2018-10-16 17:07:40+0200 > <LShft><Lctrl><KP3><KP4><KP1><KP0><KP5><KP0><KP0><KP0>
+2018-10-16 17:10:35+0200 > <Lctrl><Lctrl><Lctrl><Lctrl><Lctrl><Lctrl><Lctrl><LShft>Plan<LShft>Velo
+2018-10-16 17:15:42+0200 > <RCtrl><Lctrl><LAlt><Up><Lctrl><LAlt><Up><Lctrl><LAlt><Up><LShft>Mie<RShft>7Asie
+2018-10-16 17:16:51+0200 > <F5><F5><RCtrl><Lctrl><LAlt><Down><Lctrl><LAlt><Up><F5><LAlt><Lctrl><Down><RCtrl><LAlt><Lctrl><Down><Down><Lctrl><LAlt><Up><LAlt><Lctrl><Up><Lctrl><Lctrl><Lctrl><Lctrl><Lctrl><LAlt><Up><RCtrl><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>aysage_<KP0><KP5><KP0><KP0><KP0><Lctrl><Lctrl>c
+2018-10-16 17:32:20+0200 > , <Lctrl>v)<Right>'<Right><#+15><Right><Left><Left><Left><Left><Left><BckSp><AltGr>\\s<AltGr>\<Right><Right><Right><Right><AltGr>\<Right><Right>'<Left><Left><Left><Left><Left><Left><Left><Left><Lctrl>c
+2018-10-16 17:33:39+0200 > <KP5>,<Right><Left><Right><Right><BckSp><Left><RMeta><#+15><AltGr>\<Left><Left><Left> <BckSp><AltGr>\`<Left><Left><Left><Left><Left><Left><Left><AltGr>\<BckSp><Right><Right><Right><Right><Right><Right><BckSp><BckSp><BckSp><BckSp> <BckSp><BckSp><AltGr>\<AltGr>\<Del><BckSp><AltGr>\\s<Esc><LShft>Mie<RShft>3Asie
+2018-10-16 17:57:01+0200 > <KP1><KP0><LAlt><Tab><Tab><Tab><Tab><Tab><Tab><Tab><Tab><Tab><Tab><Tab><Tab><Tab><LAlt><Tab><Tab><Tab><Tab><Tab><#+1><Lctrl><LAlt><Up><LAlt><Lctrl><Down><LAlt><Lctrl><Down><Lctrl><LAlt><Up><Up><LShft>VD_<LShft>Programmation<LShft>Velo
+2018-10-16 18:02:45+0200 > <RCtrl><Lctrl><LAlt><Down><Up><Up><Lctrl><LAlt><Down><LAlt><Tab><KP1><KP0><KP1><KP0><KP5><KP0><KP1><KP0><KP7><Esc><LShft>Mie<RShft>3Asie
+2018-10-16 18:29:45+0200 > <KP1><KP0><KP1><KP0><KP1><KP0><KP1><KP0><KP1><KP0><KP1><KP0><Lctrl>c
+2018-10-16 18:33:59+0200 > <Lctrl>v<Lctrl>v<KP1><KP5><KP2><KP0><Lctrl>v<Lctrl>c
+2018-10-16 18:38:34+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-16 18:41:22+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-16 18:42:49+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-16 18:44:43+0200 > <Lctrl>v<KP1><KP0><KP2><BckSp><KP1><KP5><KP8><KP2><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>aysage_<KP5><BckSp><KP0><KP5><KP0><KP0><KP0><Left><LAlt><Lctrl><Down><Up><Up><Up>anais
+2018-10-16 18:55:27+0200 > <Lctrl>c
+2018-10-16 18:56:06+0200 > <Lctrl>v
+2018-10-16 18:56:11+0200 > <RCtrl><LAlt><Lctrl><Down><Up><Up><LShft>Mie<RShft>7Asie
+2018-10-16 18:56:40+0200 > <F5><F5><F5><F5><F5><F5><F5><RCtrl><LAlt><Lctrl><Down><Down><Down><RCtrl><LAlt><Lctrl><Up><Up><RCtrl><Lctrl><LAlt><Up><Up><RCtrl><LAlt><Lctrl><Down><Down><Down><LAlt><Lctrl><Up><Esc><LShft>Mie<RShft>3Aie
+2018-10-17 08:25:23+0200 > <LShft>Mie<RShft>3Asie
+2018-10-17 08:25:29+0200 > <Lctrl><LAlt><Up><Up><Up><LShft>Mie<RShft>7Ase<BckSp>ie
+2018-10-17 08:25:41+0200 > <F5><Lctrl><LAlt><Down><RCtrl><Lctrl><LAlt><Down><Down><Lctrl><LAlt><Down><RCtrl><Lctrl><LAlt><Up><Up><Up><Lctrl><LAlt><Down><Down><RCtrl><RCtrl><Lctrl><LAlt><Down><Up><Esc><LShft>Mie<RShft>3Asie
+2018-10-17 08:36:21+0200 > <Esc><LShft>Mie<RShft>3Asie
+2018-10-17 08:43:12+0200 > <Lctrl><LAlt><Up><Up><Down>php<BckSp>j<BckSp><BckSp>j
+2018-10-17 08:44:09+0200 > fah
+2018-10-17 08:44:15+0200 > <BckSp><BckSp><BckSp>ler
+2018-10-17 08:44:18+0200 > <RCtrl><LAlt><Lctrl><Up><Up><Up><LShft>Mie<RShft>7Asie
+2018-10-17 08:45:10+0200 > <LShft>Mie<RShft>6Asie
+2018-10-17 08:45:16+0200 > <LShft>Mougineau<BckSp><BckSp><BckSp>autpjp
+2018-10-17 08:47:34+0200 > mouginot
+2018-10-17 08:47:40+0200 >  <BckSp><BckSp><BckSp><BckSp>ot <LShft>Alainalain<RShft>.mouginotalain<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>alainalain<Lctrl>c
+2018-10-17 08:48:39+0200 > <Lctrl>v<AltGr>@ville-larochelle<RShft>.fralain<RShft>.mouginotalain<KP0><KP0><KP0><KP3><KP2><KP0><KP2><KP0>frederic<RShft>.garel<Tab><LShft>Mie<RShft>6Asie
+2018-10-17 08:52:35+0200 > <LShft>Le <LShft>Theil<LShft>Mouginot <LShft>Alain<LShft>Alain<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>mouginot<RCtrl><Lctrl><LAlt><Down><Down><Lctrl><LAlt><Down>osm<RCtrl><Lctrl><LAlt><Up><Lctrl><LAlt><Up>osm import qgis
+2018-10-17 09:01:38+0200 > <LAlt><Lctrl><Down><Lctrl><LAlt><Down><LAlt><Lctrl><LAlt><Lctrl><Down><Lctrl>a<Esc>:q
+2018-10-17 09:02:18+0200 > cd <AltGr><AltGr>#<BckSp><AltGr>#<BckSp><AltGr>~<RShft>/<LShft>Do<Tab>ins<Tab>sou<Tab>en<Tab>
+2018-10-17 09:02:28+0200 > ls-al<BckSp><BckSp><BckSp> <BckSp><BckSp><BckSp>cd <RShft>..<RShft>/o<Tab><Tab><BckSp><#+29>sm
+2018-10-17 09:02:40+0200 > ls -al
+2018-10-17 09:02:42+0200 > <Lctrl>a<Up><Up><Up><Up><Up><Up><Up><Up><Up><Up>vi os<Tab><LShft>D<Tab><LShft>F<Tab>
+2018-10-17 09:03:01+0200 > <Up><#+71><Down><#+22><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><#+16><Lctrl><LAlt><Up><Lctrl>v
+2018-10-17 09:03:55+0200 > <Lctrl><LAlt><Down>:q
+2018-10-17 09:04:05+0200 > ged<Tab>os<Tab><LShft>D<Tab><LShft>F<Tab>
+2018-10-17 09:04:12+0200 > <Lctrl>c
+2018-10-17 09:04:26+0200 > <Lctrl><LAlt><Up><Up><Down><RCtrl><Lctrl><LAlt><Down><Lctrl>v
+2018-10-17 09:04:31+0200 > <Lctrl><LAlt><Lctrl><LAlt><Down><BckSp><BckSp><KP1><KP7><Right><Right><Right><Right><Right><Right><Right><Right><Right><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>octobre<Right><BckSp><KP8><BckSp><BckSp><KP1><KP7><Right><Right><Right><Right><Right><Right><Right><Right><Right><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>octobre<BckSp><KP8><Del><KP2><BckSp><BckSp><BckSp><KP0><KP3><KP4><BckSp><KP2><Down><BckSp><KP2><Right><Right><Right><Right><BckSp><BckSp><BckSp><KP0><KP3><KP4><Up><BckSp><BckSp><BckSp><KP0><KP3><KP4><Lctrl><LAlt><Up><Lctrl><LAlt><Down><BckSp><KP2><Down><Down><BckSp><KP2><Right><Right><Right><Right><BckSp><BckSp><BckSp><KP0><KP3><KP4><Up><Up><BckSp><BckSp><BckSp><KP0><KP3><KP4><BckSp><BckSp><BckSp><KP0><KP3><KP4><Down><BckSp><BckSp><BckSp><KP0><KP3><KP4><Lctrl>s<RShft>./os<Tab><LShft>D<Tab><LShft>F<Tab>
+2018-10-17 09:07:10+0200 > <LShft>Mie<RShft>3Asie
+2018-10-17 09:07:18+0200 > <Lctrl>c
+2018-10-17 09:07:28+0200 > cd<BckSp><BckSp><BckSp>ls -al <AltGr>~<RShft>/o<Tab><BckSp><BckSp><BckSp><BckSp><LShft>D<Tab>os<Tab><BckSp>c<Tab>os<Tab>
+2018-10-17 09:07:48+0200 > <Up><RShft>/po<Tab><KP*><Left><#+46><Right><Right><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>m<BckSp>rm
+2018-10-17 09:08:04+0200 > y
+2018-10-17 09:08:11+0200 > y
+2018-10-17 09:08:12+0200 > <Up><Up>
+2018-10-17 09:08:14+0200 > <Up><Up><Up>
+2018-10-17 09:08:28+0200 > <LAlt><Lctrl><Up><Up><LAlt><Lctrl><Down><RCtrl><Lctrl><LAlt><Down>osm qgis vecteur
+2018-10-17 09:09:05+0200 > fred<LShft>La <LShft>Rochelle<RCtrl><Lctrl><LAlt><Down>gedi<Tab>gedi<Tab>os<Tab><LShft>I<Tab><LShft>F<Tab>
+2018-10-17 09:12:51+0200 > <Down><#+68><Down><#+16><Down><#+54><Down><#+26><Down><#+23><Down><#+16>:q
+2018-10-17 09:13:25+0200 > <BckSp><BckSp><BckSp><Esc><RShft>./i<BckSp>os<Tab><LShft>I<Tab><LShft>F<Tab>
+2018-10-17 09:13:48+0200 > <Lctrl><LAlt><Up><LAlt><Lctrl><Up><Down><Down><LAlt><Lctrl><Down><Lctrl><LAlt><Up><RCtrl><Lctrl><LAlt><Up><RCtrl><LAlt><Lctrl><Up><LAlt><Lctrl><Up><Down>bbike<LAlt><Lctrl><Up><Up><Lctrl><LAlt><Down><Down><Left><Left><Left>b<Lctrl><LAlt><Up><Up><LShft><Del><RCtrl><Lctrl><LAlt><Down><Down>osm<LShft><KP5><KP2><BckSp><KP5><KP5><KP0><LShft><Lctrl>c
+2018-10-17 09:38:58+0200 > <Lctrl>v<Right><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>_fg
+2018-10-17 09:39:11+0200 > <Right><Left><Left><Right><Right><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>_fg
+2018-10-17 09:39:19+0200 > <Right><Left><Right><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>_fg
+2018-10-17 09:39:27+0200 > <Right><Left><Right><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>_fg
+2018-10-17 09:39:35+0200 > <Right><Left><Right><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>_fg
+2018-10-17 09:39:46+0200 > <Right><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>_fg
+2018-10-17 09:40:08+0200 > structurant_pisteeee<Lctrl><Lctrl>c
+2018-10-17 09:53:44+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP1><KP0><Left><Right><#+14><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>t<Left><Left><Left><Left><Left><Left><KP2><KP5>_<Lctrl>c
+2018-10-17 09:57:10+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-17 10:01:08+0200 > <Lctrl>v<KP1><KP0><KP5><KP2><KP0>_struct_doubles<Lctrl>c
+2018-10-17 10:02:52+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<BckSp><KP3><BckSp><KP3><Lctrl>v<Lctrl>v<BckSp><KP3><BckSp><KP3><BckSp><KP3><BckSp><KP3><Home><KP4><KP0>_<Right><#+16>_struc<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>struct_ttt<Lctrl>c
+2018-10-17 10:08:35+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl><Lctrl>v<KP4><KP0><KP1><KP0><Lctrl>c
+2018-10-17 10:10:04+0200 > <Lctrl>v<Del><Del><KP8><KP2><KP0><RCtrl><Lctrl><LAlt><Up><Up>s<BckSp>sitea
+2018-10-17 10:12:24+0200 > lavoiriser
+2018-10-17 10:13:23+0200 > <BckSp><BckSp><BckSp><BckSp><BckSp>sier
+2018-10-17 10:13:30+0200 > chantal
+2018-10-17 10:13:44+0200 > <Del><BckSp>
+2018-10-17 10:13:54+0200 > lavoiriser<BckSp><BckSp><BckSp><BckSp><BckSp>sier
+2018-10-17 10:14:57+0200 > garrec
+2018-10-17 10:15:05+0200 > <Del>urba<BckSp><BckSp><BckSp><BckSp>xavier
+2018-10-17 10:15:20+0200 > xavier
+2018-10-17 10:15:30+0200 > <Lctrl><LAlt><Down><Down><Up><LShft>Mie<RShft>3Asie
+2018-10-17 10:19:13+0200 > <LAlt><Lctrl><Up><Lctrl><LAlt><Up><Lctrl><LAlt><Down><Down><Down><KP4><KP5><BckSp><BckSp><KP5><KP0>_struct_double<Lctrl>v<KP4><KP0>_struct_double<BckSp><KP3><Del><Lctrl>c
+2018-10-17 10:22:35+0200 > <Lctrl>v<Lctrl>c
+2018-10-17 10:24:33+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<BckSp><KP5>bande<Lctrl>c
+2018-10-17 10:38:51+0200 > <Lctrl>v<Lctrl>v<KP1><KP0><Lctrl><LAlt><Up><Up>anais
+2018-10-17 10:43:35+0200 > la roche<Lctrl><LAlt><Up><Lctrl><LAlt><Up><LAlt><Lctrl><Lctrl><LAlt><Down><Down><Lctrl>v<Lctrl><Lctrl>c
+2018-10-17 10:55:10+0200 > <Lctrl>v<Lctrl>v<KP3><Lctrl>c
+2018-10-17 10:57:24+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-17 11:00:14+0200 > <Lctrl>v<KP1><KP0><Lctrl>c
+2018-10-17 11:01:21+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-17 11:02:56+0200 > <Lctrl>v<KP3><KP5>_struct_bande<Lctrl>c
+2018-10-17 11:05:35+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-17 11:10:45+0200 > <Lctrl><Lctrl>c
+2018-10-17 11:10:51+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>vservice<Lctrl>vservice<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl><KP3><KP0>_struct_double<Lctrl>v<BckSp><KP0>double<KP3><KP0>_struct_double<Lctrl>c
+2018-10-17 11:17:43+0200 > <Lctrl>vservice<Lctrl>c
+2018-10-17 11:19:03+0200 > <Lctrl>v<Lctrl>c
+2018-10-17 11:19:22+0200 > <Lctrl>v<Home><KP1><KP5>_<BckSp><BckSp>amenagç<BckSp><BckSp><BckSp>a_piste<Left><Left><Left><Left><Left><Left>g<BckSp><KP0><Lctrl>v<KP1><KP0>_ama<BckSp>enag_piste<Lctrl>v<KP1><KP0>_ama<BckSp>enage<BckSp>_piste<KP1><KP0><BckSp><KP5><BckSp><KP5><BckSp><KP5><Esc><LShft><Lctrl><BckSp><LShft>Mie<RShft>3Asie
+2018-10-17 11:49:51+0200 > <BckSp><KP1><BckSp><KP5><Lctrl><LAlt><Up><Lctrl><LShft><LShft><LShft><LShft><LShft><Lctrl>c
+2018-10-17 11:55:33+0200 > <Lctrl>v<Del><LShft>Lieu<LShft>Nau<BckSp>ti<BckSp>ure<LShft>Periode<LShft><KP2><KP0><KP1><KP7><Down><Up><LShft>Fait<Down><Up><Lctrl>c
+2018-10-17 12:00:27+0200 > <Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Up><Up><Up><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><LShft>En<LShft>V<BckSp><LShft>Cours<Down><KP2><KP0><KP1><KP8><Down><KP2><KP0><KP1><KP8><Down><KP2><KP0><KP1><KP9><Down><KP2><KP0><KP2><KP2><Down><KP2><KP0><KP1><KP8><Down><KP2><KP0><KP1><KP8><Down><Up><Up><Up><Down><Down><Down><LShft>Fait<Down><Down><Down><Down><Up><Up><Up><KP2><KP0><KP2><KP2><Down><KP2><KP0><KP1><KP9><Down><KP2><KP0><KP1><KP9><Down><KP2><KP0><KP1><KP8><BckSp><KP9><Down><KP2><KP0><KP2><KP1><Down><LShft>ADefinir<Down><Down><Up><Up><Lctrl>c
+2018-10-17 12:01:42+0200 > <Down><Down><Down><Down><Down><Lctrl>v<Down><KP2><KP0><KP1><KP8><Down><KP2><KP0><KP1><KP8><Down><KP2><KP0><KP1><KP9><Down><LShft>Fait<Down><LShft>Fait
+2018-10-17 12:02:16+0200 > <KP2><KP0><KP2><KP0><Down><KP2><KP0><KP1><KP9><Down><KP2><KP0><KP2><KP1><Down><KP2><KP0><KP2><KP1><Down><KP2><KP0><KP2><KP0><Down><Down><Down><Down><Down><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Lctrl>c
+2018-10-17 12:02:35+0200 > <Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Lctrl>v<Down><Lctrl>v<Down><KP2><KP0><KP2><KP1><Down><KP2><KP0><KP1><KP8><Down><KP2><KP0><KP1><KP9><Down><Down><Up><Up><Up><Up><Up><Up><Down><Lctrl>c
+2018-10-17 12:02:50+0200 > <Down><Down><Down><Down><Lctrl>v<Down><Lctrl>v<Down><Down><Down><Up><Up><KP2><KP0><KP1><KP8><Down><KP2><KP0><KP2><KP0><Down><LShft>En<LShft>Cours<Down><Down><Up><KP2><KP0><KP2><KP1><Down><KP2><KP0><KP1><KP9><Down><KP2><KP0><KP2><KP0><Down><Up><Up><Up><Down><Down><Down><Up><Up><Up><Up><Up><Up><Up><Lctrl>c
+2018-10-17 12:03:14+0200 > <Down><Down><Down><Down><Down><Down><Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><KP2><KP0><KP1><KP9><Down><KP2><KP0><KP1><KP8><Down><Down><Down><Down><Up><Up><Up><KP2><KP0><KP2><KP1><Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Left><#+20><Right><#+3><Right><Right><Right><Right><Right><Right><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>serviceservice<Esc><LShft>Mie<RShft>3Asie
+2018-10-17 12:29:14+0200 > <RCtrl><LAlt><Lctrl><Up><Up><RCtrl><LAlt><Lctrl><Up><Down><LAlt><Lctrl><Up><Down><LAlt><Lctrl><Down><Down><KP5><KP0><KP3><KP5>_struct_bande<Lctrl>c
+2018-10-17 12:39:14+0200 > <Lctrl>v<Lctrl>v<KP2><KP5>_struct_piste<BckSp><KP2><KP5>_struct_pist<KP3><KP5>_struct_bande<Lctrl>c
+2018-10-17 12:41:28+0200 > <Lctrl>v<Lctrl>c
+2018-10-17 12:41:52+0200 > <Lctrl>v<Lctrl>c
+2018-10-17 12:42:16+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-17 12:44:01+0200 > <Lctrl>v<Lctrl>c
+2018-10-17 12:44:13+0200 > <Lctrl>v<Lctrl>c
+2018-10-17 12:44:49+0200 > <Lctrl>v<Lctrl>v<Lctrl>b<Lctrl>v<Lctrl>c
+2018-10-17 12:45:59+0200 > <Lctrl>vpathservice<KP3><KP5>_struct_ban<BckSp><BckSp><BckSp>pist<BckSp><KP2><KP3><KP0>_struct_double<RCtrl><LAlt><Lctrl><Up><Up><Up><LShft>M<LShft>Mie<RShft>3A<BckSp><BckSp><BckSp><BckSp><BckSp><LShft>Mie<RShft>7Asie
+2018-10-17 12:51:51+0200 > <RCtrl><LAlt><Lctrl><Down><Down><RCtrl><Lctrl><LAlt><Up><Up><RCtrl><Lctrl><LAlt><Down><Up><Lctrl><LAlt><Down><RCtrl><Lctrl><LAlt><Down><Down><Down><LShft>Piste<LShft>Réalisés<LShft>En<LShft>En<LShft>Cours
+2018-10-17 12:58:43+0200 > <KP2><KP0><KP1><KP8><KP2><KP0><KP1><KP9><KP2><KP0><KP2><KP0>
+2018-10-17 12:59:12+0200 > <KP2><KP0><KP2><KP1><KP2><KP0><KP2><KP2><LShft><LShft><LShft><LShft><LShft><LShft><LShft><LShft><LShft><LShft><LShft><LShft><LShft><Lctrl><Lctrl><RCtrl><LAlt><Lctrl><Up><Up><Up><Lctrl><Esc><Left><Lctrl><LAlt><Down><RCtrl><Lctrl><LAlt><Down><Esc><Esc><Esc><LShft>Mie<RShft>3Asie
+2018-10-17 14:09:34+0200 > <RCtrl><Lctrl><LAlt><Down><Down><Lctrl><LAlt><Up><Up><Lctrl><LAlt><Down><Down><Down><Up><KP9><KP9>_struct_piste_fait<BckSp><BckSp><BckSp><BckSp><Right><Right><Right><Right><Right><Right><Right><Right>fait<Lctrl>c
+2018-10-17 14:27:52+0200 > <Lctrl>v<Lctrl>v<KP1><KP2><BckSp><KP0><KP8>,<Del><KP6><KP4><Lctrl>c
+2018-10-17 14:34:40+0200 > <Lctrl>v<KP9><KP8>_st_piste_enco<BckSp><LShft><Home><Lctrl>c
+2018-10-17 14:36:36+0200 > <Lctrl>v<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-17 14:38:44+0200 > <Lctrl>c
+2018-10-17 14:39:36+0200 > <Lctrl>v<KP9><KP8>_st_piste_enc<Lctrl>c
+2018-10-17 14:40:45+0200 > <Lctrl>v<Left><BckSp><KP0><BckSp><KP0><KP9><KP7>_st_piste_<KP2><KP0><KP1><KP8><KP9><KP7>_<Lctrl>c
+2018-10-17 14:42:13+0200 > <Lctrl>v<KP9><KP7><BckSp><KP6>_st_piste_<KP2><KP0><KP1><KP9><Lctrl>c
+2018-10-17 14:42:58+0200 > <Lctrl>v<KP9><KP5>_st_piste_<KP2><KP0><KP2><KP0>
+2018-10-17 14:43:21+0200 > <KP9><KP5>_st_piste_<KP2><KP0><KP2><KP0><Lctrl>c
+2018-10-17 14:43:37+0200 > <Lctrl>v<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-17 14:44:11+0200 > <Lctrl>v<KP9><KP7><BckSp><KP4>_stè<BckSp>_piste_<KP2><KP0><KP2><KP1><Lctrl>c
+2018-10-17 14:44:54+0200 > <Lctrl>v<KP9><KP3>_st_piste_<KP2><KP0><KP2><KP2><Lctrl>c
+2018-10-17 14:45:24+0200 > <Lctrl>v<Lctrl>c
+2018-10-17 14:45:59+0200 > <Lctrl>c
+2018-10-17 14:46:40+0200 > <KP8><KP9>_stru<BckSp><BckSp>_bande_fait<Lctrl>c
+2018-10-17 14:48:57+0200 > <Lctrl>v<KP8><KP8>_st_bande_enc<Lctrl>c
+2018-10-17 14:50:35+0200 > <Lctrl>v<KP8><KP7>_st_ande<BckSp><BckSp><BckSp><BckSp>bande_<KP2><KP0><KP1><KP8><Lctrl>c
+2018-10-17 14:51:05+0200 > <Lctrl>v<Lctrl>v<BckSp><KP9><BckSp><KP6><Lctrl>c
+2018-10-17 14:51:34+0200 > <Lctrl>v<Lctrl>v<BckSp><KP5><BckSp><BckSp><KP2><KP0><Lctrl>c
+2018-10-17 14:51:54+0200 > <Lctrl>v<Lctrl>v<BckSp><KP4><BckSp><KP1><Lctrl>c
+2018-10-17 14:52:14+0200 > <Lctrl>v<Lctrl>v<BckSp><KP3><BckSp><KP2><Lctrl>c
+2018-10-17 14:52:33+0200 > <Lctrl>v<KP7><KP9>_st_double_fait<Lctrl>c
+2018-10-17 14:54:02+0200 > <Lctrl>v<Lctrl>v<Del><KP8><BckSp><BckSp><BckSp><BckSp>enc<Lctrl>c
+2018-10-17 14:54:31+0200 > <Lctrl>v<Lctrl>v<BckSp><KP7><BckSp><BckSp><BckSp><KP2><KP0><KP1><KP8><Lctrl>c
+2018-10-17 14:54:54+0200 > <Lctrl>v<Lctrl>v<BckSp><KP6><BckSp><KP9><Lctrl>c
+2018-10-17 14:55:14+0200 > <Lctrl>v<Lctrl>v<BckSp><KP5><BckSp><BckSp><KP2><KP0><Lctrl>c
+2018-10-17 14:55:35+0200 > <Lctrl>v<Lctrl>v<BckSp><KP4><BckSp><KP1><Lctrl>c
+2018-10-17 14:55:53+0200 > <Lctrl>v<Lctrl>v<BckSp><KP3><BckSp><KP2><Lctrl>c
+2018-10-17 14:56:12+0200 > <Lctrl>v<KP6><KP9>_st_part_fait<Lctrl>c
+2018-10-17 14:57:26+0200 > <Lctrl>v<Lctrl>v<BckSp><KP8><BckSp><BckSp><BckSp><BckSp>enc<Lctrl>c
+2018-10-17 14:57:48+0200 > <Lctrl>v<Lctrl>v<BckSp><KP7><BckSp><BckSp><BckSp><KP2><KP0><KP1><KP8><Lctrl>c
+2018-10-17 14:58:10+0200 > <Lctrl>v<Lctrl>v<BckSp><KP6><BckSp><KP9><Lctrl>c
+2018-10-17 14:58:29+0200 > <Lctrl>v<Lctrl>v<BckSp><KP5><BckSp><BckSp><KP2><KP0><Lctrl>c
+2018-10-17 14:58:47+0200 > <Lctrl>v<Lctrl>v<BckSp><KP4><BckSp><KP1><Lctrl>c
+2018-10-17 14:59:06+0200 > <Lctrl>v<Lctrl>v<BckSp><KP3><BckSp><KP2><Lctrl>c
+2018-10-17 14:59:29+0200 > <Lctrl>v<LShft><Esc><LShft>Mie<Esc><Esc><LShft>Mie<RShft>3Asie
+2018-10-17 15:06:36+0200 > <KP5><KP9><BckSp><BckSp><KP4><KP9>_ma_piste_fait<Lctrl>c
+2018-10-17 15:07:17+0200 > <Lctrl>v<Lctrl>v<Right><BckSp><KP8><BckSp><BckSp><BckSp><BckSp>enc<Lctrl>c
+2018-10-17 15:07:43+0200 > <Lctrl>v<Lctrl>v<BckSp><KP7><BckSp><BckSp><BckSp><KP2><KP0><KP1><KP8><Lctrl>c
+2018-10-17 15:08:01+0200 > <Lctrl>v<Lctrl>v<BckSp><KP6><BckSp><KP9><Lctrl>c
+2018-10-17 15:08:30+0200 > <Lctrl>v<Lctrl>v<Del><KP5><BckSp><BckSp><KP2><KP0><Lctrl>c
+2018-10-17 15:08:48+0200 > <Lctrl>v<Lctrl>v<Del><KP4><BckSp><KP1><Lctrl>c
+2018-10-17 15:09:05+0200 > <Lctrl>v<Lctrl>v<BckSp><KP3><BckSp><KP2><Lctrl>c
+2018-10-17 15:09:19+0200 > <Lctrl>v<KP3><KP9>_ma_bande_fait<LShft><Home><Lctrl>c
+2018-10-17 15:10:06+0200 > <Lctrl>v<Lctrl>v<Del><KP8><BckSp><BckSp><BckSp><BckSp>enc<Lctrl>c
+2018-10-17 15:10:23+0200 > <Lctrl>v<Lctrl>v<BckSp><KP7><BckSp><BckSp><BckSp><KP2><KP0><KP1><KP8><Lctrl>c
+2018-10-17 15:10:43+0200 > <Lctrl>v<Lctrl>v<BckSp><KP6><BckSp><KP9><Lctrl>c
+2018-10-17 15:10:59+0200 > <Lctrl>v<Lctrl>v<BckSp><KP5><BckSp><BckSp><KP2><KP0><Lctrl>c
+2018-10-17 15:11:13+0200 > <Lctrl>v<Lctrl>v<BckSp><KP4><BckSp><KP1><Lctrl>c
+2018-10-17 15:11:29+0200 > <Lctrl>v<Lctrl>v<BckSp><KP3><BckSp><KP2><Lctrl>c
+2018-10-17 15:11:42+0200 > <Lctrl>v<KP2><KP9>_mai<BckSp>_double_fait<Lctrl>c
+2018-10-17 15:12:16+0200 > <Lctrl>v<Lctrl>v<BckSp><KP8>enc<Lctrl>c
+2018-10-17 15:12:33+0200 > <Lctrl>v<Lctrl>v<Del><KP7><BckSp><BckSp><BckSp><KP2><KP0><KP1><KP8><Lctrl>c
+2018-10-17 15:12:48+0200 > <Lctrl>v<Lctrl>v<BckSp><KP6><BckSp><KP9><Lctrl>c
+2018-10-17 15:13:02+0200 > <Lctrl>v<Lctrl>v<BckSp><KP5><BckSp><BckSp><KP2><KP0><Lctrl>c
+2018-10-17 15:13:17+0200 > <Lctrl>v<Lctrl>v<BckSp><KP4><BckSp><KP1><Lctrl>c
+2018-10-17 15:13:41+0200 > <Lctrl>v<Lctrl>v<Left><BckSp><KP3><BckSp><KP2><Lctrl>c
+2018-10-17 15:13:59+0200 > <Lctrl>v<KP1><KP9>_ma_part_fait<Lctrl>c
+2018-10-17 15:14:27+0200 > <Lctrl>v<Lctrl>v<Lctrl><BckSp><KP8><BckSp><BckSp><BckSp><BckSp>enc<Lctrl>c
+2018-10-17 15:14:44+0200 > <Lctrl>v<Lctrl>v<BckSp><BckSp><BckSp><KP2><KP0><KP1><KP8><BckSp><KP7><Lctrl>c
+2018-10-17 15:15:01+0200 > <Lctrl>v<Lctrl>v<BckSp><KP6><BckSp><KP9><Lctrl>c
+2018-10-17 15:15:43+0200 > <Lctrl>v<Lctrl>v<BckSp><KP5><BckSp><BckSp><KP2><KP0><Lctrl>c
+2018-10-17 15:16:02+0200 > <Lctrl>v<Lctrl>v<Left><BckSp><KP4><BckSp><KP1><Lctrl>c
+2018-10-17 15:16:18+0200 > <Lctrl>v<Lctrl><Lctrl>v<Lctrl>v<BckSp><KP3><BckSp><KP2><BckSp><KP3><BckSp><KP2><KP2><KP5><KP6><KP2><Del><Del><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP2><KP6><KP6><KP9><KP7>_st_piste_<KP2><KP0><KP1><KP8><Lctrl>c
+2018-10-17 15:35:36+0200 > <Lctrl>v<Lctrl>v<BckSp><KP6><BckSp><KP9><Lctrl>c
+2018-10-17 15:35:47+0200 > <Lctrl>v<Lctrl>v<BckSp><KP5><BckSp><KP2><BckSp><BckSp><KP2><KP0><Lctrl>v<LShft>Stgructurant<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><LShft><LShft>Structureant<BckSp><BckSp><BckSp><BckSp>a,n<BckSp><BckSp>nt <LShft>Piste<BckSp><#+21><LShft>Piste <LShft>Cyclable (<LShft>Strcturante<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>ucturante) <KP2><KP0><KP2><KP0><LShft><Home><Lctrl>c
+2018-10-17 15:37:14+0200 > <Lctrl>v<Lctrl>v<Del><KP1><Del><KP2><Lctrl>c
+2018-10-17 15:38:11+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Right><Right><BckSp><BckSp><BckSp><BckSp><LShft>Déjà <LShft>Réalisée<BckSp><BckSp><BckSp><BckSp><LShft>En cours
+2018-10-17 15:39:59+0200 > <Right><BckSp><BckSp><KP1><KP8><BckSp><BckSp><KP1><KP9><KP9><KP4>_st_piste_<KP2><KP0><KP2><KP1><LShft><Home><Lctrl>c
+2018-10-17 15:40:26+0200 > <Lctrl>v<BckSp><KP3><KP2><Lctrl>c
+2018-10-17 15:41:14+0200 > <Lctrl>v<Lctrl>c
+2018-10-17 15:41:19+0200 > <Lctrl>v<Lctrl>c
+2018-10-17 15:41:29+0200 > <Lctrl>v<LShft>Bande<Lctrl>c
+2018-10-17 15:41:38+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<BckSp><Right><KP9><BckSp><BckSp><BckSp><BckSp><BckSp>bande<BckSp><KP8><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><BckSp><BckSp><BckSp><BckSp><BckSp>bande<BckSp><KP8><LShft>En<LShft>Cours<Left><Left><Left><Left><Left><Left><Right> <KP2><KP0><KP1><KP8><KP2><KP0><KP1><KP9>
+2018-10-17 15:42:42+0200 > <KP2><KP0><KP2><KP0><Lctrl>c
+2018-10-17 15:42:49+0200 > <Lctrl>v<Lctrl><Lctrl>v<BckSp><KP1><BckSp><KP2><Lctrl>c
+2018-10-17 15:43:07+0200 > <Lctrl>v<BckSp><KP7><BckSp><Right><KP7><BckSp><BckSp><KP2><KP0><KP1><KP8>
+2018-10-17 15:43:53+0200 > <Lctrl>c
+2018-10-17 15:43:59+0200 > <Lctrl>v<BckSp><KP6><BckSp><KP7><Lctrl>v<BckSp><KP5><Right><BckSp><BckSp><KP2><KP0><BckSp><KP9><Lctrl>c
+2018-10-17 15:44:21+0200 > <Lctrl>v<BckSp><KP4><BckSp><KP1><Lctrl>c
+2018-10-17 15:44:29+0200 > <Lctrl>v<BckSp><KP3><BckSp><KP2><Lctrl>c
+2018-10-17 15:45:09+0200 > <Lctrl>v<Left><BckSp><KP9><BckSp><KP7>double<LShft>Double<LShft>S<BckSp> <LShft>Sens <LShft>Cyclable (<LShft>Structurant) <LShft>Déjà <LShft>Réalisé
+2018-10-17 15:45:59+0200 > <Lctrl>c
+2018-10-17 15:46:09+0200 > <Lctrl>v<Del><KP8><BckSp><BckSp><BckSp><BckSp>enc<Lctrl>c
+2018-10-17 15:46:19+0200 > <Lctrl>v<BckSp><BckSp><LShft>En <LShft>Cours<Lctrl><Lctrl>c
+2018-10-17 15:46:32+0200 > <Lctrl>v<Lctrl>c
+2018-10-17 15:46:35+0200 > <Lctrl>v<BckSp><KP7><KP2><KP0><KP1><KP8><KP2><KP0><KP1><KP1><KP8><BckSp>
+2018-10-17 15:46:52+0200 > <Lctrl>c
+2018-10-17 15:46:56+0200 > <Lctrl>v<Lctrl>v<Del><KP6><Right><BckSp><KP9><BckSp><KP5><BckSp><BckSp><KP2><KP0><Lctrl>c
+2018-10-17 15:47:15+0200 > <Lctrl><Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<BckSp><KP9><Right><BckSp><BckSp><KP2><KP0><Right><BckSp><BckSp><KP2><KP1>
+2018-10-17 15:47:35+0200 > <BckSp><BckSp><KP2><KP2><Lctrl>c
+2018-10-17 15:47:41+0200 > <Lctrl>v<BckSp><KP4><BckSp><KP1>
+2018-10-17 15:47:47+0200 > <Lctrl>c
+2018-10-17 15:47:49+0200 > <Lctrl>v<BckSp><KP3><Del><KP2>
+2018-10-17 15:47:56+0200 > <Lctrl>c
+2018-10-17 15:48:14+0200 > <Lctrl>v<BckSp><KP6>part<Lctrl>c
+2018-10-17 15:48:36+0200 > <Lctrl>v<LShft>Espace <LShft>Partagé<Lctrl>c
+2018-10-17 15:48:51+0200 > <Lctrl>v<Left><Right><BckSp><KP8>enc<Lctrl>c
+2018-10-17 15:49:04+0200 > <Lctrl>v <LShft>En <LShft>Cours
+2018-10-17 15:49:11+0200 > <Lctrl>c
+2018-10-17 15:49:19+0200 > <Lctrl>v<BckSp><KP7><KP2><KP0><KP1><KP8><Lctrl>c
+2018-10-17 15:49:29+0200 > <Lctrl>v<BckSp><BckSp><KP2><KP0><KP1><KP8>
+2018-10-17 15:49:36+0200 > <Lctrl>c
+2018-10-17 15:49:40+0200 > <Lctrl>v<Lctrl>c
+2018-10-17 15:49:43+0200 > <Lctrl>v<BckSp><KP6><BckSp><KP9><BckSp><KP9><Lctrl>c
+2018-10-17 15:50:00+0200 > <Lctrl>v<BckSp><KP5><BckSp><BckSp><KP2><KP0>
+2018-10-17 15:50:06+0200 > <Lctrl>c
+2018-10-17 15:50:08+0200 > <Lctrl>v<Right><BckSp><BckSp><KP2><KP0>
+2018-10-17 15:50:16+0200 > <Lctrl>c
+2018-10-17 15:50:22+0200 > <Lctrl>v<Del><KP4><BckSp><KP1>
+2018-10-17 15:50:28+0200 > <Lctrl>c
+2018-10-17 15:50:31+0200 > <Lctrl>v<BckSp><KP1>
+2018-10-17 15:50:36+0200 > <Lctrl>c
+2018-10-17 15:50:39+0200 > <Lctrl>v<BckSp><KP3><BckSp><KP2>
+2018-10-17 15:50:46+0200 > <Lctrl>c
+2018-10-17 15:50:48+0200 > <Lctrl>v<BckSp><KP2>
+2018-10-17 15:50:53+0200 > <KP4><KP9>_ma_piste_fait<Lctrl>c
+2018-10-17 15:55:33+0200 > <LShft>Piste <LShft>Cyvl<BckSp><BckSp>clabel<BckSp><BckSp>le <LShft>Déh<BckSp>jà <LShft>Réalisée<Lctrl>c
+2018-10-17 15:56:07+0200 > <Lctrl>v<Del><KP8>enc<Lctrl>c
+2018-10-17 15:56:18+0200 > <Lctrl>v<RShft>En <LShft>Crous<BckSp><BckSp><BckSp><BckSp>ours<Lctrl>c
+2018-10-17 15:56:59+0200 > <Lctrl>v<BckSp><KP7><KP2><KP0><KP1><KP8><Lctrl>c
+2018-10-17 15:57:10+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<BckSp><KP6><KP9><BckSp><KP5><KP2><KP0>
+2018-10-17 15:57:26+0200 > <BckSp><KP4><KP2><KP1><Lctrl>c
+2018-10-17 15:57:34+0200 > <Lctrl>v<BckSp><KP3><KP2><Lctrl>c
+2018-10-17 15:57:44+0200 > <Lctrl>v<KP2><KP0><KP1><KP8><BckSp>
+2018-10-17 15:57:52+0200 > <Lctrl>c
+2018-10-17 15:57:55+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<BckSp><KP9><BckSp><BckSp><KP2><KP0><BckSp><BckSp><KP2><KP1><BckSp><BckSp><KP2><KP2><KP3><KP9>_ma_bande_fait<Lctrl>c
+2018-10-17 15:59:13+0200 > <Lctrl>v<BckSp><KP8>enc<Lctrl>v<Del><KP7><KP2><KP0><KP1><KP8><Lctrl>c
+2018-10-17 15:59:34+0200 > <Lctrl>v<LShft>Bande<Lctrl>c
+2018-10-17 15:59:43+0200 > <Lctrl>v<LShft>En <LShft>Cours<Lctrl>v<KP2><KP0><KP1><KP8><Lctrl>c
+2018-10-17 15:59:59+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<BckSp><KP6><BckSp><KP9>
+2018-10-17 16:00:13+0200 > <BckSp><KP5><BckSp><BckSp><KP2><KP0><BckSp><KP4><KP2><KP1>
+2018-10-17 16:00:25+0200 > <BckSp><KP3><KP2><KP2><Lctrl>c
+2018-10-17 16:00:34+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<BckSp><KP9>
+2018-10-17 16:00:43+0200 > <Right><BckSp><BckSp><KP2><KP0>
+2018-10-17 16:00:47+0200 > <Del><Del><KP2><KP1>
+2018-10-17 16:01:53+0200 > <BckSp><BckSp><KP2><KP1><BckSp><KP2>
+2018-10-17 16:01:59+0200 > <KP2><KP9>_maè<BckSp>_double_fait<LShft>Double <LShft>Senc<BckSp>s <LShft>Cyv<BckSp>clable <LShft>Déjà <LShft>Réalisé
+2018-10-17 16:04:15+0200 > <Lctrl>c
+2018-10-17 16:04:19+0200 > <Lctrl>v<BckSp><KP8>enc<Lctrl>c
+2018-10-17 16:04:28+0200 > <Lctrl>v<BckSp><BckSp><RShft>En <RShft>Cours<Lctrl>c
+2018-10-17 16:04:38+0200 > <Lctrl>v<BckSp><KP7><KP2><KP0><KP1><KP8><Lctrl>c
+2018-10-17 16:04:47+0200 > <Lctrl>v<KP2><KP0><KP1><KP8><Lctrl>c
+2018-10-17 16:04:55+0200 > <Lctrl>v<BckSp><KP6><BckSp><KP9><Lctrl>v<KP5><BckSp><BckSp><KP2><KP0><Lctrl>v<Del><KP4><KP2><KP1><Lctrl>v<Del><KP3><KP2><KP2><Lctrl>c
+2018-10-17 16:05:30+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<BckSp><KP9><BckSp><BckSp><KP2><KP0>
+2018-10-17 16:05:41+0200 > <BckSp><BckSp><KP2><KP1><BckSp><BckSp><KP2><KP2><Lctrl>c
+2018-10-17 16:05:54+0200 > <Lctrl>v<BckSp><KP1><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>part<Right><Right><Right><Right><Right><LShft><Home><Lctrl>c
+2018-10-17 16:06:53+0200 > <Lctrl><Lctrl>c
+2018-10-17 16:07:16+0200 > <Lctrl>v<LShft>Fait<BckSp><BckSp><RShft>Déjà <LShft>Réalisé
+2018-10-17 16:08:06+0200 > <Lctrl>c
+2018-10-17 16:08:14+0200 > <Lctrl>v<BckSp><KP8>enc<Lctrl>c
+2018-10-17 16:08:23+0200 > <Lctrl>v<LShft>En <LShft>Cours
+2018-10-17 16:08:29+0200 > <Lctrl>c
+2018-10-17 16:08:31+0200 > <Lctrl>v<BckSp><KP7><KP2><KP0><KP1><KP8><Lctrl>v<Lctrl>c
+2018-10-17 16:08:43+0200 > <Lctrl>v<KP2><KP0><KP1><KP8><Lctrl>c
+2018-10-17 16:08:56+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Del><KP6><BckSp><KP9><BckSp><KP8><BckSp><KP5><BckSp><BckSp><KP2><KP0><BckSp><KP4><BckSp><BckSp><KP2><KP1><BckSp><KP3><KP2><KP2><Lctrl>c
+2018-10-17 16:09:34+0200 > <Lctrl>v<Lctrl>v<Del><KP9><BckSp><BckSp><KP2><KP0><Lctrl>v<KP2><KP1><Lctrl>v<KP2><KP2><LShft>Pistes <LShft>Cyb<BckSp>clabes <LShft>Structurantes<LShft>Chemind<BckSp>ement <LShft>Velo<Left><Left><BckSp>é<Right><#+17><BckSp><BckSp><Left><#+17><Left><Left><Right><#+14><Left><Left><Left><Left><Left><Left><Left><LShft><BckSp><BckSp><#+21><LShft>Réseau <LShft>Cyclkab<BckSp><BckSp><BckSp>able<Lctrl>c
+2018-10-17 16:14:26+0200 > <Right><Right><Right><Right><Right><Right><Right><Right><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><Left><#+13><Left>(<LShft>Non <End>)
+2018-10-17 16:15:50+0200 > <LShft><LShft><LShft><LShft><LShft><LShft><Lctrl><Lctrl><Lctrl><Lctrl><Lctrl><Lctrl><Lctrl><Lctrl><RCtrl><Lctrl><LAlt><Up><Up><Up><LShft>Mie<RShft><RShft><RShft>7Asie
+2018-10-17 16:22:43+0200 > <RCtrl><Lctrl><LAlt><Down><Down><Down><RCtrl><Lctrl><LAlt><Up><Up><Up><Lctrl><LAlt><Down><Down><Up><RCtrl><Lctrl><LAlt><Up><Up><F5><F5><RCtrl><Lctrl><LAlt><Down><Down><Up><Lctrl><LAlt><Down><Down><RCtrl><Lctrl><LAlt><Up><Up><Lctrl><LAlt><Up><Lctrl><Lctrl><RCtrl><LAlt><Lctrl><Down><Down><Down><KP1><KP0><KP0><KP0><KP0><Del><KP1><KP0>
+2018-10-17 16:28:28+0200 > <BckSp><KP2>
+2018-10-17 16:28:53+0200 > <BckSp><KP4>
+2018-10-17 16:29:03+0200 > <BckSp><KP3>
+2018-10-17 16:29:21+0200 > <LMeta><Esc><RCtrl><LAlt><Lctrl><Up><Up><Lctrl><LAlt><Up><Up><Down><Down><Up><Up><Down><Down><LAlt><Lctrl><Down><RCtrl><Lctrl><LAlt><Up><Up><Up><Down><RCtrl><LAlt><Lctrl><Up><F5><F5><F5><F5><F5><F5><RCtrl><Lctrl><LAlt><Down><Down><LAlt><Lctrl><Up><Lctrl><LAlt><Down><LAlt><Lctrl><Down><LAlt><Lctrl><Up><Up><LAlt><Lctrl><Down><LAlt><Lctrl><Down><LAlt><Lctrl><Up><LAlt><Lctrl><Up><LAlt><Lctrl><Up><F5><F5><Lctrl><LAlt><Down><Down><RCtrl><Lctrl><LAlt><Down><Down><Down><F5><RCtrl><LAlt><Lctrl><Up><Up><Up><F5><F5><F5><RCtrl><Lctrl><LAlt><Down><Down><Lctrl><LAlt><Up><Lctrl><LAlt><Up><Lctrl><LAlt><RCtrl><Lctrl><LAlt><Down><RCtrl><Lctrl><LAlt><Down><Down><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>_sauvegarde_avant_lo<BckSp><BckSp>modif
+2018-10-17 16:56:16+0200 > <BckSp><Del><Del><Del><LShft>A<KP3>_pa<BckSp><BckSp><LShft>Paysage_atals<BckSp><BckSp><BckSp>las_<KP2><KP0><KP0><KP0>_planche_<KP2><KP1>
+2018-10-17 17:10:28+0200 > <Lctrl><LAlt><Up><Up><Lctrl><LAlt><Up><Lctrl><LAlt><Down><LAlt><Lctrl><Up><LShft>Mie<RShft>7Asie
+2018-10-17 17:11:46+0200 > <Lctrl><LAlt><Down><RCtrl><Lctrl><LAlt><Down><Down><Down><KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-17 17:30:45+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-17 17:31:30+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-17 17:31:41+0200 > <Lctrl>v<Lctrl>v<KP7><KP9>_st_double_fait<BckSp>t<Lctrl>c
+2018-10-17 17:32:11+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<BckSp><BckSp>
+2018-10-17 17:33:01+0200 > <Del>
+2018-10-17 17:33:04+0200 > <BckSp>
+2018-10-17 17:33:06+0200 > <BckSp>
+2018-10-17 17:33:08+0200 > <BckSp>
+2018-10-17 17:33:10+0200 > <BckSp>
+2018-10-17 17:33:12+0200 > <Del>
+2018-10-17 17:33:20+0200 > <Del>
+2018-10-17 17:33:22+0200 > <BckSp>
+2018-10-17 17:33:25+0200 > <Del>
+2018-10-17 17:33:28+0200 > <BckSp>
+2018-10-17 17:33:30+0200 > <BckSp>
+2018-10-17 17:33:34+0200 > <BckSp>
+2018-10-17 17:33:36+0200 > <Del>
+2018-10-17 17:34:13+0200 > <BckSp>
+2018-10-17 17:34:16+0200 > <BckSp>
+2018-10-17 17:34:19+0200 > <Del>
+2018-10-17 17:34:22+0200 > <Del>
+2018-10-17 17:34:24+0200 > <BckSp>
+2018-10-17 17:34:28+0200 > <BckSp>
+2018-10-17 17:34:30+0200 > <BckSp>
+2018-10-17 17:34:44+0200 > <BckSp>
+2018-10-17 17:34:47+0200 > <BckSp>
+2018-10-17 17:34:49+0200 > <BckSp>
+2018-10-17 17:34:51+0200 > <Del>
+2018-10-17 17:34:54+0200 > <Del>
+2018-10-17 17:34:56+0200 > <Del>
+2018-10-17 17:34:59+0200 > <Lctrl>c
+2018-10-17 17:35:38+0200 > <Lctrl>c
+2018-10-17 17:35:42+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-17 17:36:41+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-17 17:37:13+0200 > <Lctrl>v<KP2><LShft><Lctrl>c
+2018-10-17 17:53:22+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-17 17:59:08+0200 > <Lctrl>v<BckSp><KP8>bande<Lctrl>v<BckSp><KP8>bande<Lctrl>c
+2018-10-17 18:00:41+0200 > <Lctrl>v<Lctrl>v<KP9><KP9>_st_piste_faite<Lctrl>c
+2018-10-17 18:01:26+0200 > <Lctrl><Lctrl>v<Lctrl>v<KP8><KP9>_stè<BckSp>_bande_faite<Lctrl>c
+2018-10-17 18:01:59+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl><Lctrl>v<Lctrl>v<KP9><KP9>_st_piste_fait<Lctrl>v<KP9>pistserviceservice<KP9><KP9>_st_pisteè<BckSp>_fait<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-17 18:07:28+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP8><KP9>_st_bande_fait<Lctrl>c
+2018-10-17 18:09:22+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-17 18:11:30+0200 > <Lctrl>vserviceservie<BckSp>ceserviceservice<Lctrl>v<Lctrl>v<Lctrl><Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>vservice<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-17 18:17:13+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>vservice
+2018-10-17 18:19:12+0200 > <BckSp><KP9><KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-17 18:20:30+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>vservice
+2018-10-17 18:22:11+0200 > service
+2018-10-17 18:22:17+0200 > service<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-17 18:23:10+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP8>bande<Lctrl>v<BckSp><KP8>bande<KP8><KP9>_st_bande_fait<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-17 18:26:59+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<BckSp><KP8>bande<KP8>bande<Lctrl>c
+2018-10-17 18:28:24+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>vservice<Lctrl>v<Lctrl>v<Lctrl>v<KP8><BckSp><KP9>piste<Lctrl>v<KP9>piste<Lctrl>v<KP9>piste<Lctrl>v<KP9>piste<KP9><KP9>_st_piste_fait<KP9><KP9>_st_p^iste<BckSp><BckSp><BckSp><BckSp>iste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<Lctrl>v<KP9>pist<KP9><KP9>_sp<BckSp>t_piste_fait<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl><KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-17 18:34:24+0200 > <Lctrl>v<BckSp><BckSp><KP8><KP9><Right><Right><Right><Right><Right><Right><Right><Right><Right><BckSp><BckSp><BckSp><BckSp><BckSp>bande<Lctrl>c
+2018-10-17 18:34:55+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<KP8><KP9>_st_bande_fait<KP8><KP9>_st_bande_fait<Lctrl>c
+2018-10-17 18:36:54+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Esc><Esc><Esc><LShft>Mie<RShft>3Asie
+2018-10-18 08:27:28+0200 > <KP8><KP9>_st_bande_faite<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st<BckSp><BckSp><BckSp><BckSp><BckSp><KP8><KP9>_st_bande_fait<KP8><KP9>_st_bande_fait<KP8><KP9>_st_bande_fait<BckSp><KP9><Right><Right><Right><Right><Right><Right><Right><Right><Right><BckSp><BckSp><BckSp><BckSp><BckSp>_ps<BckSp>iste<Lctrl>c
+2018-10-18 08:32:03+0200 > <Lctrl>v<Lctrl>v<KP8><KP9>_st_bande_fait<KP8><KP9>_st_bande_fait<KP8><KP9>_st_bande_a<BckSp>fait<KP8><KP9><BckSp><BckSp><KP8><KP9>_st_bande_fait<Lctrl>c
+2018-10-18 08:33:46+0200 > <Lctrl>v<Lctrl>v<KP9><KP6>_st_piste_<KP2><KP0><KP1><KP9><Lctrl>c
+2018-10-18 08:34:58+0200 > <KP9><KP6>_st_piste_<KP2><KP0><KP1><KP9>
+2018-10-18 08:36:56+0200 > <KP9><KP6>_st_piste_<KP2><KP0><KP1><KP9><KP9><KP6>_st_piste_<KP2><KP0><KP1><KP9>
+2018-10-18 08:37:25+0200 > <KP9><KP6>_st_piste_<KP2><KP0><KP1><KP9><KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-18 08:39:09+0200 > <Lctrl>v<KP6><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><BckSp><BckSp><BckSp><BckSp><KP2><KP0><KP1><KP9><KP9><KP9><BckSp><BckSp><KP8><KP9>_st_bande_fait<KP8><BckSp><BckSp><BckSp><BckSp><BckSp>bande<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-18 08:42:18+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP4><KP9>_ma<Lctrl>c
+2018-10-18 08:43:18+0200 > <Lctrl>v<Lctrl>v<KP9><KP9>_st_piste_faitservice<Esc><LShft>Mie<RShft>3Asie
+2018-10-18 08:54:03+0200 > <KP8><KP9>_p<BckSp>s<BckSp><BckSp><BckSp><BckSp><BckSp><KP4><KP9>ç<BckSp>_ma_piste_fait<Lctrl>c
+2018-10-18 08:56:26+0200 > <Lctrl>v<Del><KP8>ban,<BckSp>de<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-18 09:03:00+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<KP8><KP9>_st_bande_fait<Lctrl>c
+2018-10-18 09:04:13+0200 > <Lctrl>v<Lctrl>v<KP9>pist
+2018-10-18 09:05:46+0200 > <KP4><KP9>_st_<BckSp><BckSp><BckSp>ma_piste_fait<Lctrl>c
+2018-10-18 09:08:04+0200 > <BckSp><KP9><BckSp><BckSp>st<KP8><KP9>_st_bande_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-18 09:14:00+0200 > serviceservce<BckSp><BckSp>iceservice<KP9><KP9><KP8><BckSp>_st_piste_fait<BckSp><BckSp><BckSp><BckSp><BckSp><KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP8><KP9>_st_bande_fait<KP8><KP9>_st_bande_fau<BckSp>it<Lctrl>c
+2018-10-18 09:24:42+0200 > <Lctrl>v<KP8><KP9>_st_bande_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><KP8><KP9>_st_bande_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP8><KP9>_st_bade_fait<Left>n<KP9><KP9><BckSp><BckSp><KP8><KP9>_st_bande_fait<KP8><KP9>_st_bade<BckSp><BckSp>nde_fait<KP8><KP9>_st_bande_fait<KP8><KP9>_st_bande_fait<KP8><KP9>_st_n<BckSp>bance<BckSp><BckSp>de_fait<KP8><KP9>_st_bande_fait<Lctrl>c
+2018-10-18 09:37:01+0200 > <Lctrl>v<KP8><KP9>_st_bande_fait<Lctrl>c
+2018-10-18 09:37:22+0200 > <Lctrl>v<KP8><KP9>_st_bande_faite<KP8><KP9>_st_bande_fait<Lctrl>c
+2018-10-18 09:38:50+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<LAlt><Lctrl><Lctrl><LAlt><Up><LAlt><Lctrl><Up><Lctrl>alinux*<BckSp>fr
+2018-10-18 09:41:20+0200 > journal du hacker
+2018-10-18 09:47:34+0200 > <Lctrl><LAlt><Down><Lctrl><LAlt><Down><KP8><KP9>_st_bande_fau<BckSp>it<Lctrl>c
+2018-10-18 09:49:00+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<KP9><KP9>_st_piste_fait<Lctrl>v<BckSp><KP9>piste<KP4><KP9>_ma_piste_fait<Lctrl>c
+2018-10-18 09:52:09+0200 > <Lctrl>v<Lctrl>v<KP9><KP9>_st<BckSp><BckSp><BckSp><BckSp><BckSp><KP4><KP9>_<BckSp>_ma_piste_fait<KP8><KP9>_st_bande_fait<Lctrl>c
+2018-10-18 09:58:53+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP4><KP9>_ma_piste_fait<KP4><KP9>_ma_piste_fait<KP9><KP9>_st_bande_faitpiste<Lctrl>c
+2018-10-18 10:10:54+0200 > <Lctrl>v<Lctrl>c
+2018-10-18 10:11:26+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<RCtrl><Lctrl><LAlt><Up><Up><Up><LShft>Mie<RShft>3As<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><LShft>Mie<RShft>7Asie
+2018-10-18 10:15:33+0200 > <LShft>Mie<RShft><RShft>7<BckSp><RShft>6Asie
+2018-10-18 10:16:01+0200 > loti
+2018-10-18 10:16:12+0200 > 
+2018-10-18 10:16:12+0200 > <LShft><Lctrl>floti
+2018-10-18 10:20:32+0200 > <tb<mz<BckSp>aestro
+2018-10-18 10:27:14+0200 > <RCtrl><Lctrl><LAlt><Down><Down><Down><Lctrl>c
+2018-10-18 10:33:26+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<RCtrl><Lctrl><LAlt><Up><Up><Lctrl><LAlt><Up><LShft>Mie<RShft>6Asie
+2018-10-18 10:42:56+0200 > <KP0><KP0><KP0><KP4><KP4><KP7>
+2018-10-18 10:43:16+0200 > 
+2018-10-18 10:43:16+0200 > nanette
+2018-10-18 10:45:41+0200 > 
+2018-10-18 10:45:41+0200 > arts<BckSp><BckSp><BckSp><BckSp>n<BckSp>cnarep
+2018-10-18 10:46:16+0200 > 
+2018-10-18 10:46:16+0200 > <RCtrl><Lctrl><LAlt><Down><Down><Down><Down><Down>eses<BckSp>art<RCtrl><Lctrl><LAlt><Up><Up><Down><Up><Up><Up><BckSp><BckSp>
+2018-10-18 10:48:23+0200 > 
+2018-10-18 10:48:23+0200 > 
+2018-10-18 10:48:23+0200 > <LShft>B<BckSp><LShft>Loac<BckSp><BckSp><BckSp>ocal, <KP1><KP6> rue de l'aimable <LShft>Nanette<Left><Right><Left><Left><Left><BckSp><LShft>A<KP1><KP4><KP6><KP6><KP0><KP0><Lctrl>c
+2018-10-18 10:49:33+0200 > <Lctrl>v<KP0><KP0><KP1><KP6><BckSp><KP4><KP6><KP6>nanette
+2018-10-18 10:52:44+0200 > 
+2018-10-18 10:52:44+0200 > <RCtrl><LAlt><Lctrl><Down><Down><Down><Lctrl>v<KP2><KP9>_ma_double<BckSp>_fait<Lctrl>vma_double<BckSp>_fait<Home><KP2><KP4><BckSp><KP9>_
+2018-10-18 10:55:38+0200 > <Lctrl>c
+2018-10-18 10:55:43+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP9><KP9><BckSp><BckSp><KP8><KP9>_st_dou<BckSp><BckSp><BckSp>bande_fait<KP8><KP9>_st_bande_fait<KP4><KP9>_ma_piste_fait<Lctrl>c
+2018-10-18 11:01:47+0200 > <KP4><KP8><BckSp><BckSp><KP3><KP9>_ma_bande_fait<Lctrl>c
+2018-10-18 11:02:21+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-18 11:05:12+0200 > <Lctrl>v<Lctrl>v<KP4><BckSp><BckSp>ma<Lctrl>c
+2018-10-18 11:06:35+0200 > service<Lctrl>v<Lctrl>c
+2018-10-18 11:07:21+0200 > service<Lctrl>v<Lctrl>c
+2018-10-18 11:08:10+0200 > service<Lctrl>v<Lctrl>c
+2018-10-18 11:08:42+0200 > <Lctrl>v<Lctrl><Lctrl>v<KP4><KP9>_<BckSp><BckSp><BckSp><KP3><KP9>_ma_bande_fait<Lctrl>c
+2018-10-18 11:10:55+0200 > <Lctrl>v<Lctrl>v<KP2><KP9>_ma_double<BckSp>_fait<Lctrl>c
+2018-10-18 11:12:36+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 11:13:11+0200 > <Lctrl>v<Lctrl>v<KP8><KP9>_st_bante<BckSp><BckSp>de_fait<KP8><KP9>_st_bande_fait<RCtrl><LAlt><Lctrl><Up><Up><Up><LShft>Mie<RShft>7Asie
+2018-10-18 11:22:54+0200 > <LShft>Mie<RShft>7Asie
+2018-10-18 11:23:03+0200 > <Lctrl><LShft>Projets<LShft>Travaux<KP1><KP1><KP1><KP1><LShft><RCtrl><Lctrl><LAlt><Up><Up><KP2>;<KP3><Lctrl><Lctrl>c
+2018-10-18 11:40:05+0200 > <Lctrl>v<Esc><Esc><Esc><LShft>Mie<RShft>3Asie
+2018-10-18 11:58:21+0200 > <LAlt><Lctrl><Down><RCtrl><Lctrl><LAlt><Down><Down><LAlt><Lctrl><Down><BckSp><KP7>double<Lctrl>c
+2018-10-18 12:04:16+0200 > <Lctrl>v<Lctrl>c
+2018-10-18 12:07:30+0200 > <Lctrl>v<KP5><KP0><KP3><KP5><Esc><LShft>Mie<RShft>3Asie
+2018-10-18 14:02:52+0200 > <KP3><KP5><KP3><KP5><RCtrl><LAlt><Lctrl><Up><Up><RCtrl><Lctrl><Lctrl><LAlt><Down><Lctrl><LAlt><Down><KP9><KP6>_st_piste_<KP2><KP0><KP1><KP9><Lctrl>c
+2018-10-18 14:12:19+0200 > <Lctrl>v<KP9><KP6>_st_piste_<KP2><KP0><KP1><KP9><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>ortrait<BckSp><BckSp><KP7><KP5><Del><KP1><BckSp><KP7><KP9><KP0><KP1><KP1><KP6><KP0><KP5><KP7><KP5><KP0><KP0>
+2018-10-18 14:18:26+0200 > <KP7><KP5><KP0><KP0>
+2018-10-18 14:20:41+0200 > <Lctrl><Lctrl><Lctrl>service<KP4><KP9>_ma_piste_fait<Lctrl>v<KP4><KP9>fait<BckSp><BckSp>ma<Lctrl>c
+2018-10-18 14:31:24+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<KP3><KP9>_m_<BckSp>a_bande_faite<Lctrl>c
+2018-10-18 14:35:02+0200 > <Lctrl><KP4><KP9>_ma_piste_fait<Lctrl>c
+2018-10-18 14:36:10+0200 > <Lctrl>v<KP4><KP9>_ma_pise<BckSp><KP1><KP9>_ma_part<BckSp><#+24><KP4><KP9>_ma_piste_fait<Lctrl>c
+2018-10-18 14:39:20+0200 > <Lctrl>v<KP4><KP9>_ma_piste_fait<KP8><KP9>_st_bande_fait<Lctrl>c
+2018-10-18 14:44:10+0200 > <Lctrl>v<KP7><KP9>_st_double_fait<Lctrl>c
+2018-10-18 14:44:43+0200 > <Lctrl>v<KP3><KP5><KP8><KP9>_st_bande_fait<Lctrl>c
+2018-10-18 14:45:53+0200 > <Lctrl>v<LShft><KP2><KP0><KP1><KP5><KP8><KP9>_st_bande_fait<Lctrl>c
+2018-10-18 14:52:48+0200 > <Lctrl>v<KP3><KP0><KP8><KP5><KP6><KP9>_st_part_fait<Lctrl><BckSp><BckSp><BckSp>i<BckSp>art<Lctrl>c
+2018-10-18 14:55:21+0200 > <Lctrl>v<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-18 15:02:14+0200 > <KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP4><KP9>_ma_piste_fait<Lctrl>c
+2018-10-18 15:04:59+0200 > <Lctrl>v<Lctrl>v<Lctrl>vservice<KP9><KP9>_st_piste_fait<KP4><KP9>_ma_piste_fait<Lctrl>v<Lctrl>vservicecycleway<Lctrl>c
+2018-10-18 15:10:34+0200 > <Lctrl>v<BckSp><BckSp><KP9><KP6>_st_piste_<KP2><KP0><KP1><KP9><KP9><KP6><KP9><KP6>_st_piste_<KP2><KP0><KP1><KP9><Lctrl>c
+2018-10-18 15:15:25+0200 > <KP9><KP6>_st_piste_<KP2><KP0><KP1><KP9>service<KP9><KP6>_st_piste_<KP2><KP0><KP1><KP9><KP9><KP7>_stè<BckSp>_piste_<KP2><KP0><KP1><KP8><Del><KP7><KP2><KP0><KP1><KP8><KP9><KP3>_st_piste_<KP2><KP0><KP2><KP2><Lctrl>c
+2018-10-18 15:21:10+0200 > <Lctrl>v<Lctrl>v<KP8><KP9>_st_bande_fait<KP8><KP9>_st_bande_fait<LMeta><#+4><Lctrl>c
+2018-10-18 15:29:29+0200 > <Lctrl>v<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-18 15:31:11+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP3><KP6>_ma_bandeè<BckSp>_<KP2><KP0><KP1><KP9><Lctrl>c
+2018-10-18 15:37:34+0200 > <KP4><KP9><BckSp><BckSp><KP3><KP9>_ma_bande_fait<Lctrl>c
+2018-10-18 15:38:52+0200 > <Lctrl>v<Lctrl>v<KP2><KP9>_ma_double_fait<Del>t<KP3><KP9>_ma_bad<BckSp>nde_fait<Esc><LShft>Mie<RShft>3Asie
+2018-10-18 15:56:25+0200 > <KP2><KP9>_ma_doubl_fait<LShft><Home><Lctrl>x<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP2><KP9><BckSp><BckSp><KP4><KP9>_a_piste_faitm<KP2><KP9>_ma_doubl_fait<Lctrl>c
+2018-10-18 16:01:10+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP4><KP5>_ma_piste_<KP2><KP0><KP2><KP0><Lctrl>c
+2018-10-18 16:03:59+0200 > <Lctrl>v<Lctrl>v<Lctrl>vpart<BckSp><KP1><Lctrl>c
+2018-10-18 16:05:18+0200 > <Lctrl>v<KP1><KP9>_ma_part_fait<Lctrl>c
+2018-10-18 16:05:53+0200 > <Lctrl>v<KP6><KP0><KP0><KP0>
+2018-10-18 16:07:27+0200 > cheminement c<BckSp><BckSp>s <LShft>Cyclablesx<BckSp>c<BckSp>p<RCtrl><LAlt><Lctrl><Up><Up>peertube
+2018-10-18 16:11:23+0200 > linuxfr
+2018-10-18 16:13:17+0200 > <RCtrl><LAlt><Lctrl><Up><Up><LShft>Mie<RShft><RShft>7Asie
+2018-10-18 16:14:49+0200 > <RCtrl><LAlt><Lctrl><Down><Down><LAlt><Lctrl><Down><RCtrl><Lctrl><LAlt><Up><Up><Up><Down><Down><Down><Up><Up><Up><LAlt><Lctrl><Down><Down><Up><Up><Lctrl><LAlt><Down><LAlt><Lctrl><Down><Down><RCtrl><LAlt><Lctrl><Up><Up><Up><Lctrl><Lctrl><RCtrl><Lctrl><LAlt><Down><RCtrl><LAlt><Lctrl><Down><LAlt><Lctrl><Down><RCtrl><LAlt><Lctrl><Up><Up><Up><AltGr><Lctrl><LAlt><RCtrl><LAlt><Lctrl><Down><Down><Down><KP8><KP9>_st_bande_fait<KP8><KP9>_st_bande_fait<Lctrl>c
+2018-10-18 16:32:09+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl><Lctrl>vservice<KP9><KP9>_<BckSp><BckSp><BckSp><KP8><KP9>_st_bande_fait<KP8><KP9>_st_bande_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_pite_fait<Left>s
+2018-10-18 16:42:35+0200 > service
+2018-10-18 16:48:05+0200 > <KP8><KP9>_st_bande_fait<KP8><KP9>_st_bandeè<BckSp>_fait<Esc><LShft>Mie<RShft>3Asie
+2018-10-18 16:55:34+0200 > <KP9><KP9>_st_piste_fait<KP8><BckSp><KP7><KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-18 16:57:42+0200 > <Lctrl>v<KP0><KP7><KP9><KP8><KP9>_<BckSp><BckSp>_st_piste_enc<Lctrl>c
+2018-10-18 17:01:04+0200 > <Lctrl>v<Lctrl>c
+2018-10-18 17:01:16+0200 > <KP7><Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:01:45+0200 > <KP7><Lctrl>v<Lctrl>v<KP7><Lctrl>c
+2018-10-18 17:02:34+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:03:34+0200 > <Lctrl>c
+2018-10-18 17:03:58+0200 > <Lctrl>v<Lctrl>v<KP6><KP7><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP1><KP0><KP0><KP7><KP5><KP8><KP0><BckSp><BckSp><KP1><KP0><KP0><KP1><KP0><KP0><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP1><KP0><KP0><KP1><KP0><KP7><KP5><KP7><KP5><KP7><KP5><KP7><NumLk><KP5><KP5><KP7><KP5><KP7><KP5><Del><Del><Del><Del><KP7><KP5><KP7><KP5><NumLk><KP7><KP5><KP1><KP0><KP0><KP1><KP0><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP1><KP0><KP0><KP1><KP0><KP0><KP7><KP5><KP7><KP5><KP7><KP5><AltGr><KP7><KP5><KP8><KP7><KP5><KP1><KP0><KP0><BckSp><KP5><KP1><KP0><KP0><Left><KP3><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP7><BckSp><KP1><KP0><KP0><KP1><KP0><KP0><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP1><KP0><KP0><KP1><KP0><KP0><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP7><KP5><KP1><KP0><KP0><KP1><KP0><KP0><KP7><KP7><KP5><KP0><KP5><KP0><KP5><KP0><KP5><KP0><KP5><KP0><KP6><KP7><KP6><KP7><KP3>,<KP5><KP3>,<KP5><KP3>,<KP5><KP3>,<KP5><KP3>,<KP5><KP1><KP0><KP0><KP3>,<KP5><KP3>,<KP5><KP5><KP0><KP5><KP0><KP5><KP0><KP5><KP0><KP5><KP0><KP6><KP7><KP6><KP7><KP2><KP5><KP2><KP5><BckSp><KP2><KP2><KP2><KP3><KP3><KP3><KP3><KP5><KP0><KP1><KP0><KP0><KP5><KP0><KP1><KP0><KP0><KP5><KP0><KP1><KP0><KP0><KP2><KP5><KP2><KP5><KP2><KP5><KP2><KP5><KP2><KP5><KP1><KP0><KP0><KP2><KP5><KP1><KP0><KP0><KP2><KP5><KP1><KP0><KP1><KP0><KP0><KP2><KP5><KP2><KP5><KP7><KP5><KP5><KP0><KP5><KP0><KP2><KP5><KP2><KP5><KP2><KP5><KP2><KP5><KP2><KP5><KP3><KP3><KP3><KP3><KP2><KP5><KP1><KP0><KP0><KP1><KP0><KP0><KP2><KP5><KP1><KP0><KP0><KP1><KP0><KP0><KP2><KP5><KP2><BckSp><KP1><KP0><KP0><KP1><KP0><KP0><KP2><KP5><KP1><KP0><KP0><KP1><KP0><BckSp><BckSp><KP2><KP5><KP1><KP0><KP0><KP1><KP0><KP0><KP2><KP5><KP1><KP0><KP0><KP2><KP5><KP1><KP0><KP0><Lctrl>c
+2018-10-18 17:51:48+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:52:00+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:52:11+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:52:24+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:52:37+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:52:54+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:54:48+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:55:02+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:55:14+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:55:29+0200 > <Lctrl>v<Lctrl><Lctrl>v<Lctrl>c
+2018-10-18 17:55:46+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:56:00+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:56:16+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:56:32+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:57:07+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:57:34+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:57:50+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:58:00+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:58:12+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:58:25+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:58:37+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:58:58+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:59:11+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:59:26+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:59:40+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 17:59:54+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:00:15+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:00:29+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:00:47+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:01:03+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:01:16+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:01:31+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:02:21+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:02:31+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:02:47+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:02:59+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:03:14+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:03:26+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:03:44+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:04:09+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:04:36+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:05:05+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:05:20+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:05:30+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:05:42+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:05:54+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:06:09+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:06:22+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:06:39+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:07:09+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:07:21+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:07:41+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:07:54+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:08:06+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:08:18+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-18 18:08:31+0200 > <Lctrl>v<Lctrl>v<Esc><LShft>Mie<RShft>3Asie
+2018-10-18 18:32:00+0200 > <Lctrl><Lctrl><BckSp><KP9>piste<LShft>Mie<RShft><BckSp><BckSp><BckSp><BckSp><LShft>Mie<RShft><RShft><RShft>3a<BckSp><RShft>Asie
+2018-10-19 08:37:17+0200 > <KP9><KP4>_st_piste_<KP2><KP0><KP2><KP0><BckSp><KP1><KP8><KP9>_st_dande_fait<BckSp>b<Lctrl>c
+2018-10-19 08:46:21+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-19 08:52:04+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Esc><LShft>Mie<RShft>3Asie
+2018-10-19 08:58:54+0200 > <Lctrl>v<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-19 08:59:12+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<BckSp><KP4><KP5><Right><Right><Right><Right><BckSp><BckSp>ma<Lctrl>c
+2018-10-19 09:01:03+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP9><KP9>_p<BckSp>st_piste_fait<Lctrl>c
+2018-10-19 09:04:31+0200 > <Lctrl>v<Lctrl>v<KP9><KP9>_st<BckSp><BckSp><BckSp><BckSp><BckSp><KP9><KP9>_st_piste_fait<KP6><KP9>_st_part_fait<Lctrl>c
+2018-10-19 09:09:07+0200 > <Lctrl>v<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-19 09:10:28+0200 > <Lctrl>v<Lctrl>vciclewau<BckSp>y<BckSp>y
+2018-10-19 09:11:22+0200 > <KP9><KP9>_st_ci<BckSp><BckSp>piste_fait<KP9><KP9>_st_piste_fait<KP8><KP9>_st_bande_fait<KP6><KP9>_st_part_fait<KP9><KP9>_st_piste_fait<KP6><KP9>_st_part_fait<KP6><KP9>_st_part_fait<KP6><KP9>_st_part_fait<KP9><KP9>_st_piste_fait<KP6><KP9>_st_part_fait<KP6><KP9>_st_part_fait<Lctrl>c
+2018-10-19 09:19:59+0200 > <KP8><KP7><KP9>_<BckSp><BckSp><BckSp><KP9>_st_bande_fait<Lctrl>c
+2018-10-19 09:20:18+0200 > <Lctrl>v<KP6><KP9>_st_patrt<BckSp><BckSp><BckSp>rt_fait<KP9><KP9>_st_piste_fait<RCtrl><Lctrl><LAlt><Down><Down><RCtrl><Lctrl><LAlt><Up><Up><Up>toem<BckSp><BckSp>tem
+2018-10-19 09:33:10+0200 > <LShft><Home>pjpb
+2018-10-19 09:33:18+0200 > camille
+2018-10-19 09:33:22+0200 > aurélie
+2018-10-19 09:33:33+0200 > guy
+2018-10-19 09:34:05+0200 > <Lctrl><LAlt><Up><Down><Down><Down><Esc><LShft>Mie<RShft>3Asie
+2018-10-19 09:45:40+0200 > <KP6><KP9>_st_part_fait<Lctrl>c
+2018-10-19 09:46:01+0200 > <Lctrl>v<Lctrl>v<KP9><KP9>_st_cy<BckSp><BckSp>piste_fait<Lctrl><KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<Lctrl>v<KP9><KP9>_st_piste_ga<BckSp><BckSp>fait<Lctrl>c
+2018-10-19 09:48:13+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<LAlt><Lctrl><Up><Up><LAlt><Lctrl><Lctrl><LAlt><Down><Down><KP5><BckSp><KP8><KP9>_st_bande_fait<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-19 09:57:13+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP8><KP9>_st_bande_fait<Lctrl>v<KP8><KP9>_st_bande_foi<BckSp><BckSp>ait<Lctrl>c
+2018-10-19 09:58:43+0200 > <Lctrl>v<Lctrl>vtertiary
+2018-10-19 09:59:09+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-19 10:01:03+0200 > <Lctrl>v<KP8><KP9>_st_bande_fait<Lctrl>v<KP8><KP9>_st_bande_fait<Lctrl>c
+2018-10-19 10:01:59+0200 > <KP9><KP9>_st_pir<BckSp>ste_fait<KP9><KP9>_st_piste_fait<KP6>part<KP6><KP9>_st_part_fait<Lctrl>c
+2018-10-19 10:04:45+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<KP6><KP9>_st_part_fait<KP6><KP9>_st_part_fait<KP6><KP9>_st_part_fait<KP9><KP9>_st_c<BckSp>piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fzai<BckSp><BckSp><BckSp>ait<Lctrl>v<KP9><KP9>_st_piste_fait<Lctrl>c
+2018-10-19 10:10:18+0200 > <KP6><KP9>_st_bande_fait<KP8><Lctrl>v<KP9><KP9><BckSp><BckSp><KP6><KP9><BckSp><BckSp><KP6><KP9>_st_part_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<Esc><Lctrl>v<KP6><KP9>_st_part_fait<KP6><KP9>_st_part_fait<KP6><KP9>_st_part_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<Lctrl>v<KP4><KP8><KP9><BckSp><BckSp><KP9>_ma_piste_fi<BckSp>ait<KP9><KP9>_st_piste_fait<KP1><KP9>_ma_part_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<Del><Del><Del><KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP8><KP9>_st_bande_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP6><KP9>_st_part_fait<KP9><KP9>_st_c<BckSp>piste_fau<BckSp>it<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP4><KP9>_ma_piste_fait<KP4><KP9>_ma_piste_fait<KP3><KP9>_ma_bande_fait<KP3><KP9>_ma_bande_fait<KP4><KP9>_ma_piste_fait<KP1><KP9>_ma_part_fait<KP6><KP9>_ma_part_fait<KP1><KP3><KP9>_ma_bande_fait<Lctrl>c
+2018-10-19 10:41:08+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<KP3><KP9>_ma_bande_fait<Lctrl>v<Lctrl>v<Lctrl>v<KP8><KP9>_st_bande_fait<Lctrl>c
+2018-10-19 10:46:31+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP3><KP9>_ma_bande_fait<Lctrl>c
+2018-10-19 10:49:23+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Right><Left><BckSp><KP1><BckSp><KP2>f<BckSp>double<Lctrl>c
+2018-10-19 10:53:46+0200 > <Lctrl>v<KP8><KP9>_ma_<BckSp><BckSp><BckSp>st_bandte<BckSp><BckSp>e_fait<Lctrl>c
+2018-10-19 10:56:38+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP9><KP9>_st_piste_fait<Lctrl>v<BckSp><BckSp><KP9><KP9><Right><#+12><BckSp><BckSp><BckSp><BckSp><BckSp>piste<KP9><KP9>_st_piste_fait<Del><Del><Del><Del><KP9><KP9>_st_piste_faitfootx<BckSp>way<KP9><KP9>_st_piste_fait<KP9><KP9>_st_piste_fait<KP3><KP9>_maç<BckSp>_bande_fait<Lctrl>c
+2018-10-19 11:02:25+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP2><KP9>_ma_double<BckSp>_fait<Lctrl>c
+2018-10-19 11:04:15+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<KP1><KP9>_ma_part_fait<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP3><KP9>_ma_bande_fait<KP9><BckSp><KP4><KP9>_s<BckSp>ma_piste_fait<Lctrl>c
+2018-10-19 11:09:10+0200 > <Lctrl>vservice<KP3><KP9>_st_<BckSp><BckSp><BckSp>ma_bande_fait
+2018-10-19 11:11:49+0200 > <Lctrl>v<KP3><KP9>ç<BckSp>_ma_bande_fait<Lctrl>c
+2018-10-19 11:12:10+0200 > <Lctrl>c
+2018-10-19 11:12:16+0200 > <Lctrl><KP3><KP9>_ma_bade_faitn<Lctrl>c
+2018-10-19 11:12:25+0200 > <KP3><KP9>_ma_bande_fait<KP2>double<LAlt><Lctrl><Up><LAlt><Lctrl><Down><LShft><LShft><Lctrl><Lctrl><Lctrl>c
+2018-10-19 11:19:21+0200 > <Lctrl>v<LShft>Structurant_ou_non <LShft>Structurant<BckSp><BckSp><BckSp><BckSp><BckSp> ou <LShft>N
+2018-10-19 11:20:00+0200 > <LShft><LShft><Lctrl>c
+2018-10-19 11:20:48+0200 > <Lctrl>v<LShft>Typologie des cheminements
+2018-10-19 11:21:28+0200 > <LShft><LShft>Année <LShft>Réalisation
+2018-10-19 11:22:34+0200 > <LShft><LShft><LShft><Lctrl><Lctrl><Lctrl><LShft><LShft><LShft>Reseau <LShft>Struturant<LShft>Autre in<BckSp><BckSp><LShft>Init<BckSp><BckSp>t<BckSp><BckSp>tinéraire
+2018-10-19 11:25:17+0200 > <BckSp>
+2018-10-19 11:25:33+0200 > <BckSp><BckSp>
+2018-10-19 11:25:37+0200 > <BckSp><BckSp><BckSp><BckSp><BckSp>
+2018-10-19 11:26:04+0200 > <Del>()
+2018-10-19 11:26:23+0200 > <Del><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><Lctrl> 
+2018-10-19 11:28:04+0200 > <Lctrl><Lctrl><Lctrl><LShft>Largeur du <LShft>Trait
+2018-10-19 11:30:31+0200 > <LShft>Type de <LShft>Trait<LShft>Couleur du <LShft>Trait<LShft>In<BckSp><BckSp><LShft>Re<BckSp>éseau des chem<BckSp><BckSp><BckSp><BckSp>cheminements <BckSp><#+28><LShft>Avan<BckSp><BckSp><BckSp><BckSp><LShft>Etat du <BckSp><BckSp><BckSp>es<BckSp><BckSp>des <BckSp><#+18><LShft>Etat <LShft>d<RShft>Avancement des <BckSp>'aprojetsliés<BckSp><BckSp><BckSp><BckSp> liés au réseau cyclble<BckSp><BckSp><BckSp>able<Lctrl><Lctrl>c
+2018-10-19 11:36:22+0200 > <Lctrl>v<LShft>Document <LShft>Provisois<BckSp>re<Lctrl><LAlt><Up><Up><Down><Down><Down><Lctrl><LAlt><Up><Lctrl>c
+2018-10-19 11:38:54+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<KP4><KP9>_ma_piste_fait<Lctrl>v<KP4><KP9>_ma_piste_fait<KP1><KP9>_ma_<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><KP3><KP9>_ma_bande_fait<KP3><KP9>_ma_bande_fait<Lctrl>c
+2018-10-19 11:41:16+0200 > <Lctrl>v<KP4><KP9>_ma_piste_fait<KP4><KP9>_ma_piste_fait<KP4><KP9>_ma_piste_fait<KP4><KP9><BckSp><BckSp><KP3><KP9>_ma_bande_fait<Esc><Lctrl><LAlt><Up><Down><Lctrl><LShft>Maillage<Home><LShft>Axe de <LAlt><Lctrl><Up><Lctrl><LAlt><Lctrl><Down><KP4><KP9>_ma_piste_fait
+2018-10-19 11:48:22+0200 > <KP3><KP9>_ma_bande_fait<KP3><KP9>_ma_bande_fait<Lctrl>c
+2018-10-19 11:49:04+0200 > <Lctrl>v<KP4><KP9>_ma_piste_fait<KP4><KP9>_ma_piste_fait<KP3><KP9>_ma_bande_fait<Lctrl>c
+2018-10-19 11:51:41+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-19 11:53:39+0200 > <KP1><KP9>_maè<BckSp>_part_fait<Lctrl>c
+2018-10-19 11:54:05+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<KP1><KP9>_ma_part_fait<Lctrl>c
+2018-10-19 11:56:00+0200 > <Lctrl>v<KP3><KP9>_ma_bande_fait<Lctrl>c
+2018-10-19 11:56:48+0200 > <Lctrl>v<Lctrl>v<Lctrl>v<Del><#+19><LShft>Axe de <LShft>Maissali<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>llai<BckSp><BckSp>iag<BckSp><BckSp><BckSp>a<Tab><Lctrl><LAlt><Up><Lctrl><LAlt><Down><Right><BckSp><BckSp>illage<Del><Del><LShft>Axe de <LShft>LM<BckSp><BckSp><LShft>Maillage<RCtrl><Lctrl><LAlt><Up><Up><Up><LShft>Mi<LShft>Mie<RShft>7Asie
+2018-10-19 12:01:15+0200 > <LAlt><Tab><LAlt><Lctrl><RCtrl><LAlt><Lctrl><Down><Down><Down><LAlt><Tab><RCtrl><Lctrl><LAlt><Down><Down><Down><RCtrl><Lctrl><LAlt><Up><Up><Up><F5><Lctrl><Lctrl><Lctrl><Lctrl><Lctrl><Lctrl><Lctrl><RCtrl><Lctrl><LAlt><Up><Down><F5><RCtrl><Lctrl><LAlt><Down><Down><Down><RCtrl><Lctrl><LAlt><Up><Esc><Esc><RCtrl><Lctrl><LAlt><Up><Up><Up><F5><F5><F5><F5><RCtrl><Lctrl><LAlt><Down><Down><Down><Down><Up><LAlt><Lctrl><Up><Up><LAlt><Lctrl><Up><F5><F5><F5><Lctrl><LAlt><Down><RCtrl><LAlt><Lctrl><Down><Down><Down><LAlt><Lctrl><Up><Lctrl><LAlt><Up><LAlt><Lctrl><Up><Down><Up><F5><LAlt><Tab><LAlt><Tab><Tab><Tab><RCtrl><LAlt><Lctrl><Down><Up><Up><Down><Down><RCtrl><Lctrl><LAlt><Down><Down><RCtrl><Lctrl><LAlt><Up><Up><RCtrl><LAlt><Lctrl><Down><Down><Down><LShft><Lctrl>c
+2018-10-19 12:13:42+0200 > <Lctrl>v<Lctrl><Lctrl><Lctrl><Lctrl><LShft><LShft>Epaisseur de <LShft>Trait<LShft>Type de <LShft>Trait<LShft>Couleur du <LShft>Trait<LAlt><Tab><LAlt><Tab><LAlt><Tab><Tab><RCtrl><Lctrl><LAlt><Down><Down><Down><RCtrl><LAlt><Lctrl><Up><Up><Up><RCtrl><Lctrl><LAlt><Down><Down><Down><RCtrl><LAlt><Lctrl><Up><Up><Up><Down><RCtrl><LAlt><Lctrl><Down><Down><Down><LAlt><Tab><KP3><KP5><BckSp><BckSp><KP5><KP3><KP.><KP5>ent<BckSp><BckSp><BckSp>ga<BckSp>rande echellepetie echelle<BckSp><KP5><KP5><KP.><BckSp><KP8><Lctrl><Lctrl><RCtrl><Lctrl><LAlt><Up><Lctrl>a<Up>
+2018-10-19 12:31:11+0200 > 
+2018-10-19 12:31:12+0200 > <RCtrl><LAlt><Lctrl><Down><Down><Up><RCtrl><Lctrl><LAlt><Up><RCtrl><LAlt><Lctrl><Up><Up><Up><Down><LShft>Mie<RShft>3Asie
+2018-10-19 14:00:50+0200 > <LShft>Mie<RShft>7Asie
+2018-10-19 14:00:57+0200 > <RCtrl><Lctrl><LAlt><Down><Lctrl><LAlt><Down><Lctrl><LAlt><Down><RCtrl><LAlt><Lctrl><Up>
+2018-10-19 14:01:58+0200 > 
+2018-10-19 14:01:58+0200 > <Lctrl><LAlt><Down><LAlt><Tab><LShft>Mie<RShft>3Asie
+2018-10-19 14:02:23+0200 > <LShft><LAlt><Lctrl><Up><Lctrl><LAlt><Up><LAlt><Lctrl><Up><Lctrl><LAlt><Down><Down><Down><LAlt><Tab><Lctrl><LAlt><Up><RCtrl><Lctrl><LAlt><Up><LAlt><Lctrl><Up><Down><Lctrl><LAlt><Up><Lctrl>asite
+2018-10-19 14:10:45+0200 > <RCtrl><Lctrl><LAlt><Up><RCtrl><Lctrl><LAlt><Down>capitan<BckSp>inerie
+2018-10-19 14:12:22+0200 > <LAlt><Lctrl><Down><Lctrl><LAlt><Up><Up><LAlt><Lctrl><Up><LAlt><Lctrl><RCtrl><Lctrl><LAlt><RCtrl><Lctrl><LAlt><Down><Down><RCtrl><Lctrl><LAlt><Down><Down><Down><RCtrl><Lctrl><LAlt><Up><Lctrl><LAlt><Up><Up><Lctrl><LAlt><Up><Down>sid<BckSp><BckSp><BckSp>distrowatch
+2018-10-19 14:22:09+0200 > ubuntu cdubuntu cd iso
+2018-10-19 14:30:58+0200 > <BckSp>
+2018-10-19 14:33:47+0200 > com<BckSp>smic
+2018-10-19 14:34:00+0200 > <RCtrl><Lctrl><LAlt><Up><Up><Lctrl><LAlt><RCtrl><Lctrl><LAlt><Down><Down><Down>aal<RCtrl><Lctrl><LAlt><Up><LAlt><Lctrl><Up><LShft>Mie<RShft><RShft>7Asie
+2018-10-19 14:43:59+0200 > <RCtrl><Lctrl><LAlt><Down><LAlt><Lctrl><Down><Lctrl><LAlt><Down><LAlt><Lctrl><Up><Up><Up><RCtrl><Lctrl><LAlt><Down><LAlt><Lctrl><Down><Up><Down><Up><Down><Down><Up><Down>
+2018-10-19 14:50:39+0200 > 
+2018-10-19 14:50:42+0200 > <Up><Up>
+2018-10-19 14:50:43+0200 > <Down><Down><Down><Down><Up><Down>
+2018-10-19 14:50:52+0200 > 
+2018-10-19 14:50:53+0200 > <Left>
+2018-10-19 14:50:57+0200 > yw
+2018-10-19 14:51:32+0200 > <Left>
+2018-10-19 14:51:39+0200 > 
+2018-10-19 14:51:47+0200 > 
+2018-10-19 14:51:52+0200 > <Tab>
+2018-10-19 14:52:28+0200 > 
+2018-10-19 14:52:30+0200 > 
+2018-10-19 14:52:32+0200 > <Tab>
+2018-10-19 14:52:37+0200 > <RCtrl><LAlt><Lctrl><Down><Down><Down>
+2018-10-19 14:55:13+0200 > 
+2018-10-19 14:55:14+0200 > <Down><Down><Down><#+3><Down>
+2018-10-19 14:55:17+0200 > <Left>
+2018-10-19 14:55:18+0200 > <RCtrl><Lctrl><LAlt><Up><Up><Down><Down><Down><Up><Up><Down><Esc><LShft>Mie<RShft>3Asie
+2018-10-19 15:04:16+0200 > vl<LShft><Home><LShft>Portier<LShft>De<LShft>Nuit<Del><Del><Del><Del><Lctrl>c
+2018-10-19 15:05:59+0200 > <Lctrl>v<RShft>.mp<KP4><F5><F5><F5><F5><F5><F5><F5><F5><F5><F5><F5><F5><F5><F5><F5><Lctrl><LAlt><Down><RCtrl><Lctrl><LAlt><Up><Up>numworks
+2018-10-19 15:11:19+0200 > sif<BckSp>gar
+2018-10-19 15:15:54+0200 > <RCtrl><Lctrl><LAlt><Down><Lctrl><LAlt><Up>cm<RCtrl><Lctrl><LAlt><Down><Down><Up><Up><Up><Down><LShft>Mie<RShft><RShft><BckSp><BckSp><BckSp><BckSp><LShft>Mie<RShft>7Asie
+2018-10-19 15:18:11+0200 > <LAlt><Lctrl><Up><Up><LAlt><Lctrl><Down><Down><LAlt><Lctrl><Down><LAlt><Lctrl><Down>earth<RCtrl><Lctrl><LAlt><Down><Lctrl><LAlt><Up><Up><Up><Up><Down><Up><RCtrl><LAlt><Up><Lctrl><RCtrl><LAlt><Lctrl><Down><Down><Right><Down><LAlt><Lctrl><Up><Up><LAlt><Lctrl><Up><LAlt><Lctrl><Down><LAlt><Lctrl><Down><Down><LAlt><Lctrl><Up><LShft><Lctrl>c
+2018-10-19 15:26:40+0200 > <Lctrl>v<Up><Up><Up><Up><Up><LShft><Right><Lctrl>c
+2018-10-19 15:27:17+0200 > <Down><Down><Down><Down><Down><Down><Up><Lctrl>v<Down><Lctrl>v<Down><Down><Up><Lctrl>v<Down><Lctrl>v<Down>an<Down><Lctrl>v<Down><Lctrl>v<Down><Down><Up><Up><Down><Down><Up><Lctrl>v<Down><Lctrl>v<Down><Down><Down><Down><Down><Up><Up><Up><Right><Up><Left><Lctrl>v<Down><Right>anc<Down><Left>an<Down><Lctrl>v<Down><Lctrl>v<Down><Down><Down><Down><Down><Up><Up><Up><Up><Lctrl>v<Down><Lctrl>v<Down><Down><Up><Lctrl>v<Down><Right>anc<Down><Down><Up>anc<Down><Left><Lctrl>v<Down><Lctrl>v<Down><Down><Down><Down><Down><Up><Up><Up><Up><Lctrl>v<Down>an<Down>an<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>vn<Right>nc<Down><Up>hock<BckSp>hok<BckSp>c<BckSp><BckSp><BckSp>ma<BckSp>orga<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><LShft><Lctrl>c
+2018-10-19 15:30:14+0200 > <Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>v<Down><Lctrl>vncvera<BckSp><BckSp><BckSp><BckSp>annnorma<F5><F5>mk<BckSp><BckSp>vi<BckSp><BckSp><BckSp><BckSp><KP4>v<F5><F5><F5><F5><F5><F5><F5><F5>:::<BckSp><BckSp><BckSp><BckSp><Esc>:q
+2018-10-19 15:41:10+0200 > <Lctrl>a<Down><Esc><LShft>Mie<RShft>3Asie
+2018-10-19 15:52:34+0200 > ps aux <AltGr>| grep calc
+2018-10-19 15:53:16+0200 > kill <KP1><KP9><KP2><KP4><KP9>
+2018-10-19 15:53:23+0200 > <RCtrl><LAlt><Lctrl><Up><RCtrl><LAlt><Lctrl><Up><RCtrl><Lctrl><LAlt><Up><RCtrl><RCtrl><Lctrl><LAlt><Down><Up><RCtrl><LShft>Mie<RShft><RShft>7Asie
+2018-10-19 15:55:17+0200 > upd<RCtrl><Lctrl><LAlt><Up><RCtrl><LAlt><Lctrl><Down><LAlt><Lctrl><Down><Lctrl><LAlt><Down>norman<LAlt><Lctrl><Up><Up><Up><Down><Down><Down><Down><Up><Up><Up><Lctrl><LAlt><LShft><Down><Down><Down><LAlt><Lctrl><Up><Down><Lctrl><LAlt><LShft><Down><LAlt><Lctrl><Down><Up><LAlt><Lctrl><LShft><LAlt><Lctrl><LShft><Down><Down><LAlt><Lctrl><Up><LAlt><Lctrl><Up>maps
+2018-10-19 15:59:54+0200 > maps
+2018-10-19 16:00:04+0200 > <Lctrl><LAlt><Down><LAlt><Lctrl><Down><Down><Lctrl><LAlt><Down><Lctrl><LAlt><Up><Lctrl><LAlt><Up><Lctrl><LAlt><Lctrl><LAlt><Down><Lctrl><LAlt><Up><Up><Up><Lctrl><LAlt><LAlt><Lctrl><Lctrl>c
+2018-10-19 16:01:20+0200 > <Lctrl>v<KP1><KP3><KP6><BckSp><LShft>R<Right><Right><Right><Right><BckSp><LShft>E<BckSp><LShft>N<Lctrl>c
+2018-10-19 16:01:43+0200 > <Lctrl>v<Lctrl><LAlt><Up><Up><LShft>HP<Right> <KP2><KP5><KP8><Lctrl><LAlt><Up><Up><Lctrl><LAlt><Down><Down><Lctrl><LAlt><Up><Up><Lctrl><LAlt><Down><Down><Down>eart<Lctrl><LAlt><Up><Up><Lctrl><LAlt><Up><Lctrl><LAlt><Up><Down><Down><Down>, <KP2><KP5><KP9>, <KP2><KP6><KP0><KP1><KP8><KP6><KP9><Down><Lctrl><LAlt><Up><Up><LAlt><Lctrl><Down><Lctrl><LAlt><Down><Right><Right><Right><Right>anne<RShft>.revelen<AltGr>@dto-ingenierie<RShft>.fr<LAlt><Lctrl><Up><Up><Lctrl><LAlt><Down><Down><BckSp><BckSp>com
+2018-10-19 16:16:51+0200 > <Lctrl>c
+2018-10-19 16:16:53+0200 > <Lctrl>v<KP1><KP8><KP7><KP0><KP2><KP0><KP1><KP8><KP1><KP0><KP1><KP8><Down><Up><Up><Lctrl>c
+2018-10-19 16:17:08+0200 > <Down><Lctrl>v<Down><Lctrl>v<Up><Right>n<Right><Down><Left>n<Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Up><Lctrl>c
+2018-10-19 16:17:19+0200 > <Down><Lctrl>v<Right><Right><Right><Lctrl><LAlt><Up><Up><Lctrl><LAlt><Down><LAlt><Lctrl><Down><Lctrl>c
+2018-10-19 16:18:39+0200 > <Lctrl>v<Lctrl>c
+2018-10-19 16:18:43+0200 > <Lctrl>v<KP2><KP4><Right><LShft>Rue du <LShft>Moulin <LShft>Rouge<Lctrl>c
+2018-10-19 16:18:56+0200 > <Lctrl>v<KP2><KP4> bis<Lctrl><LAlt><Up><Lctrl><LAlt><Up><LAlt><Lctrl><Down><Down><KP1><KP8><KP7><KP1><Right><Right><Right><KP2><KP0><KP1><KP8><KP1><KP0><KP1><KP7><Right>n<Lctrl><LAlt><Lctrl><LAlt><Up><Lctrl><LAlt><Up><Down><Down><Up><Up><Up><Up><Up><Right><Right><Right><Left><Left><Down><Down><Down><Down><Up><Up><Up><Right>
+2018-10-19 16:20:28+0200 > <Down><Down><Up><Up>
+2018-10-19 16:20:30+0200 > <Down><Up><Up><Up><Up><Down><Down><Down><Right><Right><Right><Down><Down><Down><Left><#+61><Esc><Down><Up>
+2018-10-19 16:20:42+0200 > <Down><Down><Down><Up>
+2018-10-19 16:20:56+0200 > <Down><Down><Down><Down><Down>
+2018-10-19 16:21:03+0200 > <Up><Up><Up><Down><Down><Down><Up><Up><Up><Down><Down>
+2018-10-19 16:21:12+0200 > <BckSp><#+30><Esc><Up><Up>
+2018-10-19 16:21:20+0200 > <Down><Down><Down><Up><Up><Up><Up><Up><Up><#+22><Down><#+30>al rue uriarte, el palermo, argentine
+2018-10-19 16:24:29+0200 > <Lctrl><LAlt><Down><Down><LShft>CR <KP1><KP2><KP9><LShft>CR <KP1><KP2><KP9><KP1><KP8><KP7><KP2><KP1><KP8><KP7><KP3><Right><Up><Right><Up><Right><Lctrl>c
+2018-10-19 16:31:45+0200 > <Down><Lctrl>v<Down><Lctrl>v<Right><Up>n<Down>n<Right><Right><Right><Up>marie<RShft>.ballu<AltGr>@yahoo<RShft>.fr<Lctrl>c
+2018-10-19 16:32:03+0200 > <Lctrl>v<LShft><Lctrl>c
+2018-10-19 16:32:08+0200 > <Lctrl>v<Lctrl>v<KP1><KP7><KP8><KP1><KP8><KP0><Right><Up><LShft>Rue <LShft>Marius <LShft>Lacroix<LShft>Rue <LShft>Marius <LShft>Lacroix<LShft>CM <KP6><KP1><KP2><Down><LShft>CM <KP6><KP1><KP1><Down><Down><Up><Left><Left><Left><Left><Left><#+26><LAlt><Lctrl><Up><Lctrl><LAlt><Up>caravan hostel, 
+2018-10-19 16:34:01+0200 > <LAlt><Lctrl><Down><LAlt><Lctrl><Down><Right><LShft>AP<Right><KP2><KP9><KP7><KP6><BckSp><BckSp><KP6><Lctrl>c
+2018-10-19 16:37:14+0200 > <Lctrl>v<KP2><KP9><KP7><Left><Left><Left><Left><Left><Left>n<Down><Up><LShft>CN<Right><KP2><KP8><KP9><LShft>HP<KP2><KP5><KP9><LShft><Lctrl>c
+2018-10-19 16:39:00+0200 > <Lctrl>v<Lctrl>v<KP2><KP5><KP8><Down><Down><KP2><KP6><KP0><Down><LShft>CR<Right><KP1><KP2><KP9><Down><Left><LShft>CR<Right><KP1><KP2><KP9><Down><Left><LShft>CM<Right><KP6><KP1><KP8><BckSp><KP2><Down><KP6><KP1><KP1><Left><LShft>CM<Lctrl>v<Lctrl>an<Lctrl>an<Lctrl>an<Lctrl>a<Down>cd <AltGr>~<RShft>/f<Tab>ca<Tab><#+1><BckSp><BckSp><LShft>CA<Tab>d<Tab>n<Tab><LShft>U<Tab><BckSp><Tab>ur<Tab><LShft>NU<Tab>b<Tab><BckSp><KP2><KP0><KP1><KP8><RShft>/b<Tab>
+2018-10-19 16:41:25+0200 > <RShft>./up<Tab><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>
+2018-10-19 16:41:38+0200 > <Lctrl>c
+2018-10-19 16:41:39+0200 > <RShft>./up<Tab>
+2018-10-19 16:41:43+0200 > <LShft><Lctrl>c
+2018-10-19 16:44:47+0200 > <Lctrl>v<Lctrl><LAlt><Up><Up><Up><Down>journal du k<BckSp>hacker
+2018-10-19 16:45:46+0200 > <Lctrl><LAlt><Down><Down><Lctrl><LAlt><Up><LAlt><Lctrl><Up><Down><Down><Down><Lctrl><LAlt><Down><Up><Up><Up><Down><KP1><KP6><KP7><KP2><LAlt><Lctrl><Up><Up><Lctrl><LAlt><Up><Down><Down><Down><Down><Lctrl><LAlt><Up><Lctrl><LAlt><Down><Down><Up><Up><Up><Down><Lctrl><LAlt><LShft><Down><LAlt><Lctrl><Up><Lctrl><LAlt><Up><Down><Lctrl><LAlt><Down><Lctrl><LAlt><Down><Lctrl><LAlt><Up><Up><Up><LAlt><Lctrl><LShft><Down><Lctrl><LAlt><Up><Lctrl><LAlt><Down><Lctrl><LAlt><Up><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><KP1><KP3><KP5><BckSp><LShft>Rue <LShft>M<Right><Right><Right><Right><Right><Right><Right><BckSp><LShft>L
+2018-10-19 16:56:13+0200 > <Lctrl><LAlt><Up><Down><Down><RCtrl><Lctrl><LAlt><Up><Up><Up><RCtrl><LAlt><Lctrl><Up><Up><Down><Lctrl><LAlt><LAlt><Lctrl><Down><Up><Down><Down><Down><LAlt><Lctrl><Up><LAlt><Lctrl><Down><Down><LAlt><Lctrl><KP1><KP8><KP2><KP4><Lctrl><LAlt><Up><Up><Up><LAlt><Lctrl><Lctrl><LAlt><Down><Down><Down><F5><LShft>Mie<RShft>7Asie
+2018-10-19 17:07:23+0200 > <KP1><KP8><KP2><KP4><LShft>Rue <LShft>Marius <LShft>Lacroix<KP1><KP8><KP6><KP9>ru<BckSp><BckSp><LShft>Rue <LShft>Emile <LShft>Normandin<Lctrl>c
+2018-10-19 17:11:19+0200 > <Del><Del><Del><KP1><KP8><KP7><KP0><LShft>Rue du <LShft>Mu<BckSp>oulin <LShft>Rouge<RCtrl><LAlt><Lctrl><Down>earth<KP2><KP4> rue r<BckSp>du moulin rouh<BckSp>ge, <KP1><KP7><KP0><KP0><KP0> la rochelle
+2018-10-19 17:17:15+0200 > <Lctrl><LAlt><Up><Lctrl><LAlt><Up><Lctrl><LAlt><Up><Up><Lctrl><LAlt><Down><Up><Down><Down><Down><Lctrl><LAlt><Up><Down><Down><Lctrl><LAlt><LAlt><Lctrl><Up><Lctrl><Lctrl><KP1><KP8><KP7><KP2><LShft>Rue <LShft>Marius <LShft>Lacroix<KP1><KP8><KP7><KP3><LShft>Rue <LShft>Marius <LShft>Lacroix<Esc><LShft>Mie<RShft>3Asie
+2018-10-19 17:31:12+0200 > <F5><F5><Del><Lctrl><Del><LShft><Del><Lctrl><Lctrl>videos
+2018-10-19 17:39:12+0200 > <F5><F5><F5><F5><Del><Del><Lctrl><Del><Lctrl>c
+2018-10-19 17:46:10+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-19 17:46:52+0200 > <Lctrl>v<Lctrl>v<Lctrl>c
+2018-10-19 17:47:53+0200 > <Lctrl>v<Lctrl>v<LShft><Lctrl>c
+2018-10-19 17:50:45+0200 > <Lctrl>v<Del><Del><LShft>D'autre <Lctrl>c
+2018-10-19 17:52:08+0200 >  <Lctrl>v<BckSp>part <BckSp>, concernant la <BckSp><BckSp><BckSp>votre projet  constu<BckSp>ruction au <KP2><KP4> ru <BckSp>e dy<BckSp>u <LShft>Moulin <LShft>Rouge<BckSp><LShft>R, merci de me foun<BckSp>rnit<BckSp>r vos souhaits cobnc<BckSp><BckSp><BckSp>ncernant cette création de numéro, en fonction de l'acces<BckSp><BckSp>à<BckSp>ès à vo<BckSp><BckSp>cette seconde<BckSp> :
+2018-10-19 17:54:30+0200 > -  constu<BckSp>ruction (avant ou après le <KP2><KP4>)
+2018-10-19 17:54:55+0200 > - des numéros de vos voisins<BckSp>s (d'après strret veiw<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>eet viex<BckSp>wn <BckSp><BckSp>, le <KP2><KP6> est donné pour les parcelles <Lctrl><LShft>CR <KP1><KP2><KP7> et <LShft>CR <KP1><KP2><KP8>, alor que <BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>s<BckSp>rs que ma base de données<BckSp> contine<BckSp><BckSp>ent les entrées <KP2><KP4> bis et <KP2><KP6><RShft>...)
+2018-10-19 17:57:16+0200 > 
+2018-10-19 17:57:16+0200 > m<BckSp>le <BckSp><BckSp><BckSp><RShft>En fonction de votre réponse, je corrige <BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>génère un nouveau cervi<BckSp><BckSp>tificat<RShft>.<LShft><LShft>ma<BckSp><BckSp><BckSp><BckSp>marieballu
+2018-10-19 17:59:00+0200 > <Lctrl>c
+2018-10-19 17:59:52+0200 > marieballu<AltGr>@yahoo<RShft>.fr<Lctrl>v<LShft>C<BckSp><LShft>Numérotage<LShft><Esc><Esc><LShft>Mie<RShft>3Asie
+2018-10-22 08:30:45+0200 > <KP4><KP2><Down><KP4><KP2><KP5><KP3><BckSp><BckSp><KP4><KP3><KP4><KP3><Down><LShft><LShft><Lctrl><LAlt><Up><Lctrl><LAlt><Up><LShft><Lctrl>c
+2018-10-22 08:34:12+0200 > <Lctrl>v<LShft><Lctrl>x<Lctrl>v<LShft><LShft><LShft><Lctrl>c
+2018-10-22 08:35:54+0200 > <Lctrl>v<Lctrl>v<BckSp>
+2018-10-22 08:36:05+0200 > <BckSp><BckSp>
+2018-10-22 08:36:08+0200 > <BckSp>
+2018-10-22 08:36:11+0200 > <BckSp>
+2018-10-22 08:36:12+0200 > <BckSp>
+2018-10-22 08:36:14+0200 > <BckSp>
+2018-10-22 08:36:16+0200 > <BckSp><BckSp>
+2018-10-22 08:36:18+0200 > <BckSp>
+2018-10-22 08:36:20+0200 > <BckSp>
+2018-10-22 08:36:25+0200 > <BckSp>
+2018-10-22 08:36:27+0200 > <BckSp>
+2018-10-22 08:36:32+0200 > <BckSp><BckSp>
+2018-10-22 08:36:41+0200 > <BckSp><BckSp>
+2018-10-22 08:36:43+0200 > <BckSp><BckSp>
+2018-10-22 08:36:46+0200 > <BckSp>
+2018-10-22 08:36:48+0200 > <BckSp>
+2018-10-22 08:36:51+0200 > <BckSp><BckSp>
+2018-10-22 08:36:52+0200 > <BckSp><BckSp>
+2018-10-22 08:36:55+0200 > <BckSp><BckSp>
+2018-10-22 08:36:59+0200 > <BckSp>
+2018-10-22 08:37:01+0200 > <BckSp><BckSp>
+2018-10-22 08:37:03+0200 > <BckSp>
+2018-10-22 08:37:10+0200 > <BckSp>
+2018-10-22 08:37:12+0200 > <Del><Del>
+2018-10-22 08:37:16+0200 > <BckSp>
+2018-10-22 08:37:19+0200 > <BckSp>
+2018-10-22 08:37:22+0200 > <BckSp>
+2018-10-22 08:37:24+0200 > <Del>
+2018-10-22 08:37:27+0200 > <BckSp><BckSp>
+2018-10-22 08:37:30+0200 > <BckSp>
+2018-10-22 08:37:34+0200 > <BckSp>
+2018-10-22 08:37:36+0200 > <BckSp>
+2018-10-22 08:37:38+0200 > <BckSp>
+2018-10-22 08:37:40+0200 > <BckSp>
+2018-10-22 08:37:46+0200 > <BckSp>
+2018-10-22 08:37:49+0200 > <BckSp>
+2018-10-22 08:37:51+0200 > <BckSp>
+2018-10-22 08:37:53+0200 > <BckSp>
+2018-10-22 08:37:56+0200 > <BckSp>
+2018-10-22 08:38:02+0200 > <Del>
+2018-10-22 08:38:06+0200 > <BckSp>
+2018-10-22 08:38:08+0200 > <BckSp>
+2018-10-22 08:38:11+0200 > <LShft><Lctrl>x<Lctrl>v<Lctrl>v<BckSp><BckSp>
+2018-10-22 08:38:29+0200 > <BckSp><BckSp><BckSp>
+2018-10-22 08:38:32+0200 > <BckSp><BckSp><BckSp><LShft>H
+2018-10-22 08:38:37+0200 > <LShft><Lctrl>c
+2018-10-22 08:38:44+0200 > <Lctrl>v<BckSp><BckSp><BckSp>
+2018-10-22 08:38:54+0200 > <BckSp><BckSp><BckSp><BckSp><BckSp>
+2018-10-22 08:39:00+0200 > <BckSp><BckSp>
+2018-10-22 08:39:05+0200 > <BckSp>
+2018-10-22 08:39:09+0200 > <BckSp>
+2018-10-22 08:39:12+0200 > <BckSp>
+2018-10-22 08:39:15+0200 > <Lctrl><Lctrl><LAlt><Up><Lctrl><LAlt><Down><Down><LAlt><Lctrl><Down><Lctrl>x<Lctrl>v<Lctrl>x<Lctrl> 
+2018-10-22 08:40:27+0200 > <Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl> 
+2018-10-22 08:40:43+0200 > <Lctrl>v
+2018-10-22 08:40:44+0200 > <Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<LShft><Lctrl>x<Lctrl>v<LShft><Lctrl>x<Lctrl>v<Lctrl>v<Lctrl>v<BckSp><BckSp>
+2018-10-22 08:41:47+0200 > <BckSp>
+2018-10-22 08:41:50+0200 > <BckSp>
+2018-10-22 08:41:53+0200 > <BckSp><BckSp>
+2018-10-22 08:41:56+0200 > <BckSp>
+2018-10-22 08:42:02+0200 > <BckSp>
+2018-10-22 08:42:05+0200 > <Del><Del>
+2018-10-22 08:42:08+0200 > <BckSp>
+2018-10-22 08:42:11+0200 > <BckSp>
+2018-10-22 08:42:20+0200 > <BckSp><BckSp><BckSp>
+2018-10-22 08:42:23+0200 > <BckSp>
+2018-10-22 08:42:26+0200 > <BckSp>
+2018-10-22 08:42:31+0200 > <BckSp>
+2018-10-22 08:42:34+0200 > <BckSp>
+2018-10-22 08:42:37+0200 > <Del><Lctrl>x<Lctrl>v<Lctrl>x <BckSp>(<Lctrl>v)
+2018-10-22 08:43:20+0200 > <Lctrl>x<Lctrl> 
+2018-10-22 08:43:31+0200 > <Lctrl>v
+2018-10-22 08:43:33+0200 > <Lctrl>x<Lctrl>v<Lctrl>x<Lctrl> 
+2018-10-22 08:43:48+0200 > <Lctrl>v
+2018-10-22 08:43:50+0200 > <LShft><Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>v<BckSp><BckSp>
+2018-10-22 08:44:43+0200 > <BckSp>
+2018-10-22 08:44:47+0200 > <LShft><Lctrl>x<Lctrl>v<Lctrl>v<Lctrl>v<BckSp><BckSp><BckSp>
+2018-10-22 08:45:07+0200 > <BckSp>
+2018-10-22 08:45:10+0200 > <BckSp><BckSp><BckSp>
+2018-10-22 08:45:13+0200 > <BckSp>
+2018-10-22 08:45:16+0200 > <BckSp><BckSp><BckSp>
+2018-10-22 08:45:20+0200 > <BckSp><BckSp>
+2018-10-22 08:45:22+0200 > <BckSp><BckSp><BckSp>
+2018-10-22 08:45:24+0200 > <BckSp>
+2018-10-22 08:45:27+0200 > <BckSp><BckSp>
+2018-10-22 08:45:30+0200 > <BckSp>
+2018-10-22 08:45:40+0200 > <BckSp>
+2018-10-22 08:45:42+0200 > <BckSp>
+2018-10-22 08:45:45+0200 > <BckSp>
+2018-10-22 08:45:48+0200 > <BckSp>
+2018-10-22 08:45:51+0200 > <BckSp>
+2018-10-22 08:45:53+0200 > <BckSp>
+2018-10-22 08:45:56+0200 > <Del><Del>
+2018-10-22 08:46:05+0200 > <BckSp>
+2018-10-22 08:46:08+0200 > <BckSp>
+2018-10-22 08:46:18+0200 > <BckSp>
+2018-10-22 08:46:21+0200 > <BckSp>
+2018-10-22 08:46:23+0200 > <BckSp>
+2018-10-22 08:46:25+0200 > <BckSp>
+2018-10-22 08:46:26+0200 > <BckSp>
+2018-10-22 08:46:29+0200 > <BckSp>
+2018-10-22 08:46:31+0200 > <Del><Del>
+2018-10-22 08:46:33+0200 > <Del><Del>
+2018-10-22 08:46:36+0200 > <BckSp><BckSp>
+2018-10-22 08:46:41+0200 > <BckSp><BckSp>
+2018-10-22 08:46:43+0200 > <BckSp>
+2018-10-22 08:46:45+0200 > <BckSp><BckSp>
+2018-10-22 08:46:47+0200 > <BckSp><BckSp>
+2018-10-22 08:46:49+0200 > <BckSp><BckSp>
+2018-10-22 08:46:51+0200 > <BckSp><BckSp>
+2018-10-22 08:46:53+0200 > <BckSp><BckSp>
+2018-10-22 08:46:55+0200 > <BckSp><BckSp>
+2018-10-22 08:46:58+0200 > <Del><Del><LShft><Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl><Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<LShft><Lctrl>c
+2018-10-22 08:52:19+0200 > <Lctrl>v<Lctrl>c
+2018-10-22 08:53:08+0200 > <Lctrl>v<Del><LShft><Lctrl>x<Lctrl>v<Lctrl>v<Lctrl>v<BckSp><BckSp>
+2018-10-22 08:53:39+0200 > <BckSp><BckSp>
+2018-10-22 08:53:41+0200 > <BckSp><BckSp>
+2018-10-22 08:53:43+0200 > <BckSp><BckSp>
+2018-10-22 08:53:45+0200 > <BckSp><BckSp>
+2018-10-22 08:53:47+0200 > <BckSp><BckSp>
+2018-10-22 08:53:49+0200 > <BckSp>
+2018-10-22 08:53:51+0200 > <BckSp>
+2018-10-22 08:53:53+0200 > <BckSp>
+2018-10-22 08:53:55+0200 > <BckSp>
+2018-10-22 08:53:57+0200 > <BckSp><BckSp>
+2018-10-22 08:53:59+0200 > <BckSp>
+2018-10-22 08:54:01+0200 > <BckSp><BckSp>
+2018-10-22 08:54:03+0200 > <BckSp>
+2018-10-22 08:54:06+0200 > <BckSp><BckSp>
+2018-10-22 08:54:08+0200 > <BckSp>
+2018-10-22 08:54:10+0200 > <BckSp>
+2018-10-22 08:54:12+0200 > <BckSp>
+2018-10-22 08:54:14+0200 > <BckSp><BckSp>
+2018-10-22 08:54:16+0200 > <BckSp><BckSp>
+2018-10-22 08:54:18+0200 > <BckSp><BckSp>
+2018-10-22 08:54:20+0200 > <BckSp><BckSp>
+2018-10-22 08:54:22+0200 > <BckSp>
+2018-10-22 08:54:24+0200 > <BckSp><BckSp>
+2018-10-22 08:54:26+0200 > <BckSp>
+2018-10-22 08:54:35+0200 > <BckSp>
+2018-10-22 08:54:37+0200 > <BckSp>
+2018-10-22 08:54:39+0200 > <BckSp>
+2018-10-22 08:54:42+0200 > <BckSp>
+2018-10-22 08:54:44+0200 > <BckSp>
+2018-10-22 08:54:46+0200 > <BckSp>
+2018-10-22 08:54:49+0200 > <BckSp>
+2018-10-22 08:54:51+0200 > <BckSp>
+2018-10-22 08:54:53+0200 > <BckSp>
+2018-10-22 08:54:55+0200 > <BckSp>
+2018-10-22 08:54:58+0200 > <BckSp>
+2018-10-22 08:55:01+0200 > <BckSp>
+2018-10-22 08:55:04+0200 > <BckSp>
+2018-10-22 08:55:06+0200 > <BckSp>
+2018-10-22 08:55:12+0200 > <BckSp>
+2018-10-22 08:55:14+0200 > <BckSp>
+2018-10-22 08:55:16+0200 > <BckSp>
+2018-10-22 08:55:18+0200 > <BckSp>
+2018-10-22 08:55:20+0200 > <BckSp>
+2018-10-22 08:55:22+0200 > <BckSp>
+2018-10-22 08:55:26+0200 > <BckSp>
+2018-10-22 08:55:31+0200 > <BckSp>
+2018-10-22 08:55:34+0200 > <BckSp>
+2018-10-22 08:55:36+0200 > <LShft><Lctrl>c
+2018-10-22 08:55:49+0200 > <Lctrl>v<LShft><Lctrl>c
+2018-10-22 08:56:02+0200 > <Lctrl>v<LShft><Lctrl>x<Lctrl>v<BckSp><BckSp>
+2018-10-22 08:56:18+0200 > <BckSp><BckSp><BckSp>
+2018-10-22 08:56:20+0200 > <BckSp>
+2018-10-22 08:56:23+0200 > <BckSp><BckSp><BckSp><LShft>V
+2018-10-22 08:56:28+0200 > <BckSp>
+2018-10-22 08:56:30+0200 > <BckSp>
+2018-10-22 08:56:34+0200 > <BckSp>
+2018-10-22 08:56:37+0200 > <BckSp>
+2018-10-22 08:56:39+0200 > <BckSp>
+2018-10-22 08:56:41+0200 > <BckSp>
+2018-10-22 08:56:43+0200 > <LShft><Lctrl>x<Lctrl>v<LShft><Lctrl>c
+2018-10-22 08:57:01+0200 > <Lctrl>v<Lctrl>v<BckSp><BckSp>
+2018-10-22 08:57:35+0200 > <BckSp>
+2018-10-22 08:57:38+0200 > <BckSp><BckSp>
+2018-10-22 08:57:41+0200 > <BckSp><BckSp>
+2018-10-22 08:57:44+0200 > <BckSp><BckSp>
+2018-10-22 08:57:47+0200 > <BckSp>
+2018-10-22 08:57:55+0200 > <BckSp>
+2018-10-22 08:57:57+0200 > <BckSp>
+2018-10-22 08:57:59+0200 > <BckSp>
+2018-10-22 08:58:01+0200 > <Del><Del>
+2018-10-22 08:58:04+0200 > <BckSp><BckSp>
+2018-10-22 08:58:09+0200 > <BckSp><BckSp>
+2018-10-22 08:58:12+0200 > <BckSp>
+2018-10-22 08:58:14+0200 > <BckSp>
+2018-10-22 08:58:18+0200 > <BckSp>
+2018-10-22 08:58:25+0200 > <BckSp>
+2018-10-22 08:58:28+0200 > <BckSp><BckSp><BckSp><BckSp><Del>
+2018-10-22 08:58:32+0200 > <BckSp>
+2018-10-22 08:58:35+0200 > <BckSp>
+2018-10-22 08:58:38+0200 > <Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl> 
+2018-10-22 08:59:09+0200 > <Lctrl>v<Del><LShft><Lctrl>x<Lctrl>v<Lctrl>v<BckSp><BckSp>
+2018-10-22 09:00:18+0200 > <BckSp><BckSp>
+2018-10-22 09:00:21+0200 > <BckSp>
+2018-10-22 09:00:24+0200 > <BckSp>
+2018-10-22 09:00:30+0200 > <BckSp>
+2018-10-22 09:00:32+0200 > <Del><Del>
+2018-10-22 09:00:35+0200 > <LShft><LShft><Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl> 
+2018-10-22 09:01:11+0200 > <Lctrl>v<Lctrl>x<BckSp>
+2018-10-22 09:01:18+0200 > <Lctrl>v<Lctrl>v
+2018-10-22 09:01:34+0200 > <Lctrl>x<Lctrl>v<LShft><Lctrl>x<Lctrl>v<Lctrl>v<Lctrl>v<BckSp>
+2018-10-22 09:02:03+0200 > <BckSp>
+2018-10-22 09:02:06+0200 > <Del><BckSp><BckSp><BckSp>
+2018-10-22 09:02:12+0200 > <BckSp><BckSp>
+2018-10-22 09:02:14+0200 > <BckSp><BckSp>
+2018-10-22 09:02:19+0200 > <BckSp>
+2018-10-22 09:02:28+0200 > <BckSp>
+2018-10-22 09:02:30+0200 > <BckSp>
+2018-10-22 09:02:32+0200 > <BckSp><BckSp>
+2018-10-22 09:02:36+0200 > <BckSp><BckSp>
+2018-10-22 09:02:38+0200 > <Lctrl>x<Lctrl>v<LShft><LShft><Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl> 
+2018-10-22 09:03:26+0200 > <Lctrl>v
+2018-10-22 09:03:28+0200 > <Del><Lctrl>x<Lctrl>v<LShft><Lctrl>c
+2018-10-22 09:03:42+0200 > <Lctrl>v<Lctrl>v<BckSp>
+2018-10-22 09:03:51+0200 > <BckSp><BckSp>
+2018-10-22 09:03:53+0200 > <BckSp>
+2018-10-22 09:03:56+0200 > <BckSp><BckSp>
+2018-10-22 09:03:58+0200 > <BckSp><BckSp>
+2018-10-22 09:04:01+0200 > <BckSp>
+2018-10-22 09:04:09+0200 > <BckSp>
+2018-10-22 09:04:11+0200 > <BckSp>
+2018-10-22 09:04:13+0200 > <BckSp>
+2018-10-22 09:04:15+0200 > <Del><Del>
+2018-10-22 09:04:17+0200 > <BckSp>
+2018-10-22 09:04:32+0200 > <BckSp>
+2018-10-22 09:04:35+0200 > <BckSp>
+2018-10-22 09:04:43+0200 > <BckSp>
+2018-10-22 09:04:45+0200 > <BckSp>
+2018-10-22 09:04:48+0200 > <BckSp><BckSp>
+2018-10-22 09:04:56+0200 > <BckSp>
+2018-10-22 09:04:58+0200 > <Del>
+2018-10-22 09:05:01+0200 > <BckSp>
+2018-10-22 09:05:03+0200 > <BckSp><BckSp>
+2018-10-22 09:05:06+0200 > <LShft><Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>c
+2018-10-22 09:07:26+0200 > <Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>c
+2018-10-22 09:10:00+0200 > <Lctrl>v<LShft><Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Lctrl>x<Lctrl>v<Del><LShft><Lctrl>x<Lctrl>v<Lctrl>v<BckSp><BckSp>
+2018-10-22 09:10:38+0200 > <BckSp><BckSp>
+2018-10-22 09:10:42+0200 > <LShft><Lctrl>c
+2018-10-22 09:10:49+0200 > <Lctrl>v<BckSp>
+2018-10-22 09:10:55+0200 > <BckSp>
+2018-10-22 09:10:59+0200 > <LShft><Lctrl>c
+2018-10-22 09:11:06+0200 > <Lctrl>v<Lctrl>v<BckSp>
+2018-10-22 09:11:13+0200 > <BckSp>
+2018-10-22 09:11:17+0200 > <BckSp><BckSp><BckSp>
+2018-10-22 09:11:21+0200 > <BckSp>
+2018-10-22 09:11:24+0200 > <BckSp><BckSp><BckSp><BckSp>
+2018-10-22 09:11:30+0200 > <BckSp><BckSp>
+2018-10-22 09:11:35+0200 > <LShft><Lctrl>c
+2018-10-22 09:11:45+0200 > <Lctrl>v<LShft>Mie<RShft>3Asie
+2018-10-22 09:14:00+0200 > <LShft>Mie<RShft>3Asie
+2018-10-22 09:15:39+0200 > <Lctrl><LAlt><Up>susdo<BckSp><BckSp>udo vi <RShft>/et<Tab>ap<Tab>t<Tab>sou<Tab><Tab><RShft>.d<Tab><RShft>/<Tab><Tab><BckSp><#+23><BckSp><#+23><BckSp><BckSp><BckSp><BckSp><BckSp>qgi<Tab><Tab>
+2018-10-22 09:19:38+0200 > <LShft>Mie<RShft>3Asie
+2018-10-22 09:19:47+0200 > :q
+2018-10-22 09:19:56+0200 > <Up><RShft>.<Tab>sa<Tab>
+2018-10-22 09:20:02+0200 > :q
+2018-10-22 09:20:12+0200 > <Up><BckSp><#+9>d<Tab>
+2018-10-22 09:20:16+0200 > :q
+2018-10-22 09:20:25+0200 > <Up><BckSp><#+23><Tab>
+2018-10-22 09:20:29+0200 > <PgUp><PgUp><PgUp><PgUp><Lctrl><LAlt><Down><Up><Up><Up><Up><Down><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Down><#+8><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><#+31><Up><#+12><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Down><Down><Down><Down><Down><Down><Down><Down>o<AltGr>#
+2018-10-22 09:21:19+0200 > <AltGr>#<Down><Down><Down><Down><Down><Down><Down><Down><Down><#+24><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Down><#+33><Up><Up><Up><#+19><Down><Down><Up><#+21><Down><#+13><Up><Up><Down><Down><#+30><Down><Down><Down><#+2><Up><#+38><Up><#+17><Up><#+18><Up><#+11><Down><#+72><LShft>Mie<RShft>3Asie
+2018-10-22 09:22:39+0200 > <Down><Down><Down><Down><Esc><Down><Down><Down><#+19><Up><Down>dd<Up><#+7><Up><Up><Up><Up><Up><Up><Up><Up><Up>p<Down><#+24><Up><#+71><Down><Down><Down><Right><#+47><Down><#+12><PgDn><PgDn><Down><Down><Down><Down><Down>dd<Up><#+73><Down><Down>p<Right><#+44><Down><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Left>iuniverse multiverse <Esc><Down><Up><Up><Esc><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down>dd<Down><Down><Down><Down><Down><Down><Down>dd<Esc><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Right><#+58><Right><Right><Left>iuniverse multiverse <Esc><Down><Down><Down><Down><Down>dd<Down><Down><Down><Down><Down><Down>dd<Up><Up><Up><Up><Up><Up><Up><Up><Down><#+13><Down><Down><Down><Up><#+13><Up><Up><Up><Up><Up><Up><Up>dddd<Down><Up><Up><Up><Up><Up><Up><Down><#+10><Up><Up><Up>dd<Down><Down><Down><#+13><Down><Down><Down><Down>dd<Up><#+17><Up>p<Right><#+31><Up><Up><Up><Right><#+19><Left>irestricted <Esc><Right><#+12><Right>dxdw<Esc><Down><Down><Down><Down><Down><Down><#+15><Down><Down><Down>dd<Up><#+17><Up><Up><Up>p<Right><#+29><Right><Right><Right><Right><#+33><Left><Left>iuniverse multiverse <Esc><Down><Down><Down><Down><Down><#+17><Up><Up><Esc>dddd<Esc><Down><Down><Down><Down><Down>dd<Up><#+23><Down>p<Right><#+49><Right><#+8><Right><#+29><Left>imultiverse <Esc><Left><#+31>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><Esc><Down><Down><Down><#+6><Up>d<#+15>d<#+19><Down><Down><Up>dddddd<Esc><Right><#+41><Right><Right><Right>i<BckSp><#+38><BckSp><BckSp><BckSp><BckSp><LShft>Qgis<Esc><Down><Up><Up><Up><Up><Up><Up><Up><Up><Up><Right><#+27><Right><Right>i<BckSp><#+29><BckSp><BckSp><BckSp><BckSp>artu<BckSp>ful<Esc><Up><Up><Down>dd<Esc><Down><Down><Down><Down><Down><Up><Up><Up><Up><Up><Right><Right><Left>i<AltGr>#<Esc><Esc>yy<Down>p<Right><#+12><Left><Right>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>bionic<Esc><Esc><Esc><Down><Up><Up>o<Esc><Down><Esc><Esc><KP7>yy<Down><Down><Down><Down><Down><Down>p<Right><#+11><Right><Right>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>cosmic<Esc><Down><Right><#+29><Right><Right><Right><Right><Right><Right><Right><Right>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>cosmic<Esc><Down><Right><Right><Left>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>cosmic<Esc><Down><Right>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp> cosmic<Esc><Down><Left><Left>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>cosmic<Esc><Down><Right><Right><Right><Left>i<BckSp><BckSp><BckSp><BckSp>cosm<Esc><Down><Esc><Down><LAlt><Lctrl><Up><RCtrl><Lctrl><LAlt><Down><Esc><Down><Down><Lctrl><LAlt><Up>cosmic
+2018-10-22 09:34:41+0200 > <Lctrl><LAlt><Down><Esc><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Down><Down>o<AltGr>#<Esc><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down>o<AltGr>#<Esc><Down><Down><Down><Down><Down><Down><Down>o<AltGr>
+2018-10-22 09:35:38+0200 > <AltGr># postgresql<Esc><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Up><Up><Up><Up><Up><Up><Down><Down><Down><Down><Down><Down><Down><Down><Down><Up><Up><Up><Up>dddddddddd<Up>o
+2018-10-22 09:36:08+0200 > <AltGr><AltGr># neovim<Esc><Down><Down>yyp<Right><#+47>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>cosmic<Esc><Up><Up><Up><Up>yypi<AltGr>#<Right><#+42><Right><Right>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>com<BckSp>smic<Esc><Up><Esc><Up><Up><Up>dd<Esc><Up><#+15><Up><Up>yy<Down><Down><Down><Down><Down><Down><Down><Down><Down><Down>p<Right><#+34><Left>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>cosmic<Esc><Down><Up><Right><Right><Right><Right><Right><Right><Right><Right>r<KP2><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>cosmic<Esc><Down><Esc><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up>yy<Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Up>p<Right><#+52><Right>r<KP2><Esc><Right><Right><#+12><Right><Right>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>bionic<Esc><Up><Up><Left><#+19><Right><Right><Right>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>bionic<Esc><Down><Down><Down><Up><Left>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>bionic<Esc><Down><Up><Up><Up><Up><Up><Up><Up><Up>yy<Down><Down><Down><Down><Down><Down><Down><Down><Down><Down>p<Right><#+44><Left>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>bionic<Esc><Right><#+12><Left><Right>i<BckSp><KP2><Esc><Down><Up><Right><#+12><Right>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>n<BckSp>bionic<Esc><Up><#+8><Up><Up><Up><Up><Up><Up><Esc><Down><Down><Down><Down><Down><Down><Down><#+1><Up><Up><Up><Up><Up><Up><Up>yy<Down><Down><Down><Down><Down><Down><Down><Down><Down><Down>p<Right><#+46><Left>r<KP3><Esc><Right><#+14>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>bionic<Esc><Right><#+25><Left><Left>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><LShft>Version<Esc><Left><#+35><Left>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>bionic<Esc><Up><Esc><Esc><Lctrl><LAlt><Up><LAlt><Lctrl><Down><Esc><Up><Up><Up><Up><Up><Up><Up><Up><Esc><KP1><KP1>yy<Down><#+12>p<Up>o<AltGr>#<Esc><Down><Right><#+27>icosmic<Del><Del><Del><Del><Del><Del><Esc><Down><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up><Up>iv<BckSp>bionic<Del><Del><Del><Del><Del><Del><Esc><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Right><Right><Right><Right><Right><Right>icosmic<Del><Del><Del><Del><Del><Del><Esc><Down><Left><Left><Right><Right>icosmic<Esc><Right><Del><Del><Del><Del><Del><Del><Esc><Down><Left><Left><#+21><Right><Right>icosmic<Del><Del><Del><Del><Del><Del><Esc><Down><Left><Left>icosmic<Del><Del><Del><Del><Del><Del><Esc><Down>icosmic<Del><Del><Del><Del><Del><Del><Esc><Down><Left><Left>icosmic<Del><Del><Del><Del><Del><Del><Esc><Down><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>icosmic<Del><Del><Del><Del><Del><Del><Esc><Down><Left><Left>icosmic<Del><Del><Del><Del><Del><Del><Esc><Esc><Right><Up><Up><Up><Up><Up><Up><Up><Up><Up><Left>icosmic<Del><Del><Del><Del><Del><Del><Esc><Down>icosmic<Del><Del><Del><Del><Del><Del><Esc><Down><Right><Right><Right><Right><Right><Right>icosmic<Del><Del><Del><Del><Del><Del><Esc><Down><Left><Right>icosmic<Del><Del><Del><Del><Del><Del><Esc><Down><Left><Left><#+19><Left>icom<BckSp>smic<Del><Del><Del><Del><Del><Del><Esc><Down><Left><Left>icosmic<Esc><Right><Del><Del><Del><Del><Del><Del><Esc><Down><Left>icoms<BckSp><BckSp>smic<Del><Del><Del><Del><Del><Del><Esc><Down><Left><Left>ici<BckSp>osmic<Del><Del><Del><Del><Del><Del><Esc><Down><Left><Left><#+13><Left>icoms<BckSp><BckSp>smic<Del><Del><Del><Del><Del><Del><Esc><Down><Left><Left>icms<BckSp><BckSp>om<BckSp>smic<Del><Del><Del><Del><Del><Del><Esc><Up><#+13><Esc><Down><Left><#+23>r<KP3><Down><Down><Right><Up><Right><Right><Right><Right>r<KP3><Down><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right>r<KP3><Down><Right><Right><Right><Right><Right>r<KP3><Down><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>r<KP3><Down><Right><Right><Right>r<KP3><Down><Right><Right><Right><Right><Right>r<KP3><Down><Right><Right><Right>r<KP3><Down><Left><Left><Left><Left><Left><Left><Left>r<KP3><Down><Right><Right><Right><Right><Left>r<KP4><Esc><Up><Up><#+2><Down><#+15><Up><Up><Up><Up><Up><Down><Home>x<Esc><Down><Down><Down><#+18><Up><#+56><Up>i<AltGr>#<Esc><Down><Down><Down><Down><#+17><Up><Right><Right><Left><Right> i<Up><Esc><Right>i qgis zeste<BckSp>y<Esc><Left><Left><Left><Left><Left><Left><Left><Left><Left><AltGr>~<Esc>yy<Down><Down><Down><Down><Down><Down><Down><Down><Down><Down>p<Right><#+12><Right><Right><Right>i<BckSp><BckSp><BckSp><BckSp><BckSp>artful<Esc>yy<Down><#+13><Down>p<Right><#+13><Right><Right><Right>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>bionic<Esc>yy<Down><#+16><Up><Up><Up>p<Right><#+13><Right>i<BckSp><BckSp><BckSp><BckSp>cosm<Esc><Esc><Down><Down><Down><#+23><Right><#+48>i<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><AltGr>#s<BckSp>cosmic<Esc><Esc>:w
+2018-10-22 09:45:29+0200 > :wq
+2018-10-22 09:45:31+0200 > sudo apt-get update
+2018-10-22 09:45:43+0200 > <LShft>Mie<RShft>3Asie
+2018-10-22 09:45:52+0200 > <Up>
+2018-10-22 09:47:15+0200 > <LShft>Mie<RShft>7Asie
+2018-10-22 09:47:26+0200 > <RCtrl><Lctrl><LAlt><Down><Lctrl><LAlt><Down><Up>
+2018-10-22 09:47:57+0200 > <Up><Up><Up><Down>
+2018-10-22 09:48:36+0200 > <Up><Up><Up><Up><Home>i<AltGr>#<Esc>:wq
+2018-10-22 09:48:48+0200 > <Up><Up>
+2018-10-22 09:48:50+0200 > <Up><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>safe-upgarde<BckSp><BckSp><BckSp><BckSp>rade
+2018-10-22 09:49:39+0200 > calculatrice sscin<BckSp><BckSp><BckSp><BckSp>cein<BckSp><BckSp><BckSp>ientifique
+2018-10-22 09:50:56+0200 >  comapraison
+2018-10-22 09:51:08+0200 > <F5><Up><Left><#+13><Right><Right><BckSp><BckSp><BckSp><BckSp>dist
+2018-10-22 09:54:16+0200 > o
+2018-10-22 09:54:52+0200 > <Esc><LShft>Mie<RShft>3Asie
+2018-10-22 10:03:05+0200 > <Lctrl><LAlt><Down><Lctrl><LAlt><Up><Up><Lctrl><LAlt><Down>to<BckSp><BckSp><LShft>No<BckSp><BckSp><LShft>Denominatin<BckSp>on de voi<BckSp><BckSp><BckSp><BckSp>s voies, des lieux
+2018-10-22 10:12:02+0200 > 
+2018-10-22 10:12:02+0200 > <KP1> <BckSp><RShft>.<Home>
+2018-10-22 10:12:21+0200 > 
+2018-10-22 10:12:21+0200 > <Up><LShft>Rappel des choses à <Left><Left>
+2018-10-22 10:16:00+0200 > <Left>
+2018-10-22 10:16:10+0200 > 
+2018-10-22 10:17:11+0200 > faire pour <LShft>JP <LShft>Plu<BckSp>ez
+2018-10-22 10:17:42+0200 > <Down><Right><Right> intero<BckSp>roger <LShft>Salomé <Up>
+2018-10-22 10:18:56+0200 > <LShft>Mie<RShft>3Asie
+2018-10-22 10:19:07+0200 > <Home>sudo 
+2018-10-22 10:19:20+0200 > o
+2018-10-22 10:19:36+0200 > pour y
+2018-10-22 10:22:12+0200 > y
+2018-10-22 10:22:17+0200 > <Up><Up>
+2018-10-22 10:25:04+0200 > o
+2018-10-22 10:25:33+0200 > <Lctrl><LAlt><Lctrl><LAlt><Up><Del><Lctrl><LAlt><Down><Up><Lctrl><LAlt><Down> <Lctrl><LAlt><Up><Lctrl><LAlt><Down><LAlt><Lctrl><Down><Lctrl><LAlt><Up>reunion_plea<BckSp>z_<Left><Left><#+3><Left><Left><Left><Left>s<Right><Right><Right><Right><Right><Right><Right>denominations<RShft>.txt
+2018-10-22 10:31:09+0200 > exit
+2018-10-22 10:31:23+0200 > exit
+2018-10-22 10:31:25+0200 > exit
+2018-10-22 10:31:28+0200 > exit
+2018-10-22 10:31:30+0200 > <Lctrl>a<Up><Lctrl>c
+2018-10-22 10:31:35+0200 > exit
+2018-10-22 10:31:37+0200 > exit
+2018-10-22 10:31:42+0200 > <Lctrl>an<BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>exit
+2018-10-22 10:31:53+0200 > <Esc>:wq
+2018-10-22 10:31:57+0200 > exit
+2018-10-22 10:31:59+0200 > qexit
+2018-10-22 10:32:05+0200 > exit
+2018-10-22 10:32:08+0200 > y
+2018-10-22 10:34:26+0200 > <Lctrl><LAlt><Up>jounr<BckSp><BckSp>rnal du hacker
+2018-10-22 10:40:18+0200 > <F5><F5>
+2018-10-22 10:51:05+0200 > <Lctrl>asigar
+2018-10-22 10:51:37+0200 > <Lctrl>amaps
+2018-10-22 10:54:45+0200 > <Up>
+2018-10-22 10:56:20+0200 > <LShft>Mie<RShft>3Asie
+2018-10-22 10:56:33+0200 > <Up><Up><Up>
+2018-10-22 10:56:40+0200 > o
+2018-10-22 10:56:54+0200 > <Down><Down><Down><Down><Down><Down><Down><Down><Down><Down><Up><Up><Up><Up><Up><Up><Down><Down><Tab>
+2018-10-22 10:57:46+0200 > 
+2018-10-22 10:57:55+0200 > <Lctrl>a<AltGr>|top
+2018-10-22 10:59:19+0200 > <Lctrl>a<Up>y
+2018-10-22 11:00:31+0200 > <Esc><Down><Up><Lctrl><Esc><Esc><Esc><LShft>Mie<RShft>3Asie
+2018-10-22 11:07:46+0200 > <RCtrl><Lctrl><LAlt><Up><RCtrl><LAlt><Lctrl><Down><Lctrl>amc
+2018-10-22 11:11:20+0200 > <Up><Up><Up>
+2018-10-22 11:14:51+0200 > <RShft>Mie<LShft>3Asie
+2018-10-22 11:15:04+0200 > o
+2018-10-22 11:15:10+0200 > <Up><Up><Up>
+2018-10-22 11:15:36+0200 > <Up><Up><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>install mail-transport-agent
+2018-10-22 11:22:50+0200 > q<Lctrl>a<Down>qexit
+2018-10-22 11:23:07+0200 > <Up><BckSp><#+19><BckSp>sendmail-bin
+2018-10-22 11:23:44+0200 > o
+2018-10-22 11:24:00+0200 > <Up><BckSp><BckSp><BckSp><#+8><BckSp><BckSp>sible-mda
+2018-10-22 11:24:28+0200 > o
+2018-10-22 11:24:39+0200 > <Up><BckSp><#+19><BckSp>remove sendmail
+2018-10-22 11:25:36+0200 > o
+2018-10-22 11:25:49+0200 > <Up> sendmail-base sendmail-bin
+2018-10-22 11:26:09+0200 > o
+2018-10-22 11:26:24+0200 > <Up><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><Left><#+18><Right><Right><Right><Right><BckSp><BckSp><BckSp><#+2><BckSp><BckSp><BckSp><BckSp><BckSp><#+1><BckSp>
+2018-10-22 11:27:02+0200 > o
+2018-10-22 11:27:12+0200 > <Up><BckSp><#+18><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp><BckSp>t auro<BckSp><BckSp>toremoc<BckSp>ve
+2018-10-22 11:27:47+0200 > o
+2018-10-22 11:28:04+0200 > <Up><Up><Down>
+2018-10-22 11:28:44+0200 > <Lctrl>a<PgUp><Down><Down><Down>
+2018-10-22 11:29:06+0200 > <Up><Up><Up><Down>
+2018-10-22 11:29:11+0200 > o
+2018-10-22 11:29:20+0200 > <Up><Left><#+21><Right><Right>--force 
+2018-10-22 11:29:45+0200 > <Up><Left><#+17><Left><Left><Left><Left><BckSp><#+10><BckSp><BckSp><BckSp>
+2018-10-22 11:30:00+0200 > o
+2018-10-22 11:30:08+0200 > exit
+2018-10-22 11:30:15+0200 > exit
+2018-10-22 11:30:17+0200 > 
+
+Logging stopped at 2018-10-22 11:30:28+0200
+

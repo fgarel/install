@@ -14,8 +14,10 @@ echo "# http://nvie.com/posts/a-successful-git-branching-model/"
 echo "# http://danielkummer.github.io/git-flow-cheatsheet/"
 echo "# http://danielkummer.github.io/git-flow-cheatsheet/index.fr_FR.html"
 echo "#"
-echo "sudo aptitude install git git-flow"
-      sudo aptitude install git git-flow
+echo "sudo aptitude install -y git git-flow"
+      sudo aptitude install -y git git-flow
+echo "sudo apt-get install -y git git-flow"
+      sudo apt-get install -y git git-flow
 echo "#"
 echo "# Création d'un fichier .gitconfig"
 echo '# git config --global user.email "frederic.garel@gmail.com"'

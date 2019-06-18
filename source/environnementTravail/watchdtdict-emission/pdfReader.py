@@ -114,8 +114,8 @@ class PdfReader(object):
         #print "chaineType1 = " + chaineType1
         if chaineType1:
             self.typePdf = 'Teleservice'
-        
-        
+
+
         # dict.fr : présence de la chaine "EPSG:4326"
         p1 = subprocess.Popen(['cat', 'document1.pdf'],
                               stdout=subprocess.PIPE)
@@ -165,7 +165,7 @@ class PdfReader(object):
                                "-e", r'BMC.*\(A[0-9]\)'],
                               stdin=p1.stdout,
                               stdout=subprocess.PIPE)
-        p1.stdout.close()                              
+        p1.stdout.close()
         p3 = subprocess.Popen(["grep", "EPSG"],
                               stdin=p2.stdout,
                               stdout=subprocess.PIPE)
@@ -225,7 +225,7 @@ class PdfReader(object):
 
         # 3ème étape suite : capacite d'impression
         # cat document1.pdf | \
-        #     grep -E -e 'BMC.*\(A[0-9]\)' | \        
+        #     grep -E -e 'BMC.*\(A[0-9]\)' | \
         p1 = subprocess.Popen(['cat', 'document1.pdf'],
                               stdout=subprocess.PIPE)
         p2 = subprocess.Popen(["grep", "-E",
@@ -247,7 +247,7 @@ class PdfReader(object):
 
         # 3ème étape suite : mail du responsable
         # cat document1.pdf | \
-        #     grep -E -e 'BMC.*\(.*\@.*\..*\)' | \    
+        #     grep -E -e 'BMC.*\(.*\@.*\..*\)' | \
         p1 = subprocess.Popen(['cat', 'document1.pdf'],
                               stdout=subprocess.PIPE)
         p2 = subprocess.Popen(["grep", "-E",
@@ -274,7 +274,7 @@ class PdfReader(object):
         #     grep -E -e 'BMC.*\(.*' | \
         #     head -1 | \
         #     sed -E -e 's/.*\(//g' -e 's/\).*//g' | \
-        #     iconv -f latin1 -t utf-8 -
+        #     -f  -f latin1 -t utf-8 -
         p1 = subprocess.Popen(['cat', 'document1.pdf'],
                               stdout=subprocess.PIPE)
         p2 = subprocess.Popen(["grep", "-E",
@@ -392,7 +392,7 @@ class PdfReader(object):
 
         # 3ème étape suite : capacite d'impression
         # cat document1.pdf | \
-        #     grep -E -e 'BMC.*\(A[0-9]\)' | \        
+        #     grep -E -e 'BMC.*\(A[0-9]\)' | \
         p1 = subprocess.Popen(['cat', 'document1.pdf'],
                               stdout=subprocess.PIPE)
         p2 = subprocess.Popen(["grep", "-E",
@@ -414,7 +414,7 @@ class PdfReader(object):
 
         # 3ème étape suite : mail du responsable
         # cat document1.pdf | \
-        #     grep -E -e 'BMC.*\(.*\@.*\..*\)' | \    
+        #     grep -E -e 'BMC.*\(.*\@.*\..*\)' | \
         p1 = subprocess.Popen(['cat', 'document1.pdf'],
                               stdout=subprocess.PIPE)
         p2 = subprocess.Popen(["grep", "-E",
@@ -440,7 +440,7 @@ class PdfReader(object):
         # cat document1.pdf | \
         #     grep -E -e 'BMC.*\(.*\)' | \
         #     head -1 | \
-        #     sed -E -e 's/.*\(//g' -e 's/\).*//g'    
+        #     sed -E -e 's/.*\(//g' -e 's/\).*//g'
         p1 = subprocess.Popen(['cat', 'document1.pdf'],
                               stdout=subprocess.PIPE)
         p2 = subprocess.Popen(["grep", "-E",
@@ -554,7 +554,7 @@ class PdfReader(object):
         #ffile.close()
 
         # 3ème étape suite : mail du responsable
-        
+
         p1 = subprocess.Popen(['cat', 'document1.pdf'],
                               stdout=subprocess.PIPE)
         p2 = subprocess.Popen(["grep", "-E",

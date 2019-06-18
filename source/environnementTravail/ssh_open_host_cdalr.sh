@@ -15,10 +15,10 @@
 # -X = Transfert X11 et TCP (X11 and TCP forwarding) http://www.delafond.org/traducmanfr/man/man1/ssh.1.html
 
 
-# 1ere etape : on va commencer par la fin : le troisième tiers du tunnel
+# 1ere etape : on va commencer par la fin : la troisième partie de tunnel
 #
-# pour cdalr, il y a un troisième tiers :
-# cdalr est un relais vers sa base postgresql
+# pour cdalr, il y a une autre partie de tunnel :
+# cdalr est un relais vers sa propre base postgresql
 #
 echo "# Mot de passe pour cdalr.fr"
 ssh -f \
@@ -26,18 +26,26 @@ ssh -f \
     -N \
     -X \
     -L 43230:localhost:5432 \
-    fred@localhost
+    fred@cdalr.fr
 #
 
 echo "# "
 echo "# Maintenant, à partir de cdalr.fr, il est possible de se connecter vers"
-echo "# sa base de données via localhos"
-echo "# psql -h localhost -p 43230 -d cadlr -U sig"
+echo "# sa base de données via localhost"
+echo "# psql -h localhost -p 43230 -d dbworkspace -U fred"
 echo "# "
-echo "# Mie3B.."
+echo "# Cependant, a partir d'une autre machine, il n'est pas possible de se connecter"
+echo "# psql -h pg.cdalr.fr -p 43230 -d dbworkspace -U fred"
+echo "# car, le nom de la machine doit etre localhost"
+echo "#"
+echo "#"
+echo "# Plus tard, après l'ajout de parties de tunnel,"
+echo "# il sera possible de se connecter à distance"
+echo "# psql -h localhost -p 63230 -d dbworkspace -U fred"
+echo "#"
 #
 
 # le tiers central du tunnel n'est pas a faire ici
 #
 
-# le premier tiers du tunnel est fait via ssh_connect_via.sh
+# le premier tiers du tunnel est faite via ssh_connect_via.sh

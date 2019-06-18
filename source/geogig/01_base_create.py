@@ -23,19 +23,28 @@ def main():
     print('password = {}'.format(myconnection.password))
 
     # Creation de la base de données geogig
+    #### myconnection.create_database('geogig')
+    #### myconnection.create_database('pcrs')
     myconnection.create_database('geogig')
 
     # Creation des extensions
-    listext = ['adminpack', 'plpgsql', 'postgis', 'postgis_topology', 'fuzzystrmatch', 'hstore']
-    listext = ['adminpack', 'postgis', 'postgis_topology', 'fuzzystrmatch', 'hstore']
+    #### listext = ['adminpack', 'plpgsql', 'postgis', 'postgis_topology', 'fuzzystrmatch', 'hstore']
+    #### listext = ['adminpack', 'postgis', 'postgis_topology', 'fuzzystrmatch', 'hstore']
+    listext = ['adminpack', 'fuzzystrmatch', 'hstore']
     for extension in listext:
         #print('extension = {}'.format(extension))
+        #### myconnection.create_extension('geogig', extension)
+        #### myconnection.create_extension('pcrs', extension)
         myconnection.create_extension('geogig', extension)
 
     # Creation des schemas
-    listschema = ['pcrs']
+    #### listschema = ['pcrs']
+    #### listschema = ['private']
+    listschema = ['pcrs', 'espu', 'bati']
     for schema in listschema:
         #print('schema = {}'.format(schema))
+        #### myconnection.create_schema('geogig', schema)
+        #### myconnection.create_schema('pcrs', schema)
         myconnection.create_schema('geogig', schema)
         #cur.execute("CREATE SCHEMA if not exists %s  ;" % schema)
 

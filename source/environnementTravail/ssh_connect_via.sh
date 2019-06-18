@@ -15,7 +15,7 @@
 # -X = Transfert X11 et TCP (X11 and TCP forwarding) http://www.delafond.org/traducmanfr/man/man1/ssh.1.html
 
 #
-# Fabrication du premier tiers du tunnel "ssh.cdalr.fr" (entre la machine perso et ssh.cdalr.fr)
+# Fabrication de la premiere partie du tunnel "ssh.cdalr.fr" (entre la machine cliente et ssh.cdalr.fr)
 #
 echo "# Mot de passe pour cdalr.fr"
 ssh -f \
@@ -43,14 +43,16 @@ ssh -f \
     -L 60831:localhost:50831 \
     -L 62231:localhost:52231 \
     -L 62390:localhost:52390 \
-    -L 62380:localhost:52380 \
     -L 62391:localhost:52391 \
+    -L 62392:localhost:52392 \
+    -L 62380:localhost:52380 \
     -L 62381:localhost:52381 \
+    -L 62382:localhost:52382 \
     -L 63230:localhost:43230 \
     fred@cdalr.fr
 #
 #
-# Fabrication d'un autre premier tiers du tunnel "freeshell.de" (entre la machine perso et freeshell.de)
+# Fabrication d'un autre premier partie du tunnel "freeshell.de" (entre la machine cliente et freeshell.de)
 #
 echo "# Mot de passe pour ssh.freeshell.de"
 ssh -f \
@@ -78,14 +80,16 @@ ssh -f \
     -L 60841:localhost:50841 \
     -L 62241:localhost:52241 \
     -L 62490:localhost:52490 \
-    -L 62480:localhost:52480 \
     -L 62491:localhost:52491 \
+    -L 62492:localhost:52492 \
+    -L 62480:localhost:52480 \
     -L 62481:localhost:52481 \
+    -L 62482:localhost:52482 \
     fgarel@ssh.freeshell.de \
     -p 443
 #
 #
-# Fabrication d'un autre premier tiers du tunnel "fgarel.synology.me" (entre la machine perso et ssh.synology.me)
+# Fabrication d'un autre premiere partie du tunnel "fgarel.synology.me" (entre la machine perso et ssh.synology.me)
 #
 #echo "# Mot de passe pour fgarel.synology.me"
 #ssh -f \
@@ -146,24 +150,27 @@ echo "# ---------------------------------------------"
 echo "# postgresql"
 echo "# psql -h localhost -p 62390 -d postgres -U sig"
 echo '#'
-echo "# En deux demi-tunnels "
+echo "# En deux parties de tunnel "
 echo "# 6.... : connexion indirecte"
 echo "# .32.. : protocole postgresql"
 echo "# ...3. : via cdalr"
-echo "# ....0 : distante après le tunnel = cadlr"
-echo "# ....8 : local après le tunnel = VLR6180X"
-echo "# ....9 : local après le tunnel = VLR6180Y"
+echo "# ....0 : local après le tunnel => cadlr"
+echo "# ....1 : local après le tunnel => tux0"
+echo "# ....2 : local après le tunnel => zenbook"
+echo "# ....8 : local après le tunnel => VLR6180X"
+echo "# ....9 : local après le tunnel => VLR6180Y"
 echo "# "
 echo "# 63230 : cdalr_sandbox_cda_via_tunnel_cdalr"
-echo "# 63239 : vlr6180y_origine_Fred_via_tunnel_cdalr"
+echo "# 63239 : vlr6180y_espu_fred_via_tunnel_cdalr"
 echo "# "
-echo "# En trois tiers "
+echo "# En trois parties de tunnel "
 echo "# 6.... : connexion indirecte"
 echo "# .2... : protocole postgresql"
 echo "# ..3.. : via ssh.cdalr.fr"
 echo "# ...9. : via VLR6180Y"
 echo "# ....0 : distante après le troisième tiers = dsibdd09"
 echo "# ....1 : distante après le troisième tiers = brulhois"
+echo "# ....2 : distante après le troisième tiers = dsiappli39"
 echo "# "
 echo "# 62380 : dsibdd09_postgres_sig_via_tunnel_cdalr_vlr6180x"
 echo "# 62390 : dsibdd09_postgres_sig_via_tunnel_cdalr_vlr6180y"
@@ -175,6 +182,10 @@ echo "# 62391 : brulhois_sig_prenomnom_via_tunnel_cdalr_vlr6180y"
 echo "# 62481 : brulhois_sig_prenomnom_via_tunnel_freeshell_vlr6180x"
 echo "# 62491 : brulhois_sig_prenomnom_via_tunnel_freeshell_vlr6180y"
 echo "# "
+echo "# 62382 : dsiappli39_sig_prenomnom_via_tunnel_cdalr_vlr6180x"
+echo "# 62392 : dsiappli39_sig_prenomnom_via_tunnel_cdalr_vlr6180y"
+echo "# 62482 : dsiappli39_sig_prenomnom_via_tunnel_freeshell_vlr6180x"
+echo "# 62492 : dsiappli39_sig_prenomnom_via_tunnel_freeshell_vlr6180y"
 echo "# "
 echo "# ---------------------------------------------"
 echo "# Sur la machine dstante, on peut lancer le serveur vnc"

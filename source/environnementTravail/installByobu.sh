@@ -8,8 +8,8 @@
 echo "# 5ème Partie : Installation de byobu et tmux"
 echo "###############################################"
 echo "#"
-echo "sudo apt-get install byobu"
-      sudo apt-get install byobu
+echo "sudo apt-get install -y byobu"
+      sudo apt-get install -y byobu
 echo ""
 echo "# Choix du theme byobu"
 echo "# http://superuser.com/questions/387256/how-do-i-reset-the-status-bar-colors-in-byobu"
@@ -31,4 +31,8 @@ echo "# byobu-config"
 echo "# Avec cette commande, byobu-config, il es possible d'activer byobu"
 echo "# pour qu'il s'execute à la connexion."
 echo "#"
-
+echo "# cf aussi teleconsole"
+echo "# pour le partage de console"
+echo "# https://www.2daygeek.com/teleconsole-share-terminal-session-instantly-to-anyone-in-seconds/"
+echo "# https://www.teleconsole.com/"
+echo "#"

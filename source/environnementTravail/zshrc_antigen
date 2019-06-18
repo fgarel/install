@@ -14,15 +14,34 @@
 # La liste des plugins est ici
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
 
-# 
+#
 # Le script zsh-newuser-install permet de creer un fichier zshrc minimal
 #
 
+# python est utilisé pour powerline et poetry
+# installZsh.sh est donc a lancé en parallèle avec installPython.sh
+#
+export PYTHON_VERSION_COURT=3.6
+# cette version est issue de installPython.sh
+# la version 3.6.6 fonctionne avec cookiecutter
 #
 # Paramètres courants pour zsh
 #---------------------------------------
 bindkey -v
 autoload -Uz compinit
+
+# ajouté suite à l'installation de poetry (python)
+# https://poetry.eustace.io/docs/
+#
+fpath+=~/.zfunc
+# 
+# Ajout d'un chemin dans le path zsh
+# https://stackoverflow.com/questions/11530090/adding-a-new-entry-to-the-path-variable-in-zsh
+#
+# append
+#
+path+=("$HOME/.poetry/bin")
+
 compinit
 export TERM="xterm-256color"
 
@@ -43,6 +62,7 @@ antigen use prezto
 #---------------
 # La liste des themes est ici
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# https://github.com/unixorn/awesome-zsh-plugins#themes
 #
 #antigen theme obraun
 #antigen theme agnoster
@@ -50,14 +70,24 @@ antigen use prezto
 antigen theme ys
 #antigen theme bureau
 #antigen theme blinks
-antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+#antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 #antigen theme bhilburn/powerlevel9k powerlevel9k
 #POWERLEVEL9K_MODE='awesome-fontconfig'
+#antigen theme prikhi/molokai-powerline-zsh molokai-powerline-zsh
+#antigen theme https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme
+#antigen theme https://github.com/maverick9000/zsh2000
+#antigen theme https://github.com/banga/powerline-shell
+#antigen theme https://github.com/syui/powerline.zsh
+antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+#antigen theme https://github.com/caiogondim/bullet-train.zsh
+
+
 #
 # Antigen Bundles
 #----------------
 # La liste des plugins est ici
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
+# https://github.com/unixorn/awesome-zsh-plugins#plugins
 #
 antigen bundle common-aliases
 antigen bundle command-not-found
@@ -86,10 +116,36 @@ antigen bundle virtualenv
 antigen bundle z
 
 # Autres dépots
+antigen bundle chrissicool/zsh-256color
 antigen bundle sharat87/autoenv
+#antigen bundle chrissicool/zsh-bash
+antigen bundle supercrabtree/k
 antigen bundle rupa/z
 #antigen bundle jdavis/zsh-files
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+
+
+antigen apply
+
+
+# Ajouté suite à l'installation de pyenv
+#export PATH="/home/fred/.pyenv/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
+
 # Ajouté suite à l'installation de pew
-source $(pew shell_config)
+# pew peut etre remplacé par pipenv
+#source $(pew shell_config)
+
+# Ajouté suite à l'installation des fontes
+source ~/.local/share/fonts/*.sh
+
+# Utilisation de powerline pour le prompt
+# il faut forcer la lecture de ce fichier
+# http://powerline.readthedocs.io/en/master/usage/shell-prompts.html#zsh-prompt
+# Attention, il y a une différence (a creuser TODO) entre site-packages et dist-packages
+#source /usr/local/lib/python$PYTHON_VERSION_COURT/site-packages/powerline/bindings/zsh/powerline.zsh
+source /usr/local/lib/python$PYTHON_VERSION_COURT/dist-packages/powerline/bindings/zsh/powerline.zsh
+
+

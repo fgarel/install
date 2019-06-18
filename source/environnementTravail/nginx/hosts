@@ -1,0 +1,50 @@
+127.0.0.1	localhost
+# 127.0.1.1	Asus-Zenbook-UX303UB
+
+149.202.43.81	www.cdalr.fr
+149.202.43.81	static.cdalr.fr
+149.202.43.81	git.cdalr.fr
+149.202.43.81	tile.cdalr.fr
+149.202.43.81	pgadmin.cdalr.fr
+149.202.43.81   geoserver.cdalr.fr
+149.202.43.81	flask.cdalr.fr
+149.202.43.81   djangopcrs.cdalr.fr
+149.202.43.81	djangoqgis.cdalr.fr
+149.202.43.81	djangorest.cdalr.fr
+149.202.43.81	djangotaiga.cdalr.fr
+149.202.43.81	djangotemplate.cdalr.fr
+
+149.202.43.81	www.garel.eu
+149.202.43.81	static.garel.eu
+149.202.43.81	git.garel.eu
+149.202.43.81	tile.garel.eu
+149.202.43.81	pgadmin.garel.eu
+149.202.43.81	geoserver.garel.eu
+149.202.43.81	flask.garel.eu
+149.202.43.81	djangopcrs.garel.eu
+149.202.43.81	djangoqgis.garel.eu
+149.202.43.81	djangorest.garel.eu
+149.202.43.81	djangotaiga.garel.eu
+149.202.43.81	djangotemplate.garel.eu
+
+127.0.0.1	www.mairie.fr
+127.0.0.1	static.mairie.fr
+127.0.0.1	git.mairie.fr
+127.0.0.1	tile.mairie.fr
+127.0.0.1	pgadmin.mairie.fr
+127.0.0.1	geoserver.mairie.fr
+127.0.0.1	flask.mairie.fr
+127.0.0.1	djangopcrs.mairie.fr
+127.0.0.1	djangoqgis.mairie.fr
+127.0.0.1	djangorest.mairie.fr
+127.0.0.1	djangotaiga.mairie.fr
+127.0.0.1	djangotemplate.mairie.fr
+
+149.202.43.81	vps192940.ovh.net	vps192940
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters

@@ -28,23 +28,23 @@ echo "# https://github.com/neovim/neovim/wiki/Installing-Neovim"
 echo "#"
 echo "# Debian"
 echo "########"
-echo "#sudo apt-get install neovim"
-      #sudo apt-get install neovim
-echo "#sudo apt-get install python3-neovim"
-      #sudo apt-get install python3-neovim
+echo "sudo apt-get install -y neovim"
+      sudo apt-get install -y neovim
+echo "sudo apt-get install -y python3-neovim"
+      sudo apt-get install -y python3-neovim
 echo "#"
 echo "# Ubuntu"
 echo "########"
-echo "sudo apt-get install software-properties-common"
-      sudo apt-get install software-properties-common
-echo "sudo add-apt-repository ppa:neovim-ppa/unstable"
-      sudo add-apt-repository ppa:neovim-ppa/unstable
-echo "sudo apt-get update"
-      sudo apt-get update
-echo "sudo apt-get install neovim"
-      sudo apt-get install neovim
-echo "sudo apt-get install python-dev python-pip python3-dev python3-pip"
-      sudo apt-get install python-dev python-pip python3-dev python3-pip
+echo "#sudo apt-get install software-properties-common"
+      #sudo apt-get install software-properties-common
+echo "#sudo add-apt-repository ppa:neovim-ppa/unstable"
+      #sudo add-apt-repository ppa:neovim-ppa/unstable
+echo "#sudo apt-get update"
+      #sudo apt-get update
+echo "#sudo apt-get install neovim"
+      #sudo apt-get install neovim
+echo "#sudo apt-get install python-dev python-pip python3-dev python3-pip"
+      #sudo apt-get install python-dev python-pip python3-dev python3-pip
 
 
 echo "# On fabrique en premier nos fichiers .local"
@@ -103,8 +103,20 @@ echo 'nnoremap <F5> :w<CR>:make<CR>'
 echo 'nnoremap <F5> :w<CR>:make<CR>' >> ~/.vimrc.local.d/functions.vim
 echo 'inoremap <F5> <Esc>:w<CR>:make<CR>'
 echo 'inoremap <F5> <Esc>:w<CR>:make<CR>' >> ~/.vimrc.local.d/functions.vim
-echo 'vnoremap <F5> :<C-u>:w<CR>:make<CR>'
-echo 'vnoremap <F5> :<C-u>:w<CR>:make<CR>' >> ~/.vimrc.local.d/functions.vim
+echo ''
+echo '' >> ~/.vimrc.local.d/functions.vim
+echo '" vu ici : http://stackoverflow.com/questions/12030965/change-the-mapping-of-f5-on-the-basis-of-specific-file-type'
+echo 'vu ici : https://stackoverflow.com/questions/12030965/change-the-mapping-of-f5-on-the-basis-of-specific-file-type' >> ~/.vimrc.local.d/functions.vim
+echo 'autocmd Filetype c,cpp  inoremap <buffer> <F5> <C-o>:update<Bar>execute '!make '.shellescape(expand('%:r'), 1)<CR>'
+echo 'autocmd Filetype c,cpp  inoremap <buffer> <F5> <C-o>:update<Bar>execute '!make '.shellescape(expand('%:r'), 1)<CR>' >> ~/.vimrc.local.d/functions.vim
+echo 'autocmd Filetype python inoremap <buffer> <F5> <C-o>:update<Bar>execute '!python '.shellescape(@%, 1)<CR>'
+echo 'autocmd Filetype python inoremap <buffer> <F5> <C-o>:update<Bar>execute '!python '.shellescape(@%, 1)<CR>' >> ~/.vimrc.local.d/functions.vim
+echo 'autocmd Filetype java   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!javac '.shellescape(@%, 1)<CR>'
+echo 'autocmd Filetype java   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!javac '.shellescape(@%, 1)<CR>' >> ~/.vimrc.local.d/functions.vim
+echo '" autocmd Filetype plantuml   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!plantuml '.shellescape(@%, 1)<CR>"'
+echo '" autocmd Filetype plantuml   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!plantuml '.shellescape(@%, 1)<CR>"' >> ~/.vimrc.local.d/functions.vim
+echo ''
+echo '' >> ~/.vimrc.local.d/functions.vim
 echo ""
 echo "# Fabrication du fichier ~/.vimrc.before.local"
 echo "##############################################"
@@ -154,6 +166,8 @@ echo "#"
 echo "#-----------------------------------------------"
 echo "# Installation de spf13-vim3"
 echo "#"
+echo "sudo apt-get install -y curl"
+      sudo apt-get install -y curl
 echo "curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh"
       curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 echo "#"

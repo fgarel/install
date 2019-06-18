@@ -39,8 +39,10 @@ echo "#"
 echo "# https://www.pgadmin.org/download/pip4.php?lang=fr_FR"
 echo "#"
 echo "#"
-echo "wget -N https://ftp.postgresql.org/pub/pgadmin3/pgadmin4/v1.1/pip/pgadmin4-1.1-py3-none-any.whl"
-      wget -N https://ftp.postgresql.org/pub/pgadmin3/pgadmin4/v1.1/pip/pgadmin4-1.1-py3-none-any.whl
+#echo "wget -N https://ftp.postgresql.org/pub/pgadmin3/pgadmin4/v1.1/pip/pgadmin4-1.1-py3-none-any.whl"
+#      wget -N https://ftp.postgresql.org/pub/pgadmin3/pgadmin4/v1.1/pip/pgadmin4-1.1-py3-none-any.whl
+echo "wget -N https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v4.3/pip/pgadmin4-4.3-py2.py3-none-any.whl"
+      wget -N https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v4.3/pip/pgadmin4-4.3-py2.py3-none-any.whl
 
 echo "#"
 echo "# Puis, on suit la doc qui est ici :"
@@ -55,7 +57,7 @@ echo "#   --------------------"
 echo ""
 echo "# Post installation"
 echo "pip install --upgrade pip"
-echo "pip install pgadmin4-1.1-py3-none-any.whl"
+echo "pip install pgadmin4-4.3-py2.py3-none-any.whl"
 echo "cp /home/fred/.local/share/virtualenvs/pgadmin/lib/python3.5/site-packages/pgadmin4/config.py \ "
 echo "   /home/fred/.local/share/virtualenvs/pgadmin/lib/python3.5/site-packages/pgadmin4/config-local.py"
 echo "# Modification du default_server dans le fichie de configuration"

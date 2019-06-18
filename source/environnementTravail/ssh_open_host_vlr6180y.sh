@@ -15,53 +15,63 @@
 # -X = Transfert X11 et TCP (X11 and TCP forwarding) http://www.delafond.org/traducmanfr/man/man1/ssh.1.html
 
 
-# 1ere etape : on va commencer par la fin : le troisième tiers du tunnel
+# 1ere etape : on va commencer par la fin : la troisième partie du tunnel
 #
-# Fabrication du troisième tiers du tunnel (entre la machine VLR6180Y et la machine DSIBDD09)
+# Fabrication de la troisième partie du tunnel (entre la machine VLR6180Y et la machine DSIBDD09)
 # (ports ...0000 et +)
 #
-echo "# Mot de passe pour vlr6180y"
+echo "# Mot de passe pour vlr6180y : aliabMi"
 ssh -f \
     -o ServerAliveInterval=240 \
     -N \
     -X \
     -L 43290:dsibdd09.mairie.fr:5432 \
     fred@vlr6180y
+
+echo "# "
+echo "# Maintenant, à partir de VLR6180Y, il est possible de se connecter vers"
+echo "# une base du serveur dsibdd09"
+echo "# psql -h localhost -p 43290 -d cadlr -U sig"
+echo "# "
+echo "# Mie3B.."
+echo "# "
 #
-# Fabrication du troisième tiers du tunnel (entre la machine VLR6180Y et la machine brulhois)
+# Fabrication de la troisième partie du tunnel (entre la machine VLR6180Y et la machine brulhois)
 # (ports ...0000 et +)
 #
-echo "# Mot de passe pour vlr6180y"
+echo "# Mot de passe pour vlr6180y : aliabMi"
 ssh -f \
     -o ServerAliveInterval=240 \
     -N \
     -X \
     -L 43291:172.17.150.6:5432 \
     fred@vlr6180y
-#
 
 echo "# "
 echo "# Maintenant, à partir de VLR6180Y, il est possible de se connecter vers"
-echo "# une base du serveur dsibdd09 via vlr6180y"
-echo "# psql -h localhost -p 43290 -d cadlr -U sig"
-echo "# "
-echo "# Mie3B.."
-echo "# "
-echo "# Maintenant, à partir de VLR6180Y, il est possible de se connecter vers"
-echo "# une base du serveur brulhois via vlr6180y"
+echo "# une base du serveur brulhois"
 echo "# psql -h localhost -p 43291 -d sig -U prenom.nom"
 echo "# "
 echo "# Mie7.."
 #
 #
+# Le tunnel, entre la machine VLR6180Y et la machine dsiappli58, puis dsiappli39
+# est fabriqué grace au script ssh_open_host_dsi3.sh
+#
+#echo "# "
+#echo "# A partir de vlr6180y, il est possible de se connecter vers"
+#echo "# une base du serveur dsiappli39 via dsiappli58"
+#echo "# psql -h localhost -p 33292 -d sig -U postgres"
+#echo "# "
+#
 
 
-# 2de etape : on fabrique le tiers central du tunnel
+# 2de etape : on fabrique la seconde partie du tunnel
 #
-# Fabrication du tiers central du tunnel "ssh.cdalr.fr" (entre la machine boulot et ssh.cdalr.fr)
+# Fabrication la seconde partie du tunnel "ssh.cdalr.fr" (entre la machine boulot et ssh.cdalr.fr)
 #
-# attention, on rajoute le lien vers le troisième tiers
-echo "# Mot de passe pour ssh.cdalr.fr"
+# Attention, on rajoute le lien vers la troisième partie
+echo "# Mot de passe pour ssh.cdalr.fr : aliabMi"
 ssh -f \
     -o ServerAliveInterval=240 \
     -N \
@@ -73,12 +83,27 @@ ssh -f \
     -R 52239:localhost:22 \
     -R 52390:localhost:43290 \
     -R 52391:localhost:43291 \
+    -R 52392:localhost:33292 \
     fred@cdalr.fr
+
+echo "# "
+echo "# Maintenant, à partir de pg.cdalr.fr, il est possible de se connecter vers"
+echo "# - en un tunnel deux parties "
+echo "#   - une base du serveur vlr6180y"
+echo "#     psql -h localhost -p 53239 -d espu -U fred"
+echo "# - en un tunnel trois parties (via vlr6180y) :"
+echo "#   - une base du serveur dsibdd09"
+echo "#     psql -h localhost -p 52390 -d cadlr -U sig"
+echo "#   - une base du serveur brulhois"
+echo "#     psql -h localhost -p 52391 -d sig -U prenom.nom"
+echo "#   - une base du serveur dsiappli39 via dsiappli58"
+echo "#     psql -h localhost -p 52392 -d sig -U postgres"
+echo "#     aliadYepYesh555+"
 #
 #
 # Fabrication d'un second tiers central du tunnel "freeshell.de" (entre la machine boulot et freeshell.de)
 #
-echo "# Mot de passe pour ssh.freeshell.de"
+echo "# Mot de passe pour ssh.freeshell.de : aliabLei6Vie5"
 ssh -f \
     -o ServerAliveInterval=240 \
     -N \
@@ -90,8 +115,20 @@ ssh -f \
     -R 52249:localhost:22 \
     -R 52490:localhost:43290 \
     -R 52491:localhost:43291 \
+    -R 52492:localhost:33292 \
     fgarel@ssh.freeshell.de \
     -p 443
+
+echo "# "
+echo "# Maintenant, à partir de pg.cdalr.fr, il est possible de se connecter vers"
+echo "# (via vlr6180x) :"
+echo "# - une base du serveur dsibdd09"
+echo "#   psql -h localhost -p 52490 -d cadlr -U sig"
+echo "# - une base du serveur brulhois"
+echo "#   psql -h localhost -p 52491 -d sig -U prenom.nom"
+echo "# - une base du serveur dsiappli39 via dsiappli58"
+echo "#   psql -h localhost -p 52492 -d sig -U postgres"
+echo "# "
 #
 #
 # Fabrication d'un autre tiers central du tunnel "fgarel.synology.me" (entre la machine boulot et fgarel.synology.me)
@@ -117,4 +154,4 @@ echo "# "
 echo '#'
 
 
-# le premier tiers du tunnel est fait via ssh_connect_via.sh
+# la premiere partie du tunnel est faite via ssh_connect_via.sh

@@ -1,0 +1,541 @@
+
+# https://mapproxy.org/docs/nightly/services.html
+services:
+  wms:
+    srs: ['EPSG:2154', 'EPSG:3857', 'EPSG:3946', 'EPSG:4326', 'EPSG:900913']
+    image_formats: ['image/png32', 'image/png', 'image/jpeg', 'image/jpg']
+    versions: ['1.0.0', '1.1.0', '1.1.1', '1.3.0']
+    md:
+      title: MapProxy WMS Proxy
+      abstract: This is the fantastic MapProxy.
+  wmts:
+    kvp: true
+    restful: true
+    # cf https://sigar.agglo-larochelle.fr/
+    #   CeramikServer/rest/wmts/cdalr/ortho2014_geo17?request=getCapabilities
+    # ResourceURL
+    # template="http://sigar.agglo-larochelle.fr/
+    #   CeramikServer/rest/wmts/cdalr
+    #   /ortho2014_geo17/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}"
+    # http://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17/
+    restful_template: '/cdalr/{Layer}/default/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}'
+  tms:
+    use_grid_names: true
+    origin: 'nw'
+  kml:
+    use_grid_names: true
+  demo:
+
+# https://mapproxy.org/docs/nightly/configuration.html?highlight=grid#layers
+layers:
+
+  - name: osm_omni_3946
+    title: Open Street Map OmniScale 3946
+    sources: [cache_osm_omni_3946]
+  - name: osm_omni_3857
+    title: Open Street Map OmniScale 3857
+    sources: [cache_osm_omni_3857]
+  - name: osm_omni_4326
+    title: Open Street Map OmniScale 4326
+    sources: [cache_osm_omni_4326]
+  - name: osm_tile_3946
+    title: Open Street Map Standard 3946
+    sources: [cache_osm_tile_3946]
+  - name: osm_tile_3857
+    title: Open Street Map Standard 3857
+    sources: [cache_osm_tile_3857]
+  - name: osm_tile_4326
+    title: Open Street Map Standard 4326
+    sources: [cache_osm_tile_4326]
+  - name: osm_hottile_3946
+    title: Open Street Map HotStyle 3946
+    sources: [cache_osm_hottile_3946]
+  - name: osm_hottile_3857
+    title: Open Street Map HotStyle 3857
+    sources: [cache_osm_hottile_3857]
+  - name: osm_hottile_4326
+    title: Open Street Map HotStyle 4326
+    sources: [cache_osm_hottile_4326]
+  - name: cadastre_borne_3946
+    title: cadastre bornes et repères 3946
+    sources: [cache_cadastre_borne_3946]
+  - name: cadastre_bati_3946
+    title: cadastre batiments 3946
+    sources: [cache_cadastre_bati_3946]
+  - name: cadastre_detail_3946
+    title: cadastre détails topographiques 3946
+    sources: [cache_cadastre_detail_3946]
+  - name: cadastre_hydro_3946
+    title: cadastre hydrographie 3946
+    sources: [cache_cadastre_hydro_3946]
+  - name: cadastre_parcelle_3946
+    title: Cadastre Parcelle 3946
+    sources: [cache_cadastre_parcelle_3946]
+  - name: cadastre_voie_3946
+    title: cadastre voirie 3946
+    sources: [cache_cadastre_voie_3946]
+  - name: EauPotable_VLR
+    title: Eau Potable VLR
+    sources: [cache_EauPotable_VLR]
+  - name: EauxPluviales_VLR
+    title: Eaux Pluviales VLR
+    sources: [cache_EauxPluviales_VLR]
+  - name: EclPub_VLR
+    title: Eclairage Public VLR
+    sources: [cache_EclPub_VLR]
+  - name: ortho2014_3946
+    title: Ortho 2014 3946
+    sources: [cache_ortho2014_3946]
+  - name: ortho2014_3857
+    title: Ortho 2014 3857
+    sources: [cache_ortho2014_3857]
+  - name: ortho2018_3946
+    title: Ortho 2018 3946
+    sources: [cache_ortho2018_3946]
+  - name: ortho2018_3857
+    title: Ortho 2018 3857
+    sources: [cache_ortho2018_3857]
+
+# https://mapproxy.org/docs/nightly/caches.html
+caches:
+  #cache_osm:
+  #  grids: [grid_osm]
+  #  sources: [source_osm]
+  cache_osm_omni_3946:
+    grids: [grid_osm_3946]
+    sources: [source_osm_omni_3946]
+  cache_osm_omni_3857:
+    grids: [grid_osm_3857]
+    sources: [source_osm_omni_3857]
+  cache_osm_omni_4326:
+    grids: [grid_osm_4326]
+    sources: [source_osm_omni_4326]
+  cache_osm_tile_3946:
+    grids: [grid_osm_3946]
+    sources: [source_osm_tile_3946]
+  cache_osm_tile_3857:
+    grids: [grid_osm_3857]
+    sources: [source_osm_tile_3857]
+  cache_osm_tile_4326:
+    grids: [grid_osm_4326]
+    sources: [source_osm_tile_4326]
+  cache_osm_hottile_3946:
+    grids: [grid_osm_3946]
+    sources: [source_osm_hottile_3946]
+  cache_osm_hottile_3857:
+    grids: [grid_osm_3857]
+    sources: [source_osm_hottile_3857]
+  cache_osm_hottile_4326:
+    grids: [grid_osm_4326]
+    sources: [source_osm_hottile_4326]
+  cache_cadastre_borne_3946:
+    grids: [grid_cadastre_3946]
+    sources: [source_cadastre_borne_3946]
+  cache_cadastre_bati_3946:
+    grids: [grid_cadastre_3946]
+    sources: [source_cadastre_bati_3946]
+  cache_cadastre_detail_3946:
+    grids: [grid_cadastre_3946]
+    sources: [source_cadastre_detail_3946]
+  cache_cadastre_hydro_3946:
+    grids: [grid_cadastre_3946]
+    sources: [source_cadastre_hydro_3946]
+  cache_cadastre_parcelle_3946:
+    grids: [grid_cadastre_3946]
+    sources: [source_cadastre_parcelle_3946]
+  cache_cadastre_voie_3946:
+    grids: [grid_cadastre_3946]
+    sources: [source_cadastre_voie_3946]
+  cache_EauPotable_VLR:
+    grids: [grid_wms]
+    sources: [source_EauPotable_VLR]
+  cache_EauxPluviales_VLR:
+    grids: [grid_wms]
+    sources: [source_EauxPluviales_VLR]
+  cache_EclPub_VLR:
+    grids: [grid_wms]
+    sources: [source_EclPub_VLR]
+  cache_ortho2014_3946:
+    grids: [grid_ortho2014_3946]
+    sources: [source_ortho2014_3946]
+  cache_ortho2014_3857:
+    grids: [grid_ortho2014_3857]
+    sources: [source_ortho2014_3857]
+  cache_ortho2018_3946:
+    grids: [grid_ortho2018_3946]
+    sources: [source_ortho2018_3946]
+  cache_ortho2018_3857:
+    grids: [grid_ortho2018_3857]
+    sources: [source_ortho2018_3857]
+#      type: file
+#    disable_storage: true
+
+# https://mapproxy.org/docs/nightly/sources.html
+sources:
+  source_osm_omni_3946:
+    type: wms
+    req:
+      grid: grid_osm_3946
+      # http://osm.omniscale.net/proxy/service?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+      url: http://osm.omniscale.net/proxy/service?
+      #url:
+      layers: osm
+  source_osm_omni_3857:
+    type: wms
+    req:
+      grid: grid_osm_3857
+      # http://osm.omniscale.net/proxy/service?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+      url: http://osm.omniscale.net/proxy/service?
+      #url:
+      layers: osm
+  source_osm_omni_4326:
+    type: wms
+    req:
+      grid: grid_osm_4326
+      # http://osm.omniscale.net/proxy/service?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+      url: http://osm.omniscale.net/proxy/service?
+      #url:
+      layers: osm
+  source_osm_tile_3946:
+    type: tile
+    grid: grid_osm_3946
+    #grid: 'EPSG:3946'
+    # http://a.tile.openstreetmap.org/%(z)s/%(x)s/%(y)s.png
+    url: http://a.tile.openstreetmap.org/%(z)s/%(x)s/%(y)s.png
+  source_osm_tile_3857:
+    type: tile
+    grid: grid_osm_3857
+    # http://a.tile.openstreetmap.org/%(z)s/%(x)s/%(y)s.png
+    url: http://a.tile.openstreetmap.org/%(z)s/%(x)s/%(y)s.png
+  source_osm_tile_4326:
+    type: tile
+    grid: grid_osm_4326
+    # http://a.tile.openstreetmap.org/%(z)s/%(x)s/%(y)s.png
+    url: http://a.tile.openstreetmap.org/%(z)s/%(x)s/%(y)s.png
+  source_osm_hottile_3946:
+    type: tile
+    grid: grid_osm_3946
+    # http://a.tile.openstreetmap.fr/hot/%(z)s/%(x)s/%(y)s.png
+    url: http://a.tile.openstreetmap.fr/hot/%(z)s/%(x)s/%(y)s.png
+  source_osm_hottile_3857:
+    type: tile
+    grid: grid_osm_3857
+    # http://a.tile.openstreetmap.fr/hot/%(z)s/%(x)s/%(y)s.png
+    url: http://a.tile.openstreetmap.fr/hot/%(z)s/%(x)s/%(y)s.png
+  source_osm_hottile_4326:
+    type: tile
+    grid: grid_osm_4326
+    # http://a.tile.openstreetmap.fr/hot/%(z)s/%(x)s/%(y)s.png
+    url: http://a.tile.openstreetmap.fr/hot/%(z)s/%(x)s/%(y)s.png
+  source_cadastre_borne_3946:
+    type: wms
+    req:
+      #grid: grid_cadastre_3946
+      # https://www.cadastre.gouv.fr/scpc/afficherServiceWMS.do
+      # http://inspire.cadastre.gouv.fr/scpc/17300.wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+      url: http://inspire.cadastre.gouv.fr/scpc/17300.wms?
+      #url:
+      layers: BORNE_REPERE
+  source_cadastre_bati_3946:
+    type: wms
+    req:
+      #grid: grid_cadastre_3946
+      # https://www.cadastre.gouv.fr/scpc/afficherServiceWMS.do
+      # http://inspire.cadastre.gouv.fr/scpc/17300.wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+      url: http://inspire.cadastre.gouv.fr/scpc/17300.wms?
+      #url:
+      layers: BU.Building
+  source_cadastre_detail_3946:
+    type: wms
+    req:
+      #grid: grid_cadastre_3946
+      # https://www.cadastre.gouv.fr/scpc/afficherServiceWMS.do
+      # http://inspire.cadastre.gouv.fr/scpc/17300.wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+      url: http://inspire.cadastre.gouv.fr/scpc/17300.wms?
+      #url:
+      layers: DETAIL_TOPO
+  source_cadastre_hydro_3946:
+    type: wms
+    req:
+      #grid: grid_cadastre_3946
+      # https://www.cadastre.gouv.fr/scpc/afficherServiceWMS.do
+      # http://inspire.cadastre.gouv.fr/scpc/17300.wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+      url: http://inspire.cadastre.gouv.fr/scpc/17300.wms?
+      #url:
+      layers: HYDRO
+  source_cadastre_parcelle_3946:
+    type: wms
+    req:
+      #grid: grid_cadastre_3946
+      # https://www.cadastre.gouv.fr/scpc/afficherServiceWMS.do
+      # http://inspire.cadastre.gouv.fr/scpc/17300.wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+      url: http://inspire.cadastre.gouv.fr/scpc/17300.wms?
+      #url:
+      layers: CP.CadastralParcel
+  source_cadastre_voie_3946:
+    type: wms
+    req:
+      #grid: grid_cadastre_3946
+      # https://www.cadastre.gouv.fr/scpc/afficherServiceWMS.do
+      # http://inspire.cadastre.gouv.fr/scpc/17300.wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+      url: http://inspire.cadastre.gouv.fr/scpc/17300.wms?
+      #url:
+      layers: VOIE_COMMUNICATION
+  source_EauPotable_VLR:
+    type: wms
+    req:
+      # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wxs/wms/
+      # DTDICT/EauPotable_VLR?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+      url: https://sigar.agglo-larochelle.fr/CeramikServer/rest/wxs/wms/DTDICT/EauPotable_VLR?
+      layers: EauPotable_VLR
+    wms_opts:
+      version: '1.3.0'
+  source_EauxPluviales_VLR:
+    type: wms
+    req:
+      # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wxs/wms/
+      # DTDICT/EauxPluviales_VLR?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+      url: https://sigar.agglo-larochelle.fr/CeramikServer/rest/wxs/wms/DTDICT/EauPotable_VLR?
+      layers: EauxPluviales_VLR
+    wms_opts:
+      version: '1.3.0'
+  source_EclPub_VLR:
+    type: wms
+    req:
+      # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wxs/wms/
+      #   DTDICT/EclPub_VLR?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+      url: https://sigar.agglo-larochelle.fr/CeramikServer/rest/wxs/wms/DTDICT/EclPub_VLR?
+      layers: EclPub_VLR
+    wms_opts:
+      version: '1.3.0'
+  source_ortho2014_3946:
+    type: tile
+    #grid: 'EPSG:3946'
+    grid: grid_ortho2014_3946
+    # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17?request=getCapabilities
+    # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17/default/epsg:3946/%(tms_path)s.png
+    # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17/default/epsg=3946/4/6/3.png
+    #url: https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17/default/epsg:3946/%(tms_path)s.png
+    url: https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17/default/epsg:3946/%(z)s/%(y)s/%(x)s.png
+    transparent: true
+    on_error:
+      204:
+        response: transparent
+        cache: True
+      502:
+        response: '#ede9e3'
+        cache: False
+      other:
+        response: '#ff0000'
+        cache: False
+  source_ortho2014_3857:
+    type: tile
+    #grid: 'EPSG:3857'
+    grid: grid_ortho2014_3857
+    # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17?request=getCapabilities
+    # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17/default/epsg:3946/%(tms_path)s.png
+    # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17/default/epsg=3946/4/6/3.png
+    #url: https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17/default/epsg:3946/%(tms_path)s.png
+    url: https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17/default/epsg:3857/%(z)s/%(y)s/%(x)s.png
+    transparent: true
+    #image:
+      #opacity: 0.5
+    on_error:
+      204:
+        response: transparent
+        cache: True
+      502:
+        response: '#ede9e3'
+        cache: False
+      other:
+        response: '#ff0000'
+        cache: False
+  source_ortho2018_3946:
+    type: tile
+    #grid: 'EPSG:3946'
+    grid: grid_ortho2018_3946
+    # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2018?request=getCapabilities
+    # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2018/default/epsg:3946/%(tms_path)s.png
+    # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2018/default/epsg=3946/4/6/3.png
+    #url: https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2018/default/epsg:3946/%(tms_path)s.png
+    url: https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2018/default/epsg:3946/%(z)s/%(y)s/%(x)s.png
+    transparent: true
+    on_error:
+      204:
+        response: transparent
+        cache: True
+      502:
+        response: '#ede9e3'
+        cache: False
+      other:
+        response: '#ff0000'
+        cache: False
+  source_ortho2018_3857:
+    type: tile
+    #grid: 'EPSG:3857'
+    grid: grid_ortho2018_3857
+    # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2018?request=getCapabilities
+    # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2018/default/epsg:3946/%(tms_path)s.png
+    # https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2018/default/epsg=3946/4/6/3.png
+    #url: https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2018/default/epsg:3946/%(tms_path)s.png
+    url: https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2018/default/epsg:3857/%(z)s/%(y)s/%(x)s.png
+    transparent: true
+    #image:
+      #opacity: 0.5
+    on_error:
+      204:
+        response: transparent
+        cache: True
+      502:
+        response: '#ede9e3'
+        cache: False
+      other:
+        response: '#ff0000'
+        cache: False
+  debug_source:
+    type: debug
+
+
+# https://mapproxy.org/docs/nightly/configuration.html?id6#id6
+# https://sigar.agglo-larochelle.fr/CeramikServer/rest/wmts/cdalr/ortho2014_geo17?request=getCapabilities
+grids:
+  #grid_osm:
+  #  base: GLOBAL_WEBMERCATOR
+  #  #srs: 'EPSG:3857'
+  grid_wms:
+      base: GLOBAL_WEBMERCATOR
+  grid_osm_3946:
+    base: GLOBAL_WEBMERCATOR
+    srs: 'EPSG:3946'
+    bbox_srs: 'EPSG:3946'
+    bbox: [1372000, 5207000, 1405000, 5240000]
+    #srs: 'EPSG:3946'
+    #bbox_srs: 'EPSG:3946'
+    #bbox: [621509.63, 2213517.21, 4747818.41, 5843051.80]
+  grid_osm_3857:
+    base: GLOBAL_WEBMERCATOR
+    srs: 'EPSG:3857'
+    bbox_srs: 'EPSG:3857'
+    bbox: [-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244]
+  grid_osm_4326:
+    base: GLOBAL_WEBMERCATOR
+    srs: 'EPSG:4326'
+    #bbox_srs: 'EPSG:4326'
+    #bbox: [-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244]
+  grid_cadastre_3946:
+    base: GLOBAL_WEBMERCATOR
+    srs: 'EPSG:3946'
+    bbox_srs: 'EPSG:3946'
+    bbox: [1372000, 5207000, 1405000, 5240000]
+  grid_ortho2014_3946:
+    #base: GLOBAL_MERCATOR
+    srs: 'EPSG:3946'
+    #srs:
+      # for North/East ordering
+      #axis_order_ne: ['EPSG:3946']
+      # for East/North ordering
+      # axis_order_en: ['EPSG:0000', 'EPSG:0001']
+    bbox_srs: 'EPSG:3946'
+    bbox: [1372000, 5207000, 1405000, 5240000]
+    #bbox: [1372000, 5215000, 1405000, 5248000]
+    min_res: 102.4844720496894
+    num_levels: 11
+    #max_res: 50
+    #res_factor: 'sqrt2'
+    #res: [50,75,100,150]
+    #res: [102.485, 204.970]
+    res_factor: 2
+    #res_factor: 'sqrt2'
+    tile_size: [322, 322]
+    #tile_size: [322, 322]
+    origin: 'nw'
+  grid_ortho2014_3857:
+    #base: GLOBAL_MERCATOR
+    srs: 'EPSG:3857'
+    #srs:
+      # for North/East ordering
+      #axis_order_ne: ['EPSG:3946']
+      # for East/North ordering
+      # axis_order_en: ['EPSG:0000', 'EPSG:0001']
+    bbox_srs: 'EPSG:3946'
+    #bbox: [1372000, 5207000, 1405000, 5240000]
+    #bbox: [1373600, 5205600, 1406600, 5238600]
+    bbox: [1372000, 5207000, 1405000, 5240000]
+    #min_res: 90
+    min_res: 146
+    #max_res: 1
+    num_levels: 10
+    #res: [50,75,100,150]
+    #res_factor: 'sqrt2'
+    res_factor: 2
+    tile_size: [322, 322]
+    #tile_size: [322, 322]
+    origin: 'nw'
+  grid_ortho2018_3946:
+    #base: GLOBAL_MERCATOR
+    srs: 'EPSG:3946'
+    #srs:
+      # for North/East ordering
+      #axis_order_ne: ['EPSG:3946']
+      # for East/North ordering
+      # axis_order_en: ['EPSG:0000', 'EPSG:0001']
+    bbox_srs: 'EPSG:3946'
+    #bbox: [1372000, 5207000, 1405000, 5240000]
+    bbox: [1372000, 5207800, 1402200, 5238000]
+    #bbox: [1372000, 5215000, 1405000, 5248000]
+    #min_res: 102.485
+    # pour calculer cette valeur :
+    # 30200 / 294
+    # Largeur de l'emprise / largeur d'une tuile
+    min_res: 102.7210884353741
+    #min_res: 146
+    num_levels: 11
+    #max_res: 50
+    #res_factor: 'sqrt2'
+    #res: [50,75,100,150]
+    #res: [102.485, 204.970]
+    res_factor: 2
+    #res_factor: 'sqrt2'
+    tile_size: [294, 294]
+    #tile_size: [322, 322]
+    origin: 'nw'
+  grid_ortho2018_3857:
+    #base: GLOBAL_MERCATOR
+    srs: 'EPSG:3857'
+    #srs:
+      # for North/East ordering
+      #axis_order_ne: ['EPSG:3946']
+      # for East/North ordering
+      # axis_order_en: ['EPSG:0000', 'EPSG:0001']
+    bbox_srs: 'EPSG:3946'
+    #bbox: [1372000, 5207000, 1405000, 5240000]
+    #bbox: [1373600, 5205600, 1406600, 5238600]
+    bbox: [1372000, 5207800, 1402200, 5238000]
+    #min_res: 90
+    min_res: 146
+    #max_res: 1
+    num_levels: 10
+    #res: [50,75,100,150]
+    #res_factor: 'sqrt2'
+    res_factor: 2
+    tile_size: [294, 294]
+    #tile_size: [322, 322]
+    origin: 'nw'
+# ul: 1372000 5240000
+
+globals:
+  #srs:
+    # for North/East ordering
+    #axis_order_en: ['EPSG:3946']
+    # for East/North ordering
+    # axis_order_en: ['EPSG:0000', 'EPSG:0001']
+  image:
+    formats:
+      image/png32:
+        opacity: 0.5
+      image/png:
+        opacity: 0.5
+      image/jpeg:
+        opacity: 0.5
+      image/jpg:
+        opacity: 0.5

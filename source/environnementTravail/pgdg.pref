@@ -1,0 +1,27 @@
+#Package: *
+#Pin: release o=apt.postgresql.org
+#Pin-Priority: 300
+
+Package: *
+Pin: release o=apt.postgresql.org,a=stretch-pgdg,c=main
+Pin-Priority: 600
+
+Package: *
+Pin: release o=apt.postgresql.org,a=stretch-pgdg,c=11
+Pin-Priority: 300
+
+Package: *
+Pin: release o=apt.postgresql.org,a=bionic-pgdg,c=main
+Pin-Priority: 550
+
+Package: *
+Pin: release o=apt.postgresql.org,a=bionic-pgdg-testing,c=main
+Pin-Priority: 250
+
+Package: *
+Pin: release o=apt.postgresql.org,a=cosmic-pgdg,c=main
+Pin-Priority: 600
+
+Package: *
+Pin: release o=apt.postgresql.org,a=cosmic-pgdg-testing,c=main
+Pin-Priority: 300

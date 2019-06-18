@@ -1,18 +1,82 @@
 #!/bin/sh
 
+# Attention : geoserver ne fonctionne qu'avec Java 8
+# http://docs.geoserver.org/latest/en/user/production/java.html
+#
+# ubuntu
+export JAVA_VERSION_KO_1='11'
+export JAVA_VERSION_KO_2='10'
+export JAVA_VERSION_KO_3='9'
+export JAVA_VERSION_OK='8'
+export TOMCAT_VERSION='8'
+
+# debian
+export JAVA_VERSION_KO_1='11'
+export JAVA_VERSION_KO_2='10'
+export JAVA_VERSION_KO_3='9'
+export JAVA_VERSION_OK='8'
+export TOMCAT_VERSION='8'
 
 
 # installation de java
 ###############################################
 # installation de java
-echo "# Installation de java version openjdk 7"
+echo "# Installation de java version openjdk $JAVA_VERSION_OK"
 echo "###############################################"
 echo "#"
 echo "# Installation de java (jre)"
-echo "sudo aptitude install openjdk-7-jre"
-      sudo aptitude install openjdk-7-jre
+echo "sudo apt-get remove -y default-jre"
+      sudo apt-get remove -y default-jre
+echo "sudo apt-get remove -y default-jre-headless"
+      sudo apt-get remove -y default-jre-headless
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre-headless"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre-headless
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre-headless"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre-headless
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre-headless"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre-headless
 echo "#"
-echo "# declaration de la variable JAVA_HOME"
+echo "# Installation du jre, du jdk, de maven"
+echo "sudo aptitude install -y openjdk-$JAVA_VERSION_OK-jre"
+      sudo aptitude install -y openjdk-$JAVA_VERSION_OK-jre
+echo "sudo apt-get install -y openjdk-$JAVA_VERSION_OK-jre"
+      sudo apt-get install -y openjdk-$JAVA_VERSION_OK-jre
+echo "sudo aptitude install -y openjdk-$JAVA_VERSION_OK-jre-headless"
+      sudo aptitude install -y openjdk-$JAVA_VERSION_OK-jre-headless
+echo "sudo apt-get install -y openjdk-$JAVA_VERSION_OK-jre-headless"
+      sudo apt-get install -y openjdk-$JAVA_VERSION_OK-jre-headless
+echo "sudo aptitude install -y openjdk-$JAVA_VERSION_OK-jdk"
+      sudo aptitude install -y openjdk-$JAVA_VERSION_OK-jdk
+echo "sudo apt-get install -y openjdk-$JAVA_VERSION_OK-jdk"
+      sudo apt-get install -y openjdk-$JAVA_VERSION_OK-jdk
+echo "sudo apt-get install -y maven"
+      sudo apt-get install -y maven
+echo "#"
+echo "sudo apt-get remove -y default-jre"
+      sudo apt-get remove -y default-jre
+echo "sudo apt-get remove -y default-jre-headless"
+      sudo apt-get remove -y default-jre-headless
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre-headless"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre-headless
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre-headless"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre-headless
+echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre-headless"
+      sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre-headless
+
+echo "#"
+echo "# Declaration de la variable JAVA_HOME"
 echo "#"
 echo "# http://serverfault.com/questions/143786/how-to-determine-java-home-on-debian-ubuntu"
 echo "# http://stackoverflow.com/questions/84882/sudo-echo-something-etc-privilegedfile-doesnt-work-is-there-an-alterna"
@@ -67,11 +131,11 @@ echo "#"
 #echo "sudo dpkg -i oracle-java8-jre_8u121_amd64.deb"
 #      sudo dpkg -i oracle-java8-jre_8u121_amd64.deb
 echo "#"
-echo "# configuration des alternatives"
+echo "# Configuration des alternatives"
 #echo "sudo update-alternatives --config java"
 #      sudo update-alternatives --config java
 echo "#"
-echo "# declaration de la variable JAVA_HOME"
+echo "# Declaration de la variable JAVA_HOME"
 echo "#"
 echo "# http://serverfault.com/questions/143786/how-to-determine-java-home-on-debian-ubuntu"
 echo "# http://stackoverflow.com/questions/84882/sudo-echo-something-etc-privilegedfile-doesnt-work-is-there-an-alterna"
@@ -84,39 +148,77 @@ echo "source /etc/environment"
 echo 'echo $JAVA_HOME'
 echo "# -------------------------------"
 echo "#"
-echo "# Installation de Tomcat 8"
+echo "# Installation de Tomcat $TOMCAT_VERSION"
 echo "#"
 echo "# http://docs.geoserver.org/latest/en/user/installation/war.html"
 echo "#"
-echo "sudo aptitude install tomcat8"
-      sudo aptitude install tomcat8
+echo "sudo aptitude install tomcat$TOMCAT_VERSION"
+      sudo aptitude install tomcat$TOMCAT_VERSION
+echo "sudo apt-get install tomcat$TOMCAT_VERSION"
+      sudo apt-get install tomcat$TOMCAT_VERSION
 echo "#"
-echo "sudo aptitude install tomcat8-admin"
-      sudo aptitude install tomcat8-admin
+echo "sudo aptitude install tomcat$TOMCAT_VERSION-admin"
+      sudo aptitude install tomcat$TOMCAT_VERSION-admin
+echo "sudo apt-get install tomcat$TOMCAT_VERSION-admin"
+      sudo apt-get install tomcat$TOMCAT_VERSION-admin
 echo "#"
-echo "sudo aptitude install tomcat8-user"
-      sudo aptitude install tomcat8-user
+echo "sudo aptitude install tomcat$TOMCAT_VERSION-user"
+      sudo aptitude install tomcat$TOMCAT_VERSION-user
+echo "sudo apt-get install tomcat$TOMCAT_VERSION-user"
+      sudo apt-get install tomcat$TOMCAT_VERSION-user
 echo "#"
-echo "#sudo aptitude install tomcat8-examples"
-      #sudo aptitude install tomcat8-examples
+echo "#sudo aptitude install tomcat$TOMCAT_VERSION-examples"
+      #sudo aptitude install tomcat$TOMCAT_VERSION-examples
+echo "#sudo apt-get install tomcat$TOMCAT_VERSION-examples"
+      #sudo apt-get install tomcat$TOMCAT_VERSION-examples
 echo "#"
-echo "#sudo aptitude install tomcat8-docs"
-      #sudo aptitude install tomcat8-docs
+echo "#sudo aptitude install tomcat$TOMCAT_VERSION-docs"
+      #sudo aptitude install tomcat$TOMCAT_VERSION-docs
+echo "#sudo apt-get install tomcat$TOMCAT_VERSION-docs"
+      #sudo apt-get install tomcat$TOMCAT_VERSION-docs
 echo "#"
-echo "# Ajout des roles admini-gui et manager-gui"
+echo "# -----------------------------------------------"
+echo "# Ajout des roles admin-gui et manager-gui"
 echo "#"
-echo "# vi /var/lib/tomcat8/conf/tomcat-users.xml"
+echo "# Attention il faut etre super-utilisateur pour pouvoir modifier"
+echo "# ce fichier de configuration"
+echo "#"
+echo "# sudo su"
+echo "# vi /var/lib/tomcat$TOMCAT_VERSION/conf/tomcat-users.xml"
 echo "#"
 echo "<tomcat-users>"
 echo '  <role rolename="admin-gui"/>'
+echo '  <role rolename="admin-script"/>'
 echo '  <role rolename="manager-gui"/>'
+echo '  <role rolename="manager-script"/>'
 echo '  <role rolename="profil-01"/>'
 echo '  <user username="fred" password="secret" roles="admin-gui,manager-gui"/>'
+echo '  <user username="admin" password="secret" roles="admin-script,manager-script"/>'
 echo '  <user username="geoserver" password="geoserver" roles="profil-01"/>'
 echo "</tomcat-users>"
 echo "#"
+echo "# -----------------------------------------------"
+echo "# Autorisation des connexions distantes"
 echo "#"
-echo "# sudo service tomcat8 restart"
+echo "# Attention il faut etre super-utilisateur pour pouvoir modifier"
+echo "# ce fichier de configuration"
+echo "#"
+echo "# la doc est ici : "
+echo "# https://www.digitalocean.com/community/questions/how-to-access-tomcat-8-admin-gui-from-different-host"
+echo "#"
+echo "# sudo su"
+echo "# vi /usr/share/tomcat$TOMCAT_VERSION-admin/manager/META-INF/context.xml"
+echo "#"
+echo "# il faut commenter les deux lignes centrales"
+echo ""
+echo "<Context antiResourceLocking="false" privileged="true" >"
+echo '  <!--<Valve className="org.apache.catalina.valves.RemoteAddrValve"'
+echo '         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />-->'
+echo "</Context>"
+echo "#"
+echo "# -----------------------------------------------"
+echo "#"
+echo "# sudo service tomcat$TOMCAT_VERSION restart"
 echo "#"
 
 echo ""

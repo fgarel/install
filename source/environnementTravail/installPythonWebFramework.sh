@@ -8,9 +8,9 @@
 echo "# 7ème Partie - suite : Création d'un environnement python"
 echo "###############################################"
 echo "#"
-echo "# Installation de geogig dans un environnement virtuel python"
+echo "# Installation d'un comparateur de framework dans un environnement virtuel python"
 echo "#"
-echo "# quel framework choisir entre flask, pyramid ou django ?"
+echo "# Quel framework choisir entre flask, pyramid ou django ?"
 echo "# https://www.airpair.com/python/posts/django-flask-pyramid"
 echo "# https://github.com/ryansb/wut4lunch_demos"
 
@@ -33,19 +33,13 @@ echo "# Dans cet environnement, l'installation doit continuer avec"
 echo "#"
 echo "# --------------------"
 echo '#'
-echo '# Mise à jour de pip'
-echo 'pip install --upgrade pip'
-echo '#'
-echo '#'
-echo ""
-echo "cd nginxFlask"
-echo "webframework_postinstall.sh"
+echo "./webpython/webframework_postinstall.sh"
 echo ""
 echo "# --------------------"
 echo '#'
 echo "# --------------------"
 echo '# Apres, avoir installé un serveur web, nginx'
-echo '# apres, avoir installé un environnemnent virtuel webframework'
+echo '# Apres, avoir installé un environnemnent virtuel webframework'
 echo "# on peut maintenant lancé l'environnement virtuel en question"
 echo "# se mettre dans le bon repertoire"
 echo 'cd nginxFlask'
