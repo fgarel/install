@@ -30,28 +30,30 @@ echo "# grace à osmosis"
 echo "# http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.45"
 echo "# ----------------------------------------------------------"
 
-# echo "# Faire en sorte de travailler dans le schema $dataschema"
-# echo "#"
-# echo "psql \\"
-# echo "     --host=$datahost \\"
-# echo "     --dbname=$database \\"
-# echo "     --username=$datauser \\"
-# echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
-#       psql \
-#            --host=$datahost \
-#            --dbname=$database \
-#            --username=$datauser \
-#            -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
-# echo "psql \\"
-# echo "     --host=$datahost \\"
-# echo "     --dbname=$database \\"
-# echo "     --username=$datauser \\"
-# echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
-#       psql \
-#            --host=$datahost \
-#            --dbname=$database \
-#            --username=$datauser \
-#            -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
+echo "# Dans la base $database, on peut avoir plusieurs schemas"
+echo "#"
+echo "# Faire en sorte de travailler dans le schema $dataschema"
+echo "#"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
 echo "#"
 echo "osmosis --read-xml-change \\"
 echo "        /home/fred/Documents/osmosis/change.osc.gz \\"
@@ -74,28 +76,28 @@ echo "# ----------------------------------------------------------"
 dataschema='osm2pgsql'
 datauser='www-data'
 
-# echo "# Faire en sorte de travailler dans le schema $dataschema"
-# echo "#"
-# echo "psql \\"
-# echo "     --host=$datahost \\"
-# echo "     --dbname=$database \\"
-# echo "     --username=$datauser \\"
-# echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
-#       psql \
-#            --host=$datahost \
-#            --dbname=$database \
-#            --username=$datauser \
-#            -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
-# echo "psql \\"
-# echo "     --host=$datahost \\"
-# echo "     --dbname=$database \\"
-# echo "     --username=$datauser \\"
-# echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
-#       psql \
-#            --host=$datahost \
-#            --dbname=$database \
-#            --username=$datauser \
-#            -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
+echo "# Faire en sorte de travailler dans le schema $dataschema"
+echo "#"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
 
 echo "#"
 echo "# Attention il faut se mettre dans le repertoire osmosis pour lancer la commande ...."

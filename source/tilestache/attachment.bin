@@ -1,0 +1,42 @@
+services:
+  demo:
+  wmts:
+  tms:
+  wms:
+    srs: ['EPSG:3857', 'EPSG:3942', 'EPSG:3943', 'EPSG:3944',  'EPSG:3945', 'EPSG:3946', 'EPSG:3947', 'EPSG:3948', 'EPSG:3949', 'EPSG:3950' , 'EPSG:27561' , 'EPSG:27562' , 'EPSG:27563' , 'EPSG:27564' , 'EPSG:2154' , 'EPSG:2969' , 'EPSG:2970' , 'EPSG:2972' , 'EPSG:2973' , 'EPSG:2975' ]
+    image_formats: ['image/jpeg']
+    md:
+      title: Bing Maps
+      online_resource: http://www.bing.com/maps
+
+layers:
+  - name: Bing
+    title: Bing Orthophotos
+    sources: [bing_aerial_cache]
+    
+caches:
+  bing_aerial_cache:
+    grids: [pseudo_mercator]
+    sources: [bing_aerial]
+
+sources:
+  bing_aerial:
+    type: tile
+    grid: pseudo_mercator
+    url: http://tiles.virtualearth.net/tiles/a%(quadkey)s.jpeg?g=1041
+
+grids:
+  pseudo_mercator:
+     srs: 'EPSG:3857'
+     bbox: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+     origin: nw
+     num_levels: 22
+
+globals:
+  cache:
+    base_dir: './cache_data'
+    lock_dir: './cache_data/locks'
+
+  image:
+      resampling_method: bilinear
+

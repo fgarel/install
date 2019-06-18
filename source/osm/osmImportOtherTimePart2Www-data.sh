@@ -17,8 +17,8 @@ echo "###############################################"
 #echo "# ----------------------------------------------------------"
 #echo "#"
 
-#datahost='localhost'
-#database='osm'
+datahost='localhost'
+database='osm'
 #dataschema='apidb'
 #datauser='osmuser'
 #datapass='osmpass'

@@ -1,5 +1,31 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
+"""
+***************************************************************************
+    parametresConnexion.py
+    ---------------------
+    Date                 : June 2019
+    Copyright            : (C) 2019-2019 La Rochelle,
+                           http://www.ville-larochelle.fr
+***************************************************************************
+*                                                                         *
+*   This program is free software; you can redistribute it and/or modify  *
+*   it under the terms of the GNU General Public License as published by  *
+*   the Free Software Foundation; either version 2 of the License, or     *
+*   (at your option) any later version.                                   *
+*                                                                         *
+***************************************************************************
+"""
+
+__author__ = 'Frédéric Garel'
+__date__ = 'June 2019'
+__copyright__ = '(C) 2019-2019 La Rochelle, http://www.ville-larochelle.fr'
+
+# This will get replaced with a git SHA1 when you do a git archive
+
+__revision__ = '$Format:%H$'
+
 
 u""" Definition des paramètres de connexion.
 
@@ -74,7 +100,15 @@ class ParametresConnexion(object):
                                    'planet_osm_line',
                                    'planet_osm_roads',
                                    'planet_osm_polygon']}}
-
+        self.dict_dbname_dict_schema_listtables = \
+            {'osm': {'apidb':     [],
+                     'osm2pgsql': []}}
+        self.dict_dbname_dict_schema_listsqlfilescreate = \
+            {'osm':               {'apidb': ['/usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6.sql',
+                                             '/usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_action.sql',
+                                             '/usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_bbox.sql',
+                                             '/usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6_linestring.sql'],
+                                   'osm2pgsql': []}}
         self.dict_dbname_dict_schema_listsqlfilescreate = \
             {'osm':               {'apidb': [],
                                    'osm2pgsql': []}}

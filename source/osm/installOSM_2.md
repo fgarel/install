@@ -80,7 +80,7 @@ La documentation sur l'installation et l'utilisation de cet
 environnement est détaillé dans
 Linux Magazine N°188
 
-L'environnemant OSM est un ensemble de composants
+L'environnement OSM est un ensemble de composants
 
 La liste des composants d'OSM est ici
 

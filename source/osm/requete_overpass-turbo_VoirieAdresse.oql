@@ -1,0 +1,33 @@
+/*
+Extraction des numeros
+*/
+[out:json];
+
+(
+area[name="La Rochelle"][admin_level="8"]["ref:INSEE"="17300"];
+// les adresses postales
+node
+  (area)
+  ["addr:housenumber"];
+
+// les voies qui ont un nom
+area[name="La Rochelle"][admin_level="8"]["ref:INSEE"="17300"];
+way
+  (area)
+  [highway][name];
+// les batiments avec une adresse postale
+area[name="La Rochelle"][admin_level="8"]["ref:INSEE"="17300"];
+way
+  (area)
+  ["addr:housenumber"];
+
+// pas de relation
+/*
+  rel
+  (area)
+  ["type"="associatedStreet"];
+*/
+);
+out body;
+>;
+out skel qt;

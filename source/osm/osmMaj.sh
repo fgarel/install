@@ -38,7 +38,7 @@ echo '#'
 echo '# Tous les jours à 7 heure'
 echo '# 0 7 * * * /home/fred/Documents/install/source/osm/osmMajWww-data.sh'
 echo '# Tous les jours à 7 heure 10'
-echo '# 10 7 * * * /home/fred/Documents/install/source/osm/osmMajNomral-user.sh'
+echo '# 10 7 * * * /home/fred/Documents/install/source/osm/osmMajNormal-user.sh'
 echo '#'
 echo '#---------------------------------------'
 # Attention, il faudra peut-etre distinguer l'execution de osmosis et de osm2pgsql
