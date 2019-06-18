@@ -133,8 +133,8 @@ class MonHandler(FileSystemEventHandler):
             u"Pour répondre à l'émetteur, utilisez les coordonnées " + \
             u"présentes dans le document.\n\n" + \
             u"Cordialement,\n\n" + \
-            u"--\nLe service Cartographie " + \
-            u"de la Ville de La Rochelle\n" + \
+            u"--\nUnité Topographie / Direction de la Voirie / " + \
+            u"Ville de La Rochelle\n" + \
             u""
 
         # mail de la personne qui recevra une notification indiquant
@@ -152,8 +152,8 @@ class MonHandler(FileSystemEventHandler):
             u" a été transmise aux exploitants.\n\n" + \
             u"Important : Ne répondez pas à cet email.\n\n" + \
             u"Cordialement,\n\n" + \
-            u"--\nLe service Cartographie " + \
-            u"de la Ville de La Rochelle\n" + \
+            u"--\nUnité Topographie / Direction de la Voirie / " + \
+            u"Ville de La Rochelle\n" + \
             u""
 
 
@@ -328,7 +328,7 @@ class MonHandler(FileSystemEventHandler):
                                 courriel = rootNode.listeDesOuvrages.ouvrage[i].contact.courriel
                             #print('courriel = {}'.format(courriel))
                             #self.dico_exploitant_courriel[rootNode.listeDesOuvrages.ouvrage[i].contact.societe.encode("utf-8")] = rootNode.listeDesOuvrages.ouvrage[i].contact.courriel
-                            self.dico_exploitant_courriel[rootNode.listeDesOuvrages.ouvrage[i].contact.societe.encode("utf-8")] = courriel
+                            self.dico_exploitant_courriel[rootNode.listeDesOuvrages.ouvrage[i].contact.societe.encode("utf-8").strip()] = courriel
 
 
     def send_x_mails(self):
