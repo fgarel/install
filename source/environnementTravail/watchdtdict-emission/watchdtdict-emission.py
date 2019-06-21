@@ -41,7 +41,7 @@ import re
 import os
 import shutil
 import pdfReader
-import dtdict_appli1 as xmlReader
+import dtdict_appli1_v30 as xmlReader
 # Import smtplib for the actual sending function
 import smtplib
 # Import the email modules we'll need
@@ -88,7 +88,7 @@ class MonHandler(FileSystemEventHandler):
         pour l'émetteur sont définis dans cette méthode __init__().
 
         """
-        print "__init__"
+        print("__init__")
         self.dico_exploitant_nomPdf = {}
         self.dico_exploitant_courriel = {}
         self.numero_dtdict = ''
@@ -241,11 +241,11 @@ class MonHandler(FileSystemEventHandler):
         # on remonte la fhs d'un niveau
         repertoiretemporaire = re.sub(self.initpath, '', repertoiretemporaire)
         self.numero_dtdict = re.sub(r'.*/', '', repertoiretemporaire)
-        print "numero_dtdict = " + self.numero_dtdict
+        print("numero_dtdict = %s".format(self.numero_dtdict))
         try:
             os.mkdir(repertoiretemporaire)
         except:
-            print 'Le répertoire existe déjà....'
+            print('Le répertoire existe déjà....')
         f.extractall(repertoiretemporaire)
         for ffile in f.namelist():
             extension = re.sub(r'(.*)\.', '', ffile)
@@ -441,9 +441,9 @@ class MonHandler(FileSystemEventHandler):
             smtpObj.sendmail(self.mail_sender, \
                              to_person, \
                              msg.as_string())
-            print "Successfully sent email to " + to_person.__str__()
+            print("Successfully sent email to ".format(to_person.__str__()))
         except smtplib.SMTPException:
-            print "Error: unable to send email to " + to_person
+            print("Error: unable to send email to ".format(to_person))
 
 
     def nettoyage(self, zipfilename):
@@ -473,12 +473,12 @@ class MonHandler(FileSystemEventHandler):
         try:
             shutil.rmtree(repertoiretemporaire)
         except:
-            print 'Le répertoire n a pas pu etre supprimé'
+            print('Le répertoire n a pas pu etre supprimé')
         try:
             shutil.move(zipfilename, destfilename)
             #os.remove(zipfilename)
         except:
-            print 'Le fichier n a pas pu etre sauvegardé'
+            print('Le fichier n a pas pu etre sauvegardé')
 
         # envoi d'un mail de notification à l'emetteur
         msg = MIMEMultipart()
@@ -497,9 +497,9 @@ class MonHandler(FileSystemEventHandler):
             smtpObj.sendmail(self.mail_sender, \
                              self.mail_notif_receivers, \
                              msg.as_string())
-            print "Successfully sent notification email to " + self.mail_notif_receivers
+            print("Successfully sent notification email to ".format(self.mail_notif_receivers))
         except smtplib.SMTPException:
-            print "Error: unable to send notification email to " + self.mail_notif_receivers
+            print("Error: unable to send notification email to ".format(self.mail_notif_receivers))
 
         # remise à zero des deux dictionnaires
         self.dico_exploitant_nomPdf = {}
@@ -528,7 +528,7 @@ def main():
     u"""
     On démarre tout ça :
     """
-    print "start"
+    print("start")
     observer.start()
 
     # L'observer travaille dans un thread séparé donc on fait une

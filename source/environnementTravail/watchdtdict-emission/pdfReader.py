@@ -153,7 +153,7 @@ class PdfReader(object):
 
         """
         # 3ème étape : extraction de l'information geographique
-        # cat document1.pdf | \                                                                                              -- NORMAL --
+        # cat document1.pdf | \
         #     grep 'EPSG' | \
         #     sed -E -e 's/[^\()]*\(//' \
         #            -e 's/\)[^^\()]*\(//g' \
@@ -325,7 +325,7 @@ class PdfReader(object):
 
         """
         # 3ème étape : extraction de l'information geographique
-        # cat document1.pdf | \                                                                                              -- NORMAL --
+        # cat document1.pdf | \
         #     grep 'EPSG' | \
         #     sed -E -e 's/[^\()]*\(//' \
         #            -e 's/\)[^^\()]*\(//g' \
@@ -388,7 +388,7 @@ class PdfReader(object):
         #print "chaine = " + chaine
         #print "derniere ligne = " + splitchaine[-1]
         self.numeroDict = splitchaine[-1]
-        print "Numéro de la DT/DICT = " + self.numeroDict
+        print("Numéro de la DT/DICT = %s".format(self.numeroDict))
 
         # 3ème étape suite : capacite d'impression
         # cat document1.pdf | \
@@ -410,7 +410,7 @@ class PdfReader(object):
         # p3.communicate renvoit un tuple : on ne prend que le 1er element
         # et en plus, on supprime le dernier caractère
         self.capaciteImpression = p3.communicate()[0][:-1]
-        print "Capacité d'impression = " + self.capaciteImpression
+        print("Capacité d'impression = ".format(self.capaciteImpression))
 
         # 3ème étape suite : mail du responsable
         # cat document1.pdf | \
@@ -432,7 +432,7 @@ class PdfReader(object):
         # p3.communicate renvoit un tuple : on ne prend que le 1er element
         # et en plus, on supprime le dernier caractère
         self.mailResponsable = p3.communicate()[0][:-1]
-        print "Courriel du responsable du projet = " + self.mailResponsable
+        print("Courriel du responsable du projet = ".format(self.mailResponsable))
 
         # 3ème étape suite : Nom de l'Exploitant
         # le nom de l'exploitant est contenu dans le premier
@@ -464,7 +464,7 @@ class PdfReader(object):
         # p4.communicate renvoit un tuple : on ne prend que le 1er element
         # et en plus, on supprime le dernier caractère
         self.nomExploitant = p4.communicate()[0][:-1]
-        print "Nom de l'Exploitant = " + self.nomExploitant
+        print("Nom de l'Exploitant = ".format(self.nomExploitant))
 
 
         ffile = open(self.metadata_filename, "a")
@@ -668,14 +668,14 @@ def main(argv):
         opts, args = getopt.getopt(argv, "hf:m:",
                                    ["file=", "metadata="])
     except getopt.GetoptError as err:
-        print "pdf2txt.py -h"
-        print 'pdf2txt.py -f <file> -m <metadata>'
-        print str(err)
+        print("pdf2txt.py -h")
+        print('pdf2txt.py -f <file> -m <metadata>')
+        print(str(err))
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print "pdf2txt.py -h"
-            print 'pdf2txt.py -f <file> -m <metadata>'
+            print("pdf2txt.py -h")
+            print('pdf2txt.py -f <file> -m <metadata>')
             sys.exit()
         if opt in ("-f", "--file"):
             ffile = arg
