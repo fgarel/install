@@ -30,7 +30,6 @@ echo "#"
 
 echo "#"
 
-
 echo "#"
 echo "export OLDPWDFG=$(pwd)"
       export OLDPWDFG=$(pwd)
@@ -41,23 +40,7 @@ echo "cd .."
       cd ..
 echo "pwd"
       pwd
-#echo "rm -rf openstreetmap-carto"
-#      rm -rf openstreetmap-carto
-#echo "git clone https://github.com/gravitystorm/openstreetmap-carto"
-#      git clone https://github.com/gravitystorm/openstreetmap-carto
-#echo "cd openstreetmap-carto"
-#      cd openstreetmap-carto
-#echo "pwd"
-#      pwd
-#echo "#"
-#echo "#"
-#echo "sudo make install"
-#      sudo make install
-#echo "#"
-#echo "cd $OLDPWDFG"
-#      cd $OLDPWDFG
-#echo "pwd"
-#      pwd
+
 echo "#"
 echo "# Installation d'openstreetmap-carto-vector-tiles"
 echo "#"
@@ -88,34 +71,51 @@ echo "#     - telechargement des cartes de bases"
 echo "#     - installation d'outils complementaires (carto et kosmtik)"
 echo "#"
 echo "#"
-#echo "# Installation des fonts"
-#echo "#"
-#echo "# D'après la page suivante,"
-#echo "# https://github.com/geofabrik/openstreetmap-carto-vector-tiles/blob/master/INSTALL.md"
-#echo "# Il est nécessaire d'installer des polices supplémentaires pour utiliser ce système de rendu"
-#echo "#"
-#echo "# Cette installation est dupliquée dans ../environnementTravail/installFonts.sh"
-#echo "#"
-#echo "sudo aptitude install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
+# echo "# Installation des fonts"
+# echo "#"
+# echo "# D'après la page suivante,"
+# echo "# https://github.com/geofabrik/openstreetmap-carto-vector-tiles/blob/master/INSTALL.md"
+# echo "# Il est nécessaire d'installer des polices supplémentaires pour utiliser ce système de rendu"
+# echo "#"
+# echo "# Cette installation est dupliquée dans ../environnementTravail/installFonts.sh"
+# echo "#"
+# echo "sudo aptitude install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
 #      sudo aptitude install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
-#echo "sudo apt-get install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
+# echo "sudo apt-get install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont"
 #      sudo apt-get install -y fonts-noto fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted fonts-hanazono ttf-unifont
-#echo "sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+# echo "sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
 #      sudo aptitude install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
-#echo "sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
+# echo "sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra"
 #      sudo apt-get install -y fonts-dejavu ttf-dejavu ttf-dejavu-core ttf-dejavu-extra
-#echo "#"
-#echo "#"
-#echo "# Après installation des fonts, il faut les enregistrer"
-#echo "# https://wiki.debian.org/Fonts"
-#echo "fc-cache -fv # rebuilds cached list of fonts"
+# echo "#"
+# echo "#"
+# echo "# Après installation des fonts, il faut les enregistrer"
+# echo "# https://wiki.debian.org/Fonts"
+# echo "fc-cache -fv # rebuilds cached list of fonts"
 #      fc-cache -fv
+
+echo "#"
+
+echo "# Comme recommandé, Création d'index, mais :"
+echo "#   - l'utilisateur est www-data"
+echo "#   - la base est osm"
+echo "# La recomandation est vue ici :"
+echo "# https://github.com/geofabrik/openstreetmap-carto-vector-tiles/blob/master/INSTALL.md"
+echo "#"
+echo 'sudo -u www-data \'
+echo "     psql -d osm -f indexes.sql"
+      sudo -u www-data \
+           psql -d osm -f indexes.sql
+echo "#"
+echo "#"
 echo "#"
 echo "# Execution de la commande make"
 echo "#"
 echo "# Cependant, sept choses sont à faire avant d'executer make"
 echo "#   - installer le paquet python-yaml"
-echo "#   - modifier le makfile de facon a pointer vers la bonne base de données"
+echo "#   - modifier le makfile :"
+echo "#       - de facon a pointer vers la bonne base de données"
+echo "#       - de facon à utiliser python3"
 echo "#   - ajout de l'utilisateur www-data dans le fichier .pgpass"
 echo "#   - telecharger quelques données (contour continent océan)"
 echo "#   - installer npm"
@@ -124,8 +124,8 @@ echo "#   - modification du fichier project.mml pour qu'il pointe vers la bonne 
 echo "# Une chose est à faire après le make"
 echo "#   - modification du fichier project.mml pour supprimer la directive source"
 echo "#"
-echo "sudo apt-get install -y python-yaml"
-      sudo apt-get install -y python-yaml
+echo "sudo apt-get install -y python3-yaml"
+      sudo apt-get install -y python3-yaml
 echo "#"
 echo "# L'utilitaire shapeindex, "
 echo "# utilisé pour créer des index lors du telechargement des données mondiales,"
@@ -135,20 +135,43 @@ echo "sudo apt-get install -y mapnik-utils"
 echo "#"
 echo "# Modification du Makefile"
 echo "	#PGOPTIONS='--client-min-messages=error' psql -d gis -f add-indexes.sql >/dev/null || true"
-echo "	PGOPTIONS='--client-min-messages=error' psql -h 172.17.0.1 -U www-data -d osm -f add-indexes.sql >/dev/null || true"
-echo "sed -i -E -e 's/-d gis/-h 172.17.0.1 -U www-data -d osm/g' ../openstreetmap-carto-vector-tiles/Makefile"
-      sed -i -E -e 's/-d gis/-h 172.17.0.1 -U www-data -d osm/g' ../openstreetmap-carto-vector-tiles/Makefile
+#echo "	PGOPTIONS='--client-min-messages=error' psql -h 172.17.0.1 -U www-data -d osm -f add-indexes.sql >/dev/null || true"
+echo "	PGOPTIONS='--client-min-messages=error' psql -h localhost -U www-data -d osm -f add-indexes.sql >/dev/null || true"
+echo "sed -i -E -e 's/-d gis/-h localhost -U www-data -d osm/g' ../openstreetmap-carto-vector-tiles/Makefile"
+      sed -i -E -e 's/-d gis/-h localhost -U www-data -d osm/g' ../openstreetmap-carto-vector-tiles/Makefile
+echo "#"
+echo "# Dans le fichier Makefile, on remplace aussi python par python3 :"
+echo "#"
+echo "python convert_ymls.py"
+echo "#"
+echo "# par :"
+echo "#"
+echo "python3 convert_ymls.py"
+echo "#"
+echo "sed -i -E -e 's|python convert_ymls.py|python3 convert_ymls.py|g' ../openstreetmap-carto-vector-tiles/Makefile"
+      sed -i -E -e 's|python convert_ymls.py|python3 convert_ymls.py|g' ../openstreetmap-carto-vector-tiles/Makefile
+echo "#"
+echo "# Dans le fichier Makefile, on remplace aussi la directive install-node-modules :"
+echo "#"
+echo "npm install tilelive-tmsource tilelive-tmstyle tilejson tilelive-http tilelive-vector tessera carto tilelive-file"
+echo "#"
+echo "# par :"
+echo "#"
+echo "npm install mapnik tilelive-tmsource tilelive-tmstyle @mapbox/tilejson tilelive-http @mapbox/tilelive-vector tilelive-file carto leaflet leaflet-hash kosmtik tessera"
+echo "#"
+echo "sed -i -E -e 's|npm install tilelive-tmsource tilelive-tmstyle tilejson tilelive-http tilelive-vector tessera carto tilelive-file|npm install mapnik tilelive-tmsource tilelive-tmstyle @mapbox/tilejson tilelive-http @mapbox/tilelive-vector tilelive-file carto leaflet leaflet-hash kosmtik tessera|g' ../openstreetmap-carto-vector-tiles/Makefile"
+      sed -i -E -e 's|npm install tilelive-tmsource tilelive-tmstyle tilejson tilelive-http tilelive-vector tessera carto@">=0.16" tilelive-file|npm install mapnik tilelive-tmsource tilelive-tmstyle @mapbox/tilejson tilelive-http @mapbox/tilelive-vector tilelive-file carto leaflet leaflet-hash kosmtik tessera|g' ../openstreetmap-carto-vector-tiles/Makefile
 echo "#"
 echo "# L'utilisateur www-data doit pouvoir se connecter sans avoir a saisir son mot de passe"
-echo "echo '*:*:*:www-data:www-data' >> ~/.pgpass"
-      echo '*:*:*:www-data:www-data' >> ~/.pgpass
-echo "# On rajoute aussi osmuser et mapnikuser"
-echo "echo '*:*:*:osmuser:osmpass' >> ~/.pgpass"
-      echo '*:*:*:osmuser:osmpass' >> ~/.pgpass
-echo "echo '*:*:*:mapnikuser:mapnikpass' >> ~/.pgpass"
-      echo '*:*:*:mapnikuser:mapnikpass' >> ~/.pgpass
-echo "chmod 600 ~/.pgpass"
-      chmod 600 ~/.pgpass
+#echo "echo '*:*:*:www-data:www-data' >> ~/.pgpass"
+#      echo '*:*:*:www-data:www-data' >> ~/.pgpass
+#echo "# On rajoute aussi osmuser et mapnikuser"
+#echo "echo '*:*:*:osmuser:osmpass' >> ~/.pgpass"
+#      echo '*:*:*:osmuser:osmpass' >> ~/.pgpass
+#echo "echo '*:*:*:mapnikuser:mapnikpass' >> ~/.pgpass"
+#      echo '*:*:*:mapnikuser:mapnikpass' >> ~/.pgpass
+#echo "chmod 600 ~/.pgpass"
+#      chmod 600 ~/.pgpass
 echo "#"
 echo "# Il faut aussi telecharger des données pour que le test fonctionne"
 echo "#"
@@ -162,6 +185,24 @@ echo "# "
 #      chmod +x get-shapefiles.sh
 #echo "./get-shapefiles.sh"
 #      ./get-shapefiles.sh
+echo "#"
+echo "# Modification du fichier get-shapefiles.py"
+echo "#"
+echo "# Le service data.openstreetmapdata.com est arrété"
+echo "# mais remplacé par osmdata.openstreetmap.de"
+echo "# facon a ce qu'il pointe vers la base de données"
+echo "#"
+echo "# Il faut remplacer :"
+echo "#"
+echo "'url': 'http://data.openstreetmapdata.com/simplified-land-polygons-complete-3857.zip'"
+echo "#"
+echo "# par :"
+echo "#"
+echo "'url': 'http://osmdata.openstreetmap.de/download/simplified-land-polygons-complete-3857.zip'"
+echo "#"
+echo "sed -i -E -e 's|http://data.openstreetmapdata.com/|http://osmdata.openstreetmap.de/download/|g' ../openstreetmap-carto-vector-tiles/scripts/get-shapefiles.py"
+      sed -i -E -e 's|http://data.openstreetmapdata.com/|http://osmdata.openstreetmap.de/download/|g' ../openstreetmap-carto-vector-tiles/scripts/get-shapefiles.py
+echo "#"
 echo "cd scripts"
       cd scripts
 echo "# Si on a installé mapnik-utils (utilitaire shapeindex ),"
@@ -173,6 +214,39 @@ echo "./get-shapefiles.py"
 #      ./get-shapefiles.py --no-shape
 echo "cd .."
       cd ..
+echo "#"
+echo "#"
+echo "# Suppression de manik-utils"
+echo "#"
+echo "sudo apt-get remove -y mapnik-utils libmapnik3.0 node-mapnik"
+      sudo apt-get remove -y mapnik-utils libmapnik3.0 node-mapnik
+echo "#"
+echo "# Execution des autres scripts"
+echo "# Ces deux autres scripts, ainsi que make, ont besoin des modules complementaires de python "
+echo "#"
+echo "# Ajout des modules python, en version 2 pour les scripts"
+echo "#"
+echo "sudo -H python2 -m pip install --upgrade pip"
+      sudo -H python2 -m pip install --upgrade pip
+echo "sudo -H python2 -m pip install colormath"
+      sudo -H python2 -m pip install colormath
+echo "sudo -H python2 -m pip install lxml"
+      sudo -H python2 -m pip install lxml
+echo "#"
+echo "# Ajout des modules python, en version 3 (utile ?)"
+echo "sudo -H pip3 install --upgrade pip"
+      sudo -H pip3 install --upgrade pip
+echo "sudo -H pip3 install colormath"
+      sudo -H pip3 install colormath
+echo "sudo -H pip3 install lxml"
+      sudo -H pip3 install lxml
+echo "#"
+echo "Les symboles arrivent ici : symbols/shields/"
+echo "python2 ./scripts/generate_shields.py"
+      python2 ./scripts/generate_shields.py
+echo "python2 ./scripts/generate_road_colours.py > road-colors-generated.mss"
+      python2 ./scripts/generate_road_colours.py > road-colors-generated.mss
+echo "#"
 echo "#"
 echo "# Installation de cartocss et de kosmtik"
 echo "#"
@@ -189,21 +263,45 @@ echo "# qui permet de transfomer des styles mml en style xml"
 ####      sudo apt-get install -y node-carto
 #echo "#"
 echo "# Installation a partir de npm : it's rocks"
-echo "sudo apt-get install -y npm"
-      sudo apt-get install -y npm
+echo "sudo apt-get remove -y npm"
+      sudo apt-get remove -y npm
+      sudo apt-get remove -y nodejs
+echo "sudo apt autoremove -y"
+      sudo apt autoremove -y
+#echo "sudo apt-get install -y npm"
+#      sudo apt-get install -y npm
+echo "npm -v"
+      npm -v
+      sudo rm -rf /usr/local/bin/npm \
+                  /usr/local/share/man/man1/node.1 \
+                  /usr/local/lib/dtrace/node.d \
+                  ~/.npm \
+                  ~/.node-gyp
+      sudo rm -rf /usr/local/lib/node_modules
+
+
+echo "#"
+echo "#"
+echo "# Installation de npm, à partir des paquets"
+echo "sudo apt-get remove -y npm"
+#      sudo apt-get remove -y npm
+#      sudo apt-get remove -y nodejs
+echo "# Installation de npm, mais pas avec les paquets debian/ubuntu"
+echo "curl -0 -L https://npmjs.org/install.sh | sudo sh"
+      curl -0 -L https://npmjs.org/install.sh | sudo sh
+echo "sudo rm -rf ~/.npm"
+      sudo rm -rf ~/.npm
 echo "npm -v"
       npm -v
 echo "#"
-#echo "# Mise à jour de npm (en utilisant npm...)"
-#echo "# https://stackoverflow.com/questions/23393707/how-to-update-npm"
+echo "# Mise à jour de npm (en utilisant npm...)"
+echo "# https://stackoverflow.com/questions/23393707/how-to-update-npm"
 #echo "sudo npm install -g npm"
 #      sudo npm install -g npm
-#echo "sudo apt-get remove -y npm"
-#      sudo apt-get remove -y npm
-#echo "npm -v"
-#      npm -v
+echo "npm -v"
+      npm -v
 echo "#"
-echo "# carto est pas a installer localement, tandis que"
+echo "# carto est à installer localement, tandis que"
 echo "# kosmtik est a installer globalement (-g)"
 echo "# Ils vont etre installé dans le sous-repertoire node_modules "
 echo "# du repertoire openstreetmap-carto-vector-tiles"
@@ -217,48 +315,49 @@ echo "#"
 #      cd ../openstreetmap-carto-vector-tiles
 ####echo "sudo npm -g install carto"
 ####      sudo npm -g install carto
+echo "#"
 echo "make install-node-modules"
       make install-node-modules
+echo "#"
+echo "npm install mapnik tilelive-tmsource tilelive-tmstyle @mapbox/tilejson tilelive-http @mapbox/tilelive-vector tilelive-file carto leaflet leaflet-hash kosmtik tessera"
+echo "npm install @hapi/hawk @hapi/sntp mapnik @mapbox/tilejson @mapbox/tilelive-vector tilelive-tmsource tilelive-tmstyle tilelive-http tilelive-file carto leaflet leaflet-hash kosmtik tessera"
+      npm install @hapi/hawk @hapi/sntp mapnik @mapbox/tilejson @mapbox/tilelive-vector tilelive-tmsource tilelive-tmstyle tilelive-http tilelive-file carto leaflet leaflet-hash kosmtik tessera
+echo "#"
+#echo "make install-node-modules"
+#      make install-node-modules
 echo "#"
 #echo "#"
 #echo "sudo npm -g install mapnik"
 #      sudo npm -g install mapnik
-echo "npm install mapnik"
-      npm install mapnik
-echo "sudo npm -g install kosmtik"
-      sudo npm -g install kosmtik
+#echo "npm install mapnik"
+#      npm install mapnik
+#echo "sudo npm -g install kosmtik"
+#      sudo npm -g install kosmtik
 #echo "npm install kosmtik"
 #      npm install kosmtik
 #echo "sudo npm -g install tessera"
 #      sudo npm -g install tessera
-echo "npm install @mapbox/tilejson"
-      npm install @mapbox/tilejson
-echo "npm install @mapbox/tilelive-vector"
-      npm install @mapbox/tilelive-vector
+#echo "npm install @mapbox/tilejson"
+#      npm install @mapbox/tilejson
+#echo "npm install @mapbox/tilelive-vector"
+#      npm install @mapbox/tilelive-vector
 #echo "npm install carto"
 #      npm install carto
 ###echo "#"
 ####echo "# https://github.com/mojodna/tessera"
 ####echo "sudo npm -g install tessera"
 ####      sudo npm -g install tessera
-echo "#"
-echo "# Ajout des modules python"
-echo "sudo -H pip2 install --upgrade pip"
-      sudo -H pip2 install --upgrade pip
-echo "sudo -H pip2 install colormath"
-      sudo -H pip2 install colormath
-echo "sudo -H pip2 install lxml"
-      sudo -H pip2 install lxml
-echo "#"
+#echo "npm install @hapi/hawk @hapi/sntp mapnik @mapbox/tilejson @mapbox/tilelive-vector carto leaflet leaflet-hash kosmtik tessera"
+#      npm install @hapi/hawk @hapi/sntp mapnik @mapbox/tilejson @mapbox/tilelive-vector carto leaflet leaflet-hash kosmtik tessera
+
 echo "#"
 echo "# Modification du fichier project.mml"
 echo "#"
-echo "# A l'interieur du container, nous voulons lancer kosmtik pour qu'il "
+echo "# Nous voulons lancer un serveur de tuile pour qu'il "
 echo "# serve le project.mml qui est dans le repertoire openstreetmap-carto-vector-tiles"
 echo "# Cependant, nous devons modifier un peu ce fichier project.mml"
 echo "#"
-echo  "# Modification du fichier project.mml de facon a ce qu'il pointe vers la base de données"
-echo "#"
+echo "# Modification du fichier project.mml de facon a ce qu'il pointe vers la base de données"
 echo "#"
 echo "# Il faut remplacer :"
 echo "#"
@@ -272,15 +371,16 @@ echo "# par :"
 echo "#"
 echo '#  osm2pgsql: &osm2pgsql'
 echo '#    type: "postgis"'
-echo '#    host: 172.17.0.1'
+#echo '#    host: 172.17.0.1'
+echo '#    host: localhost'
 echo '#    dbname: "osm"'
 echo '#    user: "www-data"'
 echo '#    password: "www-data"'
 echo '#    key_field: ""'
 echo '#    geometry_field: "way"'
 echo "#"
-echo "sed -i -E -e '/  type: \"postgis\"/ a \ \ \ \ host: 172.17.0.1' ../openstreetmap-carto-vector-tiles/project.mml"
-      sed -i -E -e '/  type: \"postgis\"/ a \ \ \ \ host: 172.17.0.1' ../openstreetmap-carto-vector-tiles/project.mml
+echo "sed -i -E -e '/  type: \"postgis\"/ a \ \ \ \ host: localhost' ../openstreetmap-carto-vector-tiles/project.mml"
+      sed -i -E -e '/  type: \"postgis\"/ a \ \ \ \ host: localhost' ../openstreetmap-carto-vector-tiles/project.mml
 echo "sed -i -E -e 's/  dbname: \"gis\"/  dbname: \"osm\"/g' ../openstreetmap-carto-vector-tiles/project.mml"
       sed -i -E -e 's/  dbname: \"gis\"/  dbname: \"osm\"/g' ../openstreetmap-carto-vector-tiles/project.mml
 echo "sed -i -E -e '/  dbname: \"osm\"/ a \ \ \ \ user: \"www-data\"' ../openstreetmap-carto-vector-tiles/project.mml"
@@ -288,7 +388,10 @@ echo "sed -i -E -e '/  dbname: \"osm\"/ a \ \ \ \ user: \"www-data\"' ../openstr
 echo "sed -i -E -e '/  user: \"www-data\"/ a \ \ \ \ password: \"www-data\"' ../openstreetmap-carto-vector-tiles/project.mml"
       sed -i -E -e '/  user: \"www-data\"/ a \ \ \ \ password: \"www-data\"' ../openstreetmap-carto-vector-tiles/project.mml
 echo "#"
+
 echo "#"
+
+
 echo "#"
 echo "# Enfin, le make !"
 echo "#"
@@ -303,36 +406,16 @@ echo "make postgresql-fix-geometry"
 echo "#"
 echo "make kosmtik"
       make kosmtik
-echo "#"
-echo "#----------------------"
-echo "# Pour lancer tessera"
-echo "# make tessera"
-      # make tessera
-echo "# Après le lancment de tessera, sur le client,"
-echo "# http://172.17.0.2:8080/pbfs/live/index.json"
-echo "#"
-echo "# Pour lancer kosmtik"
-#echo "# kosmtik serve --host 172.17.0.2 --port 8000 project.mml"
-#      # kosmtik serve --host 172.17.0.2 --port 8000 project.mml
-echo "# ./node_modules/.bin/kosmtik serve --host 172.17.0.2 --port 8000 osm-carto.tm2/project.yml"
-      # ./node_modules/.bin/kosmtik serve --host 172.17.0.2 --port 8000 osm-carto.tm2/project.yml
-echo "#----------------------"
-echo "#"
-echo "# Après le make, nous retournons effectuer "
-echo "# une autre modification dans le fichier project.mml"
-echo "# Pour l'usage orienté kosmtik"
-echo "#"
-echo "# Pour le moment, on utilise le projet avec kosmtik, sans tessera"
-echo "#"
-echo "sed -i -E -e 's/^source: /#source: /g' ../openstreetmap-carto-vector-tiles/project.mml"
-      sed -i -E -e 's/^source: /#source: /g' ../openstreetmap-carto-vector-tiles/project.mml
+
+
+
+
 echo "#"
 echo "cd $OLDPWDFG"
       cd $OLDPWDFG
 echo "pwd"
       pwd
-echo "#"
-echo "#"
+
 echo "#----------------------"
 echo "# Test de l'installation d'openstreetmap-carto"
 echo "# et de openstreetmap-carto-vector-tiles :"
@@ -386,5 +469,11 @@ echo "# ./installOSMTilemanDebian.sh"
 ##echo "# ./installOSMTilemanUbuntu.sh"
 echo "#----------------------"
 
-
+echo "#----------------------"
+#echo "# ./index.js serve /home/fred/Documents/install/source/openstreetmap-carto-vector-tiles/osm-carto.tm2/project.yml"
+echo "cd ../openstreetmap-carto-vector-tiles/"
+echo "./node_modules/.bin/kosmtik serve --port 6789 ./project.mml"
+##echo "# ./node_modules/.bin/tessera serve project.mml"
+echo "#----------------------"
+echo "http://localhost:6789/"
 echo "#"

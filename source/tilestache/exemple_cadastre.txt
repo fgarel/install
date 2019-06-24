@@ -1,0 +1,30 @@
+
+Interrogation du service wms du cadastre
+
+http public
+mapproxy-util wms-capabilities --version 1.3.0 --host "http://inspire.cadastre.gouv.fr/scpc/17300.wms?service=WMS&request=GetCapabilities"
+
+https, avec clef api
+
+mapproxy-util wms-capabilities --version 1.3.0 --host "https://inspire.cadastre.gouv.fr/scpc/072950c07aa34b7787/17300.wms?service=WMS&request=GetCapabilities"
+
+
+lien qui ne marche pas (version)
+https://inspire.cadastre.gouv.fr/scpc/17300.wms?layers=CP.CadastralParcel&request=GetMap&width=1184&version=1.1.1&srs=EPSG%3A3946&format=image%2Fpng&bbox=1377602.3864746094,5226201.995849609,1377676.9104003906,5226276.519775391&height=1184&service=WMS&styles=
+
+lien qui marche 
+(version
+contextualWMSLegend
+featureCount
+crs
+height
+width
+)
+https://inspire.cadastre.gouv.fr/scpc/17300.wms?layers=CP.CadastralParcel&request=GetMap&width=1184&version=1.3.0&contextualWMSLegend=0&featureCount=10&crs=EPSG%3A3946&format=image%2Fpng&bbox=1377602.3864746094,5226201.995849609,1377676.9104003906,5226276.519775391&height=1184&service=WMS&styles=
+
+
+
+http://inspire.cadastre.gouv.fr/scpc/17300.wms?contextualWMSLegend=0&featureCount=10&crs=EPSG%3A3946&srs=EPSG%3A3946&service=WMS&styles=&height=1184&bbox=1377393.9208984375,5226057.9833984375,1377692.0166015625,5226356.0791015625&version=1.1.1&format=image%2Fpng&width=1184&layers=CP.CadastralParcel&request=GetMap
+
+
+https://inspire.cadastre.gouv.fr/scpc/17300.wms?contextualWMSLegend=0&featureCount=10&crs=EPSG%3A3946&service=WMS&bbox=1377909.5458984375,5226315.7958984375,1378207.6416015625,5226613.8916015625&width=1184&version=1.3.0&layers=CP.CadastralParcel&format=image%252Fpng&height=1184&request=GetMap&styles=

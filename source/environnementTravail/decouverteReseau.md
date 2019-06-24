@@ -5,7 +5,7 @@
 
 Le but est de se connecter, à partir d'un client linux, à la base postgresql qui est sous la machine dsiappli39, windows, configurée avec une authentification "spéciale windows".
 on ne parle pas ici de la configuration kerberos.
-on passe ici par une autre voie : la decouverte de faille
+on passe ici par une autre voie : la découverte de faille
 
 ## 2. Obtenir des infos de concernant la machine dsiappli39
 
@@ -17,15 +17,17 @@ sudo vi /etc/fstab
 ### 2.2. Les découvertes
 
 Deux informations importantes ont été découvertes
-2.2.1. Le fichier de configuration de postgresql
+
+#### 2.2.1. Le fichier de configuration de postgresql
 vi /mnt/dsiappli39/e/PostgreSQL/9.6/data/pg_hba.conf
 pour les utilisateurs lambda, la methode est sspi
 pour l'utilisateur postgres, il est possible de se connecter à partir des sous-reseaux
 10.5.10.0/24
 10.73.10.0/24
 10.254.0.0/16
-2.2.2. Un script de sauvedarde
-ce scrip contient le mot de passe de l'utilisateur postgres
+
+#### 2.2.2. Un script de sauvegarde
+Ce script contient le mot de passe de l'utilisateur postgres
 vi /mnt/dsiappli39/e/sauvegarde/sauvegared_schema.bat
 """
 rem Bonne pratique pour utiliser le mot de passe sans le voir en clair dans le script
@@ -42,7 +44,7 @@ rem dump global de la base
 E:\PostgreSQL\9.6\bin\pg_dump.exe -U postgres -h localhost -d sig > E:\sauvegarde\dump\sig.sql
 """
 
-2.2.3. La stratégie
+#### 2.2.3. La stratégie
 Nous pourrons donc nous connecter au serveur avec le compte postgres, mais à partir d'une machine d'un sous réseau autorisé
 
 
@@ -81,10 +83,10 @@ Sur notre machine, executer
 ssh-keygen -t rsa
 
 ### 4.2. Recopie de la clef publique sur la machine dsipgsql9test.mairie.fr
-4.2.1. ssh-copy-id ne marche pas ici
+#### 4.2.1. ssh-copy-id ne marche pas ici
 La meilleure methode est d'uiliser ssh-copy-id, mais ici, ce n'est pas possible sans l'aide de l'administrateur...
 
-4.2.2. Recopie à l'aide de webmin
+#### 4.2.2. Recopie à l'aide de webmin
 le contenu de la cle publique
 cat ~/.ssh/id_rsa.pub
 

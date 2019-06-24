@@ -32,8 +32,15 @@ echo './osmDownloadFirstTime.sh'
       ./osmDownloadFirstTime.sh
 echo './osmImportFirstTime.sh'
       ./osmImportFirstTime.sh
-echo './osmPrepareQgis.sh'
-      ./osmPrepareQgis.sh
+echo './osmImportFirstTime.sh'
+echo "################################"
+echo 'On ne fait pas encore les vues spécifiques pour la Rochelle'
+echo 'car, dans le script installOSMCartoCSS2new, les instructions sql du makefile'
+echo '../openstreetmap-carto-vector-tile/Makefile/postgresql_fix_geometry'
+echo 'se soldent par un echec'
+#echo './osmPrepareQgis.sh'
+#      ./osmPrepareQgis.sh
+echo "################################"
 echo './osmTest.sh'
       ./osmTest.sh
 echo './osmMaj.sh'

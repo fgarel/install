@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- version 20112018 -->
+<wsdl:definitions
+	xmlns:pad="http://www.reseaux-et-canalisations.gouv.fr/ws-pad3_0"
+	xmlns:gu="http://www.reseaux-et-canalisations.gouv.fr/schema-teleservice/3.0"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xmime="http://www.w3.org/2005/05/xmlmime"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="pad"
+	targetNamespace="http://www.reseaux-et-canalisations.gouv.fr/ws-pad3_0">
+
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.reseaux-et-canalisations.gouv.fr/ws-pad3_0"
+			xmlns:gu="http://www.reseaux-et-canalisations.gouv.fr/schema-teleservice/3.0">
+
+			<xsd:import
+				namespace="http://www.reseaux-et-canalisations.gouv.fr/schema-teleservice/3.0"
+				schemaLocation="schemaTeleservice_pad_3_0.xsd" />
+
+			<xsd:element name="consulterDossierDeclarationPad">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="numero-dossier" type="xsd:string" />
+						<xsd:element name="cle-dossier" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="consulterDossierDeclarationPadFault">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="code-erreur" type="xsd:string"
+							maxOccurs="1" minOccurs="1"></xsd:element>
+						<xsd:element name="message" type="xsd:string"
+							maxOccurs="1" minOccurs="0"></xsd:element>
+						<xsd:element name="id-unique" type="xsd:string"
+							maxOccurs="1" minOccurs="1"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="consulterListeDossierDeclaration">
+				<xsd:complexType>
+					<xsd:choice>
+						<xsd:element name="emprise" type="gu:emprise" maxOccurs="1" minOccurs="1">
+						</xsd:element>
+						<xsd:element name="criteres" type="gu:criteres" maxOccurs="1" minOccurs="1">
+						</xsd:element>
+					</xsd:choice>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="consulterListeDossierDeclarationResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="listeNumerosConsultation" type="gu:listeNumerosConsultation">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="consulterListeDossierDeclarationFault">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="code-erreur" type="xsd:string"
+							maxOccurs="1" minOccurs="1"></xsd:element>
+						<xsd:element name="message" type="xsd:string"
+							maxOccurs="1" minOccurs="0"></xsd:element>
+						<xsd:element name="id-unique" type="xsd:string"
+							maxOccurs="1" minOccurs="1"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="consulterStatistiquesCriteres">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="region" type="xsd:string"
+							maxOccurs="1" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Code Insee de la région</xsd:documentation>
+							</xsd:annotation>	
+						</xsd:element>
+						<xsd:element name="departement" type="xsd:string"
+							maxOccurs="1" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Code Insee du département</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="commune" type="xsd:string"
+							maxOccurs="1" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Code Insee de la commune</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="date" type="xsd:dateTime">
+							<xsd:annotation>
+								<xsd:documentation>Date servant à déterminer le mois sur lequel les statistiques sont calculées</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="consulterStatistiquesCriteresResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="moisStatistiques" type="gu:moisStatistiques">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="consulterStatistiquesCriteresFault">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="code-erreur" type="xsd:string"
+							maxOccurs="1" minOccurs="1"></xsd:element>
+						<xsd:element name="message" type="xsd:string"
+							maxOccurs="1" minOccurs="0"></xsd:element>
+						<xsd:element name="id-unique" type="xsd:string"
+							maxOccurs="1" minOccurs="1"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="consulterDossierDeclarationPadRequest">
+		<wsdl:part element="pad:consulterDossierDeclarationPad"
+			name="parameters" />
+	</wsdl:message>
+	<wsdl:message name="consulterDossierDeclarationPadResponse">
+		<wsdl:part element="gu:dossierConsultation" name="parameters" />
+	</wsdl:message>
+	<wsdl:message name="consulterDossierDeclarationPadFault">
+		<wsdl:part element="pad:consulterDossierDeclarationPadFault"
+			name="parameters" />
+	</wsdl:message>
+
+	<wsdl:message name="consulterListeDossierDeclarationRequest">
+		<wsdl:part name="parameters"
+			element="pad:consulterListeDossierDeclaration"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consulterListeDossierDeclarationResponse">
+		<wsdl:part name="parameters"
+			element="pad:consulterListeDossierDeclarationResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consulterListeDossierDeclarationFault">
+		<wsdl:part name="parameters"
+			element="pad:consulterListeDossierDeclarationFault"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consulterStatistiquesCriteresRequest">
+		<wsdl:part name="parameters" element="pad:consulterStatistiquesCriteres"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consulterStatistiquesCriteresResponse">
+		<wsdl:part name="parameters" element="pad:consulterStatistiquesCriteresResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consulterStatistiquesCriteresFault">
+		<wsdl:part name="parameters" element="pad:consulterStatistiquesCriteresFault"></wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="pad">
+		<wsdl:operation name="consulterDossierDeclarationPad">
+			<wsdl:input message="pad:consulterDossierDeclarationPadRequest" />
+			<wsdl:output message="pad:consulterDossierDeclarationPadResponse" />
+			<wsdl:fault name="fault" message="pad:consulterDossierDeclarationPadFault" />
+		</wsdl:operation>
+		<wsdl:operation name="consulterListeDossierDeclaration">
+			<wsdl:input message="pad:consulterListeDossierDeclarationRequest"></wsdl:input>
+			<wsdl:output message="pad:consulterListeDossierDeclarationResponse"></wsdl:output>
+			<wsdl:fault name="fault"
+				message="pad:consulterListeDossierDeclarationFault"></wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consulterStatistiquesCriteres">
+			<wsdl:input message="pad:consulterStatistiquesCriteresRequest"></wsdl:input>
+			<wsdl:output message="pad:consulterStatistiquesCriteresResponse"></wsdl:output>
+			<wsdl:fault name="fault" message="pad:consulterStatistiquesCriteresFault"></wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="padSOAP" type="pad:pad">
+		<soap12:binding transport="http://www.w3.org/2003/05/soap/bindings/HTTP/"
+			style="document" />
+
+		<wsdl:operation name="consulterDossierDeclarationPad">
+			<soap12:operation style="document" soapAction="" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="consulterListeDossierDeclaration">
+			<soap12:operation style="document" soapAction="" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="consulterStatistiquesCriteres">
+			<soap12:operation style="document" soapAction="" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="pad">
+		<wsdl:port binding="pad:padSOAP" name="padSOAP">
+			<soap12:address location="http://XXX/pad-ws/WS" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 u"""
@@ -198,7 +198,7 @@ class MonHandler(FileSystemEventHandler):
         est manipulé.
 
         """
-        #print("Hop Hop Hop, le fichier %s a été touché" % event.src_path)
+        print("Hop Hop Hop, le fichier {} a été touché".format(event.src_path))
         pass
 
     def on_created(self, event):
@@ -209,7 +209,7 @@ class MonHandler(FileSystemEventHandler):
         est créé.
 
         """
-        print("Le fichier %s a été créé" % event.src_path)
+        print("Le fichier {} a été créé".format(event.src_path))
         self.analyse_fichier_zip_initial(event.src_path)
         self.send_x_mails()
         self.nettoyage(event.src_path)
@@ -241,7 +241,7 @@ class MonHandler(FileSystemEventHandler):
         # on remonte la fhs d'un niveau
         repertoiretemporaire = re.sub(self.initpath, '', repertoiretemporaire)
         self.numero_dtdict = re.sub(r'.*/', '', repertoiretemporaire)
-        print("numero_dtdict = %s".format(self.numero_dtdict))
+        print("numero_dtdict = {}".format(self.numero_dtdict))
         try:
             os.mkdir(repertoiretemporaire)
         except:
@@ -312,6 +312,7 @@ class MonHandler(FileSystemEventHandler):
                         except:
                             pass
 
+                        #for i, val in enumerate(rootNode.listeDesOuvrages.ouvrage):
                         for i, val in enumerate(rootNode.listeDesOuvrages.ouvrage):
                             # contrairement aux fichiers pdf qui utilise
                             # l'encodage "CP1250" (windows)
@@ -321,15 +322,37 @@ class MonHandler(FileSystemEventHandler):
                             # Attention, ici on traite le cas des demandes ou
                             # le courriel de l'exploitant n'est pas connu !!!!
                             #
-                            #print('courriel = {}'.format(rootNode.listeDesOuvrages.ouvrage[i].contact.courriel))
-                            if rootNode.listeDesOuvrages.ouvrage[i].contact.courriel is None:
-                                courriel = rootNode.listeDesOuvrages.ouvrage[i].contact.fax + "@fax.net"
-                            else:
-                                courriel = rootNode.listeDesOuvrages.ouvrage[i].contact.courriel
-                            #print('courriel = {}'.format(courriel))
-                            #self.dico_exploitant_courriel[rootNode.listeDesOuvrages.ouvrage[i].contact.societe.encode("utf-8")] = rootNode.listeDesOuvrages.ouvrage[i].contact.courriel
-                            self.dico_exploitant_courriel[rootNode.listeDesOuvrages.ouvrage[i].contact.societe.encode("utf-8").strip()] = courriel
+                            for j, val in enumerate(rootNode.listeDesOuvrages.ouvrage[i].listeDesZones.zone):
+                                #print('courriel = {}'.format(rootNode.listeDesOuvrages.ouvrage[i].contact.courriel))
+                                print('courriel = {}'.format(rootNode.listeDesOuvrages.ouvrage[i].listeDesZones.zone[j].contact.faxObligatoire.courriel))
+                                if rootNode.listeDesOuvrages.ouvrage[i].listeDesZones.zone[j].contact.faxObligatoire.courriel is None:
+                                    courriel = rootNode.listeDesOuvrages.ouvrage[i].listeDesZones.zone[j].contact.faxObligatoire.fax + "@fax.net"
+                                else:
+                                    courriel = rootNode.listeDesOuvrages.ouvrage[i].listeDesZones.zone[j].contact.faxObligatoire.courriel
+                                #print('courriel = {}'.format(courriel))
+                                #self.dico_exploitant_courriel[rootNode.listeDesOuvrages.ouvrage[i].contact.societe.encode("utf-8")] = rootNode.listeDesOuvrages.ouvrage[i].contact.courriel
+                                #
+                                # on remplit le dictionnaire (avec ou sans encode)
+                                # avec encode/decode , car dans l'autre script, pdfReader, on stocke en str et pas en bytes
+                                # donc ici aussi, il faut stoker en str
+                                # avec encode/decode
+                                key = rootNode.listeDesOuvrages.ouvrage[i].listeDesZones.zone[j].contact.societe.encode("utf-8").decode('utf-8').strip()
+                                print("key = {}".format(key))
 
+                                # petite astucei ici :
+                                # on supprime les quotes françaises
+                                # Communauté d'Agglo
+                                # https://stackoverflow.com/questions/24358361/removing-u2018-and-u2019-character
+                                # dans xml, c'est \u2018
+                                key = re.sub(u"(\u2018|\u2019)",
+                                             r' ',
+                                             key)
+                                #key = key.decode('utf-8')
+                                print("key = {}".format(key))
+                                #self.dico_exploitant_courriel[rootNode.listeDesOuvrages.ouvrage[i].listeDesZones.zone[j].contact.societe.encode("utf-8").strip()] = courriel
+                                self.dico_exploitant_courriel[key] = courriel
+                                # sans encode
+                                #self.dico_exploitant_courriel[rootNode.listeDesOuvrages.ouvrage[i].listeDesZones.zone[j].contact.societe.strip()] = courriel
 
     def send_x_mails(self):
         u"""
@@ -369,8 +392,13 @@ class MonHandler(FileSystemEventHandler):
             ##self.dico_exploitant_courriel[key] = 'frederic.garel@ville-larochelle.fr'
 
         ##print '' * 2 + '-' * 50
-        for key, value in self.dico_exploitant_nomPdf.iteritems():
-            ##print key, value, self.dico_exploitant_courriel[key]
+        for key, value in self.dico_exploitant_courriel.items():
+            #print("1 : key = {}, value_mail = {},".format(key, value))
+            pass
+
+        for key, value in self.dico_exploitant_nomPdf.items():
+            #print("2 : key = {}, value_pdf = {},".format(key, value))
+            #print("2 : key = {}, value_pdf = {}, value_mail = {}".format(key, value, self.dico_exploitant_courriel[key]))
             self.send_one_mail([self.dico_exploitant_courriel[key]], value)
             #pass
         ##print '' * 2 + '-' * 50
@@ -397,7 +425,7 @@ class MonHandler(FileSystemEventHandler):
         msg['Date'] = formatdate(localtime=True)
         msg['Subject'] = self.mail_subject + self.numero_dtdict
 
-        msg.preamble = 'Veuillez trouver ci joint la déclaration %s' % self.numero_dtdict
+        msg.preamble = 'Veuillez trouver ci joint la declaration %s' % self.numero_dtdict
         #msg.preamble = self.mail_preamble + self.numero_dtdict
 
         # attachement du fichier xml
@@ -441,9 +469,9 @@ class MonHandler(FileSystemEventHandler):
             smtpObj.sendmail(self.mail_sender, \
                              to_person, \
                              msg.as_string())
-            print("Successfully sent email to ".format(to_person.__str__()))
+            print("Successfully sent email to {}".format(to_person.__str__()))
         except smtplib.SMTPException:
-            print("Error: unable to send email to ".format(to_person))
+            print("Error: unable to send email to {}".format(to_person))
 
 
     def nettoyage(self, zipfilename):
@@ -497,9 +525,9 @@ class MonHandler(FileSystemEventHandler):
             smtpObj.sendmail(self.mail_sender, \
                              self.mail_notif_receivers, \
                              msg.as_string())
-            print("Successfully sent notification email to ".format(self.mail_notif_receivers))
+            print("Successfully sent notification email to {}".format(self.mail_notif_receivers))
         except smtplib.SMTPException:
-            print("Error: unable to send notification email to ".format(self.mail_notif_receivers))
+            print("Error: unable to send notification email to {}".format(self.mail_notif_receivers))
 
         # remise à zero des deux dictionnaires
         self.dico_exploitant_nomPdf = {}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 20112018 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 	xmlns:t="http://www.reseaux-et-canalisations.gouv.fr/schema-teleservice/3.0" 	attributeFormDefault="unqualified" 	elementFormDefault="qualified" 	targetNamespace="http://www.reseaux-et-canalisations.gouv.fr/schema-teleservice/3.0" 	version="3.0">
+	<xs:include schemaLocation="schemaTeleservice_core_3_0.xsd"/>
+	<!-- element racine -->
+	<xs:element name="dossierConsultationReferencement">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="DT"	type="t:informationsDTReferencement" />
+					<xs:element name="DICT"	type="t:informationsDICTReferencement" />
+					<xs:element name="dtDictConjointes"	type="t:informationsDtDictConjointesReferencement" />
+					<xs:element name="ATU"	type="t:informationsATUReferencement" />
+				</xs:choice>
+				<xs:element name="lettreConsultation" type="xs:string"	maxOccurs="1" minOccurs="1"/>
+				<xs:element name="typeDemande" type="xs:string" maxOccurs="1" minOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="informationsDTReferencement">
+		<xs:complexContent>
+			<xs:extension base="t:informationsDTCore"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="informationsDICTReferencement">
+		<xs:complexContent>
+			<xs:extension base="t:informationsDICTCore">
+				<xs:sequence>
+					<xs:element name="DtLiee" type="t:informationsDTsimplifiee"	minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="partieDT">
+		<xs:complexContent>
+			<xs:extension base="t:informationsDTBase">
+				<xs:sequence>
+					<xs:element name="signatureDuResponsableDuProjetOuDeSonRepresentant"	type="t:signatureDuResponsableDuProjet"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="informationsDtDictConjointesReferencement">
+		<xs:complexContent>
+			<xs:extension base="t:informationsDtDictConjointesCore">
+				<xs:sequence>
+					<xs:element name="partieDT" type="t:partieDT" />
+					<xs:element name="partieDICT" type="t:informationsDICTReferencement" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="informationsATUReferencement">
+		<xs:complexContent>
+			<xs:extension base="t:informationsATUCore"/>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>
