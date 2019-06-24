@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 #
 # Generated Tue Jun 18 18:09:03 2019 by generateDS.py version 2.32.0.

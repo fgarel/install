@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 u"""
@@ -198,7 +198,7 @@ class MonHandler(FileSystemEventHandler):
         est manipulé.
 
         """
-        #print("Hop Hop Hop, le fichier %s a été touché" % event.src_path)
+        print("Hop Hop Hop, le fichier {} a été touché".format(event.src_path))
         pass
 
     def on_created(self, event):
