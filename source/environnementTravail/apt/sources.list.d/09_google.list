@@ -1,0 +1,13 @@
+## https://www.google.com/linuxrepositories/
+
+## Stretch Google : 0109
+# deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main #010901 - stretch chrome stable - main
+# deb [arch=amd64] http://dl.google.com/linux/earth/deb/ stable main #010904 - stretch earth stable - main
+
+## Cosmic Google : 0409
+# deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main #040901 - cosmic chrome stable - main
+# deb [arch=amd64] http://dl.google.com/linux/earth/deb/ stable main #040904 - cosmic earth stable - main
+
+## Disco Google : 0509
+# deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main #050901 - disco chrome stable - main
+# deb [arch=amd64] http://dl.google.com/linux/earth/deb/ stable main #050904 - disco earth stable - main

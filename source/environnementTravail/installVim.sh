@@ -105,8 +105,8 @@ echo 'inoremap <F5> <Esc>:w<CR>:make<CR>'
 echo 'inoremap <F5> <Esc>:w<CR>:make<CR>' >> ~/.vimrc.local.d/functions.vim
 echo ''
 echo '' >> ~/.vimrc.local.d/functions.vim
-echo '" vu ici : http://stackoverflow.com/questions/12030965/change-the-mapping-of-f5-on-the-basis-of-specific-file-type'
-echo 'vu ici : https://stackoverflow.com/questions/12030965/change-the-mapping-of-f5-on-the-basis-of-specific-file-type' >> ~/.vimrc.local.d/functions.vim
+echo '" vu ici : https://stackoverflow.com/questions/12030965/change-the-mapping-of-f5-on-the-basis-of-specific-file-type'
+echo '" vu ici : https://stackoverflow.com/questions/12030965/change-the-mapping-of-f5-on-the-basis-of-specific-file-type' >> ~/.vimrc.local.d/functions.vim
 echo 'autocmd Filetype c,cpp  inoremap <buffer> <F5> <C-o>:update<Bar>execute '!make '.shellescape(expand('%:r'), 1)<CR>'
 echo 'autocmd Filetype c,cpp  inoremap <buffer> <F5> <C-o>:update<Bar>execute '!make '.shellescape(expand('%:r'), 1)<CR>' >> ~/.vimrc.local.d/functions.vim
 echo 'autocmd Filetype python inoremap <buffer> <F5> <C-o>:update<Bar>execute '!python '.shellescape(@%, 1)<CR>'
@@ -153,6 +153,8 @@ echo "\"Bundle 'noahfrederick/vim-neovim-defaults'"
 echo "\"Bundle 'noahfrederick/vim-neovim-defaults'" >> ~/.vimrc.bundles.local
 echo "Bundle 'aklt/plantuml-syntax'"
 echo "Bundle 'aklt/plantuml-syntax'" >> ~/.vimrc.bundles.local
+echo "Bundle 'lbrayner/vim-rzip'"
+echo "Bundle 'lbrayner/vim-rzip'" >> ~/.vimrc.bundles.local
 echo ""
 echo ""
 echo "# Installation ou mise à jour de spf13 ?"

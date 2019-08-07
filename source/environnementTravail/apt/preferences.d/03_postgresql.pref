@@ -1,0 +1,19 @@
+#Package: *
+#Pin: release o=apt.postgresql.org
+#Pin-Priority: 300
+
+Package: *
+Pin: release o=apt.postgresql.org,a=buster-pgdg,c=main
+Pin-Priority: 600
+
+Package: *
+Pin: release o=apt.postgresql.org,a=buster-pgdg-testing,c=main
+Pin-Priority: 300
+
+Package: *
+Pin: release o=apt.postgresql.org,a=disco-pgdg,c=main
+Pin-Priority: 600
+
+Package: *
+Pin: release o=apt.postgresql.org,a=disco-pgdg-testing,c=main
+Pin-Priority: 300

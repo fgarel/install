@@ -133,4 +133,4 @@ cat /proc/sys/fs/inotify/max_user_watches
 
 reparation définitive
 
-sudo vi /etc/sysctl.d/20-inotify.conf
+sudo vi /etc/sysctl.d/40-max-user-watches.conf

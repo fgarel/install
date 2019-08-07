@@ -1,0 +1,53 @@
+## Stretch Principal : 0101
+# deb http://ftp.debian.org/debian/ stretch main contrib non-free #010101 - stretch - main contrib non-free
+# deb http://ftp.debian.org/debian/ stretch-updates main contrib non-free #010102 - stretch-updates - main contrib non-free
+# deb http://ftp.debian.org/debian/ stretch-backports main contrib non-free #010103 - stretch-backports - main contrib non-free
+# deb http://ftp.debian.org/debian/ stretch-security main contrib non-free #010104 - stretch-security - main contrib non-free
+# deb http://security-cdn.debian.org/debian-security/ stretch/updates main contrib non-free #010104 - stretch-security - main contrib non-free
+# deb http://ftp.debian.org/debian/ stretch-proposed-updates main contrib non-free #010105 - stretch-proposed-updates - main contrib non-free
+
+## Buster Principal : 0201
+# deb http://ftp.debian.org/debian/ buster main contrib non-free #020101 - buster - main contrib non-free
+# deb http://ftp.debian.org/debian/ buster-updates main contrib non-free #020102 - buster-updates - main contrib non-free
+# deb http://ftp.debian.org/debian/ buster-backports main contrib non-free #020103 - buster-backports - main contrib non-free
+# deb http://ftp.debian.org/debian/ buster-security main contrib non-free #020104 - buster-security - main contrib non-free
+# deb http://security-cdn.debian.org/debian-security/ buster/updates main contrib non-free #020104 - buster-security - main contrib non-free
+# deb http://ftp.debian.org/debian/ buster-proposed-updates main contrib non-free #020105 - buster-proposed-updates - main contrib non-free
+
+## Bullseye Principal : 0301
+# deb http://ftp.debian.org/debian/ bullseye main contrib non-free #030101 - bullseye - main contrib non-free
+# deb http://ftp.debian.org/debian/ bullseye-updates main contrib non-free #030102 - bullseye-updates - main contrib non-free
+# deb http://ftp.debian.org/debian/ bullseye-backports main contrib non-free #030103 - bullseye-backports - main contrib non-free
+# deb http://ftp.debian.org/debian/ bullseye-security main contrib non-free #030104 - bullseye-security - main contrib non-free
+# deb http://security-cdn.debian.org/debian-security/ bullseye/updates main contrib non-free #030104 - bullseye-security - main contrib non-free
+# deb http://ftp.debian.org/debian/ bullseye-proposed-updates main contrib non-free #030105 - bullseye-proposed-updates - main contrib non-free
+
+
+
+## Zesty Principal : 0101
+# deb http://fr.archive.ubuntu.com/ubuntu/ zesty main restricted universe multiverse #010101 - zesty principal - main restricted universe multiverse
+
+## Artful Principal : 0201
+# deb http://fr.archive.ubuntu.com/ubuntu/ artful main restricted universe multiverse #020101 - artful principal - main restricted universe multiverse
+
+## Bionic Principal : 0301
+# deb http://fr.archive.ubuntu.com/ubuntu/ bionic main restricted universe multiverse #030101 - bionic - main restricted
+# deb http://fr.archive.ubuntu.com/ubuntu/ bionic-updates main restricted universe multiverse #030102 - bionic-updates - main restricted
+# deb http://fr.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse #030103 - bionic-backports - main restricted universe multiverse
+# deb http://security.ubuntu.com/ubuntu bionic-security main restricted universe multiverse #030104 - bionic-security - main restricted
+# deb http://fr.archive.ubuntu.com/ubuntu/ bionic-proposed main restricted universe multiverse #030105 - bionic-proposed - multiverse main restricted universe
+
+## Cosmic Principal : 0401
+# deb http://fr.archive.ubuntu.com/ubuntu/ cosmic main restricted universe multiverse #040101 - cosmic - main restricted
+# deb http://fr.archive.ubuntu.com/ubuntu/ cosmic-updates main restricted universe multiverse #040102 - cosmic-updates - main restricted
+# deb http://fr.archive.ubuntu.com/ubuntu/ cosmic-backports main restricted universe multiverse #040103 - cosmic-backports - main restricted universe multiverse
+# deb http://security.ubuntu.com/ubuntu cosmic-security main restricted universe multiverse #040104 - cosmic-security - main restricted
+# deb http://fr.archive.ubuntu.com/ubuntu/ cosmic-proposed main restricted universe multiverse #040105 - cosmic-proposed - multiverse main restricted universe
+
+## Disco Principal : 0501
+deb http://fr.archive.ubuntu.com/ubuntu/ disco main restricted universe multiverse #050101 - disco - main restricted
+deb http://fr.archive.ubuntu.com/ubuntu/ disco-updates main restricted universe multiverse #050102 - disco-updates - main restricted
+deb http://fr.archive.ubuntu.com/ubuntu/ disco-backports main restricted universe multiverse #050103 - disco-backports - main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu disco-security main restricted universe multiverse #050104 - disco-security - main restricted
+deb http://fr.archive.ubuntu.com/ubuntu/ disco-proposed main restricted universe multiverse #050105 - disco-proposed - multiverse main restricted universe
+

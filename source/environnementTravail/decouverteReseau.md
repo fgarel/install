@@ -28,7 +28,7 @@ pour l'utilisateur postgres, il est possible de se connecter à partir des sous-
 
 #### 2.2.2. Un script de sauvegarde
 Ce script contient le mot de passe de l'utilisateur postgres
-vi /mnt/dsiappli39/e/sauvegarde/sauvegared_schema.bat
+vi /mnt/dsiappli39/e/sauvegarde/sauvegarde_schema.bat
 """
 rem Bonne pratique pour utiliser le mot de passe sans le voir en clair dans le script
 rem edit %APPDATA%\postgresql\pgpass.conf

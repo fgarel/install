@@ -12,6 +12,7 @@ source/environnementTravail/Free-OpenVPN-Connect-for-Linux/*
 source/environnementTravail/Free-OpenVPN-Connect-for-Linux/PROFILES/vpnuserpass
 source/environnementTravail/watchdtdict-emission/metadata.txt
 source/environnementTravail/watchdtdict-emission/document1.pdf
+source/environnementTravail/*.pub
 source/geogig/geogig/*
 source/geogig/geogig-py/*
 source/geogig/geoserver-2.10.1-bin/*

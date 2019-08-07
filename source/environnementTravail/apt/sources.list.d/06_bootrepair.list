@@ -1,0 +1,5 @@
+## Cosmic bootrepair : 0406
+# deb http://ppa.launchpad.net/yannubuntu/boot-repair/ubuntu cosmic main #040601 - cosmic - boot-repair
+
+## Disco bootrepair : 0506
+deb http://ppa.launchpad.net/yannubuntu/boot-repair/ubuntu disco main #050601 - disco - boot-repair

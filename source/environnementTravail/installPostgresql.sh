@@ -36,12 +36,12 @@ echo "# car elle se fait grace à pip."
 echo "# Cependant, pour que cette installation de pgcli puisse fonctionner,"
 echo "# il faut aussi installer quelques dépendances"
 echo "#"
-echo "# 0. iNouveau depot"
+echo "# 0. Nouveau depot"
 echo "# --------------------------------------------"
 echo "#"
 echo "# Nouveau depot"
-echo "sudo cp pgdg.list /etc/apt/sources.list.d/pgdg.list"
-      sudo cp pgdg.list /etc/apt/sources.list.d/pgdg.list
+echo "sudo cp ./apt/sources.list.d/03_postgresql.list /etc/apt/sources.list.d/03_postgresql.list"
+      sudo cp ./apt/sources.list.d/03_postgresql.list /etc/apt/sources.list.d/03_postgresql.list
 echo "#"
 echo "wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -"
       wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
@@ -51,8 +51,8 @@ echo "sudo aptitude update"
 echo "sudo apt-get update"
       sudo apt-get update
 echo "#"
-echo "sudo cp pgdg.pref /etc/apt/preferences.d/pgdg.pref"
-      sudo cp pgdg.pref /etc/apt/preferences.d/pgdg.pref
+echo "sudo cp ./apt/preferences.d/03_postgresql.pref /etc/apt/preferences.d/03_postgresql.pref"
+      sudo cp ./apt/preferences.d/03_postgresql.pref /etc/apt/preferences.d/03_postgresql.pref
 echo "#"
 echo "#"
 echo "# 1. Installation des paquets postgresql et postgis"

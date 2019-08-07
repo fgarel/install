@@ -122,11 +122,18 @@ localhost:62381:*:frederic.garel:Mie
 
 ### 2.4. Postgresql / divers fichiers sql
 
-Ce sont les fichiers qui contiennent des dblinks
+Il faut mettre à jour les fichiers qui contiennent des "dblink"
 
+#### Recherche de ces fichiers
+
+```
 cd ~/Documents/technic/source/
 rgrep -E -e dblink
+```
 
+#### Modification de ces fichiers
+
+##### soit à la main, pour les prochains "create"
 ```
 # vi ~/Documents/technic/source/voirie/bin/sql/update_projetsTravaux.sql
 ```
@@ -136,13 +143,33 @@ rgrep -E -e dblink
 ```
 vi ~/Documents/technic/source/voirie/bin/sql/espu_voirieAdministratif_projet_create.sql
 ```
+##### soit directement sous pgadmin, pour les "update" en cours
 
-il faut refaire les vues distantes parcelle_vue et numvoie_vue
-(soit directement sous pgadmin (solution a préférer
-  car il ne faut pas rejouer entierement le fichier espu_voirieAdministratif_projet_create.sql,
-  sous peine d'ecraser nos saisies préalables)
+Il faut refaire les vues distantes parcelle_vue et numvoie_vue
+cela se fait directement sous pgadmin
+  (c'est la solution a préférer
+  car il ne faut pas rejouer entièrement le fichier espu_voirieAdministratif_projet_create.sql,
+  sous peine d'écraser nos saisies préalables)
 
 ### 2.5. Qgis
+
+#### Modification des fichiers qgz
+```
+unzip ~/Documents/technic/source/voirie/data/numerotations_linux.qgz \
+      ~/Documents/technic/source/voirie/data/numerotations_linux.qgs
+vi ~/Documents/technic/source/voirie/data/numerotations_linux.qgs
+```
+
+```
+:%s/Mie..../Mie..../g
+```
+
+```
+zip add --out ~/Documents/technic/source/voirie/data/numerotations_linux.qgz \
+        ~/Documents/technic/source/voirie/data/numerotations_linux.qgs
+```
+
+#### Modification d'un fichier qgs
 
 vi ~/f/CARTOGRAPHIE/donnees/urbanisme/NUMEROTATIONS/2018/numerotations_linux_20181116.qgs
 
