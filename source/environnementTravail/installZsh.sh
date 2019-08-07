@@ -18,10 +18,20 @@ echo "# Affichage du shell courant"
 echo "echo $SHELL"
       echo $SHELL
 echo "# Installation de zsh-antigen"
+echo "# - on installe d'abord le paquet zsh-antigen"
 echo "sudo aptitude install -y zsh-antigen"
       sudo aptitude install -y zsh-antigen
 echo "sudo apt-get install -y zsh-antigen"
       sudo apt-get install -y zsh-antigen
+echo "# - puis on telecharge le script qui va bien"
+echo "curl -L git.io/antigen > antigen.zsh"
+      curl -L git.io/antigen > antigen.zsh
+echo "# - enfin, on recopie le script au bon endroit"
+echo "sudo cp antigen.zsh /usr/share/zsh-antigen/"
+      sudo cp antigen.zsh /usr/share/zsh-antigen/
+echo "# - le nettoyage final"
+echo "rm antigen.zsh"
+      rm antigen.zsh
 
 echo "# Liste des shells disponibles"
 echo "#-----------------------------------------------"

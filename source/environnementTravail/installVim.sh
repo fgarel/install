@@ -19,9 +19,10 @@ echo "#"
 echo "# Nous avons donc le choix d'installer vim ou neovim"
 echo "# On prendra le choix de neovim par defaut"
 echo "#"
-echo "# Nous commentons donc les lignes suivantes"
-echo "# sudo apt-get install vim"
-      # sudo apt-get install vim
+echo "# spf13 utilise vim pour s'intaller,"
+echo "# Nous commencons donc par cela"
+echo "sudo apt-get install vim-nox"
+      sudo apt-get install vim-nox
 echo "#"
 echo "# Installation de neovim"
 echo "# https://github.com/neovim/neovim/wiki/Installing-Neovim"

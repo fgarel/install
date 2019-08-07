@@ -2,10 +2,12 @@
 
 
 # debian
-export VERSION_PYTHON="3.6.6"
-export VERSION_PYTHON_COURT="3.6"
-# Attention, il faut aussi ces valeurs dans zshrc_antigen puis relancer installZsh.sh
-# La version 3.6.6 est la version qui foncionne avec installPythonWebDjangoTemplate.sh
+export VERSION_PYTHON_COURT="3.8"
+export VERSION_PYTHON="3.8.0"
+export VERSION_PYTHON_LONG="3.8.0b3"
+
+# Attention, il faut aussi positionner ces valeurs dans zshrc_antigen puis relancer installZsh.sh
+# La version doit être une version qui foncionne avec installPythonWebDjangoTemplate.sh
 #
 # A. Installation d'une version specifique de python
 # A.1. Pourquoi une version specifique
@@ -27,10 +29,18 @@ echo "###############################################"
 echo "#"
 echo "# On installe à la fois python3, pip3, powerline et poetry"
 echo "#"
-echo "# Installation de python 3.6.6 par compilation et non pas par paquet debian"
+echo "# Installation de python par compilation et non pas par paquet debian"
 echo "#"
 echo "# https://www.rosehosting.com/blog/how-to-install-python-3-6-4-on-debian-9/"
 echo "# https://unix.stackexchange.com/questions/332641/how-to-install-python-3-6"
+echo "#"
+echo "# -------------------------"
+echo "# Message important : Avant d'executer ce script, merci de verifier le numero de version de python"
+echo "# - editer le fichier installPython.sh pour mettre à jour le numero de version de python"
+echo "# - lancer l'insall de python : ./installPython.sh"
+echo "# - editer le fichier zshrc pour mettre à jour le numero de version de python"
+echo "# - lancer l'insall de zsh : ./installZsh.sh"
+echo "# -------------------------"
 echo "#"
 echo "sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev"
       sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev
@@ -42,8 +52,8 @@ echo "sudo apt-get install -y xz-utils tk-dev libffi-dev liblzma-dev"
       sudo apt-get install -y xz-utils tk-dev libffi-dev liblzma-dev
 echo "#"
 echo "# Installation de python $VERSION_PYTHON"
-echo "wget https://www.python.org/ftp/python/$VERSION_PYTHON/Python-$VERSION_PYTHON.tgz"
-      wget https://www.python.org/ftp/python/$VERSION_PYTHON/Python-$VERSION_PYTHON.tgz
+echo "wget https://www.python.org/ftp/python/$VERSION_PYTHON/Python-$VERSION_PYTHON_LONG.tgz"
+      wget https://www.python.org/ftp/python/$VERSION_PYTHON/Python-$VERSION_PYTHON_LONG.tgz
 echo "tar xvf Python-$VERSION_PYTHON.tgz"
       tar xvf Python-$VERSION_PYTHON.tgz
 echo "cd Python-$VERSION_PYTHON"
@@ -52,8 +62,8 @@ echo "./configure --enable-optimizations --with-ensurepip=install"
       ./configure --enable-optimizations --with-ensurepip=install
 echo "make -j8"
       make -j8
-echo "sudo make altinstall"
-      sudo make altinstall
+echo "sudo -H make altinstall"
+      sudo -H make altinstall
 echo "#"
 echo "sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python$VERSION_PYTHON_COURT 60"
       sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python$VERSION_PYTHON_COURT 60
@@ -65,8 +75,8 @@ echo "cd .."
       cd ..
 echo "sudo rm -rf Python-$VERSION_PYTHON"
       sudo rm -rf Python-$VERSION_PYTHON
-echo "rm -f Python-$VERSION_PYTHON.tgz"
-      rm -f Python-$VERSION_PYTHON.tgz
+echo "rm -f Python-$VERSION_PYTHON_LONG.tgz"
+      rm -f Python-$VERSION_PYTHON_LONG.tgz
 #echo "sudo apt-get install -y python3-pip"
 #      sudo apt-get install -y python3-pip
 #echo "# sudo apt-get install python-pip"
@@ -98,6 +108,8 @@ echo "pip$VERSION_PYTHON_COURT install powerline-status --user"
       pip$VERSION_PYTHON_COURT install powerline-status --user
 echo "pip$VERSION_PYTHON_COURT install powerline-shell --user"
       pip$VERSION_PYTHON_COURT install powerline-shell --user
+echo "# le warning indiquant que le path /home/fred/.local/bin"
+echo "# est traité à la fin du fichier zshrc_antigen"
 echo "pip$VERSION_PYTHON_COURT install --upgrade powerline-status --user"
       pip$VERSION_PYTHON_COURT install --upgrade powerline-status --user
 echo "pip$VERSION_PYTHON_COURT install --upgrade powerline-shell --user"
@@ -207,8 +219,10 @@ echo "#python3 -m pip install pipenv --user"
 echo "#"
 echo "# Installation de poetry"
 echo "# https://poetry.eustace.io/docs/"
-echo "curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python"
-      curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+#echo "curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python"
+#      curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+echo "pip$VERSION_PYTHON_COURT install poetry --user"
+      pip$VERSION_PYTHON_COURT install poetry --user
 echo "#"
 echo "# -------------------------"
 echo "# Variable d'environnement"
@@ -226,4 +240,9 @@ echo "mkdir ~/.zfunc/"
 echo "poetry completions zsh > ~/.zfunc/_poetry"
       poetry completions zsh > ~/.zfunc/_poetry
 echo "#"
+echo "# -------------------------"
+echo "# Suite :"
+echo "# - editer le fichier zshrc pour mettre à jour le numero de version de python"
+echo "# - lancer l'insall de zsh : ./installZsh.sh"
+echo "# -------------------------"
 
