@@ -139,6 +139,10 @@ antigen apply
 # pew peut etre remplacé par pipenv
 #source $(pew shell_config)
 
+# Ajouté suite à l'installation de poetry
+source ~/.poetry/env
+#export PATH="/home/fred/.poetry/bin:$PATH"
+
 # Ajouté suite à l'installation des fontes
 source ~/.local/share/fonts/*.sh
 
@@ -160,3 +164,12 @@ path+=("$HOME/.local/bin")
 # https://wiki.lineageos.org/adb_fastboot_guide.html
 # ajout de /home/fred/adb-fastboot/platform-tools/
 path+=("$HOME/adb-fastboot/platform-tools")
+
+# chemin utilisé par geogig (~/Documents/install/source/geogig/bin/installGeogig.sh)
+# en effet, lors de l'installation de geogig
+# l'installation se fait dans un repertoire peu conventionnel
+# ajout de /home/fred/Documents/install/source/geogig/geogig/bin
+# FIX : Finalement, on utilise une solution plus simple : on recopie les 
+# executables dans le repertoire ./local/bin
+# cf à la fin du script ~/Documents/install/source/geogig/bin/installGeogig.sh
+#path+=("$HOME/Documents/install/source/geogig/geogig/bin")

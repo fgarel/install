@@ -55,107 +55,117 @@ echo "# (commande BundleInstall) prend en compte nos fichiers .local"
 echo ""
 echo "# Fabrication du fichier ~/.vimrc.local"
 echo "#######################################"
-echo '" Sous-fichier de configuration de l apparence (theme)'
-echo '" Sous-fichier de configuration de l apparence (theme)' > ~/.vimrc.local
-echo 'source ~/.vimrc.local.d/theme.vim'
-echo 'source ~/.vimrc.local.d/theme.vim' >> ~/.vimrc.local
-echo '" Sous-fichier de configuration de vos fonctions et mappages personnelles'
-echo '" Sous-fichier de configuration de vos fonctions et mappages personnelles' >> ~/.vimrc.local
-echo 'source ~/.vimrc.local.d/functions.vim'
-echo 'source ~/.vimrc.local.d/functions.vim' >> ~/.vimrc.local
+echo "cp .vimrc.local $HOME/.vimrc.local"
+      cp .vimrc.local $HOME/.vimrc.local
+#echo '" Sous-fichier de configuration de l apparence (theme)'
+#echo '" Sous-fichier de configuration de l apparence (theme)' > ~/.vimrc.local
+#echo 'source ~/.vimrc.local.d/theme.vim'
+#echo 'source ~/.vimrc.local.d/theme.vim' >> ~/.vimrc.local
+#echo '" Sous-fichier de configuration de vos fonctions et mappages personnelles'
+#echo '" Sous-fichier de configuration de vos fonctions et mappages personnelles' >> ~/.vimrc.local
+#echo 'source ~/.vimrc.local.d/functions.vim'
+#echo 'source ~/.vimrc.local.d/functions.vim' >> ~/.vimrc.local
 echo ""
 echo "# Fabrication du sous repertoire ~/.vimrc.local.d"
 echo "mkdir ~/.vimrc.local.d 2> /dev/null"
       mkdir ~/.vimrc.local.d 2> /dev/null
 echo ""
-echo '" Apparence / Theme'
-echo '" Apparence / Theme' > ~/.vimrc.local.d/theme.vim
-echo '" La gestion des couleurs dans un terminal'
-echo '" La gestion des couleurs dans un terminal' >> ~/.vimrc.local.d/theme.vim
-echo '" https://github.com/neovim/neovim/wiki/FAQ#where-should-i-put-my-config-vimrc'
-echo '" https://github.com/neovim/neovim/wiki/FAQ#where-should-i-put-my-config-vimrc' >> ~/.vimrc.local.d/theme.vim
-echo '" https://gist.github.com/XVilka/8346728'
-echo '" https://gist.github.com/XVilka/8346728' >> ~/.vimrc.local.d/theme.vim
-echo '" '
-echo '" ' >> ~/.vimrc.local.d/theme.vim
-echo '" Chargment du theme molokai'
-echo '" Chargment du theme molokai' >> ~/.vimrc.local.d/theme.vim
-echo 'colorscheme molokai'
-echo 'colorscheme molokai' >> ~/.vimrc.local.d/theme.vim
-echo '" Chargment du theme solarized'
-echo '" Chargment du theme solarized' >> ~/.vimrc.local.d/theme.vim
-echo 'colorscheme solarized'
-echo 'colorscheme solarized' >> ~/.vimrc.local.d/theme.vim
-echo '" Chargment du theme seoul256' >> ~/.vimrc.local.d/theme.vim
-echo 'colorscheme seoul256'
-echo 'colorscheme seoul256' >> ~/.vimrc.local.d/theme.vim
-echo 'colorscheme heroku-terminal'
-echo 'colorscheme heroku-terminal' >> ~/.vimrc.local.d/theme.vim
-echo 'colorscheme gruvbox'
-echo 'colorscheme gruvbox' >> ~/.vimrc.local.d/theme.vim
+echo "cp .vimrc.local.d/theme.vim $HOME/.vimrc.local.d/theme.vim"
+      cp .vimrc.local.d/theme.vim $HOME/.vimrc.local.d/theme.vim
+#echo '" Apparence / Theme'
+#echo '" Apparence / Theme' > ~/.vimrc.local.d/theme.vim
+#echo '" La gestion des couleurs dans un terminal'
+#echo '" La gestion des couleurs dans un terminal' >> ~/.vimrc.local.d/theme.vim
+#echo '" https://github.com/neovim/neovim/wiki/FAQ#where-should-i-put-my-config-vimrc'
+#echo '" https://github.com/neovim/neovim/wiki/FAQ#where-should-i-put-my-config-vimrc' >> ~/.vimrc.local.d/theme.vim
+#echo '" https://gist.github.com/XVilka/8346728'
+#echo '" https://gist.github.com/XVilka/8346728' >> ~/.vimrc.local.d/theme.vim
+#echo '" '
+#echo '" ' >> ~/.vimrc.local.d/theme.vim
+#echo '" Chargment du theme molokai'
+#echo '" Chargment du theme molokai' >> ~/.vimrc.local.d/theme.vim
+#echo 'colorscheme molokai'
+#echo 'colorscheme molokai' >> ~/.vimrc.local.d/theme.vim
+#echo '" Chargment du theme solarized'
+#echo '" Chargment du theme solarized' >> ~/.vimrc.local.d/theme.vim
+#echo 'colorscheme solarized'
+#echo 'colorscheme solarized' >> ~/.vimrc.local.d/theme.vim
+#echo '" Chargment du theme seoul256' >> ~/.vimrc.local.d/theme.vim
+#echo 'colorscheme seoul256'
+#echo 'colorscheme seoul256' >> ~/.vimrc.local.d/theme.vim
+#echo 'colorscheme heroku-terminal'
+#echo 'colorscheme heroku-terminal' >> ~/.vimrc.local.d/theme.vim
+#echo 'colorscheme gruvbox'
+#echo 'colorscheme gruvbox' >> ~/.vimrc.local.d/theme.vim
 echo ""
-echo '" Fonctions et mappages'
-echo '" Fonctions et mappages' > ~/.vimrc.local.d/functions.vim
-echo '" Chargement des fonctions'
-echo '" Chargement des fonctions' >> ~/.vimrc.local.d/functions.vim
-echo '" mappage pour plantuml (?)'
-echo '" mappage pour plantuml (?)' >> ~/.vimrc.local.d/functions.vim
-echo 'nnoremap <F5> :w<CR>:make<CR>'
-echo 'nnoremap <F5> :w<CR>:make<CR>' >> ~/.vimrc.local.d/functions.vim
-echo 'inoremap <F5> <Esc>:w<CR>:make<CR>'
-echo 'inoremap <F5> <Esc>:w<CR>:make<CR>' >> ~/.vimrc.local.d/functions.vim
-echo ''
-echo '' >> ~/.vimrc.local.d/functions.vim
-echo '" vu ici : https://stackoverflow.com/questions/12030965/change-the-mapping-of-f5-on-the-basis-of-specific-file-type'
-echo '" vu ici : https://stackoverflow.com/questions/12030965/change-the-mapping-of-f5-on-the-basis-of-specific-file-type' >> ~/.vimrc.local.d/functions.vim
-echo 'autocmd Filetype c,cpp  inoremap <buffer> <F5> <C-o>:update<Bar>execute '!make '.shellescape(expand('%:r'), 1)<CR>'
-echo 'autocmd Filetype c,cpp  inoremap <buffer> <F5> <C-o>:update<Bar>execute '!make '.shellescape(expand('%:r'), 1)<CR>' >> ~/.vimrc.local.d/functions.vim
-echo 'autocmd Filetype python inoremap <buffer> <F5> <C-o>:update<Bar>execute '!python '.shellescape(@%, 1)<CR>'
-echo 'autocmd Filetype python inoremap <buffer> <F5> <C-o>:update<Bar>execute '!python '.shellescape(@%, 1)<CR>' >> ~/.vimrc.local.d/functions.vim
-echo 'autocmd Filetype java   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!javac '.shellescape(@%, 1)<CR>'
-echo 'autocmd Filetype java   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!javac '.shellescape(@%, 1)<CR>' >> ~/.vimrc.local.d/functions.vim
-echo '" autocmd Filetype plantuml   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!plantuml '.shellescape(@%, 1)<CR>"'
-echo '" autocmd Filetype plantuml   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!plantuml '.shellescape(@%, 1)<CR>"' >> ~/.vimrc.local.d/functions.vim
-echo ''
-echo '' >> ~/.vimrc.local.d/functions.vim
+echo "cp .vimrc.local.d/functions.vim $HOME/.vimrc.local.d/functions.vim"
+      cp .vimrc.local.d/functions.vim $HOME/.vimrc.local.d/functions.vim
+#echo '" Fonctions et mappages'
+#echo '" Fonctions et mappages' > ~/.vimrc.local.d/functions.vim
+#echo '" Chargement des fonctions'
+#echo '" Chargement des fonctions' >> ~/.vimrc.local.d/functions.vim
+#echo '" mappage pour plantuml (?)'
+#echo '" mappage pour plantuml (?)' >> ~/.vimrc.local.d/functions.vim
+#echo 'nnoremap <F5> :w<CR>:make<CR>'
+#echo 'nnoremap <F5> :w<CR>:make<CR>' >> ~/.vimrc.local.d/functions.vim
+#echo 'inoremap <F5> <Esc>:w<CR>:make<CR>'
+#echo 'inoremap <F5> <Esc>:w<CR>:make<CR>' >> ~/.vimrc.local.d/functions.vim
+#echo ''
+#echo '' >> ~/.vimrc.local.d/functions.vim
+#echo '" vu ici : https://stackoverflow.com/questions/12030965/change-the-mapping-of-f5-on-the-basis-of-specific-file-type'
+#echo '" vu ici : https://stackoverflow.com/questions/12030965/change-the-mapping-of-f5-on-the-basis-of-specific-file-type' >> ~/.vimrc.local.d/functions.vim
+#echo 'autocmd Filetype c,cpp  inoremap <buffer> <F5> <C-o>:update<Bar>execute '!make '.shellescape(expand('%:r'), 1)<CR>'
+#echo 'autocmd Filetype c,cpp  inoremap <buffer> <F5> <C-o>:update<Bar>execute '!make '.shellescape(expand('%:r'), 1)<CR>' >> ~/.vimrc.local.d/functions.vim
+#echo 'autocmd Filetype python inoremap <buffer> <F5> <C-o>:update<Bar>execute '!python '.shellescape(@%, 1)<CR>'
+#echo 'autocmd Filetype python inoremap <buffer> <F5> <C-o>:update<Bar>execute '!python '.shellescape(@%, 1)<CR>' >> ~/.vimrc.local.d/functions.vim
+#echo 'autocmd Filetype java   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!javac '.shellescape(@%, 1)<CR>'
+#echo 'autocmd Filetype java   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!javac '.shellescape(@%, 1)<CR>' >> ~/.vimrc.local.d/functions.vim
+#echo '" autocmd Filetype plantuml   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!plantuml '.shellescape(@%, 1)<CR>"'
+#echo '" autocmd Filetype plantuml   inoremap <buffer> <F5> <C-o>:update<Bar>execute '!plantuml '.shellescape(@%, 1)<CR>"' >> ~/.vimrc.local.d/functions.vim
+#echo ''
+#echo '' >> ~/.vimrc.local.d/functions.vim
 echo ""
 echo "# Fabrication du fichier ~/.vimrc.before.local"
 echo "##############################################"
-echo '" Les différents plugins/extensions qui améliorent vim sont tres nombreux'
-echo '" Les différents plugins/extensions qui améliorent vim sont tres nombreux' > ~/.vimrc.before.local
-echo '" Et ils ont été regroupés en famille'
-echo '" Et ils ont été regroupés en famille' >> ~/.vimrc.before.local
-echo '" Une bonne base d extension quel que soit votre langage de programmation :'
-echo '" Une bonne base d extension quel que soit votre langage de programmation :' >> ~/.vimrc.before.local
-echo "let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'python', 'javascript', 'html', 'php', 'misc']"
-echo "let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'python', 'javascript', 'html', 'php', 'misc']" >> ~/.vimrc.before.local
-echo "let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'python', 'javascript', 'php', 'misc']"
-echo "let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'python', 'javascript', 'php', 'misc']" >> ~/.vimrc.before.local
+echo "cp .vimrc.before.local $HOME/.vimrc.before.local"
+      cp .vimrc.before.local $HOME/.vimrc.before.local
+#echo '" Les différents plugins/extensions qui améliorent vim sont tres nombreux'
+#echo '" Les différents plugins/extensions qui améliorent vim sont tres nombreux' > ~/.vimrc.before.local
+#echo '" Et ils ont été regroupés en famille'
+#echo '" Et ils ont été regroupés en famille' >> ~/.vimrc.before.local
+#echo '" Une bonne base d extension quel que soit votre langage de programmation :'
+#echo '" Une bonne base d extension quel que soit votre langage de programmation :' >> ~/.vimrc.before.local
+#echo "let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'python', 'javascript', 'html', 'php', 'misc']"
+#echo "let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'python', 'javascript', 'html', 'php', 'misc']" >> ~/.vimrc.before.local
+#echo "let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'python', 'javascript', 'php', 'misc']"
+#echo "let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'python', 'javascript', 'php', 'misc']" >> ~/.vimrc.before.local
 echo ""
 echo "# Fabrication du fichier ~/.vimrc.bundles.local"
 echo "###############################################"
-echo '" Ajout local'
-echo '" Ajout local' > ~/.vimrc.bundles.local
-echo "\" Des Bundles supplémentaires :"
-echo "\" Des Bundles supplémentaires :" > ~/.vimrc.bundles.local
-echo "Bundle 'ZoomWin'"
-echo "Bundle 'ZoomWin'" >> ~/.vimrc.bundles.local
-echo "\"Bundle 'spf13/vim-colors'"
-echo "\"Bundle 'spf13/vim-colors'" >> ~/.vimrc.bundles.local
-echo "Bundle 'ajashton/cascadenik-vim'"
-echo "Bundle 'ajashton/cascadenik-vim'" >> ~/.vimrc.bundles.local
-echo "\"Bundle 'scrooloose/nerdcommenter'"
-echo "\"Bundle 'scrooloose/nerdcommenter'" >> ~/.vimrc.bundles.local
-echo "Bundle 'vimpager'"
-echo "Bundle 'vimpager'" >> ~/.vimrc.bundles.local
-echo "Bundle 'morhetz/gruvbox'"
-echo "Bundle 'morhetz/gruvbox'" >> ~/.vimrc.bundles.local
-echo "\"Bundle 'noahfrederick/vim-neovim-defaults'"
-echo "\"Bundle 'noahfrederick/vim-neovim-defaults'" >> ~/.vimrc.bundles.local
-echo "Bundle 'aklt/plantuml-syntax'"
-echo "Bundle 'aklt/plantuml-syntax'" >> ~/.vimrc.bundles.local
-echo "Bundle 'lbrayner/vim-rzip'"
-echo "Bundle 'lbrayner/vim-rzip'" >> ~/.vimrc.bundles.local
+echo "cp .vimrc.bundles.local $HOME/.vimrc.bundles.local"
+      cp .vimrc.bundles.local $HOME/.vimrc.bundles.local
+#echo '" Ajout local'
+#echo '" Ajout local' > ~/.vimrc.bundles.local
+#echo "\" Des Bundles supplémentaires :"
+#echo "\" Des Bundles supplémentaires :" > ~/.vimrc.bundles.local
+#echo "Bundle 'ZoomWin'"
+#echo "Bundle 'ZoomWin'" >> ~/.vimrc.bundles.local
+#echo "\"Bundle 'spf13/vim-colors'"
+#echo "\"Bundle 'spf13/vim-colors'" >> ~/.vimrc.bundles.local
+#echo "Bundle 'ajashton/cascadenik-vim'"
+#echo "Bundle 'ajashton/cascadenik-vim'" >> ~/.vimrc.bundles.local
+#echo "\"Bundle 'scrooloose/nerdcommenter'"
+#echo "\"Bundle 'scrooloose/nerdcommenter'" >> ~/.vimrc.bundles.local
+#echo "Bundle 'vimpager'"
+#echo "Bundle 'vimpager'" >> ~/.vimrc.bundles.local
+#echo "Bundle 'morhetz/gruvbox'"
+#echo "Bundle 'morhetz/gruvbox'" >> ~/.vimrc.bundles.local
+#echo "\"Bundle 'noahfrederick/vim-neovim-defaults'"
+#echo "\"Bundle 'noahfrederick/vim-neovim-defaults'" >> ~/.vimrc.bundles.local
+#echo "Bundle 'aklt/plantuml-syntax'"
+#echo "Bundle 'aklt/plantuml-syntax'" >> ~/.vimrc.bundles.local
+#echo "Bundle 'lbrayner/vim-rzip'"
+#echo "Bundle 'lbrayner/vim-rzip'" >> ~/.vimrc.bundles.local
 echo ""
 echo ""
 echo "# Installation ou mise à jour de spf13 ?"

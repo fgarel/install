@@ -2,8 +2,17 @@
 
 # ubuntu
 export VERSION_POSTGRESQL_OLD="10"
+export VERSION_POSTGRESQL_OLD="11"
+export VERSION_POSTGRESQL_OLD="12"
+#export VERSION_POSTGRESQL_NEW="11"
+export VERSION_POSTGRESQL_NEW="12"
 export VERSION_POSTGRESQL_NEW="11"
+
 export VERSION_POSTGIS_OLD="2.4"
+export VERSION_POSTGIS_OLD="2.5"
+export VERSION_POSTGIS_OLD="3"
+#export VERSION_POSTGIS_NEW="2.5"
+export VERSION_POSTGIS_NEW="3"
 export VERSION_POSTGIS_NEW="2.5"
 
 # debian
@@ -40,8 +49,8 @@ echo "# 0. Nouveau depot"
 echo "# --------------------------------------------"
 echo "#"
 echo "# Nouveau depot"
-echo "sudo cp ./apt/sources.list.d/03_postgresql.list /etc/apt/sources.list.d/03_postgresql.list"
-      sudo cp ./apt/sources.list.d/03_postgresql.list /etc/apt/sources.list.d/03_postgresql.list
+echo "sudo cp -f ./apt/sources.list.d/03_postgresql.list /etc/apt/sources.list.d/03_postgresql.list"
+      sudo cp -f ./apt/sources.list.d/03_postgresql.list /etc/apt/sources.list.d/03_postgresql.list
 echo "#"
 echo "wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -"
       wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
@@ -51,8 +60,8 @@ echo "sudo aptitude update"
 echo "sudo apt-get update"
       sudo apt-get update
 echo "#"
-echo "sudo cp ./apt/preferences.d/03_postgresql.pref /etc/apt/preferences.d/03_postgresql.pref"
-      sudo cp ./apt/preferences.d/03_postgresql.pref /etc/apt/preferences.d/03_postgresql.pref
+echo "sudo cp -f ./apt/preferences.d/03_postgresql.pref /etc/apt/preferences.d/03_postgresql.pref"
+      sudo cp -f ./apt/preferences.d/03_postgresql.pref /etc/apt/preferences.d/03_postgresql.pref
 echo "#"
 echo "#"
 echo "# 1. Installation des paquets postgresql et postgis"

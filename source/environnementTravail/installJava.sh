@@ -1,21 +1,22 @@
 #!/bin/sh
 
-# Attention : geoserver ne fonctionne qu'avec Java 8
+# Attention : geoserver ne fonctionne qu'avec Java 8(!) -> 11 (en test?)
 # http://docs.geoserver.org/latest/en/user/production/java.html
 #
 # ubuntu
-export JAVA_VERSION_KO_1='11'
-export JAVA_VERSION_KO_2='10'
-export JAVA_VERSION_KO_3='9'
-export JAVA_VERSION_OK='8'
-export TOMCAT_VERSION='8'
+export JAVA_VERSION_KO_1='13'
+export JAVA_VERSION_KO_2='12'
+export JAVA_VERSION_KO_3='8'
+export JAVA_VERSION_OK='11'
+export TOMCAT_VERSION_KO_1='8'
+export TOMCAT_VERSION_OK='9'
 
 # debian
-export JAVA_VERSION_KO_1='11'
-export JAVA_VERSION_KO_2='10'
-export JAVA_VERSION_KO_3='9'
-export JAVA_VERSION_OK='8'
-export TOMCAT_VERSION='8'
+#export JAVA_VERSION_KO_1='11'
+#export JAVA_VERSION_KO_2='10'
+#export JAVA_VERSION_KO_3='9'
+#export JAVA_VERSION_OK='8'
+#export TOMCAT_VERSION='8'
 
 
 # installation de java
@@ -25,10 +26,10 @@ echo "# Installation de java version openjdk $JAVA_VERSION_OK"
 echo "###############################################"
 echo "#"
 echo "# Installation de java (jre)"
-echo "sudo apt-get remove -y default-jre"
-      sudo apt-get remove -y default-jre
-echo "sudo apt-get remove -y default-jre-headless"
-      sudo apt-get remove -y default-jre-headless
+#echo "sudo apt-get remove -y default-jre"
+#      sudo apt-get remove -y default-jre
+#echo "sudo apt-get remove -y default-jre-headless"
+#      sudo apt-get remove -y default-jre-headless
 echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre"
       sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre
 echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre"
@@ -58,10 +59,10 @@ echo "sudo apt-get install -y openjdk-$JAVA_VERSION_OK-jdk"
 echo "sudo apt-get install -y maven"
       sudo apt-get install -y maven
 echo "#"
-echo "sudo apt-get remove -y default-jre"
-      sudo apt-get remove -y default-jre
-echo "sudo apt-get remove -y default-jre-headless"
-      sudo apt-get remove -y default-jre-headless
+#echo "sudo apt-get remove -y default-jre"
+#      sudo apt-get remove -y default-jre
+#echo "sudo apt-get remove -y default-jre-headless"
+#      sudo apt-get remove -y default-jre-headless
 echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre"
       sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_1-jre
 echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_2-jre"
@@ -89,7 +90,7 @@ echo "# -------------------------------"
 echo "#"
 echo "#"
 echo "# Le problème de l'installation de openjdk, c'est que l'on a la version 7"
-echo "# et que les derniers programmes sont compilés avec la verison 8"
+echo "# et que les derniers programmes sont compilés avec la version 8"
 echo "# Par exemple, quand on cherche à executer geogig, on optient l'erreur suivante"
 echo "# Unsupported major.minor version 52.0"
 echo "# la doc sur cette erreur est ici :"
@@ -148,34 +149,44 @@ echo "source /etc/environment"
 echo 'echo $JAVA_HOME'
 echo "# -------------------------------"
 echo "#"
-echo "# Installation de Tomcat $TOMCAT_VERSION"
+echo "# #######################"
+echo "# Installation de Tomcat $TOMCAT_VERSION_OK"
+echo "# ##########################"
 echo "#"
+
+echo "sudo apt-get remove -y tomcat$TOMCAT_VERSION_KO_1"
+      sudo apt-get remove -y tomcat$TOMCAT_VERSION_KO_1
+echo "sudo apt-get remove -y tomcat$TOMCAT_VERSION_KO_1-admin"
+      sudo apt-get remove -y tomcat$TOMCAT_VERSION_KO_1-admin
+echo "sudo apt-get remove -y tomcat$TOMCAT_VERSION_KO_1-user"
+      sudo apt-get remove -y tomcat$TOMCAT_VERSION_KO_1-user
+
 echo "# http://docs.geoserver.org/latest/en/user/installation/war.html"
 echo "#"
-echo "sudo aptitude install tomcat$TOMCAT_VERSION"
-      sudo aptitude install tomcat$TOMCAT_VERSION
-echo "sudo apt-get install tomcat$TOMCAT_VERSION"
-      sudo apt-get install tomcat$TOMCAT_VERSION
+echo "sudo aptitude install -y tomcat$TOMCAT_VERSION_OK"
+      sudo aptitude install -y tomcat$TOMCAT_VERSION_OK
+echo "sudo apt-get install -y tomcat$TOMCAT_VERSION_OK"
+      sudo apt-get install -y tomcat$TOMCAT_VERSION_OK
 echo "#"
-echo "sudo aptitude install tomcat$TOMCAT_VERSION-admin"
-      sudo aptitude install tomcat$TOMCAT_VERSION-admin
-echo "sudo apt-get install tomcat$TOMCAT_VERSION-admin"
-      sudo apt-get install tomcat$TOMCAT_VERSION-admin
+echo "sudo aptitude install -y tomcat$TOMCAT_VERSION_OK-admin"
+      sudo aptitude install -y tomcat$TOMCAT_VERSION_OK-admin
+echo "sudo apt-get install -y tomcat$TOMCAT_VERSION_OK-admin"
+      sudo apt-get install -y tomcat$TOMCAT_VERSION_OK-admin
 echo "#"
-echo "sudo aptitude install tomcat$TOMCAT_VERSION-user"
-      sudo aptitude install tomcat$TOMCAT_VERSION-user
-echo "sudo apt-get install tomcat$TOMCAT_VERSION-user"
-      sudo apt-get install tomcat$TOMCAT_VERSION-user
+echo "sudo aptitude install -y tomcat$TOMCAT_VERSION_OK-user"
+      sudo aptitude install -y tomcat$TOMCAT_VERSION_OK-user
+echo "sudo apt-get install -y tomcat$TOMCAT_VERSION_OK-user"
+      sudo apt-get install -y tomcat$TOMCAT_VERSION_OK-user
 echo "#"
-echo "#sudo aptitude install tomcat$TOMCAT_VERSION-examples"
-      #sudo aptitude install tomcat$TOMCAT_VERSION-examples
-echo "#sudo apt-get install tomcat$TOMCAT_VERSION-examples"
-      #sudo apt-get install tomcat$TOMCAT_VERSION-examples
+echo "sudo aptitude install -y tomcat$TOMCAT_VERSION_OK-examples"
+      sudo aptitude install -y tomcat$TOMCAT_VERSION_OK-examples
+echo "sudo apt-get install -y tomcat$TOMCAT_VERSION_OK-examples"
+      sudo apt-get install -y tomcat$TOMCAT_VERSION_OK-examples
 echo "#"
-echo "#sudo aptitude install tomcat$TOMCAT_VERSION-docs"
-      #sudo aptitude install tomcat$TOMCAT_VERSION-docs
-echo "#sudo apt-get install tomcat$TOMCAT_VERSION-docs"
-      #sudo apt-get install tomcat$TOMCAT_VERSION-docs
+echo "sudo aptitude install -y tomcat$TOMCAT_VERSION_OK-docs"
+      sudo aptitude install -y tomcat$TOMCAT_VERSION_OK-docs
+echo "sudo apt-get install -y tomcat$TOMCAT_VERSION_OK-docs"
+      sudo apt-get install -y tomcat$TOMCAT_VERSION_OK-docs
 echo "#"
 echo "# -----------------------------------------------"
 echo "# Ajout des roles admin-gui et manager-gui"
@@ -184,7 +195,7 @@ echo "# Attention il faut etre super-utilisateur pour pouvoir modifier"
 echo "# ce fichier de configuration"
 echo "#"
 echo "# sudo su"
-echo "# vi /var/lib/tomcat$TOMCAT_VERSION/conf/tomcat-users.xml"
+echo "# vi /var/lib/tomcat$TOMCAT_VERSION_OK/conf/tomcat-users.xml"
 echo "#"
 echo "<tomcat-users>"
 echo '  <role rolename="admin-gui"/>'
@@ -197,6 +208,12 @@ echo '  <user username="admin" password="secret" roles="admin-script,manager-scr
 echo '  <user username="geoserver" password="geoserver" roles="profil-01"/>'
 echo "</tomcat-users>"
 echo "#"
+echo "sudo chown root:root tomcat-users.xml"
+      sudo chown root:root tomcat-users.xml
+echo "sudo cp -f tomcat-users.xml /var/lib/tomcat$TOMCAT_VERSION_OK/conf/tomcat-users.xml"
+      sudo cp -f tomcat-users.xml /var/lib/tomcat$TOMCAT_VERSION_OK/conf/tomcat-users.xml
+echo "sudo chown fred:fred tomcat-users.xml"
+      sudo chown fred:fred tomcat-users.xml
 echo "# -----------------------------------------------"
 echo "# Autorisation des connexions distantes"
 echo "#"
@@ -207,7 +224,7 @@ echo "# la doc est ici : "
 echo "# https://www.digitalocean.com/community/questions/how-to-access-tomcat-8-admin-gui-from-different-host"
 echo "#"
 echo "# sudo su"
-echo "# vi /usr/share/tomcat$TOMCAT_VERSION-admin/manager/META-INF/context.xml"
+echo "# vi /usr/share/tomcat$TOMCAT_VERSION_OK-admin/manager/META-INF/context.xml"
 echo "#"
 echo "# il faut commenter les deux lignes centrales"
 echo ""
@@ -216,9 +233,17 @@ echo '  <!--<Valve className="org.apache.catalina.valves.RemoteAddrValve"'
 echo '         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />-->'
 echo "</Context>"
 echo "#"
+echo "sudo chown root:root context.xml"
+      sudo chown root:root context.xml
+echo "sudo cp -f context.xml /usr/share/tomcat$TOMCAT_VERSION_OK-admin/manager/META-INF/context.xml"
+      sudo cp -f context.xml /usr/share/tomcat$TOMCAT_VERSION_OK-admin/manager/META-INF/context.xml
+echo "sudo chown fred:fred context.xml"
+      sudo chown fred:fred context.xml
 echo "# -----------------------------------------------"
 echo "#"
-echo "# sudo service tomcat$TOMCAT_VERSION restart"
+echo "# sudo service tomcat$TOMCAT_VERSION_OK restart"
+echo "sudo service tomcat$TOMCAT_VERSION_OK restart"
+      sudo service tomcat$TOMCAT_VERSION_OK restart
 echo "#"
 
 echo ""

@@ -21,8 +21,8 @@ echo "#"
 echo "sudo apt-get install -y apt-file"
       sudo apt-get install -y apt-file
 echo "#"
-echo "apt-file update"
-      apt-file update
+echo "sudo apt-file update"
+      sudo apt-file update
 echo "#"
 echo "sudo apt-get install -y mlocate"
       sudo apt-get install -y mlocate

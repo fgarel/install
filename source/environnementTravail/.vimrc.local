@@ -1,0 +1,4 @@
+" Sous-fichier de configuration de l apparence (theme)
+source ~/.vimrc.local.d/theme.vim
+" Sous-fichier de configuration de vos fonctions et mappages personnelles
+source ~/.vimrc.local.d/functions.vim
