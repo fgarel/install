@@ -456,7 +456,7 @@ class GenerateurCaseFolio(object):
         DBPORT_INDIVIDUEL={dbport}
         DBNAME_INDIVIDUEL=geogig_individuel
         DBSCHE_INDIVIDUEL=pcrs
-        DBREPO_INDIVIDUEL=case
+        DBREPO_INDIVIDUEL="case"
         DBUSER_INDIVIDUEL={dbuser}
         DBPASS_INDIVIDUEL={dbpass}
 

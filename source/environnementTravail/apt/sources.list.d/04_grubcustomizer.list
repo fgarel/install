@@ -1,5 +1,8 @@
 ## Cosmic grubcustomizer : 0404
-deb http://ppa.launchpad.net/danielrichter2007/grub-customizer/ubuntu cosmic main #040401 - cosmic - grub-customizer
+# deb http://ppa.launchpad.net/danielrichter2007/grub-customizer/ubuntu cosmic main #040401 - cosmic - grub-customizer
 
 ## Disco grubcustomizer : 0504
-deb http://ppa.launchpad.net/danielrichter2007/grub-customizer/ubuntu disco main #050401 - disco - grub-customizer
+# deb http://ppa.launchpad.net/danielrichter2007/grub-customizer/ubuntu disco main #050401 - disco - grub-customizer
+
+## Eoan grubcustomizer : 0604
+# deb http://ppa.launchpad.net/danielrichter2007/grub-customizer/ubuntu eoan main #060401 - eoan - grub-customizer

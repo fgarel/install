@@ -1,0 +1,10 @@
+" Des Bundles supplémentaires :
+Bundle 'ZoomWin'
+"Bundle 'spf13/vim-colors'
+Bundle 'ajashton/cascadenik-vim'
+"Bundle 'scrooloose/nerdcommenter'
+Bundle 'vimpager'
+Bundle 'morhetz/gruvbox'
+"Bundle 'noahfrederick/vim-neovim-defaults'
+Bundle 'aklt/plantuml-syntax'
+Bundle 'lbrayner/vim-rzip'

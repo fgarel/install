@@ -21,6 +21,14 @@
 # deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ cosmic-pgdg-testing main #040302 - cosmic postgresql - paquet "version beta" des developpeurs postgresql - https://wiki.postgresql.org/wiki/Apt/FAQ#I_want_to_try_the_beta_version_of_the_next_PostgreSQL_release
 
 ## Disco Postgresql : 0503
-deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ disco-pgdg main #050301 - disco postgresql - paquet des developpeurs postgresql - https://www.postgresql.org/download/linux/debian/
-deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ disco-pgdg-testing main #050302 - disco postgresql - paquet "version beta" des developpeurs postgresql - https://wiki.postgresql.org/wiki/Apt/FAQ#I_want_to_try_the_beta_version_of_the_next_PostgreSQL_release
+# deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ disco-pgdg main #050301 - disco postgresql - paquet des developpeurs postgresql - https://www.postgresql.org/download/linux/debian/
+# deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ disco-pgdg-testing main #050302 - disco postgresql - paquet "version beta" des developpeurs postgresql - https://wiki.postgresql.org/wiki/Apt/FAQ#I_want_to_try_the_beta_version_of_the_next_PostgreSQL_release
+# deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ disco-pgdg main 12 #050303 - disco postgresql - paquet "version beta" des developpeurs postgresql - https://wiki.postgresql.org/wiki/Apt/FAQ#I_want_to_try_the_beta_version_of_the_next_PostgreSQL_release 
+# deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ disco-pgdg-testing main 12 #050304 - disco postgresql - paquet "version beta" des developpeurs postgresql - https://wiki.postgresql.org/wiki/Apt/FAQ#I_want_to_try_the_beta_version_of_the_next_PostgreSQL_release
+
+## Eoan Postgresql : 0603
+deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ eoan-pgdg main #060301 - eoan postgresql - paquet des developpeurs postgresql - https://www.postgresql.org/download/linux/debian/
+# deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ eoan-pgdg-testing main #060302 - eoan postgresql - paquet "version beta" des developpeurs postgresql - https://wiki.postgresql.org/wiki/Apt/FAQ#I_want_to_try_the_beta_version_of_the_next_PostgreSQL_release
+# deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ eoan-pgdg main 12 #060303 - eoan postgresql - paquet "version beta" des developpeurs postgresql - https://wiki.postgresql.org/wiki/Apt/FAQ#I_want_to_try_the_beta_version_of_the_next_PostgreSQL_release 
+# deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ eoan-pgdg-testing main 12 #060304 - eoan postgresql - paquet "version beta" des developpeurs postgresql - https://wiki.postgresql.org/wiki/Apt/FAQ#I_want_to_try_the_beta_version_of_the_next_PostgreSQL_release 
 

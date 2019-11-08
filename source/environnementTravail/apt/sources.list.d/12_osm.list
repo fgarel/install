@@ -4,5 +4,9 @@
 # deb http://ppa.launchpad.net/osmjapan/ppa/ubuntu cosmic main #041202 - cosmic osmjapan - main
 
 ## Disco osm : 0512
-#deb http://ppa.launchpad.net/kakrueger/openstreetmap/ubuntu disco main #051201 - disco osmkakrueger - main
-#deb http://ppa.launchpad.net/osmjapan/ppa/ubuntu disco main #051202 - disco osmjapan - main
+# deb http://ppa.launchpad.net/kakrueger/openstreetmap/ubuntu disco main #051201 - disco osmkakrueger - main
+# deb http://ppa.launchpad.net/osmjapan/ppa/ubuntu disco main #051202 - disco osmjapan - main
+
+## Eoan osm : 0612
+# deb http://ppa.launchpad.net/kakrueger/openstreetmap/ubuntu eoan main #061201 - eoan osmkakrueger - main
+# deb http://ppa.launchpad.net/osmjapan/ppa/ubuntu eoan main #061202 - eoan osmjapan - main

@@ -24,7 +24,13 @@
 
 
 ## Disco Teamviewer : 0513
-deb http://linux.teamviewer.com/deb stable main #051301 - disco teamviewer stable - main
+# deb http://linux.teamviewer.com/deb stable main #051301 - disco teamviewer stable - main
 # deb http://linux.teamviewer.com/deb preview main #051302 - disco teamviewer preview - main
 # deb http://linux.teamviewer.com/deb stable tv14 #051303 - disco teamviewer stable - tv14
 # deb http://linux.teamviewer.com/deb preview tv14 #051304 - disco teamviewer preview - tv14
+
+## Eoan Teamviewer : 0613
+# deb http://linux.teamviewer.com/deb stable main #061301 - eoan teamviewer stable - main
+# deb http://linux.teamviewer.com/deb preview main #061302 - eoan teamviewer preview - main
+# deb http://linux.teamviewer.com/deb stable tv14 #061303 - eoan teamviewer stable - tv14
+# deb http://linux.teamviewer.com/deb preview tv14 #061304 - eoan teamviewer preview - tv14
