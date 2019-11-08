@@ -26,7 +26,7 @@ ssh -f \
     -N \
     -X \
     -L 43290:dsibdd09.mairie.fr:5432 \
-    fred@vlr6180y
+    fred@vlr6180y.mairie.fr
 
 echo "# "
 echo "# Maintenant, à partir de VLR6180Y, il est possible de se connecter vers"
@@ -45,7 +45,7 @@ ssh -f \
     -N \
     -X \
     -L 43291:172.17.150.6:5432 \
-    fred@vlr6180y
+    fred@vlr6180y.mairie.fr
 
 echo "# "
 echo "# Maintenant, à partir de VLR6180Y, il est possible de se connecter vers"

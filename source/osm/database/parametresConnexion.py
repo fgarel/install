@@ -50,7 +50,7 @@ class ParametresConnexion(object):
                                    'www-data': 'www-data'}
         self.dict_dbuser_listdroits = {'fred':       ['SUPERUSER', 'NOCREATEDB',
                                                       'NOCREATEROLE', 'NOREPLICATION'],
-                                       'osmuser':    ['NOSUPERUSER', 'NOCREATEDB',
+                                       'osmuser':    ['SUPERUSER', 'NOCREATEDB',
                                                       'NOCREATEROLE', 'NOREPLICATION'],
                                        'mapnikuser': ['NOSUPERUSER', 'NOCREATEDB',
                                                       'NOCREATEROLE', 'NOREPLICATION'],

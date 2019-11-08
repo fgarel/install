@@ -20,6 +20,20 @@ echo './installOSMCartoCSS1.sh'
       ./installOSMCartoCSS1.sh
 echo '#./installPostgresqlOsm.sh'
       #./installPostgresqlOsm.sh
+echo "sudo service postgresql status"
+      sudo service postgresql status
+echo "sudo service postgresql stop"
+      sudo service postgresql stop
+echo "sudo service postgresql status"
+      sudo service postgresql status
+echo "sudo service postgresql start"
+      sudo service postgresql start
+echo "sudo service postgresql status"
+      sudo service postgresql status
+echo "#####"
+echo "#sudo -u postgres psql -c 'drop database osm;'"
+      #sudo -u postgres psql -c 'drop database osm;'
+echo "#####"
 echo './01_base_create.py'
       ./01_base_create.py
 echo './osmCreateRepository.sh'

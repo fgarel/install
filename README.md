@@ -1,5 +1,7 @@
 # Projet Install
-Sur une machine ou une distribution Debian Strech vient d'etre installée, nous allons jouer un peu....
+Sur une machine, avec une distribution Debian Buster toute fraiche, c'est à dire qui vient d'etre installée,
+ou avec une distribution Ubuntu Eoan,
+nous allons jouer un peu....
 Après avoir cloné ce dépot, il sera alors très simple d'utiliser des scripts qui automatisent différentes installations.
 
 ## En root
@@ -19,6 +21,7 @@ adduser fred sudo
 
 ### Installation de git
 ```
+sudo apt-get install git
 sudo aptitude install git
 ```
 

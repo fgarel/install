@@ -151,12 +151,22 @@ cela se fait directement sous pgadmin
   car il ne faut pas rejouer entièrement le fichier espu_voirieAdministratif_projet_create.sql,
   sous peine d'écraser nos saisies préalables)
 
+on se connecte au serveur vlr6180y_espu_fred
+dans la base espu, dans le schema voirie_administratif, dans les vues,
+clic droit sur parcelle_vue, scripts / CREATE Script , modif du mot de passe et re-execution
+clic droit sur numvoie_vue, scripts / CREATE Script modif du motDePasse et re-execution
+
+
 ### 2.5. Qgis
 
 #### Modification des fichiers qgz
 ```
-unzip ~/Documents/technic/source/voirie/data/numerotations_linux.qgz \
-      ~/Documents/technic/source/voirie/data/numerotations_linux.qgs
+#unzip ~/Documents/technic/source/voirie/data/numerotations_linux.qgz \
+#      ~/Documents/technic/source/voirie/data/numerotations_linux.qgs
+```
+
+```
+unzip ~/Documents/technic/source/voirie/data/numerotations_linux.qgz -d ~/Documents/technic/source/voirie/data/
 vi ~/Documents/technic/source/voirie/data/numerotations_linux.qgs
 ```
 

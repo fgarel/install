@@ -48,7 +48,7 @@ ssh -f \
     -N \
     -X \
     -R 33292:localhost:23292 \
-    fred@vlr6180y
+    fred@vlr6180y.mairie.fr
 
 echo "# "
 echo "# Maintenant, à partir de vlr6180y, il est possible de se connecter vers"
@@ -64,7 +64,7 @@ ssh -f \
     -N \
     -X \
     -R 33282:localhost:23282 \
-    fred@vlr6180x
+    fred@vlr6180x.mairie.fr
 
 echo "# "
 echo "# Maintenant, à partir de vlr6180x, il est possible de se connecter vers"

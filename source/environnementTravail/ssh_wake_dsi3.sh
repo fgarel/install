@@ -43,7 +43,7 @@ echo "# "
 #
 #
 #until sudo ping -c1 dsipgsql9test &>/dev/null; do :; done
-until ping -c1 dsiappli58 &>/dev/null; do :; done
+until ping -c1 dsiappli58.mairie.fr &>/dev/null; do :; done
 
 
 #
@@ -52,7 +52,7 @@ until ping -c1 dsiappli58 &>/dev/null; do :; done
 # vers
 # /root/.tmp
 # de la machine distante dsipgsql9test
-scp /home/fred/Documents/install/source/environnementTravail/ssh_open_host_dsi3.sh root@dsiappli58:.tmp
+scp /home/fred/Documents/install/source/environnementTravail/ssh_open_host_dsi3.sh root@dsiappli58.mairie.fr:.tmp
 
 
 #
@@ -64,5 +64,5 @@ echo "# "
 echo "# Sur la machine distante, on lance son ouverture (demi-tunnel)"
 echo "# "
 #
-#ssh -t dsiappli58 ./ssh_open_host_dsi3.sh
-ssh -t root@dsiappli58 ./.tmp
+#ssh -t dsiappli58.mairie.fr ./ssh_open_host_dsi3.sh
+ssh -t root@dsiappli58.mairie.fr ./.tmp
