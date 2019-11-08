@@ -3,4 +3,7 @@
 # deb http://ppa.launchpad.net/gezakovacs/ppa/ubuntu cosmic main #041101 - cosmic unetbootin - main
 
 ## Disco unetbootin : 0511
-#deb http://ppa.launchpad.net/gezakovacs/ppa/ubuntu disco main #051101 - disco unetbootin - main
+# deb http://ppa.launchpad.net/gezakovacs/ppa/ubuntu disco main #051101 - disco unetbootin - main
+
+## Eoan unetbootin : 0611
+# deb http://ppa.launchpad.net/gezakovacs/ppa/ubuntu eoan main #061101 - eoan unetbootin - main

@@ -21,9 +21,18 @@
 
         echo "# On transvase du depot vers la base dbworkspace"
         echo "#"
+        echo "# syntaxe geogig 1.x"
         echo "geogig --repo \"$REPO_INDIVIDUEL_ONE\" \ "
         echo "       pg import --host $DBHOST_WORKSPACE_FIN --database $DBNAME_WORKSPACE_FIN --user $DBUSER_WORKSPACE_FIN --password $DBPASS_WORKSPACE_FIN --schema \"$DBSCHE_WORKSPACE_FIN\" --all"
               #geogig --repo $REPO_INDIVIDUEL_ONE \
               #       pg export --host $DBHOST_WORKSPACE --database $DBNAME_WORKSPACE --user $DBUSER_WORKSPACE --password $DBPASS_WORKSPACE --schema "$DBSCHE_WORKSPACE" --all
               geogig --repo $REPO_INDIVIDUEL_ONE \
                      pg import --host $DBHOST_WORKSPACE_FIN --database $DBNAME_WORKSPACE_FIN --user $DBUSER_WORKSPACE_FIN --password $DBPASS_WORKSPACE_FIN --schema "$DBSCHE_WORKSPACE_FIN" --all
+
+        echo "# syntaxe geogig 2.x"
+        #echo "geogig --repo \"$REPO_INDIVIDUEL_ONE\" \ "
+        #echo "       pg --host $DBHOST_WORKSPACE_FIN --database $DBNAME_WORKSPACE_FIN --user $DBUSER_WORKSPACE_FIN --password $DBPASS_WORKSPACE_FIN --schema \"$DBSCHE_WORKSPACE_FIN\" import --all"
+        #      #geogig --repo $REPO_INDIVIDUEL_ONE \
+        #      #       pg export --host $DBHOST_WORKSPACE --database $DBNAME_WORKSPACE --user $DBUSER_WORKSPACE --password $DBPASS_WORKSPACE --schema "$DBSCHE_WORKSPACE" --all
+        #      geogig --repo $REPO_INDIVIDUEL_ONE \
+        #             pg --host $DBHOST_WORKSPACE_FIN --database $DBNAME_WORKSPACE_FIN --user $DBUSER_WORKSPACE_FIN --password $DBPASS_WORKSPACE_FIN --schema "$DBSCHE_WORKSPACE_FIN" import --all

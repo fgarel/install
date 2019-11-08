@@ -3,10 +3,17 @@
 # Attention : geoserver ne fonctionne qu'avec Java 8(!) -> 11 (en test?)
 # http://docs.geoserver.org/latest/en/user/production/java.html
 #
+# Pour ne pas a avoir de problème avec la version de Java,
+# la solution est de prendre la version indiquée quand on prend la
+# version par defaut :
+# apt-cache default-jre => openjdk-11-jre
+#
+# De plus, le fait d'installer le paquet default-jre, cela va
+# nous éviter l'utilisation de la variable JAVA_HOME
 # ubuntu
-export JAVA_VERSION_KO_1='13'
-export JAVA_VERSION_KO_2='12'
-export JAVA_VERSION_KO_3='8'
+export JAVA_VERSION_KO_1='14'
+export JAVA_VERSION_KO_2='13'
+export JAVA_VERSION_KO_3='12'
 export JAVA_VERSION_OK='11'
 export TOMCAT_VERSION_KO_1='8'
 export TOMCAT_VERSION_OK='9'
@@ -78,6 +85,13 @@ echo "sudo apt-get remove -y openjdk-$JAVA_VERSION_KO_3-jre-headless"
 
 echo "#"
 echo "# Declaration de la variable JAVA_HOME"
+echo "#"
+echo "# 1ère façon de faire : default-jre"
+echo "#"
+echo "sudo apt-get install -y default-jre"
+      sudo apt-get install -y default-jre
+echo "#"
+echo "# 2de facon de faire : variable dans /etc/environnement"
 echo "#"
 echo "# http://serverfault.com/questions/143786/how-to-determine-java-home-on-debian-ubuntu"
 echo "# http://stackoverflow.com/questions/84882/sudo-echo-something-etc-privilegedfile-doesnt-work-is-there-an-alterna"

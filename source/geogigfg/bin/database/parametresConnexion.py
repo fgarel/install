@@ -93,9 +93,13 @@ class ParametresConnexion(object):
                                            'geogig_local':      ['adminpack'],
                                            'geogig_individuel': ['adminpack'],
                                            'dbworkspace':       ['adminpack',
-                                                                 'postgis',
-                                                                 'postgis_topology',
                                                                  'fuzzystrmatch',
+                                                                 'postgis',
+                                                                 'postgis_raster',
+                                                                 'postgis_topology',
+                                                                 'postgis_sfcgal',
+                                                                 'address_standardizer',
+                                                                 'postgis_tiger_geocoder',
                                                                  'hstore',
                                                                  'dblink']}
 

@@ -219,10 +219,10 @@ echo "# -- old : pipenv"
 echo "#"
 echo "# Installation de poetry"
 echo "# https://poetry.eustace.io/docs/"
-#echo "curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python"
-#      curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
-echo "pip$VERSION_PYTHON_COURT install poetry --user"
-      pip$VERSION_PYTHON_COURT install poetry --user
+echo "curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python"
+      curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+#echo "pip$VERSION_PYTHON_COURT install poetry --user"
+#      pip$VERSION_PYTHON_COURT install poetry --user
 echo "#"
 echo "# -------------------------"
 echo "# Variable d'environnement"
@@ -233,8 +233,8 @@ echo "# Post installation"
 echo "Updating poetry"
 echo "poetry self:update"
       poetry self:update
-echo "pip$VERSION_PYTHON_COURT install --upgrade poetry --user"
-      pip$VERSION_PYTHON_COURT install --upgrade poetry --user
+#echo "pip$VERSION_PYTHON_COURT install --upgrade poetry --user"
+#      pip$VERSION_PYTHON_COURT install --upgrade poetry --user
 echo "#"
 echo "# Enable tab completion for Bash, Fish, or Zsh"
 echo "# Zsh"

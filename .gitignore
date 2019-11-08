@@ -1,8 +1,10 @@
 build
 source/boost_1_63_0/
 source/dvdrip2/*
+source/environnementTravail/awesome-terminal-fonts
 source/environnementTravail/awesome-terminal-fonts/*
 source/environnementTravail/fantasque_awesome_powerline/*
+source/environnementTravail/fonts-powerline
 source/environnementTravail/fonts-powerline/*
 source/environnementTravail/nerd-fonts/*
 source/environnementTravail/fonts/*
@@ -15,6 +17,7 @@ source/environnementTravail/watchdtdict-emission/document1.pdf
 source/environnementTravail/*.pub
 source/geoserver-2.15.2-war/*
 source/geogig/*
+source/geoserver/*
 source/geoserver-geogig-plugin/*
 source/geoserver-geogig-osm-plugin/*
 source/geogigfg/CDA/*

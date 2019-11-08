@@ -19,10 +19,10 @@ echo "# sudo aptitude install nginx-core"
       # sudo aptitude install nginx-core
 echo "# sudo aptitude install nginx-light"
       # sudo aptitude install nginx-light
-echo "sudo aptitude install nginx-full"
-      sudo aptitude install nginx-full
-echo "sudo apt-get install nginx-full"
-      sudo apt-get install nginx-full
+echo "sudo aptitude install -y nginx-full"
+      sudo aptitude install -y nginx-full
+echo "sudo apt-get install -y nginx-full"
+      sudo apt-get install -y nginx-full
 echo "# sudo service nginx status"
       # sudo service nginx status
 echo "sudo service nginx stop"

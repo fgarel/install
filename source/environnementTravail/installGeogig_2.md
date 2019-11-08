@@ -43,7 +43,7 @@ sudo -u postgres psql -c "ALTER ROLE '$POSTGRESQL_USER' SUPERUSER NOCREATEDB NOC
 
 La création de cette base de données geogig se fait grace au script python
 ```
-~/Documents/install/source/geogig/bin/01_base_create.py
+~/Documents/install/source/geogigfg/bin/01_base_create.py
 ```
 
 Nota :

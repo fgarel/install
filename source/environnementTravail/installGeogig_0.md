@@ -12,13 +12,13 @@ nous allons décrire l'installation des outils et leurs utilisations.
 
 Première partie,
   - installation du serveur geogig,
-  - installation de geoserver,
-  - installation des plugins qgis
+  - installation de geoserver (avec la branche 2.15.x, le war integre le plugin geoserver-geogig)
+  - UPDATE : NON - installation des plugins qgis
 
 Seconde partie,
   - Initialisation de la base pour la gestion du PCRS
   - Initialisation de la base pour la gestion des données voirie
-  - Paramétrage de geoserver
+  - UPDATE : NON - Paramétrage de geoserver
   - Paramétrage d'un serveur web formulaire django
 
 Troisième partie,

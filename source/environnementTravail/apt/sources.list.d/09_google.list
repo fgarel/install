@@ -11,3 +11,7 @@
 ## Disco Google : 0509
 # deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main #050901 - disco chrome stable - main
 # deb [arch=amd64] http://dl.google.com/linux/earth/deb/ stable main #050904 - disco earth stable - main
+
+## Eoan Google : 0609
+# deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main #060901 - eoan chrome stable - main
+# deb [arch=amd64] http://dl.google.com/linux/earth/deb/ stable main #060904 - eoan earth stable - main
