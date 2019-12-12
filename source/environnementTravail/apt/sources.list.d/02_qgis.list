@@ -66,12 +66,12 @@
 # deb https://qgis.org/ubuntugis-nightly cosmic main #040240 - cosmic qgis - Developpement Version - Nightly build avec dépendances
 
 ## Disco Qgis : 0502
-# deb https://qgis.org/debian eoan main #050201 - disco qgis - Latest Release
+# deb https://qgis.org/debian disco main #050201 - disco qgis - Latest Release
 # deb https://qgis.org/ubuntugis disco main #050202 - disco qgis - Latest Release - Version avec dépendances
 # deb https://qgis.org/debian-nightly-release disco main #050203 - disco qgis - Latest Release - Nightly build
 # deb https://qgis.org/ubuntugis-nightly-release disco main #050204 - disco qgis - Latest Release - Nightly build avec dépendances
 # deb https://qgis.org/debian-ltr disco main #050205 - disco qgis - LTR - Release
-# deb https://qgis.org/ubuntugis-ltr cosmic main #050206 - disco qgis - LTR - Version avec dépendances
+# deb https://qgis.org/ubuntugis-ltr disco main #050206 - disco qgis - LTR - Version avec dépendances
 # deb https://qgis.org/debian-nightly-ltr disco main #050207 - disco qgis - LTR - Nightly build
 # deb https://qgis.org/ubuntugis-nightly-ltr disco main #050208 - disco qgis - LTR - Nightly build avec dépendances
 # deb https://qgis.org/debian-nightly disco main #050209 - disco qgis - Developpement Version - Nightly build
@@ -79,14 +79,14 @@
 
 
 ## Eoan Qgis : 0602
-#deb https://qgis.org/debian eoan main #060201 - eoan qgis - Latest Release
-# deb https://qgis.org/ubuntugis disco main #060202 - eoan qgis - Latest Release - Version avec dépendances
-# deb https://qgis.org/debian-nightly-release disco main #060203 - eoan qgis - Latest Release - Nightly build
-# deb https://qgis.org/ubuntugis-nightly-release disco main #060204 - eoan qgis - Latest Release - Nightly build avec dépendances
-# deb https://qgis.org/debian-ltr disco main #060205 - eoan qgis - LTR - Release
-# deb https://qgis.org/ubuntugis-ltr cosmic main #060206 - eoan qgis - LTR - Version avec dépendances
-# deb https://qgis.org/debian-nightly-ltr disco main #060207 - eoan qgis - LTR - Nightly build
-# deb https://qgis.org/ubuntugis-nightly-ltr disco main #060208 - eoan qgis - LTR - Nightly build avec dépendances
-# deb https://qgis.org/debian-nightly disco main #060209 - eoan qgis - Developpement Version - Nightly build
-# deb https://qgis.org/ubuntugis-nightly disco main #060210 - eoan qgis - Developpement Version - Nightly build avec dépendances
+deb https://qgis.org/debian eoan main #060201 - eoan qgis - Latest Release
+# deb https://qgis.org/ubuntugis eoan main #060202 - eoan qgis - Latest Release - Version avec dépendances
+deb https://qgis.org/debian-nightly-release eoan main #060203 - eoan qgis - Latest Release - Nightly build
+# deb https://qgis.org/ubuntugis-nightly-release eoan main #060204 - eoan qgis - Latest Release - Nightly build avec dépendances
+# deb https://qgis.org/debian-ltr eoan main #060205 - eoan qgis - LTR - Release
+# deb https://qgis.org/ubuntugis-ltr eoan main #060206 - eoan qgis - LTR - Version avec dépendances
+# deb https://qgis.org/debian-nightly-ltr eoan main #060207 - eoan qgis - LTR - Nightly build
+# deb https://qgis.org/ubuntugis-nightly-ltr eoan main #060208 - eoan qgis - LTR - Nightly build avec dépendances
+# deb https://qgis.org/debian-nightly eoan main #060209 - eoan qgis - Developpement Version - Nightly build
+# deb https://qgis.org/ubuntugis-nightly eoan main #060210 - eoan qgis - Developpement Version - Nightly build avec dépendances
 

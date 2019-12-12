@@ -54,6 +54,11 @@ Pourquoi ce sous réseau ?
 dsiappli39 est dans le sous-reseau 10.254.140.x
 blade05, pjpb, aul, ...
 
+Pour info, une présentation des outils est donnée ici :
+'''
+https://linuxfrench.wordpress.com/2016/09/15/metasploitable-2-enumeration-reseau-avec-nmap/
+'''
+
 ### 3.1. Zenmap
 Pour parcourir le réseau, nous utiliserons l'outil zenmap
 cible : 10.254.140.0/24
