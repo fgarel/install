@@ -52,9 +52,9 @@
 # deb http://fr.archive.ubuntu.com/ubuntu/ disco-proposed main restricted universe multiverse #050105 - disco-proposed - multiverse main restricted universe
 
 ## Eoan Principal : 0601
-# deb http://fr.archive.ubuntu.com/ubuntu/ eoan main restricted universe multiverse #060101 - eoan - main restricted
-# deb http://fr.archive.ubuntu.com/ubuntu/ eoan-updates main restricted universe multiverse #060102 - eoan-updates - main restricted
-# deb http://fr.archive.ubuntu.com/ubuntu/ eoan-backports main restricted universe multiverse #060103 - eoan-backports - main restricted universe multiverse
-# deb http://security.ubuntu.com/ubuntu eoan-security main restricted universe multiverse #060104 - eoan-security - main restricted
-# deb http://fr.archive.ubuntu.com/ubuntu/ eoan-proposed main restricted universe multiverse #060105 - eoan-proposed - multiverse main restricted universe
+deb http://fr.archive.ubuntu.com/ubuntu/ eoan main restricted universe multiverse #060101 - eoan - main restricted
+deb http://fr.archive.ubuntu.com/ubuntu/ eoan-updates main restricted universe multiverse #060102 - eoan-updates - main restricted
+deb http://fr.archive.ubuntu.com/ubuntu/ eoan-backports main restricted universe multiverse #060103 - eoan-backports - main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu eoan-security main restricted universe multiverse #060104 - eoan-security - main restricted
+deb http://fr.archive.ubuntu.com/ubuntu/ eoan-proposed main restricted universe multiverse #060105 - eoan-proposed - multiverse main restricted universe
 

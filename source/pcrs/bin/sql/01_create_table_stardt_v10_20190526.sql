@@ -69,42 +69,69 @@ DROP TABLE if exists a_stardt."PositionLabel" cascade;
 
 
 -- --- Enumeration 1
-
+-- 3.5.1. Eléments généraux
 DROP TABLE if exists a_stardt."NatureReseauValue" cascade;
 DROP TABLE if exists a_stardt."ClassePrecisionReseau" cascade;
-DROP TABLE if exists a_stardt."LeveTypeValue" cascade;
+DROP TABLE if exists a_stardt."VerticalPositionValue" cascade;
 DROP TABLE if exists a_stardt."ConditionOfFacilityValue" cascade;
+DROP TABLE if exists a_stardt."LeveTypeValue" cascade;
+-- 3.5.2. Eléments linéaires de réseau
 DROP TABLE if exists a_stardt."WarningTypeValue" cascade;
-DROP TABLE if exists a_stardt."UtilityDeliveryTypeValue" cascade;
 DROP TABLE if exists a_stardt."HierarchieValue" cascade;
 DROP TABLE if exists a_stardt."PipeMaterialTypeValue" cascade;
-DROP TABLE if exists a_stardt."TelecomCableTechnoValue" cascade;
-DROP TABLE if exists a_stardt."RegimeValue" cascade;
-DROP TABLE if exists a_stardt."FonctionCableElectriqueValue" cascade;
+DROP TABLE if exists a_stardt."UtilityDeliveryTypeValue" cascade;
 DROP TABLE if exists a_stardt."ClasseTensionValue" cascade;
-DROP TABLE if exists a_stardt."ClasseTemperatureValue" cascade;
+DROP TABLE if exists a_stardt."FonctionCableElectriqueValue" cascade;
+DROP TABLE if exists a_stardt."RegimeValue" cascade
+DROP TABLE if exists a_stardt."TelecomCableTechnoValue" cascade;
 DROP TABLE if exists a_stardt."TypeEcoulementValue" cascade;
-DROP TABLE if exists a_stardt."OilGasChemicalsProductTypeValue" cascade;
-DROP TABLE if exists a_stardt."SewerWaterTypeValue" cascade;
 DROP TABLE if exists a_stardt."WaterTypeValue" cascade;
+DROP TABLE if exists a_stardt."TypeDepartValue" cascade;
+DROP TABLE if exists a_stardt."SewerWaterTypeValue" cascade;
+DROP TABLE if exists a_stardt."ClasseTemperatureValue" cascade;
+DROP TABLE if exists a_stardt."OilGasChemicalsProductTypeValue" cascade;
 DROP TABLE if exists a_stardt."ThermalProductTypeValue" cascade;
-DROP TABLE if exists a_stardt."TypeOuvragePINSValue" cascade;
-DROP TABLE if exists a_stardt."MateriauOuvragePINSValue" cascade;
-DROP TABLE if exists a_stardt."StructureOuvragePISValue" cascade;
-DROP TABLE if exists a_stardt."ProtectionPINSValue" cascade;
+-- 3.5.3. Eléments ponctuels
 DROP TABLE if exists a_stardt."TypeAccessoireValue" cascade;
-DROP TABLE if exists a_stardt."OilGasChemicalAppurtenanceTypeValue" cascade;
+-- Pour les accessoires, il y a plusiseurs listes : une par famille de Reseau
+--   - reseau d'assainissement/pluvial
 DROP TABLE if exists a_stardt."SewerAppurtenanceTypeValue" cascade;
+--   - reseau d'eau Potable
 DROP TABLE if exists a_stardt."WaterAppurtenanceTypeValue" cascade;
-DROP TABLE if exists a_stardt."ThermalAppurtenanceTypeValue" cascade;
-DROP TABLE if exists a_stardt."ElectricityAppurtenanceTypeValue" cascade;
+--   - reseau d'hydrocarbures / produits chimiques
+DROP TABLE if exists a_stardt."OilGasChemicalAppurtenanceTypeValue" cascade;
+--   - reseau de telecoms
 DROP TABLE if exists a_stardt."TelecommunicationsAppurtenanceTypeValue" cascade;
-DROP TABLE if exists a_stardt."TypeInfoSupplemenataireValue" cascade;
-DROP TABLE if exists a_stardt."TypeFichierValue" cascade;
+--   - reseau thermique
+DROP TABLE if exists a_stardt."ThermalAppurtenanceTypeValue" cascade;
+--   - reseau d'electricité
+DROP TABLE if exists a_stardt."ElectricityAppurtenanceTypeValue" cascade;
+-- 3.5.4. Supports du réseau
+-- 3.5.1. Poteau
+-- 3.5.2. Ouvrages de protection Inondation / Submersion
+DROP TABLE if exists a_stardt."MateriauOuvragePINSValue" cascade;
+DROP TABLE if exists a_stardt."ProtectionPINSValue" cascade;
+DROP TABLE if exists a_stardt."StructureOuvragePINSValue" cascade;
+DROP TABLE if exists a_stardt."TypeOuvragePINSValue" cascade;
+-- 3.5.3. Eléments additionnels
+--DROP TABLE if exists a_stardt."TypeInfoSupplemenataireValue" cascade;
 DROP TABLE if exists a_stardt."TypeCoteValue" cascade;
-DROP TABLE if exists a_stardt."AnnotationTypeValue" cascade;
-DROP TABLE if exists a_stardt."PositionLabelValue" cascade;
 DROP TABLE if exists a_stardt."TypeParticulariteValue" cascade;
+--DROP TABLE if exists a_stardt."PositionLabelValue" cascade;
+DROP TABLE if exists a_stardt."TypeFichierValue" cascade;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 -- --- Enumeration 2
 
@@ -140,9 +167,8 @@ DROP TABLE if exists a_stardt."RasterMasqueOpacitePCRS17Relation" CASCADE;
 -- Creation des tables "liste de valeurs / énumérations"
 -- ---------------------------------
 
-
 -- ---------------------------------
--- Classe : NatureReseauValue
+-- Classe : NatureReseauValue (Jaune / liste de code) (pour 3.5.1.1. ReseauUtilite)
 -- ---------------------------------
 
 -- Table: NatureReseauValue
@@ -159,7 +185,7 @@ WITH (
 
 INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('ELEC', 'Electricité');
 INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('ELECECL', 'Eclairage public');
-INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('ELECSLT', 'Signalisation lumineuse tricolore');
+INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('ELECSLT', 'Signalisation lumineuse tricolore basse tension');
 INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('ELECTRD', 'Electricité TRansport/Distribution');
 INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('GAZ', 'Gaz');
 INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('CHIM', 'Produits chimiques');
@@ -169,19 +195,19 @@ INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('ASSEP', 'Eaux p
 INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('ASSEU', 'Eaux usées');
 INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('ASSUN', 'Réseau unitaire');
 INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('CHAU', 'Chauffage et climatisation');
-INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('COM', 'Télécom');
+INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('COM', 'Télécom et signalisation lumineuse tricolore TBT');
 INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('DECH', 'Déchets');
-INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('INCE', 'Incendie');
+INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('AUTREAU', 'Incendie, Irrigation, Eau Brute, Eau Salée, Eau non chlorée');
 INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('PINS', 'Ouvrage de Protection INondation Submersion');
 INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('MULT', 'Multi réseaux');
-INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('00', 'Non défini');
+INSERT INTO a_stardt."NatureReseauValue" (code, valeur) VALUES ('INC', 'Non défini');
 
 COMMENT ON TABLE a_stardt."NatureReseauValue" IS
 'Code permettant de décrire le type de réseau conformément à la liste des réseaux de la NF P98-332.';
 
 
 -- ---------------------------------
--- Classe : ClassePrecisionReseau
+-- Classe : ClassePrecisionReseau (Jaune / liste de code) (pour 3.5.1.2. ElementReseau)
 -- ---------------------------------
 
 -- Table: ClassePrecisionReseau
@@ -205,32 +231,34 @@ COMMENT ON TABLE a_stardt."ClassePrecisionReseau" IS
 
 
 -- ---------------------------------
--- Classe : LeveTypeValue
+-- Classe : VerticalPositionValue = Position Vercicale = 2.15. (Gris / liste de code Inspire) (pour 3.5.1.3. Ouvrage)
 -- ---------------------------------
 
--- Table: LeveTypeValue
---DROP TABLE if exists a_stardt."LeveTypeValue" cascade;
-CREATE TABLE a_stardt."LeveTypeValue"
+-- Table: VerticalPositionValue
+--DROP TABLE if exists a_stardt."VerticalPositionValue" cascade;
+CREATE TABLE a_stardt."VerticalPositionValue"
 (
   code character varying(2) unique,
-  valeur character varying(20),
-  definition character varying(255),
-  CONSTRAINT "LeveTypeValue_pkey" PRIMARY KEY (code)
+  valeur character varying(19),
+  valeurfr character varying(20),
+  definition character varying(1),
+  CONSTRAINT "VerticalPositionValue_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."LeveTypeValue" (code, valeur, definition) VALUES ('01', 'ChargeGeneratrice', 'Charge à la génératrice');
-INSERT INTO a_stardt."LeveTypeValue" (code, valeur, definition) VALUES ('02', 'AltitudeGeneratrice', 'Altitude à la génératrice');
-INSERT INTO a_stardt."LeveTypeValue" (code, valeur, definition) VALUES ('03', 'AltitudeFluide', 'Altitude du fluide');
+INSERT INTO a_stardt."VerticalPositionValue" (code, valeur, definition) VALUES ('01', 'onGroundSurface', 'au niveau du sol', '');
+INSERT INTO a_stardt."VerticalPositionValue" (code, valeur, definition) VALUES ('02', 'suspendedOrElevated', 'suspendu ou surelevé', '');
+INSERT INTO a_stardt."VerticalPositionValue" (code, valeur, definition) VALUES ('03', 'underground', 'sous le sol', '');
 
-COMMENT ON TABLE a_stardt."LeveTypeValue" IS
-'Code permettant de préciser quel type de levé a été effectué.';
+
+COMMENT ON TABLE a_stardt."VerticalPositionValue" IS
+'Code permettant de décrire la position de l’ouvrage par rapport au sol.';
 
 
 -- ---------------------------------
--- Classe : ConditionOfFacilityValue
+-- Classe : ConditionOfFacilityValue = Etat de l'équipement = 2.14. (Gris / liste de code Inspire) (pour 3.5.1.3. Ouvrage)
 -- ---------------------------------
 
 -- Table: ConditionOfFacilityValue
@@ -238,25 +266,51 @@ COMMENT ON TABLE a_stardt."LeveTypeValue" IS
 CREATE TABLE a_stardt."ConditionOfFacilityValue"
 (
   code character varying(2) unique,
-  valeur character varying(21),
-  definition character varying(255),
+  valeur character varying(17),
+  valeurfr character varying(37),
+  definition character varying(1),
   CONSTRAINT "ConditionOfFacilityValue_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."ConditionOfFacilityValue" (code, valeur, definition) VALUES ('decommissionned', 'déclassé', 'Arrêt définitif d''exploitation si non enregistré au GU');
-INSERT INTO a_stardt."ConditionOfFacilityValue" (code, valeur, definition) VALUES ('underConstruction', 'en cours de construction/modification', 'Modifications en cours sur le réseau/ouvrage');
-INSERT INTO a_stardt."ConditionOfFacilityValue" (code, valeur, definition) VALUES ('projected', 'en projet', 'Modification ou une extension de l’ouvrage envisagée');
-INSERT INTO a_stardt."ConditionOfFacilityValue" (code, valeur, definition) VALUES ('functional', 'opérationnel', 'Actif- Ouvrages ou tronçons d’ouvrages exploités');
+INSERT INTO a_stardt."ConditionOfFacilityValue" (code, valeur, valeurfr, definition) VALUES ('01', 'decommissionned', 'déclassé', 'Arrêt définitif d''exploitation si non enregistré au GU');
+INSERT INTO a_stardt."ConditionOfFacilityValue" (code, valeur, valeurfr, definition) VALUES ('02', 'underConstruction', 'en cours de construction/modification', 'Modifications en cours sur le réseau/ouvrage');
+INSERT INTO a_stardt."ConditionOfFacilityValue" (code, valeur, valeurfr, definition) VALUES ('03', 'projected', 'en projet', 'Modification ou une extension de l’ouvrage envisagée');
+INSERT INTO a_stardt."ConditionOfFacilityValue" (code, valeur, valeurfr, definition) VALUES ('04', 'functional', 'opérationnel', 'Actif-Ouvrages ou tronçons d’ouvrages exploités');
 
 COMMENT ON TABLE a_stardt."CategoriePlacementPCRSType" IS
-'Code permettant de décrire le Statut de l’objet concernant son état et son usage.';
+'Code permettant de décrire le statut de l’objet concernant son état et son usage.';
 
 
 -- ---------------------------------
--- Classe : WarningTypeValue
+-- Classe : LeveTypeValue (Jaune / liste de code) (pour 3.5.1.4. PointLeveOuvrageReseau)
+-- ---------------------------------
+
+-- Table: LeveTypeValue
+--DROP TABLE if exists a_stardt."LeveTypeValue" cascade;
+CREATE TABLE a_stardt."LeveTypeValue"
+(
+  code character varying(2) unique,
+  valeur character varying(19),
+  definition character varying(1),
+  CONSTRAINT "LeveTypeValue_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO a_stardt."LeveTypeValue" (code, valeur, definition) VALUES ('01', 'ChargeGeneratrice', 'Charge à la génératrice. L’indication de la charge à la génératrice a pour objet de répondre à l’obligation de mentionner les points de l’ouvrage qui ne satisferaient pas à l’éventuelle règle de profondeur minimale réglementaire à la date de pose de l’ouvrage. Cette information est intrinsèquement moins fiable que les indications d’altitude de l’ouvrage, le terrain naturel ayant pu évoluer depuis la pose. Elle est donc à limiter à cet usage.');
+INSERT INTO a_stardt."LeveTypeValue" (code, valeur, definition) VALUES ('02', 'AltitudeGeneratrice', 'Altitude à la génératrice');
+INSERT INTO a_stardt."LeveTypeValue" (code, valeur, definition) VALUES ('03', 'AltitudeFluide', 'Altitude du fluide');
+
+COMMENT ON TABLE a_stardt."LeveTypeValue" IS
+'Code permettant de préciser quel type de point a été levé sur le réseau.';
+
+
+-- ---------------------------------
+-- Classe : WarningTypeValue = Type d'avertissement = 2.11. (Gris / liste de code Inspire) (pour 3.5.2.1. Troncon)
 -- ---------------------------------
 
 -- Table: WarningTypeValue
@@ -264,51 +318,26 @@ COMMENT ON TABLE a_stardt."CategoriePlacementPCRSType" IS
 CREATE TABLE a_stardt."WarningTypeValue"
 (
   code character varying(2) unique,
-  valeur character varying(27),
-  definition character varying(255),
+  valeur character varying(1),
+  valeurfr character varying(1),
+  definition character varying(1),
   CONSTRAINT "WarningTypeValue_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."WarningTypeValue" (code, valeur, definition) VALUES ('00', 'unknown', 'inconnu');
-INSERT INTO a_stardt."WarningTypeValue" (code, valeur, definition) VALUES ('01', 'net', 'filet');
-INSERT INTO a_stardt."WarningTypeValue" (code, valeur, definition) VALUES ('02', 'tape', '');
-INSERT INTO a_stardt."WarningTypeValue" (code, valeur, definition) VALUES ('03', 'concretePaving', '');
+INSERT INTO a_stardt."WarningTypeValue" (code, valeur, valeurfr, definition) VALUES ('01', 'net', 'filet', '');
+INSERT INTO a_stardt."WarningTypeValue" (code, valeur, valeurfr, definition) VALUES ('02', 'tape', 'ruban', '');
+INSERT INTO a_stardt."WarningTypeValue" (code, valeur, valeurfr, definition) VALUES ('03', 'concretePaving', 'pavage en béton', '');
+INSERT INTO a_stardt."WarningTypeValue" (code, valeur, valeurfr, definition) VALUES ('00', 'unknown', 'inconnu', 'Un dispositif de protection existe mais sa nature est inconnue.');
 
 COMMENT ON TABLE a_stardt."WarningTypeValue" IS
-'Code permettant de décrire .';
+'Code permettant de décrire le type de dispositif permettant de protéger le tronçon d’ouvrage contre les agressions externes. La présence d’un dispositif de protection est celle connue à la pose du réseau.';
 
 
 -- ---------------------------------
--- Classe : UtilityDeliveryTypeValue
--- ---------------------------------
-
--- Table: UtilityDeliveryTypeValue
---DROP TABLE if exists a_stardt."UtilityDeliveryTypeValue" cascade;
-CREATE TABLE a_stardt."UtilityDeliveryTypeValue"
-(
-  code character varying(2) unique,
-  valeur character varying(27),
-  definition character varying(255),
-  CONSTRAINT "UtilityDeliveryTypeValue_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO a_stardt."UtilityDeliveryTypeValue" (code, valeur, definition) VALUES ('00', 'collection', '');
-INSERT INTO a_stardt."UtilityDeliveryTypeValue" (code, valeur, definition) VALUES ('01', 'distribution', '');
-INSERT INTO a_stardt."UtilityDeliveryTypeValue" (code, valeur, definition) VALUES ('02', 'private', '');
-INSERT INTO a_stardt."UtilityDeliveryTypeValue" (code, valeur, definition) VALUES ('03', 'transport', '');
-
-COMMENT ON TABLE a_stardt."UtilityDeliveryTypeValue" IS
-'Code permettant de décrire .';
-
-
--- ---------------------------------
--- Classe : HierarchieValue
+-- Classe : HierarchieValue (Jaune / liste de code) (pour 3.5.2.1. Troncon)
 -- ---------------------------------
 
 -- Table: HierarchieValue
@@ -316,23 +345,23 @@ COMMENT ON TABLE a_stardt."UtilityDeliveryTypeValue" IS
 CREATE TABLE a_stardt."HierarchieValue"
 (
   code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
+  valeur character varying(11),
+  definition character varying(1),
   CONSTRAINT "HierarchieValue_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."HierarchieValue" (code, valeur, definition) VALUES ('01', 'reseau', '');
-INSERT INTO a_stardt."HierarchieValue" (code, valeur, definition) VALUES ('02', 'branchement', '');
+INSERT INTO a_stardt."HierarchieValue" (code, valeur, definition) VALUES ('01', 'reseau', 'Elément constitutif du réseau');
+INSERT INTO a_stardt."HierarchieValue" (code, valeur, definition) VALUES ('02', 'branchement', 'Elément de branchement');
 
 COMMENT ON TABLE a_stardt."HierarchieValue" IS
 'Code permettant de décrire la hiérarchie du tronçon dans le réseau.';
 
 
 -- ---------------------------------
--- Classe : PipeMaterialTypeValue
+-- Classe : PipeMaterialTypeValue = Type de matériau de Canalisation = 2.04. (Gris / liste de code Inspire) (pour 3.5.2.1. Troncon, pour 3.5.4.2. Conteneur)
 -- ---------------------------------
 
 -- Table: PipeMaterialTypeValue
@@ -341,6 +370,7 @@ CREATE TABLE a_stardt."PipeMaterialTypeValue"
 (
   code character varying(1) unique,
   valeur character varying(6),
+  valeurfr character varying(6),
   definition character varying(255),
   CONSTRAINT "PipeMaterialTypeValue_pkey" PRIMARY KEY (code)
 )
@@ -348,62 +378,120 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'ABS', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'asbestos', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'blackIron', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'blackSteel', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'castIron', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'clay', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'compositeConcrete', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'concrete', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'CPVC', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'FRP', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'galvanizedSteel', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'masonry', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'other', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'PB', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'PE', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'PEX', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'PP', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'prestressedReinforcedConcrete', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'PVC', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'reinforcedConcrete', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'RPMP', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'steel', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'terracota', '');
-INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, definition) VALUES ('', 'wood', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('01', 'ABS', 'ABS', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('02', 'asbestos', 'amiante', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('03', 'blackIron', 'fer noir', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('04', 'blackSteel', 'acier noir', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('05', 'castIron', 'fonte', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('06', 'clay', 'argile', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('07', 'compositeConcrete', 'béton composite', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('08', 'concrete', 'béton', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('09', 'CPVC', 'PVCC', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('10', 'FRP', 'Plastique renforcé de fibres (FRP)', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('11', 'galvanizedSteel', 'métal galvanisé', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('12', 'masonry', 'maçonnerie', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('13', 'other', 'autre', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('14', 'PB', 'polybutylène (PB)', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('15', 'PE', 'polyéthylène (PE)', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('16', 'PEX', 'polyéthylène réticulé à haute densité (PEX)', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('17', 'PP', 'polypropylène (PP)', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('18', 'prestressedReinforcedConcrete', 'béton armé précontraint', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('19', 'PVC', 'PVC', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('21', 'reinforcedConcrete', 'béton renforcé', '');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('22', 'RPMP', 'mortier renforcé de polymères (RPMP)' ,'');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('23', 'steel', 'acier' ,'');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('24', 'terracota', 'terracotta' ,'');
+INSERT INTO a_stardt."PipeMaterialTypeValue" (code, valeur, valeurfr, definition) VALUES ('25', 'wood', 'bois', '');
 
 
 COMMENT ON TABLE a_stardt."PipeMaterialTypeValue" IS
-'Code permettant de décrire le matériau du tronçon.';
+'Code permettant de décrire le matériau du troncon (de la canalisation).';
 
 
 -- ---------------------------------
--- Classe : TelecomCableTechnoValue
+-- Classe : UtilityDeliveryTypeValue = Type de prestation de service d'utilité publique = 2.10. (Gris / liste de code Inspire) (pour 3.5.2.1. Troncon)
 -- ---------------------------------
 
--- Table: TelecomCableTechnoValue
---DROP TABLE if exists a_stardt."TelecomCableTechnoValue" cascade;
-CREATE TABLE a_stardt."TelecomCableTechnoValue"
+-- Table: UtilityDeliveryTypeValue
+--DROP TABLE if exists a_stardt."UtilityDeliveryTypeValue" cascade;
+CREATE TABLE a_stardt."UtilityDeliveryTypeValue"
 (
   code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
-  CONSTRAINT "TelecomCableTechnoValue_pkey" PRIMARY KEY (code)
+  valeur character varying(12),
+  valeurfr character varying(12),
+  definition character varying(1),
+  CONSTRAINT "UtilityDeliveryTypeValue_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."TelecomCableTechnoValue" (code, valeur, definition) VALUES ('01', 'cuivre', '');
-INSERT INTO a_stardt."TelecomCableTechnoValue" (code, valeur, definition) VALUES ('02', 'fibre', '');
+INSERT INTO a_stardt."UtilityDeliveryTypeValue" (code, valeur, valeurfr, definition) VALUES ('01', 'transport', 'transport', '');
+INSERT INTO a_stardt."UtilityDeliveryTypeValue" (code, valeur, valeurfr, definition) VALUES ('02', 'distribution', 'distribution', '');
+INSERT INTO a_stardt."UtilityDeliveryTypeValue" (code, valeur, valeurfr, definition) VALUES ('03', 'collection', 'collecte', '');
+INSERT INTO a_stardt."UtilityDeliveryTypeValue" (code, valeur, valeurfr, definition) VALUES ('04', 'private', 'privé', '');
 
-COMMENT ON TABLE a_stardt."TelecomCableTechnoValue" IS
-'Code permettant de décrire .';
+
+COMMENT ON TABLE a_stardt."UtilityDeliveryTypeValue" IS
+'Code permettant de décrire le type de prestation de service d’utilité publique.';
 
 
 -- ---------------------------------
--- Classe : RegimeValue
+-- Classe : ClasseTensionValue (Jaune / liste de code) (pour 3.5.2.3. CableElectrique)
+-- ---------------------------------
+
+-- Table: ClasseTensionValue
+--DROP TABLE if exists a_stardt."ClasseTensionValue" cascade;
+CREATE TABLE a_stardt."ClasseTensionValue"
+(
+  code character varying(2) unique,
+  valeur character varying(7),
+  definition character varying(52),
+  CONSTRAINT "ClasseTensionValue_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO a_stardt."ClasseTensionValue" (code, valeur, definition) VALUES ('01', 'TBT', 'Très Basse Tension');
+INSERT INTO a_stardt."ClasseTensionValue" (code, valeur, definition) VALUES ('02', 'BT', 'Basse Tension');
+INSERT INTO a_stardt."ClasseTensionValue" (code, valeur, definition) VALUES ('03', 'HTA', 'Haute Tension A');
+INSERT INTO a_stardt."ClasseTensionValue" (code, valeur, definition) VALUES ('04', 'HTB', 'Haute Tension B');
+INSERT INTO a_stardt."ClasseTensionValue" (code, valeur, definition) VALUES ('05', 'Inconnu', 'Tension inconnue (ouvrages hors service par exemple)');
+
+COMMENT ON TABLE a_stardt."ClasseTensionValue" IS
+'Code permettant de décrire la classe de tension électrique (issu de la norme NF C 18-510).';
+
+
+-- ---------------------------------
+-- Classe : FonctionCableElectriqueValue (Jaune / liste de code) (pour 3.5.2.3. CableElectrique)
+-- ---------------------------------
+
+-- Table: FonctionCableElectriqueValue
+--DROP TABLE if exists a_stardt."FonctionCableElectriqueValue" cascade;
+CREATE TABLE a_stardt."FonctionCableElectriqueValue"
+(
+  code character varying(2) unique,
+  valeur character varying(20),
+  definition character varying(1),
+  CONSTRAINT "FonctionCableElectriqueValue_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO a_stardt."FonctionCableElectriqueValue" (code, valeur, definition) VALUES ('01', 'transportEnergie', 'Câble servant au transport de l’énergie');
+INSERT INTO a_stardt."FonctionCableElectriqueValue" (code, valeur, definition) VALUES ('02', 'distributionEnergie', 'Câble utile à la distribution d’énergie');
+INSERT INTO a_stardt."FonctionCableElectriqueValue" (code, valeur, definition) VALUES ('03', 'protectionCathodique', 'Câble de protection cathodique');
+INSERT INTO a_stardt."FonctionCableElectriqueValue" (code, valeur, definition) VALUES ('04', 'miseTerre', 'Câble servant de mise à la terre');
+INSERT INTO a_stardt."FonctionCableElectriqueValue" (code, valeur, definition) VALUES ('05', 'autre', '');
+
+COMMENT ON TABLE a_stardt."FonctionCableElectriqueValue" IS
+'Code permettant de décrire la fonction du câble électrique.';
+
+
+-- ---------------------------------
+-- Classe : RegimeValue  (Jaune / liste de code) (pour 3.5.2.3. CableElectrique)
 -- ---------------------------------
 
 -- Table: RegimeValue
@@ -419,94 +507,40 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."HierarchieValue" (code, valeur, definition) VALUES ('01', 'monophase', '');
-INSERT INTO a_stardt."HierarchieValue" (code, valeur, definition) VALUES ('02', 'triphase', '');
-INSERT INTO a_stardt."HierarchieValue" (code, valeur, definition) VALUES ('03', 'continu', '');
+INSERT INTO a_stardt."HierarchieValue" (code, valeur, definition) VALUES ('01', 'monophase', 'Monophasé');
+INSERT INTO a_stardt."HierarchieValue" (code, valeur, definition) VALUES ('02', 'triphase', 'Triphasé');
+INSERT INTO a_stardt."HierarchieValue" (code, valeur, definition) VALUES ('03', 'continu', 'Continu');
 
 COMMENT ON TABLE a_stardt."HierarchieValue" IS
-'Code permettant de décrire .';
+'Code permettant de décrire le type de régime électrique.';
+
 
 -- ---------------------------------
--- Classe : FonctionCableElectriqueValue
+-- Classe : TelecomCableTechnoValue (Jaune / liste de code) (pour 3.5.2.4. CableTelecommunication)
 -- ---------------------------------
 
--- Table: FonctionCableElectriqueValue
---DROP TABLE if exists a_stardt."FonctionCableElectriqueValue" cascade;
-CREATE TABLE a_stardt."FonctionCableElectriqueValue"
+-- Table: TelecomCableTechnoValue
+--DROP TABLE if exists a_stardt."TelecomCableTechnoValue" cascade;
+CREATE TABLE a_stardt."TelecomCableTechnoValue"
 (
   code character varying(2) unique,
   valeur character varying(13),
   definition character varying(255),
-  CONSTRAINT "FonctionCableElectriqueValue_pkey" PRIMARY KEY (code)
+  CONSTRAINT "TelecomCableTechnoValue_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."FonctionCableElectriqueValue" (code, valeur, definition) VALUES ('01', 'transportEnergie', '');
-INSERT INTO a_stardt."FonctionCableElectriqueValue" (code, valeur, definition) VALUES ('02', 'distributionEnergie', '');
-INSERT INTO a_stardt."FonctionCableElectriqueValue" (code, valeur, definition) VALUES ('03', 'protectionCathodique', '');
-INSERT INTO a_stardt."FonctionCableElectriqueValue" (code, valeur, definition) VALUES ('04', 'miseTerre', '');
-INSERT INTO a_stardt."FonctionCableElectriqueValue" (code, valeur, definition) VALUES ('00', 'autre', '');
+INSERT INTO a_stardt."TelecomCableTechnoValue" (code, valeur, definition) VALUES ('01', 'cuivre', 'Câble en cuivre');
+INSERT INTO a_stardt."TelecomCableTechnoValue" (code, valeur, definition) VALUES ('02', 'fibre', 'Câble en fibre');
 
-COMMENT ON TABLE a_stardt."FonctionCableElectriqueValue" IS
-'Code permettant de décrire .';
-
+COMMENT ON TABLE a_stardt."TelecomCableTechnoValue" IS
+'Code permettant de décrire le type de technologie pour le cable telecom.';
 
 
 -- ---------------------------------
--- Classe : ClasseTensionValue
--- ---------------------------------
-
--- Table: ClasseTensionValue
---DROP TABLE if exists a_stardt."ClasseTensionValue" cascade;
-CREATE TABLE a_stardt."ClasseTensionValue"
-(
-  code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
-  CONSTRAINT "ClasseTensionValue_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO a_stardt."ClasseTensionValue" (code, valeur, definition) VALUES ('01', 'TBT', '');
-INSERT INTO a_stardt."ClasseTensionValue" (code, valeur, definition) VALUES ('02', 'BT', '');
-INSERT INTO a_stardt."ClasseTensionValue" (code, valeur, definition) VALUES ('03', 'HTA', '');
-INSERT INTO a_stardt."ClasseTensionValue" (code, valeur, definition) VALUES ('04', 'HTB', '');
-
-COMMENT ON TABLE a_stardt."ClasseTensionValue" IS
-'Code permettant de décrire .';
-
-
--- ---------------------------------
--- Classe : ClasseTemperatureValue
--- ---------------------------------
-
--- Table: ClasseTemperatureValue
---DROP TABLE if exists a_stardt."ClasseTemperatureValue" cascade;
-CREATE TABLE a_stardt."ClasseTemperatureValue"
-(
-  code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
-  CONSTRAINT "ClasseTemperatureValue_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO a_stardt."ClasseTemperatureValue" (code, valeur, definition) VALUES ('01', 'inf110', '');
-INSERT INTO a_stardt."ClasseTemperatureValue" (code, valeur, definition) VALUES ('02', '110a180', '');
-INSERT INTO a_stardt."ClasseTemperatureValue" (code, valeur, definition) VALUES ('03', 'plus180', '');
-
-COMMENT ON TABLE a_stardt."ClasseTemperatureValue" IS
-'Code permettant de décrire .';
-
-
--- ---------------------------------
--- Classe : TypeEcoulementValue
+-- Classe : TypeEcoulementValue (Jaune / liste de code) (pour 3.5.2.7. CanalisationEau, 3.5.2.8. CanalisationAssainissementPluviale)
 -- ---------------------------------
 
 -- Table: TypeEcoulementValue
@@ -522,108 +556,16 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."TypeEcoulementValue" (code, valeur, definition) VALUES ('01', 'sousPression', '');
-INSERT INTO a_stardt."TypeEcoulementValue" (code, valeur, definition) VALUES ('02', 'gravitaireSurfaceLibre', '');
+INSERT INTO a_stardt."TypeEcoulementValue" (code, valeur, definition) VALUES ('01', 'enChargeGravite', 'Ecoulement en charge par gravité');
+INSERT INTO a_stardt."TypeEcoulementValue" (code, valeur, definition) VALUES ('02', 'gravitaireSurfaceLibre', 'Gravitaire en surface libre');
+INSERT INTO a_stardt."TypeEcoulementValue" (code, valeur, definition) VALUES ('03', 'enChargePressurisation', 'Ecoulement en charge par pressurisation');
 
 COMMENT ON TABLE a_stardt."TypeEcoulementValue" IS
-'Code permettant de décrire .';
+'Code permettant de décrire le type d’écoulement dans une canalisation d’eau.';
 
 
 -- ---------------------------------
--- Classe : OilGasChemicalsProductTypeValue
--- ---------------------------------
-
--- Table: OilGasChemicalsProductTypeValue
---DROP TABLE if exists a_stardt."OilGasChemicalsProductTypeValue" cascade;
-CREATE TABLE a_stardt."OilGasChemicalsProductTypeValue"
-(
-  code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
-  CONSTRAINT "OilGasChemicalsProductTypeValue_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'liquefiedNaturalGas', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'methane', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'naturalGas', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'naturalGasAndTetrahydrothiophene', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'nitrogenGas', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'residualGas', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'accetone', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'air', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'argon', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'butadiene', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'butadiene1,3', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'butane', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'c3', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'carbonMonoxide', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'chlorine', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'compressedAir', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'crude', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'dichloroethane', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'diesel', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'ethylene', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'gasFabricationOfCocs', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'gasHFx', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'gasoil', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'hydrogen', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'isobutane', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'JET-A1', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'kerosene', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'liquidAmmonia', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'liquidHydrocarbon', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'multiProduct', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'MVC', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'nitrogen', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'oxygen', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'phenol', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'propane', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'propyleen', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'propylene', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'raffinate', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'refineryProducts', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'saltWater', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'saumur', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'tetrachloroethane', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'unknown', '');
-INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('', 'empty', '');
-
-
-COMMENT ON TABLE a_stardt."OilGasChemicalsProductTypeValue" IS
-'Code permettant de décrire .';
-
-
--- ---------------------------------
--- Classe : SewerWaterTypeValue
--- ---------------------------------
-
--- Table: SewerWaterTypeValue
---DROP TABLE if exists a_stardt."SewerWaterTypeValue" cascade;
-CREATE TABLE a_stardt."SewerWaterTypeValue"
-(
-  code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
-  CONSTRAINT "SewerWaterTypeValue_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO a_stardt."SewerWaterTypeValue" (code, valeur, definition) VALUES ('01', 'combined', '');
-INSERT INTO a_stardt."SewerWaterTypeValue" (code, valeur, definition) VALUES ('02', 'reclaimed', '');
-INSERT INTO a_stardt."SewerWaterTypeValue" (code, valeur, definition) VALUES ('03', 'sanitary', '');
-INSERT INTO a_stardt."SewerWaterTypeValue" (code, valeur, definition) VALUES ('04', 'storm', '');
-
-COMMENT ON TABLE a_stardt."SewerWaterTypeValue" IS
-'Code permettant de décrire .';
-
-
--- ---------------------------------
--- Classe : WaterTypeValue
+-- Classe : WaterTypeValue = Type d'eaux = 2.13. (Gris / liste de code Inspire) (pour 3.5.2.7. CanalisationEau)
 -- ---------------------------------
 
 -- Table: WaterTypeValue
@@ -631,25 +573,170 @@ COMMENT ON TABLE a_stardt."SewerWaterTypeValue" IS
 CREATE TABLE a_stardt."WaterTypeValue"
 (
   code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
+  valeur character varying(1),
+  valeurfr character varying(1),
+  definition character varying(1),
   CONSTRAINT "WaterTypeValue" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."WaterTypeValue" (code, valeur, definition) VALUES ('01', 'potable', '');
-INSERT INTO a_stardt."WaterTypeValue" (code, valeur, definition) VALUES ('02', 'raw', '');
-INSERT INTO a_stardt."WaterTypeValue" (code, valeur, definition) VALUES ('03', 'salt', '');
-INSERT INTO a_stardt."WaterTypeValue" (code, valeur, definition) VALUES ('04', 'treated', '');
+INSERT INTO a_stardt."WaterTypeValue" (code, valeur, valeurfr, definition) VALUES ('01', 'potable', 'potable', 'L’eau potable est une eau de qualité suffisamment élevée pour pouvoir être consommée ou utilisée sans risque d’effets nocifs immédiats ou à long terme.');
+INSERT INTO a_stardt."WaterTypeValue" (code, valeur, valeurfr, definition) VALUES ('02', 'raw', 'brute', 'L’eau brute est de l’eau prélevée dans l’environnement, qui est ensuite traitée ou purifiée pour produire de l’eau potable dans une usine de purification de l’eau. L’eau brute ne doit pas être considérée comme salubre à boire ou à laver sans traitement supplémentaire.');
+INSERT INTO a_stardt."WaterTypeValue" (code, valeur, valeurfr, definition) VALUES ('03', 'salt', 'salée', 'L’eau salée ou eau salée est un terme général qui désigne uneeau qui contient une concentration importante de sels dissous (NaCl).');
+INSERT INTO a_stardt."WaterTypeValue" (code, valeur, valeurfr, definition) VALUES ('04', 'treated', 'traitée', 'L’eau traitée est l’eau qui a subi un traitement. Les procédés de traitement sont ceux couramment utilisés dans les stations d’épuration des eaux.');
 
 COMMENT ON TABLE a_stardt."WaterTypeValue" IS
+'Code permettant de décrire la nature de l’eau circulant dans la canalisation.';
+
+
+-- ---------------------------------
+-- Classe : TypeDepartValue (Jaune / liste de code) (pour 3.5.2.7. CanalisationEau)
+-- ---------------------------------
+
+-- Table: TypeDepartValue
+--DROP TABLE if exists a_stardt."TypeDepartValue" cascade;
+CREATE TABLE a_stardt."TypeDepartValue"
+(
+  code character varying(2) unique,
+  valeur character varying(13),
+  definition character varying(255),
+  CONSTRAINT "TypeDepartValue_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO a_stardt."TypeDepartValue" (code, valeur, definition) VALUES ('01', 'PriseEnCharge', 'Prise en charge');
+INSERT INTO a_stardt."TypeDepartValue" (code, valeur, definition) VALUES ('02', 'DepartVanne', 'Départ Vanne');
+
+COMMENT ON TABLE a_stardt."TypeDepartValue" IS
+'Code permettant de décrire le type de départ pour un branchement sur une canalisation d’eau.';
+
+
+-- ---------------------------------
+-- Classe : SewerWaterTypeValue = Type de l'assainissement = 2.06. (Gris / liste de code Inspire) (pour 3.5.2.8. CanalisationAssainissementPluviale)
+-- ---------------------------------
+
+-- Table: SewerWaterTypeValue
+--DROP TABLE if exists a_stardt."SewerWaterTypeValue" cascade;
+CREATE TABLE a_stardt."SewerWaterTypeValue"
+(
+  code character varying(2) unique,
+  valeur character varying(9),
+  valeurfr character varying(9),
+  definition character varying(1),
+  CONSTRAINT "SewerWaterTypeValue_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO a_stardt."SewerWaterTypeValue" (code, valeur, valeurfr, definition) VALUES ('01', 'combined', 'eau de réseau unitaire', 'Un réseau unitaire est un type de réseau qui recueille les eaux usées sanitaires et les eaux pluviales dans un seul réseau de canalisations.');
+INSERT INTO a_stardt."SewerWaterTypeValue" (code, valeur, valeurfr, definition) VALUES ('02', 'reclaimed', 'eau récupérée', 'L’eau récupérée, parfois appelée eau recyclée, est une ancienne eau usée (eaux usées) qui a été traitée pour éliminer les solides et certaines impuretés, puis utilisée pour l’irrigation paysagère durable ou pour recharger les nappes souterraines.');
+INSERT INTO a_stardt."SewerWaterTypeValue" (code, valeur, valeurfr, definition) VALUES ('03', 'sanitary', 'eau usée', 'Les réseaux sanitaires enlèvent les déchets de la maison des gens et les envoient sous terre vers une usine de traitement. ');
+INSERT INTO a_stardt."SewerWaterTypeValue" (code, valeur, valeurfr, definition) VALUES ('04', 'storm', 'eau de réseau pluvial', 'Les canalisations d’eaux pluviales recueillent les eaux pluviales et les eaux de ruissellement et les dirigent vers les milieux humides et les lacs. Les fossés et les grilles de bordure de trottoir sont des drains pluviaux.');
+
+COMMENT ON TABLE a_stardt."SewerWaterTypeValue" IS
 'Code permettant de décrire .';
 
 
 -- ---------------------------------
--- Classe : ThermalProductTypeValue
+-- Classe : ClasseTemperatureValue  (Jaune / liste de code) (pour 3.5.2.9. CanalisationHydrocarbureChimique)
+-- ---------------------------------
+
+-- Table: ClasseTemperatureValue
+--DROP TABLE if exists a_stardt."ClasseTemperatureValue" cascade;
+CREATE TABLE a_stardt."ClasseTemperatureValue"
+(
+  code character varying(2) unique,
+  valeur character varying(7),
+  definition character varying(1),
+  CONSTRAINT "ClasseTemperatureValue_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO a_stardt."ClasseTemperatureValue" (code, valeur, definition) VALUES ('01', 'inf110', 'Inférieur à 110 °C');
+INSERT INTO a_stardt."ClasseTemperatureValue" (code, valeur, definition) VALUES ('02', '110a180', 'Entre 110°C et 180°C');
+INSERT INTO a_stardt."ClasseTemperatureValue" (code, valeur, definition) VALUES ('03', 'plus180', 'Supérieur à 180°C');
+
+COMMENT ON TABLE a_stardt."ClasseTemperatureValue" IS
+'Code permettant de décrire la classe de temperature.';
+
+
+
+-- ---------------------------------
+-- Classe : OilGasChemicalsProductTypeValue = Type d'hydrocarbures et de produits chimiques = 2.03. (Gris / liste de code Inspire) (pour 3.5.2.9. CanalisationHydrocarbureChimique)
+-- ---------------------------------
+
+-- Table: OilGasChemicalsProductTypeValue
+--DROP TABLE if exists a_stardt."OilGasChemicalsProductTypeValue" cascade;
+CREATE TABLE a_stardt."OilGasChemicalsProductTypeValue"
+(
+  code character varying(2) unique,
+  valeur character varying(1),
+  valeurfr character varying(1),
+  definition character varying(1),
+  CONSTRAINT "OilGasChemicalsProductTypeValue_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('01', 'liquefiedNaturalGas', 'gaz naturel liquéfié', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('02', 'methane', 'méthane', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('03', 'naturalGas', 'gaz naturel', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('04', 'naturalGasAndTetrahydrothiophene', 'gaz naturel et THT', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('05', 'nitrogenGas', 'gaz azote', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('06', 'residualGas', 'gaz résiduel', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('07', 'accetone', 'acétone', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('08', 'air', 'air', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('09', 'argon', 'argon', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('10', 'butadiene', 'butadiène', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('11', 'butadiene1,3', 'buta-1.3-diène', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('12', 'butane', 'butane', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('13', 'c3', 'c3', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('14', 'carbonMonoxide', 'monoxide de carbone', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('15', 'chlorine', 'chlore', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('16', 'compressedAir', 'air comprimé', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('17', 'crude', 'brut', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('18', 'dichloroethane', 'dichloroéthane', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('19', 'diesel', 'diesel', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('20', 'ethylene', 'éthylène', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('21', 'gasFabricationOfCocs', 'gaz de fabrication de CoCs', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('22', 'gasHFx', 'gaz H Fx', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('23', 'gasoil', 'gazole', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('24', 'hydrogen', 'hydrogène', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('25', 'isobutane', 'isobutane', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('26', 'JET-A1', 'JET-A1', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('27', 'kerosene', 'kérosène', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('28', 'liquidAmmonia', 'ammoniac liquide', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('29', 'liquidHydrocarbon', 'hydrocarbone liquide', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('30', 'multiProduct', 'produit multiple', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('31', 'MVC', 'MVC', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('32', 'nitrogen', 'azote', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('33', 'oxygen', 'oxygène', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('34', 'phenol', 'phénol', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('35', 'propane', 'propane', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('36', 'propylene', 'propylène', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('37', 'raffinate', 'raffinat', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('38', 'refineryProducts', 'produits de raffinage', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('39', 'saltWater', 'eau salée', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('40', 'saumur', 'saumure', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('41', 'tetrachloroethane', 'tétrachloroéthane', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('42', 'unknown', 'inconnu', '');
+INSERT INTO a_stardt."OilGasChemicalsProductTypeValue" (code, valeur, definition) VALUES ('43', 'empty', 'vide', '');
+
+
+COMMENT ON TABLE a_stardt."OilGasChemicalsProductTypeValue" IS
+'Code permettant de décrire le type de fluide transporté.';
+
+
+-- ---------------------------------
+-- Classe : ThermalProductTypeValue = Type de produit thermique = 2.09. (Gris / liste de code Inspire) (pour 3.5.2.10. CanalisationThermique)
 -- ---------------------------------
 
 -- Table: ThermalProductTypeValue
@@ -657,131 +744,25 @@ COMMENT ON TABLE a_stardt."WaterTypeValue" IS
 CREATE TABLE a_stardt."ThermalProductTypeValue"
 (
   code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
+  valeur character varying(1),
+  valeurfr character varying(1),
+  definition character varying(1),
   CONSTRAINT "ThermalProductTypeValue_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."ThermalProductTypeValue" (code, valeur, definition) VALUES ('01', '', '');
-INSERT INTO a_stardt."ThermalProductTypeValue" (code, valeur, definition) VALUES ('02', '', '');
-INSERT INTO a_stardt."ThermalProductTypeValue" (code, valeur, definition) VALUES ('03', '', '');
-INSERT INTO a_stardt."ThermalProductTypeValue" (code, valeur, definition) VALUES ('04', '', '');
+INSERT INTO a_stardt."ThermalProductTypeValue" (code, valeur, definition) VALUES ('01', 'water', 'eau', '');
+INSERT INTO a_stardt."ThermalProductTypeValue" (code, valeur, definition) VALUES ('02', 'steam', 'vapeur', '');
+INSERT INTO a_stardt."ThermalProductTypeValue" (code, valeur, definition) VALUES ('03', 'glycoled water', 'eau glycolée', '');
 
 COMMENT ON TABLE a_stardt."ThermalProductTypeValue" IS
-'Code permettant de décrire .';
+'Code permettant de décrire le type de fluide transporté.';
 
 
 -- ---------------------------------
--- Classe : TypeOuvragePINSValue
--- ---------------------------------
-
--- Table: TypeOuvragePINSValue
---DROP TABLE if exists a_stardt."TypeOuvragePINSValue" cascade;
-CREATE TABLE a_stardt."TypeOuvragePINSValue"
-(
-  code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
-  CONSTRAINT "TypeOuvragePINSValue_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO a_stardt."TypeOuvragePINSValue" (code, valeur, definition) VALUES ('01', 'batardeaux', '');
-INSERT INTO a_stardt."TypeOuvragePINSValue" (code, valeur, definition) VALUES ('02', 'muret', '');
-INSERT INTO a_stardt."TypeOuvragePINSValue" (code, valeur, definition) VALUES ('03', 'drainage', '');
-INSERT INTO a_stardt."TypeOuvragePINSValue" (code, valeur, definition) VALUES ('04', 'perret', '');
-INSERT INTO a_stardt."TypeOuvragePINSValue" (code, valeur, definition) VALUES ('99', 'autre', '');
-
-COMMENT ON TABLE a_stardt."TypeOuvragePINSValue" IS
-'Code permettant de décrire .';
-
-
--- ---------------------------------
--- Classe : MateriauOuvragePINSValue
--- ---------------------------------
-
--- Table: MateriauOuvragePINSValue
---DROP TABLE if exists a_stardt."MateriauOuvragePINSValue" cascade;
-CREATE TABLE a_stardt."MateriauOuvragePINSValue"
-(
-  code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
-  CONSTRAINT "MateriauOuvragePINSValue_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO a_stardt."MateriauOuvragePINSValue" (code, valeur, definition) VALUES ('01', 'remblais', '');
-INSERT INTO a_stardt."MateriauOuvragePINSValue" (code, valeur, definition) VALUES ('02', 'palplanches', '');
-INSERT INTO a_stardt."MateriauOuvragePINSValue" (code, valeur, definition) VALUES ('03', 'gabion', '');
-INSERT INTO a_stardt."MateriauOuvragePINSValue" (code, valeur, definition) VALUES ('04', 'enrochement', '');
-INSERT INTO a_stardt."MateriauOuvragePINSValue" (code, valeur, definition) VALUES ('99', 'autre', '');
-
-COMMENT ON TABLE a_stardt."MateriauOuvragePINSValue" IS
-'Code permettant de décrire .';
-
-
-
--- ---------------------------------
--- Classe : StructureOuvragePISValue
--- ---------------------------------
-
--- Table: StructureOuvragePISValue
---DROP TABLE if exists a_stardt."StructureOuvragePISValue" cascade;
-CREATE TABLE a_stardt."StructureOuvragePISValue"
-(
-  code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
-  CONSTRAINT "StructureOuvragePISValue_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO a_stardt."StructureOuvragePISValue" (code, valeur, definition) VALUES ('01', 'remblais', '');
-INSERT INTO a_stardt."StructureOuvragePISValue" (code, valeur, definition) VALUES ('02', 'genie-civil', '');
-INSERT INTO a_stardt."StructureOuvragePISValue" (code, valeur, definition) VALUES ('99', 'autre', '');
-
-COMMENT ON TABLE a_stardt."StructureOuvragePISValue" IS
-'Code permettant de décrire .';
-
-
-
--- ---------------------------------
--- Classe : ProtectionPINSValue
--- ---------------------------------
-
--- Table: ProtectionPINSValue
---DROP TABLE if exists a_stardt."ProtectionPINSValue" cascade;
-CREATE TABLE a_stardt."ProtectionPINSValue"
-(
-  code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
-  CONSTRAINT "ProtectionPINSValue_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO a_stardt."ProtectionPINSValue" (code, valeur, definition) VALUES ('01', 'geotextile', '');
-INSERT INTO a_stardt."ProtectionPINSValue" (code, valeur, definition) VALUES ('02', '', '');
-INSERT INTO a_stardt."ProtectionPINSValue" (code, valeur, definition) VALUES ('99', 'autre', '');
-
-COMMENT ON TABLE a_stardt."ProtectionPINSValue" IS
-'Code permettant de décrire .';
-
-
--- ---------------------------------
--- Classe : TypeAccessoireValue
+-- Classe : TypeAccessoireValue = Type d'accessoire = 2.0x. (Gris / liste de code Inspire) (pour 3.5.3.2. Accessoire)
 -- ---------------------------------
 
 -- Table: TypeAccessoireValue
@@ -789,58 +770,24 @@ COMMENT ON TABLE a_stardt."ProtectionPINSValue" IS
 CREATE TABLE a_stardt."TypeAccessoireValue"
 (
   code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
+  valeur character varying(1),
+  definition character varying(1),
   CONSTRAINT "TypeAccessoireValue_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."TypeAccessoireValue" (code, valeur, definition) VALUES ('01', '', '');
-INSERT INTO a_stardt."TypeAccessoireValue" (code, valeur, definition) VALUES ('02', '', '');
-INSERT INTO a_stardt."TypeAccessoireValue" (code, valeur, definition) VALUES ('99', '', '');
+--INSERT INTO a_stardt."TypeAccessoireValue" (code, valeur, definition) VALUES ('01', '', '');
+--INSERT INTO a_stardt."TypeAccessoireValue" (code, valeur, definition) VALUES ('02', '', '');
+--INSERT INTO a_stardt."TypeAccessoireValue" (code, valeur, definition) VALUES ('99', '', '');
 
 COMMENT ON TABLE a_stardt."TypeAccessoireValue" IS
-'Code permettant de décrire .';
-
--- ---------------------------------
--- Classe : OilGasChemicalAppurtenanceTypeValue
--- ---------------------------------
-
--- Table: OilGasChemicalAppurtenanceTypeValue
---DROP TABLE if exists a_stardt."OilGasChemicalAppurtenanceTypeValue" cascade;
-CREATE TABLE a_stardt."OilGasChemicalAppurtenanceTypeValue"
-(
-  code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
-  CONSTRAINT "OilGasChemicalAppurtenanceTypeValue_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, definition) VALUES ('01', 'pump', '');
-INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, definition) VALUES ('02', 'gasStation', '');
-INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'oilGasChemicalsNode', '');
-INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'compression', '');
-INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'terminal', '');
-INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'deliveryPoint', '');
-INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'frontier', '');
-INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'marker', '');
-INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'beacon', '');
-INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'productionRegion', '');
-INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'plant', '');
-INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'storage', '');
-INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'valve', '');
-
-COMMENT ON TABLE a_stardt."OilGasChemicalAppurtenanceTypeValue" IS
-'Code permettant de décrire .';
+'Code permettant de décrire le type d’accessoire (Le type dépend de la nature du réseau. cf. les listes inspire).';
 
 
 -- ---------------------------------
--- Classe : SewerAppurtenanceTypeValue
+-- Classe : SewerAppurtenanceTypeValue = Type d'accessoire Reseau Assainissement = 2.05. (Gris / liste de code Inspire) (pour 3.5.3.2. Accessoire)
 -- ---------------------------------
 
 -- Table: SewerAppurtenanceTypeValue
@@ -848,41 +795,42 @@ COMMENT ON TABLE a_stardt."OilGasChemicalAppurtenanceTypeValue" IS
 CREATE TABLE a_stardt."SewerAppurtenanceTypeValue"
 (
   code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
+  valeur character varying(1),
+  valeurfr character varying(1),
+  definition character varying(1),
   CONSTRAINT "SewerAppurtenanceTypeValue_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('01', 'anode', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('02', 'barrel', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'barScreen', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'catchBasin', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'cleanOut', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'dischargeStructure', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'meter', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'pump', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'regulator', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'scadaSensor', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'thrustProtection', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'tideGate', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'sewerNode', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('01', 'connection', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('02', 'specificStructure', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'mechanicAndElectromechanicEquipment', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'rainwaterCollector', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'watertankOrChamber', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'valve', '');
-INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'autre', '');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('01', 'anode', 'anode', 'Une anode est une caractéristique (plus précisément, un mécanisme électrique) qui est appliquée aux composants du système pour prévenir la rouille, les piqûres et la corrosion des surfaces métalliques qui sont en contact avec l’eau ou le sol. Un courant basse tension est appliqué à l’eau ou au sol en contact avec le métal, de sorte que la force électromotrice rend le composant métallique cathodique. La corrosion est concentrée sur les anodes plutôt que sur les composants associés (et protégés) du système d’eau. Ce type de corrosion peut se produire dans les tuyaux en cuivre, en acier, en acier inoxydable, en fonte et en fonte ductile.');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('02', 'barrel', 'cuve d’aspiration', 'Une cuve d’aspiration est la partie cylindrique d’un trou d’homme entre le cône et le plateau.Les cuves ne se trouvent que dans les réseaux d’eaux usées et d’eaux pluviales.');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('03', 'barScreen', 'grille à barreaux', 'Un grillage à barreaux est un ensemble de barres parallèles, verticales ou inclinées, qui sont placées dans un égout ou un autre cours d’eau pour recueillir les débris. Les grillages à barreaux ne se trouvent que dans les réseaux d’eaux usées et d’eaux pluviales.');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('04', 'catchBasin', 'bassin de stockage', 'Un bassin collecteur est une chambre ou un puits utilisé avec des égouts pluviaux ou un égout unitaire pour recevoir les eaux de ruissellement dans le système de collecte. Les puisards sont utilisés pour enlever les débris et les solides qui pourraient entrer dans le système de collecte. Les puisards peuvent également être modélisés en tant que prises d’eau en bordure de trottoir ou en tant que prises d’eau pluviale.');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('05', 'cleanOut', 'nettoyage', 'Le nettoyage est une installation propre aux égouts et aux eaux pluviales qui sert d’ouverture dans un système de collecte pour y insérer des outils, des tiges oudes serpents pendant le nettoyage d’un pipeline ou le déblaiement d’un arrêt. Les types de nettoyage comprennent les nettoyages bidirectionnels, qui sont conçus pour travailler un serpent dans le tuyau dans l’une ou l’autre direction. Les nettoyages bidirectionnels se trouvent souvent dans les latéraux ou à proximité d’une limite de propriété.');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('06', 'dischargeStructure', 'déversoir', 'Un compteur est une installation qui sert à mesurer le volume des eaux usées. En tant qu’installation, un compteur joue le rôle d’une jonction sur le réseau actif.');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('07', 'meter', 'compteur', 'Un compteur est une installation qui sert à mesurer le volume des eaux usées. En tant qu’installation, un compteur joue le rôle d’une jonction sur le réseau actif.');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('08', 'pump', 'pompe', 'Une pompe est une pièce d’équipement qui déplace, comprime ou modifie la pression d’un fluide, comme l’eau ou l’air, transporté par un canal naturel ou artificiel. Les types de pompes comprennent les pompes axiales, centrifuges, centrifuges, à jet, à piston, rotatives, à vis et à turbine.');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('09', 'regulator', 'régulateur', 'Un régulateur est un dispositif utilisé dans les réseaux d’égouts unitaires pour contrôler ou réguler le débit dérivé.');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('10', 'scadaSensor', 'capteur SCADA', 'Le capteur SCADA est une fonction utilisée pour mesurer à distance l’état des composants du réseau dans le cadre d’un système de contrôle de supervision et d’acquisition de données (SCADA). Les systèmes SCADA fournissent des alarmes, des réponses, l’acquisition de données et le contrôle pour les systèmes de collecte et de distribution. Les opérateurs utilisent le système SCADA pour surveiller et ajuster les processus et les installations.');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('11', 'thrustProtection', 'régulateur de pression', 'La protection contre la poussée représente un type de protecteur de ligne qui est utilisé pour empêcher le mouvement des tuyaux. La protection contre la poussée est généralement mise en œuvre sous forme de blocs de poussée (masses de béton) qui sont placés dans les coudes et autour des structures des vannes. Les types de protection de poussée comprennent l’ancrage, le blocage, l’homme mort et le coup de pied.');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('12', 'tideGate', 'valve anti retour', 'Une valve anti retour est un dispositif utilisé dans les réseaux d’égouts et d’eaux pluviales qui est suspendu à une charnière horizontale à oscillation libre et qui est habituellement placé à l’extrémité d’une conduite, se déversant dans un plan d’eau dont l’élévation de surface varie. Cette pièce d’équipement est également appelée une vanne de retenue, une vanne à clapet ou une vanne de contrôle.');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('13', 'sewerNode', 'noeud de réseau d’assainissement', '');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('14', 'connection', 'raccordement', '');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('15', 'specificStructure', 'structure spécifique', '');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('16', 'mechanicAndElectromechanicEquipment', 'équipement mécanique et électromécanique', '');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('17', 'rainwaterCollector', 'collecteur d’eaux pluviales', '');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('18', 'watertankOrChamber', 'réservoir à eau ou chambre d’équilibre', '');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('19', 'valve', 'vanne', '');
+INSERT INTO a_stardt."SewerAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('20', 'autre', 'autre', '');
 
 COMMENT ON TABLE a_stardt."SewerAppurtenanceTypeValue" IS
-'Code permettant de décrire .';
+'Code permettant de décrire le type d’accessoire pour un réseau d’assainissement.';
 
 
 -- ---------------------------------
--- Classe : WaterAppurtenanceTypeValue
+-- Classe : WaterAppurtenanceTypeValue = Type d'accessoire Reseau Eau Potable = 2.12. (Gris / liste de code Inspire) (pour 3.5.3.2. Accessoire)
 -- ---------------------------------
 
 -- Table: WaterAppurtenanceTypeValue
@@ -890,7 +838,8 @@ COMMENT ON TABLE a_stardt."SewerAppurtenanceTypeValue" IS
 CREATE TABLE a_stardt."WaterAppurtenanceTypeValue"
 (
   code character varying(2) unique,
-  valeur character varying(13),
+  valeur character varying(1),
+  valeurfr character varying(1),
   definition character varying(255),
   CONSTRAINT "WaterAppurtenanceTypeValue_pkey" PRIMARY KEY (code)
 )
@@ -898,116 +847,84 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('01', 'anode', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('02', 'clearWell', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'controlValve', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'fitting', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'hydrant', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'junction', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'lateralPoint', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'meter', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'pump', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'pumpStation', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'samplingStation', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'scadaSensor', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'storageBasin', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('01', 'storageFacility', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('02', 'surgeReliefTank', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'systemValve', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'thrustProtection', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'treatmentPlant', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'well', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'pressureRelieveValve', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'airRelieveValve', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'checkValve', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'waterExhaustPoint', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'waterServicePoint', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'fountain', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'pressureController', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'vent', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'recoilCheckValve', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'fireHydrant', '');
-INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'waterDischargePoint', '');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('01', 'anode', 'anode', 'Une anode est une caractéristique (plus précisément, un mécanisme électrique) qui est appliquée aux composants du système pour prévenir la rouille, les piqûres et la corrosion des surfaces métalliques qui sont en contact avec l’eau ou le sol. Un courant basse tension est appliqué à l’eau ou au sol en contact avec le métal, de telle sorte que leLa force électromotrice rend le composant métallique cathodique. La corrosion est concentrée sur les anodes plutôt que sur les composants associés (et protégés) du système d’eau. Ce type de corrosion peut se produire dans les tuyaux en cuivre, en acier, en acier inoxydable, en fonte et en fonte ductile.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('02', 'clearWell', 'puits de décantation', 'Un puits de décantation est un réservoir fermé qui est associé à une station detraitement. Des puits clairs sont utilisés pour stocker de l’eau filtrée d’une capacité suffisante pour éviter de devoir faire varier le débit de filtration en fonction des variations de la demande. Des puits transparents sont également utilisés pour fournir le temps de contact avec le chlore pour la désinfection. Les pompes sont utilisées pour acheminer l’eau du puits clair à la station de traitement ou au réseau de distribution.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('03', 'controlValve', 'vanne de régulation', 'Les vannes de régulation représentent un ensemble de vannes qui fonctionnent d’une manière particulière. Il existe trois types fondamentaux de vannes de contrôle : le contrôle du reflux, le contrôle de l’air et l’altitude.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('04', 'fitting', 'raccord', 'Le raccord représente la facilité trouvée au niveau du joint entre deux lignes où une transition d’une sorte ou d’une autre doit se produire. Les dispositifs de raccordement de base entre les tuyaux ; les raccords sont rarement utilisés pour contrôler l’écoulement de l’eau dans le réseau.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('05', 'hydrant', 'prise d’eau', 'Une prise d’eau permet aux sapeurs-pompiers d’attacher des lances d’incendie au réseau de distribution. Les prise d’eau ont également des utilisations secondaires qui comprennent le rinçage des conduites principales et des branchements latéraux, le remplissage des camions-citernes et la fourniture d’une source d’eau temporaire pour les travaux de construction.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('06', 'junction', 'raccordement', 'Le raccordement est un nœud du réseau d’eau où deux ou plusieurs conduites se combinent, ou un point où la consommation d’eau est attribuée et définie comme la demande.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('07', 'lateralPoint', 'point latéral', 'Un point latéral représente l’emplacement du raccordement entre le client et le réseau de distribution.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('08', 'meter', 'compteur', 'Un compteur est une installation qui sert à mesurer la consommation d’eau (volume). En tant qu’installation, un compteur joue le rôle d’une jonction sur le réseau actif.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('09', 'pump', 'pompe', 'Une pompe est une pièce d’équipement qui déplace, comprime ou modifie la pression d’un fluide, comme l’eau ou l’air, transporté par un canal naturel ou artificiel.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('10', 'pumpStation', 'station de pompage', 'Une station de pompage est une installation permettant de pomper de l’eau sur le réseau pour la transporter vers une autre partie du réseau (pompe de relevage).');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('11', 'samplingStation', 'point de prélèvement', 'Un point de prélèvement est une installation utilisée pour prélever des échantillons d’eau. Les stations d’échantillonnage peuvent être des dispositifs d’échantillonnage dédiés ou d’autres dispositifs du système où l’on peut obtenir un échantillon.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('12', 'scadaSensor', 'capteur SCADA', 'Le capteur SCADA est une fonction utilisée pour mesurer à distance l’état des composants du réseau dans le cadre d’un système de contrôle de supervision et d’acquisition de données (SCADA). Les systèmes SCADA fournissent des alarmes, des réponses, l’acquisition de données et le contrôle pour les systèmes de collecte et de distribution. Les opérateurs utilisent le système SCADA pour surveiller et ajuster les processus et les installations.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('13', 'storageBasin', 'bassin de rétention', 'Un bassin de retenue représente une zone fermée artificiellement d’une rivière ou d’un port conçue de manière à ce que le niveau d’eau ne soit pas affecté par les changements de marée.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('14', 'storageFacility', 'installation de stockage', 'Entrepôt fermé.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('15', 'surgeReliefTank', 'réservoir de compensation', 'Un réservoir de compensation de surtension est une pièce d’équipement utilisée pour absorber les augmentations de pression dans le système d’eau. Les réservoirs de compensation de surtension servent de tampon contre l’étranglement à l’intérieur du système en acceptant l’eau dans un réservoir par l’intermédiaire d’une soupape de pression.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('16', 'systemValve', 'vanne', 'Une vanne de système est une installation installée sur un pipeline ou un orifice dans lequel l’élément de fermeture est soit tourné, soit déplacé transversalement ou longitudinalement dans la voie navigable afin de contrôler ou d’arrêter le débit. Les vannes du système sont utilisées pour réguler la pression, isoler, étrangler le débit, prévenir les retours d’eau et soulager la pression.pression. REMARQUE Les types de vannes du système comprennent les vannes à obturateur, à clapet, à bille, à cône et à papillon. Ces types spécifiques peuvent être classés comme vannes d’isolement.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('17', 'thrustProtection', 'régulateur de pression', 'Une vanne de système est une installation installée sur un pipeline ou un orifice dans lequel l’élément de fermeture est soit tourné, soit déplacé transversalement ou longitudinalement dans la voie navigable afin de contrôler ou d’arrêter le débit. Les vannes du système sont utilisées pour réguler la pression, isoler, étrangler le débit, prévenir les retours d’eau et soulager la pression.pression. REMARQUE Les types de vannes du système comprennent les vannes à obturateur, à clapet, à bille, à cône et à papillon. Ces types spécifiques peuvent être classés comme vannes d’isolement.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('18', 'treatmentPlant', 'station de traitement', 'Station de traitement');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('19', 'well', 'puits', 'Puits');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('20', 'pressureRelieveValve', 'soupape de sécurité', '');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('21', 'airRelieveValve', 'valve de purge d’air', '');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('22', 'checkValve', 'clapet anti retour', '');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('23', 'waterExhaustPoint', 'point de rejet d’eau', '');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('24', 'waterServicePoint', 'point de livriason d’eau', '');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('25', 'fountain', 'fontaine', '');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('26', 'pressureController', 'contrôleur de pression', '');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('27', 'vent', 'aération', '');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('28', 'recoilCheckValve', 'soupape de retenue', '');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('29', 'fireHydrant', 'hydrant', 'Un hydrant permet aux sapeurs-pompiers d’attacher des lances d’incendie au réseau de distribution. Les bornes d’incendie ont également des utilisations secondaires qui comprennent le rinçage des conduites principales et des branchements latéraux, le remplissage des camions-citernes et la fourniture d’une source d’eau temporaire pour les travaux de construction.');
+INSERT INTO a_stardt."WaterAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('30', 'waterDischargePoint', 'point d’évacuation d’eau', '');
 
 COMMENT ON TABLE a_stardt."WaterAppurtenanceTypeValue" IS
-'Code permettant de décrire .';
+'Code permettant de décrire le type d’accessoire pour un réseau d’eau potable.';
 
 
 -- ---------------------------------
--- Classe : ThermalAppurtenanceTypeValue
+-- Classe : OilGasChemicalAppurtenanceTypeValue = Type d'accessoire Reseau Hydrocarbures ou Produits Chimiques = 2.02. (Gris / liste de code Inspire) (pour 3.5.3.2. Accessoire)
 -- ---------------------------------
 
--- Table: ThermalAppurtenanceTypeValue
---DROP TABLE if exists a_stardt."ThermalAppurtenanceTypeValue" cascade;
-CREATE TABLE a_stardt."ThermalAppurtenanceTypeValue"
+-- Table: OilGasChemicalAppurtenanceTypeValue
+--DROP TABLE if exists a_stardt."OilGasChemicalAppurtenanceTypeValue" cascade;
+CREATE TABLE a_stardt."OilGasChemicalAppurtenanceTypeValue"
 (
   code character varying(2) unique,
-  valeur character varying(13),
+  valeur character varying(1),
+  valeurfr character varying(1),
   definition character varying(255),
-  CONSTRAINT "ThermalAppurtenanceTypeValue_pkey" PRIMARY KEY (code)
+  CONSTRAINT "OilGasChemicalAppurtenanceTypeValue_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."ThermalAppurtenanceTypeValue" (code, valeur, definition) VALUES ('01', 'valve', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('01', 'pump', 'pompe', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('02', 'gasStation', 'station de gaz', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('03', 'oilGasChemicalsNode', 'noeud de réseau d’hydrocarbures ou de produits chimiques', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('04', 'compression', 'compression', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('05', 'terminal', 'terminal', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('06', 'deliveryPoint', 'point de livraison', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('07', 'frontier', 'frontière', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('08', 'marker', 'marqueur', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('09', 'beacon', 'balise', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('10', 'productionRegion', 'région de production', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('11', 'plant', 'usine', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('12', 'storage', 'stockage', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('13', 'valve', 'vanne', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('14', 'stopper', 'bouchon', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('15', 'sleeve', 'manchon', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('16', 'plug', 'prise de branchement', '');
+INSERT INTO a_stardt."OilGasChemicalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('17', 'tee', 'té', '');
 
-COMMENT ON TABLE a_stardt."ThermalAppurtenanceTypeValue" IS
-'Code permettant de décrire .';
+COMMENT ON TABLE a_stardt."OilGasChemicalAppurtenanceTypeValue" IS
+'Code permettant de décrire le type d’accessoire pour un réseau d’hydrocarbures ou de produits chimiques.';
 
-
--- ---------------------------------
--- Classe : ElectricityAppurtenanceTypeValue
--- ---------------------------------
-
--- Table: ElectricityAppurtenanceTypeValue
---DROP TABLE if exists a_stardt."ElectricityAppurtenanceTypeValue" cascade;
-CREATE TABLE a_stardt."ElectricityAppurtenanceTypeValue"
-(
-  code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
-  CONSTRAINT "ElectricityAppurtenanceTypeValue_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('01', 'capacitorControl', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('02', 'connectionBox', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'correctingEquipment', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'deliveryPoint', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'dynamicProtectiveDevice', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'fuse', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'generator', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'loadTapChanger', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'mainStation', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'netStation', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'networkProtector', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'openPoint', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'primaryMeter', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('01', 'recloserElectronicControl', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('02', 'recloserHydraulicControl', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'regulatorControl', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'relayControl', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'sectionalizerElectronicControl', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'sectionalizerHydraulicControl', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'streetLight', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'subStation', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'switch', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'transformer', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'voltageRegulator', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'detectionEquipment', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'monitoringAndControlEquipment', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'ras', '');
-INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'junctionBox', '');
-
-COMMENT ON TABLE a_stardt."ElectricityAppurtenanceTypeValue" IS
-'Code permettant de décrire .';
 
 
 -- ---------------------------------
--- Classe : TelecommunicationsAppurtenanceTypeValue
+-- Classe : TelecommunicationsAppurtenanceTypeValue = Type d'accessoire Reseau de télécommunication = 2.07. (Gris / liste de code Inspire) (pour 3.5.3.2. Accessoire)
 -- ---------------------------------
 
 -- Table: TelecommunicationsAppurtenanceTypeValue
@@ -1015,40 +932,226 @@ COMMENT ON TABLE a_stardt."ElectricityAppurtenanceTypeValue" IS
 CREATE TABLE a_stardt."TelecommunicationsAppurtenanceTypeValue"
 (
   code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
+  valeur character varying(1),
+  valeurfr character varying(1),
+  definition character varying(1),
   CONSTRAINT "TelecommunicationsAppurtenanceTypeValue_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('01', 'antenna', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('02', 'copperMaintenanceLoop', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'copperRepeater', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'digitalCrossConnect', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'digitalLoopCarrier', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'exchange', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'fiberInterconnect', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'jointClosure', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'loadCoil', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'mainDistributionFrame', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'multiplexer', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'opticalMaintenanceLoop', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'opticalRepeater', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('01', 'patchPanel', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('02', 'spliceClosure', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'splitter', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'terminal', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'termination', '');
-INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, definition) VALUES ('99', 'noticeBoard', '');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('01', 'antenna', 'antenne', 'Une antenne (ou parabole) est un transducteur qui transmet ou reçoit des ondes électromagnétiques. En d’autres termes, les antennes convertissent le rayonnement électromagnétique en courant électrique, ou vice versa.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('02', 'copperMaintenanceLoop', 'boucle locale de maintenance', 'Une boucle de maintenance est une bobine de câble de cuivre mou qui est utilisée pour supporter les futures activités d’assemblage ou d’entretien.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('03', 'copperRepeater', 'répéteur en cuivre', 'Un répéteur en cuivre est un équipement de conditionnement de ligne en cuivre qui amplifie le signal d’entrée analogique ou numérique.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('04', 'digitalCrossConnect', 'répartiteur numérique (DXC)', 'Un répéteur en cuivre est un équipement de conditionnement de ligne en cuivre qui amplifie le signal d’entrée analogique ou numérique.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('05', 'digitalLoopCarrier', 'portage à boucle numérique (DLC)', 'Une porteuse de boucle numérique est un dispositif qui multiplexe un signal optique en plusieurs signaux numériques de niveau inférieur. Les fibres des câbles sont connectées aux ports de signalisation de cet équipement.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('06', 'exchange', 'echangeur', 'Une porteuse de boucle numérique est un dispositif qui multiplexe un signal optique en plusieurs signaux numériques de niveau inférieur. Les fibres des câbles sont connectées aux ports de signalisation de cet équipement.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('07', 'fiberInterconnect', 'interconnection de fibre', 'Une interconnexion par fibre optique met fin à des fibres individuelles ou établit une connexion entre deux ou plusieurs câbles à fibres optiques. Les fibres des câbles sont connectées aux ports de signalisation de l’équipement.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('08', 'jointClosure', 'fermeture', 'Une fermeture de joint de protection pour les joints de câbles en cuivre ou en fibre optique. Un joint de câble se compose de conducteurs épissés et d’un obturateur.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('09', 'loadCoil', 'bobine de charge', 'Une bobine de charge est un équipement de conditionnement de ligne en cuivre. Les appels téléphoniques vocaux standard se dégradent sensiblement lorsque la partie en cuivre d’une ligne téléphonique est supérieure à 5km de long. Afin de rétablir la qualité d’appel, des bobines de charge sont insérées à des intervalles spécifiques le long de la boucle.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('10', 'mainDistributionFrame', 'Répartiteur téléphonique (MDF)', 'Un répartiteur principal se trouve souvent à la centrale locale et sert à terminer les câbles de cuivre qui partent du site du client. Le cadre permet à ces câbles d’être connectés en croix à l’aide de cordons de brassage à d’autres équipements tels qu’un concentrateur ou un interrupteur.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('11', 'multiplexer', 'multiplexeur', 'Un multiplexeur est un dispositif qui combine plusieurs entrées dans un signal agrégé qui doit être transporté par un seul canal de transmission. Les fibres des câbles sont connectées aux ports de signalisation de cet équipement.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('12', 'opticalMaintenanceLoop', 'boucle de maintenance optique', 'Une boucle de maintenance optique est une bobine de câble à fibre souple qui est utilisée pour soutenir les futures activités de raccordement ou d’entretien.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('13', 'opticalRepeater', 'répétiteur optique', 'Un répétiteur optique est un dispositif qui reçoit un signal optique, l’amplifie (ou, dans le cas d’un signal numérique, le reforme, le reforme ou le reconstruit autrement) et le retransmet comme signal optique. Les fibres des câbles sont connectées aux ports de signalisation de cet équipement.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('14', 'patchPanel', 'panneau de brassage', 'Un panneau de brassage est un dispositif où des connexions sont établies entre les fibres entrantes et sortantes. Les fibres des câbles sont connectées aux ports de signalisation de cet équipement.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('15', 'spliceClosure', 'fermeture d’épissure', 'Une fermeture à épissure est généralement un boîtier résistant aux intempéries, généralement fait de plastique résistant, qui enveloppe la zone exposée entre les câbles épissés, c’est-à-dire là où les gaines ont été retirées pour exposer les différents supports de transmission, optiques ou métalliques, à joindre. La fermeture contient généralement un dispositif ou un moyen pour maintenir la continuité des éléments de résistance à la traction des câbles impliqués, et peut également maintenir la continuité électrique de l’armure métallique, et/ou fournir une connectivité externe à cette armure pour la mise à la terre électrique. Dans le cas des câbles à fibres optiques, il contient également un organiseur d’épissure pour faciliter le processus d’épissure et protéger les fibres exposées des dommages mécaniques. En plus des joints d’étanchéité à ses joints et aux points d'entrée du câble, la fermeture de l’épissure peut être remplie d'un encapsulage pour retarder davantage l'entrée de l’eau.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('16', 'splitter', 'répartiteur', 'Un séparateur est un dispositif de couplage de transmission permettant d’échantillonner séparément (à travers une perte de couplage connue) soit l’onde avant (incidente) soit l’onde arrière (réfléchie) d’une ligne de transmission. Les fibres des câbles sont connectées aux ports de signalisation de cet équipement.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('17', 'terminal', 'borne', 'Les bornes sont du matériel d’usine en boucle, spécialement conçu pour faciliter le branchement et le débranchement des câbles de distribution, de branchement ou de service vers et depuis les paires de câbles à un endroit particulier. Les bornes sont une classe d’équipement qui établit le point final d’une section du réseau de transport entre le CO et le client.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('18', 'termination', 'terminaison', 'Les terminaisons sont une classe de caractéristiques génériques pour les points d’extrémité des câbles. Ils peuventêtre considérés comme similaires aux chutes de service dans les bâtiments. Ils représentent un point où le réseau de la compagnie de téléphone se termine et se connecte avec le câblage chez le client.');
+INSERT INTO a_stardt."TelecommunicationsAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('19', 'noticeBoard', 'panneau d’affichage', '');
 
 COMMENT ON TABLE a_stardt."TelecommunicationsAppurtenanceTypeValue" IS
-'Code permettant de décrire .';
+'Code permettant de décrire le type d’accessoire pour un réseau de Télécommunication.';
 
 
 -- ---------------------------------
--- Classe : TypeInfoSupplemenataireValue
+-- Classe : ThermalAppurtenanceTypeValue = Type d'accessoire Reseau de chaleur = 2.08. (Gris / liste de code Inspire) (pour 3.5.3.2. Accessoire)
+-- ---------------------------------
+
+-- Table: ThermalAppurtenanceTypeValue
+--DROP TABLE if exists a_stardt."ThermalAppurtenanceTypeValue" cascade;
+CREATE TABLE a_stardt."ThermalAppurtenanceTypeValue"
+(
+  code character varying(2) unique,
+  valeur character varying(1),
+  valeurfr character varying(1),
+  definition character varying(1),
+  CONSTRAINT "ThermalAppurtenanceTypeValue_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO a_stardt."ThermalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('01', 'valve', 'vanne', 'Vanne');
+INSERT INTO a_stardt."ThermalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('02', 'tee', 'té', 'Tés (droit / à saut / parallèle / droit-Vanne purge)');
+INSERT INTO a_stardt."ThermalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('03', 'fixedPoint', 'point fixe', 'Point fixe');
+INSERT INTO a_stardt."ThermalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('04', 'bend', 'coude', 'Coude');
+INSERT INTO a_stardt."ThermalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('05', 'reducing', 'réduction', 'Réduction');
+INSERT INTO a_stardt."ThermalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('06', 'compensator', 'compensateur', 'Compensateur');
+INSERT INTO a_stardt."ThermalAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('07', 'welding', 'soudure', 'Soudure');
+
+COMMENT ON TABLE a_stardt."ThermalAppurtenanceTypeValue" IS
+'Code permettant de décrire le type d’accessoire pour un réseau de chaleur.';
+
+
+-- ---------------------------------
+-- Classe : ElectricityAppurtenanceTypeValue = Type d'accessoire Reseau de chaleur = 2.01. (Gris / liste de code Inspire) (pour 3.5.3.2. Accessoire)
+-- ---------------------------------
+
+-- Table: ElectricityAppurtenanceTypeValue
+--DROP TABLE if exists a_stardt."ElectricityAppurtenanceTypeValue" cascade;
+CREATE TABLE a_stardt."ElectricityAppurtenanceTypeValue"
+(
+  code character varying(2) unique,
+  valeur character varying(1),
+  valeurfr character varying(1),
+  definition character varying(255),
+  CONSTRAINT "ElectricityAppurtenanceTypeValue_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('01', 'capacitorControl', 'contrôle de condensateur', 'Le contrôle des capacités est généralement effectué pour atteindre le plus grand nombre possible des objectifs suivants : réduire les pertes dues au courant de charge réactif, réduire la demande en kVA, diminuer la consommation d’énergie des clients, améliorer le profil de tension et augmenter les revenus. La commande indirecte des condensateurs permet également d’allonger la durée de vie de l’équipement en raison de la réduction des contraintes qui s’exercent sur l’équipement.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('02', 'connectionBox', 'boîtier de raccordement', 'Le boîtier de raccordement protège et/ou entoure les circuits électriques et les équipements au sol.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('03', 'correctingEquipment', 'équipement de correction', 'Le boîtier de raccordement protège et/ou entoure les circuits électriques et les équipements au sol.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('04', 'deliveryPoint', 'point de livraison', 'Point où l’énergie électrique est fournie.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('05', 'dynamicProtectiveDevice', 'dispositif de protection dynamique', 'En plus de s’ouvrir lorsqu’un défaut est détecté, les dispositifs de protection dynamiquese referment également pour tenter de rétablir le service. Si le défaut persiste après un nombre prescrit de réenclenchements, l’appareil peut bloquer l’ouverture du circuit. La re-fermeture est conçue pour réduire ou éliminer les effets des défauts temporaires. NOTE Il peut comprendre les sous-types suivants : Disjoncteurs,Interrupteur de défaut, réenclencheurs (monophasés hydrauliques, etc.) et sectionneurs.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('06', 'fuse', 'fusible', 'Les fusibles sont utilisés pour protéger les dispositifs de distribution contre les courants nuisibles. Un fusible est un point intentionnellement affaibli dans le circuit électrique qui ouvre le circuit à un courant prédéterminé qui est maintenu pendant une durée prédéterminée. Les fusibles ne sont pas dynamiques en ce sens qu’ils restent ouverts et ne se referment pas. En interrompant automatiquement le flux d’électricité, un fusible prévient ou limite les dommages causés par une surcharge ou un court-circuit.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('07', 'generator', 'générateur', 'Le groupe électrogène est une source d’alimentation électrique tierce alternative qui alimente le réseau électrique.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('08', 'loadTapChanger', 'commutateur en charge', 'Le commutateur à prises de charge représente des commandes de transformateur de puissance qui modifient le rapport de rotation primaire/secondaire d’un enroulement de transformateur pendant que le transformateur est sous charge pour réguler le flux de courant et minimiser la chute de tension. Des changeurs automatiques de prises de charge dans le transformateur de puissance assurent le contrôle de la tension sur le bus de la sous-station. Les systèmes de commande des régulateurs de tension et des équipements de changement de prises au-delà de la sous-station comportent habituellement un compensateur de chute de ligne pour simuler une chute de tension entre la sous-station et les points du réseau de distribution.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('09', 'mainStation', 'station principale', 'Le commutateur à prises de charge représente des commandes de transformateur de puissance qui modifient le rapport de rotation primaire/secondaire d’un enroulement de transformateur pendant que le transformateur est sous charge pour réguler le flux de courant et minimiser la chute de tension. Des changeurs automatiques de prises de charge dans le transformateur de puissance assurent le contrôle de la tension sur le bus de la sous-station. Les systèmes de commande des régulateurs de tension et des équipements de changement de prises au-delà de la sous-station comportent habituellement un compensateur de chute de ligne pour simuler une chute de tension entre la sous-station et les points du réseau de distribution.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('10', 'netStation', 'station de réseau', 'Station de réseau');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('11', 'networkProtector', 'protecteur de réseau', 'Les transformateurs de réseau se connectent au réseau secondaire par l’intermédiaire d’un protecteur de réseau. Les composants de protection de réseau peuvent être le disjoncteur, les relais, les fusibles de secours et les commandes nécessaires pour déconnecter automatiquement un transformateur du réseau secondaire en réponse à des conditions prédéterminées sur le départ principal ou le transformateur.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('12', 'openPoint', 'connexion disponible', 'Les connexions disponibles contiennent des informations sur une variété de dispositifs isolés et blindés qui relient les câbles haute tension aux appareils, y compris les transformateurs. Pour des raisons de sécurité, les connecteurs séparables et isolés contre les ruptures de charge sont utilisés avec les traversées primaires des transformateurs de distribution submersibles. C'est ce qu'on appelle une configuration de front mort.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('13', 'primaryMeter', 'compteur général', 'Des compteurs généraux sont installés si les clients commerciaux choisissent de recevoir l’électricité à des tensions de distribution, comme 12,5 kV. Les clients résidentiels sont généralement facturés en kilowattheures (kWH) utilisés. Les clients commerciaux et industriels peuvent en outre être facturés pour les frais liés à la demande et les frais liés au facteur de puissance.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('14', 'recloserElectronicControl', 'contrôle électronique du disjoncteur à réenclenchement', 'Les réenclencheurset les sectionneurs isolent les défauts temporaires et permanents des lignes électriques. Les réenclencheurs ouvrent les circuits (déclenchement) en cas de défaut, et les referment après un temps prédéterminé. La caractéristique temps-courant, habituellement exprimée sous forme de courbe, est basée sur les tolérances de température et de fusible et sert à coordonner les opérations du réenclencheur. Les réenclencheurs permettent (généralement) quatre opérations de déclenchement pour éliminer les défauts temporaires.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('15', 'recloserHydraulicControl', 'contrôle hydraulique du disjoncteur àréenclenchement', 'La contrôle hydraulique du disjoncteur est une partie intégrante des réenclencheursmonophasés. Une bobine de déclenchement en série avec la ligne est utilisée pour détecter la surintensité et déclencher l’ouverture des contacts du réenclencheur. Les contacts se ferment après un intervalle prédéfini.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('16', 'regulatorControl', 'contrôle de l’appareil de commande', 'La tension fournie par les régulateurs est changée à l’aide d’un commutateur de changement de prise pour ajuster le nombre d’enroulements secondaires. La charge de ligne peut être réglée de 10 % au-dessus à 10 % en dessous de la tension de ligne normale. Les régulateurs de tension qui contrôlent la tension du réseau de distribution ont une tension nominale de 2,5 kV à 34,5 grd Y kV. La plupart des régulateurs d’alimentation sont conçus en 32 étapes.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('17', 'relayControl', 'contrôle du relais', 'Les systèmes de relais de protection détectent et isolent les défauts. Les relais de phase et de masse temporisés sont coordonnés avec les fusibles et les réenclencheurs situés plus loin sur le circuit. Il s’agit d’unités instantanées avec des TCC inverses pour la coordination avec les fusibles et les réenclencheurs plus en aval. Les relais sont généralement réglés pour déclencher les disjoncteurs d’alimentation et protéger le fusible en cas de défaillances temporaires au-delà du fusible.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('18', 'sectionalizerElectronicControl', 'contrôle électronique du sectionneur', 'Les sectionneurs sont des dispositifs d’ouverture automatique de circuit qui sont installés du côté de la charge des dispositifs d’interruption de défaut et qui comptent leurs opérations de déclenchement de défaut. Les sectionnalisateurs peuvent être réglés pour s’ouvrir après qu’un, deux ou trois comptes aient été détectés avec un intervalle de temps prédéterminé. Les sectionneurs sont utilisés conjointement avec des fusibles et des réenclencheurs et peuvent avoir des dispositifs de retenue du courant d’appel pour prévenir un faux comptage lorsque les lignes sont remises sous tension.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('19', 'sectionalizerHydraulicControl', 'contrôle hydraulique du sectionneur', 'Les contrôles de sectionnement stockent un compteur d’impulsions lorsque le courant d’actionnement minimum tombe à zéro parce qu’un défaut est interrompu par le réenclencheur (ou autre dispositif de protection). Les sectionneurs fonctionnent en conjonctionavec les disjoncteurs et les réenclencheurs pour bloquer le courant de défaut après un nombre prédéterminé (habituellement trois) d’opérations de réenclencheur (déclenchement).');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('20', 'streetLight', 'éclairage public', 'Un éclairage public (ou lampadaire) est une source de lumière élevée sur le bord d’une route, qui est allumée ou allumée à une certaine heure chaque nuit.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('21', 'subStation', 'sous station', 'Une sous-station électrique est un poste auxiliaire d’un réseau de production, de transport et de distribution d’électricité où la tension est transformée de haute à basse ou inversement au moyen de transformateurs. L’énergie électrique peut circuler à travers plusieurs sous-stations entre la centrale et le consommateur, et peut être modifiée en tension en plusieurs étapes. Une sous-station dotée d’un transformateur élévateur augmente la tension tout en diminuant le courant, tandis qu’un transformateur abaisseur diminue la tension tout en augmentant le courant pour la distribution domestique et commerciale.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('22', 'switch', 'interrupteur', 'Un interrupteur déconnecte les circuits à l’intérieur du réseau de distribution et peut être actionné manuellement ou électriquement. Les interrupteurs sont ouverts ou fermés. Les interrupteurs sont essentiels au réseau de distribution électrique pour permettre l’interruption du courant afin de permettre l’entretien du réseau, la réorientation du courant en cas d’urgence ou pour isoler les pannes du réseau. Les commutateurs peuvent être automatisés et commandés à distance grâce au fonctionnement SCADA.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('23', 'transformer', 'transformateur', 'Les transformateurs transfèrent l’énergie électrique d’un circuit à un autre, généralement avec desvaleurs de tension et de courant modifiées au cours du processus.NOTE Les sous-types comprennent : Réseau, aérien monophasé, souterrain monophasé, aérien biphasé, aérien triphasé, souterrain triphasé, escalier et alimentation.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('24', 'voltageRegulator', 'régulateur de tension', 'Les régulateurs de tension font varier la tension d’alimentation c.a. ou la tension de source du client pour maintenir la tension dans les limites souhaitées. La tension fournie par les régulateurs est changée à l’aide d’un commutateur de changement de prise pour ajuster le nombre d’enroulements secondaires. Les interrupteurs de dérivation permettent de retirer un régulateur pour un service normal sans interrompre la charge en aval. NOTE Les sous-types comprennent : Monophasé au plafond, biphasé au plafond, triphasé au plafond, triphasé au plafond, triphasé sur socle.');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('25', 'detectionEquipment', 'système de détection', '');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('26', 'monitoringAndControlEquipment', 'équipement de surveillance et de contrôle', '');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('27', 'ras', 'remontées aérosouterraines', '');
+INSERT INTO a_stardt."ElectricityAppurtenanceTypeValue" (code, valeur, valeurfr, definition) VALUES ('28', 'junctionBox', 'boîte de jonction', '');
+
+COMMENT ON TABLE a_stardt."ElectricityAppurtenanceTypeValue" IS
+'Code permettant de décrire le type d’accessoire pour un réseau électrique.';
+
+
+-- ---------------------------------
+-- Classe : MateriauOuvragePINSValue (Jaune / liste de code) (pour 3.5.2.1. ProtectionInondationSubmersion)
+-- ---------------------------------
+
+-- Table: MateriauOuvragePINSValue
+--DROP TABLE if exists a_stardt."MateriauOuvragePINSValue" cascade;
+CREATE TABLE a_stardt."MateriauOuvragePINSValue"
+(
+  code character varying(2) unique,
+  valeur character varying(11),
+  definition character varying(11),
+  CONSTRAINT "MateriauOuvragePINSValue_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO a_stardt."MateriauOuvragePINSValue" (code, valeur, definition) VALUES ('01', 'remblais', 'Remblais');
+INSERT INTO a_stardt."MateriauOuvragePINSValue" (code, valeur, definition) VALUES ('02', 'palplanches', 'Palplanche');
+INSERT INTO a_stardt."MateriauOuvragePINSValue" (code, valeur, definition) VALUES ('03', 'gabion', 'Gabion');
+INSERT INTO a_stardt."MateriauOuvragePINSValue" (code, valeur, definition) VALUES ('04', 'enrochement', 'Enrochement');
+INSERT INTO a_stardt."MateriauOuvragePINSValue" (code, valeur, definition) VALUES ('99', 'autre', '');
+
+COMMENT ON TABLE a_stardt."MateriauOuvragePINSValue" IS
+'Code permettant de décrire le matériau principal constituant la digue.';
+
+
+-- ---------------------------------
+-- Classe : ProtectionPINSValue  (Jaune / liste de code) (pour 3.5.2.1. ProtectionInondationSubmersion)
+-- ---------------------------------
+
+-- Table: ProtectionPINSValue
+--DROP TABLE if exists a_stardt."ProtectionPINSValue" cascade;
+CREATE TABLE a_stardt."ProtectionPINSValue"
+(
+  code character varying(2) unique,
+  valeur character varying(10),
+  definition character varying(10),
+  CONSTRAINT "ProtectionPINSValue_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO a_stardt."ProtectionPINSValue" (code, valeur, definition) VALUES ('01', 'geotextile', 'Geotextile');
+INSERT INTO a_stardt."ProtectionPINSValue" (code, valeur, definition) VALUES ('02', 'inconnu', '');
+INSERT INTO a_stardt."ProtectionPINSValue" (code, valeur, definition) VALUES ('99', 'autre', '');
+
+COMMENT ON TABLE a_stardt."ProtectionPINSValue" IS
+'Code permettant de décrire la nature de la protection pour un talus.';
+
+
+-- ---------------------------------
+-- Classe : StructureOuvragePINSValue (Jaune / liste de code) (pour 3.5.2.1. ProtectionInondationSubmersion)
+-- ---------------------------------
+
+-- Table: StructureOuvragePINSValue
+--DROP TABLE if exists a_stardt."StructureOuvragePINSValue" cascade;
+CREATE TABLE a_stardt."StructureOuvragePINSValue"
+(
+  code character varying(2) unique,
+  valeur character varying(11),
+  definition character varying(25),
+  CONSTRAINT "StructureOuvragePINSValue_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO a_stardt."StructureOuvragePINSValue" (code, valeur, definition) VALUES ('01', 'remblais', 'Digue remplais (poids)');
+INSERT INTO a_stardt."StructureOuvragePINSValue" (code, valeur, definition) VALUES ('02', 'genie-civil', 'Digue génie civil (béton)');
+INSERT INTO a_stardt."StructureOuvragePINSValue" (code, valeur, definition) VALUES ('99', 'autre', '');
+
+COMMENT ON TABLE a_stardt."StructureOuvragePINSValue" IS
+'Code permettant de décrire le type de la structure de l’ouvrage singulier.';
+
+
+-- ---------------------------------
+-- Classe : TypeOuvragePINSValue (Jaune / liste de code) (pour 3.5.2.1. ProtectionInondationSubmersion)
+-- ---------------------------------
+
+-- Table: TypeOuvragePINSValue
+--DROP TABLE if exists a_stardt."TypeOuvragePINSValue" cascade;
+CREATE TABLE a_stardt."TypeOuvragePINSValue"
+(
+  code character varying(2) unique,
+  valeur character varying(10),
+  definition character varying(9),
+  CONSTRAINT "TypeOuvragePINSValue_pkey" PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+INSERT INTO a_stardt."TypeOuvragePINSValue" (code, valeur, definition) VALUES ('01', 'batardeaux', 'Batardeau');
+INSERT INTO a_stardt."TypeOuvragePINSValue" (code, valeur, definition) VALUES ('02', 'muret', 'Muret');
+INSERT INTO a_stardt."TypeOuvragePINSValue" (code, valeur, definition) VALUES ('03', 'drainage', 'Drainage');
+INSERT INTO a_stardt."TypeOuvragePINSValue" (code, valeur, definition) VALUES ('04', 'perret', 'Perret');
+INSERT INTO a_stardt."TypeOuvragePINSValue" (code, valeur, definition) VALUES ('99', 'autre', 'Autre');
+
+COMMENT ON TABLE a_stardt."TypeOuvragePINSValue" IS
+'Code permettant de décrire le type de l’ouvrage singulier constituant la digue.';
+
+
+-- ---------------------------------
+-- Classe : TypeInfoSupplemenataireValue (Jaune / liste de code) (pour 3.5.3.1. InformationSupplementaire)
 -- ---------------------------------
 
 -- Table: TypeInfoSupplemenataireValue
@@ -1057,7 +1160,7 @@ CREATE TABLE a_stardt."TypeInfoSupplemenataireValue"
 (
   code character varying(2) unique,
   valeur character varying(13),
-  definition character varying(255),
+  definition character varying(1),
   CONSTRAINT "TypeInfoSupplemenataireValue_pkey" PRIMARY KEY (code)
 )
 WITH (
@@ -1066,44 +1169,15 @@ WITH (
 
 INSERT INTO a_stardt."TypeInfoSupplemenataireValue" (code, valeur, definition) VALUES ('01', 'autre', '');
 INSERT INTO a_stardt."TypeInfoSupplemenataireValue" (code, valeur, definition) VALUES ('02', 'croquisProfil', '');
-INSERT INTO a_stardt."TypeInfoSupplemenataireValue" (code, valeur, definition) VALUES ('99', 'coupeTranchée', '');
-INSERT INTO a_stardt."TypeInfoSupplemenataireValue" (code, valeur, definition) VALUES ('99', 'encartDétail', '');
+INSERT INTO a_stardt."TypeInfoSupplemenataireValue" (code, valeur, definition) VALUES ('03', 'coupeTranchée', '');
+INSERT INTO a_stardt."TypeInfoSupplemenataireValue" (code, valeur, definition) VALUES ('04', 'encartDétail', '');
 
 COMMENT ON TABLE a_stardt."TypeInfoSupplemenataireValue" IS
-'Code permettant de décrire .';
+'Code permettant de décrire le type d’information supplémentaire.';
 
 
 -- ---------------------------------
--- Classe : TypeFichierValue
--- ---------------------------------
-
--- Table: TypeFichierValue
---DROP TABLE if exists a_stardt."TypeFichierValue" cascade;
-CREATE TABLE a_stardt."TypeFichierValue"
-(
-  code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
-  CONSTRAINT "TypeFichierValue_pkey" PRIMARY KEY (code)
-)
-WITH (
-  OIDS=FALSE
-);
-
-INSERT INTO a_stardt."TypeFichierValue" (code, valeur, definition) VALUES ('01', 'PNG', '');
-INSERT INTO a_stardt."TypeFichierValue" (code, valeur, definition) VALUES ('02', 'PDF', '');
-INSERT INTO a_stardt."TypeFichierValue" (code, valeur, definition) VALUES ('99', 'JPEG', '');
-INSERT INTO a_stardt."TypeFichierValue" (code, valeur, definition) VALUES ('99', 'TIFF', '');
-INSERT INTO a_stardt."TypeFichierValue" (code, valeur, definition) VALUES ('99', 'DXF', '');
-INSERT INTO a_stardt."TypeFichierValue" (code, valeur, definition) VALUES ('99', 'DWG', '');
-INSERT INTO a_stardt."TypeFichierValue" (code, valeur, definition) VALUES ('99', 'DGN', '');
-
-COMMENT ON TABLE a_stardt."TypeFichierValue" IS
-'Code permettant de décrire .';
-
-
--- ---------------------------------
--- Classe : TypeCoteValue
+-- Classe : TypeCoteValue (Jaune / liste de code) (pour 3.5.3.3. Cote)
 -- ---------------------------------
 
 -- Table: TypeCoteValue
@@ -1111,53 +1185,53 @@ COMMENT ON TABLE a_stardt."TypeFichierValue" IS
 CREATE TABLE a_stardt."TypeCoteValue"
 (
   code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
+  valeur character varying(12),
+  definition character varying(1),
   CONSTRAINT "TypeCoteValue_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."TypeCoteValue" (code, valeur, definition) VALUES ('01', 'ligne', '');
-INSERT INTO a_stardt."TypeCoteValue" (code, valeur, definition) VALUES ('02', 'etiquette', '');
-INSERT INTO a_stardt."TypeCoteValue" (code, valeur, definition) VALUES ('99', 'flèche', '');
-INSERT INTO a_stardt."TypeCoteValue" (code, valeur, definition) VALUES ('99', 'ligneAttache', '');
+INSERT INTO a_stardt."TypeCoteValue" (code, valeur, definition) VALUES ('01', 'ligne', 'Partie  de  côte  sous  forme  de  ligne  (ligne  de  côte ou ligne d’attache)');
+INSERT INTO a_stardt."TypeCoteValue" (code, valeur, definition) VALUES ('02', 'etiquette', 'Partie de côte sous forme d’une étiquette');
+INSERT INTO a_stardt."TypeCoteValue" (code, valeur, definition) VALUES ('03', 'flèche', 'Partie de côte sous forme de flèche');
+INSERT INTO a_stardt."TypeCoteValue" (code, valeur, definition) VALUES ('04', 'ligneAttache', 'Partie de côte sous forme de ligne d’attache');
 
 
 COMMENT ON TABLE a_stardt."TypeCoteValue" IS
-'Code permettant de décrire .';
+'Code permettant de préciser le type d’objet constituant une côte.';
 
 
 -- ---------------------------------
--- Classe : AnnotationTypeValue
+-- Classe : TypeParticulariteValue (Jaune / liste de code) (pour 3.5.3.4. PerimetreParticulier )
 -- ---------------------------------
 
--- Table: AnnotationTypeValue
---DROP TABLE if exists a_stardt."AnnotationTypeValue" cascade;
-CREATE TABLE a_stardt."AnnotationTypeValue"
+-- Table: TypeParticulariteValue
+--DROP TABLE if exists a_stardt."TypeParticulariteValue" cascade;
+CREATE TABLE a_stardt."TypeParticulariteValue"
 (
   code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
-  CONSTRAINT "AnnotationTypeValue_pkey" PRIMARY KEY (code)
+  valeur character varying(15),
+  definition character varying(1),
+  CONSTRAINT "TypeParticulariteValue_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."AnnotationTypeValue" (code, valeur, definition) VALUES ('01', 'repere', '');
-INSERT INTO a_stardt."AnnotationTypeValue" (code, valeur, definition) VALUES ('02', 'fleche', '');
-INSERT INTO a_stardt."AnnotationTypeValue" (code, valeur, definition) VALUES ('99', 'ligne', '');
-INSERT INTO a_stardt."AnnotationTypeValue" (code, valeur, definition) VALUES ('99', 'etiquette', '');
+INSERT INTO a_stardt."TypeParticulariteValue" (code, valeur, definition) VALUES ('01', 'zoneProjet', 'Il s’agit d’une zone dans laquelle des ouvrages sont en construction ou ont été construits mais ne sont pas encore décrits dans la cartographie de l’exploitant.');
+INSERT INTO a_stardt."TypeParticulariteValue" (code, valeur, definition) VALUES ('02', 'zoneExemptionIC', 'Zone où les tronçons qui ne sont pas en classe A sont exemptés d’Investigations Complémentaires.');
+INSERT INTO a_stardt."TypeParticulariteValue" (code, valeur, definition) VALUES ('03', 'zoneNonCouverte', 'Il s’agit d’une zone dans laquelle l’exploitant a identifié qu’un ouvrage était tout ou partiellement absent de sa cartographie');
+INSERT INTO a_stardt."TypeParticulariteValue" (code, valeur, definition) VALUES ('04', 'zoneVigilance', 'Zone pour laquelle il faut se reporter au plan de l’exploitant pour obtenir des détails complémentaires (ex : coupe de tranchée, plan de détail).');
+INSERT INTO a_stardt."TypeParticulariteValue" (code, valeur, definition) VALUES ('05', 'autre', '');
 
-
-COMMENT ON TABLE a_stardt."AnnotationTypeValue" IS
-'Code permettant de décrire .';
+COMMENT ON TABLE a_stardt."TypeParticulariteValue" IS
+'Code permettant de décrire la typologie de la particularité.';
 
 
 -- ---------------------------------
--- Classe : PositionLabelValue
+-- Classe : PositionLabelValue (Jaune / liste de code) (pour 3.5.3.4. PerimetreParticulier )
 -- ---------------------------------
 
 -- Table: PositionLabelValue
@@ -1183,29 +1257,56 @@ COMMENT ON TABLE a_stardt."PositionLabelValue" IS
 
 
 -- ---------------------------------
--- Classe : TypeParticulariteValue
+-- Classe : TypeFichierValue (Jaune / liste de code) (pour ?)
 -- ---------------------------------
 
--- Table: TypeParticulariteValue
---DROP TABLE if exists a_stardt."TypeParticulariteValue" cascade;
-CREATE TABLE a_stardt."TypeParticulariteValue"
+-- Table: TypeFichierValue
+--DROP TABLE if exists a_stardt."TypeFichierValue" cascade;
+CREATE TABLE a_stardt."TypeFichierValue"
 (
   code character varying(2) unique,
-  valeur character varying(13),
-  definition character varying(255),
-  CONSTRAINT "TypeParticulariteValue_pkey" PRIMARY KEY (code)
+  valeur character varying(4),
+  definition character varying(1),
+  CONSTRAINT "TypeFichierValue_pkey" PRIMARY KEY (code)
 )
 WITH (
   OIDS=FALSE
 );
 
-INSERT INTO a_stardt."TypeParticulariteValue" (code, valeur, definition) VALUES ('01', 'autre', '');
-INSERT INTO a_stardt."TypeParticulariteValue" (code, valeur, definition) VALUES ('02', 'zoneProjet', '');
-INSERT INTO a_stardt."TypeParticulariteValue" (code, valeur, definition) VALUES ('99', 'zoneExemptionIC', '');
-INSERT INTO a_stardt."TypeParticulariteValue" (code, valeur, definition) VALUES ('99', 'zoneNonCouverte', '');
+INSERT INTO a_stardt."TypeFichierValue" (code, valeur, definition) VALUES ('01', 'PNG', '');
+INSERT INTO a_stardt."TypeFichierValue" (code, valeur, definition) VALUES ('02', 'PDF', '');
+INSERT INTO a_stardt."TypeFichierValue" (code, valeur, definition) VALUES ('03', 'JPEG', '');
+INSERT INTO a_stardt."TypeFichierValue" (code, valeur, definition) VALUES ('04', 'TIFF', '');
+INSERT INTO a_stardt."TypeFichierValue" (code, valeur, definition) VALUES ('05', 'DXF', '');
+INSERT INTO a_stardt."TypeFichierValue" (code, valeur, definition) VALUES ('06', 'DWG', '');
+INSERT INTO a_stardt."TypeFichierValue" (code, valeur, definition) VALUES ('07', 'DGN', '');
 
-COMMENT ON TABLE a_stardt."TypeParticulariteValue" IS
-'Code permettant de décrire .';
+COMMENT ON TABLE a_stardt."TypeFichierValue" IS
+'Code permettant de décrire le type de fichier.';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
