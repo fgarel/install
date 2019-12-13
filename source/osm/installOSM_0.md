@@ -15,7 +15,7 @@ https://cloud.sagemath.com/projects/c9022f4a-0154-4034-bb05-bf3e56d3e3cd/files/o
 Cependant, dans les explications qui sont sur cloud.sagemath.com, il est question des serveurs publics d'OSM
 
 ## Serveurs Privés
-Ici, nous allons nous concentrer sur la mise en oeuvre d'une instance privée.
+Ici, nous allons nous concentrer sur la mise en œuvre d'une instance privée.
 
 Nous allons distinguer deux parties dans cette documentation :
  - la 1ère partie est consacré à la récupération et au stockage de données,

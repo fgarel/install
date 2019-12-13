@@ -1,0 +1,92 @@
+## Stretch Qgis : 0102
+# deb https://qgis.org/debian stretch main #010201 - stretch qgis - Latest Release - Release
+# deb https://qgis.org/debian-nightly-release stretch main #010203 - stretch qgis - Latest Release - Nightly build
+# deb https://qgis.org/debian-ltr stretch main #010205 - stretch qgis - LTR - Release
+# deb https://qgis.org/debian-nightly stretch main #010209 - stretch qgis - Developpement - Nightly build
+
+## Buster Qgis : 0202
+# deb https://qgis.org/debian buster main #020201 - buster qgis - Latest Release - Release
+# deb https://qgis.org/debian-nightly-release buster main #020203 - buster qgis - Latest Release - Nightly build
+# deb https://qgis.org/debian-ltr buster main #020205 - buster qgis - LTR - Release
+# deb https://qgis.org/debian-nightly buster main #020209 - buster qgis - Developpement - Nightly build
+
+## Bullseye Qgis : 0302
+# deb https://qgis.org/debian bullseye main #030201 - bullseye qgis - Latest Release - Release
+# deb https://qgis.org/debian-nightly-release bullseye main #030203 - bullseye qgis - Latest Release - Nightly build
+# deb https://qgis.org/debian-ltr bullseye main #030205 - bullseye qgis - LTR - Release
+# deb https://qgis.org/debian-nightly bullseye main #030209 - bullseye qgis - Developpement - Nightly build
+
+
+
+## Zesty Qgis : 0102
+# deb https://qgis.org/debian zesty main #010201 - zesty qgis - Latest Release 2.18.x - Release
+# deb https://qgis.org/ubuntugis zesty main #010202 - zesty qgis - Latest Release 2.18.x - Version avec dépendances
+# deb https://qgis.org/debian-nightly-release zesty main #010203 - zesty qgis - Latest Release 2.18.x - Nightly build
+# deb https://qgis.org/ubuntugis-nightly-release zesty main #010204 - zesty qgis - Latest Release 2.18.x - Nightly build avec dépendances
+# deb https://qgis.org/debian-ltr zesty main #010205 - zesty qgis - LTR 2.14.x - Release
+# deb https://qgis.org/ubuntugis-ltr zesty main #010206 - zesty qgis - LTR 2.14.x - Version avec dépendances
+# deb https://qgis.org/ubuntugis-nightly-ltr zesty main #010208 - zesty qgis - LTR 2.14.x - Nightly build avec dépendances
+# deb https://qgis.org/debian-nightly zesty main #010209 - zesty qgis - Developpement 2.99.x - Nightly build
+# deb https://qgis.org/ubuntugis-nightly zesty main #010210 - zesty qgis - Developpement 2.99.x - Nightly build avec dépendances
+
+## Artful Qgis : 0202
+# deb https://qgis.org/debian artful main #020201 - artful qgis - Latest Release 3.0.x - Release
+# deb https://qgis.org/ubuntugis artful main #020202 - artful qgis - Latest Release 3.0.x - Version avec dépendances
+# deb https://qgis.org/debian-nightly-release artful main #020203 - artful qgis - Latest Release 3.0.x - Nightly build
+# deb https://qgis.org/ubuntugis-nightly-release artful main #020204 - artful qgis - Latest Release 3.0.x - Nightly build avec dépendances
+# deb https://qgis.org/debian-ltr artful main #020205 - artful qgis - LTR 2.18.x - Release
+# deb https://qgis.org/ubuntugis-ltr artful main #020206 - artful qgis - LTR 2.18.x - Version avec dépendances
+# deb https://qgis.org/debian-nightly-ltr artful main #020207 - artful qgis - LTR 2.18.x - Nightly build
+# deb https://qgis.org/ubuntugis-nightly-ltr artful main #020208 - artful qgis - LTR 2.18.x - Nightly build avec dépendances
+# deb https://qgis.org/debian-nightly artful main #020209 - artful qgis - Developpement 2.99.x - Nightly build
+# deb https://qgis.org/ubuntugis-nightly artful main #020210 - artful qgis - Developpement 2.99.x - Nightly build avec dépendances
+
+## Bionic Qgis : 0302
+# deb https://qgis.org/debian bionic main #030201 - bionic - Latest Release 3.0.x - Release
+# deb https://qgis.org/ubuntugis bionic main #030202 - bionic - Latest Release 3.0.x - Version avec dépendances
+# deb https://qgis.org/debian-nightly-release bionic main #030203 - bionic - Latest Release 3.0.x - Nightly build
+# deb https://qgis.org/ubuntugis-nightly-release bionic main #030204 - bionic - Latest Release 3.0.x - Nightly build avec dépendances
+# deb https://qgis.org/debian-ltr bionic main #030205 - bionic - LTR 2.18.x - Release
+# deb https://qgis.org/ubuntugis-ltr bionic main #030206 - bionic - LTR 2.18.x - Version avec dépendances
+# deb https://qgis.org/debian-nightly-ltr bionic main #030207 - bionic - LTR 2.18.x - Nightly build
+# deb https://qgis.org/ubuntugis-nightly-ltr bionic main #030208 - bionic - LTR 2.18.x - Nightly build avec dépendances
+# deb https://qgis.org/debian-nightly bionic main #030209 - bionic - Developpement Version - Nightly build
+# deb https://qgis.org/ubuntugis-nightly bionic main #030210 - bionic - Developpement Version - Nightly build avec dépendances
+
+## Cosmic Qgis : 0402
+# deb https://qgis.org/debian cosmic main #040231 - cosmic qgis - Latest Release 3.0.x - Release
+# deb https://qgis.org/ubuntugis cosmic main #040232 - cosmic qgis - Latest Release 3.0.x - Version avec dépendances
+# deb https://qgis.org/debian-nightly-release cosmic main #040233 - cosmic qgis - Latest Release 3.0.x - Nightly build
+# deb https://qgis.org/ubuntugis-nightly-release cosmic main #040234 - cosmic qgis - Latest Release 3.0.x - Nightly build avec dépendances
+# deb https://qgis.org/debian-ltr cosmic main #040235 - cosmic qgis - LTR 2.18.x - Release
+# deb https://qgis.org/ubuntugis-ltr cosmic main #040236 - cosmic qgis - LTR 2.18.x - Version avec dépendances
+# deb https://qgis.org/debian-nightly-ltr cosmic main #040237 - cosmic qgis - LTR 2.18.x - Nightly build
+# deb https://qgis.org/ubuntugis-nightly-ltr cosmic main #040238 - cosmic qgis - LTR 2.18.x - Nightly build avec dépendances
+# deb https://qgis.org/debian-nightly cosmic main #040239 - cosmic qgis - Developpement Version - Nightly build
+# deb https://qgis.org/ubuntugis-nightly cosmic main #040240 - cosmic qgis - Developpement Version - Nightly build avec dépendances
+
+## Disco Qgis : 0502
+# deb https://qgis.org/debian disco main #050201 - disco qgis - Latest Release
+# deb https://qgis.org/ubuntugis disco main #050202 - disco qgis - Latest Release - Version avec dépendances
+# deb https://qgis.org/debian-nightly-release disco main #050203 - disco qgis - Latest Release - Nightly build
+# deb https://qgis.org/ubuntugis-nightly-release disco main #050204 - disco qgis - Latest Release - Nightly build avec dépendances
+# deb https://qgis.org/debian-ltr disco main #050205 - disco qgis - LTR - Release
+# deb https://qgis.org/ubuntugis-ltr disco main #050206 - disco qgis - LTR - Version avec dépendances
+# deb https://qgis.org/debian-nightly-ltr disco main #050207 - disco qgis - LTR - Nightly build
+# deb https://qgis.org/ubuntugis-nightly-ltr disco main #050208 - disco qgis - LTR - Nightly build avec dépendances
+# deb https://qgis.org/debian-nightly disco main #050209 - disco qgis - Developpement Version - Nightly build
+# deb https://qgis.org/ubuntugis-nightly disco main #050210 - disco qgis - Developpement Version - Nightly build avec dépendances
+
+
+## Eoan Qgis : 0602
+deb https://qgis.org/debian eoan main #060201 - eoan qgis - Latest Release
+# deb https://qgis.org/ubuntugis eoan main #060202 - eoan qgis - Latest Release - Version avec dépendances
+deb https://qgis.org/debian-nightly-release eoan main #060203 - eoan qgis - Latest Release - Nightly build
+# deb https://qgis.org/ubuntugis-nightly-release eoan main #060204 - eoan qgis - Latest Release - Nightly build avec dépendances
+# deb https://qgis.org/debian-ltr eoan main #060205 - eoan qgis - LTR - Release
+# deb https://qgis.org/ubuntugis-ltr eoan main #060206 - eoan qgis - LTR - Version avec dépendances
+# deb https://qgis.org/debian-nightly-ltr eoan main #060207 - eoan qgis - LTR - Nightly build
+# deb https://qgis.org/ubuntugis-nightly-ltr eoan main #060208 - eoan qgis - LTR - Nightly build avec dépendances
+# deb https://qgis.org/debian-nightly eoan main #060209 - eoan qgis - Developpement Version - Nightly build
+# deb https://qgis.org/ubuntugis-nightly eoan main #060210 - eoan qgis - Developpement Version - Nightly build avec dépendances
+

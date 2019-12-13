@@ -1,0 +1,7 @@
+README.md
+setup.py
+gspreadsheet_fdw/__init__.py
+gspreadsheet_fdw.egg-info/PKG-INFO
+gspreadsheet_fdw.egg-info/SOURCES.txt
+gspreadsheet_fdw.egg-info/dependency_links.txt
+gspreadsheet_fdw.egg-info/top_level.txt

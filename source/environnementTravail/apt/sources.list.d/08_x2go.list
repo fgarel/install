@@ -1,0 +1,11 @@
+## Cosmic X2go : 0408
+# deb http://ppa.launchpad.net/x2go/stable/ubuntu cosmic main #040801 - cosmic - x2go stable
+# deb http://ppa.launchpad.net/x2go/ppa/ubuntu cosmic main #040802 - cosmic - x2go nightly
+
+## Disco X2go : 0508
+# deb http://ppa.launchpad.net/x2go/stable/ubuntu disco main #050801 - disco - x2go stable
+# deb http://ppa.launchpad.net/x2go/ppa/ubuntu disco main #050802 - disco - x2go nightly
+
+## Eoan X2go : 0608
+# deb http://ppa.launchpad.net/x2go/stable/ubuntu eoan main #060801 - eoan - x2go stable
+# deb http://ppa.launchpad.net/x2go/ppa/ubuntu eoan main #060802 - eoan - x2go nightly

@@ -34,42 +34,125 @@ echo "# --------------------------- #"
 echo "#"
 
 
-echo "# On installe d'abord l'extension hstore sur la base $database"
+echo "# On installe d'abord les extensions hstore et postgis sur la base $database"
 echo "#"
-echo "sudo -u postgres \\"
-echo "     psql --username=postgres \\"
-echo "          --dbname=$database \\"
-echo "          -c \"CREATE EXTENSION hstore;\""
-      sudo -u postgres \
-           psql --username=postgres \
-                --dbname=$database \
-                -c "CREATE EXTENSION hstore;"
+echo "# Suppression des extensions : - hstore"
+echo "sudo \\"
+echo "    -u postgres \\"
+echo "    psql \\"
+echo "        --host=$datahost \\"
+echo "        --dbname=$database \\"
+echo "        --username=postgres \\"
+echo '        -c "DROP EXTENSION hstore;"'
+      sudo \
+          -u postgres \
+          psql \
+              --host=$datahost \
+              --dbname=$database \
+              --username=postgres \
+              -c "DROP EXTENSION hstore;"
+echo "# Suppression des extensions : - postgis_topology"
+echo "sudo \\"
+echo "    -u postgres \\"
+echo "    psql \\"
+echo "        --host=$datahost \\"
+echo "        --dbname=$database \\"
+echo "        --username=postgres \\"
+echo '        -c "DROP EXTENSION postgis_topology CASCADE;"'
+      sudo \
+          -u postgres \
+          psql \
+              --host=$datahost \
+              --dbname=$database \
+              --username=postgres \
+              -c "DROP EXTENSION postgis_topology CASCADE;"
+echo "# Suppression des extensions : - postgis"
+echo "sudo \\"
+echo "    -u postgres \\"
+echo "    psql \\"
+echo "        --host=$datahost \\"
+echo "        --dbname=$database \\"
+echo "        --username=postgres \\"
+echo '        -c "DROP EXTENSION postgis CASCADE;"'
+      sudo \
+          -u postgres \
+          psql \
+              --host=$datahost \
+              --dbname=$database \
+              --username=postgres \
+              -c "DROP EXTENSION postgis CASCADE;"
 echo "#"
+echo "# Creation des extensions : - hstore"
+echo "sudo \\"
+echo "    -u postgres \\"
+echo "    psql \\"
+echo "        --host=$datahost \\"
+echo "        --dbname=$database \\"
+echo "        --username=postgres \\"
+echo '        -c "CREATE EXTENSION if not exists hstore;"'
+      sudo \
+          -u postgres \
+          psql \
+              --host=$datahost \
+              --dbname=$database \
+              --username=postgres \
+              -c "CREATE EXTENSION if not exists hstore;"
+echo "# Création des extensions : - postgis"
+echo "sudo \\"
+echo "    -u postgres \\"
+echo "    psql \\"
+echo "        --host=$datahost \\"
+echo "        --dbname=$database \\"
+echo "        --username=postgres \\"
+echo '        -c "CREATE EXTENSION if not exists postgis;"'
+      sudo \
+          -u postgres \
+          psql \
+              --host=$datahost \
+              --dbname=$database \
+              --username=postgres \
+              -c "CREATE EXTENSION if not exists postgis;"
+echo "# Création des extensions : - postgis_topology"
+echo "sudo \\"
+echo "    -u postgres \\"
+echo "    psql \\"
+echo "        --host=$datahost \\"
+echo "        --dbname=$database \\"
+echo "        --username=postgres \\"
+echo '        -c "CREATE EXTENSION if not exists postgis_topology;"'
+      sudo \
+          -u postgres \
+          psql \
+              --host=$datahost \
+              --dbname=$database \
+              --username=postgres \
+              -c "CREATE EXTENSION if not exists postgis_topology;"
 
-# echo "# Dans la base $database, on peut avoir plusieurs schemas"
-# echo "#"
-# echo "# Faire en sorte de travailler dans le schema $dataschema"
-# echo "#"
-# echo "psql \\"
-# echo "     --host=$datahost \\"
-# echo "     --dbname=$database \\"
-# echo "     --username=$datauser \\"
-# echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
-#       psql \
-#            --host=$datahost \
-#            --dbname=$database \
-#            --username=$datauser \
-#            -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
-# echo "psql \\"
-# echo "     --host=$datahost \\"
-# echo "     --dbname=$database \\"
-# echo "     --username=$datauser \\"
-# echo "     -c \"ALTER ROLE $datauser SET search_path TO $dataschema, public;\""
-#       psql \
-#            --host=$datahost \
-#            --dbname=$database \
-#            --username=$datauser \
-#            -c "ALTER ROLE $datauser SET search_path TO $dataschema, public;"
+
+echo "# Dans la base $database, on peut avoir plusieurs schemas"
+echo "#"
+echo "# Faire en sorte de travailler dans le schema $dataschema"
+echo "#"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
 
 echo "#"
 echo "# Puis on execute quelques scripts pour créer des tables dans la base"
@@ -79,6 +162,104 @@ echo "# Des scripts sont prévus pour ça"
 echo "sudo gunzip /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6.sql.gz"
       sudo gunzip /usr/share/doc/osmosis/examples/pgsnapshot_schema_0.6.sql.gz
 echo "#"
+echo "#"
+
+echo "#"
+echo "# Suppression de quelques vues (nodes_vlr, ways_vlr, nodes_cda, ways_cda)"
+echo "#"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo '     -c "drop view if exists nodes_vlr;"'
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "drop view if exists nodes_vlr;"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo '     -c "drop view if exists ways_vlr;"'
+     psql \
+          --host=$datahost \
+          --dbname=$database \
+          --username=$datauser \
+          -c "drop view if exists ways_vlr;"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo '     -c "drop view if exists nodes_cda;"'
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "drop view if exists nodes_cda;"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo '     -c "drop view if exists ways_cda;"'
+     psql \
+          --host=$datahost \
+          --dbname=$database \
+          --username=$datauser \
+          -c "drop view if exists ways_cda;"
+echo "#"
+
+# echo "#"
+# echo "# Suppression et creation de l'extension hstore"
+# echo "#"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo '     -c "DROP EXTENSION hstore;"'
+#       psql \
+#            --host=$datahost \
+#            --dbname=$database \
+#            --username=$datauser \
+#            -c "DROP EXTENSION hstore;"
+# echo "#"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo '     -c "CREATE EXTENSION if not exists hstore;"'
+#       psql \
+#            --host=$datahost \
+#            --dbname=$database \
+#            --username=$datauser \
+#            -c "CREATE EXTENSION if not exists hstore;"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo '     -c "DROP EXTENSION postgis CASCADE;"'
+#      psql \
+#           --host=$datahost \
+#           --dbname=$database \
+#           --username=$datauser \
+#           -c "DROP EXTENSION postgis CASCADE;"
+# echo "#"
+# echo "psql \\"
+# echo "     --host=$datahost \\"
+# echo "     --dbname=$database \\"
+# echo "     --username=$datauser \\"
+# echo '     -c "CREATE EXTENSION if not exists postgis;"'
+#      psql \
+#           --host=$datahost \
+#           --dbname=$database \
+#           --username=$datauser \
+#           -c "CREATE EXTENSION if not exists postgis;"
+# echo "#"
+# echo "#"
+# echo "#"
+
+
+echo "# Execution de script pour le modele de données"
 echo "#"
 echo "psql \\"
 echo "     --host=$datahost \\"
@@ -135,32 +316,31 @@ echo "# ----------------------------------------------------------"
 dataschema='apidb'
 datauser='osmuser'
 
-# echo "# Faire en sorte de travailler dans le schema $dataschema"
-# echo "#"
-# echo "psql \\"
-# echo "     --host=$datahost \\"
-# echo "     --dbname=$database \\"
-# echo "     --username=$datauser \\"
-# echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
-#       psql \
-#            --host=$datahost \
-#            --dbname=$database \
-#            --username=$datauser \
-#            -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
-# echo "psql \\"
-# echo "     --host=$datahost \\"
-# echo "     --dbname=$database \\"
-# echo "     --username=$datauser \\"
-# echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
-#       psql \
-#            --host=$datahost \
-#            --dbname=$database \
-#            --username=$datauser \
-#            -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
-#echo "osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \\"
-#echo '        --write-pgsql host="localhost" database="osm" postgresSchema="apidb" user="osmuser" password="osmuser"'
-#osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \
-#        --write-pgsql host="localhost" database="osm" postgresSchema="apidb" user="osmuser" password="osmuser"
+echo "# Dans la base $database, on peut avoir plusieurs schemas"
+echo "#"
+echo "# Faire en sorte de travailler dans le schema $dataschema"
+echo "#"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
+
 echo "osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \\"
 echo "        --write-pgsql host=\"$datahost\" database=\"$database\" user=\"$datauser\" password=\"$datapass\""
       osmosis --read-pbf /home/fred/Documents/osmosis/poitou-charentes-latest.osm.pbf \
@@ -192,30 +372,33 @@ echo "# http://wiki.openstreetmap.org/wiki/Osm2pgsql"
 echo "# ----------------------------------------------------------"
 
 dataschema='osm2pgsql'
-datauser='www-data'
+datauser='fred'
 
-# echo "# Faire en sorte de travailler dans le schema $dataschema"
-# echo "#"
-# echo "psql \\"
-# echo "     --host=$datahost \\"
-# echo "     --dbname=$database \\"
-# echo "     --username=$datauser \\"
-# echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
-#       psql \
-#            --host=$datahost \
-#            --dbname=$database \
-#            --username=$datauser \
-#            -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
-# echo "psql \\"
-# echo "     --host=$datahost \\"
-# echo "     --dbname=$database \\"
-# echo "     --username=$datauser \\"
-# echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
-#       psql \
-#            --host=$datahost \
-#            --dbname=$database \
-#            --username=$datauser \
-#            -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
+echo "# Faire en sorte de travailler dans le schema $dataschema"
+echo "#"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER DATABASE $database SET search_path TO $dataschema, public;\""
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER DATABASE $database SET search_path TO $dataschema, public;"
+echo "psql \\"
+echo "     --host=$datahost \\"
+echo "     --dbname=$database \\"
+echo "     --username=$datauser \\"
+echo "     -c \"ALTER ROLE \\\"$datauser\\\" SET search_path TO $dataschema, public;\""
+      psql \
+           --host=$datahost \
+           --dbname=$database \
+           --username=$datauser \
+           -c "ALTER ROLE \"$datauser\" SET search_path TO $dataschema, public;"
+
+
+datauser='www-data'
 
 echo "#"
 echo "# Attention il faut se mettre dans le repertoire osmosis pour lancer la commande ...."
@@ -233,7 +416,7 @@ echo '          --slim \'
 echo '          -C 512 \'
 echo '          --number-processes 2 \'
 echo '          --cache-strategy sparse \'
-echo '          -d $database \'
+echo "          -d $database \ "
 #echo '          --style ~/Documents/install/source/openstreetmap-carto-vector-tiles/openstreetmap-carto.style \'
 echo '          --style openstreetmap-carto.style \'
 echo '          poitou-charentes-latest.osm.pbf'

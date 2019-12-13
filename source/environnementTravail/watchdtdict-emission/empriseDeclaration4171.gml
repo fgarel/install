@@ -1,0 +1,1 @@
+<gml:MultiSurface srsName="EPSG:4171">   <gml:surfaceMember><gml:Polygon>   <gml:exterior>    <gml:LinearRing>     <gml:posList srsDimension="2">-1.141449 46.142816 -1.141347 46.142844 -1.141205 46.142595 -1.141325 46.142571 -1.141449 46.142816</gml:posList>    </gml:LinearRing>   </gml:exterior>  </gml:Polygon></gml:surfaceMember> </gml:MultiSurface>

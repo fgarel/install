@@ -1,0 +1,12 @@
+
+## Cosmic neovim : 0405
+# deb http://ppa.launchpad.net/neovim-ppa/stable/ubuntu cosmic main #040501 - cosmic neovim stable - main
+# deb http://ppa.launchpad.net/neovim-ppa/unstable/ubuntu cosmic main #040502 - cosmic neovim unstable - main
+
+## Disco neovim : 0505
+# deb http://ppa.launchpad.net/neovim-ppa/stable/ubuntu disco main #050501 - disco neovim stable - main
+# deb http://ppa.launchpad.net/neovim-ppa/unstable/ubuntu disco main #050502 - disco neovim unstable - main
+
+## Eoan neovim : 0605
+#deb http://ppa.launchpad.net/neovim-ppa/stable/ubuntu eoan main #060501 - eoan neovim stable - main
+# deb http://ppa.launchpad.net/neovim-ppa/unstable/ubuntu eoan main #060502 - eoan neovim unstable - main

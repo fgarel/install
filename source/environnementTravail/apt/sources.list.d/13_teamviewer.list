@@ -1,0 +1,36 @@
+###   TeamViewer DEB repository list
+
+### NOTE: Manual changes to this file
+###        - prevent it from being updated by TeamViewer package updates
+###        - will be lost after using the 'teamviewer repo' command
+###       The original file can be restored with this command:
+###       cp /opt/teamviewer/tv_bin/script/teamviewer.list /etc/apt/sources.list.d/teamviewer.list
+###       which has the same effect as 'teamviewer repo default'
+
+### NOTE: It is preferred to use the following commands to edit this file:
+###       teamviewer repo                - show current repository configuration
+###       teamviewer repo default        - restore default configuration
+###       teamviewer repo disable        - disable the repository
+###       teamviewer repo main [stable]  - make all TeamViewer packages available (default)
+###       teamviewer repo tv14 [stable]  - make TeamViewer 14 packages available
+###                             stable     omit preview and beta releases
+
+
+### Choose stable main to receive updates for TeamViewer 14 and upcoming major releases
+### Choose preview main to receive early updates for TeamViewer 14 and to receive major beta releases
+
+### Choose stable tv14 to receive updates for TeamViewer 14
+### Choose preview tv14 to receive early updates for TeamViewer 14
+
+
+## Disco Teamviewer : 0513
+# deb http://linux.teamviewer.com/deb stable main #051301 - disco teamviewer stable - main
+# deb http://linux.teamviewer.com/deb preview main #051302 - disco teamviewer preview - main
+# deb http://linux.teamviewer.com/deb stable tv14 #051303 - disco teamviewer stable - tv14
+# deb http://linux.teamviewer.com/deb preview tv14 #051304 - disco teamviewer preview - tv14
+
+## Eoan Teamviewer : 0613
+# deb http://linux.teamviewer.com/deb stable main #061301 - eoan teamviewer stable - main
+# deb http://linux.teamviewer.com/deb preview main #061302 - eoan teamviewer preview - main
+# deb http://linux.teamviewer.com/deb stable tv14 #061303 - eoan teamviewer stable - tv14
+# deb http://linux.teamviewer.com/deb preview tv14 #061304 - eoan teamviewer preview - tv14

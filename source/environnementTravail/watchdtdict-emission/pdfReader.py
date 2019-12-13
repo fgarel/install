@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 u"""
@@ -21,7 +21,7 @@ pour la génération de plans pdf.
 import getopt
 import sys
 import subprocess
-#import re
+import re
 #from decimal import Decimal
 
 
@@ -44,8 +44,8 @@ class PdfReader(object):
         self.pdf_filename = pdf_filename
         self.metadata_filename = metadata_filename
         self.typePdf = ''
-        self.filenameGeometry = 'empriseDeclaration4326.gml'
-        self.filenameValidGml = 'empriseDeclarationQgis4326.gml'
+        self.filenameGeometry = 'empriseDeclaration4171.gml'
+        self.filenameValidGml = 'empriseDeclarationQgis4171.gml'
         self.filenameValidShp = 'empriseDeclarationQgis3946.shp'
         self.numeroDict = ''
         self.capaciteImpression = ''
@@ -100,6 +100,17 @@ class PdfReader(object):
              self.pdf_filename, 'document1.pdf'],
             shell=False)
 
+        # p1 = subprocess.Popen(['cat', 'document1.pdf'],
+        #                       stdout=subprocess.PIPE)
+        #
+        # p2 = subprocess.Popen(['iconv',
+        #                        '-f', r'iso8859-1',
+        #                        '-t', r'utf-8',
+        #                        '-'],
+        #                       stdin=p1.stdout,
+        #                       stdout=subprocess.PIPE)
+        # p1.stdout.close()
+
         # 2ème étape : test pour connaitre le type de pdf
         # teleservice reseaux et canalisations :
         # présence de la chaine "EPSG:4171"
@@ -153,35 +164,47 @@ class PdfReader(object):
 
         """
         # 3ème étape : extraction de l'information geographique
-        # cat document1.pdf | \                                                                                              -- NORMAL --
+        #
+        # Attention, cette partie a ete modifiée suite a l'arrivée de la v3
+        # Avant :
+        # cat document1.pdf | \
         #     grep 'EPSG' | \
         #     sed -E -e 's/[^\()]*\(//' \
         #            -e 's/\)[^^\()]*\(//g' \
         #            -e 's/\)[^\()]*//g'
-
+        # Après :
+        #  cat document1.pdf | grep EPSG | sed -E -e 's/[^\()]*\(//' -e 's/\)[^\()]*\(//g' -e 's/\)[^\()]*//g' | head -n1
         p1 = subprocess.Popen(['cat', 'document1.pdf'],
                               stdout=subprocess.PIPE)
         p2 = subprocess.Popen(["grep", "-E",
-                               "-e", r'BMC.*\(A[0-9]\)'],
+                               "-e", r'EPSG'],
                               stdin=p1.stdout,
                               stdout=subprocess.PIPE)
         p1.stdout.close()
-        p3 = subprocess.Popen(["grep", "EPSG"],
-                              stdin=p2.stdout,
-                              stdout=subprocess.PIPE)
-        p2.stdout.close()
-        p4 = subprocess.Popen(['sed', '-E',
+        p3 = subprocess.Popen(['sed', '-E',
                                '-e', r's/[^\()]*\(//',
                                '-e', r's/\)[^\()]*\(//g',
                                '-e', r's/\)[^\()]*//g'],
+                              stdin=p2.stdout,
+                              stdout=subprocess.PIPE)
+        p2.stdout.close()
+        p4 = subprocess.Popen(['head', '-n1'],
                               stdin=p3.stdout,
                               stdout=subprocess.PIPE)
         p3.stdout.close()
+        #print p4.communicate()
+        p5 = subprocess.Popen(['sed', '-E',
+                               '-e', r's/\\r\\n//g'],
+                              stdin=p4.stdout,
+                              stdout=subprocess.PIPE)
+        p4.stdout.close()
 
         # p3.communicate renvoit un tuple : on ne prend que le 1er element
-        chaineType1 = p4.communicate()[0]
+        chaineType1 = p5.communicate()[0][:-1]
+        #print('{}'.format(type(chaineType1)))
         ffile = open(self.filenameGeometry, "w")
-        ffile.write(chaineType1)
+        ffile.write(chaineType1.decode("utf-8"))
+        #print("geometrie initiale = {}".format(chaineType1.decode("utf-8")))
         ffile.close()
         #print "chaineType1 = " + chaineType1
 
@@ -192,6 +215,8 @@ class PdfReader(object):
         #            -e 's/[^\)]*$//g' \
         #            -e 's/\)[^\)\(]*//g' \
         #            -e 's/\(//g'
+        #
+        # cat document1.pdf | grep -E -e '(\([0-9]\)[^\(]*){13}' | sed -E -e 's/[^\()]*\(//' -e 's/\)[^\()]*\(//g' -e 's/\)[^\()]*//g' | head -n1
         p1 = subprocess.Popen(['cat', 'document1.pdf'],
                               stdout=subprocess.PIPE)
         p2 = subprocess.Popen(["grep", "-E",
@@ -214,18 +239,27 @@ class PdfReader(object):
         #p3.stdout.close()
         # p3.communicate renvoit un tuple : on ne prend que le 1er element
         # et en plus, on supprime le dernier caractère
-        chaine = p3.communicate()[0]
-        chaine = chaine[:-1]
-        # on ne prend que la dernière ligne
+        #chaine = p3.communicate()[0]
+        #chaine = chaine[:-1]
+
+        chaine = p3.communicate()[0][:-1]
+        #print('type = {}'.format(type(chaine)))
+        chaine = chaine.decode("utf-8")
+        #print('type = {}'.format(type(chaine)))
+
+        # on ne prend que la première ligne
         splitchaine = chaine.split('\n')
-        #print "chaine = " + chaine
+        #print("chaine = {}".format(chaine))
         #print "derniere ligne = " + splitchaine[-1]
-        self.numeroDict = splitchaine[-1]
-        ##print "Numéro de la DT/DICT = " + self.numeroDict
+        self.numeroDict = splitchaine[0]
+        #print("Numéro de la DT/DICT = {}".format(self.numeroDict))
 
         # 3ème étape suite : capacite d'impression
         # cat document1.pdf | \
         #     grep -E -e 'BMC.*\(A[0-9]\)' | \
+        #     ...
+        #
+        # cat document1.pdf | grep -E -e 'BMC.*\(A[0-9]\)' | sed -E -e 's/[^\()]*\(//' -e 's/\)[^\()]*\(//g' -e 's/\)[^\()]*//g' | head -n1
         p1 = subprocess.Popen(['cat', 'document1.pdf'],
                               stdout=subprocess.PIPE)
         p2 = subprocess.Popen(["grep", "-E",
@@ -242,12 +276,21 @@ class PdfReader(object):
 
         # p3.communicate renvoit un tuple : on ne prend que le 1er element
         # et en plus, on supprime le dernier caractère
-        self.capaciteImpression = p3.communicate()[0][:-1]
-        ##print "Capacité d'impression = " + self.capaciteImpression
+        chaine = p3.communicate()[0][:-1]
+        #print('type = {}'.format(type(chaine)))
+        chaine = chaine.decode("utf-8")
+        #print('type = {}'.format(type(chaine)))
+        splitchaine = chaine.split('\n')
+        self.capaciteImpression = splitchaine[0]
+        #print("Capacité d'impression = {}".format(self.capaciteImpression))
 
         # 3ème étape suite : mail du responsable
         # cat document1.pdf | \
         #     grep -E -e 'BMC.*\(.*\@.*\..*\)' | \
+        #     ...
+        #
+        # cat document1.pdf | grep -E -e 'BMC.*\(.*\@.*\..*\)' | sed -E -e 's/[^\()]*\(//' -e 's/\)[^\()]*\(//g' -e 's/\)[^\()]*//g' | head -n1
+
         p1 = subprocess.Popen(['cat', 'document1.pdf'],
                               stdout=subprocess.PIPE)
         p2 = subprocess.Popen(["grep", "-E",
@@ -264,8 +307,13 @@ class PdfReader(object):
 
         # p3.communicate renvoit un tuple : on ne prend que le 1er element
         # et en plus, on supprime le dernier caractère
-        self.mailResponsable = p3.communicate()[0][:-1]
-        ##print "Courriel du responsable du projet = " + self.mailResponsable
+        chaine = p3.communicate()[0][:-1]
+        #print('type = {}'.format(type(chaine)))
+        chaine = chaine.decode("utf-8")
+        #print('type = {}'.format(type(chaine)))
+        splitchaine = chaine.split('\n')
+        self.mailResponsable = splitchaine[0]
+        #print("Courriel du responsable du projet = {}".format(self.mailResponsable))
 
         # 3ème étape suite : Nom de l'Exploitant
         # le nom de l'exploitant est contenu dans le premier
@@ -274,16 +322,24 @@ class PdfReader(object):
         #     grep -E -e 'BMC.*\(.*' | \
         #     head -1 | \
         #     sed -E -e 's/.*\(//g' -e 's/\).*//g' | \
-        #     -f  -f latin1 -t utf-8 -
+        #     iconv -f latin1 -t utf-8 -
+        #
+        # cat document1.pdf | iconv -f 'iso8859-1' -t 'utf-8' - | grep -E -e 'BMC.*\(.*' | sed -E -e 's/[^\()]*\(//' -e 's/\)[^\()]*\(//g' -e 's/\)[^\()]*//g' | head -n1
+
         p1 = subprocess.Popen(['cat', 'document1.pdf'],
                               stdout=subprocess.PIPE)
-        p2 = subprocess.Popen(["grep", "-E",
-                               "-e", r'BMC.*\(.*'],
+
+
+        p2 = subprocess.Popen(['iconv',
+                               '-f', r'iso8859-1',
+                               '-t', r'utf-8',
+                               '-'],
                               stdin=p1.stdout,
                               stdout=subprocess.PIPE)
         #p1.stdout.close()
         #print p2.communicate()
-        p3 = subprocess.Popen(['head', '-1'],
+        p3 = subprocess.Popen(["grep", "-E",
+                               "-e", r'BMC.*\(.*'],
                               stdin=p2.stdout,
                               stdout=subprocess.PIPE)
         p2.stdout.close()
@@ -295,18 +351,24 @@ class PdfReader(object):
                               stdout=subprocess.PIPE)
         p3.stdout.close()
         #print p4.communicate()
-        p5 = subprocess.Popen(['iconv',
-                               '-f', r'CP1250',
-                               '-t', r'utf-8',
-                               '-'],
+        p5 = subprocess.Popen(['head', '-1'],
                               stdin=p4.stdout,
                               stdout=subprocess.PIPE)
         p4.stdout.close()
         #print p5.communicate()[0][:-1]
         # p5.communicate renvoit un tuple : on ne prend que le 1er element
         # et en plus, on supprime le dernier caractère
-        self.nomExploitant = p5.communicate()[0][:-1]
-        ##print "Nom de l'Exploitant = " + self.nomExploitant
+        #print("p5.communicate() = {}".format(p5.communicate()))
+        #print("p5.communicate()[0] = {}".format(p5.communicate()[0]))
+        #print("p5.communicate()[0][:-1] = {}".format(p5.communicate()[0][:-1]))
+        chaine = p5.communicate()[0][:-1]
+        #print("chaine = {}".format(chaine))
+        #print('type = {}'.format(type(chaine)))
+        chaine = chaine.decode("utf-8")
+        print("chaine = {}".format(chaine))
+        #print('type = {}'.format(type(chaine)))
+        self.nomExploitant = chaine
+        print("Nom de l'Exploitant = {} ; {} ; {}".format(self.nomExploitant, self.nomExploitant.encode('utf-8'), self.nomExploitant.encode('utf-8').decode('utf-8')))
 
 
         ffile = open(self.metadata_filename, "a")
@@ -315,7 +377,18 @@ class PdfReader(object):
                     self.mailResponsable + ";" +
                     self.nomExploitant + "\n")
         ffile.close()
-        return self.nomExploitant
+
+        # petite astucei ici :
+        # on supprime les quotes françaises
+        # Communauté d'Agglo
+        # https://stackoverflow.com/questions/24358361/removing-u2018-and-u2019-character
+        # https://stackoverflow.com/questions/39968891/python-3-and-b-x92-decodelatin1/39968985
+        # dans pdf, c'est \x92
+        returnValue = re.sub(u'\x92',
+                             r' ',
+                             self.nomExploitant.encode('utf-8').decode('utf-8'))
+
+        return returnValue
 
     def ddict(self):
         u"""
@@ -325,7 +398,7 @@ class PdfReader(object):
 
         """
         # 3ème étape : extraction de l'information geographique
-        # cat document1.pdf | \                                                                                              -- NORMAL --
+        # cat document1.pdf | \
         #     grep 'EPSG' | \
         #     sed -E -e 's/[^\()]*\(//' \
         #            -e 's/\)[^^\()]*\(//g' \
@@ -388,7 +461,7 @@ class PdfReader(object):
         #print "chaine = " + chaine
         #print "derniere ligne = " + splitchaine[-1]
         self.numeroDict = splitchaine[-1]
-        print "Numéro de la DT/DICT = " + self.numeroDict
+        print("Numéro de la DT/DICT = %s".format(self.numeroDict))
 
         # 3ème étape suite : capacite d'impression
         # cat document1.pdf | \
@@ -410,7 +483,7 @@ class PdfReader(object):
         # p3.communicate renvoit un tuple : on ne prend que le 1er element
         # et en plus, on supprime le dernier caractère
         self.capaciteImpression = p3.communicate()[0][:-1]
-        print "Capacité d'impression = " + self.capaciteImpression
+        print("Capacité d'impression = ".format(self.capaciteImpression))
 
         # 3ème étape suite : mail du responsable
         # cat document1.pdf | \
@@ -432,7 +505,7 @@ class PdfReader(object):
         # p3.communicate renvoit un tuple : on ne prend que le 1er element
         # et en plus, on supprime le dernier caractère
         self.mailResponsable = p3.communicate()[0][:-1]
-        print "Courriel du responsable du projet = " + self.mailResponsable
+        print("Courriel du responsable du projet = ".format(self.mailResponsable))
 
         # 3ème étape suite : Nom de l'Exploitant
         # le nom de l'exploitant est contenu dans le premier
@@ -464,7 +537,7 @@ class PdfReader(object):
         # p4.communicate renvoit un tuple : on ne prend que le 1er element
         # et en plus, on supprime le dernier caractère
         self.nomExploitant = p4.communicate()[0][:-1]
-        print "Nom de l'Exploitant = " + self.nomExploitant
+        print("Nom de l'Exploitant = ".format(self.nomExploitant))
 
 
         ffile = open(self.metadata_filename, "a")
@@ -596,7 +669,7 @@ class PdfReader(object):
             ["rm", self.filenameValidGml],
             shell=False)
         ffileWrite = open(self.filenameValidGml, "w")
-        ffileRead = open("header4326.gml", "r")
+        ffileRead = open("header4171.gml", "r")
         for line in ffileRead.readlines():
             ffileWrite.write(line)
         ffileRead.close()
@@ -625,11 +698,11 @@ class PdfReader(object):
         p4.stdout.close()
         chaine = p5.communicate()[0]
 
-        ffileWrite.write(chaine)
+        ffileWrite.write(chaine.decode("utf-8"))
 
         #print "chaine = " + chaine
 
-        ffileRead = open('footer4326.gml', "r")
+        ffileRead = open('footer4171.gml', "r")
         for line in ffileRead.readlines():
             ffileWrite.write(line)
         ffileRead.close()
@@ -649,9 +722,9 @@ class PdfReader(object):
             shell=False)
         subprocess.call(
             ["ogr2ogr",
+             '-s_srs', 'EPSG:4171',
              '-a_srs', 'EPSG:3946',
              '-t_srs', 'EPSG:3946',
-             '-s_srs', 'EPSG:4326',
              self.filenameValidShp, self.filenameValidGml],
             shell=False)
 
@@ -668,14 +741,14 @@ def main(argv):
         opts, args = getopt.getopt(argv, "hf:m:",
                                    ["file=", "metadata="])
     except getopt.GetoptError as err:
-        print "pdf2txt.py -h"
-        print 'pdf2txt.py -f <file> -m <metadata>'
-        print str(err)
+        print("pdf2txt.py -h")
+        print('pdf2txt.py -f <file> -m <metadata>')
+        print(str(err))
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print "pdf2txt.py -h"
-            print 'pdf2txt.py -f <file> -m <metadata>'
+            print("pdf2txt.py -h")
+            print('pdf2txt.py -f <file> -m <metadata>')
             sys.exit()
         if opt in ("-f", "--file"):
             ffile = arg

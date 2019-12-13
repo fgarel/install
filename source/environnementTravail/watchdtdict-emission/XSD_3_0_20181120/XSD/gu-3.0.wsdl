@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- version 20112018 -->
+<wsdl:definitions xmlns:gu="http://www.reseaux-et-canalisations.gouv.fr/ws3_0"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	xmlns:xmime="http://www.w3.org/2005/05/xmlmime"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="gu"
+	targetNamespace="http://www.reseaux-et-canalisations.gouv.fr/ws3_0">
+	
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.reseaux-et-canalisations.gouv.fr/ws3_0" 
+				xmlns:Q1="http://www.reseaux-et-canalisations.gouv.fr/schema-teleservice/3.0" 
+				xmlns:Q2="http://www.opengis.net/gml/3.2">
+			
+			<xsd:import schemaLocation="schemaTeleservice_gu_3_0.xsd" namespace="http://www.reseaux-et-canalisations.gouv.fr/schema-teleservice/3.0"></xsd:import>
+			
+			<xsd:simpleType name="typeDeclaration">
+				<xsd:annotation>
+					<xsd:documentation>Code identifiant le type de déclaration effectué</xsd:documentation>
+				</xsd:annotation>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="DT" />
+					<xsd:enumeration value="DICT" />
+					<xsd:enumeration value="DT_DICT" />
+					<xsd:enumeration value="ATU" />
+				</xsd:restriction>
+			</xsd:simpleType>
+			
+			<xsd:complexType name="erreurWebService">
+				<xsd:sequence>
+					<xsd:element name="code-erreur" type="xsd:string" maxOccurs="1" minOccurs="1" />
+					<xsd:element name="message" type="xsd:string" maxOccurs="1" minOccurs="0" />
+					<xsd:element name="id-unique" type="xsd:string" maxOccurs="1" minOccurs="1" />
+				</xsd:sequence>
+			</xsd:complexType>			
+			
+			<xsd:element name="consulterDossierDeclaration">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="numero-dossier" type="xsd:string" />
+						<xsd:element name="cle-dossier" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="consulterDossierDeclarationResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+	 					<xsd:element name="dossier" type="xsd:base64Binary" xmime:expectedContentTypes="application/octet-stream" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="consulterDossierDeclarationFault" type="gu:erreurWebService" />
+				
+			<xsd:element name="consulterReferencement">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="requete" type="gu:requeteReferencement" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="consulterReferencementResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+	 					<xsd:element name="dossier" type="xsd:base64Binary" xmime:expectedContentTypes="application/octet-stream" />
+                    </xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:complexType name="requeteReferencement">
+				<xsd:sequence>
+					<xsd:element ref="Q1:dossierConsultationReferencement" minOccurs="1" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="consulterReferencementFault" type="gu:erreurWebService" />
+			
+			<xsd:element name="getVersionResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="version" type="xsd:string" minOccurs="1" maxOccurs="1" />
+						<xsd:element name="phase" type="xsd:string" minOccurs="1" maxOccurs="1" />
+						<xsd:element name="environment" type="xsd:string" minOccurs="1" maxOccurs="1" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+        </xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="consulterDossierDeclarationRequest">
+		<wsdl:part element="gu:consulterDossierDeclaration" name="parameters" />
+	</wsdl:message>
+	<wsdl:message name="consulterDossierDeclarationResponse">
+		<wsdl:part element="gu:consulterDossierDeclarationResponse"	name="parameters" />
+	</wsdl:message>
+	<wsdl:message name="consulterDossierDeclarationFault">
+		<wsdl:part name="parameters" element="gu:consulterDossierDeclarationFault" />
+	</wsdl:message>
+	
+	<wsdl:message name="consulterReferencementRequest">
+		<wsdl:part name="parameters" element="gu:consulterReferencement" />
+	</wsdl:message>
+	<wsdl:message name="consulterReferencementResponse">
+		<wsdl:part name="parameters" element="gu:consulterReferencementResponse" />
+	</wsdl:message>
+	<wsdl:message name="consulterReferencementFault">
+		<wsdl:part name="parameters" element="gu:consulterReferencementFault" />
+	</wsdl:message>
+	
+	<wsdl:message name="getVersionResponse">
+		<wsdl:part name="parameters" element="gu:getVersionResponse" />
+	</wsdl:message>
+	<wsdl:message name="getVersionRequest" />
+	
+	<wsdl:portType name="gu">
+		<wsdl:operation name="consulterDossierDeclaration">
+			<wsdl:input message="gu:consulterDossierDeclarationRequest" />
+			<wsdl:output message="gu:consulterDossierDeclarationResponse" />
+			<wsdl:fault name="fault" message="gu:consulterDossierDeclarationFault" />
+		</wsdl:operation>
+		<wsdl:operation name="consulterReferencement">
+			<wsdl:input message="gu:consulterReferencementRequest" />
+			<wsdl:output message="gu:consulterReferencementResponse" />
+            <wsdl:fault name="fault" message="gu:consulterReferencementFault" />
+        </wsdl:operation>
+		<wsdl:operation name="getVersion">
+			<wsdl:input message="gu:getVersionRequest" />
+			<wsdl:output message="gu:getVersionResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="guSOAP" type="gu:gu">
+		<soap12:binding transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" style="document" />
+		
+		<wsdl:operation name="consulterDossierDeclaration">
+			<soap12:operation style="document" soapAction=""/>
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="consulterReferencement">
+			<soap12:operation style="document" soapAction=""/>
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="getVersion">
+			<soap12:operation style="document" soapAction=""/>
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="gu">
+		<wsdl:port binding="gu:guSOAP" name="guSOAP">
+			<soap12:address location="http://www.reseaux-et-canalisations.gouv.fr/gu-ws/teleservice-3-0" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

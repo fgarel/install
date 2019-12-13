@@ -1,0 +1,11 @@
+## Cosmic tails : 0407
+# deb http://ppa.launchpad.net/tails-team/tails-installer/ubuntu cosmic main #040701 - cosmic tails-installer
+# deb http://ppa.launchpad.net/micahflee/ppa/ubuntu cosmic main #040702 - cosmic tor
+
+## Disco tails : 0507
+# deb http://ppa.launchpad.net/tails-team/tails-installer/ubuntu disco main #050701 - disco tails-installer
+# deb http://ppa.launchpad.net/micahflee/ppa/ubuntu disco main #050702 - disco tor
+
+## Eoan tails : 0607
+# deb http://ppa.launchpad.net/tails-team/tails-installer/ubuntu eoan main #060701 - eoan tails-installer
+# deb http://ppa.launchpad.net/micahflee/ppa/ubuntu eoan main #060702 - eoan tor

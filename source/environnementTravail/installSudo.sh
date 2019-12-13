@@ -21,8 +21,8 @@ echo "#"
 echo "sudo apt-get install -y apt-file"
       sudo apt-get install -y apt-file
 echo "#"
-echo "apt-file update"
-      apt-file update
+echo "sudo apt-file update"
+      sudo apt-file update
 echo "#"
 echo "sudo apt-get install -y mlocate"
       sudo apt-get install -y mlocate
@@ -49,7 +49,7 @@ echo "# https://transfer.sh/"
 echo "#"
 echo "# https://github.com/warner/magic-wormhole"
 echo "#"
-echo "# partage de console => byobu (scrren) ou teleconsole"
+echo "# partage de console => byobu (screen) ou teleconsole"
 echo "# https://www.2daygeek.com/teleconsole-share-terminal-session-instantly-to-anyone-in-seconds/"
 echo "# https://www.teleconsole.com/"
 echo "#"

@@ -26,7 +26,7 @@ ssh -f \
     -N \
     -X \
     -L 43290:dsibdd09.mairie.fr:5432 \
-    fred@vlr6180y
+    fred@vlr6180y.mairie.fr
 
 echo "# "
 echo "# Maintenant, à partir de VLR6180Y, il est possible de se connecter vers"
@@ -45,7 +45,7 @@ ssh -f \
     -N \
     -X \
     -L 43291:172.17.150.6:5432 \
-    fred@vlr6180y
+    fred@vlr6180y.mairie.fr
 
 echo "# "
 echo "# Maintenant, à partir de VLR6180Y, il est possible de se connecter vers"
@@ -88,14 +88,17 @@ ssh -f \
 
 echo "# "
 echo "# Maintenant, à partir de pg.cdalr.fr, il est possible de se connecter vers"
-echo "# (via vlr6180y) :"
-echo "# - une base du serveur dsibdd09"
-echo "#   psql -h localhost -p 52390 -d cadlr -U sig"
-echo "# - une base du serveur brulhois"
-echo "#   psql -h localhost -p 52391 -d sig -U prenom.nom"
-echo "# - une base du serveur dsiappli39 via dsiappli58"
-echo "#   psql -h localhost -p 52392 -d sig -U postgres"
-echo "# "
+echo "# - en un tunnel deux parties "
+echo "#   - une base du serveur vlr6180y"
+echo "#     psql -h localhost -p 53239 -d espu -U fred"
+echo "# - en un tunnel trois parties (via vlr6180y) :"
+echo "#   - une base du serveur dsibdd09"
+echo "#     psql -h localhost -p 52390 -d cadlr -U sig"
+echo "#   - une base du serveur brulhois"
+echo "#     psql -h localhost -p 52391 -d sig -U prenom.nom"
+echo "#   - une base du serveur dsiappli39 via dsiappli58"
+echo "#     psql -h localhost -p 52392 -d sig -U postgres"
+echo "#     aliadYepYesh555+"
 #
 #
 # Fabrication d'un second tiers central du tunnel "freeshell.de" (entre la machine boulot et freeshell.de)

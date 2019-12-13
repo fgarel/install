@@ -1,0 +1,1566 @@
+[
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.100",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:47:59 +0100",
+    "end_time": "2019-11-06 13:48:02 +0100",
+    "scan_duration_seconds": 3.005042973,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.104",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:47:59 +0100",
+    "end_time": "2019-11-06 13:48:02 +0100",
+    "scan_duration_seconds": 3.005437241,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.101",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:47:59 +0100",
+    "end_time": "2019-11-06 13:48:02 +0100",
+    "scan_duration_seconds": 3.011327311,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.106",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:02 +0100",
+    "end_time": "2019-11-06 13:48:05 +0100",
+    "scan_duration_seconds": 3.001823006,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.102",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:47:59 +0100",
+    "end_time": "2019-11-06 13:48:07 +0100",
+    "scan_duration_seconds": 8.001966542,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.103",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:47:59 +0100",
+    "end_time": "2019-11-06 13:48:07 +0100",
+    "scan_duration_seconds": 8.002958724,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.108",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:05 +0100",
+    "end_time": "2019-11-06 13:48:08 +0100",
+    "scan_duration_seconds": 3.002281064,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.105",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:02 +0100",
+    "end_time": "2019-11-06 13:48:10 +0100",
+    "scan_duration_seconds": 8.001832182,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.107",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:02 +0100",
+    "end_time": "2019-11-06 13:48:10 +0100",
+    "scan_duration_seconds": 8.002415227,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.113",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:10 +0100",
+    "end_time": "2019-11-06 13:48:13 +0100",
+    "scan_duration_seconds": 3.002580757,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.109",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:07 +0100",
+    "end_time": "2019-11-06 13:48:15 +0100",
+    "scan_duration_seconds": 8.002080595,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.110",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:07 +0100",
+    "end_time": "2019-11-06 13:48:15 +0100",
+    "scan_duration_seconds": 8.002288229,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.111",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:08 +0100",
+    "end_time": "2019-11-06 13:48:16 +0100",
+    "scan_duration_seconds": 8.002783168,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.112",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:10 +0100",
+    "end_time": "2019-11-06 13:48:18 +0100",
+    "scan_duration_seconds": 8.003195469,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.116",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:15 +0100",
+    "end_time": "2019-11-06 13:48:18 +0100",
+    "scan_duration_seconds": 3.003605033,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.118",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:18 +0100",
+    "end_time": "2019-11-06 13:48:21 +0100",
+    "scan_duration_seconds": 3.002891053,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.114",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:13 +0100",
+    "end_time": "2019-11-06 13:48:21 +0100",
+    "scan_duration_seconds": 8.00258441,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.115",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:15 +0100",
+    "end_time": "2019-11-06 13:48:23 +0100",
+    "scan_duration_seconds": 8.003647449,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.117",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:16 +0100",
+    "end_time": "2019-11-06 13:48:24 +0100",
+    "scan_duration_seconds": 8.001879343,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.119",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:48:18 +0100",
+    "end_time": "2019-11-06 13:48:26 +0100",
+    "scan_duration_seconds": 8.001869716,
+    "error": "Socket is no longer valid"
+  }
+]
+[
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.190",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:55:05 +0100",
+    "end_time": "2019-11-06 13:55:13 +0100",
+    "scan_duration_seconds": 8.003271262,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.191",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:55:05 +0100",
+    "end_time": "2019-11-06 13:55:13 +0100",
+    "scan_duration_seconds": 8.004890557,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.193",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:55:05 +0100",
+    "end_time": "2019-11-06 13:55:13 +0100",
+    "scan_duration_seconds": 8.003401233,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.194",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:55:05 +0100",
+    "end_time": "2019-11-06 13:55:13 +0100",
+    "scan_duration_seconds": 8.00407913,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.192",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:55:05 +0100",
+    "end_time": "2019-11-06 13:55:13 +0100",
+    "scan_duration_seconds": 8.008313535,
+    "error": "Socket is no longer valid"
+  }
+]
+[
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.196",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:56:16 +0100",
+    "end_time": "2019-11-06 13:56:24 +0100",
+    "scan_duration_seconds": 8.002183817,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.195",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:56:16 +0100",
+    "end_time": "2019-11-06 13:56:24 +0100",
+    "scan_duration_seconds": 8.003629195,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.198",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:56:16 +0100",
+    "end_time": "2019-11-06 13:56:24 +0100",
+    "scan_duration_seconds": 8.003399988,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.197",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:56:16 +0100",
+    "end_time": "2019-11-06 13:56:24 +0100",
+    "scan_duration_seconds": 8.00518826,
+    "error": "Socket is no longer valid"
+  },
+  {
+    "ssh_scan_version": "0.0.29",
+    "ip": "10.254.140.199",
+    "hostname": "",
+    "port": 22,
+    "server_banner": "",
+    "ssh_version": "unknown",
+    "os": "unknown",
+    "os_cpe": "o:unknown",
+    "ssh_lib": "unknown",
+    "ssh_lib_cpe": "a:unknown",
+    "key_algorithms": [
+
+    ],
+    "encryption_algorithms_client_to_server": [
+
+    ],
+    "encryption_algorithms_server_to_client": [
+
+    ],
+    "mac_algorithms_client_to_server": [
+
+    ],
+    "mac_algorithms_server_to_client": [
+
+    ],
+    "compression_algorithms_client_to_server": [
+
+    ],
+    "compression_algorithms_server_to_client": [
+
+    ],
+    "languages_client_to_server": [
+
+    ],
+    "languages_server_to_client": [
+
+    ],
+    "auth_methods": [
+
+    ],
+    "fingerprints": null,
+    "duplicate_host_key_ips": [
+
+    ],
+    "compliance": {
+    },
+    "start_time": "2019-11-06 13:56:16 +0100",
+    "end_time": "2019-11-06 13:56:24 +0100",
+    "scan_duration_seconds": 8.006221229,
+    "error": "Socket is no longer valid"
+  }
+]

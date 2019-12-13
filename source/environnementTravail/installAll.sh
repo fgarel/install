@@ -2,42 +2,41 @@
 
 
 
-# 2ème Partie : Ajout de l'utilisateur fred au groupe sudo
+# 1ère Partie : Ajout de l'utilisateur fred au groupe sudo
 ###############################################
 # Ajout de l'utilisateur fred au groupe sudo
-echo "# 2ème Partie : Ajout de l'utilisateur fred au groupe sudo"
+echo "# 1ère Partie : Ajout de l'utilisateur fred au groupe sudo"
 echo "###############################################"
 echo "./installSudo.sh"
       ./installSudo.sh
 echo ""
 
-# 3ème Partie : git et git-flow
+# 2ème Partie : git et git-flow
 ###############################################
 # Installation de git et de git-flow
-echo "# 3ème Partie : git et git-flow"
+echo "# 2ème Partie : git et git-flow"
 echo "###############################################"
 echo "./installGit.sh"
       ./installGit.sh
 echo ""
 
-# 1ère Partie : Installation de quelques polices sur le poste client
+# 3ème Partie : Installation de quelques polices sur le poste client
 ###############################################
 # Installation de quelques polices sur le poste client
-echo "# 1ère Partie : Installation de quelques polices sur le poste client"
+echo "# 3ère Partie : Installation de quelques polices sur le poste client"
 echo "###############################################"
 #echo "./installFonts.sh"
 #      ./installFonts.sh
 echo ""
 
-# 7ème Partie : python
+# 4ème Partie : python
 ###############################################
 # python
-echo "# 7ème Partie : python"
+echo "# 4ème Partie : python"
 echo "###############################################"
-echo "./installPython.sh"
-      ./installPython.sh
+#echo "./installPython.sh"
+#      ./installPython.sh
 echo ""
-
 
 # 5ème Partie : byobu
 ###############################################
@@ -48,38 +47,82 @@ echo "./installByobu.sh"
       ./installByobu.sh
 echo ""
 
-# 4ème Partie : zsh et antigen
+# 6ème Partie : zsh et antigen
 ###############################################
 # zsh et antigen
-echo "# 4ème Partie : zsh et antigen"
+echo "# 6ème Partie : zsh et antigen"
 echo "###############################################"
 echo "./installZsh.sh"
       ./installZsh.sh
 echo ""
 
+# 7ème Partie : mise à jour des dépots apt
+###############################################
+# apt
+echo "# 7ème Partie : apt"
+echo "###############################################"
+echo "./installApt.sh"
+      ./installApt.sh
+echo ""
 
-# 6ème Partie : Installation de vim et spf13-vim3
+# 8ème Partie : Installation de vim et spf13-vim3
 ###############################################
 # Installation de vim et spf13-vim3
-echo "# 6ème Partie : Installation de vim et spf13-vim3"
+echo "# 8ème Partie : Installation de vim et spf13-vim3"
 echo "###############################################"
 echo "./installVim.sh"
       ./installVim.sh
 echo ""
 
-# 7ème Partie : plantuml
+# 9ème Partie : java
 ###############################################
-# plantuml
-echo "# 7ème Partie : plantuml"
+# java
+echo "# 9ème Partie : java"
 echo "###############################################"
-#echo "./installPlantuml.sh"
-#      ./installPlantuml.sh
+echo "./installJava.sh"
+      ./installJava.sh
 echo ""
 
-# 7ème Partie : python mapproxy
+# 10ème Partie : plantuml
+###############################################
+# plantuml
+echo "# 10ème Partie : plantuml"
+echo "###############################################"
+echo "./installPlantuml.sh"
+      ./installPlantuml.sh
+echo ""
+
+# 11ème Partie : geogig
+###############################################
+# geogig
+echo "# 11ème Partie : geogig"
+echo "###############################################"
+echo "./installGeogig.sh"
+      ./installGeogig.sh
+echo ""
+
+# 12ème Partie : geoserver
+###############################################
+# geoserver
+echo "# 12ème Partie : geoserver"
+echo "###############################################"
+echo "./installGeoServer.sh"
+      ./installGeoServer.sh
+echo ""
+
+# 13ème Partie : postgresql
+###############################################
+# postgresql
+echo "# 13ème Partie : postgresql"
+echo "###############################################"
+#echo "./installPostgresql.sh"
+#      ./installPostgresql.sh
+echo ""
+
+# 14ème Partie : python mapproxy
 ###############################################
 # python mapproxy
-echo "# 7ème Partie : python mapproxy"
+echo "# 14ème Partie : python mapproxy"
 echo "###############################################"
 #echo "./installPythonMapproxy.sh"
 #      ./installPythonMapproxy.sh

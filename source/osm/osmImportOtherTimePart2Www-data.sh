@@ -17,8 +17,8 @@ echo "###############################################"
 #echo "# ----------------------------------------------------------"
 #echo "#"
 
-#datahost='localhost'
-#database='osm'
+datahost='localhost'
+database='osm'
 #dataschema='apidb'
 #datauser='osmuser'
 #datapass='osmpass'
@@ -114,7 +114,7 @@ echo '          --slim \'
 echo '          -C 512 \'
 echo '          --number-processes 2 \'
 echo '          --cache-strategy sparse \'
-echo '          -d $database \'
+echo "          -d $database \ "
 #echo '          --style ~/Documents/install/source/openstreetmap-carto-vector-tiles/openstreetmap-carto.style \'
 echo '          --style openstreetmap-carto.style \'
 #echo '          --username $datauser \'

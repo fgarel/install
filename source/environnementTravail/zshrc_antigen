@@ -1,6 +1,13 @@
 #
 # Fichier de configuration pour zsh antigen
 #
+# preliminaire : python est utilisé pour powerline et poetry
+# installZsh.sh est donc a lancé en parallèle avec installPython.sh
+################################
+export PYTHON_VERSION_COURT=3.8
+################################
+# ce numero de version est issu de installPython.sh
+# la version doit fonctionner avec cookiecutter
 #
 # Ce fichier est inspiré de fichier original  :
 # https://github.com/fgarel/myDebianInstall01/blob/master/etc/zsh/zshrc_antigen
@@ -18,12 +25,6 @@
 # Le script zsh-newuser-install permet de creer un fichier zshrc minimal
 #
 
-# python est utilisé pour powerline et poetry
-# installZsh.sh est donc a lancé en parallèle avec installPython.sh
-#
-export PYTHON_VERSION_COURT=3.6
-# cette version est issue de installPython.sh
-# la version 3.6.6 fonctionne avec cookiecutter
 #
 # Paramètres courants pour zsh
 #---------------------------------------
@@ -117,7 +118,7 @@ antigen bundle z
 
 # Autres dépots
 antigen bundle chrissicool/zsh-256color
-antigen bundle sharat87/autoenv
+antigen bundle zpm-zsh/autoenv
 #antigen bundle chrissicool/zsh-bash
 antigen bundle supercrabtree/k
 antigen bundle rupa/z
@@ -138,12 +139,37 @@ antigen apply
 # pew peut etre remplacé par pipenv
 #source $(pew shell_config)
 
+# Ajouté suite à l'installation de poetry
+source ~/.poetry/env
+#export PATH="/home/fred/.poetry/bin:$PATH"
+
 # Ajouté suite à l'installation des fontes
 source ~/.local/share/fonts/*.sh
 
 # Utilisation de powerline pour le prompt
 # il faut forcer la lecture de ce fichier
 # http://powerline.readthedocs.io/en/master/usage/shell-prompts.html#zsh-prompt
-source /usr/local/lib/python$PYTHON_VERSION_COURT/site-packages/powerline/bindings/zsh/powerline.zsh
+# Attention, il y a une différence (a creuser TODO) entre site-packages et dist-packages
+#source /usr/local/lib/python$PYTHON_VERSION_COURT/site-packages/powerline/bindings/zsh/powerline.zsh
+#source /usr/local/lib/python$PYTHON_VERSION_COURT/dist-packages/powerline/bindings/zsh/powerline.zsh
+source ~$USER/.local/lib/python$PYTHON_VERSION_COURT/site-packages/powerline/bindings/zsh/powerline.zsh
 
+# chemin utilisé par python et pip pour les installations en local
+# en effet, lors de l'installation de python, et de powerline-shell
+# l'installation se fait dans ce repertoire ./local/bin
+# ajout de /home/fred/.local/bin/
+path+=("$HOME/.local/bin")
 
+# chemin utilisé par adb (android debug bridge)
+# https://wiki.lineageos.org/adb_fastboot_guide.html
+# ajout de /home/fred/adb-fastboot/platform-tools/
+path+=("$HOME/adb-fastboot/platform-tools")
+
+# chemin utilisé par geogig (~/Documents/install/source/geogig/bin/installGeogig.sh)
+# en effet, lors de l'installation de geogig
+# l'installation se fait dans un repertoire peu conventionnel
+# ajout de /home/fred/Documents/install/source/geogig/geogig/bin
+# FIX : Finalement, on utilise une solution plus simple : on recopie les 
+# executables dans le repertoire ./local/bin
+# cf à la fin du script ~/Documents/install/source/geogig/bin/installGeogig.sh
+#path+=("$HOME/Documents/install/source/geogig/geogig/bin")

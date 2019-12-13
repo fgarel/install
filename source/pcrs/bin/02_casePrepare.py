@@ -80,7 +80,7 @@ def main():
         dbschema='init',
         sqlfile='../../pcrs/bin/sql/03_empriseEchangePCRSInsert.sql')
     mygenerateur.geogigShellCreate(
-        dbhost='pg.cdalr.fr',
+        dbhost='localhost',
         dbport=5432,
         dbname='geogig_central',
         dbschema='pcrs',
@@ -88,7 +88,7 @@ def main():
         dbpass='fgpass',
         ggusername='Frédéric Garel',
         gguseremail='frederic.garel@ville-larochelle.fr',
-        geogigfile='../../geogig/bin/05_flowParameters.sh')
+        geogigfile='../../geogigfg/bin/05_flowParameters.sh')
     #print('CCC        = {}'.format(mygenerateur.CCC))
     #print('PP         = {}'.format(mygenerateur.PP))
     #print('separateur = {}'.format(mygenerateur.separateur))

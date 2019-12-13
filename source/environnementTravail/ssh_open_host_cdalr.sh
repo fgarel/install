@@ -34,7 +34,15 @@ echo "# Maintenant, à partir de cdalr.fr, il est possible de se connecter vers"
 echo "# sa base de données via localhost"
 echo "# psql -h localhost -p 43230 -d dbworkspace -U fred"
 echo "# "
-echo "# "
+echo "# Cependant, a partir d'une autre machine, il n'est pas possible de se connecter"
+echo "# psql -h pg.cdalr.fr -p 43230 -d dbworkspace -U fred"
+echo "# car, le nom de la machine doit etre localhost"
+echo "#"
+echo "#"
+echo "# Plus tard, après l'ajout de parties de tunnel,"
+echo "# il sera possible de se connecter à distance"
+echo "# psql -h localhost -p 63230 -d dbworkspace -U fred"
+echo "#"
 #
 
 # le tiers central du tunnel n'est pas a faire ici
