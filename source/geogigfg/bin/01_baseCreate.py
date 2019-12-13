@@ -5,8 +5,8 @@
 ***************************************************************************
     01_baseCreate.py
     ---------------------
-    Date                 : August 2019
-    Copyright            : (C) 2018-2019 La Rochelle,
+    Date                 : January 2018
+    Copyright            : (C) 2018-2018 La Rochelle,
                            http://www.ville-larochelle.fr
 ***************************************************************************
 *                                                                         *
@@ -19,8 +19,8 @@
 """
 
 __author__ = 'Frédéric Garel'
-__date__ = 'August 2019'
-__copyright__ = '(C) 2018-2019 La Rochelle, http://www.ville-larochelle.fr'
+__date__ = 'January 2018'
+__copyright__ = '(C) 2018-2018 La Rochelle, http://www.ville-larochelle.fr'
 
 # This will get replaced with a git SHA1 when you do a git archive
 

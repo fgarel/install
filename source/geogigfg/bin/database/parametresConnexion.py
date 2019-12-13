@@ -93,13 +93,9 @@ class ParametresConnexion(object):
                                            'geogig_local':      ['adminpack'],
                                            'geogig_individuel': ['adminpack'],
                                            'dbworkspace':       ['adminpack',
-                                                                 'fuzzystrmatch',
                                                                  'postgis',
-                                                                 'postgis_raster',
                                                                  'postgis_topology',
-                                                                 'postgis_sfcgal',
-                                                                 'address_standardizer',
-                                                                 'postgis_tiger_geocoder',
+                                                                 'fuzzystrmatch',
                                                                  'hstore',
                                                                  'dblink']}
 
@@ -260,7 +256,7 @@ class ParametresConnexion(object):
                                    'cases': []}}
 
         # les paramètres pour la connexion
-        self.hostname = 'localhost'
+        self.hostname = 'pg.cdalr.fr'
         self.port = '5432'
         self.username = 'fred'
         self.password = 'fgpass'

@@ -19,8 +19,6 @@
         echo "#"
 
         echo "#"
-        echo "# Dans un premier temps, on vérifie si le dépot existe."
-        echo "#"
         echo "geogig --repo \"$REPO_CENTRAL_ONE\" \ "
         echo "       status"
               geogig --repo $REPO_CENTRAL_ONE \
@@ -72,18 +70,10 @@
         echo "#"
         echo "#   - Dans un second temps, on transvase de la base origine vers le depot"
         echo "#"
-        echo "# syntaxe geogig 1.x"
         echo "geogig --repo \"$REPO_CENTRAL_ONE\" \ "
         echo "       pg import --host $DBHOST_WORKSPACE_INI --database $DBNAME_WORKSPACE_INI --user $DBUSER_WORKSPACE_INI --password $DBPASS_WORKSPACE_INI --schema \"$DBSCHE_WORKSPACE_INI\" --all"
               geogig --repo $REPO_CENTRAL_ONE \
                      pg import --host $DBHOST_WORKSPACE_INI --database $DBNAME_WORKSPACE_INI --user $DBUSER_WORKSPACE_INI --password $DBPASS_WORKSPACE_INI --schema "$DBSCHE_WORKSPACE_INI" --all
-
-        ##echo "# syntaxe geogig 2.x"
-        ##echo "geogig --repo \"$REPO_CENTRAL_ONE\" \ "
-        ##echo "       pg --host $DBHOST_WORKSPACE_INI --database $DBNAME_WORKSPACE_INI --user $DBUSER_WORKSPACE_INI --password $DBPASS_WORKSPACE_INI --schema \"$DBSCHE_WORKSPACE_INI\" import --all"
-        ##      geogig --repo $REPO_CENTRAL_ONE \
-        ##             pg --host $DBHOST_WORKSPACE_INI --database $DBNAME_WORKSPACE_INI --user $DBUSER_WORKSPACE_INI --password $DBPASS_WORKSPACE_INI --schema "$DBSCHE_WORKSPACE_INI" import --all
-
 
         echo "#"
         echo "# Enregistrement des données importées pour validation"

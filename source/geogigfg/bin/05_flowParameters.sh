@@ -1,41 +1,41 @@
 #!/bin/sh
 
 
-        DBHOST_WORKSPACE_INI=localhost
+        DBHOST_WORKSPACE_INI=pg.cdalr.fr
         DBPORT_WORKSPACE_INI=5432
         DBNAME_WORKSPACE_INI=dbworkspace
         DBSCHE_WORKSPACE_INI=init
         DBUSER_WORKSPACE_INI=fred
         DBPASS_WORKSPACE_INI=fgpass
 
-        DBHOST_WORKSPACE_FIN=localhost
+        DBHOST_WORKSPACE_FIN=pg.cdalr.fr
         DBPORT_WORKSPACE_FIN=5432
         DBNAME_WORKSPACE_FIN=dbworkspace
         DBSCHE_WORKSPACE_FIN=pcrs
         DBUSER_WORKSPACE_FIN=fred
         DBPASS_WORKSPACE_FIN=fgpass
 
-        DBHOST_CENTRAL=localhost
+        DBHOST_CENTRAL=pg.cdalr.fr
         DBPORT_CENTRAL=5432
         DBNAME_CENTRAL=geogig_central
         DBSCHE_CENTRAL=pcrs
-        DBREPO_CENTRAL=CDA-46-00197-01045-16-D-16
+        DBREPO_CENTRAL=CDA-46-00197-01045-21-C-09
         DBUSER_CENTRAL=fred
         DBPASS_CENTRAL=fgpass
 
-        DBHOST_LOCAL=localhost
+        DBHOST_LOCAL=pg.cdalr.fr
         DBPORT_LOCAL=5432
         DBNAME_LOCAL=geogig_local
         DBSCHE_LOCAL=pcrs
-        DBREPO_LOCAL=CDA-46-00197-01045-16-D-16
+        DBREPO_LOCAL=CDA-46-00197-01045-21-C-09
         DBUSER_LOCAL=fred
         DBPASS_LOCAL=fgpass
 
-        DBHOST_INDIVIDUEL=localhost
+        DBHOST_INDIVIDUEL=pg.cdalr.fr
         DBPORT_INDIVIDUEL=5432
         DBNAME_INDIVIDUEL=geogig_individuel
         DBSCHE_INDIVIDUEL=pcrs
-        DBREPO_INDIVIDUEL="case"
+        DBREPO_INDIVIDUEL=case
         DBUSER_INDIVIDUEL=fred
         DBPASS_INDIVIDUEL=fgpass
 
