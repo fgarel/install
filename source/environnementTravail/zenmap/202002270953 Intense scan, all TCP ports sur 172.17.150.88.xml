@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?><nmaprun start="1582793638" profile_name="Intense scan, all TCP ports" xmloutputversion="1.04" scanner="nmap" version="7.80" startstr="Thu Feb 27 09:53:58 2020" args="nmap -p 1-65535 -T4 -A -v 172.17.150.88"><scaninfo services="1-65535" protocol="tcp" numservices="65535" type="syn"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.80 ( https://nmap.org ) at 2020-02-27 09:53 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 09:53
+Completed NSE at 09:53, 0.00s elapsed
+Initiating NSE at 09:53
+Completed NSE at 09:53, 0.00s elapsed
+Initiating NSE at 09:53
+Completed NSE at 09:53, 0.00s elapsed
+Initiating Ping Scan at 09:53
+Scanning 172.17.150.88 [4 ports]
+Completed Ping Scan at 09:53, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 09:53
+Completed Parallel DNS resolution of 1 host. at 09:53, 0.06s elapsed
+Initiating SYN Stealth Scan at 09:53
+Scanning 172.17.150.88 [65535 ports]
+Discovered open port 22/tcp on 172.17.150.88
+Discovered open port 80/tcp on 172.17.150.88
+Increasing send delay for 172.17.150.88 from 0 to 5 due to 11 out of 21 dropped probes since last increase.
+Discovered open port 443/tcp on 172.17.150.88
+Increasing send delay for 172.17.150.88 from 5 to 10 due to max_successful_tryno increase to 5
+SYN Stealth Scan Timing: About 2.40% done; ETC: 10:15 (0:21:01 remaining)
+SYN Stealth Scan Timing: About 4.97% done; ETC: 10:14 (0:19:27 remaining)
+SYN Stealth Scan Timing: About 8.55% done; ETC: 10:14 (0:18:22 remaining)
+SYN Stealth Scan Timing: About 12.91% done; ETC: 10:13 (0:17:18 remaining)
+SYN Stealth Scan Timing: About 17.78% done; ETC: 10:13 (0:16:16 remaining)
+SYN Stealth Scan Timing: About 22.63% done; ETC: 10:13 (0:15:17 remaining)
+SYN Stealth Scan Timing: About 27.55% done; ETC: 10:13 (0:14:15 remaining)
+SYN Stealth Scan Timing: About 32.66% done; ETC: 10:13 (0:13:14 remaining)
+SYN Stealth Scan Timing: About 37.76% done; ETC: 10:13 (0:12:13 remaining)
+SYN Stealth Scan Timing: About 42.90% done; ETC: 10:13 (0:11:12 remaining)
+SYN Stealth Scan Timing: About 48.05% done; ETC: 10:13 (0:10:11 remaining)
+SYN Stealth Scan Timing: About 53.17% done; ETC: 10:13 (0:09:10 remaining)
+SYN Stealth Scan Timing: About 58.30% done; ETC: 10:13 (0:08:10 remaining)
+SYN Stealth Scan Timing: About 63.40% done; ETC: 10:13 (0:07:10 remaining)
+SYN Stealth Scan Timing: About 68.58% done; ETC: 10:13 (0:06:09 remaining)
+SYN Stealth Scan Timing: About 73.71% done; ETC: 10:13 (0:05:09 remaining)
+SYN Stealth Scan Timing: About 78.80% done; ETC: 10:13 (0:04:09 remaining)
+SYN Stealth Scan Timing: About 83.94% done; ETC: 10:13 (0:03:08 remaining)
+SYN Stealth Scan Timing: About 89.05% done; ETC: 10:13 (0:02:09 remaining)
+SYN Stealth Scan Timing: About 94.16% done; ETC: 10:13 (0:01:09 remaining)
+Discovered open port 4118/tcp on 172.17.150.88
+Completed SYN Stealth Scan at 10:15, 1288.01s elapsed (65535 total ports)
+Initiating Service scan at 10:15
+Scanning 4 services on 172.17.150.88
+Completed Service scan at 10:15, 20.58s elapsed (4 services on 1 host)
+Initiating OS detection (try #1) against 172.17.150.88
+Initiating Traceroute at 10:15
+Completed Traceroute at 10:15, 3.02s elapsed
+Initiating Parallel DNS resolution of 3 hosts. at 10:15
+Completed Parallel DNS resolution of 3 hosts. at 10:15, 0.01s elapsed
+NSE: Script scanning 172.17.150.88.
+Initiating NSE at 10:15
+Completed NSE at 10:15, 0.70s elapsed
+Initiating NSE at 10:15
+Completed NSE at 10:16, 60.05s elapsed
+Initiating NSE at 10:16
+Completed NSE at 10:16, 0.00s elapsed
+Nmap scan report for 172.17.150.88
+Host is up (0.00060s latency).
+Not shown: 65531 closed ports
+PORT     STATE SERVICE        VERSION
+22/tcp   open  ssh            OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 aa:80:c9:fb:f0:09:53:39:95:ab:f7:d3:91:f4:2e:c8 (RSA)
+|   256 95:33:8a:53:10:9e:4f:3e:19:9d:44:e4:0b:82:2b:3c (ECDSA)
+|_  256 b0:6b:4e:ae:73:05:c3:6a:b5:b0:4a:39:26:ea:96:99 (ED25519)
+80/tcp   open  http           Apache httpd
+|_http-favicon: Unknown favicon MD5: 891B4C0EA51FF6F2752914DE199717F8
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache
+| http-title: Site doesn't have a title (text/html; charset=UTF-8).
+|_Requested resource was /bonita/
+443/tcp  open  ssl/http       Apache httpd
+|_http-favicon: Unknown favicon MD5: A1C72EB2D20EB22E30BC525BA973CAAA
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache
+|_http-title: Apache HTTP Server Test Page powered by CentOS
+| ssl-cert: Subject: commonName=systechinf88/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--
+| Issuer: commonName=systechinf88/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2016-09-06T08:11:08
+| Not valid after:  2017-09-06T08:11:08
+| MD5:   6d19 f9b6 0a4a 4ecb ff84 db64 de1c a266
+|_SHA-1: e85d ac3e dec6 e825 0098 967a e826 e8f1 9ddf 125c
+|_ssl-date: TLS randomness does not represent time
+4118/tcp open  ssl/netscript?
+Device type: general purpose
+Running: Linux 4.X
+OS CPE: cpe:/o:linux:linux_kernel:4.4
+OS details: Linux 4.4
+Uptime guess: 45.542 days (since Sun Jan 12 21:16:48 2020)
+Network Distance: 4 hops
+TCP Sequence Prediction: Difficulty=255 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 3306/tcp)
+HOP RTT     ADDRESS
+1   ...
+2   0.17 ms firewall.mairie.fr (10.254.171.253)
+3   0.37 ms 192.168.10.253
+4   0.65 ms 172.17.150.88
+
+NSE: Script Post-scanning.
+Initiating NSE at 10:16
+Completed NSE at 10:16, 0.00s elapsed
+Initiating NSE at 10:16
+Completed NSE at 10:16, 0.00s elapsed
+Initiating NSE at 10:16
+Completed NSE at 10:16, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1374.88 seconds
+           Raw packets sent: 119743 (5.270MB) | Rcvd: 65577 (2.625MB)
+</output><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="172.17.150.88"></address><hostnames></hostnames><ports><extraports count="65531" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="61"></state><service product="OpenSSH" name="ssh" extrainfo="protocol 2.0" version="7.4" conf="10" method="probed"></service></port><port protocol="tcp" portid="80"><state reason="syn-ack" state="open" reason_ttl="61"></state><service product="Apache httpd" method="probed" conf="10" name="http"></service></port><port protocol="tcp" portid="443"><state reason="syn-ack" state="open" reason_ttl="61"></state><service product="Apache httpd" method="probed" conf="10" name="http"></service></port><port protocol="tcp" portid="4118"><state reason="syn-ack" state="open" reason_ttl="60"></state><service method="table" conf="3" name="netscript"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="34133" proto="udp"></portused><osmatch line="67202" name="Linux 4.4" accuracy="100"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="100"></osclass></osmatch></os><uptime lastboot="Sun Jan 12 21:16:48 2020" seconds="3934805"></uptime><tcpsequence index="255" values="F0F94B37,6736301A,C1257E62,F740B8AB,57BF4732,8D5E164" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="EA875A57,EA875ABB,EA875B1F,EA875B83,EA875BE7,EA875C4B" class="1000HZ"></tcptssequence><trace port="3306" proto="tcp"><hop rtt="0.17" host="firewall.mairie.fr" ipaddr="10.254.171.253" ttl="2"></hop><hop rtt="0.37" host="" ipaddr="192.168.10.253" ttl="3"></hop><hop rtt="0.65" host="" ipaddr="172.17.150.88" ttl="4"></hop></trace></host><runstats><finished timestr="Thu Feb 27 10:16:53 2020" time="1582795013"></finished><hosts down="0" total="1" up="1"></hosts></runstats></nmaprun>

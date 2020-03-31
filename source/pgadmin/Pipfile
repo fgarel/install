@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pgadmin4 = {path = "./pgadmin4-4.3-py2.py3-none-any.whl"}
+#pgadmin4 = {path = "./pgadmin4-4.3-py2.py3-none-any.whl"}
+pgadmin4 = {path = "./pgadmin4-4.19-py2.py3-none-any.whl"}
 
 [dev-packages]

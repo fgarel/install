@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?><nmaprun start="1582793593" profile_name="Intense scan, all TCP ports" xmloutputversion="1.04" scanner="nmap" version="7.80" startstr="Thu Feb 27 09:53:13 2020" args="nmap -p 1-65535 -T4 -A -v 172.17.150.58"><scaninfo services="1-65535" protocol="tcp" numservices="65535" type="syn"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.80 ( https://nmap.org ) at 2020-02-27 09:53 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 09:53
+Completed NSE at 09:53, 0.00s elapsed
+Initiating NSE at 09:53
+Completed NSE at 09:53, 0.00s elapsed
+Initiating NSE at 09:53
+Completed NSE at 09:53, 0.00s elapsed
+Initiating Ping Scan at 09:53
+Scanning 172.17.150.58 [4 ports]
+Completed Ping Scan at 09:53, 0.06s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 09:53
+Completed Parallel DNS resolution of 1 host. at 09:53, 0.05s elapsed
+Initiating SYN Stealth Scan at 09:53
+Scanning 172.17.150.58 [65535 ports]
+Discovered open port 3389/tcp on 172.17.150.58
+Discovered open port 139/tcp on 172.17.150.58
+Discovered open port 445/tcp on 172.17.150.58
+Discovered open port 135/tcp on 172.17.150.58
+Discovered open port 80/tcp on 172.17.150.58
+Discovered open port 443/tcp on 172.17.150.58
+Increasing send delay for 172.17.150.58 from 0 to 5 due to 57 out of 141 dropped probes since last increase.
+Increasing send delay for 172.17.150.58 from 5 to 10 due to max_successful_tryno increase to 5
+Warning: 172.17.150.58 giving up on port because retransmission cap hit (6).
+SYN Stealth Scan Timing: About 3.53% done; ETC: 10:07 (0:14:06 remaining)
+Discovered open port 10001/tcp on 172.17.150.58
+Discovered open port 4118/tcp on 172.17.150.58
+Discovered open port 9006/tcp on 172.17.150.58
+Discovered open port 49153/tcp on 172.17.150.58
+SYN Stealth Scan Timing: About 27.13% done; ETC: 10:11 (0:13:20 remaining)
+Discovered open port 9005/tcp on 172.17.150.58
+SYN Stealth Scan Timing: About 33.21% done; ETC: 10:11 (0:12:24 remaining)
+SYN Stealth Scan Timing: About 38.80% done; ETC: 10:11 (0:11:28 remaining)
+Discovered open port 49154/tcp on 172.17.150.58
+SYN Stealth Scan Timing: About 44.16% done; ETC: 10:12 (0:10:31 remaining)
+Discovered open port 10000/tcp on 172.17.150.58
+SYN Stealth Scan Timing: About 49.49% done; ETC: 10:12 (0:09:34 remaining)
+Discovered open port 9012/tcp on 172.17.150.58
+SYN Stealth Scan Timing: About 54.96% done; ETC: 10:12 (0:08:35 remaining)
+Discovered open port 49185/tcp on 172.17.150.58
+Discovered open port 49155/tcp on 172.17.150.58
+SYN Stealth Scan Timing: About 60.09% done; ETC: 10:12 (0:07:37 remaining)
+Discovered open port 9000/tcp on 172.17.150.58
+SYN Stealth Scan Timing: About 65.17% done; ETC: 10:12 (0:06:40 remaining)
+Discovered open port 47001/tcp on 172.17.150.58
+SYN Stealth Scan Timing: About 70.27% done; ETC: 10:12 (0:05:42 remaining)
+Discovered open port 9002/tcp on 172.17.150.58
+SYN Stealth Scan Timing: About 75.51% done; ETC: 10:12 (0:04:42 remaining)
+Discovered open port 49187/tcp on 172.17.150.58
+SYN Stealth Scan Timing: About 80.81% done; ETC: 10:12 (0:03:42 remaining)
+Discovered open port 49152/tcp on 172.17.150.58
+SYN Stealth Scan Timing: About 85.92% done; ETC: 10:12 (0:02:43 remaining)
+SYN Stealth Scan Timing: About 90.93% done; ETC: 10:12 (0:01:45 remaining)
+SYN Stealth Scan Timing: About 96.02% done; ETC: 10:12 (0:00:46 remaining)
+Discovered open port 49161/tcp on 172.17.150.58
+Discovered open port 5985/tcp on 172.17.150.58
+Discovered open port 9089/tcp on 172.17.150.58
+Completed SYN Stealth Scan at 10:14, 1298.66s elapsed (65535 total ports)
+Initiating Service scan at 10:14
+Scanning 24 services on 172.17.150.58
+Completed Service scan at 10:15, 65.78s elapsed (24 services on 1 host)
+Initiating OS detection (try #1) against 172.17.150.58
+Initiating Traceroute at 10:16
+Completed Traceroute at 10:16, 3.02s elapsed
+Initiating Parallel DNS resolution of 3 hosts. at 10:16
+Completed Parallel DNS resolution of 3 hosts. at 10:16, 0.00s elapsed
+NSE: Script scanning 172.17.150.58.
+Initiating NSE at 10:16
+Completed NSE at 10:16, 31.50s elapsed
+Initiating NSE at 10:16
+Completed NSE at 10:17, 60.09s elapsed
+Initiating NSE at 10:17
+Completed NSE at 10:17, 0.01s elapsed
+Nmap scan report for 172.17.150.58
+Host is up (0.00056s latency).
+Not shown: 65428 closed ports, 83 filtered ports
+PORT      STATE SERVICE            VERSION
+80/tcp    open  http               Apache httpd 2.4.33 ((Win64) OpenSSL/1.0.2o)
+| http-methods: 
+|_  Supported Methods: HEAD OPTIONS
+|_http-server-header: Apache/2.4.33 (Win64) OpenSSL/1.0.2o
+|_http-title: Did not follow redirect to https://sigargeo.agglo-larochelle.fr
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+443/tcp   open  ssl/http           Apache httpd 2.4.33 ((Win64) OpenSSL/1.0.2o)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.33 (Win64) OpenSSL/1.0.2o
+|_http-title: Did not follow redirect to http://172.17.150.58/portal/
+| ssl-cert: Subject: commonName=*.agglo-larochelle.fr/organizationName=COMMUNAUTE D'AGGLOMERATION LA ROCHELLE/stateOrProvinceName=Charente-Maritime/countryName=FR
+| Subject Alternative Name: DNS:*.agglo-larochelle.fr, DNS:agglo-larochelle.fr
+| Issuer: commonName=Thawte TLS RSA CA G1/organizationName=DigiCert Inc/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2019-07-26T00:00:00
+| Not valid after:  2021-10-22T12:00:00
+| MD5:   0717 cab6 0042 74d3 609e 60b7 9973 ab5b
+|_SHA-1: a7f4 9c23 90c4 635f 2a0d 0987 f8ee f165 d6f1 93e5
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+445/tcp   open  microsoft-ds       Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+3389/tcp  open  ssl/ms-wbt-server?
+| rdp-ntlm-info: 
+|   Target_Name: CDA
+|   NetBIOS_Domain_Name: CDA
+|   NetBIOS_Computer_Name: SYSTECHINF58
+|   DNS_Domain_Name: agglo-larochelle.fr
+|   DNS_Computer_Name: systechinf58.agglo-larochelle.fr
+|   DNS_Tree_Name: agglo-larochelle.fr
+|   Product_Version: 6.3.9600
+|_  System_Time: 2020-02-27T09:16:13+00:00
+| ssl-cert: Subject: commonName=systechinf58.agglo-larochelle.fr
+| Issuer: commonName=systechinf58.agglo-larochelle.fr
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2019-12-15T06:10:43
+| Not valid after:  2020-06-15T06:10:43
+| MD5:   f19c 93f7 6195 019c 5422 b60f 9e87 da45
+|_SHA-1: 825b c5af 071d b450 4891 6274 f841 c4ce 09b0 2dec
+4118/tcp  open  ssl/netscript?
+5985/tcp  open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9000/tcp  open  http               Jetty 9.4.19.v20190610
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Jetty(9.4.19.v20190610)
+|_http-title: Site doesn't have a title (text/html; charset=utf-8; charset=utf-8).
+9002/tcp  open  http               Jetty 9.4.19.v20190610
+|_http-favicon: Unknown favicon MD5: ED7D5C39C69262F4BA95418D4F909B10
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+|_http-server-header: Jetty(9.4.19.v20190610)
+|_http-title: Error 404 - Not Found
+9005/tcp  open  http               Jetty 9.4.19.v20190610
+|_http-server-header: Jetty(9.4.19.v20190610)
+|_http-title: Error 404 - Not Found
+9006/tcp  open  http               Jetty 9.4.19.v20190610
+|_http-favicon: Unknown favicon MD5: ED7D5C39C69262F4BA95418D4F909B10
+|_http-server-header: Jetty(9.4.19.v20190610)
+|_http-title: Error 404 - Not Found
+9012/tcp  open  http               Jetty 9.4.19.v20190610
+|_http-server-header: Jetty(9.4.19.v20190610)
+|_http-title: Error 404 - Not Found
+9089/tcp  open  ssl/http           VMware hostd httpd
+| ssl-cert: Subject: commonName=systechinf58.agglo-larochelle.fr/organizationName=VMware, Inc./stateOrProvinceName=California/countryName=US
+| Subject Alternative Name: DNS:systechinf58.agglo-larochelle.fr, IP Address:172.17.150.58
+| Issuer: commonName=systechinf58.agglo-larochelle.fr/organizationName=VMware, Inc./stateOrProvinceName=California/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2019-04-03T08:25:33
+| Not valid after:  2020-04-02T08:25:33
+| MD5:   fa27 1457 f96c 35b7 434c 5596 ac12 b40c
+|_SHA-1: ed12 6a16 e098 5a00 7efb ef48 9e56 1dd3 d083 8837
+10000/tcp open  http               Jetty 9.4.19.v20190610
+|_http-favicon: Unknown favicon MD5: ED7D5C39C69262F4BA95418D4F909B10
+|_http-server-header: Jetty(9.4.19.v20190610)
+|_http-title: Error 404 - Not Found
+10001/tcp open  http               Jetty 9.4.19.v20190610
+|_http-favicon: Unknown favicon MD5: ED7D5C39C69262F4BA95418D4F909B10
+|_http-server-header: Jetty(9.4.19.v20190610)
+|_http-title: Error 404 - Not Found
+47001/tcp open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49155/tcp open  msrpc              Microsoft Windows RPC
+49161/tcp open  msrpc              Microsoft Windows RPC
+49185/tcp open  msrpc              Microsoft Windows RPC
+49187/tcp open  msrpc              Microsoft Windows RPC
+Device type: general purpose
+Running: Microsoft Windows 2012
+OS CPE: cpe:/o:microsoft:windows_server_2012:r2
+OS details: Microsoft Windows Server 2012 or Windows Server 2012 R2
+Uptime guess: 22.627 days (since Tue Feb  4 19:14:32 2020)
+Network Distance: 4 hops
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -1s, deviation: 0s, median: -1s
+|_smb-os-discovery: ERROR: Script execution failed (use -d to debug)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-02-27T09:16:14
+|_  start_date: 2020-02-04T18:15:12
+
+TRACEROUTE (using port 8080/tcp)
+HOP RTT     ADDRESS
+1   ...
+2   0.13 ms firewall.mairie.fr (10.254.171.253)
+3   0.37 ms 192.168.10.253
+4   0.62 ms 172.17.150.58
+
+NSE: Script Post-scanning.
+Initiating NSE at 10:17
+Completed NSE at 10:17, 0.00s elapsed
+Initiating NSE at 10:17
+Completed NSE at 10:17, 0.00s elapsed
+Initiating NSE at 10:17
+Completed NSE at 10:17, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1461.64 seconds
+           Raw packets sent: 120364 (5.297MB) | Rcvd: 65709 (2.638MB)
+</output><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="172.17.150.58"></address><hostnames></hostnames><ports><extraports count="65428" state="closed"></extraports><extraports count="83" state="filtered"></extraports><port protocol="tcp" portid="80"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Apache httpd" name="http" extrainfo="(Win64) OpenSSL/1.0.2o" version="2.4.33" conf="10" method="probed"></service></port><port protocol="tcp" portid="135"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Microsoft Windows RPC" method="probed" conf="10" name="msrpc"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Microsoft Windows netbios-ssn" method="probed" conf="10" name="netbios-ssn"></service></port><port protocol="tcp" portid="443"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Apache httpd" name="http" extrainfo="(Win64) OpenSSL/1.0.2o" version="2.4.33" conf="10" method="probed"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Microsoft Windows Server 2008 R2 - 2012 microsoft-ds" method="probed" conf="10" name="microsoft-ds"></service></port><port protocol="tcp" portid="3389"><state reason="syn-ack" state="open" reason_ttl="124"></state><service method="table" conf="3" name="ms-wbt-server"></service></port><port protocol="tcp" portid="4118"><state reason="syn-ack" state="open" reason_ttl="125"></state><service method="table" conf="3" name="netscript"></service></port><port protocol="tcp" portid="5985"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Microsoft HTTPAPI httpd" name="http" extrainfo="SSDP/UPnP" version="2.0" conf="10" method="probed"></service></port><port protocol="tcp" portid="9000"><state reason="syn-ack" state="open" reason_ttl="125"></state><service product="Jetty" version="9.4.19.v20190610" method="probed" conf="10" name="http"></service></port><port protocol="tcp" portid="9002"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Jetty" version="9.4.19.v20190610" method="probed" conf="10" name="http"></service></port><port protocol="tcp" portid="9005"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Jetty" version="9.4.19.v20190610" method="probed" conf="10" name="http"></service></port><port protocol="tcp" portid="9006"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Jetty" version="9.4.19.v20190610" method="probed" conf="10" name="http"></service></port><port protocol="tcp" portid="9012"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Jetty" version="9.4.19.v20190610" method="probed" conf="10" name="http"></service></port><port protocol="tcp" portid="9089"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="VMware hostd httpd" method="probed" conf="10" name="http"></service></port><port protocol="tcp" portid="10000"><state reason="syn-ack" state="open" reason_ttl="125"></state><service product="Jetty" version="9.4.19.v20190610" method="probed" conf="10" name="http"></service></port><port protocol="tcp" portid="10001"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Jetty" version="9.4.19.v20190610" method="probed" conf="10" name="http"></service></port><port protocol="tcp" portid="47001"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Microsoft HTTPAPI httpd" name="http" extrainfo="SSDP/UPnP" version="2.0" conf="10" method="probed"></service></port><port protocol="tcp" portid="49152"><state reason="syn-ack" state="open" reason_ttl="125"></state><service product="Microsoft Windows RPC" method="probed" conf="10" name="msrpc"></service></port><port protocol="tcp" portid="49153"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Microsoft Windows RPC" method="probed" conf="10" name="msrpc"></service></port><port protocol="tcp" portid="49154"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Microsoft Windows RPC" method="probed" conf="10" name="msrpc"></service></port><port protocol="tcp" portid="49155"><state reason="syn-ack" state="open" reason_ttl="125"></state><service product="Microsoft Windows RPC" method="probed" conf="10" name="msrpc"></service></port><port protocol="tcp" portid="49161"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Microsoft Windows RPC" method="probed" conf="10" name="msrpc"></service></port><port protocol="tcp" portid="49185"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Microsoft Windows RPC" method="probed" conf="10" name="msrpc"></service></port><port protocol="tcp" portid="49187"><state reason="syn-ack" state="open" reason_ttl="124"></state><service product="Microsoft Windows RPC" method="probed" conf="10" name="msrpc"></service></port></ports><os><portused state="open" portid="80" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="41165" proto="udp"></portused><osmatch line="75205" name="Microsoft Windows Server 2012 or Windows Server 2012 R2" accuracy="100"><osclass type="general purpose" osfamily="Windows" vendor="Microsoft" osgen="2012" accuracy="100"></osclass></osmatch></os><uptime lastboot="Tue Feb  4 19:14:32 2020" seconds="1954982"></uptime><tcpsequence index="259" values="AC5A19E4,1E5D8EE0,50CC02CB,88803ED1,F4D42B10,69A6EC14" difficulty="Good luck!"></tcpsequence><ipidsequence values="6764,6765,6766,6767,6768,6769" class="Incremental"></ipidsequence><tcptssequence values="BA6EB67,BA6EB71,BA6EB7B,BA6EB85,BA6EB8F,BA6EB99" class="100HZ"></tcptssequence><trace port="8080" proto="tcp"><hop rtt="0.13" host="firewall.mairie.fr" ipaddr="10.254.171.253" ttl="2"></hop><hop rtt="0.37" host="" ipaddr="192.168.10.253" ttl="3"></hop><hop rtt="0.62" host="" ipaddr="172.17.150.58" ttl="4"></hop></trace></host><runstats><finished timestr="Thu Feb 27 10:17:34 2020" time="1582795054"></finished><hosts down="0" total="1" up="1"></hosts></runstats></nmaprun>

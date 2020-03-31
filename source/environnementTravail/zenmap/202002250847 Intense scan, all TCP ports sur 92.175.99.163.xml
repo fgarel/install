@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?><nmaprun start="1582616837" profile_name="Intense scan, all TCP ports" xmloutputversion="1.04" scanner="nmap" version="7.80" startstr="Tue Feb 25 08:47:17 2020" args="nmap -p 1-65535 -T4 -A -v 92.175.99.163"><scaninfo services="1-65535" protocol="tcp" numservices="65535" type="syn"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.80 ( https://nmap.org ) at 2020-02-25 08:47 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 08:47
+Completed NSE at 08:47, 0.00s elapsed
+Initiating NSE at 08:47
+Completed NSE at 08:47, 0.00s elapsed
+Initiating NSE at 08:47
+Completed NSE at 08:47, 0.00s elapsed
+Initiating Ping Scan at 08:47
+Scanning 92.175.99.163 [4 ports]
+Completed Ping Scan at 08:47, 0.08s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 08:47
+Completed Parallel DNS resolution of 1 host. at 08:47, 0.00s elapsed
+Initiating SYN Stealth Scan at 08:47
+Scanning relais2.agglo-larochelle.fr (92.175.99.163) [65535 ports]
+Discovered open port 21/tcp on 92.175.99.163
+Discovered open port 8080/tcp on 92.175.99.163
+Discovered open port 80/tcp on 92.175.99.163
+Discovered open port 443/tcp on 92.175.99.163
+SYN Stealth Scan Timing: About 23.57% done; ETC: 08:49 (0:01:41 remaining)
+Discovered open port 8020/tcp on 92.175.99.163
+Discovered open port 8008/tcp on 92.175.99.163
+SYN Stealth Scan Timing: About 60.06% done; ETC: 08:49 (0:00:41 remaining)
+Discovered open port 8010/tcp on 92.175.99.163
+Completed SYN Stealth Scan at 08:48, 87.78s elapsed (65535 total ports)
+Initiating Service scan at 08:48
+Scanning 7 services on relais2.agglo-larochelle.fr (92.175.99.163)
+Service scan Timing: About 42.86% done; ETC: 08:54 (0:03:04 remaining)
+Completed Service scan at 08:51, 166.09s elapsed (7 services on 1 host)
+Initiating OS detection (try #1) against relais2.agglo-larochelle.fr (92.175.99.163)
+Retrying OS detection (try #2) against relais2.agglo-larochelle.fr (92.175.99.163)
+Initiating Traceroute at 08:51
+Completed Traceroute at 08:51, 3.02s elapsed
+NSE: Script scanning 92.175.99.163.
+Initiating NSE at 08:51
+Completed NSE at 08:53, 133.09s elapsed
+Initiating NSE at 08:53
+Completed NSE at 08:55, 68.06s elapsed
+Initiating NSE at 08:55
+Completed NSE at 08:55, 0.00s elapsed
+Nmap scan report for relais2.agglo-larochelle.fr (92.175.99.163)
+Host is up (0.0018s latency).
+Not shown: 65527 filtered ports
+PORT     STATE  SERVICE        VERSION
+21/tcp   open   ftp?
+80/tcp   open   http?
+113/tcp  closed ident
+443/tcp  open   https?
+8008/tcp open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 302 Found
+|     Location: https://:8010/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Content-Security-Policy: frame-ancestors
+|   GenericLines, HTTPOptions, RTSPRequest, SIPOptions: 
+|     HTTP/1.1 302 Found
+|     Location: https://:8010
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Content-Security-Policy: frame-ancestors
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     Location: https://:8010/
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|_    Content-Security-Policy: frame-ancestors
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Did not follow redirect to https://relais2.agglo-larochelle.fr:8010/
+|_https-redirect: ERROR: Script execution failed (use -d to debug)
+8010/tcp open   ssl/http-proxy FortiGate Web Filtering Service
+| http-methods: 
+|_  Supported Methods: POST OPTIONS
+|_http-title: Web Filter Block Override
+| ssl-cert: Subject: commonName=92.175.99.163
+| Subject Alternative Name: DNS:92.175.99.163
+| Issuer: commonName=CA SSL SCAN
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2019-09-10T17:49:44
+| Not valid after:  2024-09-10T17:49:44
+| MD5:   1ca7 b164 1f3c 79d8 dad7 f841 8d27 4ea2
+|_SHA-1: 5ae9 055f 4e4c 19d2 35f4 9389 5301 6aea 1634 53b8
+|_ssl-date: 2020-02-25T07:53:52+00:00; 0s from scanner time.
+|_sstp-discover: SSTP is supported.
+8020/tcp open   http-proxy     FortiGate Web Filtering Service
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Web Filter Block Override
+8080/tcp open   http-proxy?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8008-TCP:V=7.80%I=7%D=2/25%Time=5E54D164%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,CC,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x20https://:8010/\r
+SF:\nConnection:\x20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Prote
+SF:ction:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nCon
+SF:tent-Security-Policy:\x20frame-ancestors\r\n\r\n")%r(FourOhFourRequest,
+SF:EF,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x20https://:8010/nice%20port
+SF:s%2C/Tri%6Eity\.txt%2ebak\r\nConnection:\x20close\r\nX-Frame-Options:\x
+SF:20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type
+SF:-Options:\x20nosniff\r\nContent-Security-Policy:\x20frame-ancestors\r\n
+SF:\r\n")%r(GenericLines,CB,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x20htt
+SF:ps://:8010\r\nConnection:\x20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\
+SF:nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20no
+SF:sniff\r\nContent-Security-Policy:\x20frame-ancestors\r\n\r\n")%r(HTTPOp
+SF:tions,CB,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x20https://:8010\r\nCo
+SF:nnection:\x20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protectio
+SF:n:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nContent
+SF:-Security-Policy:\x20frame-ancestors\r\n\r\n")%r(RTSPRequest,CB,"HTTP/1
+SF:\.1\x20302\x20Found\r\nLocation:\x20https://:8010\r\nConnection:\x20clo
+SF:se\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode
+SF:=block\r\nX-Content-Type-Options:\x20nosniff\r\nContent-Security-Policy
+SF::\x20frame-ancestors\r\n\r\n")%r(SIPOptions,CB,"HTTP/1\.1\x20302\x20Fou
+SF:nd\r\nLocation:\x20https://:8010\r\nConnection:\x20close\r\nX-Frame-Opt
+SF:ions:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Conte
+SF:nt-Type-Options:\x20nosniff\r\nContent-Security-Policy:\x20frame-ancest
+SF:ors\r\n\r\n");
+Device type: general purpose|VoIP phone|specialized
+Running (JUST GUESSING): Linux 3.X|2.6.X (89%), Grandstream embedded (87%), OpenBSD 4.X (86%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/h:grandstream:gxv3275 cpe:/o:openbsd:openbsd:4.0 cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:2.6.21
+Aggressive OS guesses: Linux 3.2 - 3.8 (89%), Linux 3.6 (87%), Grandstream GXV3275 video phone (87%), Linux 3.3 (87%), OpenBSD 4.0 (86%), Linux 2.6.32 - 2.6.39 (86%), Linux 2.6.38 (85%), Linux 3.18 (85%), Vivint alarm panel (Linux 2.6.21) (85%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.761 days (since Tue Feb 11 14:39:09 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: Randomized
+
+TRACEROUTE (using port 113/tcp)
+HOP RTT     ADDRESS
+1   ...
+2   0.15 ms relais2.agglo-larochelle.fr (92.175.99.163)
+
+NSE: Script Post-scanning.
+Initiating NSE at 08:55
+Completed NSE at 08:55, 0.00s elapsed
+Initiating NSE at 08:55
+Completed NSE at 08:55, 0.00s elapsed
+Initiating NSE at 08:55
+Completed NSE at 08:55, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 463.06 seconds
+           Raw packets sent: 131213 (5.777MB) | Rcvd: 227 (15.455KB)
+</output><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="92.175.99.163"></address><hostnames><hostname type="PTR" name="relais2.agglo-larochelle.fr"></hostname></hostnames><ports><extraports count="65527" state="filtered"></extraports><port protocol="tcp" portid="21"><state reason="syn-ack" state="open" reason_ttl="63"></state><service method="table" conf="3" name="ftp"></service></port><port protocol="tcp" portid="80"><state reason="syn-ack" state="open" reason_ttl="63"></state><service method="table" conf="3" name="http"></service></port><port protocol="tcp" portid="113"><state reason="reset" state="closed" reason_ttl="63"></state><service method="table" conf="3" name="ident"></service></port><port protocol="tcp" portid="443"><state reason="syn-ack" state="open" reason_ttl="63"></state><service method="table" conf="3" name="https"></service></port><port protocol="tcp" portid="8008"><state reason="syn-ack" state="open" reason_ttl="63"></state><service method="probed" conf="10" name="http"></service></port><port protocol="tcp" portid="8010"><state reason="syn-ack" state="open" reason_ttl="63"></state><service product="FortiGate Web Filtering Service" method="probed" conf="10" name="http-proxy"></service></port><port protocol="tcp" portid="8020"><state reason="syn-ack" state="open" reason_ttl="63"></state><service product="FortiGate Web Filtering Service" method="probed" conf="10" name="http-proxy"></service></port><port protocol="tcp" portid="8080"><state reason="syn-ack" state="open" reason_ttl="63"></state><service method="table" conf="3" name="http-proxy"></service></port></ports><os><portused state="open" portid="21" proto="tcp"></portused><portused state="closed" portid="113" proto="tcp"></portused><osmatch line="65033" name="Linux 3.2 - 3.8" accuracy="89"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="89"></osclass></osmatch><osmatch line="65510" name="Linux 3.6" accuracy="87"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="87"></osclass></osmatch><osmatch line="31732" name="Grandstream GXV3275 video phone" accuracy="87"><osclass type="VoIP phone" osfamily="embedded" vendor="Grandstream" osgen="" accuracy="87"></osclass></osmatch><osmatch line="65252" name="Linux 3.3" accuracy="87"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="87"></osclass></osmatch><osmatch line="90353" name="OpenBSD 4.0" accuracy="86"><osclass type="general purpose" osfamily="OpenBSD" vendor="OpenBSD" osgen="4.X" accuracy="86"></osclass></osmatch><osmatch line="56230" name="Linux 2.6.32 - 2.6.39" accuracy="86"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="2.6.X" accuracy="86"></osclass></osmatch><osmatch line="57586" name="Linux 2.6.38" accuracy="85"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="2.6.X" accuracy="85"></osclass></osmatch><osmatch line="64274" name="Linux 3.18" accuracy="85"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="85"></osclass></osmatch><osmatch line="60084" name="Vivint alarm panel (Linux 2.6.21)" accuracy="85"><osclass type="specialized" osfamily="Linux" vendor="Linux" osgen="2.6.X" accuracy="85"></osclass></osmatch></os><uptime lastboot="Tue Feb 11 14:39:09 2020" seconds="1188951"></uptime><tcpsequence index="260" values="FA93B104,5F074EA9,794A565D,61C6C25D,58AE9550,76D1CF86" difficulty="Good luck!"></tcpsequence><ipidsequence values="D8E1,E2E1,ECE1,F6E1,E2,AE2" class="Randomized"></ipidsequence><tcptssequence values="715E1D8,715E1E2,715E1EC,715E1F6,715E200,715E20A" class="100HZ"></tcptssequence><trace port="113" proto="tcp"><hop rtt="0.15" host="relais2.agglo-larochelle.fr" ipaddr="92.175.99.163" ttl="2"></hop></trace></host><runstats><finished timestr="Tue Feb 25 08:55:00 2020" time="1582617300"></finished><hosts down="0" total="1" up="1"></hosts></runstats></nmaprun>

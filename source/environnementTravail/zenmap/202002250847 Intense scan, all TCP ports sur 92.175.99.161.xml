@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?><nmaprun start="1582616845" profile_name="Intense scan, all TCP ports" xmloutputversion="1.04" scanner="nmap" version="7.80" startstr="Tue Feb 25 08:47:25 2020" args="nmap -p 1-65535 -T4 -A -v 92.175.99.161"><scaninfo services="1-65535" protocol="tcp" numservices="65535" type="syn"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.80 ( https://nmap.org ) at 2020-02-25 08:47 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 08:47
+Completed NSE at 08:47, 0.00s elapsed
+Initiating NSE at 08:47
+Completed NSE at 08:47, 0.00s elapsed
+Initiating NSE at 08:47
+Completed NSE at 08:47, 0.00s elapsed
+Initiating Ping Scan at 08:47
+Scanning 92.175.99.161 [4 ports]
+Completed Ping Scan at 08:47, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 08:47
+Completed Parallel DNS resolution of 1 host. at 08:47, 0.03s elapsed
+Initiating SYN Stealth Scan at 08:47
+Scanning 92.175.99.161 [65535 ports]
+Discovered open port 443/tcp on 92.175.99.161
+Discovered open port 80/tcp on 92.175.99.161
+Discovered open port 8080/tcp on 92.175.99.161
+Discovered open port 21/tcp on 92.175.99.161
+Discovered open port 8010/tcp on 92.175.99.161
+SYN Stealth Scan Timing: About 23.78% done; ETC: 08:49 (0:01:39 remaining)
+Discovered open port 8020/tcp on 92.175.99.161
+Discovered open port 8008/tcp on 92.175.99.161
+SYN Stealth Scan Timing: About 60.15% done; ETC: 08:49 (0:00:40 remaining)
+Completed SYN Stealth Scan at 08:48, 87.31s elapsed (65535 total ports)
+Initiating Service scan at 08:48
+Scanning 7 services on 92.175.99.161
+Service scan Timing: About 57.14% done; ETC: 08:52 (0:01:44 remaining)
+Completed Service scan at 08:51, 166.10s elapsed (7 services on 1 host)
+Initiating OS detection (try #1) against 92.175.99.161
+Retrying OS detection (try #2) against 92.175.99.161
+Initiating Traceroute at 08:51
+Completed Traceroute at 08:51, 3.02s elapsed
+Initiating Parallel DNS resolution of 1 host. at 08:51
+Completed Parallel DNS resolution of 1 host. at 08:51, 0.00s elapsed
+NSE: Script scanning 92.175.99.161.
+Initiating NSE at 08:51
+Completed NSE at 08:53, 131.06s elapsed
+Initiating NSE at 08:53
+Completed NSE at 08:54, 24.19s elapsed
+Initiating NSE at 08:54
+Completed NSE at 08:54, 0.00s elapsed
+Nmap scan report for 92.175.99.161
+Host is up (0.00014s latency).
+Not shown: 65527 filtered ports
+PORT     STATE  SERVICE        VERSION
+21/tcp   open   ftp?
+80/tcp   open   http?
+113/tcp  closed ident
+443/tcp  open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 25 Feb 2020 07:49:06 GMT
+|     Content-Type: text/html
+|     Content-Length: 727
+|     Last-Modified: Fri, 13 Dec 2019 20:59:08 GMT
+|     Connection: close
+|     ETag: "5df3fb9c-2d7"
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Strict-Transport-Security: max-age=31536000
+|     Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'self'; media-src 'self'; child-src 'self'
+|     X-Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'self'; media-src 'self'; child-src 'self'
+|     X-Webkit-CSP: default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; styl
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 25 Feb 2020 07:49:05 GMT
+|     Content-Type: text/html
+|     Content-Length: 727
+|     Last-Modified: Fri, 13 Dec 2019 20:59:08 GMT
+|     Connection: close
+|     ETag: "5df3fb9c-2d7"
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Strict-Transport-Security: max-age=31536000
+|     Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'self'; media-src 'self'; child-src 'self'
+|     X-Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'self'; media-src 'self'; child-src 'self'
+|_    X-Webkit-CSP: default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; styl
+|_http-favicon: Unknown favicon MD5: B24D2790652E876E8E81D00A49E7762A
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-title: Fireware XTM User Authentication
+| ssl-cert: Subject: commonName=Fireware web CA/organizationName=WatchGuard
+| Issuer: commonName=Fireware web CA/organizationName=WatchGuard
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2018-01-07T16:08:24
+| Not valid after:  2028-02-04T16:08:24
+| MD5:   928d 21bf 5bb8 b82f e8cd d38b 7a30 f619
+|_SHA-1: d499 c8ca e1f2 9a54 8003 951c ad8d 5192 38f7 374e
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+| tls-nextprotoneg: 
+|_  http/1.1
+8008/tcp open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 302 Found
+|     Location: https://:8010/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Content-Security-Policy: frame-ancestors
+|   GenericLines, HTTPOptions, RTSPRequest, SIPOptions: 
+|     HTTP/1.1 302 Found
+|     Location: https://:8010
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Content-Security-Policy: frame-ancestors
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     Location: https://:8010/
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|_    Content-Security-Policy: frame-ancestors
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Did not follow redirect to https://92.175.99.161:8010/
+|_https-redirect: ERROR: Script execution failed (use -d to debug)
+8010/tcp open   ssl/http-proxy FortiGate Web Filtering Service
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Web Filter Block Override
+| ssl-cert: Subject: commonName=92.175.99.161
+| Subject Alternative Name: DNS:92.175.99.161
+| Issuer: commonName=CA SSL SCAN
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2019-09-10T17:49:44
+| Not valid after:  2024-09-10T17:49:44
+| MD5:   d6f0 c0ac cac5 250a 68af 3a7e c382 065f
+|_SHA-1: d136 858e fe5c e459 9a78 7ca3 e152 aa6f dee8 62bb
+|_ssl-date: 2020-02-25T07:53:57+00:00; 0s from scanner time.
+|_sstp-discover: SSTP is supported.
+8020/tcp open   http-proxy     FortiGate Web Filtering Service
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Web Filter Block Override
+8080/tcp open   http-proxy?
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.80%T=SSL%I=7%D=2/25%Time=5E54D171%P=x86_64-pc-linux-gnu
+SF:%r(GetRequest,703,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2025\x20Feb
+SF:\x202020\x2007:49:05\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Le
+SF:ngth:\x20727\r\nLast-Modified:\x20Fri,\x2013\x20Dec\x202019\x2020:59:08
+SF:\x20GMT\r\nConnection:\x20close\r\nETag:\x20\"5df3fb9c-2d7\"\r\nX-Frame
+SF:-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-C
+SF:ontent-Type-Options:\x20nosniff\r\nStrict-Transport-Security:\x20max-ag
+SF:e=31536000\r\nContent-Security-Policy:\x20default-src\x20'self';\x20scr
+SF:ipt-src\x20'self'\x20'unsafe-eval'\x20'unsafe-inline';\x20style-src\x20
+SF:'self'\x20'unsafe-inline';\x20img-src\x20'self'\x20data:;\x20connect-sr
+SF:c\x20'self';\x20font-src\x20'self';\x20object-src\x20'self';\x20media-s
+SF:rc\x20'self';\x20child-src\x20'self'\r\nX-Content-Security-Policy:\x20d
+SF:efault-src\x20'self';\x20script-src\x20'self'\x20'unsafe-eval'\x20'unsa
+SF:fe-inline';\x20style-src\x20'self'\x20'unsafe-inline';\x20img-src\x20's
+SF:elf'\x20data:;\x20connect-src\x20'self';\x20font-src\x20'self';\x20obje
+SF:ct-src\x20'self';\x20media-src\x20'self';\x20child-src\x20'self'\r\nX-W
+SF:ebkit-CSP:\x20default-src\x20'self';\x20script-src\x20'self'\x20'unsafe
+SF:-eval'\x20'unsafe-inline';\x20styl")%r(FourOhFourRequest,703,"HTTP/1\.1
+SF:\x20200\x20OK\r\nDate:\x20Tue,\x2025\x20Feb\x202020\x2007:49:06\x20GMT\
+SF:r\nContent-Type:\x20text/html\r\nContent-Length:\x20727\r\nLast-Modifie
+SF:d:\x20Fri,\x2013\x20Dec\x202019\x2020:59:08\x20GMT\r\nConnection:\x20cl
+SF:ose\r\nETag:\x20\"5df3fb9c-2d7\"\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX
+SF:-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosn
+SF:iff\r\nStrict-Transport-Security:\x20max-age=31536000\r\nContent-Securi
+SF:ty-Policy:\x20default-src\x20'self';\x20script-src\x20'self'\x20'unsafe
+SF:-eval'\x20'unsafe-inline';\x20style-src\x20'self'\x20'unsafe-inline';\x
+SF:20img-src\x20'self'\x20data:;\x20connect-src\x20'self';\x20font-src\x20
+SF:'self';\x20object-src\x20'self';\x20media-src\x20'self';\x20child-src\x
+SF:20'self'\r\nX-Content-Security-Policy:\x20default-src\x20'self';\x20scr
+SF:ipt-src\x20'self'\x20'unsafe-eval'\x20'unsafe-inline';\x20style-src\x20
+SF:'self'\x20'unsafe-inline';\x20img-src\x20'self'\x20data:;\x20connect-sr
+SF:c\x20'self';\x20font-src\x20'self';\x20object-src\x20'self';\x20media-s
+SF:rc\x20'self';\x20child-src\x20'self'\r\nX-Webkit-CSP:\x20default-src\x2
+SF:0'self';\x20script-src\x20'self'\x20'unsafe-eval'\x20'unsafe-inline';\x
+SF:20styl");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8008-TCP:V=7.80%I=7%D=2/25%Time=5E54D16A%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,CC,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x20https://:8010/\r
+SF:\nConnection:\x20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Prote
+SF:ction:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nCon
+SF:tent-Security-Policy:\x20frame-ancestors\r\n\r\n")%r(FourOhFourRequest,
+SF:EF,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x20https://:8010/nice%20port
+SF:s%2C/Tri%6Eity\.txt%2ebak\r\nConnection:\x20close\r\nX-Frame-Options:\x
+SF:20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type
+SF:-Options:\x20nosniff\r\nContent-Security-Policy:\x20frame-ancestors\r\n
+SF:\r\n")%r(GenericLines,CB,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x20htt
+SF:ps://:8010\r\nConnection:\x20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\
+SF:nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20no
+SF:sniff\r\nContent-Security-Policy:\x20frame-ancestors\r\n\r\n")%r(HTTPOp
+SF:tions,CB,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x20https://:8010\r\nCo
+SF:nnection:\x20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protectio
+SF:n:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nContent
+SF:-Security-Policy:\x20frame-ancestors\r\n\r\n")%r(RTSPRequest,CB,"HTTP/1
+SF:\.1\x20302\x20Found\r\nLocation:\x20https://:8010\r\nConnection:\x20clo
+SF:se\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode
+SF:=block\r\nX-Content-Type-Options:\x20nosniff\r\nContent-Security-Policy
+SF::\x20frame-ancestors\r\n\r\n")%r(SIPOptions,CB,"HTTP/1\.1\x20302\x20Fou
+SF:nd\r\nLocation:\x20https://:8010\r\nConnection:\x20close\r\nX-Frame-Opt
+SF:ions:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Conte
+SF:nt-Type-Options:\x20nosniff\r\nContent-Security-Policy:\x20frame-ancest
+SF:ors\r\n\r\n");
+Device type: general purpose|VoIP phone
+Running (JUST GUESSING): Linux 3.X (87%), Grandstream embedded (86%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/h:grandstream:gxv3275
+Aggressive OS guesses: Linux 3.2 - 3.8 (87%), Grandstream GXV3275 video phone (86%), Linux 3.3 (85%), Linux 3.6 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.761 days (since Tue Feb 11 14:39:08 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: Broken little-endian incremental
+
+TRACEROUTE (using port 113/tcp)
+HOP RTT     ADDRESS
+1   ...
+2   0.09 ms 92.175.99.161
+
+NSE: Script Post-scanning.
+Initiating NSE at 08:54
+Completed NSE at 08:54, 0.00s elapsed
+Initiating NSE at 08:54
+Completed NSE at 08:54, 0.00s elapsed
+Initiating NSE at 08:54
+Completed NSE at 08:54, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 417.08 seconds
+           Raw packets sent: 131230 (5.779MB) | Rcvd: 419 (28.701KB)
+</output><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="92.175.99.161"></address><hostnames></hostnames><ports><extraports count="65527" state="filtered"></extraports><port protocol="tcp" portid="21"><state reason="syn-ack" state="open" reason_ttl="63"></state><service method="table" conf="3" name="ftp"></service></port><port protocol="tcp" portid="80"><state reason="syn-ack" state="open" reason_ttl="63"></state><service method="table" conf="3" name="http"></service></port><port protocol="tcp" portid="113"><state reason="reset" state="closed" reason_ttl="63"></state><service method="table" conf="3" name="ident"></service></port><port protocol="tcp" portid="443"><state reason="syn-ack" state="open" reason_ttl="63"></state><service method="probed" conf="10" name="https"></service></port><port protocol="tcp" portid="8008"><state reason="syn-ack" state="open" reason_ttl="63"></state><service method="probed" conf="10" name="http"></service></port><port protocol="tcp" portid="8010"><state reason="syn-ack" state="open" reason_ttl="63"></state><service product="FortiGate Web Filtering Service" method="probed" conf="10" name="http-proxy"></service></port><port protocol="tcp" portid="8020"><state reason="syn-ack" state="open" reason_ttl="63"></state><service product="FortiGate Web Filtering Service" method="probed" conf="10" name="http-proxy"></service></port><port protocol="tcp" portid="8080"><state reason="syn-ack" state="open" reason_ttl="63"></state><service method="table" conf="3" name="http-proxy"></service></port></ports><os><portused state="open" portid="21" proto="tcp"></portused><portused state="closed" portid="113" proto="tcp"></portused><osmatch line="65033" name="Linux 3.2 - 3.8" accuracy="87"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="87"></osclass></osmatch><osmatch line="31732" name="Grandstream GXV3275 video phone" accuracy="86"><osclass type="VoIP phone" osfamily="embedded" vendor="Grandstream" osgen="" accuracy="86"></osclass></osmatch><osmatch line="65252" name="Linux 3.3" accuracy="85"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="85"></osclass></osmatch><osmatch line="65510" name="Linux 3.6" accuracy="85"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="85"></osclass></osmatch></os><uptime lastboot="Tue Feb 11 14:39:08 2020" seconds="1188913"></uptime><tcpsequence index="263" values="5DF2CC84,E02C0D6C,6FE4D1DA,2868599B,2DE3B721,844213D5" difficulty="Good luck!"></tcpsequence><ipidsequence values="AFE4,B9E4,C3E4,CDE4,D7E4,E1E4" class="Broken little-endian incremental"></ipidsequence><tcptssequence values="715E4AF,715E4B9,715E4C3,715E4CD,715E4D7,715E4E1" class="100HZ"></tcptssequence><trace port="113" proto="tcp"><hop rtt="0.09" host="" ipaddr="92.175.99.161" ttl="2"></hop></trace></host><runstats><finished timestr="Tue Feb 25 08:54:21 2020" time="1582617261"></finished><hosts down="0" total="1" up="1"></hosts></runstats></nmaprun>
